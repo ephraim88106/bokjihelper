@@ -108,7 +108,7 @@ const mockPolicies = [
             target: "기준중위소득 75% 이하, 재산 및 금융재산 기준 충족 가구",
             process: "관할 시·군·구청 또는 읍·면·동 행정복지센터 방문 신청 (상담 129)"
         },
-        link: "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveWlfareInfoDetl.do?wlfareInfoId=WLF00000034"
+        link: "https://www.bokjiro.go.kr/ssis-tbu/index.do"
     },
     {
         id: 2,
@@ -121,7 +121,7 @@ const mockPolicies = [
             target: "18세 이상의 등록 중증장애인 중 소득인정액이 선정기준액 이하인 자",
             process: "전국 읍·면·동 행정복지센터 방문 또는 복지로 온라인 신청"
         },
-        link: "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveWlfareInfoDetl.do?wlfareInfoId=WLF00000055"
+        link: "https://www.bokjiro.go.kr/ssis-tbu/index.do"
     },
     {
         id: 3,
@@ -134,7 +134,7 @@ const mockPolicies = [
             target: "출생아로서 출생 신고되어 주민등록번호를 부여받은 아동",
             process: "복지로 또는 정부24 온라인 신청, 행정복지센터 방문"
         },
-        link: "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveWlfareInfoDetl.do?wlfareInfoId=WLF00004558"
+        link: "https://www.bokjiro.go.kr/ssis-tbu/index.do"
     },
     {
         id: 4,
@@ -147,7 +147,7 @@ const mockPolicies = [
             target: "만 65세 이상 대한민국 국적 소유자 중 소득인정액 기준 충족자",
             process: "주소지 관할 읍·면·동 행정복지센터 또는 국민연금공단 지사 방문"
         },
-        link: "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveWlfareInfoDetl.do?wlfareInfoId=WLF00000010"
+        link: "https://www.bokjiro.go.kr/ssis-tbu/index.do"
     },
     {
         id: 5,
@@ -160,7 +160,7 @@ const mockPolicies = [
             target: "만 15세~34세 중위소득 100% 이하 일하는 청년 (기초·차상위는 만 39세까지)",
             process: "복지로 홈페이지 또는 행정복지센터 방문 신청"
         },
-        link: "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveWlfareInfoDetl.do?wlfareInfoId=WLF00004595"
+        link: "https://www.bokjiro.go.kr/ssis-tbu/index.do"
     },
     {
         id: 6,
@@ -251,7 +251,7 @@ const mockPolicies = [
             target: "복지 수급 희망자 및 대한민국 국민 누구나",
             process: "복지로 홈페이지/앱 '복지멤버십' 가입 또는 행정복지센터 방문"
         },
-        link: "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveWlfareInfoDetl.do?wlfareInfoId=WLF00004562"
+        link: "https://www.bokjiro.go.kr/ssis-tbu/index.do"
     }
 ];
 
