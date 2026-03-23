@@ -238,7 +238,7 @@ const mockPolicies = [
             target: "대한민국 국민 누구나 (가족 구성원 혜택 동시 확인 가능)",
             process: "정부24 홈페이지 또는 앱에서 '혜택알리미' 신청"
         },
-        link: "https://www.gov.kr/portal/rcvfvrSvc/main"
+        link: "https://plus.gov.kr/"
     },
     {
         id: 12,
