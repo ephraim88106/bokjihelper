@@ -13,24 +13,10 @@ class PolicyCard extends HTMLElement {
 
     render() {
         const title = this.getAttribute('title') || '정책 이름';
-        const category = this.getAttribute('category') || '기타';
-        const description = this.getAttribute('description') || '정책에 대한 설명이 제공되지 않았습니다.';
-        const target = this.getAttribute('target') || '대상자 정보 없음';
-        const date = this.getAttribute('date') || '상시접수';
-        const link = this.getAttribute('link') || 'https://www.bokjiro.go.kr';
+        const category = this.getAttribute('category') || 'all';
+        const description = this.getAttribute('description') || '';
+        const target = this.getAttribute('target') || '';
         
-        // 카테고리별 색상 매핑
-        const categoryColors = {
-            'youth': 'var(--youth-color)',
-            'marriage': 'var(--marriage-color)',
-            'family': 'var(--family-color)',
-            'elderly': 'var(--elderly-color)',
-            'housing': 'var(--housing-color)',
-            'medical': 'var(--medical-color)',
-            'job': 'var(--job-color)',
-            'all': 'var(--primary-color)'
-        };
-
         const categoryLabels = {
             'youth': '청년',
             'marriage': '신혼부부',
@@ -42,61 +28,56 @@ class PolicyCard extends HTMLElement {
             'all': '전체'
         };
 
-        const badgeColor = categoryColors[category] || 'var(--primary-color)';
+        const badgeColor = `var(--${category}-color, var(--primary-color))`;
         const badgeLabel = categoryLabels[category] || category;
 
         this.shadowRoot.innerHTML = `
             <style>
                 :host {
                     display: block;
-                    --card-bg: var(--surface-color, #ffffff);
-                    --card-text: var(--text-color, #212529);
-                    --card-muted: var(--text-muted, #6c757d);
-                    --card-border: var(--border-color, #dee2e6);
-                    --card-shadow: var(--shadow-sm, 0 .125rem .25rem rgba(0,0,0,.075));
-                    --card-shadow-hover: var(--shadow-md, 0 .5rem 1rem rgba(0,0,0,.15));
+                    cursor: pointer;
                 }
-                
                 .card {
-                    background-color: var(--card-bg);
-                    color: var(--card-text);
-                    border: 1px solid var(--card-border);
-                    border-radius: 12px;
-                    padding: 1.5rem;
+                    background-color: var(--surface-color);
+                    border: 1px solid var(--border-color);
+                    border-radius: var(--radius-md);
+                    padding: 1.8rem;
                     height: 100%;
                     display: flex;
                     flex-direction: column;
-                    box-shadow: var(--card-shadow);
-                    transition: transform 0.2s ease, box-shadow 0.2s ease;
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                    box-shadow: var(--shadow-soft);
+                    position: relative;
+                    overflow: hidden;
                 }
-                
                 .card:hover {
-                    transform: translateY(-5px);
-                    box-shadow: var(--card-shadow-hover);
+                    transform: translateY(-8px);
+                    box-shadow: var(--shadow-premium);
+                    border-color: var(--primary-color);
                 }
-
                 .badge {
                     display: inline-block;
                     background-color: ${badgeColor};
                     color: white;
-                    padding: 0.3rem 0.8rem;
-                    border-radius: 50px;
-                    font-size: 0.8rem;
-                    font-weight: 600;
-                    margin-bottom: 1rem;
+                    padding: 0.35rem 0.9rem;
+                    border-radius: var(--radius-pill);
+                    font-size: 0.75rem;
+                    font-weight: 800;
+                    margin-bottom: 1.2rem;
                     align-self: flex-start;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
                 }
-
                 .title {
-                    font-size: 1.25rem;
-                    font-weight: 700;
-                    margin-bottom: 0.5rem;
+                    font-size: 1.3rem;
+                    font-weight: 800;
+                    margin-bottom: 0.8rem;
                     line-height: 1.4;
+                    color: var(--text-color);
                 }
-
                 .description {
                     font-size: 0.95rem;
-                    color: var(--card-muted);
+                    color: var(--text-muted);
                     margin-bottom: 1.5rem;
                     flex-grow: 1;
                     display: -webkit-box;
@@ -104,69 +85,26 @@ class PolicyCard extends HTMLElement {
                     -webkit-box-orient: vertical;
                     overflow: hidden;
                 }
-
-                .meta {
+                .footer {
                     display: flex;
-                    flex-direction: column;
-                    gap: 0.5rem;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding-top: 1.2rem;
+                    border-top: 1px solid var(--border-color);
                     font-size: 0.85rem;
-                    padding-top: 1rem;
-                    margin-bottom: 1.2rem;
-                    border-top: 1px solid var(--card-border);
+                    font-weight: 700;
+                    color: var(--primary-color);
                 }
-
-                .meta-item {
-                    display: flex;
-                    align-items: flex-start;
-                    gap: 0.5rem;
-                }
-
-                .meta-label {
-                    font-weight: 600;
-                    color: var(--card-text);
-                    min-width: 50px;
-                }
-
-                .meta-value {
-                    color: var(--card-muted);
-                }
-                
-                .action-btn {
-                    display: block;
-                    width: 100%;
-                    padding: 0.7rem;
-                    background-color: var(--card-bg);
-                    border: 1px solid ${badgeColor};
-                    color: ${badgeColor};
-                    text-align: center;
-                    text-decoration: none;
-                    border-radius: 8px;
-                    font-weight: 600;
-                    font-size: 0.9rem;
-                    transition: all 0.2s;
-                }
-
-                .action-btn:hover {
-                    background-color: ${badgeColor};
-                    color: white;
-                }
+                .footer i { font-size: 1rem; }
             </style>
-            
             <div class="card">
                 <span class="badge">${badgeLabel}</span>
                 <h3 class="title">${title}</h3>
                 <p class="description">${description}</p>
-                <div class="meta">
-                    <div class="meta-item">
-                        <span class="meta-label">지원대상</span>
-                        <span class="meta-value">${target}</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">신청기간</span>
-                        <span class="meta-value">${date}</span>
-                    </div>
+                <div class="footer">
+                    <span>상세보기</span>
+                    <span><i class="fas fa-chevron-right"></i></span>
                 </div>
-                <a href="${link}" class="action-btn" target="_blank" rel="noopener noreferrer">공식 사이트에서 확인하기</a>
             </div>
         `;
     }
@@ -174,16 +112,21 @@ class PolicyCard extends HTMLElement {
 customElements.define('policy-card', PolicyCard);
 
 // ==========================================================================
-// Mock Data (Policy List with Real Links)
+// Enhanced Mock Data (with Details)
 // ==========================================================================
 const mockPolicies = [
     {
         id: 1,
         title: "청년 월세 특별지원",
         category: "youth",
-        description: "경제적 어려움을 겪고 있는 청년층의 주거비 부담 경감을 위해 청년월세를 한시적으로 특별지원합니다.",
-        target: "만 19세~34세 독립거주 무주택 청년",
-        date: "2026.02.26 ~ 2026.08.21",
+        description: "경제적 어려움을 겪고 있는 청년층의 주거비 부담 경감을 위해 월세를 지원합니다.",
+        details: {
+            purpose: "코로나19 장기화로 인한 경제적 어려움을 겪는 청년층의 주거비 부담 경감",
+            benefit: "실제 납부하는 임차료 범위 내에서 월 최대 20만원씩 최대 12개월(회) 동안 지원",
+            target: "만 19세~34세 독립거주 무주택 청년 중 소득·재산 요건을 충족하는 자",
+            documents: "임대차계약서, 월세이체 증빙서류, 통장사본, 가족관계증명서 등",
+            process: "복지로 홈페이지 또는 거주지 관할 읍·면·동 행정복지센터 방문 신청"
+        },
         link: "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveWlfareInfoDetl.do?wlfareInfoId=WLF00004661"
     },
     {
@@ -191,63 +134,42 @@ const mockPolicies = [
         title: "신혼부부 전세자금 대출",
         category: "marriage",
         description: "신혼부부의 주거 안정을 위해 전세자금을 저금리로 대출해 드립니다.",
-        target: "혼인기간 7년 이내 신혼부부 또는 결혼예정자",
-        date: "상시접수",
+        details: {
+            purpose: "목돈 마련이 어려운 신혼부부에게 저리의 전세자금 대출을 지원하여 주거 안정 도모",
+            benefit: "수도권 최대 3억원, 지방 최대 2억원 (연 1.2% ~ 2.1% 금리)",
+            target: "부부합산 연소득 6천만원 이하, 순자산가액 3.61억원 이하 무주택 세대주",
+            documents: "주민등록등본, 소득확인서류, 임대차계약서, 확정일자부 등",
+            process: "주택도시기금 수탁은행(우리, 국민, 기업, 농협, 신한) 방문 및 기금e든든 홈페이지 신청"
+        },
         link: "https://nhuf.molit.go.kr/FP/FP005/FP0050201.jsp"
     },
     {
         id: 3,
         title: "노인 일자리 및 사회활동 지원",
         category: "elderly",
-        description: "어르신들이 활기차고 건강한 노후생활을 영위할 수 있도록 다양한 일자리와 사회활동을 지원합니다.",
-        target: "만 65세 이상 기초연금수급자 등",
-        date: "2026.11.28 ~ 2026.12.29",
+        description: "어르신들이 활기찬 노후생활을 보낼 수 있도록 다양한 일자리를 지원합니다.",
+        details: {
+            purpose: "어르신이 활기차고 건강한 노후생활을 영위할 수 있도록 다양한 사회활동 지원",
+            benefit: "공익활동(월 27만원), 사회서비스형(월 71만원 내외) 등 활동비 지급",
+            target: "만 65세 이상 기초연금수급자 (일부 사업은 만 60세 이상 가능)",
+            documents: "참여신청서, 주민등록등본 등",
+            process: "지자체별 노인복지관, 시니어클럽, 대한노인회 등 수행기관 방문 신청"
+        },
         link: "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveWlfareInfoDetl.do?wlfareInfoId=WLF00000021"
     },
     {
         id: 4,
         title: "한부모가족 아동양육비 지원",
         category: "family",
-        description: "저소득 한부모가족의 아동양육비 등을 지원하여 아동의 건강한 성장과 가정의 생활 안정을 돕습니다.",
-        target: "기준중위소득 60% 이하 한부모가족",
-        date: "상시접수",
+        description: "저소득 한부모가족의 아동양육비를 지원하여 가정의 안정을 돕습니다.",
+        details: {
+            purpose: "저소득 한부모가족의 양육 부담을 덜어주어 아동의 건강한 성장 환경 조성",
+            benefit: "아동당 월 20만원 (만 18세 미만 자녀)",
+            target: "기준 중위소득 60% 이하 한부모가족 (조손가족 포함)",
+            documents: "사회보장급여 신청서, 소득·재산 신고서 등",
+            process: "읍·면·동 행정복지센터 방문 또는 복지로 온라인 신청"
+        },
         link: "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveWlfareInfoDetl.do?wlfareInfoId=WLF00000101"
-    },
-    {
-        id: 5,
-        title: "버팀목 전세자금 대출",
-        category: "housing",
-        description: "근로자와 서민의 주거 안정을 위한 전세자금을 지원합니다.",
-        target: "부부합산 연소득 5천만원 이하, 무주택 세대주",
-        date: "상시접수",
-        link: "https://nhuf.molit.go.kr/FP/FP005/FP0050201.jsp"
-    },
-    {
-        id: 6,
-        title: "중증질환자 의료비 지원",
-        category: "medical",
-        description: "암, 심장, 뇌혈관, 희귀난치성 질환 등 중증질환자의 의료비 부담을 줄여드립니다.",
-        target: "건강보험 가입자 중 산정특례 대상자",
-        date: "상시접수",
-        link: "https://www.nhis.or.kr/nhis/index.do"
-    },
-    {
-        id: 7,
-        title: "국민취업지원제도",
-        category: "job",
-        description: "취업을 희망하는 분들에게 취업지원서비스를 종합적으로 제공하고, 저소득 구직자에게는 최소한의 소득도 지원합니다.",
-        target: "15~69세 구직자 (소득 및 재산 요건 충족자)",
-        date: "상시접수",
-        link: "https://www.kua.go.kr"
-    },
-    {
-        id: 8,
-        title: "청년내일채움공제",
-        category: "youth",
-        description: "중소기업에 정규직으로 취업한 청년들의 자산형성을 지원하여 장기근속을 유도합니다.",
-        target: "만 15세 이상 34세 이하 중소기업 정규직 신규 취업자",
-        date: "예산 소진 시까지",
-        link: "https://www.work.go.kr/youngtomorrow/index.do"
     }
 ];
 
@@ -255,40 +177,36 @@ const mockPolicies = [
 // Application Logic
 // ==========================================================================
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Theme Toggle Logic
-    const themeToggleBtn = document.getElementById('themeToggle');
-    const icon = themeToggleBtn.querySelector('i');
-    
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-        document.body.setAttribute('data-theme', 'dark');
-        icon.classList.replace('fa-moon', 'fa-sun');
-    }
-
-    themeToggleBtn.addEventListener('click', () => {
-        const currentTheme = document.body.getAttribute('data-theme');
-        if (currentTheme === 'dark') {
-            document.body.removeAttribute('data-theme');
-            localStorage.setItem('theme', 'light');
-            icon.classList.replace('fa-sun', 'fa-moon');
-        } else {
-            document.body.setAttribute('data-theme', 'dark');
-            localStorage.setItem('theme', 'dark');
-            icon.classList.replace('fa-moon', 'fa-sun');
-        }
-    });
-
-    // 2. DOM Elements for Rendering
     const policyGrid = document.getElementById('policyGrid');
     const resultCount = document.getElementById('resultCount');
     const noResults = document.getElementById('noResults');
     const filterChips = document.querySelectorAll('.filter-chip');
     const searchInput = document.getElementById('searchInput');
     const searchBtn = document.getElementById('searchBtn');
+    
+    // Modal Elements
+    const policyModal = document.getElementById('policyModal');
+    const modalBody = document.getElementById('modalBody');
+    const closeModal = document.getElementById('closeModal');
 
-    // 3. Render Function
+    // 1. Theme Toggle
+    const themeToggleBtn = document.getElementById('themeToggle');
+    const themeIcon = themeToggleBtn.querySelector('i');
+    
+    themeToggleBtn.addEventListener('click', () => {
+        const isDark = document.body.getAttribute('data-theme') === 'dark';
+        if (isDark) {
+            document.body.removeAttribute('data-theme');
+            themeIcon.classList.replace('fa-sun', 'fa-moon');
+            localStorage.setItem('theme', 'light');
+        } else {
+            document.body.setAttribute('data-theme', 'dark');
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
+            localStorage.setItem('theme', 'dark');
+        }
+    });
+
+    // 2. Render Policies
     function renderPolicies(policies) {
         policyGrid.innerHTML = '';
         resultCount.textContent = policies.length;
@@ -302,24 +220,76 @@ document.addEventListener('DOMContentLoaded', () => {
                 card.setAttribute('title', policy.title);
                 card.setAttribute('category', policy.category);
                 card.setAttribute('description', policy.description);
-                card.setAttribute('target', policy.target);
-                card.setAttribute('date', policy.date);
-                card.setAttribute('link', policy.link);
+                
+                // Click Event to open Modal
+                card.addEventListener('click', () => openPolicyModal(policy));
+                
                 policyGrid.appendChild(card);
             });
         }
     }
 
-    // 4. Filter and Search Logic
+    // 3. Modal Logic
+    function openPolicyModal(policy) {
+        const categoryLabels = {
+            'youth': '청년', 'marriage': '신혼부부', 'family': '가족/여성', 
+            'elderly': '노인', 'housing': '주거자금', 'medical': '의료/건강', 'job': '일자리/창업'
+        };
+
+        modalBody.innerHTML = `
+            <span class="modal-badge" style="background-color: var(--${policy.category}-color)">
+                ${categoryLabels[policy.category] || '전체'}
+            </span>
+            <h2 class="modal-title">${policy.title}</h2>
+            <div class="modal-desc-box">
+                ${policy.details.purpose}
+            </div>
+            <div class="modal-details-grid">
+                <div class="detail-item">
+                    <h4><i class="fas fa-check-circle"></i> 지원 내용</h4>
+                    <p>${policy.details.benefit}</p>
+                </div>
+                <div class="detail-item">
+                    <h4><i class="fas fa-user-friends"></i> 지원 대상</h4>
+                    <p>${policy.details.target}</p>
+                </div>
+                <div class="detail-item">
+                    <h4><i class="fas fa-file-alt"></i> 구비 서류</h4>
+                    <p>${policy.details.documents}</p>
+                </div>
+                <div class="detail-item">
+                    <h4><i class="fas fa-info-circle"></i> 신청 방법</h4>
+                    <p>${policy.details.process}</p>
+                </div>
+            </div>
+            <a href="${policy.link}" class="modal-action-btn" target="_blank" rel="noopener noreferrer">
+                공식 사이트에서 바로 신청하기 <i class="fas fa-external-link-alt"></i>
+            </a>
+        `;
+        policyModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; // Prevent scroll
+    }
+
+    closeModal.addEventListener('click', () => {
+        policyModal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target === policyModal) {
+            policyModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // 4. Filter & Search
     let currentCategory = 'all';
     let currentSearchTerm = '';
 
     function applyFilters() {
-        const filtered = mockPolicies.filter(policy => {
-            const matchesCategory = currentCategory === 'all' || policy.category === currentCategory;
-            const matchesSearch = policy.title.toLowerCase().includes(currentSearchTerm) || 
-                                  policy.description.toLowerCase().includes(currentSearchTerm) ||
-                                  policy.target.toLowerCase().includes(currentSearchTerm);
+        const filtered = mockPolicies.filter(p => {
+            const matchesCategory = currentCategory === 'all' || p.category === currentCategory;
+            const matchesSearch = p.title.includes(currentSearchTerm) || p.description.includes(currentSearchTerm);
             return matchesCategory && matchesSearch;
         });
         renderPolicies(filtered);
@@ -335,16 +305,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     searchBtn.addEventListener('click', () => {
-        currentSearchTerm = searchInput.value.toLowerCase().trim();
+        currentSearchTerm = searchInput.value.trim();
         applyFilters();
     });
 
     searchInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
-            currentSearchTerm = searchInput.value.toLowerCase().trim();
+            currentSearchTerm = searchInput.value.trim();
             applyFilters();
         }
     });
 
+    // Initial Load
     renderPolicies(mockPolicies);
 });
