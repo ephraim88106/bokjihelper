@@ -1,14 +1,35 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Studio Web Project</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Firebase SDKs (CDN) -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            projectId: "test-06147957",
+            // Note: In Firebase Studio environment, other config values 
+            // are often automatically populated or handled by the platform.
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        console.log("Firebase app initialized for project: test-06147957");
+    </script>
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+    <div id="app">
+        <h1>Welcome to Firebase Studio</h1>
+        <p>Project: test-06147957</p>
+        <div id="status">연결 확인 중...</div>
+    </div>
+    <script type="module" src="main.js"></script>
 </body>
 </html>
