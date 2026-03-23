@@ -1,440 +1,258 @@
 /* ==========================================================================
-   WelfareFinder - Premium Empathetic Design System
+   WelfareFinder - AdSense Optimized Premium Design
+   Focus: Typography, Content Density, and Hierarchy
    ========================================================================== */
 :root {
-    /* Colors - Trust & Warmth */
-    --primary-color: #1a237e; /* 신뢰의 딥 네이비 */
-    --primary-light: #e8eaf6;
-    --accent-color: #00897b; /* 안정감 있는 티엘 */
-    --warm-accent: #f59e0b; /* 따뜻한 앰버 */
+    /* Sophisticated Color Palette */
+    --primary-color: #0f172a; /* Slate 900 */
+    --accent-color: #2563eb;  /* Blue 600 */
+    --warm-accent: #f59e0b;   /* Amber 500 */
+    --success-color: #059669; /* Emerald 600 */
     
     --bg-color: #f8fafc;
     --surface-color: #ffffff;
-    --text-main: #1e293b;
-    --text-muted: #64748b;
+    --text-main: #1e293b;     /* Slate 800 */
+    --text-muted: #64748b;    /* Slate 500 */
     --border-color: #e2e8f0;
     
-    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.04);
-    --shadow-premium: 0 12px 40px rgba(26, 35, 126, 0.08);
-    
-    /* Category Accent Colors */
-    --emergency-color: #e53935;
-    --youth-color: #1e88e5;
-    --family-color: #d81b60;
-    --disability-color: #7b1fa2;
-    --elderly-color: #5d4037;
-    --housing-color: #00897b;
-    --medical-color: #43a047;
-    --job-color: #fb8c00;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+    --shadow-premium: 0 20px 25px -5px rgba(0,0,0,0.05);
 
-    --radius-md: 16px;
-    --radius-pill: 50px;
+    --radius-md: 12px;
+    --radius-lg: 24px;
+    --radius-pill: 9999px;
+    
+    --font-family: 'Inter', 'Pretendard', sans-serif;
 }
 
 [data-theme="dark"] {
-    --bg-color: #0f172a;
-    --surface-color: #1e293b;
+    --bg-color: #020617;
+    --surface-color: #0f172a;
     --text-main: #f1f5f9;
     --text-muted: #94a3b8;
-    --border-color: #334155;
-    --shadow-premium: 0 12px 40px rgba(0, 0, 0, 0.4);
+    --border-color: #1e293b;
 }
 
-/* ==========================================================================
-   Layout Fixes (Anti-Overlap)
-   ========================================================================== */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+/* Base Reset & Typography */
+* { box-sizing: border-box; margin: 0; padding: 0; }
 body {
-    font-family: 'Pretendard', sans-serif;
+    font-family: var(--font-family);
     background-color: var(--bg-color);
     color: var(--text-main);
-    line-height: 1.6;
+    line-height: 1.75; /* Improved for long reading */
     overflow-x: hidden;
 }
 
-img, svg { display: block; max-width: 100%; }
-
-/* ==========================================================================
-   Header & Banner
-   ========================================================================== */
+/* Navigation & Header */
 .top-banner {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
-    padding: 0.6rem;
-    font-size: 0.85rem;
-}
-
-.top-banner a {
-    color: var(--warm-accent);
-    text-decoration: underline;
-    margin-left: 0.5rem;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 500;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5%;
-    background-color: var(--surface-color);
+    padding: 1.25rem 5%;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
 }
+
+.nav-links {
+    display: none;
+    list-style: none;
+    gap: 2rem;
+}
+
+@media (min-width: 1024px) { .nav-links { display: flex; } }
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.nav-links a.active, .nav-links a:hover { color: var(--accent-color); }
 
 .logo {
     font-size: 1.5rem;
-    font-weight: 900;
+    font-weight: 800;
     color: var(--primary-color);
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    letter-spacing: -0.025em;
 }
 
-.logo i { color: var(--emergency-color); }
-.logo span { color: var(--text-main); }
+.logo span { color: var(--accent-color); }
 
-/* ==========================================================================
-   Hero Section
-   ========================================================================== */
+/* Hero Section: Rich Intro */
 .hero-section {
-    padding: 5rem 5%;
+    padding: 6rem 5%;
     text-align: center;
-    background: linear-gradient(135deg, var(--primary-light) 0%, var(--bg-color) 100%);
+    background: radial-gradient(circle at top right, #eff6ff, transparent),
+                radial-gradient(circle at bottom left, #fdf4ff, transparent);
 }
 
-.hero-section h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 800;
-    line-height: 1.2;
+.hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    line-height: 1.1;
     margin-bottom: 1.5rem;
+    letter-spacing: -0.05em;
 }
 
-.hero-section h1 span { color: var(--accent-color); }
+.hero-content h1 span { color: var(--accent-color); }
 
-.hero-section p {
-    font-size: 1.2rem;
-    color: var(--text-muted);
-    margin-bottom: 3rem;
-}
-
-.search-bar {
-    display: flex;
-    align-items: center;
-    background: var(--surface-color);
-    padding: 0.6rem;
-    border-radius: var(--radius-pill);
-    box-shadow: var(--shadow-premium);
+.hero-content p {
     max-width: 800px;
-    margin: 0 auto;
-    border: 2px solid transparent;
-    transition: border-color 0.3s;
+    margin: 0 auto 3rem;
+    font-size: 1.25rem;
+    color: var(--text-muted);
 }
 
-.search-bar:focus-within { border-color: var(--accent-color); }
-
-.search-bar input {
-    flex: 1;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    font-size: 1.1rem;
-    outline: none;
-    background: transparent;
-    color: var(--text-main);
-}
-
-.search-btn {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 1rem 2.5rem;
-    border-radius: var(--radius-pill);
-    font-weight: 700;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.search-btn:hover { transform: scale(1.02); }
-
-/* ==========================================================================
-   Notifier Quick Section (Premium Widget)
-   ========================================================================== */
-.notifier-quick-section {
-    padding: 4rem 5%;
-    background-color: var(--surface-color);
-    margin-top: -3rem; /* Hero 섹션과 살짝 겹치게 하여 입체감 부여 */
-    position: relative;
-    z-index: 10;
-}
-
+/* Quick Notifier Widgets */
+.notifier-quick-section { padding: 0 5% 4rem; margin-top: -2rem; }
 .notifier-container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     background: var(--surface-color);
-    border-radius: var(--radius-md);
     padding: 3rem;
+    border-radius: var(--radius-lg);
     box-shadow: var(--shadow-premium);
-}
-
-.notifier-header {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.notifier-header h2 {
-    font-size: 2rem;
-    font-weight: 800;
-    margin-bottom: 0.5rem;
-}
-
-.notifier-header h2 span {
-    color: var(--accent-color);
-}
-
-.notifier-header p {
-    color: var(--text-muted);
-    font-size: 1.1rem;
+    border: 1px solid var(--border-color);
 }
 
 .notifier-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 
 .notifier-card {
     display: flex;
     gap: 1.5rem;
     padding: 2rem;
-    border-radius: var(--radius-md);
     background: var(--bg-color);
+    border-radius: var(--radius-md);
     border: 1px solid var(--border-color);
-    transition: all 0.3s ease;
 }
 
-.notifier-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-soft);
-    border-color: var(--primary-color);
+/* Policy List & News */
+.policy-list-section, .welfare-news-section {
+    padding: 5rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
-
-.card-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    color: white;
-    flex-shrink: 0;
-}
-
-.gov24 .card-icon { background: linear-gradient(135deg, #1e88e5, #1565c0); }
-.bokjiro .card-icon { background: linear-gradient(135deg, #00897b, #00695c); }
-.crisis .card-icon { background: linear-gradient(135deg, #e53935, #c62828); }
-
-.card-info h3 {
-    font-size: 1.25rem;
-    font-weight: 800;
-    margin-bottom: 0.8rem;
-    color: var(--primary-color);
-}
-
-.card-info p {
-    font-size: 0.95rem;
-    color: var(--text-muted);
-    margin-bottom: 1.5rem;
-    line-height: 1.5;
-}
-
-.card-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 0.9rem;
-    transition: gap 0.2s;
-}
-
-.card-btn:hover {
-    gap: 0.8rem;
-}
-
-.notifier-footer {
-    text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border-color);
-    color: var(--text-muted);
-    font-size: 0.95rem;
-}
-
-.notifier-footer i {
-    color: var(--warm-accent);
-}
-
-/* ==========================================================================
-   Filter Chips
-   ========================================================================== */
-.filter-section { padding: 3rem 5% 1rem; }
-.section-title { margin-bottom: 1.5rem; text-align: center; }
-
-.filter-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-    justify-content: center;
-}
-
-.filter-chip {
-    padding: 0.7rem 1.5rem;
-    border-radius: var(--radius-pill);
-    border: 1px solid var(--border-color);
-    background: var(--surface-color);
-    font-weight: 600;
-    color: var(--text-muted);
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.filter-chip.active {
-    background-color: var(--primary-color);
-    color: white;
-    border-color: var(--primary-color);
-    box-shadow: 0 4px 12px rgba(26, 35, 126, 0.2);
-}
-
-/* ==========================================================================
-   Policy Grid (Overlap Protected)
-   ========================================================================== */
-.policy-list-section { padding: 3rem 5%; max-width: 1400px; margin: 0 auto; }
 
 .section-header {
+    margin-bottom: 3rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-    border-bottom: 2px solid var(--border-color);
-    padding-bottom: 1rem;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-.result-count { color: var(--accent-color); margin-left: 0.5rem; }
+@media (min-width: 768px) {
+    .section-header { flex-direction: row; justify-content: space-between; align-items: flex-end; }
+}
 
 .policy-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2.5rem;
+}
+
+/* News Section Styling (AdSense Volume Booster) */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 2rem;
-    align-items: stretch; /* 카드 높이를 동일하게 맞춤 */
+    margin-top: 2rem;
 }
 
-/* ==========================================================================
-   Official Portal Card
-   ========================================================================== */
-.official-portal-section { padding: 4rem 5%; }
-.portal-card {
-    background: var(--primary-color);
-    color: white;
-    padding: 3rem;
+.news-card {
+    background: var(--surface-color);
+    padding: 2.5rem;
     border-radius: var(--radius-md);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+    border-left: 6px solid var(--warm-accent);
+    box-shadow: var(--shadow-sm);
 }
 
-.portal-link-btn {
-    background: var(--warm-accent);
-    color: var(--primary-color);
-    padding: 1.2rem 2rem;
-    border-radius: var(--radius-md);
-    text-decoration: none;
-    font-weight: 800;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: transform 0.2s;
-}
+.news-card h4 { font-size: 1.25rem; margin-bottom: 1rem; font-weight: 800; }
 
-.portal-link-btn:hover { transform: translateY(-3px); }
-
-/* ==========================================================================
-   Modal
-   ========================================================================== */
+/* Modal & Legal Text */
 .modal-overlay {
     position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.7);
-    backdrop-filter: blur(5px);
-    display: flex; justify-content: center; align-items: center;
-    z-index: 1000;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 1rem;
 }
 
 .modal-content {
     background: var(--surface-color);
-    width: 90%; max-width: 800px; max-height: 90vh;
-    border-radius: var(--radius-md);
+    width: 100%;
+    max-width: 800px;
+    max-height: 90vh;
+    border-radius: var(--radius-lg);
     padding: 3rem;
     overflow-y: auto;
     position: relative;
+    box-shadow: var(--shadow-premium);
 }
 
-.close-modal-btn {
-    position: absolute; top: 1.5rem; right: 1.5rem;
-    background: var(--bg-color); border: none; font-size: 1.5rem;
-    width: 40px; height: 40px; border-radius: 50%; cursor: pointer;
-}
+.legal-text { font-size: 0.95rem; color: var(--text-muted); }
+.legal-text p { margin-bottom: 1rem; }
 
-.modal-overlay.hidden { display: none; }
-
-/* ==========================================================================
-   Footer
-   ========================================================================== */
+/* Footer Styling */
 footer {
-    background: var(--surface-color);
-    padding: 5rem 5% 2rem;
-    border-top: 1px solid var(--border-color);
+    background: var(--primary-color);
+    color: white;
+    padding: 6rem 5% 3rem;
 }
 
-.footer-grid {
+.footer-content { max-width: 1200px; margin: 0 auto; }
+.footer-top {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 4rem;
     margin-bottom: 4rem;
 }
 
-.footer-links a {
-    display: block;
-    margin-bottom: 0.8rem;
-    color: var(--text-muted);
+.footer-nav ul, .footer-legal ul { list-style: none; margin-top: 1.5rem; }
+.footer-nav a, .footer-legal a {
+    color: #94a3b8;
     text-decoration: none;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 0.75rem;
 }
 
-.footer-contact strong { color: var(--emergency-color); font-size: 1.2rem; }
+.footer-nav a:hover, .footer-legal a:hover { color: white; }
 
 .footer-bottom {
-    text-align: center;
+    border-top: 1px solid #1e293b;
     padding-top: 2rem;
-    border-top: 1px solid var(--border-color);
-    color: var(--text-muted);
-    font-size: 0.9rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #64748b;
 }
 
-/* ==========================================================================
-   Responsive
-   ========================================================================== */
-@media (max-width: 768px) {
-    .portal-card { text-align: center; justify-content: center; }
-    .hero-section { padding: 3rem 5%; }
-    .search-bar { flex-direction: column; border-radius: var(--radius-md); }
-    .search-btn { width: 100%; margin-top: 0.5rem; }
-}
+.hidden { display: none !important; }
