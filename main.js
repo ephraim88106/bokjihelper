@@ -166,6 +166,59 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalBody = document.getElementById('modalBody');
     const privacyModal = document.getElementById('privacyModal');
     
+    // Tabs & Navigation
+    const tabs = document.querySelectorAll('.tab-content');
+    const navLinks = document.querySelectorAll('.nav-links a[data-tab]');
+    const homeSearchInput = document.getElementById('homeSearchInput');
+    const homeSearchBtn = document.getElementById('homeSearchBtn');
+
+    function switchTab(tabId) {
+        tabs.forEach(tab => {
+            if (tab.id === tabId) tab.classList.remove('hidden');
+            else tab.classList.add('hidden');
+        });
+
+        navLinks.forEach(link => {
+            if (link.dataset.tab === tabId) link.classList.add('active');
+            else link.classList.remove('active');
+        });
+
+        window.scrollTo(0, 0);
+    }
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            if (link.dataset.tab) {
+                e.preventDefault();
+                switchTab(link.dataset.tab);
+                history.pushState(null, null, link.getAttribute('href'));
+            }
+        });
+    });
+
+    // Home Search Bridge
+    homeSearchBtn.addEventListener('click', () => {
+        const term = homeSearchInput.value.trim();
+        if (term) {
+            searchInput.value = term;
+            searchTerm = term;
+            switchTab('tab-benefits');
+            filterAndRender();
+        } else {
+            switchTab('tab-benefits');
+        }
+    });
+
+    homeSearchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') homeSearchBtn.click();
+    });
+
+    // Handle Hash on Load
+    const initialHash = window.location.hash;
+    if (initialHash === '#benefits') switchTab('tab-benefits');
+    else if (initialHash === '#news') switchTab('tab-news');
+    else switchTab('tab-home');
+
     // Privacy Logic
     document.getElementById('privacyLink').addEventListener('click', (e) => {
         e.preventDefault();
