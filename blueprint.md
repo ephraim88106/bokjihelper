@@ -26,6 +26,7 @@
 - [x] `index.html` 상세 보기용 모달 컨테이너 추가
 - [x] `style.css` 프리미엄 테마 적용, 레이아웃 오류 수정, 모달 스타일 추가
 - [x] `main.js` 상세 정책 데이터 보강 및 모달 제어 로직 구현
+- [x] **Google Site Verification (bokjihelper.pages.dev) 메타 태그 추가**
 - [ ] **`index.html` 섹션 아이디 및 탭 구조 최적화**
 - [ ] **`style.css` 탭 전환 애니메이션 및 섹션별 스타일 보정**
 - [ ] **`main.js` 탭 전환 로직 및 해시 기반 내비게이션 구현**
