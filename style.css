@@ -418,3 +418,274 @@ footer {
 }
 
 .hidden { display: none !important; }
+
+/* ==========================================================================
+   style.css 기존 내용 아래에 이 블록을 추가하세요.
+   ========================================================================== */
+
+/* Filter Chips */
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+}
+
+.filter-chip {
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    border: 2px solid var(--border-color);
+    background: var(--surface-color);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filter-chip:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.filter-chip.active {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: white;
+}
+
+/* News Card Date */
+.news-date {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+/* No Results */
+.no-results {
+    text-align: center;
+    padding: 5rem 2rem;
+    color: var(--text-muted);
+}
+
+.no-results i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* Search Bar (Hero) */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: var(--surface-color);
+    border: 2px solid var(--border-color);
+    border-radius: 9999px;
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: var(--shadow-md);
+    transition: border-color 0.2s;
+}
+
+.search-bar:focus-within {
+    border-color: var(--accent-color);
+}
+
+.search-bar i {
+    color: var(--text-muted);
+    margin-right: 0.75rem;
+    flex-shrink: 0;
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 1rem;
+    color: var(--text-main);
+    min-width: 0;
+}
+
+.search-btn {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 9999px;
+    padding: 0.75rem 1.75rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+    flex-shrink: 0;
+}
+
+.search-btn:hover { opacity: 0.85; }
+
+/* Notifier Card inner styles */
+.card-icon {
+    font-size: 2rem;
+    color: var(--accent-color);
+    flex-shrink: 0;
+}
+
+.card-info h3 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.card-info p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.card-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: opacity 0.2s;
+}
+
+.card-btn:hover { opacity: 0.85; }
+
+/* Notifier Header */
+.notifier-header {
+    margin-bottom: 0.5rem;
+}
+
+.notifier-header h2 {
+    font-size: 1.75rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+}
+
+.notifier-header h2 span { color: var(--accent-color); }
+
+.notifier-header p {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+/* Section Title */
+.section-title h3 {
+    font-size: 1.75rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.section-title p {
+    color: var(--text-muted);
+}
+
+/* Nav Controls */
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.theme-toggle {
+    background: none;
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    color: var(--text-muted);
+    transition: all 0.2s;
+}
+
+.theme-toggle:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.login-btn {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 9999px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.login-btn:hover { opacity: 0.85; }
+
+/* Footer Brand */
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 1rem;
+    letter-spacing: -0.025em;
+}
+
+.footer-logo span { color: var(--accent-color); }
+
+.footer-brand p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footer-nav h4, .footer-legal h4 {
+    color: white;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+/* Close Modal Button */
+.close-modal-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-muted);
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.close-modal-btn:hover { color: var(--text-main); }
+
+/* Result Count Badge */
+.result-count {
+    display: inline-block;
+    background: var(--accent-color);
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 0.2rem 0.75rem;
+    border-radius: 9999px;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+}
+
+/* Insight Section */
+.insight-section { margin-top: 3rem; }
+
+/* Dark theme navbar */
+[data-theme="dark"] .navbar {
+    background-color: rgba(2, 6, 23, 0.8);
+}
