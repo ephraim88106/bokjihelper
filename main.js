@@ -22,13 +22,16 @@ class PolicyCard extends HTMLElement {
         const title = this.getAttribute('title') || '정책 이름';
         const category = this.getAttribute('category') || 'all';
         const description = this.getAttribute('description') || '';
-
         const categoryLabels = {
-            'emergency': '긴급/생활지원', 'youth': '청년/취업지원', 'family': '가족/육아지원',
-            'disability': '장애인복지', 'elderly': '노후/연금지원', 'housing': '주거/주택지원',
-            'medical': '의료/건강지원', 'all': '공통복지'
+            'emergency': '긴급/생활지원',
+            'youth': '청년/취업지원',
+            'family': '가족/육아지원',
+            'disability': '장애인복지',
+            'elderly': '노후/연금지원',
+            'housing': '주거/주택지원',
+            'medical': '의료/건강지원',
+            'all': '공통복지'
         };
-
         this.shadowRoot.innerHTML = `
             <style>
                 :host { display: block; height: 100%; }
@@ -102,11 +105,14 @@ function renderNews() {
     const newsGrid = document.getElementById('newsGrid');
     if (!newsGrid) return;
     newsGrid.innerHTML = newsArticles.map(article => `
-        <article class="news-card">
+        <a href="article.html?type=news&id=${article.id}" style="text-decoration: none; color: inherit;">
+          <article class="news-card" style="cursor: pointer;">
             <div class="news-date">${article.date}</div>
             <h4>${article.title}</h4>
             <p>${article.summary}</p>
-        </article>
+            <div style="margin-top: 14px; color: #0ea5e9; font-size: 0.85rem; font-weight: 600;">자세히 보기 →</div>
+          </article>
+        </a>
     `).join('');
 }
 
@@ -117,15 +123,18 @@ function renderInsights() {
         const paragraphsHtml = (article.paragraphs || []).map(p => `<p>${p}</p>`).join('');
         const listHtml = article.list ? `<ul>${article.list.map(item => `<li><strong>${item.strong}</strong> ${item.text}</li>`).join('')}</ul>` : '';
         return `
-            <article class="insight-card ${article.tag}">
+            <a href="article.html?type=insight&id=${article.id}" style="text-decoration: none; color: inherit;">
+              <article class="insight-card ${article.tag}" style="cursor: pointer;">
                 <div class="insight-tag">${article.tagLabel}</div>
                 <h4>${article.title}</h4>
                 <div class="insight-body">
-                    ${paragraphsHtml}
-                    ${listHtml}
-                    ${article.highlight ? `<p class="highlight">${article.highlight}</p>` : ''}
+                  ${paragraphsHtml}
+                  ${listHtml}
+                  ${article.highlight ? `<p class="highlight">${article.highlight}</p>` : ''}
                 </div>
-            </article>
+                <div style="margin-top: 14px; color: #0ea5e9; font-size: 0.85rem; font-weight: 600;">자세히 보기 →</div>
+              </article>
+            </a>
         `;
     }).join('');
 }
@@ -140,11 +149,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('searchInput');
     const searchBtn = document.getElementById('searchBtn');
     const themeToggle = document.getElementById('themeToggle');
-
     const policyModal = document.getElementById('policyModal');
     const modalBody = document.getElementById('modalBody');
     const privacyModal = document.getElementById('privacyModal');
-
     const tabs = document.querySelectorAll('.tab-content');
     const navLinks = document.querySelectorAll('.nav-links a[data-tab]');
     const homeSearchInput = document.getElementById('homeSearchInput');
@@ -273,7 +280,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = 'auto';
     });
 
-    // 모달 배경 클릭 시 닫기
     policyModal.addEventListener('click', (e) => {
         if (e.target === policyModal) {
             policyModal.classList.add('hidden');
