@@ -4,6 +4,138 @@
 
 export const newsArticles = [
   {
+    id: 14,
+    title: "2026년 근로장려금 5월 신청 시작, 최대 330만원 받는 방법",
+    date: "2026-04-05",
+    summary: "2025년 귀속 근로장려금 정기 신청이 5월 1일~31일 진행됩니다. 단독가구 165만원, 홑벌이 285만원, 맞벌이 330만원까지 지급되며, 재산 2억 4천만원 미만이면 신청 가능합니다. 손택스·홈택스로 간편 신청하세요.",
+    content: `
+      <p><strong>근로장려금(EITC, Earned Income Tax Credit)</strong>은 일은 하지만 소득이 낮은 근로자·사업자 가구에 현금을 지원하는 제도입니다. 복지 수혜가 아닌 <strong>'세금 환급' 형태</strong>로 지급되어 낙인 없이 신청할 수 있습니다. 2025년 귀속 근로장려금 정기 신청이 <strong>5월 1일~31일</strong>에 진행되니, 대상이 된다면 반드시 챙겨야 합니다.</p>
+
+      <div class="info-box blue">
+        <div class="info-title">근로장려금 vs 자녀장려금</div>
+        <p>근로장려금은 '일하는 저소득 가구'에 지급되며, <strong>자녀장려금</strong>은 만 18세 미만 자녀가 있는 경우 별도 신청 가능합니다. 두 제도는 동시 신청이 가능합니다.</p>
+      </div>
+
+      <h3>가구 유형별 지급액</h3>
+      <p>가구 유형에 따라 소득 요건과 최대 지급액이 다릅니다. 소득이 낮을수록, 그리고 부양가족이 많을수록 더 많은 금액을 받습니다.</p>
+
+      <table>
+        <thead>
+          <tr><th>가구 유형</th><th>연소득 상한</th><th>최대 지급액</th><th>해당 조건</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>단독가구</td><td>2,200만원 미만</td><td class="td-highlight">165만원</td><td>배우자·부양자녀·70세 이상 직계존속 없음</td></tr>
+          <tr><td>홑벌이가구</td><td>3,200만원 미만</td><td class="td-highlight">285만원</td><td>배우자 또는 부양자녀·70세 이상 직계존속 있음</td></tr>
+          <tr><td>맞벌이가구</td><td>3,800만원 미만</td><td class="td-highlight">330만원</td><td>본인·배우자 모두 근로·사업소득 있음</td></tr>
+        </tbody>
+      </table>
+
+      <h3>가구 유형별 최대 지급액 비교</h3>
+      <div class="bar-chart">
+        <div class="bar-item">
+          <div class="bar-label"><span>맞벌이가구</span><span class="bar-value">330만원</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width: 100%"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>홑벌이가구</span><span class="bar-value">285만원</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width: 86.4%"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>단독가구</span><span class="bar-value">165만원</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width: 50%"></div></div>
+        </div>
+      </div>
+
+      <h3>신청 자격 요건</h3>
+      <p>아래 세 가지 요건을 모두 충족해야 신청할 수 있습니다.</p>
+
+      <table>
+        <thead>
+          <tr><th>요건</th><th>기준</th><th>상세 내용</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>소득 요건</td><td class="td-highlight">가구 유형별 상이</td><td>단독 2,200만원 / 홑벌이 3,200만원 / 맞벌이 3,800만원 미만</td></tr>
+          <tr><td>재산 요건</td><td class="td-highlight">2억 4,000만원 미만</td><td>가구 전체 재산(토지·건물·예금·자동차 등) 합산 기준</td></tr>
+          <tr><td>국적 요건</td><td>대한민국 거주자</td><td>외국인은 내국인 배우자가 있는 경우 신청 가능</td></tr>
+        </tbody>
+      </table>
+
+      <div class="info-box amber">
+        <div class="info-title">재산 1억 7,000만원~2억 4,000만원 구간 주의</div>
+        <p>재산 합계가 1억 7,000만원 이상이면 산정된 장려금의 <strong>50%만 지급</strong>됩니다. 예를 들어 맞벌이가구가 최대 금액 330만원을 산정받더라도 재산이 2억원이면 165만원만 받습니다.</p>
+      </div>
+
+      <h3>2025년 vs 2024년 지급액 변화</h3>
+      <div class="compare-grid">
+        <div class="compare-card before">
+          <div class="compare-label">2024년 귀속</div>
+          <div class="compare-value">맞벌이 300만원</div>
+          <div class="compare-desc">홑벌이 260만원 / 단독 150만원</div>
+        </div>
+        <div class="compare-card after">
+          <div class="compare-label">2025년 귀속</div>
+          <div class="compare-value">맞벌이 330만원</div>
+          <div class="compare-desc">홑벌이 285만원 / 단독 165만원</div>
+        </div>
+      </div>
+
+      <h3>신청 및 지급 일정</h3>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-date">5월 1일~31일</div>
+          <div class="tl-title">정기 신청 기간</div>
+          <div class="tl-desc">2025년 귀속 근로·사업·종교인 소득 기준으로 신청</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">8월~9월</div>
+          <div class="tl-title">심사 후 지급</div>
+          <div class="tl-desc">신청 후 약 3개월 내 심사 완료, 계좌로 지급</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">6월 이후 신청 가능</div>
+          <div class="tl-title">기한 후 신청 (감액 주의)</div>
+          <div class="tl-desc">기한 후 신청 시 산정액의 90%만 지급 (12월 1일까지)</div>
+        </div>
+      </div>
+
+      <h3>신청 방법</h3>
+      <table>
+        <thead>
+          <tr><th>신청 방법</th><th>방법</th><th>특이사항</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>손택스(앱)</td><td class="td-highlight">스마트폰 앱 → 장려금 신청</td><td>가장 간편, 24시간 이용 가능</td></tr>
+          <tr><td>홈택스(PC)</td><td>hometax.go.kr 접속 후 신청</td><td>공인인증서 또는 간편인증 필요</td></tr>
+          <tr><td>ARS 전화</td><td>1544-9944 전화 신청</td><td>정보 조회 후 자동 신청 가능</td></tr>
+          <tr><td>세무서 방문</td><td>가까운 세무서 직접 방문</td><td>고령자·장애인 등 전화 안내 후 신청 지원</td></tr>
+        </tbody>
+      </table>
+
+      <div class="key-numbers">
+        <div class="key-num"><span class="num">330만원</span><span class="num-label">맞벌이 최대 지급</span></div>
+        <div class="key-num"><span class="num">285만원</span><span class="num-label">홑벌이 최대 지급</span></div>
+        <div class="key-num"><span class="num">165만원</span><span class="num-label">단독가구 최대</span></div>
+        <div class="key-num"><span class="num">5월 31일</span><span class="num-label">신청 마감일</span></div>
+      </div>
+
+      <div class="info-box">
+        <div class="info-title">자녀장려금도 함께 신청하세요</div>
+        <p>만 18세 미만 부양자녀가 있다면 근로장려금과 <strong>자녀장려금(1인당 최대 100만원)</strong>을 동시에 신청할 수 있습니다. 손택스 신청 화면에서 자동으로 안내됩니다.</p>
+      </div>
+
+      <div class="summary-card">
+        <h4>핵심 요약</h4>
+        <ul>
+          <li>5월 1일~31일 정기 신청 (2025년 귀속 소득 기준)</li>
+          <li>가구 재산 2억 4,000만원 미만이면 신청 가능</li>
+          <li>맞벌이 최대 330만원 / 홑벌이 최대 285만원 / 단독 최대 165만원</li>
+          <li>손택스 앱·홈택스·ARS(1544-9944)·세무서 방문 신청</li>
+          <li>기한 후 신청 시 10% 감액 → 5월 내 꼭 신청!</li>
+        </ul>
+      </div>
+    `
+  },
+  {
     id: 9,
     title: "26.2조원 추경 의결, 소득 하위 70% 국민에 고유가 피해지원금 지급",
     date: "2026-03-31",
