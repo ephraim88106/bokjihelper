@@ -46,16 +46,62 @@
         <div id="tab-home" class="tab-content">
             <section class="hero-section">
                 <div class="hero-content">
+                    <div class="hero-badge"><i class="fas fa-shield-alt"></i> 신뢰할 수 있는 공식 복지 정보</div>
                     <h1>당신의 권리, <br>국가가 제공하는 <span>맞춤형 복지 혜택</span>을 놓치지 마세요.</h1>
-                    <p>WelfareFinder는 복잡한 정부 정책을 분석하여 개인별 상황에 맞는 최적의 복지 솔루션을 제안하는 전문 지식 기반 플랫폼입니다. 정보의 격차 없이 누구나 혜택을 누릴 수 있는 세상을 만듭니다.</p>
+                    <p>WelfareFinder는 복잡한 정부 정책을 분석하여 개인별 상황에 맞는 최적의 복지 솔루션을 제안하는 전문 지식 기반 플랫폼입니다.</p>
                     <div class="search-bar">
                         <i class="fas fa-search"></i>
                         <input type="text" id="homeSearchInput" placeholder="도움이 필요한 키워드를 입력하세요 (예: 임대주택, 출산지원금, 일자리)">
                         <button id="homeSearchBtn" class="search-btn">맞춤 혜택 검색</button>
                     </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" id="statPolicies">0</span>
+                            <span class="stat-label">복지 정책</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="statNews">0</span>
+                            <span class="stat-label">최신 소식</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="statInsights">0</span>
+                            <span class="stat-label">인사이트</span>
+                        </div>
+                    </div>
                 </div>
             </section>
 
+            <!-- 최신 뉴스 카드 섹션 -->
+            <section class="home-latest-section">
+                <div class="home-section-container">
+                    <div class="home-section-header">
+                        <div class="home-section-title">
+                            <h2><i class="fas fa-bolt"></i> 최신 복지 소식</h2>
+                            <p>새로운 복지 정책과 제도 변화를 가장 빠르게 확인하세요.</p>
+                        </div>
+                        <a href="#news" class="view-all-btn" data-tab="tab-news">전체보기 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="home-news-grid" id="homeNewsGrid"></div>
+                </div>
+            </section>
+
+            <!-- 인사이트 카드 섹션 -->
+            <section class="home-latest-section home-insight-section">
+                <div class="home-section-container">
+                    <div class="home-section-header">
+                        <div class="home-section-title">
+                            <h2><i class="fas fa-feather-alt"></i> 프리미엄 인사이트</h2>
+                            <p>복지를 바라보는 깊이 있는 시각과 실용적인 가이드</p>
+                        </div>
+                        <a href="#news" class="view-all-btn" data-tab="tab-news">전체보기 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="home-insight-grid" id="homeInsightGrid"></div>
+                </div>
+            </section>
+
+            <!-- 필수 복지 알림 서비스 -->
             <section class="notifier-quick-section">
                 <div class="notifier-container">
                     <div class="notifier-header">
@@ -116,7 +162,7 @@
         </div>
 
         <!-- Tab 3: News -->
-        <!-- ✅ 뉴스/인사이트는 posts.js에서 관리합니다. 여기는 수정하지 마세요. -->
+        <!-- 뉴스/인사이트는 posts.js에서 관리합니다. 여기는 수정하지 마세요. -->
         <div id="tab-news" class="tab-content hidden">
             <section class="welfare-news-section">
                 <div class="news-container">
