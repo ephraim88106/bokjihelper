@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026-04-05 복지헬퍼 업데이트 - 실업·고용 복지</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --gradient: linear-gradient(135deg, #2563eb, #7c3aed);
+      --bg: #f1f5f9;
+      --surface: #ffffff;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --radius-pill: 9999px;
+      --shadow-card: 0 4px 6px -1px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
+      --shadow-hover: 0 20px 40px -10px rgba(37,99,235,0.15);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', 'Pretendard', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Header */
+    .page-header {
+      background: var(--gradient);
+      color: white;
+      padding: 3rem 5% 2.5rem;
+      text-align: center;
+    }
+    .page-header .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: var(--radius-pill);
+      padding: 0.4rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .page-header h1 {
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      font-weight: 900;
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.03em;
+    }
+    .page-header .date-info {
+      font-size: 0.9rem;
+      opacity: 0.85;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: white; }
+
+    /* Container */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.5rem 5% 4rem;
+    }
+
+    /* Card Grid */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .card-grid.single {
+      grid-template-columns: 1fr;
+      max-width: 800px;
+    }
+
+    /* Section Title */
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 1.5rem;
+    }
+    .section-label i {
+      font-size: 1.3rem;
+      color: var(--primary);
+    }
+    .section-label h2 {
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--text-main);
+    }
+    .section-label .tag {
+      display: inline-block;
+      background: rgba(37,99,235,0.08);
+      color: var(--primary);
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 0.3rem 0.8rem;
+      border-radius: var(--radius-pill);
+      margin-left: 0.5rem;
+    }
+    .section-label .tag.insight {
+      background: rgba(22,163,74,0.08);
+      color: #16a34a;
+    }
+
+    /* Card Base */
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-card);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+      border-color: transparent;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--gradient);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .card:hover::before { opacity: 1; }
+
+    .card-icon {
+      width: 48px; height: 48px;
+      background: rgba(37,99,235,0.08);
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      font-size: 1.3rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    .card-icon.green { background: rgba(22,163,74,0.08); color: #16a34a; }
+    .card-icon.amber { background: rgba(245,158,11,0.08); color: #d97706; }
+    .card-icon.red { background: rgba(220,38,38,0.08); color: #dc2626; }
+
+    .card h3 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      line-height: 1.4;
+      margin-bottom: 0.75rem;
+      color: var(--text-main);
+    }
+    .card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+    }
+    .card ul {
+      margin: 0.5rem 0 0.5rem 1.2rem;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+    .card ul li {
+      margin-bottom: 0.4rem;
+      line-height: 1.6;
+    }
+
+    /* Feature Card (Full Width) */
+    .feature-card {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-card);
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 2.5rem;
+    }
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(135deg, #16a34a, #059669);
+    }
+    .feature-card h3 {
+      font-size: 1.35rem;
+      font-weight: 900;
+      margin-bottom: 1.25rem;
+      color: var(--text-main);
+      line-height: 1.4;
+    }
+    .feature-card p {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: var(--text-main);
+      margin-bottom: 1rem;
+    }
+
+    /* Table inside cards */
+    .card table, .feature-card table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.85rem;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+    .card table th, .feature-card table th {
+      background: var(--gradient);
+      color: white;
+      padding: 10px 14px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 0.82rem;
+    }
+    .card table td, .feature-card table td {
+      padding: 10px 14px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.85rem;
+    }
+    .card table tr:last-child td, .feature-card table tr:last-child td { border-bottom: none; }
+    .card table tr:nth-child(even) td, .feature-card table tr:nth-child(even) td { background: #f8fafc; }
+
+    /* Tip Box */
+    .tip-box {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-left: 4px solid #f59e0b;
+      padding: 1rem 1.25rem;
+      border-radius: 0 10px 10px 0;
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: #92400e;
+      line-height: 1.6;
+    }
+    .tip-box strong { color: #78350f; }
+
+    /* Highlight Quote */
+    .highlight-quote {
+      background: linear-gradient(135deg, rgba(37,99,235,0.05), rgba(124,58,237,0.05));
+      border-left: 4px solid var(--primary);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: 1.5rem 2rem;
+      margin-top: 1.5rem;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    /* Action Items in insight */
+    .action-item {
+      display: flex;
+      gap: 1rem;
+      padding: 1.25rem;
+      background: var(--bg);
+      border-radius: var(--radius-md);
+      margin-bottom: 1rem;
+      border: 1px solid var(--border);
+      transition: transform 0.2s;
+    }
+    .action-item:hover { transform: translateX(4px); }
+    .action-num {
+      width: 36px; height: 36px;
+      background: var(--gradient);
+      color: white;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 0.85rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .action-item strong {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 0.3rem;
+    }
+    .action-item p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Code Block */
+    .code-section {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-card);
+      margin-bottom: 1.5rem;
+    }
+    .code-section h3 {
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .code-block {
+      background: #1e1e2e;
+      color: #cdd6f4;
+      border-radius: 12px;
+      padding: 1.25rem;
+      font-family: 'Fira Code', 'Consolas', monospace;
+      font-size: 0.78rem;
+      overflow-x: auto;
+      white-space: pre;
+      line-height: 1.6;
+    }
+    .code-label { color: #89b4fa; }
+    .code-string { color: #a6e3a1; }
+    .code-number { color: #fab387; }
+    .code-comment { color: #6c7086; }
+
+    /* Divider */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .card-grid { grid-template-columns: 1fr; }
+      .page-header { padding: 2rem 5% 2rem; }
+      .container { padding: 1.5rem 5% 3rem; }
+      .feature-card { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="page-header">
+    <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> 복지헬퍼 홈으로</a>
+    <div class="badge"><i class="fas fa-file-alt"></i> posts.js 업데이트 가이드</div>
+    <h1>2026-04-05 복지헬퍼 업데이트</h1>
+    <p class="date-info"><i class="far fa-calendar-alt"></i> 2026년 4월 5일 | 주제: 실업·고용 복지</p>
+  </div>
+
+  <div class="container">
+
+    <!-- 뉴스 기사 섹션 -->
+    <div class="section-label">
+      <i class="fas fa-newspaper"></i>
+      <h2>뉴스 기사</h2>
+      <span class="tag">newsArticles — id: 15</span>
+    </div>
+
+    <div class="card-grid">
+      <!-- 카드 1: 핵심 변경사항 -->
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>2026년 실업급여 상한액 인상</h3>
+        <p>구직급여 일 상한액이 6만6000원에서 <strong style="color:var(--primary)">6만8100원</strong>으로 인상되어 월 최대 204만3000원 수령이 가능해졌습니다.</p>
+        <table>
+          <tr><th>항목</th><th>2025년</th><th>2026년</th></tr>
+          <tr><td>일 상한액</td><td>66,000원</td><td><strong style="color:var(--primary)">68,100원</strong></td></tr>
+          <tr><td>월 상한액</td><td>1,980,000원</td><td><strong style="color:var(--primary)">2,043,000원</strong></td></tr>
+          <tr><td>일 하한액</td><td>64,192원</td><td><strong style="color:var(--primary)">66,048원</strong></td></tr>
+        </table>
+      </div>
+
+      <!-- 카드 2: 신청 조건 -->
+      <div class="card">
+        <div class="card-icon green"><i class="fas fa-clipboard-check"></i></div>
+        <h3>실업급여 신청 조건</h3>
+        <p>아래 조건을 모두 충족해야 실업급여를 신청할 수 있습니다.</p>
+        <ul>
+          <li>이직일 이전 18개월 중 피보험 단위기간 <strong>180일 이상</strong></li>
+          <li>비자발적 퇴직 (권고사직, 계약만료, 정당한 사유 등)</li>
+          <li>재취업 의사와 능력이 있으며 적극적 구직활동 수행</li>
+          <li>이직일 다음 날부터 <strong>12개월 이내</strong> 신청</li>
+        </ul>
+      </div>
+
+      <!-- 카드 3: 반복수급자 관리 -->
+      <div class="card">
+        <div class="card-icon red"><i class="fas fa-exclamation-triangle"></i></div>
+        <h3>반복수급자 관리 강화</h3>
+        <p>최근 5년 이내 <strong>3회 이상</strong> 실업급여를 받은 반복수급자에 대한 관리가 엄격해집니다.</p>
+        <ul>
+          <li>실업인정 모든 회차 <strong>대면 출석</strong> 의무화</li>
+          <li>실업인정 주기 4주 → <strong>2주로 단축</strong> 가능</li>
+          <li>구직활동 증빙 기준 강화</li>
+        </ul>
+      </div>
+
+      <!-- 카드 4: 국민취업지원제도 -->
+      <div class="card">
+        <div class="card-icon amber"><i class="fas fa-hands-helping"></i></div>
+        <h3>국민취업지원제도 개편</h3>
+        <p>구직촉진수당이 월 50만원에서 <strong style="color:#d97706">월 60만원</strong>으로 인상되어 최대 6개월간 총 360만원까지 지원됩니다.</p>
+        <p>부양가족이 있는 경우 월 최대 <strong style="color:#d97706">100만원</strong>까지 확대됩니다.</p>
+        <div class="tip-box">
+          <strong><i class="fas fa-lightbulb"></i> 신청 팁:</strong> 퇴직 후 지체 없이 관할 고용센터를 방문하거나 고용24(work24.go.kr)에서 온라인 신청하세요. 수급기간은 퇴직일로부터 1년 이내입니다.
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 인사이트 섹션 -->
+    <div class="section-label">
+      <i class="fas fa-lightbulb"></i>
+      <h2>인사이트</h2>
+      <span class="tag insight">insightArticles — id: 6 | 실용 정보</span>
+    </div>
+
+    <div class="feature-card">
+      <h3>실직은 끝이 아닙니다 — 2026년 고용 안전망 200% 활용법</h3>
+      <p>갑작스러운 실직은 누구에게나 찾아올 수 있습니다. 경기 침체, 구조조정, 계약 만료… 이유는 다양하지만 막막함은 똑같습니다. 하지만 대한민국의 고용 안전망은 해마다 더 촘촘해지고 있습니다.</p>
+      <p>올해 가장 큰 변화는 실업급여 상한액 인상과 국민취업지원제도의 지원금 확대입니다. 특히 국민취업지원제도는 고용보험 사각지대에 있던 프리랜서, 자영업자, 경력단절여성까지 포괄하는 제도입니다.</p>
+
+      <div class="action-item">
+        <div class="action-num">1</div>
+        <div>
+          <strong>실업급여 즉시 신청</strong>
+          <p>퇴직 후 바로 고용센터를 방문하세요. 일 상한액이 68,100원으로 올라 월 최대 204만원까지 받을 수 있습니다. 수급기간은 퇴직일로부터 1년 이내이므로 서두르는 것이 유리합니다.</p>
+        </div>
+      </div>
+      <div class="action-item">
+        <div class="action-num">2</div>
+        <div>
+          <strong>국민취업지원제도 병행 활용</strong>
+          <p>실업급여 대상이 아니더라도 월 60만원(최대 6개월)의 구직촉진수당과 맞춤형 취업 상담을 받을 수 있습니다.</p>
+        </div>
+      </div>
+      <div class="action-item">
+        <div class="action-num">3</div>
+        <div>
+          <strong>직업훈련으로 역량 업그레이드</strong>
+          <p>내일배움카드를 발급받으면 최대 500만원까지 직업훈련비를 지원받습니다. IT, 디자인, 요리 등 다양한 분야의 훈련과정이 마련되어 있습니다.</p>
+        </div>
+      </div>
+
+      <div class="highlight-quote">
+        "실직은 잠시 멈춘 것이지 끝난 것이 아닙니다.<br>제도를 아는 만큼, 다시 일어서는 시간은 짧아집니다."
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 복사용 코드 블록 -->
+    <div class="section-label">
+      <i class="fas fa-code"></i>
+      <h2>복사용 코드</h2>
+      <span class="tag">posts.js에 붙여넣기</span>
+    </div>
+
+    <div class="code-section">
+      <h3><i class="fas fa-newspaper" style="color:var(--primary)"></i> newsArticles 추가 코드</h3>
+      <div class="code-block"><span class="code-comment">// newsArticles 배열의 마지막 } 뒤, ]; 앞에 추가</span>
+,
+{
+  <span class="code-label">id</span>: <span class="code-number">15</span>,
+  <span class="code-label">title</span>: <span class="code-string">"2026년 실업급여 상한액 인상, 월 최대 204만원 수령 가능"</span>,
+  <span class="code-label">date</span>: <span class="code-string">"2026-04-05"</span>,
+  <span class="code-label">summary</span>: <span class="code-string">"구직급여 일 상한액이 6만6000원에서 6만8100원으로 인상..."</span>,
+  <span class="code-label">content</span>: <span class="code-string">`...HTML content...`</span>
+}</div>
+    </div>
+
+    <div class="code-section">
+      <h3><i class="fas fa-lightbulb" style="color:#16a34a"></i> insightArticles 추가 코드</h3>
+      <div class="code-block"><span class="code-comment">// insightArticles 배열의 마지막 } 뒤, ]; 앞에 추가</span>
+,
+{
+  <span class="code-label">id</span>: <span class="code-number">6</span>,
+  <span class="code-label">tag</span>: <span class="code-string">"practical"</span>,
+  <span class="code-label">tagLabel</span>: <span class="code-string">"실용 정보"</span>,
+  <span class="code-label">title</span>: <span class="code-string">"실직은 끝이 아닙니다 — 2026년 고용 안전망 200% 활용법"</span>,
+  <span class="code-label">paragraphs</span>: [<span class="code-string">"..."</span>, <span class="code-string">"..."</span>],
+  <span class="code-label">list</span>: [
+    { <span class="code-label">strong</span>: <span class="code-string">"실업급여 즉시 신청"</span>, <span class="code-label">text</span>: <span class="code-string">"..."</span> },
+    { <span class="code-label">strong</span>: <span class="code-string">"국민취업지원제도 병행 활용"</span>, <span class="code-label">text</span>: <span class="code-string">"..."</span> },
+    { <span class="code-label">strong</span>: <span class="code-string">"직업훈련으로 역량 업그레이드"</span>, <span class="code-label">text</span>: <span class="code-string">"..."</span> }
+  ],
+  <span class="code-label">highlight</span>: <span class="code-string">"실직은 잠시 멈춘 것이지 끝난 것이 아닙니다..."</span>
+}</div>
+    </div>
+
+  </div>
+</body>
+</html>
