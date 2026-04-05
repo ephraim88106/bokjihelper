@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026 기초연금 인상 총정리 | 복지헬퍼</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --gradient: linear-gradient(135deg, #2563eb, #7c3aed);
+      --bg: #f1f5f9;
+      --surface: #ffffff;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --radius-pill: 9999px;
+      --shadow-card: 0 4px 6px -1px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
+      --shadow-hover: 0 20px 40px -10px rgba(37,99,235,0.15);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', 'Pretendard', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page-header {
+      background: var(--gradient);
+      color: white;
+      padding: 3rem 5% 2.5rem;
+      text-align: center;
+    }
+    .page-header .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: var(--radius-pill);
+      padding: 0.4rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .page-header h1 {
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      font-weight: 900;
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.03em;
+    }
+    .page-header .date-info { font-size: 0.9rem; opacity: 0.85; }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: white; }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 2.5rem 5% 4rem; }
+
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 1.5rem;
+    }
+    .section-label i { font-size: 1.3rem; color: var(--primary); }
+    .section-label h2 { font-size: 1.4rem; font-weight: 900; color: var(--text-main); }
+
+    .summary-banner {
+      background: linear-gradient(135deg, rgba(37,99,235,0.06), rgba(124,58,237,0.06));
+      border: 1px solid rgba(37,99,235,0.15);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 2rem;
+      margin-bottom: 2.5rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .summary-banner ul {
+      list-style: none;
+      margin: 0.5rem 0 0;
+    }
+    .summary-banner li {
+      padding: 0.3rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+      font-size: 0.92rem;
+    }
+    .summary-banner li::before {
+      content: '\f058';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-size: 0.85rem;
+    }
+
+    .key-numbers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .key-num {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-card);
+      transition: transform 0.2s;
+    }
+    .key-num:hover { transform: translateY(-2px); }
+    .num {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 900;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+    }
+    .num-label {
+      display: block;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+      font-weight: 600;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-card);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+      border-color: transparent;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--gradient);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .card:hover::before { opacity: 1; }
+
+    .card-icon {
+      width: 48px; height: 48px;
+      background: rgba(37,99,235,0.08);
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      font-size: 1.3rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    .card-icon.green { background: rgba(22,163,74,0.08); color: #16a34a; }
+    .card-icon.amber { background: rgba(245,158,11,0.08); color: #d97706; }
+    .card-icon.purple { background: rgba(124,58,237,0.08); color: #7c3aed; }
+    .card-icon.red { background: rgba(220,38,38,0.08); color: #dc2626; }
+
+    .card h3 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      line-height: 1.4;
+      margin-bottom: 0.75rem;
+      color: var(--text-main);
+    }
+    .card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+    }
+
+    .card table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 0.5rem;
+      font-size: 0.82rem;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+    .card table th {
+      background: var(--gradient);
+      color: white;
+      padding: 9px 12px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 0.78rem;
+    }
+    .card table td {
+      padding: 8px 12px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.82rem;
+    }
+    .card table tr:last-child td { border-bottom: none; }
+    .card table tr:nth-child(even) td { background: #f8fafc; }
+    .td-highlight { font-weight: 700; color: var(--primary) !important; }
+
+    .feature-card {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-card);
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 2.5rem;
+    }
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--gradient);
+    }
+    .feature-card h3 {
+      font-size: 1.2rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+      color: var(--text-main);
+    }
+    .feature-card p {
+      font-size: 0.93rem;
+      line-height: 1.8;
+      color: var(--text-main);
+      margin-bottom: 1rem;
+    }
+    .feature-card table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.85rem;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+    .feature-card table th {
+      background: var(--gradient);
+      color: white;
+      padding: 10px 14px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 0.82rem;
+    }
+    .feature-card table td {
+      padding: 9px 14px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .feature-card table tr:last-child td { border-bottom: none; }
+    .feature-card table tr:nth-child(even) td { background: #f8fafc; }
+
+    .bar-chart { margin: 1rem 0; }
+    .bar-item { margin-bottom: 0.75rem; }
+    .bar-label { display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 4px; color: var(--text-muted); }
+    .bar-value { font-weight: 800; color: var(--primary); }
+    .bar-track { height: 24px; background: #e2e8f0; border-radius: 12px; overflow: hidden; }
+    .bar-fill { height: 100%; background: var(--gradient); border-radius: 12px; }
+
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 1rem;
+      align-items: center;
+      margin: 1rem 0;
+    }
+    .compare-card {
+      text-align: center;
+      padding: 1.25rem;
+      border-radius: var(--radius-md);
+    }
+    .compare-card.before { background: #f1f5f9; border: 1px solid var(--border); }
+    .compare-card.after { background: rgba(37,99,235,0.06); border: 2px solid var(--primary); }
+    .compare-label { font-size: 0.78rem; font-weight: 700; color: var(--text-muted); margin-bottom: 0.3rem; }
+    .compare-value { font-size: 1.2rem; font-weight: 900; color: var(--text-main); }
+    .compare-card.after .compare-value { color: var(--primary); }
+    .compare-desc { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.3rem; }
+    .compare-arrow { font-size: 1.5rem; color: var(--primary); }
+
+    .info-box {
+      padding: 1.25rem 1.5rem;
+      border-radius: var(--radius-md);
+      margin: 1rem 0;
+      border-left: 4px solid;
+    }
+    .info-box.blue { background: #eff6ff; border-color: var(--primary); }
+    .info-box.green { background: #f0fdf4; border-color: #16a34a; }
+    .info-box.amber { background: #fffbeb; border-color: #f59e0b; }
+    .info-box.red { background: #fef2f2; border-color: #dc2626; }
+    .info-title { font-weight: 800; font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--text-main); }
+    .info-box p { margin: 0; font-size: 0.88rem; line-height: 1.7; color: var(--text-muted); }
+
+    .timeline { margin: 1rem 0; padding-left: 24px; border-left: 3px solid var(--primary); }
+    .tl-item { margin-bottom: 1.25rem; position: relative; }
+    .tl-item::before {
+      content: '';
+      position: absolute;
+      left: -30px; top: 6px;
+      width: 12px; height: 12px;
+      background: var(--gradient);
+      border-radius: 50%;
+    }
+    .tl-date { font-size: 0.78rem; font-weight: 800; color: var(--primary); }
+    .tl-title { font-weight: 800; font-size: 0.92rem; color: var(--text-main); }
+    .tl-desc { font-size: 0.82rem; color: var(--text-muted); }
+
+    .summary-card {
+      background: var(--gradient);
+      color: white;
+      padding: 2rem 2.5rem;
+      border-radius: var(--radius-lg);
+      margin-top: 2.5rem;
+    }
+    .summary-card h4 {
+      font-size: 1.1rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .summary-card ul { padding-left: 1.2rem; }
+    .summary-card li { margin-bottom: 0.5rem; font-size: 0.9rem; line-height: 1.6; }
+
+    .divider { border: none; border-top: 1px solid var(--border); margin: 2.5rem 0; }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      margin-top: 2rem;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
+      .card-grid { grid-template-columns: 1fr; }
+      .compare-grid { grid-template-columns: 1fr; }
+      .compare-arrow { transform: rotate(90deg); text-align: center; }
+      .page-header { padding: 2rem 5%; }
+      .container { padding: 1.5rem 5% 3rem; }
+      .feature-card { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-header">
+    <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> 복지헬퍼 홈으로</a>
+    <div class="badge"><i class="fas fa-hand-holding-heart"></i> 노인 복지</div>
+    <h1>2026 기초연금 인상 총정리<br>월 최대 349,700원 시대</h1>
+    <p class="date-info"><i class="far fa-calendar-alt"></i> 2026년 4월 6일 | 복지헬퍼</p>
+  </div>
+
+  <div class="container">
+
+    <!-- 요약 배너 -->
+    <div class="summary-banner">
+      <ul>
+        <li>2026년 기초연금 단독가구 최대 월 349,700원, 부부가구 합산 월 559,520원</li>
+        <li>소득인정액 기준 상향: 단독 247만원, 부부 395.2만원 이하이면 수급 가능</li>
+        <li>근로소득 공제 116만원으로 인상 — 일하는 어르신도 연금 유지 가능</li>
+      </ul>
+    </div>
+
+    <!-- 핵심 수치 -->
+    <div class="key-numbers">
+      <div class="key-num"><span class="num">349,700원</span><span class="num-label">단독가구 월 최대</span></div>
+      <div class="key-num"><span class="num">559,520원</span><span class="num-label">부부가구 월 합산</span></div>
+      <div class="key-num"><span class="num">247만원</span><span class="num-label">단독 소득인정액 기준</span></div>
+      <div class="key-num"><span class="num">116만원</span><span class="num-label">근로소득 공제액</span></div>
+    </div>
+
+    <!-- 주요 변화 카드 -->
+    <div class="section-label">
+      <i class="fas fa-exchange-alt"></i>
+      <h2>2026년 기초연금, 무엇이 달라졌나?</h2>
+    </div>
+
+    <div class="card-grid">
+      <!-- 카드 1: 연도별 비교 -->
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-chart-bar"></i></div>
+        <h3>연도별 기초연금 변화 추이</h3>
+        <p>전년 대비 물가상승률을 반영하여 단독가구 기준 월 최대 349,700원으로 인상되었습니다.</p>
+        <table>
+          <tr><th>항목</th><th>2024년</th><th>2025년</th><th>2026년</th></tr>
+          <tr><td>단독 최대</td><td>334,810원</td><td>337,890원</td><td class="td-highlight">349,700원</td></tr>
+          <tr><td>부부 합산</td><td>535,680원</td><td>548,000원</td><td class="td-highlight">559,520원</td></tr>
+          <tr><td>선정기준(단독)</td><td>213만원</td><td>228만원</td><td class="td-highlight">247만원</td></tr>
+          <tr><td>선정기준(부부)</td><td>340.8만원</td><td>364.8만원</td><td class="td-highlight">395.2만원</td></tr>
+          <tr><td>근로소득 공제</td><td>110만원</td><td>112만원</td><td class="td-highlight">116만원</td></tr>
+        </table>
+      </div>
+
+      <!-- 카드 2: 지급액 추이 바 차트 -->
+      <div class="card">
+        <div class="card-icon green"><i class="fas fa-chart-line"></i></div>
+        <h3>단독가구 월 최대 지급액 추이</h3>
+        <p>2022년 이후 꾸준히 상승하여 2026년 349,700원에 도달했습니다.</p>
+        <div class="bar-chart">
+          <div class="bar-item">
+            <div class="bar-label"><span>2022년</span><span class="bar-value">307,500원</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width: 78%"></div></div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-label"><span>2023년</span><span class="bar-value">323,180원</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width: 83%"></div></div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-label"><span>2024년</span><span class="bar-value">334,810원</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width: 86%"></div></div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-label"><span>2025년</span><span class="bar-value">337,890원</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width: 90%"></div></div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-label"><span>2026년</span><span class="bar-value">349,700원</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width: 100%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 카드 3: 단독 vs 부부 비교 -->
+      <div class="card">
+        <div class="card-icon purple"><i class="fas fa-users"></i></div>
+        <h3>단독가구 vs 부부가구</h3>
+        <p>부부가구는 각각 20% 감액이 적용되어 1인당 279,760원씩 수령합니다.</p>
+        <div class="compare-grid">
+          <div class="compare-card before" style="padding:1rem">
+            <div class="compare-label">단독가구</div>
+            <div class="compare-value" style="font-size:1rem">월 349,700원</div>
+            <div class="compare-desc">연 약 419.6만원</div>
+          </div>
+          <div class="compare-arrow"><i class="fas fa-arrows-alt-h"></i></div>
+          <div class="compare-card after" style="padding:1rem">
+            <div class="compare-label">부부가구 합산</div>
+            <div class="compare-value" style="font-size:1rem">월 559,520원</div>
+            <div class="compare-desc">1인당 279,760원</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 카드 4: 저소득 노인 40만원 -->
+      <div class="card">
+        <div class="card-icon amber"><i class="fas fa-hand-holding-usd"></i></div>
+        <h3>저소득 노인 월 40만원 지급 시작</h3>
+        <p>기존 기준연금액(34만 9,700원)보다 높은 금액으로, 최저소득층부터 단계적 적용됩니다.</p>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-date">2026년 상반기</div>
+            <div class="tl-title">저소득 노인 40만원 선지급</div>
+            <div class="tl-desc">생계급여 수급 노인 등 최저소득층부터</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-date">2026년 하반기</div>
+            <div class="tl-title">대상 단계적 확대</div>
+            <div class="tl-desc">차상위 노인까지 점진적 확대</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-date">2027년</div>
+            <div class="tl-title">전체 수급자 40만원 목표</div>
+            <div class="tl-desc">779만 명 전원 40만원 수령</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 소득인정액 계산 -->
+    <div class="section-label">
+      <i class="fas fa-calculator"></i>
+      <h2>소득인정액 계산 방법</h2>
+    </div>
+
+    <div class="feature-card">
+      <h3>소득인정액, 어떻게 계산되나?</h3>
+      <p>기초연금 수급 여부를 판정하는 핵심 기준은 '소득인정액'입니다. 근로·연금·사업소득 등 실제 소득과, 부동산·금융자산 등 재산을 월 소득으로 환산한 금액을 합산하여 산정됩니다.</p>
+      <p>근로소득의 경우 먼저 <strong>116만원을 공제</strong>한 뒤, 남은 금액의 30%를 추가 공제합니다. 예: 월 200만원 근로소득 → (200만-116만)×0.7 = <strong>58.8만원</strong>만 소득 산정.</p>
+
+      <table>
+        <tr><th>항목</th><th>기준</th><th>비고</th></tr>
+        <tr><td>기본재산 공제(대도시)</td><td class="td-highlight">1억 3,500만원</td><td>특별시·광역시</td></tr>
+        <tr><td>기본재산 공제(중소도시)</td><td>8,500만원</td><td>시 지역</td></tr>
+        <tr><td>기본재산 공제(농어촌)</td><td>7,250만원</td><td>군 지역</td></tr>
+        <tr><td>금융재산 공제</td><td>2,000만원</td><td>예금·주식·보험 등</td></tr>
+        <tr><td>고급 자동차 기준</td><td class="td-highlight">4,000만원 초과</td><td>차량가액 100% 소득 반영</td></tr>
+      </table>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 신청 & 주의사항 -->
+    <div class="section-label">
+      <i class="fas fa-clipboard-list"></i>
+      <h2>신청 방법 및 주의사항</h2>
+    </div>
+
+    <div class="card-grid">
+      <!-- 카드 5: 신청 절차 -->
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-file-signature"></i></div>
+        <h3>신청 절차</h3>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-date">1단계</div>
+            <div class="tl-title">만 65세 생일 1개월 전부터 신청</div>
+            <div class="tl-desc">예: 1961년 5월생 → 2026년 4월 1일부터</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-date">2단계</div>
+            <div class="tl-title">방문 또는 온라인 신청</div>
+            <div class="tl-desc">주민센터·국민연금공단 방문 또는 복지로</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-date">3단계</div>
+            <div class="tl-title">심사 후 지급</div>
+            <div class="tl-desc">약 1~2개월 심사, 매월 25일 지급</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 카드 6: 준비 서류 -->
+      <div class="card">
+        <div class="card-icon green"><i class="fas fa-folder-open"></i></div>
+        <h3>신청 시 준비 서류</h3>
+        <table>
+          <tr><th>서류</th><th>필수</th><th>비고</th></tr>
+          <tr><td>신분증</td><td class="td-highlight">필수</td><td>주민등록증·운전면허증</td></tr>
+          <tr><td>통장 사본</td><td class="td-highlight">필수</td><td>연금 수령 계좌</td></tr>
+          <tr><td>금융정보 동의서</td><td class="td-highlight">필수</td><td>주민센터에서 작성</td></tr>
+          <tr><td>배우자 동의서</td><td>부부가구</td><td>동반 또는 위임장</td></tr>
+          <tr><td>임대차 계약서</td><td>해당자</td><td>임차인인 경우</td></tr>
+        </table>
+      </div>
+
+      <!-- 카드 7: 주의사항 -->
+      <div class="card">
+        <div class="card-icon red"><i class="fas fa-exclamation-circle"></i></div>
+        <h3>꼭 알아야 할 주의사항</h3>
+        <div class="info-box blue" style="margin-top:0.5rem">
+          <div class="info-title"><i class="fas fa-check-circle"></i> 기존 수급자</div>
+          <p>별도 신청 없이 인상된 금액이 자동 반영됩니다. 2026년 1월분부터 이미 적용 중입니다.</p>
+        </div>
+        <div class="info-box amber">
+          <div class="info-title"><i class="fas fa-link"></i> 국민연금 연계감액</div>
+          <p>국민연금 수령액이 기초연금 기준액의 150%(524,550원) 이상인 경우 기초연금이 최대 50%까지 감액될 수 있습니다.</p>
+        </div>
+        <div class="info-box red">
+          <div class="info-title"><i class="fas fa-car"></i> 고급 자동차 보유</div>
+          <p>3,000cc 이상 또는 4,000만원 초과 차량 소유 시 차량가액 100%가 월 소득으로 산정됩니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 핵심 요약 -->
+    <div class="summary-card">
+      <h4><i class="fas fa-star"></i> 핵심 요약</h4>
+      <ul>
+        <li>단독가구 월 최대 349,700원 / 부부가구 합산 559,520원</li>
+        <li>소득인정액 기준: 단독 247만원, 부부 395.2만원 이하</li>
+        <li>근로소득 공제 116만원 — 일하는 어르신도 연금 유지</li>
+        <li>저소득 노인부터 월 40만원 지급 시작, 2027년 전체 확대 예정</li>
+        <li>수급 대상 779만 명, 전년 대비 43만 명 확대</li>
+        <li>기존 수급자는 별도 신청 없이 인상분 자동 반영</li>
+      </ul>
+    </div>
+
+    <div class="footer-note">
+      본 아티클은 2026년 4월 6일 기준 보건복지부·국민연금공단 공개 자료를 바탕으로 작성되었습니다.<br>
+      정확한 수급 자격 확인은 국민연금공단(1355) 또는 복지로(bokjiro.go.kr)에서 모의계산을 이용하세요.
+    </div>
+
+  </div>
+</body>
+</html>
