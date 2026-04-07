@@ -1670,6 +1670,110 @@ export const newsArticles = [
         </ul>
       </div>
     `
+  },
+  {
+    id: 21,
+    title: "2026 고유가 피해지원금 — 1인당 10만~60만원, 3,580만 명 대상",
+    date: "2026-04-07",
+    summary: "국제 유가 급등에 따른 가계 부담을 줄이기 위해 정부가 4조 8,000억 원 규모의 고유가 피해지원금을 추진합니다. 소득 하위 70% 국민 약 3,580만 명이 기본 대상이며, 기초생활수급자·차상위·한부모 등 취약계층은 1인당 최대 60만 원까지 받을 수 있습니다. 1차 지급은 2026년 4월 말~5월 초 시작됩니다.",
+    content: `
+      <p>국제 유가 급등으로 인한 가계·서민 부담을 완화하기 위해 정부가 <strong>4조 8,000억 원 규모</strong>의 고유가 피해지원금을 추진합니다. 소득 하위 70% 국민 약 <strong>3,580만 명</strong>이 기본 대상이며, 기초생활수급자·차상위계층·한부모가족 등 취약계층에는 가산금이 더해져 1인당 <strong>최대 60만 원</strong>까지 받을 수 있습니다.</p>
+
+      <div class="key-numbers">
+        <div class="key-num"><span class="num">4.8조원</span><span class="num-label">총 예산</span></div>
+        <div class="key-num"><span class="num">3,580만명</span><span class="num-label">예상 수혜</span></div>
+        <div class="key-num"><span class="num">최대 60만원</span><span class="num-label">1인당 상한</span></div>
+      </div>
+
+      <h3>대상별 지급액(예시)</h3>
+      <div class="bar-chart">
+        <div class="bar-item">
+          <div class="bar-label"><span>기초생활수급자(비수도권)</span><span class="bar-value">최대 60만원</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width: 100%"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>차상위·한부모</span><span class="bar-value">40~45만원</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width: 75%"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>소득 하위 70% 일반</span><span class="bar-value">20~25만원</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width: 42%"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>기본 지원</span><span class="bar-value">10만원</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width: 18%"></div></div>
+        </div>
+      </div>
+
+      <h3>대상 구분표</h3>
+      <table>
+        <thead>
+          <tr><th>구분</th><th>1인당 지급액</th><th>신청 방식</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>기초생활수급자</td><td class="td-highlight">최대 60만원</td><td>자동 지급</td></tr>
+          <tr><td>차상위·한부모</td><td>40만~45만원</td><td>온라인/주민센터</td></tr>
+          <tr><td>소득 하위 70%</td><td>20만~25만원</td><td>온라인/주민센터</td></tr>
+          <tr><td>기본 지원</td><td>10만원</td><td>온라인/주민센터</td></tr>
+        </tbody>
+      </table>
+
+      <h3>온라인 vs 오프라인 신청</h3>
+      <div class="compare-grid">
+        <div class="compare-card before">
+          <div class="compare-label">온라인</div>
+          <div class="compare-value">정부24·복지로</div>
+          <div class="compare-desc">공동인증 로그인, 24시간 가능</div>
+        </div>
+        <div class="compare-card after">
+          <div class="compare-label">오프라인</div>
+          <div class="compare-value">행정복지센터</div>
+          <div class="compare-desc">어르신·디지털 취약계층 권장</div>
+        </div>
+      </div>
+
+      <h3>지급 일정</h3>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-date">2026.04 말~05 초</div>
+          <div class="tl-title">1차 지급</div>
+          <div class="tl-desc">취약계층 자동 지급</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2026.05 중순</div>
+          <div class="tl-title">2차 신청 개시(예정)</div>
+          <div class="tl-desc">일반 대상자 접수 시작</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2026.06~</div>
+          <div class="tl-title">순차 지급</div>
+          <div class="tl-desc">심사 후 본인 명의 계좌로 입금</div>
+        </div>
+      </div>
+
+      <div class="info-box blue">
+        <div class="info-title">건강보험료 기준</div>
+        <p>소득 하위 70% 판정은 본인부담 건강보험료 합산액 기준으로 이루어질 가능성이 높습니다. 가구원 수별 컷오프 금액은 정부 공식 발표를 확인하세요.</p>
+      </div>
+      <div class="info-box amber">
+        <div class="info-title">준비물</div>
+        <p>신분증, 본인 명의 계좌번호, 가구원 정보. 온라인 신청 시 공동·간편인증이 필요합니다.</p>
+      </div>
+      <div class="info-box red">
+        <div class="info-title">주의</div>
+        <p>구체적인 신청 일정과 컷오프 기준은 일부 미확정입니다. 사칭 문자·전화에 주의하고, 반드시 정부24·복지로 공식 채널을 이용하세요.</p>
+      </div>
+
+      <div class="summary-card">
+        <h4>핵심 요약</h4>
+        <ul>
+          <li>총 예산 4조 8,000억 원, 약 3,580만 명 수혜 추정</li>
+          <li>1인당 최소 10만원 ~ 최대 60만원 차등 지급</li>
+          <li>소득 하위 70% 기본 대상, 취약계층 가산</li>
+          <li>1차 지급 2026년 4월 말~5월 초 예정</li>
+        </ul>
+      </div>
+    `
   }
 ];
 
