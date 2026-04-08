@@ -1774,6 +1774,142 @@ export const newsArticles = [
         </ul>
       </div>
     `
+  },
+  {
+    id: 22,
+    title: "2026년 4월 8일 오늘의 복지 뉴스 — 생계급여 인상·사회복지사 유급병가 신설",
+    date: "2026-04-08",
+    summary: "2026년 기준 중위소득이 역대 최대 6.51% 인상되어 4인 가구 생계급여 선정 기준이 월 207만 8,316원 이하로 늘었습니다. 사회복지사 기본급 3.5% 인상과 연 30일 이상 유급병가 신설 등 처우 개선 내용도 함께 정리했습니다.",
+    content: `
+      <p>2026년 복지 정책에 큰 변화가 찾아왔습니다. <strong>기준 중위소득이 역대 최대 6.51% 인상</strong>되면서 더 많은 분들이 기초생활보장 혜택을 받을 수 있게 되었고, 사회복지 현장 종사자들을 위한 <strong>유급병가 제도</strong>도 새로 신설됐습니다. 오늘의 두 가지 핵심 복지 뉴스를 정리합니다.</p>
+
+      <div class="info-box blue">
+        <div class="info-title">📌 핵심 요약</div>
+        <p>✔ 2026년 기준 중위소득 <strong>6.51% 인상</strong> — 역대 최대폭<br>
+        ✔ 4인 가구 생계급여 기준 <strong>월 207만 8,316원 이하</strong><br>
+        ✔ 사회복지사 기본급 <strong>3.5% 인상</strong> + <strong>유급병가 연 30일</strong> 신설</p>
+      </div>
+
+      <h3>1. 기준 중위소득 6.51% 인상 — 약 4만 명 신규 수급 기대</h3>
+      <p>기준 중위소득은 국민 전체를 소득 순서대로 줄 세웠을 때 정확히 중간에 있는 사람의 소득으로, 생계급여·의료급여·주거급여·교육급여 등 각종 복지 혜택의 수급 기준이 됩니다. 2026년 4인 가구 기준 중위소득은 <strong>월 649만 4,738원</strong>으로 결정되었습니다.</p>
+
+      <h3>2026년 급여별 수급 기준 (1인 가구)</h3>
+      <div class="bar-chart">
+        <div class="bar-item">
+          <div class="bar-label"><span>교육급여 (중위 50%)</span><span class="bar-value">128만원</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width: 100%"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>주거급여 (중위 48%)</span><span class="bar-value">123만원</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width: 96%"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>의료급여 (중위 40%)</span><span class="bar-value">102만원</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width: 80%"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label"><span>생계급여 (중위 32%)</span><span class="bar-value">82만원</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width: 64%"></div></div>
+        </div>
+      </div>
+
+      <h3>4인 가구 기준 수급 상한선</h3>
+      <table>
+        <thead>
+          <tr><th>급여</th><th>월 소득인정액</th><th>중위소득 비율</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>생계급여</td><td class="td-highlight">207만 8,316원 이하</td><td>32%</td></tr>
+          <tr><td>의료급여</td><td>259만 7,895원 이하</td><td>40%</td></tr>
+          <tr><td>주거급여</td><td>311만 7,474원 이하</td><td>48%</td></tr>
+          <tr><td>교육급여</td><td>324만 7,369원 이하</td><td>50%</td></tr>
+        </tbody>
+      </table>
+
+      <div class="info-box amber">
+        <div class="info-title">자동차 재산 기준 완화</div>
+        <p>2026년부터 <strong>소형 이하이면서 10년 이상 됐거나 500만 원 미만인 승합·화물차</strong>는 일반 재산과 동일한 낮은 환산율을 적용합니다. 오래된 차 때문에 탈락하셨던 분들도 다시 한번 신청해보세요.</p>
+      </div>
+
+      <h3>신청 방법 (4단계)</h3>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-date">1단계</div>
+          <div class="tl-title">방문 또는 온라인 신청</div>
+          <div class="tl-desc">주소지 행정복지센터 또는 복지로(bokjiro.go.kr)</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2단계</div>
+          <div class="tl-title">서류 제출</div>
+          <div class="tl-desc">신청서·신분증·통장사본·금융정보 제공 동의서</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">3단계</div>
+          <div class="tl-title">소득·재산 조사</div>
+          <div class="tl-desc">약 30일 소요</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">4단계</div>
+          <div class="tl-title">수급 결정 및 지급</div>
+          <div class="tl-desc">신청한 다음 달부터 지급 시작</div>
+        </div>
+      </div>
+
+      <h3>2. 사회복지사 처우 개선 — 유급병가 신설 + 기본급 3.5% 인상</h3>
+      <p>"몸이 아파도 눈치 보여 출근한다"던 사회복지 현장에 실질적인 변화가 찾아왔습니다. 2026년부터 사회복지시설 종사자의 <strong>기본급이 전 직급·전 호봉 일괄 3.5% 인상</strong>되며, 이는 국가공무원 보수 인상률과 동일합니다.</p>
+
+      <div class="key-numbers">
+        <div class="key-num"><span class="num">+3.5%</span><span class="num-label">기본급 인상</span></div>
+        <div class="key-num"><span class="num">연 30일</span><span class="num-label">유급병가 신설</span></div>
+        <div class="key-num"><span class="num">12만원</span><span class="num-label">셋째 가족수당</span></div>
+      </div>
+
+      <h3>2026년 처우 개선 한눈에 보기</h3>
+      <table>
+        <thead>
+          <tr><th>항목</th><th>내용</th><th>비고</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>기본급</td><td class="td-highlight">+3.5% 일괄 인상</td><td>공무원과 동일 수준</td></tr>
+          <tr><td>유급병가</td><td class="td-highlight">연 30일 이상</td><td>2026년 신설, 기관장 의무</td></tr>
+          <tr><td>가족수당(첫째)</td><td>5만원</td><td>현실화</td></tr>
+          <tr><td>가족수당(둘째)</td><td>8만원</td><td>현실화</td></tr>
+          <tr><td>가족수당(셋째 이후)</td><td class="td-highlight">12만원</td><td>현실화</td></tr>
+        </tbody>
+      </table>
+
+      <div class="info-box blue">
+        <div class="info-title">유급병가 신설의 의미</div>
+        <p>기존에는 관련 규정이 없어 아파도 연차를 소진하거나 무급 처리되는 경우가 많았습니다. 2026년부터는 질병·부상으로 업무 수행이 어려운 경우 <strong>연 최소 30일의 유급 병가</strong>가 보장되며, 시설 운영 법인이나 기관장은 이를 반드시 허용해야 합니다.</p>
+      </div>
+
+      <div class="info-box amber">
+        <div class="info-title">내가 일하는 시설에도 적용되나요?</div>
+        <p>국고·지방비 지원을 받는 사회복지시설(노인복지관·장애인시설·아동복지시설 등)이라면 대부분 적용 대상입니다. 다만 지자체와 법인 운영 방침에 따라 시기·방식이 다를 수 있으니 소속 법인 또는 지자체 담당 부서에 확인하세요.</p>
+      </div>
+
+      <div class="info-box red">
+        <div class="info-title">⚠️ 면책조항</div>
+        <p>이 기사는 보건복지부·정책브리핑·복지로 등 공개 정보를 바탕으로 작성되었습니다. 개인의 실제 수급 여부와 급여 적용 시기는 가구 상황에 따라 달라질 수 있으므로, 정확한 내용은 주민센터 또는 보건복지상담센터 ☎129로 확인하시기 바랍니다.</p>
+      </div>
+
+      <h3>📞 문의처</h3>
+      <p>• 보건복지상담센터: ☎ <strong>129</strong> (24시간, 무료)<br>
+      • 복지로: <a href="https://www.bokjiro.go.kr" target="_blank">www.bokjiro.go.kr</a><br>
+      • 보건복지부: <a href="https://www.mohw.go.kr" target="_blank">www.mohw.go.kr</a><br>
+      • 한국사회복지사협회: <a href="https://www.welfare.net" target="_blank">www.welfare.net</a> / ☎ 02-786-0845</p>
+
+      <div class="summary-card">
+        <h4>핵심 요약</h4>
+        <ul>
+          <li>기준 중위소득 6.51% 인상 — 역대 최대, 약 4만 명 신규 수급 기대</li>
+          <li>4인 가구 생계급여 기준 월 207만 8,316원 이하</li>
+          <li>자동차 재산 기준 완화로 작년 탈락자도 재신청 가능</li>
+          <li>사회복지사 기본급 3.5% 인상 + 유급병가 연 30일 신설</li>
+          <li>가족수당 현실화: 첫째 5만 / 둘째 8만 / 셋째 이후 12만원</li>
+        </ul>
+      </div>
+    `
   }
 ];
 
