@@ -17,6 +17,23 @@
         ]
       }
     ],
+    "redirects": [
+      { "source": "/아동수당_만13세까지_단계적_확대.html", "destination": "/archive/아동수당_만13세까지_단계적_확대.html", "type": 301 },
+      { "source": "/2026-04-05_posts_update.html", "destination": "/archive/2026-04-05_posts_update.html", "type": 301 },
+      { "source": "/2026-04-06-기초연금-인상.html", "destination": "/archive/2026-04-06-기초연금-인상.html", "type": 301 },
+      { "source": "/2026-04-08-복지뉴스.html", "destination": "/archive/2026-04-08-복지뉴스.html", "type": 301 },
+      { "source": "/2026-04-09-복지뉴스.html", "destination": "/archive/2026-04-09-복지뉴스.html", "type": 301 },
+      { "source": "/2026-04-10-복지뉴스.html", "destination": "/archive/2026-04-10-복지뉴스.html", "type": 301 },
+      { "source": "/2026-04-11-복지뉴스.html", "destination": "/archive/2026-04-11-복지뉴스.html", "type": 301 },
+      { "source": "/2026-04-12-복지뉴스.html", "destination": "/archive/2026-04-12-복지뉴스.html", "type": 301 },
+      { "source": "/2026-04-13-복지뉴스.html", "destination": "/archive/2026-04-13-복지뉴스.html", "type": 301 },
+      { "source": "/아이돌봄서비스_2026년_대폭_확대.html", "destination": "/archive/아이돌봄서비스_2026년_대폭_확대.html", "type": 301 },
+      { "source": "/2026_청년월세지원.html", "destination": "/archive/2026_청년월세지원.html", "type": 301 },
+      { "source": "/2026_육아휴직_개편.html", "destination": "/archive/2026_육아휴직_개편.html", "type": 301 },
+      { "source": "/2026_고유가_피해지원금.html", "destination": "/archive/2026_고유가_피해지원금.html", "type": 301 },
+      { "source": "/welfare_oil_relief_2026.html", "destination": "/archive/welfare_oil_relief_2026.html", "type": 301 },
+      { "source": "/welfare_youth_rent_2026.html", "destination": "/archive/welfare_youth_rent_2026.html", "type": 301 }
+    ],
     "rewrites": [
       {
         "source": "!/@(ads.txt|*.html|*.js|*.css|*.json|*.png|*.jpg|*.ico)",
