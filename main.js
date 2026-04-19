@@ -6,6 +6,42 @@ import { policies } from './policies.js';
 import { newsArticles, insightArticles } from './posts.js';
 
 // ==========================================================================
+// Firebase 초기화 (Auth + Firestore)
+// --------------------------------------------------------------------------
+// Firebase 콘솔 → 프로젝트 설정 → 내 앱 → 웹 앱에서 config 복사해 아래 FIREBASE_CONFIG
+// 에 붙여넣으세요. apiKey/authDomain은 공개값이라 소스에 포함해도 안전합니다.
+// 추가로 활성화 필요:
+//   1) Authentication → Sign-in method → Google 제공업체 사용
+//   2) Firestore Database 생성 (asia-northeast3 권장)
+//   3) firestore.rules 배포: `firebase deploy --only firestore:rules`
+// ==========================================================================
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+import {
+    getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged
+} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+import {
+    getFirestore, doc, getDoc, setDoc, serverTimestamp
+} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+const FIREBASE_CONFIG = {
+    apiKey: "AIzaSyDXZCifBI1Iuz6IAWAD36bmUJa9oMfJkJM",
+    authDomain: "bokjihelper-872e2.firebaseapp.com",
+    projectId: "bokjihelper-872e2",
+    storageBucket: "bokjihelper-872e2.firebasestorage.app",
+    messagingSenderId: "366702445672",
+    appId: "1:366702445672:web:754015815dedbff33367dd",
+    measurementId: "G-3ELCKD56YF"
+};
+
+const firebaseApp = initializeApp(FIREBASE_CONFIG);
+const auth = getAuth(firebaseApp);
+const db = getFirestore(firebaseApp);
+const googleProvider = new GoogleAuthProvider();
+
+let currentUser = null;
+let currentUserProfile = null;
+
+// ==========================================================================
 // Web Component: Policy Card (<policy-card>)
 // ==========================================================================
 class PolicyCard extends HTMLElement {
@@ -193,6 +229,18 @@ function renderHomeInsights() {
 const GOOGLE_FORM_ID = '1FAIpQLSc2Hd_KxVNJFgj3ffH_SimsKr9OkIZ8afnecu7iE5z4fovKlA';
 const GOOGLE_FORM_EMAIL_FIELD = 'entry.596837271';
 
+async function submitToGoogleForm(email) {
+    const endpoint = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/formResponse`;
+    const body = new URLSearchParams();
+    body.append(GOOGLE_FORM_EMAIL_FIELD, email);
+    await fetch(endpoint, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body
+    });
+}
+
 function setupSubscribeForm() {
     const form = document.getElementById('subscribeForm');
     const note = document.getElementById('subscribeNote');
@@ -207,36 +255,189 @@ function setupSubscribeForm() {
             note.classList.add('error');
             return;
         }
-        if (GOOGLE_FORM_ID.startsWith('REPLACE_') || GOOGLE_FORM_EMAIL_FIELD.startsWith('entry.REPLACE_')) {
-            console.warn('[subscribe] Google Form 연동값이 설정되지 않았습니다. main.js 상단의 GOOGLE_FORM_ID / GOOGLE_FORM_EMAIL_FIELD 상수를 채워 주세요.');
-            note.textContent = `"${email}" 주소가 확인되었습니다. (개발자 메모: Google Form 연동 필요)`;
-            note.classList.remove('error');
-            note.classList.add('success');
-            form.reset();
-            return;
-        }
+        const submitBtn = form.querySelector('.subscribe-btn');
+        if (submitBtn) submitBtn.disabled = true;
         try {
-            const endpoint = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/formResponse`;
-            const body = new URLSearchParams();
-            body.append(GOOGLE_FORM_EMAIL_FIELD, email);
-            // Google Forms는 CORS 응답을 주지 않으므로 no-cors 모드로 전송하고 응답은 읽지 않음
-            await fetch(endpoint, {
-                method: 'POST',
-                mode: 'no-cors',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body
-            });
+            await submitToGoogleForm(email);
+            // 로그인 유저의 경우 Firestore에도 구독 상태 기록
+            if (currentUser) {
+                await setDoc(doc(db, 'users', currentUser.uid), {
+                    email: currentUser.email,
+                    displayName: currentUser.displayName || null,
+                    subscribedEmail: email,
+                    subscribedAt: serverTimestamp()
+                }, { merge: true });
+                currentUserProfile = { ...(currentUserProfile || {}), subscribedEmail: email };
+                refreshSubscriptionUI();
+            }
             note.textContent = `"${email}" 주소로 구독 신청이 접수되었습니다. 곧 만나요!`;
             note.classList.remove('error');
             note.classList.add('success');
             form.reset();
+            if (currentUser) form.querySelector('#subscribeEmail').value = currentUser.email || '';
         } catch (err) {
             console.error('[subscribe] submit failed', err);
             note.textContent = '구독 신청에 실패했습니다. 잠시 후 다시 시도해 주세요.';
             note.classList.remove('success');
             note.classList.add('error');
+        } finally {
+            if (submitBtn) submitBtn.disabled = false;
         }
     });
+}
+
+// ==========================================================================
+// Firebase Auth + Firestore 연동
+// ==========================================================================
+function setupAuth() {
+    const loginBtn = document.getElementById('loginBtn');
+    const userMenu = document.getElementById('userMenu');
+    const userTrigger = document.getElementById('userTrigger');
+    const userDropdown = document.getElementById('userDropdown');
+    const logoutBtn = document.getElementById('logoutBtn');
+
+    loginBtn?.addEventListener('click', async () => {
+        if (FIREBASE_CONFIG.apiKey.startsWith('REPLACE_')) {
+            alert('Firebase 설정이 완료되지 않았습니다. main.js 상단의 FIREBASE_CONFIG를 채워 주세요.');
+            return;
+        }
+        try {
+            await signInWithPopup(auth, googleProvider);
+        } catch (err) {
+            console.error('[auth] sign-in failed', err);
+            if (err.code === 'auth/popup-closed-by-user' || err.code === 'auth/cancelled-popup-request') return;
+            alert('로그인에 실패했습니다: ' + (err.message || err.code || '알 수 없는 오류'));
+        }
+    });
+
+    userTrigger?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const open = !userDropdown.classList.contains('hidden');
+        if (open) {
+            userDropdown.classList.add('hidden');
+            userTrigger.setAttribute('aria-expanded', 'false');
+        } else {
+            userDropdown.classList.remove('hidden');
+            userTrigger.setAttribute('aria-expanded', 'true');
+        }
+    });
+
+    document.addEventListener('click', (e) => {
+        if (userMenu && !userMenu.contains(e.target) && userDropdown) {
+            userDropdown.classList.add('hidden');
+            userTrigger?.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    logoutBtn?.addEventListener('click', async () => {
+        try {
+            await signOut(auth);
+        } catch (err) {
+            console.error('[auth] sign-out failed', err);
+        }
+    });
+
+    onAuthStateChanged(auth, async (user) => {
+        currentUser = user;
+        if (user) {
+            await handleUserSignedIn(user);
+        } else {
+            handleUserSignedOut();
+        }
+    });
+}
+
+async function handleUserSignedIn(user) {
+    const loginBtn = document.getElementById('loginBtn');
+    const userMenu = document.getElementById('userMenu');
+    const avatar = document.getElementById('userAvatar');
+    const nameEl = document.getElementById('userName');
+    const dropName = document.getElementById('userDropdownName');
+    const dropEmail = document.getElementById('userDropdownEmail');
+
+    if (loginBtn) loginBtn.classList.add('hidden');
+    if (userMenu) userMenu.classList.remove('hidden');
+    if (avatar) avatar.src = user.photoURL || 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect width="32" height="32" fill="%232563eb"/><text x="50%25" y="55%25" font-family="sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="700">' + (user.displayName?.[0] || user.email?.[0] || 'U').toUpperCase() + '</text></svg>';
+    if (nameEl) nameEl.textContent = user.displayName || user.email?.split('@')[0] || '사용자';
+    if (dropName) dropName.textContent = user.displayName || '—';
+    if (dropEmail) dropEmail.textContent = user.email || '';
+
+    // Firestore 유저 문서 upsert (로그인 이력만 기록, 구독은 별도)
+    try {
+        const ref = doc(db, 'users', user.uid);
+        const snap = await getDoc(ref);
+        if (!snap.exists()) {
+            await setDoc(ref, {
+                email: user.email,
+                displayName: user.displayName || null,
+                createdAt: serverTimestamp(),
+                lastLoginAt: serverTimestamp()
+            });
+            currentUserProfile = {};
+        } else {
+            await setDoc(ref, { lastLoginAt: serverTimestamp() }, { merge: true });
+            currentUserProfile = snap.data();
+        }
+    } catch (err) {
+        console.error('[auth] user doc write failed', err);
+        currentUserProfile = null;
+    }
+
+    // 로그인 유저면 구독폼에 이메일 자동 채움
+    const emailInput = document.getElementById('subscribeEmail');
+    if (emailInput && user.email) emailInput.value = user.email;
+
+    refreshSubscriptionUI();
+}
+
+function handleUserSignedOut() {
+    currentUserProfile = null;
+    const loginBtn = document.getElementById('loginBtn');
+    const userMenu = document.getElementById('userMenu');
+    const userDropdown = document.getElementById('userDropdown');
+    if (loginBtn) loginBtn.classList.remove('hidden');
+    if (userMenu) userMenu.classList.add('hidden');
+    if (userDropdown) userDropdown.classList.add('hidden');
+
+    // 구독폼 초기화 (값 비우고 상태 표시 리셋)
+    const emailInput = document.getElementById('subscribeEmail');
+    if (emailInput) emailInput.value = '';
+    refreshSubscriptionUI();
+}
+
+function refreshSubscriptionUI() {
+    const form = document.getElementById('subscribeForm');
+    const note = document.getElementById('subscribeNote');
+    const statusEl = document.getElementById('subscriptionStatus');
+    const isSubscribed = !!(currentUserProfile && currentUserProfile.subscribedEmail);
+
+    if (statusEl) {
+        if (!currentUser) {
+            statusEl.textContent = '—';
+            statusEl.className = 'subscription-status';
+        } else if (isSubscribed) {
+            statusEl.textContent = '구독 중 ✓';
+            statusEl.className = 'subscription-status active';
+        } else {
+            statusEl.textContent = '미구독';
+            statusEl.className = 'subscription-status inactive';
+        }
+    }
+
+    if (!form) return;
+    if (currentUser && isSubscribed) {
+        form.classList.add('subscribed');
+        if (note) {
+            note.textContent = `이미 ${currentUserProfile.subscribedEmail} 주소로 구독 중입니다.`;
+            note.classList.remove('error');
+            note.classList.add('success');
+        }
+    } else {
+        form.classList.remove('subscribed');
+        if (note && !note.classList.contains('success') && !note.classList.contains('error')) {
+            note.textContent = '매주 1회 발송 · 언제든지 해지 가능 · 스팸 없음';
+        }
+    }
 }
 
 // ==========================================================================
@@ -319,6 +520,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderHomeNews();
     renderHomeInsights();
     setupSubscribeForm();
+    setupAuth();
 
     // 뉴스 탭 렌더링
     renderNews();
