@@ -229,16 +229,9 @@ function renderHomeInsights() {
 const GOOGLE_FORM_ID = '1FAIpQLSc2Hd_KxVNJFgj3ffH_SimsKr9OkIZ8afnecu7iE5z4fovKlA';
 const GOOGLE_FORM_EMAIL_FIELD = 'entry.596837271';
 
-async function submitToGoogleForm(email) {
-    const endpoint = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/formResponse`;
-    const body = new URLSearchParams();
-    body.append(GOOGLE_FORM_EMAIL_FIELD, email);
-    await fetch(endpoint, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body
-    });
+function buildGoogleFormUrl(email) {
+    const base = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/viewform?usp=pp_url`;
+    return email ? `${base}&${GOOGLE_FORM_EMAIL_FIELD}=${encodeURIComponent(email)}` : base;
 }
 
 function setupSubscribeForm() {
@@ -249,40 +242,33 @@ function setupSubscribeForm() {
         e.preventDefault();
         const input = form.querySelector('#subscribeEmail');
         const email = (input.value || '').trim();
-        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
             note.textContent = '올바른 이메일 주소를 입력해 주세요.';
             note.classList.remove('success');
             note.classList.add('error');
             return;
         }
-        const submitBtn = form.querySelector('.subscribe-btn');
-        if (submitBtn) submitBtn.disabled = true;
-        try {
-            await submitToGoogleForm(email);
-            // 로그인 유저의 경우 Firestore에도 구독 상태 기록
-            if (currentUser) {
+        // 로그인 유저의 경우 Firestore에 구독 의향 기록 (이미 구독 중 상태 유지용)
+        if (currentUser) {
+            try {
                 await setDoc(doc(db, 'users', currentUser.uid), {
                     email: currentUser.email,
                     displayName: currentUser.displayName || null,
-                    subscribedEmail: email,
+                    subscribedEmail: email || currentUser.email,
                     subscribedAt: serverTimestamp()
                 }, { merge: true });
-                currentUserProfile = { ...(currentUserProfile || {}), subscribedEmail: email };
+                currentUserProfile = { ...(currentUserProfile || {}), subscribedEmail: email || currentUser.email };
                 refreshSubscriptionUI();
+            } catch (err) {
+                console.error('[subscribe] firestore write failed', err);
             }
-            note.textContent = `"${email}" 주소로 구독 신청이 접수되었습니다. 곧 만나요!`;
-            note.classList.remove('error');
-            note.classList.add('success');
-            form.reset();
-            if (currentUser) form.querySelector('#subscribeEmail').value = currentUser.email || '';
-        } catch (err) {
-            console.error('[subscribe] submit failed', err);
-            note.textContent = '구독 신청에 실패했습니다. 잠시 후 다시 시도해 주세요.';
-            note.classList.remove('success');
-            note.classList.add('error');
-        } finally {
-            if (submitBtn) submitBtn.disabled = false;
         }
+        // 새 창으로 Google Form 이동 (이메일은 URL 파라미터로 미리 채움)
+        const url = buildGoogleFormUrl(email);
+        window.open(url, '_blank', 'noopener');
+        note.textContent = '새 창에서 구독 폼을 열었습니다. 추가 정보를 입력하고 제출해 주세요.';
+        note.classList.remove('error');
+        note.classList.add('success');
     });
 }
 
