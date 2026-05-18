@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"집 나온 10대에게 매달 65만원 줍니다" — 위기청소년 특별지원, 이 사실 모르면 3,000만원 넘는 혜택 그냥 날립니다 | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    background: #fce4ec;
+    color: #333;
+    line-height: 1.8;
+    font-size: 15px;
+  }
+  .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+
+  /* 상단 헤더 */
+  .top-header {
+    background: linear-gradient(135deg, #c62828, #e53935);
+    color: #fff;
+    padding: 18px 24px;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .date-tag {
+    background: rgba(255,255,255,0.25);
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .issue-tag { font-size: 13px; font-weight: 700; opacity: 0.9; }
+
+  /* 카드 */
+  .card {
+    background: #fff;
+    border-radius: 0 0 12px 12px;
+    padding: 28px 28px 36px;
+    box-shadow: 0 4px 20px rgba(198,40,40,0.10);
+  }
+
+  /* 섹션 배지 */
+  .section-badge {
+    display: inline-block;
+    background: #fce4ec;
+    color: #c62828;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+  }
+
+  /* 메인 제목 */
+  h1 {
+    font-size: 26px;
+    font-weight: 900;
+    color: #b71c1c;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 600px) { h1 { font-size: 20px; } }
+
+  /* 훅 */
+  .hook {
+    border-left: 5px solid #c62828;
+    padding: 14px 18px;
+    background: #fff5f5;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 24px;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  .highlight {
+    background: linear-gradient(180deg, transparent 55%, #ffcdd2 55%);
+    font-weight: 800;
+    padding: 0 2px;
+  }
+
+  /* 핵심 요약 박스 */
+  .summary-box {
+    background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+    border-left: 5px solid #2e7d32;
+    border-radius: 0 10px 10px 0;
+    padding: 18px 20px;
+    margin-bottom: 28px;
+  }
+  .summary-box h2 {
+    font-size: 15px;
+    font-weight: 900;
+    color: #1b5e20;
+    margin-bottom: 10px;
+  }
+  .summary-box ul { list-style: none; padding: 0; }
+  .summary-box ul li {
+    font-size: 14px;
+    color: #2e7d32;
+    font-weight: 700;
+    padding: 3px 0;
+  }
+  .summary-box ul li::before { content: "✅ "; }
+
+  /* 섹션 제목 */
+  h2 {
+    font-size: 18px;
+    font-weight: 900;
+    color: #c62828;
+    margin: 28px 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #ffcdd2;
+  }
+
+  /* 표 */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 24px;
+    font-size: 14px;
+  }
+  th {
+    background: #c62828;
+    color: #fff;
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: 700;
+  }
+  td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #fce4ec;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #fff5f5; }
+  .amt { font-weight: 900; color: #c62828; }
+
+  /* 인포그래픽 */
+  .infographic-wrap {
+    background: #fff5f5;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 28px;
+    overflow-x: auto;
+  }
+  .infographic-wrap p.caption {
+    font-size: 12px;
+    color: #888;
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  /* 신청 단계 */
+  .steps { counter-reset: step; list-style: none; padding: 0; margin-bottom: 24px; }
+  .steps li {
+    counter-increment: step;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    margin-bottom: 14px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .steps li::before {
+    content: counter(step);
+    background: #c62828;
+    color: #fff;
+    font-weight: 900;
+    font-size: 13px;
+    min-width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* 기한 박스 */
+  .deadline-box {
+    border: 2.5px dashed #f57c00;
+    border-radius: 10px;
+    padding: 16px 20px;
+    background: #fffde7;
+    margin-bottom: 28px;
+  }
+  .deadline-box p { font-size: 14px; color: #e65100; font-weight: 700; margin-bottom: 4px; }
+  .deadline-box .deadline-title { font-size: 16px; font-weight: 900; color: #bf360c; margin-bottom: 8px; }
+
+  /* 체크리스트 */
+  .checklist {
+    background: #fce4ec;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 24px;
+  }
+  .checklist h2 { border: none; font-size: 16px; color: #880e4f; margin-top: 0; margin-bottom: 12px; padding: 0; }
+  .checklist ul { list-style: none; padding: 0; }
+  .checklist ul li {
+    font-size: 14px;
+    color: #333;
+    padding: 5px 0;
+    display: flex;
+    gap: 8px;
+  }
+  .checklist ul li::before { content: "✓"; color: #c62828; font-weight: 900; font-size: 16px; }
+
+  /* 주의사항 */
+  .caution {
+    background: #fff3e0;
+    border-left: 4px solid #f57c00;
+    border-radius: 0 8px 8px 0;
+    padding: 16px 18px;
+    margin-bottom: 24px;
+    font-size: 14px;
+  }
+  .caution p { margin-bottom: 6px; }
+  .caution p:last-child { margin-bottom: 0; }
+
+  /* 담당기관 박스 */
+  .contact-box {
+    background: linear-gradient(135deg, #c62828, #e53935);
+    color: #fff;
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin-bottom: 28px;
+    font-size: 14px;
+  }
+  .contact-box h2 { color: #fff; border-color: rgba(255,255,255,0.3); margin-top: 0; font-size: 16px; }
+  .contact-box p { margin-bottom: 6px; }
+  .contact-box a { color: #ffcdd2; }
+
+  /* 전문가 찬반 */
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card {
+    background: #fff;
+    padding: 14px 16px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  /* 해시태그 */
+  .hashtags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+  .hashtags span {
+    background: #fce4ec;
+    color: #c62828;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 20px;
+  }
+
+  /* 면책 */
+  .disclaimer {
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 12px;
+    color: #777;
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+
+  /* 메타 */
+  .meta { text-align: right; font-size: 12px; color: #aaa; }
+
+  @media (max-width: 600px) {
+    .card { padding: 18px 14px 28px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    table { font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <!-- 상단 헤더 -->
+  <div class="top-header">
+    <span class="date-tag">📅 2026년 5월 18일</span>
+    <span class="issue-tag">오늘의 복지 뉴스 · 제2보</span>
+  </div>
+
+  <div class="card">
+    <!-- 섹션 배지 -->
+    <span class="section-badge">🧒 청소년복지 · 복지 사각지대</span>
+
+    <!-- 메인 제목 -->
+    <h1>"집 나온 10대에게 매달 65만원 줍니다" — 위기청소년 특별지원, 이 사실 모르면 3,000만원 넘는 혜택 그냥 날립니다</h1>
+
+    <!-- 훅 -->
+    <div class="hook">
+      부모에게 버림받거나 집을 나올 수밖에 없었던 10대 청소년들이 있습니다. 이들에게 국가가 <span class="highlight">생활비·의료비·학원비·상담비를 한꺼번에 지원하는 제도</span>가 있지만, 대부분 정작 당사자들은 그 존재조차 모릅니다. 주민센터 한 번이 이 아이들의 인생을 바꿉니다.
+    </div>
+
+    <!-- 핵심 요약 박스 -->
+    <div class="summary-box">
+      <h2>📌 이것만 알면 됩니다</h2>
+      <ul>
+        <li>9~24세 위기청소년이라면 누구나 신청 가능 (중위소득 100% 이하)</li>
+        <li>생활비 月 65만원 + 건강지원 年 200만원 + 학업·상담·법률 지원 포함</li>
+        <li>신청은 주민센터 방문 또는 복지로(www.bokjiro.go.kr) 온라인으로 간단하게</li>
+      </ul>
+    </div>
+
+    <!-- 배경/문제 섹션 -->
+    <h2>📋 '위기청소년'이란 누구인가</h2>
+    <p>위기청소년 특별지원 사업은 여성가족부가 운영하는 제도입니다. 위기 상황에 처한 청소년이 스스로 자립하고 건강하게 성장할 수 있도록 다양한 분야에서 경제적 지원을 제공합니다.</p>
+    <p style="margin-top:10px;">다음 중 하나라도 해당되면 '위기청소년'으로 분류됩니다:</p>
+    <ul style="margin:10px 0 10px 20px; font-size:14px; line-height:2;">
+      <li>비행·일탈 예방을 위해 지원이 필요한 청소년</li>
+      <li>학교 밖 청소년 (학업 중단, 미진학 등)</li>
+      <li>보호자가 없거나 실질적으로 보호를 받지 못하는 청소년</li>
+      <li>가정폭력·방임 등으로 가정에서 분리된 청소년</li>
+      <li>오랜 기간 집이나 좁은 공간에서 외부와 단절된 은둔형 청소년</li>
+    </ul>
+    <p>통계에 따르면 매년 수만 명의 청소년이 이 조건에 해당하지만, <strong>실제 수혜 청소년은 극소수에 불과합니다.</strong> 제도를 몰라서 못 받는 경우가 대부분입니다.</p>
+
+    <!-- 상세 정보 표 -->
+    <h2>📊 2026년 위기청소년 특별지원 상세 내용</h2>
+    <table>
+      <tr>
+        <th>지원 분야</th>
+        <th>지원 내용</th>
+        <th>한도액</th>
+      </tr>
+      <tr>
+        <td><strong>🍚 생활지원</strong></td>
+        <td>의복·식비·연료비 등 기본 생활비</td>
+        <td class="amt">월 65만원 이하</td>
+      </tr>
+      <tr>
+        <td><strong>🏥 건강지원</strong></td>
+        <td>진찰·검사·약제·치료·입원 등 의료비</td>
+        <td class="amt">연 200만원 이하</td>
+      </tr>
+      <tr>
+        <td><strong>📚 학업지원</strong></td>
+        <td>수업료·교재비 등 학교 학업 관련</td>
+        <td class="amt">월 15만원 이하</td>
+      </tr>
+      <tr>
+        <td><strong>🏫 학원비</strong></td>
+        <td>학원·교습소 수강료 (학업 목적)</td>
+        <td class="amt">월 30만원 이하</td>
+      </tr>
+      <tr>
+        <td><strong>💼 자립지원</strong></td>
+        <td>기술 습득·진로 상담·직업 훈련 등</td>
+        <td class="amt">월 36만원 이하</td>
+      </tr>
+      <tr>
+        <td><strong>🧠 상담지원</strong></td>
+        <td>심리치료·가족상담·정신건강 상담</td>
+        <td class="amt">월 30만원 이하</td>
+      </tr>
+      <tr>
+        <td><strong>⚖️ 법률지원</strong></td>
+        <td>법률 상담·소송 비용·법률 구조</td>
+        <td class="amt">연 350만원 이하</td>
+      </tr>
+      <tr>
+        <td><strong>🎭 활동지원</strong></td>
+        <td>수련활동·문화활동·체험 등</td>
+        <td class="amt">월 30만원 이하</td>
+      </tr>
+    </table>
+
+    <!-- SVG 인포그래픽 -->
+    <h2>💰 지원금액 한눈에 보기</h2>
+    <div class="infographic-wrap">
+      <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;display:block;margin:0 auto;">
+        <rect width="700" height="280" fill="#fff5f5" rx="10"/>
+        <text x="350" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#c62828">위기청소년 특별지원 분야별 월 지원 한도</text>
+
+        <!-- 바 차트 -->
+        <!-- 생활 65 -->
+        <rect x="60" y="45" width="325" height="22" fill="#e53935" rx="3"/>
+        <text x="393" y="61" font-size="12" fill="#c62828" font-weight="bold">생활지원 月 65만원</text>
+        <text x="62" y="61" font-size="11" fill="#fff">생활</text>
+
+        <!-- 자립 36 -->
+        <rect x="60" y="75" width="180" height="22" fill="#ef5350" rx="3"/>
+        <text x="248" y="91" font-size="12" fill="#c62828" font-weight="bold">자립지원 月 36만원</text>
+        <text x="62" y="91" font-size="11" fill="#fff">자립</text>
+
+        <!-- 학원 30 -->
+        <rect x="60" y="105" width="150" height="22" fill="#e57373" rx="3"/>
+        <text x="218" y="121" font-size="12" fill="#c62828" font-weight="bold">학원비 月 30만원</text>
+        <text x="62" y="121" font-size="11" fill="#fff">학원</text>
+
+        <!-- 상담 30 -->
+        <rect x="60" y="135" width="150" height="22" fill="#e57373" rx="3"/>
+        <text x="218" y="151" font-size="12" fill="#c62828" font-weight="bold">상담지원 月 30만원</text>
+        <text x="62" y="151" font-size="11" fill="#fff">상담</text>
+
+        <!-- 활동 30 -->
+        <rect x="60" y="165" width="150" height="22" fill="#ef9a9a" rx="3"/>
+        <text x="218" y="181" font-size="12" fill="#c62828" font-weight="bold">활동지원 月 30만원</text>
+        <text x="62" y="181" font-size="11" fill="#c62828">활동</text>
+
+        <!-- 학업 15 -->
+        <rect x="60" y="195" width="75" height="22" fill="#ffcdd2" rx="3"/>
+        <text x="143" y="211" font-size="12" fill="#c62828" font-weight="bold">학업지원 月 15만원</text>
+        <text x="62" y="211" font-size="11" fill="#c62828">학업</text>
+
+        <!-- 연간 강조 -->
+        <rect x="60" y="228" width="580" height="36" fill="#fff" rx="8" stroke="#c62828" stroke-width="1.5"/>
+        <text x="350" y="243" text-anchor="middle" font-size="12" fill="#555">연간 한도 별도</text>
+        <text x="200" y="258" text-anchor="middle" font-size="13" font-weight="bold" fill="#c62828">🏥 건강지원 연 200만원</text>
+        <text x="490" y="258" text-anchor="middle" font-size="13" font-weight="bold" fill="#c62828">⚖️ 법률지원 연 350만원</text>
+      </svg>
+      <p class="caption">※ 지원 분야 중복 수령은 제한됩니다. 지역·상황에 따라 실제 지원액이 다를 수 있습니다.</p>
+    </div>
+
+    <!-- 신청 방법 -->
+    <h2>🖊️ 신청 방법 (단계별)</h2>
+    <ol class="steps">
+      <li><strong>자격 확인:</strong> 9세~24세 청소년으로, 가구 소득이 기준 중위소득 100% 이하인 경우 신청 가능</li>
+      <li><strong>신청 접수:</strong> 주소지 관할 읍·면·동 주민센터(행정복지센터) 방문 신청 또는 복지로(www.bokjiro.go.kr) 온라인 신청</li>
+      <li><strong>심사 및 지원 결정:</strong> 지방자치단체 청소년상담복지센터 또는 담당 부서에서 사례 검토 후 지원 여부 및 금액 결정</li>
+      <li><strong>지원 시작:</strong> 결정 후 보통 2주~한 달 이내 계좌이체 또는 현물 지원 형태로 지급 개시</li>
+      <li><strong>정기 점검:</strong> 지원 기간 동안 담당 청소년 상담사와 정기적으로 연락하며 자립 지원 연계</li>
+    </ol>
+
+    <!-- 시행 일정 박스 -->
+    <div class="deadline-box">
+      <p class="deadline-title">⏰ 지금 당장 신청하세요!</p>
+      <p>✔ 2026년도 위기청소년 특별지원 신청은 연중 상시 가능합니다</p>
+      <p>✔ 단, 예산 소진 시 조기 마감될 수 있으므로 빠를수록 유리</p>
+      <p>✔ 청소년 본인뿐 아니라 보호자, 학교·복지관 담당자도 대신 신청 가능</p>
+      <p>✔ 긴급 위기 상황은 청소년상담 전화 ☎ 1388로 즉시 연락</p>
+    </div>
+
+    <!-- 자가진단 체크리스트 -->
+    <div class="checklist">
+      <h2>🔍 내 아이(또는 나)가 해당될까? 자가진단 체크리스트</h2>
+      <ul>
+        <li>현재 9세 이상 24세 이하이고, 가구 소득이 중위소득 100% 이하다</li>
+        <li>학교에 다니지 않거나, 가정에서 실질적인 보호를 받지 못하고 있다</li>
+        <li>정신건강·심리 문제로 상담이 필요하지만 비용이 부담스럽다</li>
+        <li>직업 훈련이나 자립을 위한 기술 습득을 원하지만 경제적으로 어렵다</li>
+        <li>가정폭력·방임 등의 이유로 법적 도움이 필요한 상황이다</li>
+      </ul>
+    </div>
+
+    <!-- 주의사항 -->
+    <h2>⚠️ 주의사항</h2>
+    <div class="caution">
+      <p>① 이미 다른 복지 사업에서 동일 분야 지원(예: 학원비 바우처, 의료급여 등)을 받고 있다면 중복 수령이 제한됩니다.</p>
+      <p>② 지원 금액은 지자체 예산 상황에 따라 한도 내에서 다소 조정될 수 있습니다.</p>
+      <p>③ 지원은 일정 기간 단위로 이루어지며, 정기적인 사례 점검을 통해 지속 여부가 결정됩니다.</p>
+      <p>④ 청소년 당사자가 직접 신청하기 어려운 경우 학교 상담교사, 사회복지사, 청소년상담복지센터 담당자가 연계 신청을 도울 수 있습니다.</p>
+    </div>
+
+    <!-- 담당 기관 및 문의처 -->
+    <div class="contact-box">
+      <h2>📞 담당 기관 및 문의처</h2>
+      <p>📱 <strong>청소년 긴급 위기상담</strong> — ☎ <strong>1388</strong> (24시간, 365일)</p>
+      <p>🏛️ <strong>여성가족부 청소년정책과</strong> — ☎ 02-2100-6000</p>
+      <p>🏢 <strong>지역 청소년상담복지센터</strong> — 각 시·군·구 소재 (지자체별 운영)</p>
+      <p>🖥️ <strong>신청 (온라인)</strong> — <a href="https://www.bokjiro.go.kr" target="_blank">복지로 www.bokjiro.go.kr</a></p>
+      <p>🏢 <strong>신청 (오프라인)</strong> — 주소지 읍·면·동 주민센터(행정복지센터) 방문</p>
+    </div>
+
+    <!-- 전문가 찬반 론평 -->
+    <h2>💬 전문가 찬반 론평</h2>
+    <div class="opinion-section">
+      <div class="opinion-grid">
+        <div class="opinion-pro">
+          <h3>🟢 찬성</h3>
+          <div class="opinion-card">
+            <p class="quote">"위기청소년 특별지원은 사각지대 해소를 위한 가장 직접적인 수단 중 하나다. 가정이라는 보호막이 붕괴된 상태에서도 청소년이 학업과 자립을 이어갈 수 있도록 다층적 지원을 제공한다는 점에서 제도적 의의가 크다."</p>
+            <p class="author">— 청소년복지 정책 연구자</p>
+          </div>
+          <div class="opinion-card">
+            <p class="quote">"법률지원까지 연 350만원을 포함한 포괄적 설계는 단순 현금 지원을 넘어 아이들이 실제 필요로 하는 서비스를 연결해 준다는 점에서 다른 나라에서도 배울 수 있는 모델이다."</p>
+            <p class="author">— 사회복지학과 교수</p>
+          </div>
+        </div>
+        <div class="opinion-con">
+          <h3>🔴 반대 / 우려</h3>
+          <div class="opinion-card">
+            <p class="quote">"제도가 아무리 좋아도 당사자가 모르면 의미가 없다. 현재 홍보 체계는 행정 채널 중심이라 가장 취약한 은둔형 청소년과 가출 청소년에게는 도달하지 못하고 있다. 찾아가는 아웃리치 예산이 대폭 확충되어야 한다."</p>
+            <p class="author">— 청소년 현장 활동가</p>
+          </div>
+          <div class="opinion-card">
+            <p class="quote">"중위소득 100% 이하라는 기준이 오히려 경계선 소득 가정의 위기청소년을 배제할 수 있다. 소득 기준을 넘어서도 가정 기능이 사실상 해체된 경우를 포괄하는 보완 기준 마련이 필요하다."</p>
+            <p class="author">— 아동·청소년 인권 연구자</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 해시태그 -->
+    <div class="hashtags">
+      <span>#위기청소년</span>
+      <span>#청소년특별지원</span>
+      <span>#학교밖청소년</span>
+      <span>#청소년복지</span>
+      <span>#가출청소년지원</span>
+      <span>#청소년1388</span>
+      <span>#복지사각지대</span>
+      <span>#여성가족부</span>
+      <span>#청소년생활지원</span>
+      <span>#은둔청소년</span>
+    </div>
+
+    <!-- 면책조항 -->
+    <div class="disclaimer">
+      이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부 및 절차는 담당 기관(청소년상담 ☎1388, 여성가족부, 읍·면·동 주민센터)에 확인하세요.
+    </div>
+
+    <!-- 작성일 -->
+    <p class="meta">작성일: 2026년 5월 18일</p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"시간당 650원 올랐다" — 2026 장애인 활동지원 대개편, 단가 인상·7,000명 확대·개인예산제까지 한방 정리 | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    background: #e3f2fd;
+    color: #333;
+    line-height: 1.8;
+    font-size: 15px;
+  }
+  .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+
+  /* 상단 헤더 */
+  .top-header {
+    background: linear-gradient(135deg, #1565c0, #1976d2);
+    color: #fff;
+    padding: 18px 24px;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .date-tag {
+    background: rgba(255,255,255,0.25);
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .issue-tag {
+    font-size: 13px;
+    font-weight: 700;
+    opacity: 0.9;
+  }
+
+  /* 카드 본문 */
+  .card {
+    background: #fff;
+    border-radius: 0 0 12px 12px;
+    padding: 28px 28px 36px;
+    box-shadow: 0 4px 20px rgba(21,101,192,0.10);
+  }
+
+  /* 섹션 배지 */
+  .section-badge {
+    display: inline-block;
+    background: #e3f2fd;
+    color: #1565c0;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+  }
+
+  /* 메인 제목 */
+  h1 {
+    font-size: 26px;
+    font-weight: 900;
+    color: #0d47a1;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 600px) { h1 { font-size: 20px; } }
+
+  /* 훅 */
+  .hook {
+    border-left: 5px solid #1565c0;
+    padding: 14px 18px;
+    background: #f5f9ff;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 24px;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  .highlight {
+    background: linear-gradient(180deg, transparent 55%, #bbdefb 55%);
+    font-weight: 800;
+    padding: 0 2px;
+  }
+
+  /* 핵심 요약 박스 */
+  .summary-box {
+    background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+    border-left: 5px solid #2e7d32;
+    border-radius: 0 10px 10px 0;
+    padding: 18px 20px;
+    margin-bottom: 28px;
+  }
+  .summary-box h2 {
+    font-size: 15px;
+    font-weight: 900;
+    color: #1b5e20;
+    margin-bottom: 10px;
+  }
+  .summary-box ul {
+    list-style: none;
+    padding: 0;
+  }
+  .summary-box ul li {
+    font-size: 14px;
+    color: #2e7d32;
+    font-weight: 700;
+    padding: 3px 0;
+  }
+  .summary-box ul li::before {
+    content: "✅ ";
+  }
+
+  /* 섹션 제목 */
+  h2 {
+    font-size: 18px;
+    font-weight: 900;
+    color: #1565c0;
+    margin: 28px 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #bbdefb;
+  }
+
+  /* 상세 정보 표 */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 24px;
+    font-size: 14px;
+  }
+  th {
+    background: #1565c0;
+    color: #fff;
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: 700;
+  }
+  td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #e3f2fd;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #f5f9ff; }
+  .badge-new {
+    background: #e53935;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-left: 6px;
+  }
+  .badge-up {
+    background: #1565c0;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-left: 6px;
+  }
+
+  /* SVG 인포그래픽 */
+  .infographic-wrap {
+    background: #f5f9ff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 28px;
+    overflow-x: auto;
+  }
+  .infographic-wrap p.caption {
+    font-size: 12px;
+    color: #888;
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  /* 신청 단계 */
+  .steps {
+    counter-reset: step;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 24px;
+  }
+  .steps li {
+    counter-increment: step;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    margin-bottom: 14px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .steps li::before {
+    content: counter(step);
+    background: #1565c0;
+    color: #fff;
+    font-weight: 900;
+    font-size: 13px;
+    min-width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* 시행 일정 박스 */
+  .deadline-box {
+    border: 2.5px dashed #f57c00;
+    border-radius: 10px;
+    padding: 16px 20px;
+    background: #fffde7;
+    margin-bottom: 28px;
+  }
+  .deadline-box p {
+    font-size: 14px;
+    color: #e65100;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .deadline-box .deadline-title {
+    font-size: 16px;
+    font-weight: 900;
+    color: #bf360c;
+    margin-bottom: 8px;
+  }
+
+  /* 자가진단 체크리스트 */
+  .checklist {
+    background: #e8eaf6;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 24px;
+  }
+  .checklist h2 {
+    border: none;
+    font-size: 16px;
+    color: #283593;
+    margin-top: 0;
+    margin-bottom: 12px;
+    padding: 0;
+  }
+  .checklist ul { list-style: none; padding: 0; }
+  .checklist ul li {
+    font-size: 14px;
+    color: #333;
+    padding: 5px 0;
+    display: flex;
+    gap: 8px;
+  }
+  .checklist ul li::before {
+    content: "✓";
+    color: #1565c0;
+    font-weight: 900;
+    font-size: 16px;
+  }
+
+  /* 주의사항 */
+  .caution {
+    background: #fff3e0;
+    border-left: 4px solid #f57c00;
+    border-radius: 0 8px 8px 0;
+    padding: 16px 18px;
+    margin-bottom: 24px;
+    font-size: 14px;
+  }
+  .caution p { margin-bottom: 6px; }
+  .caution p:last-child { margin-bottom: 0; }
+
+  /* 담당 기관 박스 */
+  .contact-box {
+    background: linear-gradient(135deg, #1565c0, #1976d2);
+    color: #fff;
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin-bottom: 28px;
+    font-size: 14px;
+  }
+  .contact-box h2 {
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+    margin-top: 0;
+    font-size: 16px;
+  }
+  .contact-box p { margin-bottom: 6px; }
+  .contact-box a { color: #bbdefb; }
+
+  /* 전문가 찬반 론평 */
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .opinion-pro, .opinion-con {
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .opinion-pro {
+    background: #e8f5e9;
+    border-left: 5px solid #2e7d32;
+  }
+  .opinion-con {
+    background: #fff3e0;
+    border-left: 5px solid #c62828;
+  }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card {
+    background: #fff;
+    padding: 14px 16px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 8px;
+  }
+  .opinion-card .author {
+    font-size: 12px;
+    color: #777;
+    text-align: right;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  /* 해시태그 */
+  .hashtags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .hashtags span {
+    background: #e3f2fd;
+    color: #1565c0;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 20px;
+  }
+
+  /* 면책조항 */
+  .disclaimer {
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 12px;
+    color: #777;
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+
+  /* 작성일 */
+  .meta { text-align: right; font-size: 12px; color: #aaa; }
+
+  @media (max-width: 600px) {
+    .card { padding: 18px 14px 28px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    table { font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <!-- 상단 헤더 -->
+  <div class="top-header">
+    <span class="date-tag">📅 2026년 5월 18일</span>
+    <span class="issue-tag">오늘의 복지 뉴스 · 제1보</span>
+  </div>
+
+  <div class="card">
+    <!-- 섹션 배지 -->
+    <span class="section-badge">🦽 장애인복지 · 정책 변화</span>
+
+    <!-- 메인 제목 -->
+    <h1>"시간당 650원 올랐다" — 2026 장애인 활동지원 대개편, 단가 인상·7,000명 확대·개인예산제까지 한방 정리</h1>
+
+    <!-- 훅 -->
+    <div class="hook">
+      하루 24시간, 혼자서는 아무것도 할 수 없는 중증장애인 가정에 활동지원사 한 명이 들어오는 순간 <span class="highlight">그 가족의 삶이 통째로 바뀝니다.</span> 2026년부터 이 서비스가 더 넓어지고, 더 두터워지고, 더 유연해집니다. 지금 바로 달라진 내용을 확인하세요.
+    </div>
+
+    <!-- 핵심 요약 박스 -->
+    <div class="summary-box">
+      <h2>📌 이것만 알면 됩니다</h2>
+      <ul>
+        <li>활동지원 단가 시간당 17,270원 (전년 대비 +650원, +3.9%)</li>
+        <li>가산급여 53시간 늘어 월 최대 258시간 → 중증장애인 더 많은 지원</li>
+        <li>수혜 인원 7,000명 확대, 최중증 돌봄 전문수당 3배(5만→15만원) 인상</li>
+      </ul>
+    </div>
+
+    <!-- 배경/문제 섹션 -->
+    <h2>📋 왜 이번에 이렇게 크게 바뀌었나</h2>
+    <p>장애인 활동지원제도는 혼자서 일상생활·사회생활이 어려운 장애인에게 활동지원사가 동행·보조해 주는 서비스입니다. 그동안 수요는 폭발적으로 늘었지만, 단가가 낮아 활동지원사 구인난이 심각했습니다. 최중증 장애인을 돌보는 가족이 직접 활동지원사로 등록하는 '가족급여' 제도도 한시적으로 운영 중이었습니다.</p>
+    <p style="margin-top:10px;">2026년에는 여기에 더해 <strong>개인예산제</strong>가 본격 시행됩니다. 장애인 스스로 필요한 서비스를 선택하고 예산을 배분할 수 있는 방식으로, 2024~2025년 시범사업을 거쳐 올해 전국으로 확대됩니다.</p>
+
+    <!-- 상세 정보 표 -->
+    <h2>📊 2026년 장애인 활동지원 주요 변경 내용</h2>
+    <table>
+      <tr>
+        <th>구분</th>
+        <th>2025년</th>
+        <th>2026년</th>
+        <th>변화</th>
+      </tr>
+      <tr>
+        <td>활동지원 기본단가</td>
+        <td>16,620원/시간</td>
+        <td><strong>17,270원/시간</strong></td>
+        <td>+650원 (+3.9%) <span class="badge-up">UP</span></td>
+      </tr>
+      <tr>
+        <td>가산급여 한도</td>
+        <td>205시간/월</td>
+        <td><strong>258시간/월</strong></td>
+        <td>+53시간 <span class="badge-up">UP</span></td>
+      </tr>
+      <tr>
+        <td>가산급여 단가</td>
+        <td>3,000원/시간</td>
+        <td>3,000원/시간</td>
+        <td>유지</td>
+      </tr>
+      <tr>
+        <td>수혜 대상자 수</td>
+        <td>약 13만 3천명</td>
+        <td><strong>약 14만명</strong></td>
+        <td>+7,000명 <span class="badge-up">UP</span></td>
+      </tr>
+      <tr>
+        <td>최중증 돌봄 전문수당</td>
+        <td>월 5만원</td>
+        <td><strong>월 15만원</strong></td>
+        <td>3배 인상 <span class="badge-new">3배</span></td>
+      </tr>
+      <tr>
+        <td>가족급여제도</td>
+        <td>한시 운영</td>
+        <td><strong>2026년 10월까지 연장</strong></td>
+        <td>기간 연장 <span class="badge-up">연장</span></td>
+      </tr>
+      <tr>
+        <td>개인예산제</td>
+        <td>시범사업</td>
+        <td><strong>전국 본격 시행</strong></td>
+        <td>전면 도입 <span class="badge-new">NEW</span></td>
+      </tr>
+    </table>
+
+    <!-- SVG 인포그래픽 -->
+    <h2>📈 단가·가산급여 변화 한눈에</h2>
+    <div class="infographic-wrap">
+      <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;display:block;margin:0 auto;">
+        <!-- 배경 -->
+        <rect width="700" height="260" fill="#f5f9ff" rx="10"/>
+        <!-- 제목 -->
+        <text x="350" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#1565c0">2025 → 2026 장애인 활동지원 핵심 지표 비교</text>
+
+        <!-- 단가 바 차트 -->
+        <text x="60" y="58" font-size="12" fill="#555" font-weight="bold">기본단가 (원/시간)</text>
+        <!-- 2025 바 -->
+        <rect x="60" y="65" width="332" height="26" fill="#90caf9" rx="4"/>
+        <text x="398" y="83" font-size="12" fill="#1565c0" font-weight="bold">16,620원</text>
+        <!-- 2026 바 -->
+        <rect x="60" y="97" width="345" height="26" fill="#1565c0" rx="4"/>
+        <text x="411" y="115" font-size="12" fill="#0d47a1" font-weight="bold">17,270원 (+650원)</text>
+        <!-- 라벨 -->
+        <text x="62" y="81" font-size="11" fill="#555">2025</text>
+        <text x="62" y="113" font-size="11" fill="#fff">2026</text>
+
+        <!-- 가산급여 바 차트 -->
+        <text x="60" y="148" font-size="12" fill="#555" font-weight="bold">가산급여 한도 (시간/월)</text>
+        <!-- 2025 바 -->
+        <rect x="60" y="155" width="240" height="26" fill="#90caf9" rx="4"/>
+        <text x="306" y="173" font-size="12" fill="#1565c0" font-weight="bold">205시간</text>
+        <!-- 2026 바 -->
+        <rect x="60" y="187" width="302" height="26" fill="#1565c0" rx="4"/>
+        <text x="368" y="205" font-size="12" fill="#0d47a1" font-weight="bold">258시간 (+53시간)</text>
+        <text x="62" y="171" font-size="11" fill="#555">2025</text>
+        <text x="62" y="203" font-size="11" fill="#fff">2026</text>
+
+        <!-- 돌봄수당 강조 박스 -->
+        <rect x="490" y="50" width="195" height="155" fill="#fff" rx="10" stroke="#1565c0" stroke-width="1.5"/>
+        <text x="587" y="72" text-anchor="middle" font-size="12" font-weight="bold" fill="#1565c0">최중증 돌봄 전문수당</text>
+        <text x="587" y="98" text-anchor="middle" font-size="28" font-weight="900" fill="#90caf9">5만원</text>
+        <text x="587" y="122" text-anchor="middle" font-size="24" font-weight="900" fill="#333">↓</text>
+        <text x="587" y="152" text-anchor="middle" font-size="32" font-weight="900" fill="#1565c0">15만원</text>
+        <rect x="540" y="162" width="95" height="24" fill="#e53935" rx="12"/>
+        <text x="587" y="178" text-anchor="middle" font-size="13" font-weight="900" fill="#fff">3배 인상!</text>
+
+        <!-- 대상자 수 -->
+        <text x="350" y="240" text-anchor="middle" font-size="13" font-weight="bold" fill="#1565c0">수혜 인원: 13만 3천명 → 14만명 (+7,000명 확대)</text>
+      </svg>
+      <p class="caption">※ 2026년 보건복지부 장애인 활동지원 기준 단가 기준</p>
+    </div>
+
+    <!-- 신청 방법 -->
+    <h2>🖊️ 신규 신청 방법 (단계별)</h2>
+    <ol class="steps">
+      <li><strong>자격 확인:</strong> 6세 이상 65세 미만 장애인복지법 등록 장애인 (65세 이상도 일부 조건 충족 시 유지 가능)</li>
+      <li><strong>신청 접수:</strong> 주소지 관할 읍·면·동 주민센터(행정복지센터) 방문 또는 복지로(www.bokjiro.go.kr) 온라인 신청</li>
+      <li><strong>서비스지원 종합조사:</strong> 국민연금공단에서 방문 조사 후 활동지원 등급·인정점수 산정</li>
+      <li><strong>수급자격 결정:</strong> 시·군·구에서 급여량 결정 통보 (신청 후 보통 30일 이내)</li>
+      <li><strong>제공기관 선택:</strong> 원하는 장애인 활동지원 기관과 계약 후 서비스 시작</li>
+    </ol>
+
+    <!-- 시행 일정 박스 -->
+    <div class="deadline-box">
+      <p class="deadline-title">⏰ 주요 일정 체크!</p>
+      <p>✔ 단가 인상·가산급여 확대: 2026년 1월 1일부터 소급 적용</p>
+      <p>✔ 개인예산제 전국 확대: 2026년 하반기 본격 시행</p>
+      <p>✔ 가족급여제도 연장: 최중증 발달장애인·희귀질환자 → 2026년 10월까지 유지</p>
+      <p>✔ 최중증 돌봄 전문수당 인상(15만원): 2026년 1월부터 적용</p>
+    </div>
+
+    <!-- 자가진단 체크리스트 -->
+    <div class="checklist">
+      <h2>🔍 나도 해당될까? 자가진단 체크리스트</h2>
+      <ul>
+        <li>나(또는 가족)는 장애인복지법상 등록 장애인이다</li>
+        <li>연령이 6세 이상 65세 미만이다 (65세 이상은 기존 수급자 일부 유지 가능)</li>
+        <li>일상생활(이동·식사·위생·가사 등)에서 타인의 도움이 필요하다</li>
+        <li>최중증 장애인을 돌보는 가족이 활동지원사로 등록 가능한지 알고 싶다</li>
+        <li>서비스 시간·종류를 스스로 선택하는 개인예산제가 궁금하다</li>
+      </ul>
+    </div>
+
+    <!-- 주의사항 -->
+    <h2>⚠️ 주의사항</h2>
+    <div class="caution">
+      <p>① 65세가 되면 원칙적으로 노인장기요양보험으로 전환되므로, 기존 활동지원 수급자는 만 65세 이전에 전환 여부를 미리 확인해야 합니다.</p>
+      <p>② 가족급여제도는 50시간 교육 이수 및 사유서 제출이 필수이며, 2026년 10월 이후 연장 여부는 별도 공지됩니다.</p>
+      <p>③ 개인예산제는 기존 활동지원 수급자만 선택 가능하며, 신규 신청자는 기존 방식으로 먼저 서비스를 받은 후 전환할 수 있습니다.</p>
+      <p>④ 급여 단가 인상분은 서비스 제공기관이 활동지원사에게 전달하는 구조이므로, 이용자 본인부담금은 소득 수준에 따라 달라집니다.</p>
+    </div>
+
+    <!-- 담당 기관 및 문의처 -->
+    <div class="contact-box">
+      <h2>📞 담당 기관 및 문의처</h2>
+      <p>🏛️ <strong>보건복지부 장애인정책과</strong> — ☎ 129 (복지부 콜센터)</p>
+      <p>🏛️ <strong>국민연금공단 (서비스지원 종합조사)</strong> — ☎ 1355</p>
+      <p>🖥️ <strong>복지로</strong> — <a href="https://www.bokjiro.go.kr" target="_blank">www.bokjiro.go.kr</a></p>
+      <p>🏢 <strong>신청 장소</strong> — 주소지 읍·면·동 주민센터(행정복지센터)</p>
+      <p>📱 <strong>장애인 활동지원 기관 찾기</strong> — 복지로 또는 사회서비스 전자바우처(www.socialservice.or.kr)</p>
+    </div>
+
+    <!-- 전문가 찬반 론평 -->
+    <h2>💬 전문가 찬반 론평</h2>
+    <div class="opinion-section">
+      <div class="opinion-grid">
+        <div class="opinion-pro">
+          <h3>🟢 찬성</h3>
+          <div class="opinion-card">
+            <p class="quote">"단가 인상과 가산급여 확대는 활동지원사 처우 개선으로 이어져, 심각한 구인난을 완화하는 데 실질적 기여를 할 것으로 평가된다. 서비스 공급 안정이 곧 장애인 돌봄의 질 향상으로 연결된다."</p>
+            <p class="author">— 장애인복지 정책 연구자</p>
+          </div>
+          <div class="opinion-card">
+            <p class="quote">"개인예산제 전국 확대는 장애인의 자기결정권을 실질적으로 보장하는 전환점이다. 획일적 서비스 배분에서 벗어나 각자의 필요에 맞는 지원이 가능해진다는 점에서 방향성은 올바르다."</p>
+            <p class="author">— 장애인 자립생활 활동가</p>
+          </div>
+        </div>
+        <div class="opinion-con">
+          <h3>🔴 반대 / 우려</h3>
+          <div class="opinion-card">
+            <p class="quote">"단가 인상률 3.9%는 최저임금 인상분과 물가상승률을 고려할 때 여전히 부족한 수준이다. 현장에서 활동지원사를 실제로 구하지 못하는 '서비스 공백'은 숫자 확대만으로 해결되지 않는다."</p>
+            <p class="author">— 재정사회복지 연구자</p>
+          </div>
+          <div class="opinion-card">
+            <p class="quote">"개인예산제가 제대로 작동하려면 장애인 본인이 서비스를 설계할 수 있는 역량 지원 체계가 동반되어야 한다. 예산 선택권만 부여하고 지원 체계가 없으면 오히려 고강도 돌봄이 필요한 최중증 장애인에게 불리할 수 있다."</p>
+            <p class="author">— 사회복지학과 교수</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 해시태그 -->
+    <div class="hashtags">
+      <span>#장애인활동지원</span>
+      <span>#2026복지개편</span>
+      <span>#활동지원사단가인상</span>
+      <span>#개인예산제</span>
+      <span>#중증장애인돌봄</span>
+      <span>#가산급여확대</span>
+      <span>#가족급여</span>
+      <span>#복지지원</span>
+      <span>#보건복지부</span>
+      <span>#장애인복지</span>
+    </div>
+
+    <!-- 면책조항 -->
+    <div class="disclaimer">
+      이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부 및 급여량은 담당 기관(읍·면·동 주민센터, 보건복지부 ☎129, 국민연금공단 ☎1355)에 확인하세요.
+    </div>
+
+    <!-- 작성일 -->
+    <p class="meta">작성일: 2026년 5월 18일</p>
+  </div>
+</div>
+</body>
+</html>
