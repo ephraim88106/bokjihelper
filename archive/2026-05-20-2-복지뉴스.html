@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"남편 돌아가신 후 10만원도 못 받았다" — 2026년부터 참전유공자 배우자에게 매달 15만원 생계지원금 지급, 80세 이상이면 지금 당장 신청하세요 | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans KR', Apple SD Gothic Neo, sans-serif; background: #f8f9fa; color: #222; line-height: 1.7; }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 0 0 40px; }
+
+  /* 상단 헤더 */
+  .top-header { background: #6a1b9a; color: #fff; padding: 14px 24px; font-size: 13px; display: flex; justify-content: space-between; align-items: center; }
+  .top-header .date-tag { background: rgba(255,255,255,0.2); border-radius: 20px; padding: 3px 12px; font-size: 12px; }
+  .top-header .issue-tag { font-weight: 700; font-size: 13px; }
+
+  .content { padding: 24px 24px 0; }
+
+  /* 섹션 배지 */
+  .section-badge { display: inline-block; background: #f3e5f5; color: #6a1b9a; border-radius: 20px; padding: 4px 14px; font-size: 12px; font-weight: 700; margin-bottom: 12px; border: 1px solid #ce93d8; }
+
+  /* 메인 제목 */
+  .main-title { font-size: 26px; font-weight: 900; color: #4a148c; line-height: 1.4; margin-bottom: 20px; word-break: keep-all; }
+
+  /* 훅 */
+  .hook { border-left: 5px solid #6a1b9a; padding: 16px 20px; background: #f3e5f5; margin-bottom: 24px; font-size: 16px; border-radius: 0 8px 8px 0; }
+  .hook .highlight { background: #ce93d8; padding: 1px 5px; border-radius: 3px; font-weight: 700; }
+
+  /* 핵심 요약 박스 */
+  .summary-box { background: #2e7d32; color: #fff; border-radius: 12px; padding: 20px 24px; margin-bottom: 24px; }
+  .summary-box h2 { font-size: 15px; margin-bottom: 12px; font-weight: 900; }
+  .summary-box ul { list-style: none; }
+  .summary-box ul li { padding: 4px 0; font-size: 15px; }
+  .summary-box ul li::before { content: "✅ "; }
+
+  /* 섹션 제목 */
+  h2 { font-size: 18px; font-weight: 800; color: #4a148c; margin: 28px 0 12px; border-bottom: 2px solid #ce93d8; padding-bottom: 6px; }
+
+  /* 정보 표 */
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 14px; }
+  .info-table th { background: #6a1b9a; color: #fff; padding: 10px 14px; text-align: left; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #e0e0e0; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #f3e5f5; }
+  .amount { color: #6a1b9a; font-weight: 900; font-size: 16px; }
+
+  /* SVG 인포그래픽 */
+  .infographic-wrap { background: #f3e5f5; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .infographic-wrap h3 { font-size: 14px; color: #6a1b9a; font-weight: 800; margin-bottom: 12px; text-align: center; }
+
+  /* 신청 방법 */
+  .step-list { margin-bottom: 24px; }
+  .step-item { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 14px; }
+  .step-num { min-width: 32px; height: 32px; background: #6a1b9a; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 15px; flex-shrink: 0; }
+  .step-text { font-size: 15px; padding-top: 5px; }
+
+  /* 기한 박스 */
+  .deadline-box { border: 2px dashed #f57c00; border-radius: 12px; padding: 18px 20px; background: #fff8e1; margin: 24px 0; }
+  .deadline-box .deadline-title { color: #e65100; font-size: 15px; font-weight: 900; margin-bottom: 8px; }
+  .deadline-box ul { list-style: none; }
+  .deadline-box ul li { font-size: 14px; padding: 3px 0; }
+  .deadline-box ul li::before { content: "⏰ "; }
+
+  /* 자가진단 */
+  .checklist { background: #f3e5f5; border-radius: 12px; padding: 20px; margin-bottom: 24px; }
+  .checklist h2 { border: none; margin-top: 0; }
+  .checklist ul { list-style: none; margin-top: 10px; }
+  .checklist ul li { padding: 6px 0; font-size: 15px; border-bottom: 1px dashed #ce93d8; }
+  .checklist ul li:last-child { border: none; }
+  .checklist ul li::before { content: "✓ "; color: #6a1b9a; font-weight: 900; }
+
+  /* 주의사항 */
+  .caution-box { background: #fce4ec; border-radius: 12px; padding: 20px; margin-bottom: 24px; border-left: 5px solid #c62828; }
+  .caution-box h2 { color: #b71c1c; border-color: #ef9a9a; }
+  .caution-box ol { list-style: none; margin-top: 10px; }
+  .caution-box ol li { padding: 5px 0; font-size: 14px; }
+
+  /* 문의처 */
+  .contact-box { background: #f3e5f5; border-radius: 12px; padding: 20px; margin-bottom: 24px; border-left: 5px solid #6a1b9a; }
+  .contact-box h2 { border: none; margin-top: 0; color: #4a148c; }
+  .contact-box p { font-size: 14px; margin: 5px 0; }
+  .contact-box strong { color: #6a1b9a; }
+
+  /* 추가 혜택 박스 */
+  .bonus-box { background: #e8eaf6; border-radius: 12px; padding: 18px 20px; margin-bottom: 24px; border-left: 5px solid #3949ab; }
+  .bonus-box h3 { color: #1a237e; font-size: 15px; font-weight: 900; margin-bottom: 10px; }
+  .bonus-box ul { list-style: none; }
+  .bonus-box ul li { font-size: 14px; padding: 4px 0; }
+  .bonus-box ul li::before { content: "🎖️ "; }
+
+  /* 전문가 찬반 론평 */
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  /* 해시태그 */
+  .hashtags { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0; }
+  .hashtags span { background: #f3e5f5; color: #6a1b9a; border-radius: 20px; padding: 5px 14px; font-size: 13px; font-weight: 700; border: 1px solid #ce93d8; }
+
+  /* 면책조항 */
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 18px; font-size: 12px; color: #777; margin-top: 24px; }
+
+  /* 작성일 */
+  .meta { text-align: right; font-size: 12px; color: #aaa; margin-top: 14px; }
+
+  @media (max-width: 600px) {
+    .main-title { font-size: 20px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .info-table { font-size: 13px; }
+    .top-header { flex-direction: column; gap: 6px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 상단 헤더 -->
+  <div class="top-header">
+    <span class="issue-tag">오늘의 복지 뉴스 · 제2보</span>
+    <span class="date-tag">2026년 5월 20일</span>
+  </div>
+
+  <div class="content">
+    <!-- 섹션 배지 -->
+    <div class="section-badge">🎖️ 보훈·국가유공자 복지</div>
+
+    <!-- 메인 제목 -->
+    <h1 class="main-title">"남편 돌아가신 후 10만원도 못 받았다" — 2026년부터 참전유공자 배우자에게 매달 15만원 생계지원금, 80세 이상이면 지금 당장 신청하세요</h1>
+
+    <!-- 훅 -->
+    <div class="hook">
+      나라를 위해 싸운 남편이 세상을 떠난 뒤, 홀로 남겨진 아내에게는 아무 지원이 없었습니다.<br>
+      그 오랜 공백을 채우기 위해 정부가 드디어 나섰습니다. 2026년 3월부터 <span class="highlight">사망한 참전유공자의 배우자에게 매달 15만원의 생계지원금</span>이 지급됩니다. 아직 신청을 못 하셨다면, 이 글을 끝까지 읽고 오늘 바로 접수하세요.
+    </div>
+
+    <!-- 핵심 요약 박스 -->
+    <div class="summary-box">
+      <h2>📌 이것만 알면 됩니다</h2>
+      <ul>
+        <li>사망한 참전유공자 배우자(80세 이상·중위소득 50% 이하)에게 월 15만원 신규 지급</li>
+        <li>2026년 3월 17일부터 신청 가능 — 주소지 관할 보훈(지)청 방문 또는 전화</li>
+        <li>국가유공자 보상금도 평균 5% 인상 — 7급 상이군경은 6.5% 올랐다</li>
+      </ul>
+    </div>
+
+    <!-- 배경/문제 -->
+    <h2>📋 왜 이 정책이 나왔나</h2>
+    <p>참전유공자가 사망하면 배우자에게 지급되던 보훈 급여는 대부분 끊겼습니다. 전쟁터에서 남편을 잃은 유가족이 아니라, <strong>참전 후 귀환한 남편이 병으로 세상을 떠난 경우</strong>에는 배우자가 보훈 지원 사각지대에 놓여 있었습니다. 고령·저소득 참전유공자 배우자 대다수가 80대 이상으로, 사회활동이 불가능한 상황에서 생계를 꾸리기 어렵다는 현장의 지적이 이어졌습니다. 정부는 이를 해결하기 위해 2026년부터 월 15만원의 생계지원금을 신설했습니다.</p>
+
+    <!-- 상세 정보 표 -->
+    <h2>📊 2026년 참전유공자 배우자 생계지원금 핵심 정보</h2>
+    <table class="info-table">
+      <tr><th>항목</th><th>내용</th></tr>
+      <tr><td>지원 대상</td><td>사망한 참전유공자의 배우자 중 <strong>만 80세 이상</strong>, <strong>기준 중위소득 50% 이하</strong></td></tr>
+      <tr><td>기준 중위소득 50%</td><td>1인 가구 약 월 <strong>119만원 이하</strong> (2026년 기준)</td></tr>
+      <tr><td>지원 금액</td><td><span class="amount">월 15만원</span> (2025년 10만원 → 5만원 인상)</td></tr>
+      <tr><td>신청 가능일</td><td><strong>2026년 3월 17일</strong>부터 (이미 신청 가능)</td></tr>
+      <tr><td>신청 장소</td><td>주소지 관할 <strong>보훈(지)청</strong></td></tr>
+      <tr><td>필요 서류</td><td>생계지원금 지급신청서, 소득·재산신고서, 금융정보 제공동의서</td></tr>
+      <tr><td>지급 방법</td><td>신청 후 심사 → 매월 정기 입금</td></tr>
+      <tr><td>문의</td><td>보훈상담센터 <strong>1577-0606</strong></td></tr>
+    </table>
+
+    <!-- 추가 혜택 박스 -->
+    <div class="bonus-box">
+      <h3>🎖️ 2026년 달라진 국가유공자 지원 총정리</h3>
+      <ul>
+        <li>국가유공자 보상금 평균 <strong>5% 인상</strong></li>
+        <li>7급 상이군경 보상금 <strong>6.5% 인상</strong> (65.1만원 → 69.3만원)</li>
+        <li>참전명예수당·무공영예수당 <strong>3만원 추가 인상</strong></li>
+        <li>강원·제주에 준보훈병원 도입 — 보훈병원 없던 지역도 혜택</li>
+        <li>위탁의료기관 920개 → <strong>1,200개</strong>로 확대 (가까운 동네 병원 이용 가능)</li>
+        <li>고령 독거 국가유공자 대상 <strong>AI 안부확인 서비스</strong> 도입</li>
+      </ul>
+    </div>
+
+    <!-- SVG 인포그래픽 -->
+    <div class="infographic-wrap">
+      <h3>📊 참전유공자 배우자 생계지원금 수혜 구조</h3>
+      <svg viewBox="0 0 620 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:620px;display:block;margin:0 auto;">
+        <rect width="620" height="220" fill="#f3e5f5" rx="10"/>
+        <!-- 중앙 원 -->
+        <circle cx="310" cy="110" r="60" fill="#6a1b9a"/>
+        <text x="310" y="104" text-anchor="middle" fill="white" font-size="15" font-weight="bold">월 15만원</text>
+        <text x="310" y="122" text-anchor="middle" fill="#e1bee7" font-size="12">생계지원금</text>
+        <!-- 좌측 조건 -->
+        <rect x="30" y="60" width="150" height="50" rx="10" fill="#4a148c"/>
+        <text x="105" y="80" text-anchor="middle" fill="white" font-size="12" font-weight="bold">🎂 만 80세 이상</text>
+        <text x="105" y="98" text-anchor="middle" fill="#e1bee7" font-size="11">배우자 연령 조건</text>
+        <line x1="180" y1="85" x2="248" y2="100" stroke="#ce93d8" stroke-width="2"/>
+        <!-- 우측 조건 -->
+        <rect x="440" y="60" width="150" height="50" rx="10" fill="#4a148c"/>
+        <text x="515" y="80" text-anchor="middle" fill="white" font-size="12" font-weight="bold">💰 중위소득 50%</text>
+        <text x="515" y="98" text-anchor="middle" fill="#e1bee7" font-size="11">소득 기준 (월 119만원↓)</text>
+        <line x1="440" y1="85" x2="370" y2="100" stroke="#ce93d8" stroke-width="2"/>
+        <!-- 하단 조건 -->
+        <rect x="180" y="180" width="260" height="34" rx="10" fill="#311b92"/>
+        <text x="310" y="202" text-anchor="middle" fill="white" font-size="12" font-weight="bold">🪦 참전유공자 사망 배우자</text>
+        <line x1="310" y1="180" x2="310" y2="170" stroke="#ce93d8" stroke-width="2"/>
+        <!-- 상단 설명 -->
+        <text x="310" y="28" text-anchor="middle" fill="#4a148c" font-size="14" font-weight="bold">2025년 10만원 → 2026년 15만원 (+5만원 인상)</text>
+        <text x="310" y="46" text-anchor="middle" fill="#7b1fa2" font-size="12">세 가지 조건 모두 충족 시 지급 / 신청처: 보훈(지)청</text>
+      </svg>
+    </div>
+
+    <!-- 신청 방법 -->
+    <h2>📝 신청 방법 (단계별)</h2>
+    <div class="step-list">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-text"><strong>본인 확인</strong> — 사망한 배우자가 참전유공자로 등록되어 있는지 먼저 확인. 모르면 보훈상담센터(1577-0606)에 문의하면 즉시 안내해 줍니다.</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-text"><strong>서류 준비</strong> — ① 생계지원금 지급신청서(현장 배부) ② 소득·재산신고서 ③ 금융정보 등 제공동의서 ④ 신분증 지참</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-text"><strong>방문 신청</strong> — 주소지 관할 보훈(지)청에 직접 방문. 거동이 불편하신 경우 1577-0606으로 전화하면 방문 접수 안내를 받을 수 있습니다.</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div class="step-text"><strong>심사 및 결정</strong> — 소득·재산 심사 후 결과 통보. 지급 결정 시 다음 달부터 매월 정기 지급.</div>
+      </div>
+    </div>
+
+    <!-- 시행 일정 박스 -->
+    <div class="deadline-box">
+      <div class="deadline-title">⚡ 지금 바로 신청하세요!</div>
+      <ul>
+        <li>신청 시작: 2026년 3월 17일 (이미 시작됨)</li>
+        <li>아직 신청 안 했다면 신청한 달 이후부터 지급 — 한 달 미루면 15만원 손해</li>
+        <li>2026년 보훈급여금 5% 인상분도 별도 신청 없이 자동 반영</li>
+        <li>준보훈병원(강원·제주) 이용 안내: 보훈청 홈페이지(mpva.go.kr) 확인</li>
+      </ul>
+    </div>
+
+    <!-- 자가진단 체크리스트 -->
+    <div class="checklist">
+      <h2>✅ 나(또는 부모님)가 해당하는지 자가진단</h2>
+      <ul>
+        <li>배우자(남편 또는 부인)가 사망한 참전유공자인가?</li>
+        <li>본인이 만 80세 이상인가?</li>
+        <li>기준 중위소득 50% 이하인가? (1인 가구 기준 월 약 119만원 이하)</li>
+        <li>주소지 관할 보훈(지)청에 아직 신청을 하지 않았는가?</li>
+        <li>보훈상담센터(1577-0606)에 전화해서 수급 가능 여부를 확인했는가?</li>
+      </ul>
+    </div>
+
+    <!-- 주의사항 -->
+    <div class="caution-box">
+      <h2>⚠️ 주의사항</h2>
+      <ol>
+        <li>① 소득·재산 심사가 있으므로 금융정보 제공 동의가 필수입니다. 동의 거부 시 지급 불가.</li>
+        <li>② 재혼한 경우 지급 대상에서 제외될 수 있습니다 — 보훈청에 사전 확인 필요.</li>
+        <li>③ 지원금은 참전유공자 본인 사망 후 배우자에게만 해당 — 유자녀는 별도 수당 체계 적용.</li>
+        <li>④ 가짜 보훈급여 대행 사이트 주의 — 신청은 반드시 공식 보훈(지)청 또는 1577-0606으로.</li>
+      </ol>
+    </div>
+
+    <!-- 담당 기관 및 문의처 -->
+    <div class="contact-box">
+      <h2>📞 담당 기관 및 문의처</h2>
+      <p><strong>국가보훈부</strong></p>
+      <p>📞 보훈상담센터: <strong>1577-0606</strong> (평일 09:00~18:00)</p>
+      <p>🌐 홈페이지: <strong>mpva.go.kr</strong></p>
+      <p>🏛️ 방문: 주소지 관할 <strong>보훈(지)청</strong></p>
+      <p>📋 서식 다운로드: mpva.go.kr → 민원서식 → 생계지원금 신청서</p>
+    </div>
+
+    <!-- 전문가 찬반 론평 -->
+    <h2>💬 전문가 찬반 론평</h2>
+    <div class="opinion-section">
+      <div class="opinion-grid">
+        <div class="opinion-pro">
+          <h3>🟢 찬성</h3>
+          <div class="opinion-card">
+            <p class="quote">"참전유공자 사후 배우자에 대한 지원은 국가를 위한 희생에 대한 당연한 예우다. 사각지대를 해소하는 이번 조치는 보훈 복지의 본질적 공백을 메우는 중요한 진전이다."</p>
+            <p class="author">— 보훈복지 정책 연구자</p>
+          </div>
+          <div class="opinion-card">
+            <p class="quote">"80대 이상 고령 배우자에게 15만원은 기초생활에 실질적 도움이 된다. 위탁의료기관 확대와 AI 안부확인 서비스까지 더해지면 고령 보훈 가족의 삶의 질이 확실히 달라질 것이다."</p>
+            <p class="author">— 노인복지 현장 활동가</p>
+          </div>
+        </div>
+        <div class="opinion-con">
+          <h3>🔴 반대 / 우려</h3>
+          <div class="opinion-card">
+            <p class="quote">"월 15만원은 물가 수준을 감안하면 여전히 생계 유지에 턱없이 부족하다. 진정한 예우라면 적어도 기초연금 수준에 준하는 금액을 논의해야 한다."</p>
+            <p class="author">— 재정복지 연구자</p>
+          </div>
+          <div class="opinion-card">
+            <p class="quote">"만 80세 이상이라는 연령 제한이 지나치게 엄격하다. 70대 후반에 홀로 남겨진 배우자도 생계 위험에 처할 수 있으며, 연령 기준 완화에 대한 추가 검토가 필요하다."</p>
+            <p class="author">— 사회복지학 연구자</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 해시태그 -->
+    <div class="hashtags">
+      <span>#참전유공자</span>
+      <span>#보훈생계지원금</span>
+      <span>#국가유공자</span>
+      <span>#보훈급여인상</span>
+      <span>#참전유공자배우자</span>
+      <span>#보훈복지</span>
+      <span>#2026보훈</span>
+      <span>#준보훈병원</span>
+      <span>#보훈상담1577</span>
+      <span>#국가보훈부</span>
+    </div>
+
+    <!-- 면책조항 -->
+    <div class="disclaimer">
+      ※ 이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부 및 자격 조건은 담당 기관(국가보훈부 보훈상담센터 1577-0606 또는 관할 보훈(지)청)에 반드시 확인하세요. 정책 내용은 변경될 수 있습니다.
+    </div>
+
+    <!-- 작성일 메타 -->
+    <div class="meta">작성일: 2026년 5월 20일 | 오늘의 복지 뉴스 편집부</div>
+  </div>
+</div>
+</body>
+</html>
