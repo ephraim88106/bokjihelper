@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"65세 넘었는데 아직도 못 받으셨어요?" — 기초연금 월 40만원 시대 개막, 소득인정액 247만원 이하면 지금 당장 신청하세요 | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans KR', sans-serif; background: #f5f7fa; color: #222; line-height: 1.7; }
+  .container { max-width: 780px; margin: 0 auto; padding: 20px 16px; }
+
+  /* 헤더 */
+  .top-header { background: #1565c0; color: #fff; padding: 10px 16px; display: flex; justify-content: space-between; align-items: center; border-radius: 8px 8px 0 0; font-size: 13px; }
+  .top-header .date-tag { background: rgba(255,255,255,0.2); padding: 3px 10px; border-radius: 20px; }
+
+  /* 배지 */
+  .badge { display: inline-block; background: #1565c0; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin: 18px 0 10px; }
+
+  /* 메인 타이틀 */
+  h1 { font-size: 26px; font-weight: 900; color: #0d2f6e; line-height: 1.4; margin-bottom: 16px; }
+  @media (max-width: 600px) { h1 { font-size: 21px; } }
+
+  /* 훅 */
+  .hook { border-left: 5px solid #1565c0; padding: 14px 18px; background: #e3f2fd; border-radius: 0 8px 8px 0; margin-bottom: 24px; font-size: 15px; }
+  .hook .highlight { background: #ffd54f; padding: 1px 4px; border-radius: 3px; font-weight: 700; }
+
+  /* 핵심 요약 박스 */
+  .summary-box { background: #e8f5e9; border-left: 5px solid #2e7d32; border-radius: 8px; padding: 16px 20px; margin-bottom: 24px; }
+  .summary-box h2 { color: #1b5e20; font-size: 15px; margin-bottom: 10px; }
+  .summary-box ul { list-style: none; padding: 0; }
+  .summary-box ul li { padding: 3px 0; font-size: 14px; color: #1b5e20; font-weight: 600; }
+  .summary-box ul li::before { content: "📌 "; }
+
+  /* 섹션 제목 */
+  h2 { font-size: 19px; font-weight: 800; color: #1565c0; margin: 28px 0 12px; padding-bottom: 6px; border-bottom: 2px solid #bbdefb; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 16px 0 8px; }
+  p { font-size: 15px; margin-bottom: 12px; }
+
+  /* 표 */
+  .info-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+  .info-table th { background: #1565c0; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #e0e0e0; }
+  .info-table tr:nth-child(even) td { background: #e3f2fd; }
+
+  /* SVG 박스 */
+  .svg-wrap { background: #fff; border-radius: 10px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin: 20px 0; }
+  .svg-wrap p.caption { text-align: center; font-size: 12px; color: #888; margin-top: 8px; }
+
+  /* 단계별 */
+  .steps { list-style: none; padding: 0; counter-reset: step; }
+  .steps li { counter-increment: step; padding: 10px 14px 10px 50px; position: relative; background: #fff; border-radius: 8px; margin-bottom: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); font-size: 14px; }
+  .steps li::before { content: counter(step); position: absolute; left: 12px; top: 50%; transform: translateY(-50%); background: #1565c0; color: #fff; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; }
+
+  /* 마감 박스 */
+  .deadline-box { border: 2px dashed #f57c00; border-radius: 10px; padding: 16px 20px; background: #fff8e1; margin: 20px 0; }
+  .deadline-box h3 { color: #e65100; font-size: 16px; margin-bottom: 8px; }
+  .deadline-box p { font-size: 14px; color: #5d4037; margin: 0; }
+
+  /* 체크리스트 */
+  .checklist { list-style: none; padding: 0; }
+  .checklist li { padding: 7px 12px; font-size: 14px; background: #fff; border-radius: 6px; margin-bottom: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .checklist li::before { content: "✓ "; color: #1565c0; font-weight: 900; }
+
+  /* 주의사항 */
+  .caution { background: #fff3e0; border-radius: 8px; padding: 14px 18px; margin: 16px 0; font-size: 14px; }
+  .caution p { margin-bottom: 6px; color: #5d4037; }
+
+  /* 연락처 박스 */
+  .contact-box { background: #e3f2fd; border-radius: 10px; padding: 16px 20px; margin: 20px 0; }
+  .contact-box h2 { border: none; padding: 0; margin: 0 0 10px; font-size: 16px; color: #0d47a1; }
+  .contact-box p { font-size: 14px; margin-bottom: 6px; color: #1a237e; }
+
+  /* 찬반 론평 */
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; border: none; padding: 0; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; border: none; padding: 0; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  @media (max-width: 600px) { .opinion-grid { grid-template-columns: 1fr; } }
+
+  /* 해시태그 */
+  .hashtags { margin: 20px 0; }
+  .hashtags span { display: inline-block; background: #1565c0; color: #fff; font-size: 12px; padding: 4px 10px; border-radius: 20px; margin: 3px; }
+
+  /* 면책조항 */
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 12px 16px; font-size: 12px; color: #888; margin: 20px 0; }
+  .meta { text-align: right; font-size: 12px; color: #aaa; margin-top: 10px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 상단 헤더 -->
+  <div class="top-header">
+    <span>🗓 2026년 5월 21일 (목)</span>
+    <span class="date-tag">오늘의 복지 뉴스 · 제1보</span>
+  </div>
+
+  <!-- 배지 -->
+  <div class="badge">🔵 노인·고령사회</div>
+
+  <!-- 메인 타이틀 -->
+  <h1>"65세 넘었는데 아직도 못 받으셨어요?" — 기초연금 월 40만원 시대 개막, 소득인정액 247만원 이하면 지금 당장 신청하세요</h1>
+
+  <!-- 훅 -->
+  <div class="hook">
+    매달 <span class="highlight">최대 40만원</span>이 통장에 들어오는데, 신청을 안 해서 못 받는 어르신이 전국에 수십만 명입니다. 기초연금은 <strong>신청해야만 받는 제도</strong>입니다. 자격이 돼도 신청하지 않으면 한 푼도 지급되지 않습니다. 지금 이 글을 읽는 분 주변에 65세 이상 어르신이 있다면, <span class="highlight">바로 이 글을 공유</span>해주세요.
+  </div>
+
+  <!-- 핵심 요약 박스 -->
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>만 65세 이상, 소득인정액 단독가구 월 247만원 이하면 신청 가능</li>
+      <li>2026년 기준 월 최대 349,700원 → 저소득 생계급여 수급자는 월 40만원</li>
+      <li>읍·면·동 행정복지센터 또는 복지로(bokjiro.go.kr)에서 신청</li>
+    </ul>
+  </div>
+
+  <!-- 배경 -->
+  <h2>📰 왜 이렇게 오를 수밖에 없었나</h2>
+  <p>2026년 기초연금 기준연금액이 <strong>349,700원</strong>으로 조정됐습니다. 정부는 물가 상승률과 노인 빈곤율을 반영해 매년 기준연금액을 인상하고 있습니다. 특히 생계급여 수급자인 저소득 독거노인의 경우, 별도 우대 규정에 따라 <strong>월 40만원</strong> 지급이 확정됐습니다. 2027년부터는 소득 하위 70% 전체 수급자로 40만원 지급이 확대될 예정이어서, 지금 신청하면 자동으로 혜택이 커집니다.</p>
+  <p>65세 이상 어르신 중 약 <strong>70%(약 700만 명)</strong>가 수급 대상임에도 불구하고, 아직 신청조차 하지 않은 분들이 많습니다. "나는 재산이 있어서 안 될 것 같다"는 생각으로 포기하는 경우가 가장 많은데, 생각보다 훨씬 넓은 기준이 적용됩니다.</p>
+
+  <!-- 상세 표 -->
+  <h2>📊 2026년 기초연금 핵심 수치</h2>
+  <table class="info-table">
+    <tr><th>항목</th><th>내용</th></tr>
+    <tr><td>기준연금액 (2026년)</td><td><strong>349,700원/월</strong></td></tr>
+    <tr><td>저소득 생계급여 수급자</td><td><strong>최대 400,000원/월</strong></td></tr>
+    <tr><td>부부 동시 수급 시</td><td>각 279,760원 (20% 감액)</td></tr>
+    <tr><td>단독가구 선정기준액</td><td>소득인정액 월 <strong>247만원 이하</strong></td></tr>
+    <tr><td>부부가구 선정기준액</td><td>소득인정액 월 <strong>395만 2천원 이하</strong></td></tr>
+    <tr><td>수급 대상 연령</td><td><strong>만 65세 이상</strong> 대한민국 국적자</td></tr>
+    <tr><td>신청 가능 시기</td><td>생일 속한 달의 <strong>1개월 전부터</strong></td></tr>
+    <tr><td>2027년 확대 계획</td><td>전체 수급자 월 40만원 지급</td></tr>
+  </table>
+
+  <!-- SVG 인포그래픽 -->
+  <div class="svg-wrap">
+    <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+      <rect width="700" height="280" fill="#f0f7ff" rx="12"/>
+      <text x="350" y="36" text-anchor="middle" font-size="16" font-weight="bold" fill="#0d2f6e">2026년 기초연금 수급액 비교</text>
+
+      <!-- 일반 단독가구 -->
+      <rect x="60" y="60" width="160" height="160" rx="10" fill="#1565c0"/>
+      <text x="140" y="90" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">일반 단독가구</text>
+      <text x="140" y="130" text-anchor="middle" font-size="30" fill="#fff" font-weight="900">349,700</text>
+      <text x="140" y="155" text-anchor="middle" font-size="14" fill="#bbdefb">원 / 월</text>
+      <text x="140" y="202" text-anchor="middle" font-size="11" fill="#90caf9">소득인정액 247만원 이하</text>
+
+      <!-- 저소득 생계급여 -->
+      <rect x="270" y="40" width="160" height="200" rx="10" fill="#c62828"/>
+      <text x="350" y="72" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">저소득 생계급여 수급자</text>
+      <text x="350" y="120" text-anchor="middle" font-size="34" fill="#fff" font-weight="900">400,000</text>
+      <text x="350" y="147" text-anchor="middle" font-size="14" fill="#ffcdd2">원 / 월</text>
+      <rect x="290" y="160" width="120" height="28" rx="14" fill="#fff"/>
+      <text x="350" y="179" text-anchor="middle" font-size="12" fill="#c62828" font-weight="bold">2026년 확정 금액</text>
+      <text x="350" y="220" text-anchor="middle" font-size="11" fill="#ef9a9a">기초생활수급자 한정</text>
+
+      <!-- 부부가구 -->
+      <rect x="480" y="60" width="160" height="160" rx="10" fill="#1976d2"/>
+      <text x="560" y="90" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">부부 동시 수급</text>
+      <text x="560" y="130" text-anchor="middle" font-size="22" fill="#fff" font-weight="900">279,760</text>
+      <text x="560" y="155" text-anchor="middle" font-size="14" fill="#bbdefb">원 × 2인 / 월</text>
+      <text x="560" y="202" text-anchor="middle" font-size="11" fill="#90caf9">20% 감액 적용</text>
+
+      <text x="350" y="265" text-anchor="middle" font-size="11" fill="#888">※ 2027년부터 전체 수급자 월 40만원으로 확대 예정</text>
+    </svg>
+    <p class="caption">▲ 가구 유형별 2026년 기초연금 수급액 비교 (단위: 원/월)</p>
+  </div>
+
+  <!-- 신청 방법 -->
+  <h2>📋 신청 방법 — 4단계</h2>
+  <ol class="steps">
+    <li><strong>자격 확인:</strong> 만 65세 이상 + 소득인정액 기준 충족 여부 사전 확인 (복지로 '복지서비스 모의계산' 활용)</li>
+    <li><strong>서류 준비:</strong> 신분증, 통장사본, 금융정보 제공 동의서 (담당 기관에서 양식 제공)</li>
+    <li><strong>신청:</strong> 읍·면·동 행정복지센터, 국민연금공단 지사 방문 또는 복지로(bokjiro.go.kr) 온라인 신청</li>
+    <li><strong>찾아뵙는 서비스:</strong> 거동 불편 어르신 — 국민연금공단 지사에 전화하면 직접 방문 접수</li>
+  </ol>
+
+  <!-- 마감 박스 -->
+  <div class="deadline-box">
+    <h3>⏰ 신청 기한 & 소급 지급 원칙</h3>
+    <p>기초연금은 <strong>신청한 달부터</strong> 지급됩니다. 자격이 생긴 달에 바로 신청하지 않으면, 이전 달 분은 소급되지 않습니다. 특히 65세 생일이 다가오는 분은 <strong>생일 1개월 전부터 미리 신청 가능</strong>하므로, 생일 전에 방문하시면 첫 달부터 받을 수 있습니다.</p>
+  </div>
+
+  <!-- 체크리스트 -->
+  <h2>✅ 자가 진단 체크리스트</h2>
+  <ul class="checklist">
+    <li>나이가 만 65세 이상이다 (대한민국 국적, 국내 주민등록)</li>
+    <li>단독가구라면 소득인정액이 월 247만원 이하다</li>
+    <li>부부가구라면 소득인정액이 월 395만 2천원 이하다</li>
+    <li>기초생활수급자(생계급여)로 등록되어 있다면 월 40만원 우선 해당</li>
+    <li>공무원·군인·사학 직역연금 수령자가 아니다 (일부 제한 있음)</li>
+  </ul>
+
+  <!-- 주의사항 -->
+  <h2>⚠️ 반드시 알아야 할 주의사항</h2>
+  <div class="caution">
+    <p>① 기초연금은 <strong>신청주의</strong>입니다. 자격이 돼도 신청 안 하면 지급 없음.</p>
+    <p>② 공무원·군인·사학연금 수급자 및 그 배우자는 원칙적으로 수급 불가 (단, 일부 예외 규정 있음).</p>
+    <p>③ 소득인정액에는 실제 소득 외에 재산의 소득환산액도 포함됩니다. 복지로 모의계산 후 방문하세요.</p>
+    <p>④ 국민연금 수령액이 많을수록 기초연금이 감액될 수 있습니다 (국민연금 연계 감액 규정).</p>
+  </div>
+
+  <!-- 담당 기관 -->
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <p>🏛 <strong>국민연금공단 콜센터:</strong> ☎ 1355 (평일 09:00~18:00)</p>
+    <p>🏢 <strong>읍·면·동 행정복지센터:</strong> 주소지 관할 센터 방문 신청</p>
+    <p>🌐 <strong>복지로 온라인 신청:</strong> www.bokjiro.go.kr → 서비스 신청</p>
+    <p>📱 <strong>복지로 앱:</strong> 스마트폰 앱스토어에서 '복지로' 검색</p>
+    <p>🚗 <strong>찾아뵙는 서비스:</strong> 국민연금공단 지사 전화 후 방문 접수 신청</p>
+  </div>
+
+  <!-- 찬반 론평 -->
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"기초연금의 단계적 인상은 노인 빈곤율을 OECD 최하위권에서 끌어올리기 위한 불가피한 조치다. 40만원이라는 금액은 저소득 어르신의 실질 구매력 회복에 직접적으로 기여한다."</p>
+          <p class="author">— 노인복지정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"신청주의로 운영되는 현행 제도의 한계 속에서, 지급액 인상은 한 번이라도 신청을 유도하는 효과를 낸다. 지역 복지관과 공단의 찾아가는 서비스가 병행된다면 수급률도 함께 높아질 것이다."</p>
+          <p class="author">— 지역사회복지 현장 활동가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"국민연금과의 연계 감액 규정이 해소되지 않은 채 기준연금액만 높이면, 성실히 국민연금을 납부해온 중산층 노인은 오히려 불이익을 받는 역설이 심화된다."</p>
+          <p class="author">— 사회보험 제도 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"재정 지속가능성 측면에서 기초연금 지출이 GDP 대비 급격히 늘어나고 있다. 보편 지급보다 소득 하위 계층에 집중하는 방향으로 설계를 재검토할 필요가 있다."</p>
+          <p class="author">— 재정·사회보장 연구자</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span>#기초연금</span>
+    <span>#월40만원</span>
+    <span>#노인복지</span>
+    <span>#65세이상</span>
+    <span>#2026복지혜택</span>
+    <span>#소득인정액247만원</span>
+    <span>#복지로신청</span>
+    <span>#노인빈곤</span>
+    <span>#기초생활수급자</span>
+    <span>#국민연금공단</span>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부는 담당 기관에 확인하세요.
+  </div>
+  <p class="meta">작성일: 2026-05-21</p>
+
+</div>
+</body>
+</html>
