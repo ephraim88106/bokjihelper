@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>선별복지 끝났다! 이재명 정부 '모두의 복지' 선언 — 사회보장 기본계획 전면 수정</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+    background: #f5f7fa;
+    color: #222;
+    line-height: 1.8;
+    font-size: 16px;
+  }
+  .container { max-width: 800px; margin: 0 auto; padding: 0 16px 60px; }
+
+  /* 상단 헤더 */
+  .top-header {
+    background: #1565c0;
+    color: #fff;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    border-radius: 0 0 10px 10px;
+  }
+  .top-header .issue { font-weight: 700; font-size: 14px; letter-spacing: 1px; }
+
+  /* 섹션 배지 */
+  .badge-wrap { margin: 28px 0 12px; }
+  .badge {
+    display: inline-block;
+    background: #1565c0;
+    color: #fff;
+    border-radius: 20px;
+    padding: 5px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+
+  /* 메인 제목 */
+  h1 {
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 1.35;
+    color: #0d2c6e;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 600px) { h1 { font-size: 22px; } }
+
+  /* 훅 */
+  .hook {
+    border-left: 6px solid #1565c0;
+    background: #e3f0ff;
+    padding: 18px 20px;
+    border-radius: 0 10px 10px 0;
+    margin-bottom: 28px;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+  .hook .highlight {
+    background: #1565c0;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+  }
+
+  /* 핵심 요약 박스 */
+  .summary-box {
+    background: #e8f5e9;
+    border: 2px solid #2e7d32;
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin-bottom: 32px;
+  }
+  .summary-box h2 {
+    font-size: 16px;
+    font-weight: 900;
+    color: #1b5e20;
+    margin-bottom: 12px;
+  }
+  .summary-box ul { padding-left: 20px; }
+  .summary-box li { margin-bottom: 8px; font-weight: 600; color: #1b5e20; }
+
+  /* 섹션 제목 */
+  h2 { font-size: 20px; font-weight: 900; color: #1565c0; margin: 36px 0 14px; border-bottom: 3px solid #1565c0; padding-bottom: 6px; }
+  h3 { font-size: 17px; font-weight: 800; color: #0d2c6e; margin: 20px 0 10px; }
+  p { margin-bottom: 14px; }
+
+  /* 표 */
+  .info-table { width: 100%; border-collapse: collapse; margin: 18px 0 28px; font-size: 14px; }
+  .info-table th { background: #1565c0; color: #fff; padding: 11px 14px; text-align: left; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #dde4f0; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #f0f5ff; }
+  @media (max-width: 600px) { .info-table { font-size: 13px; } }
+
+  /* SVG 컨테이너 */
+  .svg-wrap { background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 20px; margin: 24px 0; overflow-x: auto; }
+
+  /* 시행 일정 */
+  .deadline-box {
+    border: 2.5px dashed #f57c00;
+    border-radius: 12px;
+    padding: 18px 20px;
+    background: #fff8f0;
+    margin: 28px 0;
+  }
+  .deadline-box h3 { color: #e65100; margin-top: 0; }
+  .deadline-box ul { padding-left: 20px; }
+  .deadline-box li { margin-bottom: 8px; color: #bf360c; font-weight: 600; }
+
+  /* 체크리스트 */
+  .checklist { background: #f5f7fa; border-radius: 12px; padding: 20px 24px; margin: 24px 0; }
+  .checklist h3 { color: #1565c0; margin-top: 0; }
+  .checklist-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
+  .checklist-item .chk { color: #2e7d32; font-size: 18px; font-weight: 900; flex-shrink: 0; }
+
+  /* 주의사항 */
+  .caution { background: #fff3e0; border-left: 5px solid #f57c00; border-radius: 0 10px 10px 0; padding: 18px 20px; margin: 24px 0; }
+  .caution p { margin-bottom: 8px; }
+
+  /* 담당 기관 */
+  .contact-box {
+    background: #e8eaf6;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    border-left: 5px solid #1565c0;
+  }
+  .contact-box h2 { border-bottom: none; margin-top: 0; margin-bottom: 12px; }
+  .contact-box p { margin-bottom: 6px; font-size: 15px; }
+
+  /* 찬반 론평 */
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; border-bottom: none; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; border-bottom: none; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  @media (max-width: 600px) { .opinion-grid { grid-template-columns: 1fr; } }
+
+  /* 해시태그 */
+  .hashtags { margin: 28px 0 20px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .hashtag { background: #e3f0ff; color: #1565c0; border-radius: 20px; padding: 5px 14px; font-size: 13px; font-weight: 700; }
+
+  /* 면책조항 */
+  .disclaimer { background: #f0f0f0; border-radius: 8px; padding: 14px 18px; font-size: 13px; color: #666; margin-top: 32px; }
+
+  /* 작성일 */
+  .meta { text-align: right; font-size: 12px; color: #999; margin-top: 14px; }
+</style>
+</head>
+<body>
+<div class="top-header">
+  <span>📋 오늘의 복지 뉴스 · 제1보</span>
+  <span class="issue">2026년 5월 27일 (수)</span>
+</div>
+
+<div class="container">
+  <div class="badge-wrap">
+    <span class="badge">🏛️ 정책 대전환</span>
+  </div>
+
+  <h1>💥 선별복지 끝났다! 이재명 정부 '모두의 복지' 선언<br>— 상병수당·아동수당 확대·의료급여 부양의무자 폐지까지</h1>
+
+  <div class="hook">
+    그동안 복지는 "가난한 사람만 받는 것"이었다면, 이제부터 달라집니다. 이재명 정부가 <span class="highlight">선별복지를 넘어 모든 국민을 위한 보편복지</span>로 대전환을 선언했습니다. 5년마다 수립되는 최상위 사회보장 계획이 중도에 수정된 것은 역대 최초입니다. 이번 변화, 나에게는 어떤 영향이 있을까요?
+  </div>
+
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>2026~2030 사회보장 기본계획 전면 수정 — 비전 "모두의 복지, 함께 잘 사는 사회"</li>
+      <li>상병수당(아프면 돈 받는 제도) 도입 + 의료급여 부양의무자 기준 폐지 추진</li>
+      <li>아동수당 지급 연령 확대 + 청년 미래 적금 신설 등 생애주기별 지원 강화</li>
+    </ul>
+  </div>
+
+  <h2>📰 배경 — 왜 지금, 왜 이 정책이 나왔나</h2>
+  <p>대한민국 사회보장 정책의 최상위 로드맵인 '제3차 사회보장 기본계획'은 원래 2024~2028년으로 수립되었습니다. 그런데 이재명 정부 출범 이후 <strong>국정 철학의 전환, 급격한 인구구조 변화, AI·디지털 경제로의 전환</strong>이 맞물리면서 기존 계획을 통째로 수정하기로 결정했습니다.</p>
+  <p>5월 26일 이재명 대통령 주재 국무회의에서 보건복지부는 <strong>수정된 2026~2030 계획</strong>을 공식 보고했습니다. 역대 정부에서 최상위 사회보장 계획을 임기 중에 바꾼 것은 이번이 처음입니다.</p>
+  <p>핵심 방향은 단 하나: <strong>"선별적 보호에서 보편적 복지로"</strong>. 취약계층만 혜택 받는 복지가 아니라, 모든 국민이 생애 전 과정에서 기본적인 삶을 보장받는 사회를 만들겠다는 선언입니다.</p>
+
+  <h2>📊 주요 정책 변화 상세</h2>
+  <table class="info-table">
+    <tr>
+      <th>분야</th>
+      <th>현행</th>
+      <th>변경 내용</th>
+    </tr>
+    <tr>
+      <td><strong>소득보장</strong></td>
+      <td>생계급여 선정 기준 유지</td>
+      <td>생계급여 선정 기준 단계적 완화 → 더 많은 가구 혜택</td>
+    </tr>
+    <tr>
+      <td><strong>의료급여</strong></td>
+      <td>부양의무자 기준 일부 적용</td>
+      <td>부양의무자 기준 완전 폐지 추진 → 가족 때문에 탈락 없앰</td>
+    </tr>
+    <tr>
+      <td><strong>상병수당</strong></td>
+      <td>미도입 (시범사업 중)</td>
+      <td>상병수당 정식 도입 — 아프면 소득 보장</td>
+    </tr>
+    <tr>
+      <td><strong>아동수당</strong></td>
+      <td>8세 미만 지급</td>
+      <td>지급 연령 단계적 확대</td>
+    </tr>
+    <tr>
+      <td><strong>청년</strong></td>
+      <td>청년도약계좌</td>
+      <td>청년 미래 적금 신설 (2026년 6월 출시)</td>
+    </tr>
+    <tr>
+      <td><strong>재정 목표</strong></td>
+      <td>OECD 평균 이하 사회보장 지출</td>
+      <td>2040년까지 사회보장 재정 선진국 수준으로 확대</td>
+    </tr>
+  </table>
+
+  <h2>📈 주목! 상병수당이란 무엇인가</h2>
+  <p>상병수당은 <strong>"아파서 일을 못 할 때 소득을 보전해주는 제도"</strong>입니다. 현재 한국에는 이 제도가 없어, 병이 나면 치료비는 물론 소득 손실까지 고스란히 감당해야 했습니다. OECD 38개국 중 유일하게 상병수당이 없는 나라가 바로 대한민국이었습니다.</p>
+  <p>이번 계획에 정식 도입이 명시되면서 특히 <strong>프리랜서·자영업자·비정규직 근로자</strong>에게 큰 혜택이 기대됩니다. 현재 일부 지역에서 시범사업이 진행 중이며, 구체적인 지급 기준과 금액은 추후 발표될 예정입니다.</p>
+
+  <div class="svg-wrap">
+    <svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;margin:0 auto;">
+      <rect width="700" height="300" fill="#f8faff" rx="12"/>
+      <text x="350" y="32" text-anchor="middle" font-size="15" font-weight="bold" fill="#1565c0">선별복지 vs 보편복지 — 이번 계획의 핵심 전환</text>
+
+      <!-- 왼쪽: 선별복지 -->
+      <rect x="30" y="55" width="290" height="220" rx="10" fill="#ffecb3"/>
+      <text x="175" y="82" text-anchor="middle" font-size="14" font-weight="bold" fill="#e65100">기존: 선별복지</text>
+      <circle cx="175" cy="130" r="50" fill="#ffcc80" stroke="#f57c00" stroke-width="2"/>
+      <text x="175" y="126" text-anchor="middle" font-size="11" fill="#bf360c">취약계층만</text>
+      <text x="175" y="142" text-anchor="middle" font-size="11" fill="#bf360c">혜택 수령</text>
+      <text x="80" y="200" font-size="12" fill="#666">• 수급 탈락 시 사각지대</text>
+      <text x="80" y="220" font-size="12" fill="#666">• 부양의무자 기준 걸림돌</text>
+      <text x="80" y="240" font-size="12" fill="#666">• 아프면 소득 끊김</text>
+
+      <!-- 화살표 -->
+      <text x="350" y="175" text-anchor="middle" font-size="28" fill="#1565c0">→</text>
+      <text x="350" y="198" text-anchor="middle" font-size="11" fill="#1565c0" font-weight="bold">2026 대전환</text>
+
+      <!-- 오른쪽: 보편복지 -->
+      <rect x="380" y="55" width="290" height="220" rx="10" fill="#e3f0ff"/>
+      <text x="525" y="82" text-anchor="middle" font-size="14" font-weight="bold" fill="#1565c0">신규: 보편복지</text>
+      <circle cx="525" cy="130" r="50" fill="#bbdefb" stroke="#1565c0" stroke-width="2"/>
+      <text x="525" y="118" text-anchor="middle" font-size="11" fill="#0d2c6e">모든 국민</text>
+      <text x="525" y="133" text-anchor="middle" font-size="11" fill="#0d2c6e">생애 전 과정</text>
+      <text x="525" y="148" text-anchor="middle" font-size="11" fill="#0d2c6e">기본 보장</text>
+      <text x="430" y="200" font-size="12" fill="#1565c0">• 상병수당 도입</text>
+      <text x="430" y="220" font-size="12" fill="#1565c0">• 부양의무자 폐지</text>
+      <text x="430" y="240" font-size="12" fill="#1565c0">• 아동·청년 지원 확대</text>
+    </svg>
+    <p style="text-align:center;font-size:12px;color:#999;margin-top:8px;">이번 수정계획의 핵심 방향 시각화</p>
+  </div>
+
+  <h2>📋 이번 계획의 5대 핵심 추진 과제</h2>
+  <h3>① 소득 안전망 강화</h3>
+  <p>생계급여 선정 기준을 단계적으로 완화해 더 많은 저소득층이 혜택을 받을 수 있도록 합니다. 특히 <strong>기준 중위소득 인상과 맞물려</strong> 실질 지원 금액도 매년 오를 예정입니다.</p>
+
+  <h3>② 의료급여 부양의무자 기준 완전 폐지</h3>
+  <p>현재도 생계급여에서는 부양의무자 기준이 폐지됐지만, <strong>의료급여에는 여전히 남아 있어</strong> 자녀 소득 때문에 탈락하는 어르신이 많았습니다. 이번 계획으로 이 기준이 사라집니다.</p>
+
+  <h3>③ 상병수당 정식 도입</h3>
+  <p>아파서 일을 못 할 때 소득을 보전해주는 제도. 특히 프리랜서, 자영업자, 단기근로자에게 절실한 안전망입니다.</p>
+
+  <h3>④ 아동수당 확대 + 청년 미래 적금</h3>
+  <p>아동수당 지급 연령 확대, 그리고 청년을 위한 '청년 미래 적금' 신설로 생애 전 단계를 아우르는 지원 체계를 구축합니다.</p>
+
+  <h3>⑤ 2040년까지 OECD 평균 수준 사회보장 재정 확대</h3>
+  <p>현재 OECD 평균보다 낮은 사회보장 지출 비율을 2040년까지 선진국 수준으로 끌어올리는 중장기 목표를 명시했습니다.</p>
+
+  <div class="deadline-box">
+    <h3>⏰ 시행 일정 및 향후 일정</h3>
+    <ul>
+      <li>2026년 5월 26일 — 국무회의 수정계획 공식 보고</li>
+      <li>2026년 하반기 — 세부 시행령·시행규칙 발표 예정</li>
+      <li>2026년 6월 — 청년 미래 적금 출시 예정</li>
+      <li>2026~2030년 — 단계적 시행 (부양의무자 폐지, 상병수당 도입 등)</li>
+      <li>2040년 — 사회보장 재정 선진국 수준 목표</li>
+    </ul>
+  </div>
+
+  <div class="checklist">
+    <h3>✅ 나는 혜택을 받을 수 있을까? 자가 진단</h3>
+    <div class="checklist-item">
+      <span class="chk">✓</span>
+      <span>가족(자녀, 형제) 소득 때문에 의료급여 탈락한 경험이 있다 → <strong>부양의무자 폐지로 재신청 가능</strong></span>
+    </div>
+    <div class="checklist-item">
+      <span class="chk">✓</span>
+      <span>프리랜서·자영업자·단기근로자로 아파도 아무 보상이 없었다 → <strong>상병수당 도입 시 혜택 대상</strong></span>
+    </div>
+    <div class="checklist-item">
+      <span class="chk">✓</span>
+      <span>아이가 8세 이상이라 아동수당을 못 받고 있다 → <strong>지급 연령 확대 주시</strong></span>
+    </div>
+    <div class="checklist-item">
+      <span class="chk">✓</span>
+      <span>만 19~34세 청년으로 목돈 마련이 필요하다 → <strong>청년 미래 적금 가입 준비</strong></span>
+    </div>
+    <div class="checklist-item">
+      <span class="chk">✓</span>
+      <span>저소득이지만 생계급여 기준 초과로 탈락했다 → <strong>선정 기준 완화 후 재신청 검토</strong></span>
+    </div>
+  </div>
+
+  <div class="caution">
+    <h3 style="color:#e65100;margin-bottom:12px;">⚠️ 주의사항</h3>
+    <p>① 이번 발표는 <strong>계획 수립 단계</strong>로, 세부 시행 시기와 조건은 추후 관련 법령 개정 후 확정됩니다.</p>
+    <p>② 상병수당, 아동수당 확대 등 주요 제도는 <strong>별도 입법 절차</strong>가 필요해 실제 시행까지 시간이 걸릴 수 있습니다.</p>
+    <p>③ 부양의무자 기준 폐지는 <strong>의료급여 기준</strong>으로, 생계급여는 이미 대부분 폐지된 상태입니다.</p>
+    <p>④ 정확한 지원 자격 및 금액은 <strong>주민센터 또는 복지로(www.bokjiro.go.kr)</strong>에서 확인하시기 바랍니다.</p>
+  </div>
+
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <p>🏥 <strong>보건복지부 복지정책관</strong> — 044-202-3000</p>
+    <p>🌐 <strong>복지로(복지 통합포털)</strong> — www.bokjiro.go.kr</p>
+    <p>📱 <strong>복지로 앱</strong> — 스마트폰으로 내 복지 서비스 확인</p>
+    <p>🏘️ <strong>주민센터(행정복지센터)</strong> — 거주지 관할 주민센터 방문 또는 전화</p>
+    <p>☎️ <strong>복지 상담 전화</strong> — 129 (보건복지상담센터, 24시간)</p>
+  </div>
+
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"선별적 복지의 한계는 오래전부터 지적됐습니다. 이번 계획은 복지를 '권리'로 보는 패러다임 전환이며, 특히 상병수당 도입은 노동시장 유연화 시대의 필수 안전망입니다."</p>
+          <p class="author">— 사회보장 정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"부양의무자 기준 폐지는 가족 해체 시대에 반드시 이뤄져야 할 개혁입니다. 자녀 소득 때문에 노인이 의료급여에서 탈락하는 구조적 모순을 이번에 끊어야 합니다."</p>
+          <p class="author">— 노인복지 현장 활동가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"보편복지 확대는 필요하지만, 재원 조달 계획이 불명확합니다. 5년 계획을 임기 중 전면 수정한 것은 정치적 동기가 강하며, 재정 지속가능성에 대한 면밀한 검토가 선행돼야 합니다."</p>
+          <p class="author">— 재정경제 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"계획 수립은 좋으나 실행 역량이 뒷받침되지 않으면 공약에 그칩니다. 지방정부의 전달 체계, 인력, 예산이 동시에 준비되지 않으면 사각지대는 오히려 늘어날 수 있습니다."</p>
+          <p class="author">— 사회복지 현장 활동가</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    <span class="hashtag">#사회보장기본계획</span>
+    <span class="hashtag">#모두의복지</span>
+    <span class="hashtag">#이재명복지</span>
+    <span class="hashtag">#상병수당</span>
+    <span class="hashtag">#의료급여부양의무자폐지</span>
+    <span class="hashtag">#보편복지</span>
+    <span class="hashtag">#아동수당확대</span>
+    <span class="hashtag">#청년미래적금</span>
+    <span class="hashtag">#복지대전환</span>
+    <span class="hashtag">#2026복지뉴스</span>
+  </div>
+
+  <div class="disclaimer">
+    ⚠️ 이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부는 담당 기관에 확인하세요. 정책 세부 사항은 관련 법령 개정에 따라 변경될 수 있습니다.
+  </div>
+  <p class="meta">작성일: 2026년 5월 27일 | 오늘의 복지 뉴스 제1보</p>
+</div>
+</body>
+</html>

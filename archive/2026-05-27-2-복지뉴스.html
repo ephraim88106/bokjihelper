@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>月 50만원 넣으면 3년 후 2,200만원?! 청년미래적금 6월 출시 완전 가이드</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+    background: #f5f7fa;
+    color: #222;
+    line-height: 1.8;
+    font-size: 16px;
+  }
+  .container { max-width: 800px; margin: 0 auto; padding: 0 16px 60px; }
+
+  /* 상단 헤더 */
+  .top-header {
+    background: #c62828;
+    color: #fff;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    border-radius: 0 0 10px 10px;
+  }
+  .top-header .issue { font-weight: 700; font-size: 14px; letter-spacing: 1px; }
+
+  /* 섹션 배지 */
+  .badge-wrap { margin: 28px 0 12px; }
+  .badge {
+    display: inline-block;
+    background: #c62828;
+    color: #fff;
+    border-radius: 20px;
+    padding: 5px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+
+  /* 메인 제목 */
+  h1 {
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 1.35;
+    color: #7f0000;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 600px) { h1 { font-size: 22px; } }
+
+  /* 훅 */
+  .hook {
+    border-left: 6px solid #c62828;
+    background: #fff5f5;
+    padding: 18px 20px;
+    border-radius: 0 10px 10px 0;
+    margin-bottom: 28px;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+  .hook .highlight {
+    background: #c62828;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+  }
+
+  /* 핵심 요약 박스 */
+  .summary-box {
+    background: #e8f5e9;
+    border: 2px solid #2e7d32;
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin-bottom: 32px;
+  }
+  .summary-box h2 {
+    font-size: 16px;
+    font-weight: 900;
+    color: #1b5e20;
+    margin-bottom: 12px;
+  }
+  .summary-box ul { padding-left: 20px; }
+  .summary-box li { margin-bottom: 8px; font-weight: 600; color: #1b5e20; }
+
+  /* 섹션 제목 */
+  h2 { font-size: 20px; font-weight: 900; color: #c62828; margin: 36px 0 14px; border-bottom: 3px solid #c62828; padding-bottom: 6px; }
+  h3 { font-size: 17px; font-weight: 800; color: #7f0000; margin: 20px 0 10px; }
+  p { margin-bottom: 14px; }
+
+  /* 표 */
+  .info-table { width: 100%; border-collapse: collapse; margin: 18px 0 28px; font-size: 14px; }
+  .info-table th { background: #c62828; color: #fff; padding: 11px 14px; text-align: left; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #f5ddd d; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #fff5f5; }
+  @media (max-width: 600px) { .info-table { font-size: 13px; } }
+
+  /* SVG 컨테이너 */
+  .svg-wrap { background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 20px; margin: 24px 0; overflow-x: auto; }
+
+  /* 시행 일정 */
+  .deadline-box {
+    border: 2.5px dashed #f57c00;
+    border-radius: 12px;
+    padding: 18px 20px;
+    background: #fff8f0;
+    margin: 28px 0;
+  }
+  .deadline-box h3 { color: #e65100; margin-top: 0; border-bottom: none; }
+  .deadline-box ul { padding-left: 20px; }
+  .deadline-box li { margin-bottom: 8px; color: #bf360c; font-weight: 600; }
+
+  /* 비교 카드 */
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  .compare-card {
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+  }
+  .compare-card.standard { background: #fff5f5; border: 2px solid #ef9a9a; }
+  .compare-card.premium { background: #ffebee; border: 2px solid #c62828; }
+  .compare-card h3 { color: #c62828; font-size: 15px; margin-bottom: 10px; border-bottom: none; }
+  .compare-card .amount { font-size: 26px; font-weight: 900; color: #c62828; margin: 10px 0; }
+  .compare-card p { font-size: 13px; color: #555; margin-bottom: 4px; }
+  @media (max-width: 600px) { .compare-grid { grid-template-columns: 1fr; } }
+
+  /* 체크리스트 */
+  .checklist { background: #f5f7fa; border-radius: 12px; padding: 20px 24px; margin: 24px 0; }
+  .checklist h3 { color: #c62828; margin-top: 0; border-bottom: none; }
+  .checklist-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
+  .checklist-item .chk { color: #2e7d32; font-size: 18px; font-weight: 900; flex-shrink: 0; }
+
+  /* 주의사항 */
+  .caution { background: #fff3e0; border-left: 5px solid #f57c00; border-radius: 0 10px 10px 0; padding: 18px 20px; margin: 24px 0; }
+  .caution p { margin-bottom: 8px; }
+
+  /* 담당 기관 */
+  .contact-box {
+    background: #ffebee;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    border-left: 5px solid #c62828;
+  }
+  .contact-box h2 { border-bottom: none; margin-top: 0; margin-bottom: 12px; }
+  .contact-box p { margin-bottom: 6px; font-size: 15px; }
+
+  /* 찬반 론평 */
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; border-bottom: none; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; border-bottom: none; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  @media (max-width: 600px) { .opinion-grid { grid-template-columns: 1fr; } }
+
+  /* 신청 단계 */
+  .steps { counter-reset: step-counter; }
+  .step-item {
+    counter-increment: step-counter;
+    display: flex;
+    gap: 16px;
+    margin-bottom: 18px;
+    align-items: flex-start;
+  }
+  .step-num {
+    background: #c62828;
+    color: #fff;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+  .step-content { flex: 1; }
+  .step-content strong { font-size: 15px; color: #7f0000; display: block; margin-bottom: 4px; }
+  .step-content p { font-size: 14px; color: #444; margin: 0; }
+
+  /* 해시태그 */
+  .hashtags { margin: 28px 0 20px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .hashtag { background: #ffebee; color: #c62828; border-radius: 20px; padding: 5px 14px; font-size: 13px; font-weight: 700; }
+
+  /* 면책조항 */
+  .disclaimer { background: #f0f0f0; border-radius: 8px; padding: 14px 18px; font-size: 13px; color: #666; margin-top: 32px; }
+
+  /* 작성일 */
+  .meta { text-align: right; font-size: 12px; color: #999; margin-top: 14px; }
+
+  /* 강조 수치 */
+  .big-number { font-size: 36px; font-weight: 900; color: #c62828; }
+</style>
+</head>
+<body>
+<div class="top-header">
+  <span>💰 오늘의 복지 뉴스 · 제2보</span>
+  <span class="issue">2026년 5월 27일 (수)</span>
+</div>
+
+<div class="container">
+  <div class="badge-wrap">
+    <span class="badge">🔥 청년 목돈 마련</span>
+  </div>
+
+  <h1>🔥 月 50만원 넣으면 3년 후 2,200만원?!<br>청년미래적금 6월 출시 완전 가이드 — 지금 당장 확인하세요</h1>
+
+  <div class="hook">
+    매달 50만원만 모아도 <span class="highlight">3년 후 2,200만원</span>이 손에 쥐어진다면? 이재명 정부가 야심차게 내놓은 청년미래적금이 2026년 6월 출시됩니다. 이자소득 비과세에 정부 기여금까지 얹어주는 이 통장, 나는 가입할 수 있을까요?
+  </div>
+
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>대상: 만 19~34세 청년, 소득 3,600만원(우대) 또는 6,000만원(일반) 이하</li>
+      <li>혜택: 정부 기여금 6~12% + 이자소득 비과세 → 3년 만에 약 2,200만원</li>
+      <li>2026년 6월 출시 예정 — 가입 준비 미리미리!</li>
+    </ul>
+  </div>
+
+  <h2>📰 배경 — 왜 이 적금이 나왔나</h2>
+  <p>문재인 정부의 '청년희망적금', 윤석열 정부의 '청년도약계좌'에 이어 이재명 정부가 내놓은 청년 자산 형성 지원 상품입니다. 급등한 집값과 물가 속에서 청년이 목돈을 모으기 어렵다는 현실 인식에서 출발했습니다.</p>
+  <p>기존 청년도약계좌(5년 만기)가 기간이 너무 길다는 불만이 많았던 점을 반영해 <strong>만기를 3년으로 단축</strong>했고, 정부 기여금 비율도 대폭 높였습니다. 이재명 정부의 '사회보장 기본계획 수정안'에도 핵심 청년 정책으로 명시됐습니다.</p>
+
+  <h2>📊 청년미래적금 핵심 조건 한눈에</h2>
+  <table class="info-table">
+    <tr>
+      <th>항목</th>
+      <th>우대형</th>
+      <th>일반형</th>
+    </tr>
+    <tr>
+      <td><strong>가입 연령</strong></td>
+      <td colspan="2">만 19세 ~ 34세</td>
+    </tr>
+    <tr>
+      <td><strong>소득 기준</strong></td>
+      <td>개인소득 3,600만원 이하<br>또는 매출 1억원 이하 소상공인</td>
+      <td>개인소득 6,000만원 이하<br>또는 매출 3억원 이하 소상공인</td>
+    </tr>
+    <tr>
+      <td><strong>가구 소득</strong></td>
+      <td>중위소득 150% 이하</td>
+      <td>중위소득 200% 이하</td>
+    </tr>
+    <tr>
+      <td><strong>정부 기여금</strong></td>
+      <td><strong>납입액의 12%</strong></td>
+      <td><strong>납입액의 6%</strong></td>
+    </tr>
+    <tr>
+      <td><strong>월 납입액</strong></td>
+      <td colspan="2">자유적립식, 최대 50만원</td>
+    </tr>
+    <tr>
+      <td><strong>만기</strong></td>
+      <td colspan="2">3년</td>
+    </tr>
+    <tr>
+      <td><strong>세금</strong></td>
+      <td colspan="2">이자소득 비과세</td>
+    </tr>
+    <tr>
+      <td><strong>예상 수령액</strong></td>
+      <td colspan="2">월 50만원 납입 시 약 2,200만원</td>
+    </tr>
+  </table>
+
+  <h3>💡 특별 혜택: 중소기업 신규취업자</h3>
+  <p>일반형 소득 조건을 충족한 <strong>중소기업 신규취업자(입사 6개월 이내)</strong>는 우대형으로 분류됩니다. 즉, 소득이 다소 높아도 우대형 기여금(12%)을 받을 수 있습니다. 취업 초기 청년이라면 특히 주목하세요!</p>
+
+  <h2>💰 얼마나 받을 수 있나? 시뮬레이션</h2>
+  <div class="compare-grid">
+    <div class="compare-card standard">
+      <h3>일반형 (기여금 6%)</h3>
+      <div class="amount">약 2,000만원+</div>
+      <p>월 50만원 × 36개월</p>
+      <p>= 원금 1,800만원</p>
+      <p>+ 정부 기여금 108만원</p>
+      <p>+ 이자 (비과세)</p>
+    </div>
+    <div class="compare-card premium">
+      <h3>우대형 (기여금 12%)</h3>
+      <div class="amount">약 2,200만원</div>
+      <p>월 50만원 × 36개월</p>
+      <p>= 원금 1,800만원</p>
+      <p>+ 정부 기여금 216만원</p>
+      <p>+ 이자 (비과세)</p>
+    </div>
+  </div>
+
+  <div class="svg-wrap">
+    <svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;margin:0 auto;">
+      <rect width="700" height="320" fill="#fff9f9" rx="12"/>
+      <text x="350" y="30" text-anchor="middle" font-size="14" font-weight="bold" fill="#c62828">청년미래적금 3년 납입 시 수령액 비교 (월 50만원 기준)</text>
+
+      <!-- 막대 배경 -->
+      <rect x="80" y="50" width="550" height="200" fill="#f5f5f5" rx="6"/>
+
+      <!-- 일반형 막대 -->
+      <rect x="140" y="100" width="130" height="130" fill="#ef9a9a" rx="6"/>
+      <text x="205" y="95" text-anchor="middle" font-size="13" fill="#c62828" font-weight="bold">일반형</text>
+      <text x="205" y="200" text-anchor="middle" font-size="22" fill="#7f0000" font-weight="900">2,000만</text>
+      <text x="205" y="220" text-anchor="middle" font-size="11" fill="#555">기여금 108만원</text>
+      <text x="205" y="240" text-anchor="middle" font-size="11" fill="#555">+이자 비과세</text>
+
+      <!-- 우대형 막대 -->
+      <rect x="320" y="65" width="130" height="165" fill="#c62828" rx="6"/>
+      <text x="385" y="60" text-anchor="middle" font-size="13" fill="#c62828" font-weight="bold">우대형</text>
+      <text x="385" y="200" text-anchor="middle" font-size="22" fill="#fff" font-weight="900">2,200만</text>
+      <text x="385" y="220" text-anchor="middle" font-size="11" fill="#ffcdd2">기여금 216만원</text>
+      <text x="385" y="240" text-anchor="middle" font-size="11" fill="#ffcdd2">+이자 비과세</text>
+
+      <!-- 혼자 저축 비교 -->
+      <rect x="500" y="160" width="100" height="70" fill="#e0e0e0" rx="6"/>
+      <text x="550" y="155" text-anchor="middle" font-size="12" fill="#555" font-weight="bold">혼자 저축</text>
+      <text x="550" y="205" text-anchor="middle" font-size="18" fill="#666" font-weight="900">1,800만</text>
+      <text x="550" y="225" text-anchor="middle" font-size="11" fill="#888">기여금 없음</text>
+
+      <!-- 라벨 -->
+      <text x="350" y="290" text-anchor="middle" font-size="12" fill="#888">* 금리·운용 조건에 따라 실제 수령액 달라질 수 있음</text>
+    </svg>
+  </div>
+
+  <h2>📋 신청 방법 (예상)</h2>
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <strong>자격 확인</strong>
+        <p>복지로(bokjiro.go.kr) 또는 서민금융진흥원 홈페이지에서 자격 조건 사전 확인. 나이, 소득, 가구 중위소득 기준을 미리 체크.</p>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <strong>취급 은행 선택</strong>
+        <p>출시 후 시중은행(국민, 신한, 우리, 하나 등) 앱이나 창구에서 가입 가능. 금리 조건 비교 후 선택.</p>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <strong>소득 증빙 서류 준비</strong>
+        <p>근로소득자: 근로소득 원천징수영수증 / 자영업자·소상공인: 사업소득 확인 서류 준비.</p>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <strong>가입 신청</strong>
+        <p>은행 앱 비대면 또는 영업점 방문 가입. 월 납입액 설정 후 자동이체 등록. 자유적립식이므로 중간에 금액 변경 가능.</p>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">5</div>
+      <div class="step-content">
+        <strong>3년 유지 후 만기 수령</strong>
+        <p>중도 해지 시 정부 기여금 일부 또는 전부 반환 조건 적용. 3년 유지 필수.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>⏰ 출시 일정 및 신청 준비</h3>
+    <ul>
+      <li>2026년 6월 — 청년미래적금 공식 출시 예정</li>
+      <li>출시 전 — 복지로·서민금융진흥원에서 사전 알림 신청 권장</li>
+      <li>출시 초기 — 인원 제한 가능성 있음, 빠른 신청 유리</li>
+      <li>중소기업 신규취업자 — 입사 6개월 이내 조건, 취업 후 즉시 확인!</li>
+    </ul>
+  </div>
+
+  <div class="checklist">
+    <h3>✅ 나는 가입 가능할까? 자가 진단</h3>
+    <div class="checklist-item">
+      <span class="chk">✓</span>
+      <span>만 19세 이상 34세 이하다 → <strong>나이 조건 충족</strong></span>
+    </div>
+    <div class="checklist-item">
+      <span class="chk">✓</span>
+      <span>연 소득 6,000만원 이하 또는 소상공인 매출 3억원 이하다 → <strong>일반형 대상</strong></span>
+    </div>
+    <div class="checklist-item">
+      <span class="chk">✓</span>
+      <span>연 소득 3,600만원 이하 또는 소상공인 매출 1억원 이하 + 중위소득 150% 이하다 → <strong>우대형 대상 (기여금 12%)</strong></span>
+    </div>
+    <div class="checklist-item">
+      <span class="chk">✓</span>
+      <span>중소기업에 최근 6개월 내 취업했고 소득 6,000만원 이하다 → <strong>우대형 특별 대상</strong></span>
+    </div>
+    <div class="checklist-item">
+      <span class="chk">✓</span>
+      <span>3년 동안 꾸준히 납입할 수 있는 여건이 된다 → <strong>중도 해지 시 불이익 주의</strong></span>
+    </div>
+  </div>
+
+  <div class="caution">
+    <h3 style="color:#e65100;margin-bottom:12px;">⚠️ 주의사항</h3>
+    <p>① <strong>중도 해지 불이익</strong> — 3년 만기 이전 해지 시 정부 기여금의 일부 또는 전부를 반환해야 할 수 있습니다.</p>
+    <p>② <strong>타 청년 상품과 중복 가입 제한</strong> — 청년도약계좌 등 다른 청년 자산형성 상품과 중복 가입이 제한될 수 있습니다. 출시 후 세부 조건 확인 필수.</p>
+    <p>③ <strong>6월 이전 가입 불가</strong> — 아직 출시 전이므로, 사전 예약이나 알림 신청만 가능합니다.</p>
+    <p>④ <strong>세부 조건은 출시 시점에 확정</strong> — 현재 공개된 내용은 발표 기준이며, 실제 금리·기여금 등은 출시 후 최종 확정됩니다.</p>
+  </div>
+
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <p>🏦 <strong>서민금융진흥원</strong> — www.kinfa.or.kr / 1397</p>
+    <p>🌐 <strong>복지로</strong> — www.bokjiro.go.kr (청년 금융 지원 확인)</p>
+    <p>🏢 <strong>금융위원회</strong> — www.fsc.go.kr / 02-2100-2500</p>
+    <p>📱 <strong>시중은행 앱</strong> — 출시 후 국민·신한·우리·하나 등 취급은행에서 가입</p>
+    <p>☎️ <strong>금융감독원 콜센터</strong> — 1332 (금융 상품 상담)</p>
+  </div>
+
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"청년의 자산 형성 기반이 무너지고 있는 상황에서, 정부 기여금과 비과세 혜택을 결합한 이 상품은 시장이 해결하지 못하는 청년 빈곤 문제를 보완하는 정책적으로 타당한 접근입니다."</p>
+          <p class="author">— 청년 자산 형성 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"5년 만기였던 청년도약계좌와 달리 3년으로 기간을 단축한 점은 현실적입니다. 청년들은 잦은 이직과 생활 변화에 노출돼 있기 때문에 유연한 설계가 실질 가입률을 높일 것입니다."</p>
+          <p class="author">— 금융 소비자 정책 연구자</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"정부 기여금은 결국 세금입니다. 매월 납입 여력이 있는 청년에게만 혜택이 집중되는 구조는, 가장 지원이 필요한 저소득 청년은 오히려 가입조차 못 하는 역설을 낳을 수 있습니다."</p>
+          <p class="author">— 재정경제 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"정권이 바뀔 때마다 청년 금융 상품도 교체되면서 수혜자 혼선과 행정 비용이 반복되고 있습니다. 단기 정책 상품보다 청년 주거·고용 구조 개선이 더 근본적인 해법입니다."</p>
+          <p class="author">— 주거·노동복지 시민단체 활동가</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    <span class="hashtag">#청년미래적금</span>
+    <span class="hashtag">#청년복지</span>
+    <span class="hashtag">#목돈마련</span>
+    <span class="hashtag">#2200만원</span>
+    <span class="hashtag">#청년도약계좌대안</span>
+    <span class="hashtag">#정부기여금</span>
+    <span class="hashtag">#이자소득비과세</span>
+    <span class="hashtag">#2026청년정책</span>
+    <span class="hashtag">#이재명청년정책</span>
+    <span class="hashtag">#복지뉴스</span>
+  </div>
+
+  <div class="disclaimer">
+    ⚠️ 이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부는 담당 기관에 확인하세요. 청년미래적금의 세부 조건(금리, 기여금 지급 방식 등)은 출시 시점에 최종 확정됩니다.
+  </div>
+  <p class="meta">작성일: 2026년 5월 27일 | 오늘의 복지 뉴스 제2보</p>
+</div>
+</body>
+</html>
