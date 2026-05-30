@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"직원 1명당 연간 280만원, 나라가 그냥 내줍니다" — 두루누리 사회보험료 80% 지원, 10인 미만 소규모 사업장이라면 지금 당장 신청 안 하면 진짜 손해 | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; background: #f5f5f5; color: #222; line-height: 1.7; }
+  .container { max-width: 780px; margin: 0 auto; background: #fff; }
+
+  /* 상단 헤더 */
+  .top-header { background: #f57c00; color: #fff; padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; }
+  .top-header .date-tag { font-size: 13px; background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 20px; }
+  .top-header .series { font-size: 13px; font-weight: 700; }
+
+  /* 섹션 배지 */
+  .section-badge { background: #f57c00; color: #fff; display: inline-block; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 700; margin: 20px 24px 8px; }
+
+  /* 메인 제목 */
+  h1 { font-size: 28px; font-weight: 900; line-height: 1.35; padding: 0 24px 16px; color: #111; word-break: keep-all; }
+
+  /* 훅 */
+  .hook { border-left: 5px solid #f57c00; background: #fff8f0; padding: 16px 20px; margin: 0 24px 20px; border-radius: 0 8px 8px 0; font-size: 16px; line-height: 1.8; }
+  .hook .highlight { color: #e65100; font-weight: 900; }
+
+  /* 핵심 요약 박스 */
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; margin: 0 24px 24px; padding: 18px 20px; }
+  .summary-box h2 { color: #1b5e20; font-size: 16px; margin-bottom: 10px; }
+  .summary-box ul { list-style: none; padding: 0; }
+  .summary-box ul li { padding: 4px 0; font-size: 15px; }
+  .summary-box ul li::before { content: "✅ "; }
+
+  /* 본문 섹션 */
+  .section { padding: 0 24px; margin-bottom: 24px; }
+  .section h2 { font-size: 20px; font-weight: 900; color: #e65100; border-bottom: 2px solid #f57c00; padding-bottom: 6px; margin-bottom: 14px; }
+  .section p { font-size: 15px; line-height: 1.8; margin-bottom: 10px; }
+
+  /* 표 */
+  .table-wrap { overflow-x: auto; margin-bottom: 20px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { background: #f57c00; color: #fff; padding: 10px 8px; text-align: center; }
+  td { border: 1px solid #ddd; padding: 9px 8px; text-align: center; }
+  tr:nth-child(even) td { background: #fafafa; }
+  .highlight-row td { font-weight: 900; color: #e65100; }
+
+  /* SVG 인포그래픽 */
+  .infographic { margin: 0 24px 24px; }
+  .infographic h2 { font-size: 20px; font-weight: 900; color: #e65100; border-bottom: 2px solid #f57c00; padding-bottom: 6px; margin-bottom: 14px; }
+
+  /* 신청 방법 */
+  .step-list { list-style: none; padding: 0; }
+  .step-list li { display: flex; gap: 14px; margin-bottom: 14px; align-items: flex-start; }
+  .step-num { background: #f57c00; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 15px; flex-shrink: 0; }
+  .step-text { font-size: 15px; line-height: 1.7; padding-top: 4px; }
+
+  /* 시행 일정 박스 */
+  .deadline-box { border: 2px dashed #f57c00; background: #fff8e1; border-radius: 10px; padding: 16px 20px; margin: 0 24px 24px; }
+  .deadline-box h3 { color: #e65100; font-size: 16px; margin-bottom: 8px; }
+  .deadline-box p { font-size: 15px; }
+
+  /* 자가진단 체크리스트 */
+  .checklist { background: #fff3e0; border-radius: 10px; padding: 18px 20px; margin: 0 24px 24px; }
+  .checklist h2 { color: #bf360c; font-size: 17px; margin-bottom: 12px; }
+  .checklist ul { list-style: none; padding: 0; }
+  .checklist ul li { padding: 5px 0; font-size: 15px; }
+  .checklist ul li::before { content: "✓ "; color: #f57c00; font-weight: 900; }
+
+  /* 주의사항 */
+  .caution { background: #fce4ec; border-radius: 10px; padding: 18px 20px; margin: 0 24px 24px; }
+  .caution h2 { color: #880e4f; font-size: 17px; margin-bottom: 10px; }
+  .caution p { font-size: 14px; line-height: 1.7; margin-bottom: 6px; }
+
+  /* 담당 기관 박스 */
+  .contact-box { background: #fff3e0; border-left: 6px solid #f57c00; border-radius: 0 10px 10px 0; padding: 18px 20px; margin: 0 24px 24px; }
+  .contact-box h2 { color: #e65100; font-size: 17px; margin-bottom: 10px; }
+  .contact-box p { font-size: 14px; line-height: 1.9; }
+  .contact-box a { color: #f57c00; font-weight: 700; }
+
+  /* 전문가 찬반 론평 */
+  .opinion-section { margin: 0 24px 24px; }
+  .opinion-section h2 { font-size: 20px; font-weight: 900; color: #e65100; border-bottom: 2px solid #f57c00; padding-bottom: 6px; margin-bottom: 14px; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  /* 해시태그 */
+  .hashtags { padding: 0 24px; margin-bottom: 20px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .hashtags span { background: #fff3e0; color: #e65100; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 700; }
+
+  /* 면책조항 */
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 20px; margin: 0 24px 20px; }
+  .disclaimer p { font-size: 12px; color: #888; line-height: 1.7; }
+
+  /* 작성일 */
+  .meta { text-align: right; padding: 0 24px 24px; font-size: 12px; color: #999; }
+
+  /* 절감 강조 카드 */
+  .saving-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+  .saving-card { border-radius: 12px; padding: 20px; text-align: center; }
+  .saving-card.employer { background: #fff3e0; border: 2px solid #f57c00; }
+  .saving-card.employee { background: #e3f2fd; border: 2px solid #1565c0; }
+  .saving-card h3 { font-size: 15px; font-weight: 900; margin-bottom: 10px; color: #555; }
+  .saving-card .amount { font-size: 26px; font-weight: 900; color: #e65100; }
+  .saving-card .unit { font-size: 13px; color: #888; margin-top: 4px; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .saving-cards { grid-template-columns: 1fr; }
+    .container { margin: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 상단 헤더 -->
+  <div class="top-header">
+    <span class="date-tag">📅 2026년 5월 30일</span>
+    <span class="series">오늘의 복지 뉴스 · 제2보</span>
+  </div>
+
+  <!-- 섹션 배지 -->
+  <span class="section-badge">💼 소상공인·근로자 지원</span>
+
+  <!-- 메인 제목 -->
+  <h1>"직원 1명당 연간 280만원, 나라가 그냥 내줍니다" — 두루누리 사회보험료 80% 지원, 10인 미만 소규모 사업장이라면 지금 당장 신청 안 하면 진짜 손해</h1>
+
+  <!-- 훅 -->
+  <div class="hook">
+    편의점, 식당, 카페… 직원 몇 명 두고 힘들게 운영하시는 소규모 사업주라면 반드시 들으세요. <span class="highlight">고용보험·국민연금 보험료의 80%를 최대 3년간 국가가 대신 내주는 제도</span>가 있습니다. 근로자도 함께 혜택 받습니다. 직원 1명 기준 사업주·근로자 합산 <span class="highlight">연간 최대 약 286만원</span>을 아낄 수 있는데, 모르면 그냥 날리는 돈입니다.
+  </div>
+
+  <!-- 핵심 요약 박스 -->
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>상시 근로자 10인 미만 사업장 + 월 평균보수 270만원 이하 근로자가 대상</li>
+      <li>고용보험·국민연금 보험료 80% 지원 — 최대 36개월(3년)</li>
+      <li>상시 신청 가능 (고정 마감 없음) — 다음 달 고지서부터 즉시 적용</li>
+    </ul>
+  </div>
+
+  <!-- 배경/문제 섹션 -->
+  <div class="section">
+    <h2>📣 왜 이 제도가 생겼나</h2>
+    <p>소규모 사업장 근로자들은 사회보험(국민연금·고용보험) 가입률이 낮아 '사회보험 사각지대'에 놓이는 경우가 많습니다. 사업주는 인건비 부담 때문에, 근로자는 낮은 임금 때문에 보험료를 회피하는 악순환이 생겼습니다.</p>
+    <p>정부는 이 문제를 해결하기 위해 2012년부터 '두루누리 사회보험료 지원사업'을 운영하고 있습니다. 사업주와 근로자 양쪽의 보험료 부담을 줄여 사회보험 가입을 유도하고, 퇴직 후 실업급여·노후연금 혜택까지 받을 수 있도록 하는 게 목적입니다.</p>
+  </div>
+
+  <!-- 절감 금액 카드 -->
+  <div class="section">
+    <h2>💰 실제로 얼마나 아낄 수 있나 (1인 기준)</h2>
+    <div class="saving-cards">
+      <div class="saving-card employer">
+        <h3>🏢 사업주 절감액</h3>
+        <div class="amount">월 최대<br>121,980원</div>
+        <div class="unit">연간 최대 약 146만원 절감</div>
+      </div>
+      <div class="saving-card employee">
+        <h3>👷 근로자 절감액</h3>
+        <div class="amount">월 최대<br>116,590원</div>
+        <div class="unit">연간 최대 약 140만원 절감</div>
+      </div>
+    </div>
+    <p style="font-size:13px;color:#888;text-align:center;">※ 월 보수 270만원, 10인 미만 사업장 신규 가입자 기준. 실제 금액은 보수액에 따라 다름.</p>
+  </div>
+
+  <!-- 상세 정보 표 -->
+  <div class="section">
+    <h2>📊 지원 대상 및 조건 요약</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>내용</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>대상 사업장</strong></td>
+            <td>상시 근로자 10인 미만인 모든 업종 사업장</td>
+          </tr>
+          <tr>
+            <td><strong>대상 근로자</strong></td>
+            <td>해당 사업장에서 월 평균 보수 270만원 이하인 신규 가입 근로자</td>
+          </tr>
+          <tr>
+            <td><strong>지원 보험료</strong></td>
+            <td>고용보험 + 국민연금 보험료 80%</td>
+          </tr>
+          <tr>
+            <td><strong>지원 기간</strong></td>
+            <td>최대 36개월 (3년)</td>
+          </tr>
+          <tr class="highlight-row">
+            <td><strong>신청 방법</strong></td>
+            <td>근로복지공단 또는 국민연금공단 방문·온라인 신청</td>
+          </tr>
+          <tr>
+            <td><strong>신청 시기</strong></td>
+            <td>상시 신청 가능 (고정 마감 없음)</td>
+          </tr>
+          <tr>
+            <td><strong>혜택 적용</strong></td>
+            <td>신청 다음 달 고지서부터 즉시 반영</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SVG 인포그래픽 -->
+  <div class="infographic">
+    <h2>📈 두루누리 지원 구조 한눈에 보기</h2>
+    <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:12px;background:#fff8f0;">
+      <!-- 배경 -->
+      <rect width="700" height="260" fill="#fff8f0" rx="12"/>
+
+      <!-- 제목 -->
+      <text x="350" y="32" fill="#e65100" font-size="15" font-weight="bold" text-anchor="middle">보험료 부담 Before → After 비교 (월 보수 270만원 기준)</text>
+
+      <!-- Before 박스 (기존) -->
+      <rect x="40" y="50" width="270" height="170" fill="#ffccbc" rx="12"/>
+      <text x="175" y="78" fill="#bf360c" font-size="14" font-weight="bold" text-anchor="middle">❌ 미지원 시 (원래 부담)</text>
+      <!-- 사업주 -->
+      <rect x="60" y="90" width="230" height="50" fill="#ff7043" rx="8"/>
+      <text x="175" y="111" fill="#fff" font-size="13" font-weight="bold" text-anchor="middle">사업주 국민연금+고용보험</text>
+      <text x="175" y="130" fill="#fff" font-size="14" font-weight="bold" text-anchor="middle">월 약 152,480원 전액 부담</text>
+      <!-- 근로자 -->
+      <rect x="60" y="150" width="230" height="50" fill="#ff8a65" rx="8"/>
+      <text x="175" y="171" fill="#fff" font-size="13" font-weight="bold" text-anchor="middle">근로자 국민연금+고용보험</text>
+      <text x="175" y="190" fill="#fff" font-size="14" font-weight="bold" text-anchor="middle">월 약 145,740원 전액 부담</text>
+
+      <!-- 화살표 -->
+      <text x="345" y="140" fill="#f57c00" font-size="30" font-weight="bold" text-anchor="middle">→</text>
+      <text x="345" y="162" fill="#e65100" font-size="11" font-weight="bold" text-anchor="middle">두루누리</text>
+      <text x="345" y="175" fill="#e65100" font-size="11" font-weight="bold" text-anchor="middle">80% 지원</text>
+
+      <!-- After 박스 (지원 후) -->
+      <rect x="390" y="50" width="270" height="170" fill="#c8e6c9" rx="12"/>
+      <text x="525" y="78" fill="#1b5e20" font-size="14" font-weight="bold" text-anchor="middle">✅ 두루누리 적용 후</text>
+      <!-- 사업주 -->
+      <rect x="410" y="90" width="230" height="50" fill="#43a047" rx="8"/>
+      <text x="525" y="111" fill="#fff" font-size="13" font-weight="bold" text-anchor="middle">사업주 실부담</text>
+      <text x="525" y="130" fill="#fff" font-size="14" font-weight="bold" text-anchor="middle">월 약 30,500원만 내면 됨</text>
+      <!-- 근로자 -->
+      <rect x="410" y="150" width="230" height="50" fill="#66bb6a" rx="8"/>
+      <text x="525" y="171" fill="#fff" font-size="13" font-weight="bold" text-anchor="middle">근로자 실부담</text>
+      <text x="525" y="190" fill="#fff" font-size="14" font-weight="bold" text-anchor="middle">월 약 29,150원만 내면 됨</text>
+
+      <!-- 국가 지원 표시 -->
+      <text x="350" y="248" fill="#e65100" font-size="11" text-anchor="middle">※ 월 보수 270만원 기준 / 나머지 80%는 국가(고용보험기금·국민연금기금)에서 지원</text>
+    </svg>
+  </div>
+
+  <!-- 신청 방법 -->
+  <div class="section">
+    <h2>📋 신청 방법 (단계별)</h2>
+    <ul class="step-list">
+      <li>
+        <div class="step-num">1</div>
+        <div class="step-text"><strong>자격 확인</strong> — 상시 근로자 수 10인 미만인지, 해당 근로자 월 보수가 270만원 이하인지 확인</div>
+      </li>
+      <li>
+        <div class="step-num">2</div>
+        <div class="step-text"><strong>신청 채널 선택</strong> — 근로복지공단(고용보험) 또는 국민연금공단 지사 방문, 또는 두루누리 홈페이지(www.insurancesupport.or.kr) 온라인 신청</div>
+      </li>
+      <li>
+        <div class="step-num">3</div>
+        <div class="step-text"><strong>서류 제출</strong> — 사업자등록증, 고용보험·국민연금 취득신고서, 근로계약서 등 준비 (지사 상담 후 안내)</div>
+      </li>
+      <li>
+        <div class="step-num">4</div>
+        <div class="step-text"><strong>승인 및 적용</strong> — 신청 다음 달 고지서부터 80% 감면 적용. 별도 통보 없이 고지서에서 바로 확인 가능</div>
+      </li>
+      <li>
+        <div class="step-num">5</div>
+        <div class="step-text"><strong>지속 관리</strong> — 지원 기간 36개월 동안 자동 적용. 근로자 이직·교체 시 신규로 다시 신청 필요</div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 시행 일정 박스 -->
+  <div class="deadline-box">
+    <h3>⏰ 신청 기한 및 적용 시기</h3>
+    <p><strong>마감 없음 — 연중 상시 신청 가능!</strong><br>
+    단, 신청이 늦을수록 지원 시작도 늦어집니다.<br>
+    ⚠️ 이미 가입돼 있는 기존 근로자는 '신규 가입자'가 아니므로 해당되지 않으니,<br>
+    <strong>새 직원을 고용할 때 즉시 함께 신청</strong>하는 것이 핵심입니다!</p>
+  </div>
+
+  <!-- 자가진단 체크리스트 -->
+  <div class="checklist">
+    <h2>🔍 우리 사업장 해당되는지 자가 진단 (5개 체크)</h2>
+    <ul>
+      <li>상시 근로자가 10인 미만인 사업장이다</li>
+      <li>해당 근로자의 월 평균 보수가 270만원 이하다</li>
+      <li>해당 근로자가 고용보험·국민연금 신규 가입자다 (기존 가입자 제외)</li>
+      <li>사업자등록이 되어 있고 정상적인 사업 운영 중이다</li>
+      <li>지원 기간(최대 36개월)이 남아 있는 상태다</li>
+    </ul>
+  </div>
+
+  <!-- 주의사항 -->
+  <div class="caution">
+    <h2>⚠️ 주의사항</h2>
+    <p>① 기존 사업장 재직자는 지원 대상에서 제외 — 반드시 신규 가입자여야 합니다.</p>
+    <p>② 10인 미만 기준은 신청 당시가 아닌 사업장 전체 상시 근로자 수 기준입니다.</p>
+    <p>③ 지원 기간 36개월은 사업장 기준이 아닌 근로자별 기준이므로, 직원이 바뀌면 새로 36개월 적용됩니다.</p>
+    <p>④ 사업장 규모가 10인 이상으로 늘어나면 지원이 중단될 수 있으므로 변동 시 신고해야 합니다.</p>
+  </div>
+
+  <!-- 담당 기관 박스 -->
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <p>🏛️ <strong>고용보험 담당:</strong> 근로복지공단 (고용보험 콜센터 <a href="tel:15880075">1588-0075</a>)</p>
+    <p>🏛️ <strong>국민연금 담당:</strong> 국민연금공단 지사 (<a href="tel:1355">1355</a>)</p>
+    <p>💻 <strong>두루누리 공식 홈페이지:</strong> <a href="http://www.insurancesupport.or.kr" target="_blank">www.insurancesupport.or.kr</a></p>
+    <p>📱 <strong>온라인 신청:</strong> 고용보험 홈페이지 <a href="https://www.ei.go.kr" target="_blank">www.ei.go.kr</a></p>
+    <p>🏢 <strong>방문 신청:</strong> 가까운 근로복지공단 지사 또는 국민연금공단 지사</p>
+  </div>
+
+  <!-- 전문가 찬반 론평 -->
+  <div class="opinion-section">
+    <h2>💬 전문가 찬반 론평</h2>
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"두루누리 사업은 사회보험 사각지대를 실질적으로 줄이는 효과가 입증된 제도입니다. 특히 영세 자영업자와 단기 근로자가 많은 한국의 노동시장 구조상, 이 같은 보조금 방식은 가입률을 높이는 데 가장 현실적인 접근입니다."</p>
+          <p class="author">— 노동복지 정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"소규모 사업장 근로자들이 퇴직 후 실업급여·노령연금을 제대로 받으려면 지금의 가입이 결정적입니다. 두루누리는 현재의 보험료 부담을 덜어주면서 미래 안전망을 만드는 '두 마리 토끼'를 동시에 잡는 제도입니다."</p>
+          <p class="author">— 사회보험 현장 활동가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"보험료 지원이 끝나는 36개월 이후 사업주가 전액 부담을 감당하지 못해 오히려 고용을 줄이거나 비공식 고용으로 전환하는 역효과가 나타날 수 있습니다. 지원 종료 시점 관리가 제도의 핵심 과제입니다."</p>
+          <p class="author">— 재정경제 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"신규 가입자만 대상으로 한정하다 보니, 이미 사업장에 오래 다닌 저임금 근로자들은 혜택에서 소외됩니다. 기존 가입자의 보험료 부담을 완화하는 별도 보완책이 필요합니다."</p>
+          <p class="author">— 노동법 전문 사회복지사</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span>#두루누리</span>
+    <span>#사회보험료지원</span>
+    <span>#소상공인지원</span>
+    <span>#10인미만사업장</span>
+    <span>#고용보험</span>
+    <span>#국민연금</span>
+    <span>#인건비절감</span>
+    <span>#근로자혜택</span>
+    <span>#사회보험사각지대</span>
+    <span>#복지혜택2026</span>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    <p>이 기사는 공개된 정보를 바탕으로 작성되었습니다. 지원 금액 및 대상 기준은 사업장 규모·근로자 보수액에 따라 달라질 수 있습니다. 정확한 지원 여부는 근로복지공단(1588-0075) 또는 국민연금공단(1355)에 확인하세요.</p>
+  </div>
+
+  <!-- 작성일 -->
+  <div class="meta">작성일: 2026년 5월 30일 | 오늘의 복지뉴스</div>
+
+</div>
+</body>
+</html>

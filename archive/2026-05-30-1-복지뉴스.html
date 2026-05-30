@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"월세 내고 계세요? 지금 당장 신청하세요!" — 2026 주거급여 기준임대료 대폭 인상, 소득기준 48% 이하면 최대 월 70만원 나라가 내준다 | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; background: #f5f5f5; color: #222; line-height: 1.7; }
+  .container { max-width: 780px; margin: 0 auto; background: #fff; }
+
+  /* 상단 헤더 */
+  .top-header { background: #c62828; color: #fff; padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; }
+  .top-header .date-tag { font-size: 13px; background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 20px; }
+  .top-header .series { font-size: 13px; font-weight: 700; }
+
+  /* 섹션 배지 */
+  .section-badge { background: #c62828; color: #fff; display: inline-block; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 700; margin: 20px 24px 8px; }
+
+  /* 메인 제목 */
+  h1 { font-size: 28px; font-weight: 900; line-height: 1.35; padding: 0 24px 16px; color: #111; word-break: keep-all; }
+
+  /* 훅 */
+  .hook { border-left: 5px solid #c62828; background: #fff8f8; padding: 16px 20px; margin: 0 24px 20px; border-radius: 0 8px 8px 0; font-size: 16px; line-height: 1.8; }
+  .hook .highlight { color: #c62828; font-weight: 900; }
+
+  /* 핵심 요약 박스 */
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; margin: 0 24px 24px; padding: 18px 20px; }
+  .summary-box h2 { color: #1b5e20; font-size: 16px; margin-bottom: 10px; }
+  .summary-box ul { list-style: none; padding: 0; }
+  .summary-box ul li { padding: 4px 0; font-size: 15px; }
+  .summary-box ul li::before { content: "✅ "; }
+
+  /* 본문 섹션 */
+  .section { padding: 0 24px; margin-bottom: 24px; }
+  .section h2 { font-size: 20px; font-weight: 900; color: #c62828; border-bottom: 2px solid #c62828; padding-bottom: 6px; margin-bottom: 14px; }
+  .section p { font-size: 15px; line-height: 1.8; margin-bottom: 10px; }
+
+  /* 표 */
+  .table-wrap { overflow-x: auto; margin-bottom: 20px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { background: #c62828; color: #fff; padding: 10px 8px; text-align: center; }
+  td { border: 1px solid #ddd; padding: 9px 8px; text-align: center; }
+  tr:nth-child(even) td { background: #fafafa; }
+  .highlight-row td { font-weight: 900; color: #c62828; }
+
+  /* SVG 인포그래픽 */
+  .infographic { margin: 0 24px 24px; }
+  .infographic h2 { font-size: 20px; font-weight: 900; color: #c62828; border-bottom: 2px solid #c62828; padding-bottom: 6px; margin-bottom: 14px; }
+
+  /* 신청 방법 */
+  .step-list { list-style: none; padding: 0; }
+  .step-list li { display: flex; gap: 14px; margin-bottom: 14px; align-items: flex-start; }
+  .step-num { background: #c62828; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 15px; flex-shrink: 0; }
+  .step-text { font-size: 15px; line-height: 1.7; padding-top: 4px; }
+
+  /* 시행 일정 박스 */
+  .deadline-box { border: 2px dashed #f57c00; background: #fff8e1; border-radius: 10px; padding: 16px 20px; margin: 0 24px 24px; }
+  .deadline-box h3 { color: #e65100; font-size: 16px; margin-bottom: 8px; }
+  .deadline-box p { font-size: 15px; }
+
+  /* 자가진단 체크리스트 */
+  .checklist { background: #fce4ec; border-radius: 10px; padding: 18px 20px; margin: 0 24px 24px; }
+  .checklist h2 { color: #880e4f; font-size: 17px; margin-bottom: 12px; }
+  .checklist ul { list-style: none; padding: 0; }
+  .checklist ul li { padding: 5px 0; font-size: 15px; }
+  .checklist ul li::before { content: "✓ "; color: #c62828; font-weight: 900; }
+
+  /* 주의사항 */
+  .caution { background: #fff3e0; border-radius: 10px; padding: 18px 20px; margin: 0 24px 24px; }
+  .caution h2 { color: #bf360c; font-size: 17px; margin-bottom: 10px; }
+  .caution p { font-size: 14px; line-height: 1.7; margin-bottom: 6px; }
+
+  /* 담당 기관 박스 */
+  .contact-box { background: #fbe9e7; border-left: 6px solid #c62828; border-radius: 0 10px 10px 0; padding: 18px 20px; margin: 0 24px 24px; }
+  .contact-box h2 { color: #b71c1c; font-size: 17px; margin-bottom: 10px; }
+  .contact-box p { font-size: 14px; line-height: 1.9; }
+  .contact-box a { color: #c62828; font-weight: 700; }
+
+  /* 전문가 찬반 론평 */
+  .opinion-section { margin: 0 24px 24px; }
+  .opinion-section h2 { font-size: 20px; font-weight: 900; color: #c62828; border-bottom: 2px solid #c62828; padding-bottom: 6px; margin-bottom: 14px; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  /* 해시태그 */
+  .hashtags { padding: 0 24px; margin-bottom: 20px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .hashtags span { background: #fce4ec; color: #880e4f; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 700; }
+
+  /* 면책조항 */
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 20px; margin: 0 24px 20px; }
+  .disclaimer p { font-size: 12px; color: #888; line-height: 1.7; }
+
+  /* 작성일 */
+  .meta { text-align: right; padding: 0 24px 24px; font-size: 12px; color: #999; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { margin: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 상단 헤더 -->
+  <div class="top-header">
+    <span class="date-tag">📅 2026년 5월 30일</span>
+    <span class="series">오늘의 복지 뉴스 · 제1보</span>
+  </div>
+
+  <!-- 섹션 배지 -->
+  <span class="section-badge">🏠 주거 지원</span>
+
+  <!-- 메인 제목 -->
+  <h1>"월세 내고 계세요? 지금 당장 신청하세요!" — 2026 주거급여 기준임대료 대폭 인상, 소득기준 48% 이하면 최대 월 70만원 나라가 내준다</h1>
+
+  <!-- 훅 -->
+  <div class="hook">
+    매달 월세 내면서 허덕이시나요? 사실 <span class="highlight">국가가 월세를 대신 내주는 제도</span>가 있는데, 몰라서 못 받고 있는 분들이 전국에 수백만 명입니다. 2026년 기준임대료가 최대 3.9만원 더 올랐고, 소득 기준도 <span class="highlight">기준 중위소득 48% 이하 (4인가구 월 약 311만원)</span>라면 지금 바로 신청 가능합니다. 자가 주택에 사는 분도 집 수리비 최대 1,601만원을 받을 수 있습니다.
+  </div>
+
+  <!-- 핵심 요약 박스 -->
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>소득인정액 기준 중위소득 48% 이하면 전월세·자가 가구 모두 신청 가능</li>
+      <li>2026년 기준임대료 1.7~3.9만원 인상 — 서울 1인가구 최대 월 약 34만원</li>
+      <li>자가 거주자는 현금 대신 집 수리비 최대 1,601만원(대보수) 지원</li>
+    </ul>
+  </div>
+
+  <!-- 배경/문제 섹션 -->
+  <div class="section">
+    <h2>📣 왜 이 제도가 생겼나</h2>
+    <p>주거급여는 기초생활보장제도 안에서 주거비를 별도로 지원하는 맞춤형 급여입니다. 2015년 주거 전담 급여로 분리된 이후 매년 기준임대료가 오르고 있습니다. 정부는 물가 상승과 전월세 부담 증가에 대응해 2026년도 기준임대료를 전년 대비 1.7만~3.9만원 인상했습니다.</p>
+    <p>특히 수도권 1인 가구처럼 고시원·원룸에 사는 취약계층이 많이 혜택을 받을 수 있습니다. 부양의무자 기준이 없어 자녀가 돈을 많이 벌어도, 본인 소득과 재산 기준만 통과하면 됩니다.</p>
+  </div>
+
+  <!-- 상세 정보 표 -->
+  <div class="section">
+    <h2>📊 2026년 임차급여 기준임대료 (월)</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>급지</th>
+            <th>해당 지역</th>
+            <th>1인</th>
+            <th>2인</th>
+            <th>3인</th>
+            <th>4인</th>
+            <th>5인</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="highlight-row">
+            <td>1급지</td>
+            <td>서울</td>
+            <td>341,000원</td>
+            <td>382,000원</td>
+            <td>456,000원</td>
+            <td>527,000원</td>
+            <td>545,000원</td>
+          </tr>
+          <tr>
+            <td>2급지</td>
+            <td>경기·인천</td>
+            <td>268,000원</td>
+            <td>300,000원</td>
+            <td>358,000원</td>
+            <td>414,000원</td>
+            <td>428,000원</td>
+          </tr>
+          <tr>
+            <td>3급지</td>
+            <td>광역시·세종</td>
+            <td>216,000원</td>
+            <td>240,000원</td>
+            <td>287,000원</td>
+            <td>333,000원</td>
+            <td>344,000원</td>
+          </tr>
+          <tr>
+            <td>4급지</td>
+            <td>그 외 지역</td>
+            <td>178,000원</td>
+            <td>198,000원</td>
+            <td>236,000원</td>
+            <td>274,000원</td>
+            <td>283,000원</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>🔧 자가급여(수선유지급여) 지원액</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>보수 유형</th>
+            <th>지원금액</th>
+            <th>지원주기</th>
+            <th>해당 상태</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>경보수</td>
+            <td class="highlight-row">590만원</td>
+            <td>3년</td>
+            <td>도배, 창호, 온돌 등 경미한 수선</td>
+          </tr>
+          <tr>
+            <td>중보수</td>
+            <td>1,095만원</td>
+            <td>5년</td>
+            <td>단열, 지붕, 방수 등 중간 수선</td>
+          </tr>
+          <tr class="highlight-row">
+            <td>대보수</td>
+            <td>1,601만원</td>
+            <td>7년</td>
+            <td>기초·지붕구조 등 대규모 수선</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SVG 인포그래픽 -->
+  <div class="infographic">
+    <h2>📈 급지별 1인가구 기준임대료 비교 (2026)</h2>
+    <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:12px;background:#fff8f8;">
+      <!-- 배경 -->
+      <rect width="700" height="280" fill="#fff8f8" rx="12"/>
+      <!-- y축 라벨 -->
+      <text x="40" y="240" fill="#999" font-size="12">0원</text>
+      <text x="30" y="180" fill="#999" font-size="12">10만</text>
+      <text x="30" y="120" fill="#999" font-size="12">20만</text>
+      <text x="30" y="60" fill="#999" font-size="12">30만</text>
+      <!-- 그리드 라인 -->
+      <line x1="70" y1="230" x2="660" y2="230" stroke="#eee" stroke-width="1"/>
+      <line x1="70" y1="170" x2="660" y2="170" stroke="#eee" stroke-width="1"/>
+      <line x1="70" y1="110" x2="660" y2="110" stroke="#eee" stroke-width="1"/>
+      <line x1="70" y1="50" x2="660" y2="50" stroke="#eee" stroke-width="1"/>
+      <!-- 바 차트: 1급지 341,000 → 비율 341/400*180 ≈ 153px high -->
+      <rect x="100" y="77" width="100" height="153" fill="#c62828" rx="6"/>
+      <text x="150" y="68" fill="#c62828" font-size="13" font-weight="bold" text-anchor="middle">341,000원</text>
+      <text x="150" y="250" fill="#555" font-size="13" font-weight="bold" text-anchor="middle">서울(1급지)</text>
+      <!-- 2급지 268,000 → 268/400*180≈120.6 -->
+      <rect x="240" y="110" width="100" height="120" fill="#e57373" rx="6"/>
+      <text x="290" y="101" fill="#e57373" font-size="13" font-weight="bold" text-anchor="middle">268,000원</text>
+      <text x="290" y="250" fill="#555" font-size="13" font-weight="bold" text-anchor="middle">경기·인천(2)</text>
+      <!-- 3급지 216,000 → 216/400*180≈97.2 -->
+      <rect x="380" y="133" width="100" height="97" fill="#ef9a9a" rx="6"/>
+      <text x="430" y="124" fill="#ef9a9a" font-size="13" font-weight="bold" text-anchor="middle">216,000원</text>
+      <text x="430" y="250" fill="#555" font-size="13" font-weight="bold" text-anchor="middle">광역시·세종(3)</text>
+      <!-- 4급지 178,000 → 178/400*180≈80.1 -->
+      <rect x="520" y="150" width="100" height="80" fill="#ffcdd2" rx="6"/>
+      <text x="570" y="141" fill="#c62828" font-size="13" font-weight="bold" text-anchor="middle">178,000원</text>
+      <text x="570" y="250" fill="#555" font-size="13" font-weight="bold" text-anchor="middle">그 외 지역(4)</text>
+      <!-- 제목 -->
+      <text x="350" y="275" fill="#888" font-size="11" text-anchor="middle">※ 1인가구 기준. 실제 지급액은 실제 임차료와 비교해 낮은 금액 적용</text>
+    </svg>
+  </div>
+
+  <!-- 신청 방법 -->
+  <div class="section">
+    <h2>📋 신청 방법 (단계별)</h2>
+    <ul class="step-list">
+      <li>
+        <div class="step-num">1</div>
+        <div class="step-text"><strong>자가 진단</strong> — 마이홈 포털(www.myhome.go.kr) 또는 복지로(www.bokjiro.go.kr)에서 소득인정액 자가 계산</div>
+      </li>
+      <li>
+        <div class="step-num">2</div>
+        <div class="step-text"><strong>신청</strong> — 주소지 읍·면·동 행정복지센터 방문 또는 정부24(www.gov.kr) 온라인 신청</div>
+      </li>
+      <li>
+        <div class="step-num">3</div>
+        <div class="step-text"><strong>조사</strong> — 소득·재산 조사 약 2주 + LH 주택 조사 약 2주 (합산 약 30일 이내 결정)</div>
+      </li>
+      <li>
+        <div class="step-num">4</div>
+        <div class="step-text"><strong>지급 결정 통보</strong> — 수급자로 선정되면 매월 20일 계좌로 입금</div>
+      </li>
+      <li>
+        <div class="step-num">5</div>
+        <div class="step-text"><strong>자가 거주자</strong> — 수선유지급여는 LH에서 직접 공사 지원 또는 수리비 지급</div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 시행 일정 박스 -->
+  <div class="deadline-box">
+    <h3>⏰ 지급일 및 신청 기한</h3>
+    <p>주거급여는 <strong>연중 상시 신청 가능</strong>합니다. 신청 후 30일 이내 결정 통보 받으며,<br>
+    수급자 선정 시 <strong>매월 20일</strong> 임차급여가 계좌로 입금됩니다.<br>
+    ⚠️ 신청이 늦을수록 혜택 시작도 늦어집니다 — 지금 바로 신청하세요!</p>
+  </div>
+
+  <!-- 자가진단 체크리스트 -->
+  <div class="checklist">
+    <h2>🔍 내가 해당되는지 자가 진단 (5개 중 해당되면 신청 가능성 높음)</h2>
+    <ul>
+      <li>소득인정액이 기준 중위소득 48% 이하다 (4인가구 월 약 311만원, 1인가구 약 111만원)</li>
+      <li>전월세 또는 자가 주택에 거주하고 있다 (고시원·쪽방·기숙사도 가능)</li>
+      <li>임대차계약서 또는 임차 사실을 증명할 수 있다</li>
+      <li>부양의무자 기준 없음 — 자녀 소득과 무관하게 본인 기준만 충족하면 됨</li>
+      <li>현재 주거급여를 받고 있지 않다 (기수급자는 기준임대료 인상분 자동 반영)</li>
+    </ul>
+  </div>
+
+  <!-- 주의사항 -->
+  <div class="caution">
+    <h2>⚠️ 주의사항</h2>
+    <p>① 실제 임차료가 기준임대료보다 낮으면 실제 임차료로 지급됩니다 (기준임대료는 상한선).</p>
+    <p>② 부양의무자 기준은 없으나, 타 유사 지원사업(노인장기요양, 장애인 활동지원 등)과 중복 수급 제한이 있습니다.</p>
+    <p>③ 자가급여(수선유지급여)는 현금이 아닌 공사 또는 수선 비용 지원 형태로 이루어집니다.</p>
+    <p>④ 소득·재산 변동 시 즉시 주민센터에 신고해야 하며, 미신고 시 급여가 환수될 수 있습니다.</p>
+  </div>
+
+  <!-- 담당 기관 박스 -->
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <p>🏛️ <strong>신청 기관:</strong> 주소지 읍·면·동 행정복지센터 (주민센터)</p>
+    <p>📞 <strong>주거급여 콜센터:</strong> <a href="tel:16000777">1600-0777</a> (평일 9:00~18:00)</p>
+    <p>💻 <strong>온라인 신청:</strong> 복지로 <a href="https://www.bokjiro.go.kr" target="_blank">www.bokjiro.go.kr</a> / 정부24 <a href="https://www.gov.kr" target="_blank">www.gov.kr</a></p>
+    <p>🏠 <strong>주거급여 플러스 자가진단:</strong> <a href="https://www.myhome.go.kr" target="_blank">www.myhome.go.kr</a></p>
+    <p>📋 <strong>LH 주택 조사 문의:</strong> 마이홈 LH 주거급여 콜센터 <a href="tel:16000777">1600-0777</a></p>
+  </div>
+
+  <!-- 전문가 찬반 론평 -->
+  <div class="opinion-section">
+    <h2>💬 전문가 찬반 론평</h2>
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"부양의무자 기준을 적용하지 않는 주거급여는 취약계층 주거 안정에 실효성 높은 제도이며, 기준임대료 인상은 실제 전월세 시장을 반영한 합리적인 조치입니다."</p>
+          <p class="author">— 주거복지 정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"자가급여를 통한 노후 주택 수선 지원은 노인·장애인 등 이동이 어려운 취약계층이 살던 집에서 안정적으로 거주할 수 있도록 해준다는 점에서 매우 긍정적입니다."</p>
+          <p class="author">— 노인주거복지 현장 활동가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"기준임대료 인상 폭이 실제 서울 월세 상승률에 비해 여전히 낮은 수준이며, 상한선이 시장 임대료를 따라가지 못하면 지원 실효성이 떨어질 수밖에 없습니다."</p>
+          <p class="author">— 재정경제 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"소득인정액 산정 방식이 복잡해 실제 수급 자격이 있어도 스스로 해당 여부를 판단하기 어렵습니다. 사각지대 해소를 위해 현장 안내와 직권신청 제도를 더 강화해야 합니다."</p>
+          <p class="author">— 사회복지학과 교수</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span>#주거급여</span>
+    <span>#2026주거급여</span>
+    <span>#기준임대료인상</span>
+    <span>#전월세지원</span>
+    <span>#집수리지원</span>
+    <span>#자가급여</span>
+    <span>#기초생활보장</span>
+    <span>#저소득층지원</span>
+    <span>#복지혜택</span>
+    <span>#주거안정</span>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    <p>이 기사는 공개된 정보를 바탕으로 작성되었습니다. 지원 금액 및 기준임대료는 거주 지역·가구 구성·실제 임차료에 따라 달라질 수 있습니다. 정확한 지원 여부는 주소지 행정복지센터 또는 주거급여 콜센터(1600-0777)에 확인하세요.</p>
+  </div>
+
+  <!-- 작성일 -->
+  <div class="meta">작성일: 2026년 5월 30일 | 오늘의 복지뉴스</div>
+
+</div>
+</body>
+</html>
