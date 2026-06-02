@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>"가족 병간호하느라 청춘 다 갔다" — 이제 국가가 나섭니다! 가족돌봄청년(영케어러) 지원법 시행·청년미래센터 8개 시도 확대, 월 40만원 자기돌봄비 지금 신청하세요 | 오늘의 복지 뉴스</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #f4f6f9;
+      color: #222;
+      line-height: 1.7;
+    }
+    .container { max-width: 780px; margin: 0 auto; background: #fff; }
+
+    /* 헤더 */
+    .top-header {
+      background: linear-gradient(135deg, #2e7d32, #1b5e20);
+      color: #fff;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+    }
+    .top-header .date-tag {
+      background: rgba(255,255,255,0.2);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-weight: 700;
+    }
+    .top-header .issue-tag { font-weight: 600; opacity: 0.9; }
+
+    /* 배지 */
+    .section-badge {
+      display: inline-block;
+      background: #2e7d32;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin: 24px 24px 8px;
+      letter-spacing: 0.5px;
+    }
+
+    /* 메인 제목 */
+    .main-content { padding: 0 24px 24px; }
+    h1 {
+      font-size: 27px;
+      font-weight: 900;
+      line-height: 1.35;
+      color: #1b3a1c;
+      margin-bottom: 18px;
+      word-break: keep-all;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 800;
+      color: #2e7d32;
+      margin: 30px 0 12px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #c8e6c9;
+    }
+
+    /* 훅 */
+    .hook {
+      border-left: 5px solid #2e7d32;
+      background: #f1f8e9;
+      padding: 16px 18px;
+      margin-bottom: 22px;
+      border-radius: 0 8px 8px 0;
+      font-size: 15px;
+    }
+    .hook .highlight {
+      background: #fff176;
+      padding: 2px 4px;
+      border-radius: 3px;
+      font-weight: 700;
+    }
+
+    /* 핵심 요약 */
+    .summary-box {
+      background: #e8f5e9;
+      border: 2px solid #2e7d32;
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-bottom: 24px;
+    }
+    .summary-box h3 {
+      font-size: 16px;
+      color: #1b5e20;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+    .summary-box ul { list-style: none; padding: 0; }
+    .summary-box ul li {
+      padding: 5px 0 5px 22px;
+      position: relative;
+      font-size: 14px;
+      font-weight: 600;
+      color: #1b5e20;
+    }
+    .summary-box ul li::before {
+      content: "📌";
+      position: absolute;
+      left: 0;
+      top: 5px;
+    }
+
+    /* 표 */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    th {
+      background: #2e7d32;
+      color: #fff;
+      padding: 10px 12px;
+      text-align: left;
+      font-weight: 700;
+    }
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    tr:nth-child(even) td { background: #f1f8e9; }
+
+    /* SVG 인포그래픽 */
+    .infographic { margin: 24px 0; text-align: center; }
+    .infographic svg { max-width: 100%; }
+
+    /* 신청 방법 */
+    .step-list { list-style: none; padding: 0; counter-reset: step; }
+    .step-list li {
+      counter-increment: step;
+      padding: 12px 12px 12px 52px;
+      position: relative;
+      margin-bottom: 10px;
+      background: #f1f8e9;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    .step-list li::before {
+      content: counter(step);
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #2e7d32;
+      color: #fff;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 14px;
+    }
+
+    /* 시행 일정 박스 */
+    .deadline-box {
+      border: 2px dashed #f57c00;
+      border-radius: 10px;
+      background: #fff8e1;
+      padding: 16px 20px;
+      margin: 20px 0;
+    }
+    .deadline-box h3 { color: #e65100; font-size: 16px; font-weight: 900; margin-bottom: 8px; }
+    .deadline-box p { font-size: 14px; color: #5d4037; margin: 4px 0; }
+
+    /* 체크리스트 */
+    .checklist { list-style: none; padding: 0; }
+    .checklist li {
+      padding: 8px 0 8px 30px;
+      position: relative;
+      font-size: 14px;
+      border-bottom: 1px solid #eee;
+    }
+    .checklist li::before {
+      content: "✓";
+      position: absolute;
+      left: 5px;
+      color: #2e7d32;
+      font-weight: 900;
+      font-size: 16px;
+    }
+
+    /* 주의사항 */
+    .caution-list { list-style: none; padding: 0; }
+    .caution-list li {
+      padding: 8px 0;
+      font-size: 14px;
+      border-bottom: 1px solid #eee;
+    }
+
+    /* 문의처 */
+    .contact-box {
+      background: #c8e6c9;
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin: 20px 0;
+    }
+    .contact-box h3 { color: #1b3a1c; font-size: 16px; font-weight: 900; margin-bottom: 10px; }
+    .contact-box p { font-size: 14px; margin: 4px 0; }
+
+    /* 찬반 론평 */
+    .opinion-section { margin: 30px 0; }
+    .opinion-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+    .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+    .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+    .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+    .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+    .opinion-card {
+      background: #fff;
+      padding: 14px 16px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .opinion-card:last-child { margin-bottom: 0; }
+    .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+    .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+    /* 해시태그 */
+    .hashtags { margin: 24px 0; }
+    .hashtags span {
+      display: inline-block;
+      background: #c8e6c9;
+      color: #1b5e20;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      margin: 4px 3px;
+    }
+
+    /* 면책 */
+    .disclaimer {
+      background: #f5f5f5;
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-size: 12px;
+      color: #888;
+      margin-top: 20px;
+    }
+
+    /* 작성일 */
+    .meta { text-align: right; font-size: 12px; color: #aaa; margin-top: 10px; padding-bottom: 30px; }
+
+    /* 알림 박스 */
+    .new-badge {
+      display: inline-block;
+      background: #c62828;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 900;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 21px; }
+      .top-header { flex-direction: column; gap: 6px; text-align: center; }
+      .opinion-grid { grid-template-columns: 1fr; }
+      table { font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 상단 헤더 -->
+  <div class="top-header">
+    <span class="date-tag">📅 2026년 6월 2일</span>
+    <span class="issue-tag">오늘의 복지 뉴스 · 제2보</span>
+  </div>
+
+  <!-- 배지 -->
+  <span class="section-badge">👶 위기·청년·가족돌봄</span>
+
+  <div class="main-content">
+
+    <!-- 메인 제목 -->
+    <h1>"가족 병간호하느라 청춘 다 갔다" — 이제 국가가 나섭니다! 가족돌봄청년(영케어러) 지원법 시행·청년미래센터 8개 시도 확대, 월 40만원 자기돌봄비 지금 신청하세요</h1>
+
+    <!-- 훅 -->
+    <div class="hook">
+      아픈 부모, 장애가 있는 형제를 혼자 돌보느라 학교도 직장도 포기한 청년들이 있습니다. 이들을 위한 <span class="highlight">「위기아동청년 지원에 관한 법률」이 드디어 시행</span>됐습니다. 월 40만원 자기돌봄비, 전담 심리상담, 청년미래센터 확대 — 당신의 이야기라면 지금 당장 확인하세요.
+    </div>
+
+    <!-- 핵심 요약 -->
+    <div class="summary-box">
+      <h3>📌 이것만 알면 됩니다</h3>
+      <ul>
+        <li>2026년 3월 26일 「위기아동청년법」 시행 — 가족돌봄청년 지원에 <strong>법적 근거 마련</strong></li>
+        <li>청년미래센터 <strong>8개 시도 확대</strong>, 자기돌봄비 월 최대 <strong>40만원 × 8개월</strong></li>
+        <li>일상돌봄서비스·심리상담·멘토링 패키지 — <strong>복지로 또는 행정복지센터</strong>에서 신청 가능</li>
+      </ul>
+    </div>
+
+    <!-- 배경 -->
+    <h2>📰 왜 이 뉴스가 중요한가</h2>
+    <p style="font-size:15px;">대한민국에는 아픈 가족을 돌보느라 학업과 직장을 포기한 청년들이 있습니다. 이들은 '영케어러(Young Carer)'라 불리지만, 그동안 법적 지원 근거가 없었습니다. 2025년 제정, <strong>2026년 3월 26일 시행</strong>된 「위기아동청년법」은 처음으로 이들에게 국가 책임을 명시했습니다. 이에 맞춰 <strong>청년미래센터가 전국 8개 시도로 확대</strong>되어 현장 지원이 본격화됩니다.</p>
+
+    <!-- 상세 정보 표 -->
+    <h2>📊 가족돌봄청년 지원 내용 한눈에 보기</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>지원 항목</th>
+          <th>대상</th>
+          <th>지원 내용</th>
+          <th>비고</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>자기돌봄비 (기본형)</td>
+          <td>13~34세 가족돌봄청년</td>
+          <td>월 <strong>30만원 × 8개월</strong></td>
+          <td>돌봄 부담 일반</td>
+        </tr>
+        <tr>
+          <td>자기돌봄비 (고부담형) <span class="new-badge">▲</span></td>
+          <td>집중 돌봄 고부담 청년</td>
+          <td>월 <strong>40만원 × 8개월</strong></td>
+          <td>중증·복합 돌봄 인정 시</td>
+        </tr>
+        <tr>
+          <td>일상돌봄서비스</td>
+          <td>돌봄 대상 가족</td>
+          <td>요양보호사·가사 도우미 방문</td>
+          <td>바우처 형태 제공</td>
+        </tr>
+        <tr>
+          <td>심리 상담</td>
+          <td>가족돌봄청년 본인</td>
+          <td>전담 심리상담사 연결</td>
+          <td>청년미래센터 통해</td>
+        </tr>
+        <tr>
+          <td>진로·멘토링</td>
+          <td>가족돌봄청년 본인</td>
+          <td>전문가 멘토·인생 계획 지원</td>
+          <td>청년미래센터 이용</td>
+        </tr>
+        <tr>
+          <td>자조모임·공동생활 합숙</td>
+          <td>고립 위험 청년</td>
+          <td>동료 자조모임, 공동생활 프로그램</td>
+          <td>지역별 청년미래센터</td>
+        </tr>
+        <tr>
+          <td>긴급돌봄 (단기)</td>
+          <td>갑작스러운 위기 상황</td>
+          <td>최대 72시간 긴급 돌봄</td>
+          <td>전국 142개 이상 시군구</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 대상 연령 명시 -->
+    <div style="background:#fff9c4;border-radius:8px;padding:12px 16px;margin:10px 0;font-size:14px;">
+      📢 <strong>가족돌봄청년 정의</strong>: 장애·질병·정신질환 등으로 도움이 필요한 가족을 직접 돌보거나 생계를 책임지고 있는 <strong>만 13세~34세</strong> 청년
+    </div>
+
+    <!-- SVG 인포그래픽 -->
+    <div class="infographic">
+      <svg viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+        <rect width="720" height="340" rx="16" fill="#f1f8e9"/>
+        <text x="360" y="36" text-anchor="middle" font-size="16" font-weight="900" fill="#1b3a1c">👨‍👩‍👧 가족돌봄청년 지원 체계도 (2026년)</text>
+
+        <!-- 중앙 청년 -->
+        <circle cx="360" cy="155" r="50" fill="#2e7d32" opacity="0.15"/>
+        <circle cx="360" cy="155" r="40" fill="#2e7d32"/>
+        <text x="360" y="148" text-anchor="middle" font-size="20" fill="#fff">🧑</text>
+        <text x="360" y="168" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">영케어러</text>
+        <text x="360" y="182" text-anchor="middle" font-size="10" fill="#c8e6c9">13~34세</text>
+
+        <!-- 화살표 및 혜택 카드들 -->
+        <!-- 자기돌봄비 -->
+        <line x1="315" y1="140" x2="215" y2="100" stroke="#2e7d32" stroke-width="2" stroke-dasharray="4"/>
+        <rect x="60" y="60" width="148" height="72" rx="10" fill="#fff" stroke="#2e7d32" stroke-width="2"/>
+        <text x="134" y="82" text-anchor="middle" font-size="18">💰</text>
+        <text x="134" y="100" text-anchor="middle" font-size="12" font-weight="700" fill="#1b5e20">자기돌봄비</text>
+        <text x="134" y="116" text-anchor="middle" font-size="14" font-weight="900" fill="#2e7d32">월 30~40만원</text>
+        <text x="134" y="128" text-anchor="middle" font-size="10" fill="#666">8개월간 지급</text>
+
+        <!-- 일상돌봄 -->
+        <line x1="320" y1="165" x2="215" y2="180" stroke="#2e7d32" stroke-width="2" stroke-dasharray="4"/>
+        <rect x="60" y="155" width="148" height="72" rx="10" fill="#fff" stroke="#2e7d32" stroke-width="2"/>
+        <text x="134" y="178" text-anchor="middle" font-size="18">🏠</text>
+        <text x="134" y="196" text-anchor="middle" font-size="12" font-weight="700" fill="#1b5e20">일상돌봄서비스</text>
+        <text x="134" y="212" text-anchor="middle" font-size="11" fill="#555">방문 돌봄·가사 지원</text>
+        <text x="134" y="224" text-anchor="middle" font-size="10" fill="#666">바우처 제공</text>
+
+        <!-- 심리상담 -->
+        <line x1="405" y1="140" x2="505" y2="100" stroke="#2e7d32" stroke-width="2" stroke-dasharray="4"/>
+        <rect x="510" y="60" width="148" height="72" rx="10" fill="#fff" stroke="#2e7d32" stroke-width="2"/>
+        <text x="584" y="82" text-anchor="middle" font-size="18">💬</text>
+        <text x="584" y="100" text-anchor="middle" font-size="12" font-weight="700" fill="#1b5e20">심리·진로 상담</text>
+        <text x="584" y="116" text-anchor="middle" font-size="11" fill="#555">전담 상담사 연결</text>
+        <text x="584" y="128" text-anchor="middle" font-size="10" fill="#666">청년미래센터</text>
+
+        <!-- 긴급돌봄 -->
+        <line x1="405" y1="165" x2="505" y2="180" stroke="#2e7d32" stroke-width="2" stroke-dasharray="4"/>
+        <rect x="510" y="155" width="148" height="72" rx="10" fill="#fff" stroke="#2e7d32" stroke-width="2"/>
+        <text x="584" y="178" text-anchor="middle" font-size="18">🚨</text>
+        <text x="584" y="196" text-anchor="middle" font-size="12" font-weight="700" fill="#1b5e20">긴급돌봄</text>
+        <text x="584" y="212" text-anchor="middle" font-size="11" fill="#555">최대 72시간</text>
+        <text x="584" y="224" text-anchor="middle" font-size="10" fill="#666">전국 142개 시군구</text>
+
+        <!-- 하단 법률 안내 -->
+        <rect x="60" y="248" width="600" height="68" rx="10" fill="#fff"/>
+        <text x="360" y="270" text-anchor="middle" font-size="13" font-weight="900" fill="#c62828">⚖️ 법적 근거: 「위기아동·청년 지원에 관한 법률」 2026년 3월 26일 시행</text>
+        <text x="360" y="292" text-anchor="middle" font-size="12" fill="#444">청년미래센터 8개 시도 확대 운영 중 → 전국 단위 확대 예정</text>
+        <text x="360" y="308" text-anchor="middle" font-size="11" fill="#888">신청: 복지로(bokjiro.go.kr) 또는 주소지 행정복지센터 방문</text>
+      </svg>
+    </div>
+
+    <!-- 신청 방법 -->
+    <h2>📝 신청 방법 단계별 안내</h2>
+    <ol class="step-list">
+      <li><strong>온라인 자가 진단</strong> — 복지로(www.bokjiro.go.kr) 또는 보건복지부 안내 홈페이지에서 가족돌봄청년 해당 여부 자가 점검</li>
+      <li><strong>행정복지센터 방문 또는 온라인 신청</strong> — 주소지 읍·면·동 행정복지센터에 직접 방문하거나 복지로에서 온라인 신청</li>
+      <li><strong>청년미래센터 상담 연결</strong> — 지역 내 청년미래센터 전담 인력과 초기 상담 진행</li>
+      <li><strong>지원 계획 수립</strong> — 담당 전문인력이 프로그램 참여 의지·고립도 등 종합 평가 후 맞춤 지원 계획 작성</li>
+      <li><strong>자기돌봄비·서비스 수령 시작</strong> — 승인 후 월별 자기돌봄비 지급 및 서비스 연결</li>
+    </ol>
+
+    <!-- 시행 일정 -->
+    <div class="deadline-box">
+      <h3>⏰ 주요 시행 일정</h3>
+      <p>📌 <strong>법률 시행</strong>: 2026년 3월 26일 — 지금 당장 신청 가능!</p>
+      <p>📌 <strong>청년미래센터</strong>: 현재 8개 시도 운영 중 → 전국 단위 순차 확대 예정</p>
+      <p>📌 <strong>긴급돌봄 서비스</strong>: 전국 142개 이상 시·군·구에서 연중 수시 신청 가능</p>
+      <p>📌 <strong>일상돌봄서비스</strong>: 220개 이상 시·군·구로 2026년 내 확대 예정</p>
+    </div>
+
+    <!-- 자가 진단 체크리스트 -->
+    <h2>🔎 나는 해당되나요? 자가 진단 체크리스트</h2>
+    <ul class="checklist">
+      <li>현재 만 13세~34세이며 장애·질환이 있는 가족을 직접 돌보고 있나요?</li>
+      <li>돌봄으로 인해 학업·취업·사회 참여를 포기하거나 크게 축소한 경험이 있나요?</li>
+      <li>돌봄 부담으로 심리적 소진, 우울, 불안을 자주 느끼나요?</li>
+      <li>경제적 어려움으로 생계와 돌봄을 동시에 감당하고 있나요?</li>
+      <li>주변에 도움을 요청하기 어려워 고립감을 느끼고 있나요?</li>
+    </ul>
+
+    <!-- 주의사항 -->
+    <h2>⚠️ 주의사항</h2>
+    <ol class="caution-list">
+      <li>① 자기돌봄비 고부담형(월 40만원)은 담당자의 <strong>돌봄 강도 평가</strong> 후 인정됩니다. 신청 시 돌봄 상황을 구체적으로 설명하세요.</li>
+      <li>② 청년미래센터 서비스는 <strong>거주 시도에 따라 이용 가능 여부</strong>가 다를 수 있습니다. 현재 8개 시도 운영 중.</li>
+      <li>③ 지원 기간은 8개월이 기본이며, 이후 재신청 또는 연장 가능 여부를 담당 기관에 확인하세요.</li>
+      <li>④ 기존에 다른 청년 지원 사업을 받고 있어도 <strong>중복 지원이 가능한 경우</strong>가 있으므로 반드시 상담 후 판단하세요.</li>
+    </ol>
+
+    <!-- 담당 기관 -->
+    <div class="contact-box">
+      <h3>📞 담당 기관 및 문의처</h3>
+      <p>🏛️ <strong>보건복지부 아동복지정책과</strong>: 1129 (복지 상담 전화)</p>
+      <p>💻 복지로: www.bokjiro.go.kr (온라인 신청 가능)</p>
+      <p>📍 주소지 <strong>읍·면·동 행정복지센터</strong> 방문 신청</p>
+      <p>🏢 <strong>청년미래센터</strong>: 운영 시도 내 청년미래센터 직접 방문 상담</p>
+      <p>📲 서울시 가족돌봄청년 지원: 서울복지포털(wis.seoul.go.kr) 별도 안내</p>
+    </div>
+
+    <!-- 찬반 론평 -->
+    <h2>💬 전문가 찬반 론평</h2>
+    <div class="opinion-section">
+      <div class="opinion-grid">
+        <div class="opinion-pro">
+          <h3>🟢 찬성</h3>
+          <div class="opinion-card">
+            <p class="quote">"지금까지 법적 사각지대에 방치됐던 가족돌봄청년을 위한 전담법이 만들어진 것 자체가 역사적 의미가 있습니다. 돌봄과 생계를 동시에 떠맡은 청년들이 이제야 국가 안전망 안으로 들어오게 됐습니다."</p>
+            <p class="author">— 청년복지 정책 연구자</p>
+          </div>
+          <div class="opinion-card">
+            <p class="quote">"심리상담·멘토링·자조모임까지 패키지 형태로 제공한다는 점은 단순 현금 지급을 넘어선 사회재활 관점에서 평가할 만합니다. 개인 단위 지원이 사회복귀로 이어지는 선순환 구조를 기대합니다."</p>
+            <p class="author">— 사회복지학과 교수</p>
+          </div>
+        </div>
+        <div class="opinion-con">
+          <h3>🔴 반대 / 우려</h3>
+          <div class="opinion-card">
+            <p class="quote">"8개 시도 한정이라는 지역 편중 문제가 먼저 해결돼야 합니다. 지방 소도시에 거주하는 가족돌봄청년은 법이 생겨도 서비스를 이용할 센터 자체가 없는 현실입니다."</p>
+            <p class="author">— 지역복지 현장 활동가</p>
+          </div>
+          <div class="opinion-card">
+            <p class="quote">"월 30~40만원이라는 자기돌봄비 수준은 돌봄으로 인한 기회비용에 비해 실질 보상이 너무 낮습니다. 돌봄 노동의 경제적 가치를 제대로 반영한 급여 체계를 별도로 마련해야 합니다."</p>
+            <p class="author">— 재정경제 연구자</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 해시태그 -->
+    <div class="hashtags">
+      <span>#영케어러</span>
+      <span>#가족돌봄청년</span>
+      <span>#위기아동청년법</span>
+      <span>#청년미래센터</span>
+      <span>#자기돌봄비40만원</span>
+      <span>#복지사각지대</span>
+      <span>#청년복지2026</span>
+      <span>#돌봄청년지원</span>
+      <span>#보건복지부</span>
+      <span>#2026복지혜택</span>
+    </div>
+
+    <!-- 면책 -->
+    <div class="disclaimer">
+      이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부와 신청 요건은 보건복지부, 복지로(www.bokjiro.go.kr), 또는 주소지 행정복지센터에 직접 확인하세요.
+    </div>
+
+    <p class="meta">작성일: 2026년 6월 2일 | 오늘의 복지 뉴스</p>
+
+  </div><!-- /main-content -->
+</div><!-- /container -->
+</body>
+</html>

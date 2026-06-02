@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>"6월인데 아직도 이 혜택 모르세요?" — 호국보훈의 달, 참전용사·보훈가족이 받을 수 있는 숨겨진 복지 혜택 완전 정복 | 오늘의 복지 뉴스</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #f4f6f9;
+      color: #222;
+      line-height: 1.7;
+    }
+    .container { max-width: 780px; margin: 0 auto; background: #fff; }
+
+    /* 헤더 */
+    .top-header {
+      background: linear-gradient(135deg, #1565c0, #0d47a1);
+      color: #fff;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+    }
+    .top-header .date-tag {
+      background: rgba(255,255,255,0.2);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-weight: 700;
+    }
+    .top-header .issue-tag { font-weight: 600; opacity: 0.9; }
+
+    /* 배지 */
+    .section-badge {
+      display: inline-block;
+      background: #1565c0;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin: 24px 24px 8px;
+      letter-spacing: 0.5px;
+    }
+
+    /* 메인 제목 */
+    .main-content { padding: 0 24px 24px; }
+    h1 {
+      font-size: 28px;
+      font-weight: 900;
+      line-height: 1.35;
+      color: #0d2b5e;
+      margin-bottom: 18px;
+      word-break: keep-all;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 800;
+      color: #1565c0;
+      margin: 30px 0 12px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #e3eaf8;
+    }
+
+    /* 훅 */
+    .hook {
+      border-left: 5px solid #1565c0;
+      background: #f0f4ff;
+      padding: 16px 18px;
+      margin-bottom: 22px;
+      border-radius: 0 8px 8px 0;
+      font-size: 15px;
+    }
+    .hook .highlight {
+      background: #fff176;
+      padding: 2px 4px;
+      border-radius: 3px;
+      font-weight: 700;
+    }
+
+    /* 핵심 요약 */
+    .summary-box {
+      background: #e8f5e9;
+      border: 2px solid #2e7d32;
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-bottom: 24px;
+    }
+    .summary-box h3 {
+      font-size: 16px;
+      color: #1b5e20;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+    .summary-box ul { list-style: none; padding: 0; }
+    .summary-box ul li {
+      padding: 5px 0 5px 22px;
+      position: relative;
+      font-size: 14px;
+      font-weight: 600;
+      color: #1b5e20;
+    }
+    .summary-box ul li::before {
+      content: "📌";
+      position: absolute;
+      left: 0;
+      top: 5px;
+    }
+
+    /* 표 */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    th {
+      background: #1565c0;
+      color: #fff;
+      padding: 10px 12px;
+      text-align: left;
+      font-weight: 700;
+    }
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    tr:nth-child(even) td { background: #f0f4ff; }
+
+    /* SVG 인포그래픽 */
+    .infographic { margin: 24px 0; text-align: center; }
+    .infographic svg { max-width: 100%; }
+
+    /* 신청 방법 */
+    .step-list { list-style: none; padding: 0; counter-reset: step; }
+    .step-list li {
+      counter-increment: step;
+      padding: 12px 12px 12px 52px;
+      position: relative;
+      margin-bottom: 10px;
+      background: #f8f9ff;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    .step-list li::before {
+      content: counter(step);
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #1565c0;
+      color: #fff;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 14px;
+    }
+
+    /* 시행 일정 박스 */
+    .deadline-box {
+      border: 2px dashed #f57c00;
+      border-radius: 10px;
+      background: #fff8e1;
+      padding: 16px 20px;
+      margin: 20px 0;
+    }
+    .deadline-box h3 { color: #e65100; font-size: 16px; font-weight: 900; margin-bottom: 8px; }
+    .deadline-box p { font-size: 14px; color: #5d4037; }
+
+    /* 체크리스트 */
+    .checklist { list-style: none; padding: 0; }
+    .checklist li {
+      padding: 8px 0 8px 30px;
+      position: relative;
+      font-size: 14px;
+      border-bottom: 1px solid #eee;
+    }
+    .checklist li::before {
+      content: "✓";
+      position: absolute;
+      left: 5px;
+      color: #1565c0;
+      font-weight: 900;
+      font-size: 16px;
+    }
+
+    /* 주의사항 */
+    .caution-list { list-style: none; padding: 0; }
+    .caution-list li {
+      padding: 8px 0;
+      font-size: 14px;
+      border-bottom: 1px solid #eee;
+    }
+
+    /* 문의처 */
+    .contact-box {
+      background: #e3eaf8;
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin: 20px 0;
+    }
+    .contact-box h3 { color: #0d2b5e; font-size: 16px; font-weight: 900; margin-bottom: 10px; }
+    .contact-box p { font-size: 14px; margin: 4px 0; }
+
+    /* 찬반 론평 */
+    .opinion-section { margin: 30px 0; }
+    .opinion-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+    .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+    .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+    .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+    .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+    .opinion-card {
+      background: #fff;
+      padding: 14px 16px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .opinion-card:last-child { margin-bottom: 0; }
+    .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+    .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+    /* 해시태그 */
+    .hashtags { margin: 24px 0; }
+    .hashtags span {
+      display: inline-block;
+      background: #e3eaf8;
+      color: #1565c0;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      margin: 4px 3px;
+    }
+
+    /* 면책 */
+    .disclaimer {
+      background: #f5f5f5;
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-size: 12px;
+      color: #888;
+      margin-top: 20px;
+    }
+
+    /* 작성일 */
+    .meta { text-align: right; font-size: 12px; color: #aaa; margin-top: 10px; padding-bottom: 30px; }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 22px; }
+      .top-header { flex-direction: column; gap: 6px; text-align: center; }
+      .opinion-grid { grid-template-columns: 1fr; }
+      table { font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 상단 헤더 -->
+  <div class="top-header">
+    <span class="date-tag">📅 2026년 6월 2일</span>
+    <span class="issue-tag">오늘의 복지 뉴스 · 제1보</span>
+  </div>
+
+  <!-- 배지 + 소제목 -->
+  <span class="section-badge">🎖️ 보훈복지 · 호국보훈의 달</span>
+
+  <div class="main-content">
+
+    <!-- 메인 제목 -->
+    <h1>"6월인데 아직도 이 혜택 모르세요?" — 호국보훈의 달, 참전용사·보훈가족이 받을 수 있는 숨겨진 복지 혜택 완전 정복</h1>
+
+    <!-- 훅 -->
+    <div class="hook">
+      대한민국을 지킨 분들이 정작 <span class="highlight">본인이 받을 수 있는 혜택을 모르고 놓치는</span> 경우가 너무 많습니다. 의료비 90% 감면, 보청기 무료 지원, 배우자 생계수당까지 — 6월 호국보훈의 달, 지금 당장 체크하세요.
+    </div>
+
+    <!-- 핵심 요약 -->
+    <div class="summary-box">
+      <h3>📌 이것만 알면 됩니다</h3>
+      <ul>
+        <li>참전유공자 의료비 본인부담 90% 감면 — 전국 1,025개 위탁병원 이용 가능</li>
+        <li>2026년 3월부터 <strong>배우자에게도 월 15만원</strong> 생계지원금 신규 지급</li>
+        <li>보청기 지원 사업 '소리드림' 올해 3억 원 규모로 2배 확대</li>
+      </ul>
+    </div>
+
+    <!-- 배경 -->
+    <h2>📰 왜 이 뉴스가 중요한가</h2>
+    <p style="font-size:15px;">6월은 한국전쟁(6·25)이 발발한 달이자 호국보훈의 달입니다. 국가보훈부는 올해 '호호훈훈 호국보훈'을 슬로건으로 내걸고 참전유공자와 보훈가족에 대한 지원을 대폭 강화했습니다. 특히 <strong>2026년 3월부터 시행된 '배우자 생계지원금 신설'</strong>은 수십만 가구에 직결되는 변화임에도 아직 많은 분들이 모르고 있습니다.</p>
+
+    <!-- 상세 정보 표 -->
+    <h2>📊 주요 지원 항목 한눈에 보기</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>지원 항목</th>
+          <th>대상</th>
+          <th>혜택 내용</th>
+          <th>비고</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>생계지원금</td>
+          <td>80세 이상 + 기준 중위소득 50% 이하 참전유공자</td>
+          <td>월 <strong>15만원</strong></td>
+          <td>2026년 확대 지속</td>
+        </tr>
+        <tr>
+          <td>배우자 생계지원금 <span style="color:#c62828;font-weight:700;">NEW</span></td>
+          <td>유공자 사망 후 고령·저소득 배우자</td>
+          <td>월 <strong>15만원</strong></td>
+          <td>2026년 3월 17일 신청 시작</td>
+        </tr>
+        <tr>
+          <td>의료비 감면</td>
+          <td>등록 참전유공자 전체</td>
+          <td>본인부담 <strong>90% 감면</strong></td>
+          <td>보훈병원 6개 + 위탁병원 1,025개</td>
+        </tr>
+        <tr>
+          <td>무료 건강검진</td>
+          <td>유공자 본인·배우자·직계가족</td>
+          <td>한국건강관리협회 무료 검진</td>
+          <td>연 1회</td>
+        </tr>
+        <tr>
+          <td>보청기 지원(소리드림)</td>
+          <td>청각 어려움 있는 참전유공자</td>
+          <td>맞춤형 보청기 무료 지원</td>
+          <td>2026년 3억 원 규모 (2배 확대)</td>
+        </tr>
+        <tr>
+          <td>요양 서비스</td>
+          <td>장기요양등급 참전유공자</td>
+          <td>전국 8개 보훈요양원 이용</td>
+          <td>전문 요양 서비스 제공</td>
+        </tr>
+        <tr>
+          <td>재가보훈 방문 서비스</td>
+          <td>거동 불편 유공자·배우자</td>
+          <td>재가보훈실무관 방문 건강관리</td>
+          <td>전국 3,200여 명 대상</td>
+        </tr>
+        <tr>
+          <td>주거 지원(아너하우스)</td>
+          <td>무주택 참전유공자</td>
+          <td>주택 우선공급 + 노후 주택 개보수</td>
+          <td>국가보훈부 신청</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- SVG 인포그래픽 -->
+    <div class="infographic">
+      <svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+        <rect width="720" height="320" rx="16" fill="#f0f4ff"/>
+        <text x="360" y="36" text-anchor="middle" font-size="17" font-weight="900" fill="#0d2b5e">📊 2026 보훈 복지 주요 혜택 한눈에 보기</text>
+
+        <!-- 항목 1 -->
+        <rect x="24" y="56" width="156" height="100" rx="10" fill="#1565c0"/>
+        <text x="102" y="86" text-anchor="middle" font-size="28" fill="#fff">🏥</text>
+        <text x="102" y="112" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">의료비 감면</text>
+        <text x="102" y="132" text-anchor="middle" font-size="22" font-weight="900" fill="#fff176">90%</text>
+        <text x="102" y="148" text-anchor="middle" font-size="11" fill="#b3c9f7">위탁병원 1,025개</text>
+
+        <!-- 항목 2 -->
+        <rect x="196" y="56" width="156" height="100" rx="10" fill="#1976d2"/>
+        <text x="274" y="86" text-anchor="middle" font-size="28" fill="#fff">💰</text>
+        <text x="274" y="112" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">생계지원금</text>
+        <text x="274" y="132" text-anchor="middle" font-size="20" font-weight="900" fill="#fff176">월 15만원</text>
+        <text x="274" y="148" text-anchor="middle" font-size="11" fill="#b3c9f7">배우자도 NEW!</text>
+
+        <!-- 항목 3 -->
+        <rect x="368" y="56" width="156" height="100" rx="10" fill="#0288d1"/>
+        <text x="446" y="86" text-anchor="middle" font-size="28" fill="#fff">👂</text>
+        <text x="446" y="112" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">보청기 지원</text>
+        <text x="446" y="132" text-anchor="middle" font-size="20" font-weight="900" fill="#fff176">3억 원</text>
+        <text x="446" y="148" text-anchor="middle" font-size="11" fill="#b3c9f7">작년의 2배 확대</text>
+
+        <!-- 항목 4 -->
+        <rect x="540" y="56" width="156" height="100" rx="10" fill="#0277bd"/>
+        <text x="618" y="86" text-anchor="middle" font-size="28" fill="#fff">🏠</text>
+        <text x="618" y="112" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">주거 지원</text>
+        <text x="618" y="132" text-anchor="middle" font-size="18" font-weight="900" fill="#fff176">아너하우스</text>
+        <text x="618" y="148" text-anchor="middle" font-size="11" fill="#b3c9f7">노후 주택 개보수</text>
+
+        <!-- 하단 설명 -->
+        <rect x="24" y="172" width="672" height="50" rx="10" fill="#fff"/>
+        <text x="360" y="192" text-anchor="middle" font-size="13" font-weight="700" fill="#1565c0">📞 문의: 국가보훈부 1577-0606 | 신청: 주소지 관할 보훈관서</text>
+        <text x="360" y="212" text-anchor="middle" font-size="12" fill="#666">6월 호국보훈의 달 — 본인이 받을 수 있는 혜택, 지금 확인하세요!</text>
+
+        <!-- 배지 -->
+        <rect x="24" y="234" width="672" height="62" rx="10" fill="#e3eaf8"/>
+        <text x="360" y="258" text-anchor="middle" font-size="13" font-weight="700" fill="#0d2b5e">⭐ 2026년 신규 추가 혜택</text>
+        <text x="180" y="282" text-anchor="middle" font-size="12" fill="#1565c0">✅ 배우자 생계지원금 월 15만원 (3월 신설)</text>
+        <text x="560" y="282" text-anchor="middle" font-size="12" fill="#1565c0">✅ 소리드림 보청기 사업 3억 원으로 2배 확대</text>
+      </svg>
+    </div>
+
+    <!-- 신청 방법 -->
+    <h2>📝 신청 방법 단계별 안내</h2>
+    <ol class="step-list">
+      <li><strong>보훈 등록 여부 확인</strong> — 국가보훈부 홈페이지(mpva.go.kr) 또는 1577-0606으로 본인 등록 여부 확인</li>
+      <li><strong>주소지 관할 보훈지청 방문</strong> — 신분증과 참전유공자증 지참</li>
+      <li><strong>생계지원금 신청서 제출</strong> — 배우자의 경우 사망 증명 서류 및 소득 증빙 서류 함께 제출</li>
+      <li><strong>의료·보청기 지원</strong> — 보훈병원 또는 위탁병원 방문 시 참전유공자증 제시만으로 즉시 90% 감면 적용</li>
+      <li><strong>온라인 신청 가능</strong> — 일부 서비스는 복지로(www.bokjiro.go.kr)에서 온라인 신청 가능</li>
+    </ol>
+
+    <!-- 시행 일정 -->
+    <div class="deadline-box">
+      <h3>⏰ 주요 시행 일정 및 신청 기한</h3>
+      <p>📌 <strong>배우자 생계지원금</strong>: 2026년 3월 17일부터 신청 가능 — 아직 신청 안 하신 분 지금 바로!</p>
+      <p>📌 <strong>소리드림 보청기 지원</strong>: 2026년 상반기 진행 중 — 100명 대상 선착순 가능성, 서둘러 신청</p>
+      <p>📌 <strong>무료 건강검진</strong>: 연간 1회, 연내 반드시 이용</p>
+    </div>
+
+    <!-- 자가 진단 체크리스트 -->
+    <h2>🔎 나는 해당되나요? 자가 진단 체크리스트</h2>
+    <ul class="checklist">
+      <li>가족 중 6·25 또는 월남전 참전 경력이 있는 분이 계신가요?</li>
+      <li>참전유공자 등록증이 이미 발급되어 있나요?</li>
+      <li>참전유공자가 돌아가신 뒤 배우자가 생활에 어려움을 겪고 있나요?</li>
+      <li>보청기가 필요하거나 오래된 보청기를 교체해야 하는 상황인가요?</li>
+      <li>거동이 불편해 병원 방문이 어렵거나 노후 주택 수리가 필요한가요?</li>
+    </ul>
+
+    <!-- 주의사항 -->
+    <h2>⚠️ 주의사항</h2>
+    <ol class="caution-list">
+      <li>① 생계지원금은 <strong>소득 조건(기준 중위소득 50% 이하)</strong>을 충족해야 합니다. 사전에 확인 필수.</li>
+      <li>② 보청기 지원 등 일부 사업은 <strong>예산 소진 시 조기 마감</strong>될 수 있으니 빠른 신청을 권장합니다.</li>
+      <li>③ 배우자 생계지원금은 <strong>참전유공자 사망 후</strong> 지급되며, 재혼 시 지급 대상에서 제외될 수 있습니다.</li>
+      <li>④ 보훈 등록이 되어 있지 않으면 혜택을 받을 수 없습니다. 미등록 상태라면 반드시 등록 먼저 진행하세요.</li>
+    </ol>
+
+    <!-- 담당 기관 -->
+    <div class="contact-box">
+      <h3>📞 담당 기관 및 문의처</h3>
+      <p>🏛️ <strong>국가보훈부</strong> 공식 홈페이지: www.mpva.go.kr</p>
+      <p>☎️ 보훈상담 전화: <strong>1577-0606</strong> (평일 09:00~18:00)</p>
+      <p>📍 전국 지방보훈관서: 주소지 관할 보훈청 직접 방문</p>
+      <p>💻 복지로: www.bokjiro.go.kr (일부 서비스 온라인 신청 가능)</p>
+      <p>🔎 보훈요양원 입소 문의: 각 보훈요양원 또는 지방보훈관서 연락</p>
+    </div>
+
+    <!-- 찬반 론평 -->
+    <h2>💬 전문가 찬반 론평</h2>
+    <div class="opinion-section">
+      <div class="opinion-grid">
+        <div class="opinion-pro">
+          <h3>🟢 찬성</h3>
+          <div class="opinion-card">
+            <p class="quote">"배우자 생계지원금 신설은 늦었지만 필요했던 조치입니다. 유공자 사망 후 경제적 어려움에 처하는 고령 배우자를 위한 최소한의 안전망으로, 보훈 복지의 사각지대를 메운다는 점에서 의미가 큽니다."</p>
+            <p class="author">— 보훈복지 정책 연구자</p>
+          </div>
+          <div class="opinion-card">
+            <p class="quote">"의료비 90% 감면 체계에 더해 위탁병원 네트워크를 1,000개 이상 유지하는 것은 접근성 면에서 모범적입니다. 지역 거주 참전유공자도 거동 불편 없이 혜택을 누릴 수 있어야 한다는 방향성이 옳습니다."</p>
+            <p class="author">— 공공의료 현장 연구자</p>
+          </div>
+        </div>
+        <div class="opinion-con">
+          <h3>🔴 반대 / 우려</h3>
+          <div class="opinion-card">
+            <p class="quote">"월 15만원이라는 생계지원 수준은 물가 상승을 반영하기엔 턱없이 부족합니다. 상징적 수준에 그치는 지원이 실질적인 복지 향상이라고 포장되는 것은 재고할 필요가 있습니다."</p>
+            <p class="author">— 재정복지 연구자</p>
+          </div>
+          <div class="opinion-card">
+            <p class="quote">"보훈 혜택의 체계가 부처별로 파편화되어 있어 정작 대상자가 자신의 수급 자격을 모르는 경우가 많습니다. 신청주의 방식이 아닌 직권 발굴·직권 지급으로 전환해야 진정한 보훈이라 할 수 있습니다."</p>
+            <p class="author">— 사회복지 현장 활동가</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 해시태그 -->
+    <div class="hashtags">
+      <span>#호국보훈의달</span>
+      <span>#참전유공자복지</span>
+      <span>#보훈배우자지원</span>
+      <span>#의료비감면90%</span>
+      <span>#소리드림보청기</span>
+      <span>#보훈요양원</span>
+      <span>#국가보훈부</span>
+      <span>#아너하우스</span>
+      <span>#6월복지뉴스</span>
+      <span>#2026복지혜택</span>
+    </div>
+
+    <!-- 면책 -->
+    <div class="disclaimer">
+      이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부와 신청 요건은 국가보훈부 또는 관할 보훈관서에 직접 확인하세요.
+    </div>
+
+    <p class="meta">작성일: 2026년 6월 2일 | 오늘의 복지 뉴스</p>
+
+  </div><!-- /main-content -->
+</div><!-- /container -->
+</body>
+</html>
