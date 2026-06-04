@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"귀가 안 들리는데 아직도 돈 내고 보청기 샀다고요?" — 청각장애인 최대 262만원 국가보조금, 5단계 신청법 완전 정복 | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans KR', sans-serif; background: #f5f5f5; color: #222; line-height: 1.7; }
+  .container { max-width: 800px; margin: 0 auto; background: #fff; }
+
+  /* 상단 헤더 */
+  .top-header { background: #6a1b9a; color: #fff; padding: 12px 20px; font-size: 13px; display: flex; justify-content: space-between; align-items: center; }
+  .top-header .series { font-weight: 700; letter-spacing: 1px; }
+
+  /* 섹션 배지 */
+  .section-badge { background: #6a1b9a; color: #fff; display: inline-block; padding: 4px 14px; border-radius: 20px; font-size: 12px; font-weight: 700; margin: 18px 20px 6px; }
+
+  /* 메인 제목 */
+  .main-title { font-size: 26px; font-weight: 900; line-height: 1.35; padding: 0 20px 16px; color: #1a1a1a; }
+  @media (max-width: 600px) { .main-title { font-size: 20px; } }
+
+  /* 훅 */
+  .hook { border-left: 5px solid #6a1b9a; background: #f3e5f5; padding: 16px 20px; margin: 0 20px 20px; border-radius: 0 8px 8px 0; font-size: 16px; }
+  .highlight { background: #ce93d8; padding: 2px 6px; border-radius: 4px; font-weight: 700; }
+
+  /* 핵심 요약 박스 */
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 20px 24px; margin: 0 20px 24px; }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 12px; }
+  .summary-box ul { list-style: none; padding: 0; }
+  .summary-box ul li { padding: 4px 0; font-size: 15px; font-weight: 600; }
+  .summary-box ul li::before { content: "📌 "; }
+
+  /* 섹션 제목 */
+  h2.section-title { font-size: 20px; font-weight: 900; color: #6a1b9a; border-bottom: 3px solid #6a1b9a; padding: 0 20px 8px; margin: 28px 0 14px; }
+
+  /* 본문 단락 */
+  .body-text { padding: 0 20px; font-size: 15px; margin-bottom: 14px; }
+
+  /* 표 */
+  .table-wrap { padding: 0 20px; margin-bottom: 24px; overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { background: #6a1b9a; color: #fff; padding: 10px 14px; text-align: left; }
+  td { padding: 10px 14px; border-bottom: 1px solid #e0e0e0; }
+  tr:nth-child(even) td { background: #f3e5f5; }
+
+  /* SVG 컨테이너 */
+  .svg-wrap { padding: 0 20px; margin-bottom: 24px; }
+  .svg-wrap svg { width: 100%; height: auto; }
+
+  /* 신청 단계 */
+  .steps { padding: 0 20px; margin-bottom: 24px; }
+  .step-item { display: flex; gap: 14px; margin-bottom: 16px; align-items: flex-start; }
+  .step-num { background: #6a1b9a; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-body strong { display: block; font-size: 15px; font-weight: 800; margin-bottom: 4px; }
+  .step-body span { font-size: 14px; color: #555; }
+
+  /* 기한 박스 */
+  .deadline-box { border: 2px dashed #f57c00; background: #fff8e1; border-radius: 12px; padding: 18px 24px; margin: 0 20px 24px; }
+  .deadline-box h3 { color: #e65100; font-size: 16px; font-weight: 900; margin-bottom: 10px; }
+  .deadline-box p { font-size: 14px; color: #555; }
+
+  /* 자가진단 체크리스트 */
+  .checklist { background: #f3e5f5; border-radius: 12px; padding: 20px 24px; margin: 0 20px 24px; }
+  .checklist h3 { color: #6a1b9a; font-size: 16px; font-weight: 900; margin-bottom: 14px; }
+  .checklist ul { list-style: none; padding: 0; }
+  .checklist ul li { padding: 6px 0; font-size: 14px; border-bottom: 1px dashed #ce93d8; }
+  .checklist ul li:last-child { border-bottom: none; }
+  .checklist ul li::before { content: "✓ "; color: #6a1b9a; font-weight: 900; }
+
+  /* 주의사항 */
+  .caution { background: #fff3e0; border-left: 4px solid #f57c00; padding: 16px 20px; margin: 0 20px 24px; border-radius: 0 8px 8px 0; font-size: 14px; }
+  .caution strong { display: block; margin-bottom: 8px; color: #e65100; font-size: 15px; }
+  .caution p { margin-bottom: 6px; }
+
+  /* 담당기관 박스 */
+  .contact-box { background: #ede7f6; border-radius: 12px; padding: 20px 24px; margin: 0 20px 24px; }
+  .contact-box h3 { color: #4a148c; font-size: 16px; font-weight: 900; margin-bottom: 12px; }
+  .contact-box p { font-size: 14px; margin-bottom: 6px; }
+  .contact-box a { color: #6a1b9a; font-weight: 700; }
+
+  /* 전문가 찬반 론평 */
+  .opinion-section { margin: 0 20px 24px; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  @media (max-width: 600px) { .opinion-grid { grid-template-columns: 1fr; } }
+
+  /* 해시태그 */
+  .hashtags { padding: 0 20px 20px; }
+  .hashtags span { display: inline-block; background: #ede7f6; color: #6a1b9a; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600; margin: 4px 4px 4px 0; }
+
+  /* 면책조항 */
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 20px; margin: 0 20px 16px; font-size: 12px; color: #888; }
+
+  /* 날짜 메타 */
+  .meta { text-align: right; font-size: 12px; color: #aaa; padding: 0 20px 24px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 상단 헤더 -->
+  <div class="top-header">
+    <span class="series">오늘의 복지 뉴스 · 제1보</span>
+    <span>2026년 6월 4일 (목)</span>
+  </div>
+
+  <!-- 섹션 배지 -->
+  <div>
+    <span class="section-badge">🦻 장애인·노인 건강지원</span>
+  </div>
+
+  <!-- 메인 제목 -->
+  <h1 class="main-title">"귀가 안 들리는데 아직도 돈 내고 보청기 샀다고요?" — 청각장애인 최대 262만원 국가보조금, 5단계 신청법 완전 정복</h1>
+
+  <!-- 훅 -->
+  <div class="hook">
+    전국 청각장애인 40만 명 중 상당수가 <span class="highlight">수백만 원짜리 보청기를 전액 자비로 구입</span>하고 있습니다. 국가가 최대 262만원을 주는 제도가 있는데도, 신청 절차를 몰라서 한 푼도 못 받는 경우가 태반입니다. 5단계만 따라 하면 됩니다.
+  </div>
+
+  <!-- 핵심 요약 박스 -->
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>청각장애 등록자라면 건강보험으로 편측 최대 131만원 지원</li>
+      <li>만 19세 미만 아동·청소년은 양측(2개) 최대 262만원 지원 가능</li>
+      <li>의료급여 수급자는 본인부담 0원, 건강보험 가입자는 90% 지원</li>
+    </ul>
+  </div>
+
+  <!-- 배경/문제 섹션 -->
+  <h2 class="section-title">🔍 왜 이 제도가 생겼나</h2>
+  <p class="body-text">
+    보청기는 최저 30만원에서 최고 500만원까지 가격 편차가 크고, 청각장애인의 절반 이상이 소득 취약계층입니다. 국민건강보험법은 청각장애 등록자에게 보청기 구입비를 급여로 지급하도록 규정하고 있지만, 복잡한 사전승인 절차와 낮은 인지도 탓에 매년 수만 명이 혜택을 받지 못하고 있습니다. 2026년 현재 보청기 급여기준액은 131만원이며, 만 19세 미만은 양쪽 귀 모두에 적용되어 최대 262만원까지 지원받을 수 있습니다.
+  </p>
+
+  <!-- 상세 정보 표 -->
+  <h2 class="section-title">📊 지원 금액 상세 내역</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>구분</th>
+          <th>급여기준액</th>
+          <th>본인부담</th>
+          <th>실지원금</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>건강보험 가입자 (성인)</td>
+          <td>131만원</td>
+          <td>10% (13.1만원)</td>
+          <td>최대 117.9만원</td>
+        </tr>
+        <tr>
+          <td>의료급여 1종 수급자</td>
+          <td>131만원</td>
+          <td>0원</td>
+          <td>최대 131만원</td>
+        </tr>
+        <tr>
+          <td>의료급여 2종 수급자</td>
+          <td>131만원</td>
+          <td>15% (19.65만원)</td>
+          <td>최대 111.35만원</td>
+        </tr>
+        <tr>
+          <td>만 19세 미만 아동 (양측)</td>
+          <td>262만원</td>
+          <td>10% (26.2만원)</td>
+          <td>최대 235.8만원</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="body-text" style="font-size:13px;color:#888;">※ 초기 지원금 111만원 + 후기 적합관리비 20만원 = 131만원. 5년 내구연한 경과 후 재신청 가능.</p>
+
+  <!-- SVG 인포그래픽 -->
+  <h2 class="section-title">📈 보청기 지원 구조 한눈에</h2>
+  <div class="svg-wrap">
+    <svg viewBox="0 0 720 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="보청기 국가보조금 지원 구조 인포그래픽">
+      <rect width="720" height="280" fill="#f3e5f5" rx="12"/>
+      <!-- 제목 -->
+      <text x="360" y="36" text-anchor="middle" fill="#4a148c" font-size="16" font-weight="bold">2026 보청기 국가보조금 지원 구조</text>
+
+      <!-- 막대 그래프 -->
+      <!-- 건강보험 성인 -->
+      <rect x="60" y="60" width="130" height="160" fill="#ce93d8" rx="6"/>
+      <rect x="60" y="60" width="130" height="144" fill="#9c27b0" rx="6"/>
+      <text x="125" y="55" text-anchor="middle" fill="#4a148c" font-size="13" font-weight="bold">건강보험(성인)</text>
+      <text x="125" y="120" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">117.9만원</text>
+      <text x="125" y="137" text-anchor="middle" fill="#fff" font-size="11">국가지원</text>
+      <rect x="60" y="204" width="130" height="16" fill="#ce93d8" rx="3"/>
+      <text x="125" y="215" text-anchor="middle" fill="#4a148c" font-size="11">본인부담 13.1만</text>
+
+      <!-- 의료급여 1종 -->
+      <rect x="210" y="60" width="130" height="160" fill="#9c27b0" rx="6"/>
+      <text x="275" y="55" text-anchor="middle" fill="#4a148c" font-size="13" font-weight="bold">의료급여 1종</text>
+      <text x="275" y="120" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">131만원</text>
+      <text x="275" y="137" text-anchor="middle" fill="#fff" font-size="11">전액 국가지원</text>
+      <text x="275" y="225" text-anchor="middle" fill="#6a1b9a" font-size="12" font-weight="bold">💯 본인부담 0원</text>
+
+      <!-- 아동 양측 -->
+      <rect x="380" y="40" width="130" height="180" fill="#ce93d8" rx="6"/>
+      <rect x="380" y="40" width="130" height="162" fill="#6a1b9a" rx="6"/>
+      <text x="445" y="35" text-anchor="middle" fill="#4a148c" font-size="13" font-weight="bold">만 19세 미만</text>
+      <text x="445" y="100" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">최대 235.8만원</text>
+      <text x="445" y="117" text-anchor="middle" fill="#fff" font-size="11">(양측 2개)</text>
+      <rect x="380" y="202" width="130" height="18" fill="#ce93d8" rx="3"/>
+      <text x="445" y="215" text-anchor="middle" fill="#4a148c" font-size="11">본인부담 26.2만</text>
+
+      <!-- 내구연한 안내 -->
+      <rect x="540" y="80" width="150" height="120" fill="#fff" rx="10" stroke="#9c27b0" stroke-width="2"/>
+      <text x="615" y="105" text-anchor="middle" fill="#6a1b9a" font-size="13" font-weight="bold">⏱ 내구연한</text>
+      <text x="615" y="125" text-anchor="middle" fill="#333" font-size="12">5년 경과 후</text>
+      <text x="615" y="143" text-anchor="middle" fill="#333" font-size="12">재신청 가능</text>
+      <line x1="560" y1="160" x2="680" y2="160" stroke="#ce93d8" stroke-width="1" stroke-dasharray="4"/>
+      <text x="615" y="178" text-anchor="middle" fill="#6a1b9a" font-size="12" font-weight="bold">청구 기한</text>
+      <text x="615" y="194" text-anchor="middle" fill="#c62828" font-size="12" font-weight="bold">구입 후 1년 이내</text>
+
+      <text x="360" y="268" text-anchor="middle" fill="#888" font-size="11">* 2026년 기준 건강보험 급여기준액 기준</text>
+    </svg>
+  </div>
+
+  <!-- 신청 방법 -->
+  <h2 class="section-title">📝 5단계 신청 방법</h2>
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <strong>이비인후과 전문의 방문 → 청각검사 + 처방전 발급</strong>
+        <span>청각장애 등록 시 사용한 검사와 다른 공단 지정 검사를 받아야 합니다. 처방전에 "보청기 착용 필요" 내용이 명시되어야 합니다.</span>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <strong>국민건강보험공단 → 보청기 처방전 제출 → 사전승인</strong>
+        <span>처방전을 가지고 공단 지사를 방문하거나 팩스로 제출합니다. 사전승인 없이 구입하면 급여가 지급되지 않으니 반드시 먼저 승인 받아야 합니다.</span>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <strong>공단 등록 보청기 업소에서 구입</strong>
+        <span>반드시 국민건강보험공단에 등록된 업소와 등록된 모델을 선택해야 급여 적용이 됩니다. 구입 영수증 반드시 보관하세요.</span>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <strong>최소 1개월(31일) 착용 후 이비인후과 재방문 → 검수확인서 발급</strong>
+        <span>착용 적합성을 확인하는 절차입니다. 이 서류가 없으면 환급 신청이 불가합니다.</span>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">5</div>
+      <div class="step-body">
+        <strong>국민건강보험공단 지사 제출 → 지원금 환급</strong>
+        <span>구입 영수증, 처방전, 검수확인서, 신청서를 제출하면 약 2~4주 내 통장으로 입금됩니다. 구입일로부터 1년 이내 청구해야 합니다.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 시행 일정/기한 박스 -->
+  <div class="deadline-box">
+    <h3>⏰ 반드시 지켜야 할 기한</h3>
+    <p>✔ 사전승인: 보청기 구입 <strong>전에 반드시</strong> 받아야 함 (사후 불가)</p>
+    <p>✔ 청구 기한: 보청기 구입일로부터 <strong>1년 이내</strong></p>
+    <p>✔ 후기 적합관리비(20만원): 구입 후 <strong>1년~5년 이내</strong> 별도 청구</p>
+    <p>✔ 내구연한: <strong>5년 경과 후</strong> 다시 신청 가능</p>
+  </div>
+
+  <!-- 자가진단 체크리스트 -->
+  <div class="checklist">
+    <h3>✅ 나는 지원받을 수 있을까? 자가진단</h3>
+    <ul>
+      <li>청각장애인 복지카드(장애인 등록증)를 보유하고 있다</li>
+      <li>현재 보청기를 사용하지 않거나, 마지막 지원을 받은 지 5년이 넘었다</li>
+      <li>이비인후과 전문의에게 보청기 착용 필요 소견을 받을 수 있다</li>
+      <li>국민건강보험 가입자이거나 의료급여 수급자이다</li>
+      <li>만 19세 미만 자녀가 청각장애 등록되어 있다 (양측 지원 해당)</li>
+    </ul>
+  </div>
+
+  <!-- 주의사항 -->
+  <div class="caution">
+    <strong>⚠️ 주의사항</strong>
+    <p>① 사전승인 없이 먼저 구입하면 <strong>급여 청구가 불가</strong>합니다. 순서를 반드시 지키세요.</p>
+    <p>② 공단 미등록 업소 또는 미등록 모델 구입 시 급여 적용이 <strong>전혀 되지 않습니다</strong>.</p>
+    <p>③ 편측(한쪽) 지원이 원칙이며, 양측 지원(아동)은 별도 기준을 충족해야 합니다.</p>
+    <p>④ 비급여 고가 보청기를 구입해도 급여기준액(131만원) 초과분은 본인 부담입니다.</p>
+  </div>
+
+  <!-- 담당 기관 및 문의처 박스 -->
+  <div class="contact-box">
+    <h3>📞 담당 기관 및 문의처</h3>
+    <p>🏥 <strong>국민건강보험공단</strong> — 고객센터 <strong>☎ 1577-1000</strong></p>
+    <p>🏢 <strong>국립재활원 중앙보조기기센터</strong> — <a href="https://www.knat.go.kr" target="_blank">www.knat.go.kr</a> / ☎ 02-901-1500</p>
+    <p>🌐 <strong>복지로</strong> — <a href="https://www.bokjiro.go.kr" target="_blank">www.bokjiro.go.kr</a> → "보청기 지원금" 검색</p>
+    <p>🏛️ <strong>읍·면·동 주민센터</strong> — 의료급여 수급자 보청기 지원 접수 가능</p>
+  </div>
+
+  <!-- 전문가 찬반 론평 -->
+  <h2 class="section-title">💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"청각 손실은 단순한 불편을 넘어 사회적 고립과 인지 저하로 이어질 수 있습니다. 보청기 급여 제도의 적극적 활용은 장애인의 삶의 질을 실질적으로 높이는 핵심 수단입니다."</p>
+          <p class="author">— 청각재활 전문가</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"131만원이라는 급여기준액은 여전히 시장 평균 보청기 가격에 비해 낮습니다. 그러나 5단계 절차를 알고 제대로 신청하면 실질적인 경제적 부담을 크게 줄일 수 있습니다."</p>
+          <p class="author">— 장애인복지 연구자</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"사전승인-1개월 착용-검수확인 등 5단계에 걸친 복잡한 절차는 노인·중증 장애인에게 현실적 장벽입니다. 급여 체계를 간소화하지 않으면 알고도 못 받는 사각지대는 지속될 것입니다."</p>
+          <p class="author">— 사회복지 현장 활동가</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"급여기준액이 5년째 131만원으로 동결된 반면, 시중 보청기 가격은 200~400만원대로 오른 상태입니다. 급여기준액을 현실화하지 않으면 소득 하위 계층일수록 의미 있는 보청기를 포기하게 됩니다."</p>
+          <p class="author">— 의료보장 재정 연구자</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span>#보청기지원금</span>
+    <span>#청각장애복지</span>
+    <span>#보청기국가보조금</span>
+    <span>#건강보험급여</span>
+    <span>#장애인복지카드</span>
+    <span>#2026복지혜택</span>
+    <span>#보청기신청방법</span>
+    <span>#의료급여수급자</span>
+    <span>#아동보청기262만원</span>
+    <span>#복지사각지대해소</span>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    이 기사는 공개된 정보를 바탕으로 작성되었습니다. 지원 금액·절차는 개인 상황과 관련 법령 개정에 따라 달라질 수 있으므로, 정확한 지원 여부는 국민건강보험공단(☎1577-1000) 또는 담당 기관에 반드시 확인하세요.
+  </div>
+
+  <!-- 날짜 메타 -->
+  <div class="meta">작성일: 2026년 6월 4일 | 오늘의 복지 뉴스</div>
+
+</div>
+</body>
+</html>
