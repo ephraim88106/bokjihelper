@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"전세 보증금 3억 날린 당신, 국가가 최소 보장합니다" — 전세사기 특별법 개정, 보증금 최소보장제·면적제한 폐지 2026년 완전 정복 | 오늘의 복지 뉴스</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Malgun Gothic', '맑은 고딕', sans-serif; background: #f5f7fa; color: #222; line-height: 1.7; }
+  .container { max-width: 780px; margin: 0 auto; padding: 16px; }
+
+  /* Header */
+  .top-header { background: #c62828; color: #fff; padding: 12px 20px; border-radius: 10px 10px 0 0; display: flex; justify-content: space-between; align-items: center; }
+  .top-header .date-tag { font-size: 13px; opacity: 0.85; }
+  .top-header .series { font-size: 13px; font-weight: 700; }
+
+  /* Badge */
+  .badge { display: inline-block; background: #c62828; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin: 18px 0 8px; }
+
+  /* Title */
+  h1 { font-size: 28px; font-weight: 900; color: #7f0000; line-height: 1.35; margin-bottom: 18px; }
+  @media (max-width: 600px) { h1 { font-size: 22px; } }
+
+  /* Hook */
+  .hook { border-left: 5px solid #c62828; padding: 14px 18px; background: #ffebee; border-radius: 0 8px 8px 0; margin-bottom: 22px; font-size: 16px; }
+  .hook .highlight { background: #ffd740; padding: 0 3px; font-weight: 700; }
+
+  /* Summary box */
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 10px; padding: 18px 20px; margin-bottom: 24px; }
+  .summary-box h2 { color: #1b5e20; font-size: 16px; margin-bottom: 10px; }
+  .summary-box li { list-style: none; padding: 4px 0; font-size: 15px; }
+  .summary-box li::before { content: "📌 "; }
+
+  /* Section titles */
+  h2 { font-size: 20px; font-weight: 800; color: #c62828; margin: 28px 0 12px; }
+  h3 { font-size: 17px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+
+  /* Table */
+  .info-table { width: 100%; border-collapse: collapse; margin: 14px 0 24px; font-size: 14px; }
+  .info-table th { background: #c62828; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { padding: 10px 12px; border-bottom: 1px solid #dde; }
+  .info-table tr:nth-child(even) td { background: #fff5f5; }
+
+  /* Steps */
+  .step-list { }
+  .step-item { display: flex; gap: 14px; margin-bottom: 14px; align-items: flex-start; }
+  .step-num { background: #c62828; color: #fff; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+
+  /* Deadline box */
+  .deadline-box { border: 2px dashed #f57c00; border-radius: 10px; background: #fff8e1; padding: 16px 20px; margin: 24px 0; }
+  .deadline-box .dl-title { font-weight: 900; color: #e65100; font-size: 16px; margin-bottom: 8px; }
+
+  /* Checklist */
+  .checklist { background: #fff5f5; border-radius: 10px; padding: 18px 20px; margin: 24px 0; }
+  .checklist h2 { color: #c62828; }
+  .check-item { padding: 7px 0; border-bottom: 1px dashed #ecc; font-size: 15px; }
+  .check-item:last-child { border-bottom: none; }
+  .check-item::before { content: "✓ "; color: #c62828; font-weight: 900; }
+
+  /* Warning */
+  .warning-box { background: #fff3e0; border-left: 5px solid #f57c00; border-radius: 0 8px 8px 0; padding: 16px 18px; margin: 24px 0; }
+  .warning-box li { list-style: none; padding: 5px 0; font-size: 14px; }
+
+  /* Contact */
+  .contact-box { background: #ffebee; border-radius: 10px; padding: 18px 20px; margin: 24px 0; }
+  .contact-box h2 { color: #7f0000; }
+  .contact-box p { font-size: 14px; margin: 6px 0; }
+
+  /* Opinion */
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  /* Highlight box */
+  .highlight-box { background: #fff de0; border: 2px solid #c62828; border-radius: 10px; padding: 16px 20px; margin: 20px 0; }
+
+  /* Hashtags */
+  .hashtags { margin: 24px 0; }
+  .hashtags span { display: inline-block; background: #ffebee; color: #c62828; border-radius: 20px; padding: 4px 12px; font-size: 13px; font-weight: 700; margin: 4px 4px 4px 0; }
+
+  /* Disclaimer */
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; margin: 24px 0; font-size: 12px; color: #888; }
+
+  /* Meta */
+  .meta { text-align: right; font-size: 12px; color: #aaa; margin-bottom: 20px; }
+
+  .svg-wrap { overflow-x: auto; margin: 24px 0; }
+
+  @media (max-width: 600px) {
+    .opinion-grid { grid-template-columns: 1fr; }
+    .info-table { font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="top-header">
+    <span class="date-tag">📅 2026년 6월 10일 (수)</span>
+    <span class="series">오늘의 복지 뉴스 · 제2보</span>
+  </div>
+
+  <span class="badge">🏠 청년 주거 · 전세사기 피해자</span>
+
+  <h1>"전세 보증금 3억 날렸다고요? 국가가 최소 보장합니다" — 2026년 전세사기 특별법 개정, 보증금 최소보장제 도입·85㎡ 면적 제한 완전 폐지·소급 적용까지</h1>
+
+  <!-- Hook -->
+  <div class="hook">
+    경매에서 보증금을 거의 다 날리고도 아직 지원을 받지 못하고 있다면, 지금 이 글이 당신을 위한 겁니다.
+    <br><br>
+    2026년 4월 국회를 통과한 개정 전세사기 특별법은 <span class="highlight">이미 경매가 끝난 피해자에게도 소급 적용</span>되며, 집이 85㎡를 초과해도, 보증금이 7억 원 이하라면 이제 지원 대상입니다. 가장 중요한 것은 — <strong>보증금 회수액이 1/3에 못 미치면 국가가 나머지를 보장해주는 최소보장제가 새로 생겼습니다.</strong>
+  </div>
+
+  <!-- Summary -->
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>보증금 최소보장제 신설: 회수액이 보증금의 1/3 미만이면 국가 보전 (소급 적용)</li>
+      <li>면적 제한 폐지: 기존 85㎡ → 완전 폐지, 보증금 5억 이하(최대 7억까지)</li>
+      <li>현재까지 피해자 3만 8,503건 결정, 피해주택 매입 8,357호 — 신청 안 한 분 아직 많아</li>
+    </ul>
+  </div>
+
+  <!-- Background -->
+  <h2>🔍 왜 이 정책이 나왔나</h2>
+  <p>전세사기 사건이 터진 지 수년이 지났지만 피해자들의 고통은 지속되고 있습니다. 2022~2023년 집중 발생한 전세사기로 집을 잃고 거리에 나앉은 청년·서민이 수만 명에 달합니다. 기존 특별법은 지원 대상이 '85㎡ 이하' '보증금 3억 원 이하'로 제한되어, 조금만 넓거나 보증금이 높으면 아무 지원도 받지 못하는 역차별이 발생했습니다.</p>
+  <br>
+  <p>2026년 4월 23일 국회 본회의를 통과한 개정안은 이 벽을 허물었습니다. 면적 제한을 아예 없애고, 보증금 기준을 대폭 올렸으며, 가장 획기적으로는 <strong>경매가 끝나 이미 보증금을 일부 잃은 피해자에게 소급 적용되는 '보증금 최소보장제'</strong>를 도입했습니다.</p>
+
+  <!-- Table -->
+  <h2>📊 개정 전·후 비교표</h2>
+  <table class="info-table">
+    <tr><th>항목</th><th>개정 전 (구법)</th><th>개정 후 (현행)</th></tr>
+    <tr><td><strong>주택 면적</strong></td><td>85㎡ 이하만</td><td>면적 제한 완전 폐지</td></tr>
+    <tr><td><strong>보증금 상한</strong></td><td>3억 원 이하</td><td>5억 원 이하 (최대 7억까지)</td></tr>
+    <tr><td><strong>보증금 최소보장제</strong></td><td>없음</td><td>신설 — 회수액 1/3 미만 시 국가 보전</td></tr>
+    <tr><td><strong>소급 적용</strong></td><td>제한적</td><td>이미 경·공매 종료된 피해자에도 적용</td></tr>
+    <tr><td><strong>주거지원</strong></td><td>공공임대 입주 지원</td><td>피해주택 직접 매입 + 공공임대 입주</td></tr>
+    <tr><td><strong>금융지원</strong></td><td>긴급 대출</td><td>저금리 전세대출 + 이자 지원</td></tr>
+    <tr><td><strong>법률지원</strong></td><td>법률구조공단 연계</td><td>전담 변호인단 + 피해자 통합지원관리시스템</td></tr>
+  </table>
+
+  <!-- SVG Infographic -->
+  <h2>📈 전세사기 피해자 지원 현황</h2>
+  <div class="svg-wrap">
+    <svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;margin:0 auto;">
+      <rect width="680" height="260" fill="#fff5f5" rx="12"/>
+      <text x="340" y="30" text-anchor="middle" font-size="15" font-weight="900" fill="#7f0000">전세사기 피해자 지원 현황 (2026년 5월 기준)</text>
+
+      <!-- Stat boxes -->
+      <rect x="30" y="50" width="180" height="90" rx="10" fill="#c62828"/>
+      <text x="120" y="88" text-anchor="middle" font-size="26" font-weight="900" fill="#ffd740">38,503건</text>
+      <text x="120" y="112" text-anchor="middle" font-size="12" fill="#fff">피해자 결정</text>
+      <text x="120" y="130" text-anchor="middle" font-size="11" fill="#ffcdd2">(누적 인정 건수)</text>
+
+      <rect x="230" y="50" width="180" height="90" rx="10" fill="#b71c1c"/>
+      <text x="320" y="88" text-anchor="middle" font-size="26" font-weight="900" fill="#ffd740">8,357호</text>
+      <text x="320" y="112" text-anchor="middle" font-size="12" fill="#fff">피해주택 매입 완료</text>
+      <text x="320" y="130" text-anchor="middle" font-size="11" fill="#ffcdd2">(LH·지방공사 매입)</text>
+
+      <rect x="430" y="50" width="220" height="90" rx="10" fill="#880e4f"/>
+      <text x="540" y="88" text-anchor="middle" font-size="26" font-weight="900" fill="#ffd740">63,568건</text>
+      <text x="540" y="112" text-anchor="middle" font-size="12" fill="#fff">지원 서비스 제공 (누계)</text>
+      <text x="540" y="130" text-anchor="middle" font-size="11" fill="#ffcdd2">(주거+금융+법률 합산)</text>
+
+      <!-- Before/After comparison -->
+      <rect x="30" y="160" width="295" height="80" rx="8" fill="#fff" stroke="#c62828" stroke-width="2"/>
+      <text x="177" y="182" text-anchor="middle" font-size="13" font-weight="900" fill="#c62828">개정 전</text>
+      <text x="177" y="204" text-anchor="middle" font-size="13" fill="#555">면적 85㎡ · 보증금 3억</text>
+      <text x="177" y="222" text-anchor="middle" font-size="12" fill="#777">소급 없음 · 최소보장 없음</text>
+
+      <text x="345" y="205" text-anchor="middle" font-size="22" font-weight="900" fill="#c62828">→</text>
+
+      <rect x="360" y="160" width="295" height="80" rx="8" fill="#c62828"/>
+      <text x="507" y="182" text-anchor="middle" font-size="13" font-weight="900" fill="#ffd740">개정 후 (2026년 4월~)</text>
+      <text x="507" y="204" text-anchor="middle" font-size="13" fill="#fff">면적 무제한 · 보증금 7억</text>
+      <text x="507" y="222" text-anchor="middle" font-size="12" fill="#ffcdd2">소급 적용 + 최소보장제 신설</text>
+    </svg>
+  </div>
+
+  <!-- 신청 방법 -->
+  <h2>🏃 신청 방법 (단계별)</h2>
+  <div class="step-list">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div><strong>피해자 인정 신청</strong> — 주소지 시군구청 또는 LH(한국토지주택공사) 지역본부에 방문하여 피해자 결정 신청서 제출</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div><strong>서류 준비</strong> — 임대차계약서, 전입신고 확인서, 확정일자 증빙, 경매 진행 서류(진행 중인 경우), 보증금 미회수 내역</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div><strong>전세사기 피해지원위원회 심의</strong> — 신청 후 위원회가 피해자 여부 결정 (통상 30~60일 소요)</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div><strong>지원 선택</strong> — ① 피해주택 LH 매입(경매 차단 후 공공임대 거주) ② 공공임대주택 우선 입주 ③ 저금리 대출 ④ 법률지원 중 선택</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">5</div>
+      <div><strong>보증금 최소보장제 신청</strong> — 경·공매 종료 후 회수액이 보증금의 1/3 미만인 경우 별도 신청, 소급 적용</div>
+    </div>
+  </div>
+
+  <!-- Deadline -->
+  <div class="deadline-box">
+    <div class="dl-title">⏰ 중요: 이미 경매가 끝난 피해자도 소급 신청 가능!</div>
+    <p>경·공매 절차가 이미 완료되어 포기했던 분들도 반드시 신청하세요. 개정법의 보증금 최소보장제는 <strong>이미 종료된 사건에도 소급 적용</strong>됩니다. 신청 기한은 개정법 시행 후 1년 이내로 예상되므로 서두르세요.</p>
+  </div>
+
+  <!-- Checklist -->
+  <div class="checklist">
+    <h2>✅ 나는 해당될까? 자가 진단 체크리스트</h2>
+    <div class="check-item">전세 계약 후 집주인의 사기·기망으로 보증금을 돌려받지 못했다</div>
+    <div class="check-item">전세 보증금이 7억 원 이하이다</div>
+    <div class="check-item">경·공매 절차가 진행 중이거나 이미 완료되었다</div>
+    <div class="check-item">경매 배당 후 보증금 회수액이 원래 보증금의 1/3에도 못 미친다</div>
+    <div class="check-item">피해주택 면적이 85㎡를 초과하여 기존 지원을 거부당한 경험이 있다</div>
+  </div>
+
+  <!-- Warning -->
+  <h2>⚠️ 주의사항</h2>
+  <div class="warning-box">
+    <ul>
+      <li>① 전세사기 피해자 인정을 받으려면 '기망 의도'가 있는 임대인의 사기 행위임이 소명되어야 합니다. 단순 깡통전세·보증금 미반환과는 다릅니다.</li>
+      <li>② 보증금 최소보장제의 정확한 지원 금액·지급 방식은 시행령에서 확정 예정이므로, 지자체 및 LH 담당자에게 최신 내용을 반드시 확인하세요.</li>
+      <li>③ 피해 인정 심의 중에도 경매·공매 절차는 중단 없이 진행될 수 있습니다. 법원 기일을 놓치지 않도록 주의하세요.</li>
+      <li>④ 임대차 계약 당시 전입신고·확정일자를 받지 않은 경우 지원 우선순위에서 불리할 수 있습니다.</li>
+    </ul>
+  </div>
+
+  <!-- Contact -->
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <p>🏢 <strong>전세사기 피해지원 통합콜센터</strong> — ☎ 1533-8119 (평일 09:00~18:00)</p>
+    <p>🏢 <strong>LH 전세사기 피해지원센터</strong> — ☎ 1600-1004</p>
+    <p>🏢 <strong>국토교통부 주거복지정책과</strong> — ☎ 044-201-4515</p>
+    <p>🌐 <strong>전세사기 피해자 지원관리시스템</strong> — 시군구청 방문 또는 각 지자체 홈페이지</p>
+    <p>⚖️ <strong>대한법률구조공단 (무료 법률상담)</strong> — ☎ 132 (24시간)</p>
+    <p>🏢 <strong>주소지 관할 시군구청 전세사기 담당부서</strong> — 방문 신청 가능</p>
+  </div>
+
+  <!-- Opinion -->
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"면적·보증금 상한 폐지와 소급 적용은 피해자 보호의 공백을 메우는 불가피한 조치다. 특히 이미 경매가 끝나 포기했던 피해자들이 구제받을 수 있게 된 것은 이 개정안의 가장 큰 성과다."</p>
+          <p class="author">— 주거권 시민단체 활동가</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"보증금 최소보장제는 사기 피해의 하방 리스크를 국가가 떠안는다는 의미다. 시장 실패로 인한 손실을 공적으로 보상하는 구조가 마련된 것은 주거안전망 역사에서 중요한 전환점이다."</p>
+          <p class="author">— 부동산정책 연구자</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"소급 적용 범위를 무제한으로 확대하면 국가 재정 부담이 불예측 수준으로 커진다. 지원 기준을 명확히 하지 않으면 심사 지연과 행정 혼란이 피해자에게 되레 불이익이 될 수 있다."</p>
+          <p class="author">— 재정·주택경제 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"보증금 최소보장제는 사기 임대인에 대한 실질적 구상권 확보가 전제되어야 한다. 국가가 대신 메워주고 임대인은 책임을 면하는 구조가 되어서는 안 된다."</p>
+          <p class="author">— 민사법 전문 법학 연구자</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hashtags -->
+  <div class="hashtags">
+    <span>#전세사기피해자</span>
+    <span>#특별법개정</span>
+    <span>#보증금최소보장제</span>
+    <span>#청년주거지원</span>
+    <span>#복지뉴스</span>
+    <span>#2026주거정책</span>
+    <span>#소급적용</span>
+    <span>#면적제한폐지</span>
+    <span>#LH피해주택매입</span>
+    <span>#전세사기구제</span>
+  </div>
+
+  <!-- Disclaimer -->
+  <div class="disclaimer">
+    이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부는 담당 기관에 확인하세요. 보증금 최소보장제의 세부 지급 기준은 시행령 확정 후 변경될 수 있습니다.
+  </div>
+
+  <div class="meta">작성일: 2026-06-10 | 복지뉴스 자동생성 시스템</div>
+
+</div>
+</body>
+</html>

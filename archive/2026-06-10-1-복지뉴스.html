@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"마음이 무너지는데 돈 없어서 상담 못 받는다고요?" 틀렸습니다 — 2026년 정신건강 심리상담 바우처 8회 무료, 소득기준 아예 없어졌다 | 오늘의 복지 뉴스</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Malgun Gothic', '맑은 고딕', sans-serif; background: #f5f7fa; color: #222; line-height: 1.7; }
+  .container { max-width: 780px; margin: 0 auto; padding: 16px; }
+
+  /* Header */
+  .top-header { background: #1565c0; color: #fff; padding: 12px 20px; border-radius: 10px 10px 0 0; display: flex; justify-content: space-between; align-items: center; }
+  .top-header .date-tag { font-size: 13px; opacity: 0.85; }
+  .top-header .series { font-size: 13px; font-weight: 700; }
+
+  /* Badge */
+  .badge { display: inline-block; background: #1565c0; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin: 18px 0 8px; }
+
+  /* Title */
+  h1 { font-size: 28px; font-weight: 900; color: #0d3c85; line-height: 1.35; margin-bottom: 18px; }
+  @media (max-width: 600px) { h1 { font-size: 22px; } }
+
+  /* Hook */
+  .hook { border-left: 5px solid #1565c0; padding: 14px 18px; background: #e8f0fe; border-radius: 0 8px 8px 0; margin-bottom: 22px; font-size: 16px; }
+  .hook .highlight { background: #ffd740; padding: 0 3px; font-weight: 700; }
+
+  /* Summary box */
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 10px; padding: 18px 20px; margin-bottom: 24px; }
+  .summary-box h2 { color: #1b5e20; font-size: 16px; margin-bottom: 10px; }
+  .summary-box li { list-style: none; padding: 4px 0; font-size: 15px; }
+  .summary-box li::before { content: "📌 "; }
+
+  /* Section titles */
+  h2 { font-size: 20px; font-weight: 800; color: #1565c0; margin: 28px 0 12px; }
+  h3 { font-size: 17px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+
+  /* Table */
+  .info-table { width: 100%; border-collapse: collapse; margin: 14px 0 24px; font-size: 14px; }
+  .info-table th { background: #1565c0; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { padding: 10px 12px; border-bottom: 1px solid #dde; }
+  .info-table tr:nth-child(even) td { background: #f0f4ff; }
+
+  /* Steps */
+  .step-list { counter-reset: step; }
+  .step-item { display: flex; gap: 14px; margin-bottom: 14px; align-items: flex-start; }
+  .step-num { background: #1565c0; color: #fff; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+
+  /* Deadline box */
+  .deadline-box { border: 2px dashed #f57c00; border-radius: 10px; background: #fff8e1; padding: 16px 20px; margin: 24px 0; }
+  .deadline-box .dl-title { font-weight: 900; color: #e65100; font-size: 16px; margin-bottom: 8px; }
+
+  /* Checklist */
+  .checklist { background: #f3f8ff; border-radius: 10px; padding: 18px 20px; margin: 24px 0; }
+  .checklist h2 { color: #1565c0; }
+  .check-item { padding: 7px 0; border-bottom: 1px dashed #ccd; font-size: 15px; }
+  .check-item:last-child { border-bottom: none; }
+  .check-item::before { content: "✓ "; color: #1565c0; font-weight: 900; }
+
+  /* Warning */
+  .warning-box { background: #fff3e0; border-left: 5px solid #f57c00; border-radius: 0 8px 8px 0; padding: 16px 18px; margin: 24px 0; }
+  .warning-box li { list-style: none; padding: 5px 0; font-size: 14px; }
+
+  /* Contact */
+  .contact-box { background: #e3f2fd; border-radius: 10px; padding: 18px 20px; margin: 24px 0; }
+  .contact-box h2 { color: #0d47a1; }
+  .contact-box p { font-size: 14px; margin: 6px 0; }
+
+  /* Opinion */
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  /* Hashtags */
+  .hashtags { margin: 24px 0; }
+  .hashtags span { display: inline-block; background: #e8f0fe; color: #1565c0; border-radius: 20px; padding: 4px 12px; font-size: 13px; font-weight: 700; margin: 4px 4px 4px 0; }
+
+  /* Disclaimer */
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; margin: 24px 0; font-size: 12px; color: #888; }
+
+  /* Meta */
+  .meta { text-align: right; font-size: 12px; color: #aaa; margin-bottom: 20px; }
+
+  /* SVG section */
+  .svg-wrap { overflow-x: auto; margin: 24px 0; }
+
+  @media (max-width: 600px) {
+    .opinion-grid { grid-template-columns: 1fr; }
+    .info-table { font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="top-header">
+    <span class="date-tag">📅 2026년 6월 10일 (수)</span>
+    <span class="series">오늘의 복지 뉴스 · 제1보</span>
+  </div>
+
+  <span class="badge">🧠 정신건강 · 심리상담</span>
+
+  <h1>"마음이 무너지는데 돈 없어서 상담 못 받는다고요?" 틀렸습니다 — 2026년 정신건강 바우처 8회 무료, 소득기준 완전 폐지, 자살시도자 치료비도 이제 소득 안 봅니다</h1>
+
+  <!-- Hook -->
+  <div class="hook">
+    직장 잃고, 빚에 쫓기고, 가족 문제로 밤마다 눈물 흘리는 분들 — 심리상담 한 번에 7~10만원이라 그냥 참아왔다면 지금 당장 이 글 읽으세요.
+    <br><br>
+    2026년부터 <span class="highlight">소득 따지지 않고 누구나 전문 심리상담 8회를 바우처로 지원</span>합니다. 자살을 시도한 분들의 치료비도 소득기준이 완전히 사라졌습니다. 모르면 그냥 내 돈으로 내는 겁니다.
+  </div>
+
+  <!-- Summary -->
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>정신건강 심리상담 바우처: 소득 무관, 전 국민 신청 가능, 8회 지원 (1회당 최대 8만원)</li>
+      <li>자살시도자 치료비·심리검사 지원: 기존 중위소득 120% 이하 → 소득기준 완전 폐지</li>
+      <li>신청은 읍면동 주민센터 방문 또는 복지로(bokjiro.go.kr) 온라인 가능</li>
+    </ul>
+  </div>
+
+  <!-- Background -->
+  <h2>🔍 왜 이 정책이 나왔나</h2>
+  <p>대한민국은 OECD 자살률 1위라는 불명예를 수십 년째 안고 있습니다. 2025년 정부가 발표한 '2025 국가자살예방전략'에 따르면, 정신과 진료를 받아야 한다는 것을 알면서도 비용 때문에 포기하는 비율이 전체의 40%에 달합니다. 심리상담 한 회당 시중 가격은 6만~15만원. 월 4회 받으면 최소 24만원이 드는 현실에서 저소득층만 지원하는 기존 방식은 한계가 명확했습니다.</p>
+  <br>
+  <p>2026년 보건복지부는 이 장벽을 허물기 위해 '정신건강 심리상담 바우처' 사업의 소득 기준을 전면 폐지하고, 자살시도자에 대한 치료비 지원의 소득 상한선(중위소득 120%)도 없앴습니다. 마음이 아픈 건 소득과 무관하다는 선언입니다.</p>
+
+  <!-- Table -->
+  <h2>📊 지원 내용 상세표</h2>
+  <table class="info-table">
+    <tr><th>구분</th><th>내용</th></tr>
+    <tr><td><strong>사업명</strong></td><td>정신건강 심리상담 바우처 사업 (구 전국민 마음투자 지원사업)</td></tr>
+    <tr><td><strong>지원 대상</strong></td><td>소득 무관, 우울·불안 등 심리상담이 필요한 전 국민</td></tr>
+    <tr><td><strong>지원 횟수</strong></td><td>연간 8회 (1회당 50분~60분)</td></tr>
+    <tr><td><strong>바우처 단가</strong></td><td>1급 상담사: 8만원 / 2급 상담사: 7만원</td></tr>
+    <tr><td><strong>본인부담금</strong></td><td>소득에 따라 0원~수만원 (자립준비청년·한부모가족은 0원)</td></tr>
+    <tr><td><strong>신청 자격</strong></td><td>PHQ-9 우울 검사 10점 이상, 정신건강복지센터·의료기관 의뢰서·소견서 보유자</td></tr>
+    <tr><td><strong>사업 기간</strong></td><td>2026년 1월 1일 ~ 12월 31일 (예산 소진 시 조기 마감)</td></tr>
+    <tr><td><strong>바우처 유효기간</strong></td><td>생성일로부터 120일 이내</td></tr>
+    <tr><td><strong>자살시도자 치료비</strong></td><td>소득기준 폐지, 응급 치료비 + 심리검사 전액 지원</td></tr>
+    <tr><td><strong>생명사랑 위기대응센터</strong></td><td>응급실 기반, 2026년 98개소로 확대 (전국 17개 시도 전부 운영)</td></tr>
+  </table>
+
+  <!-- SVG Infographic -->
+  <h2>📈 2026년 정신건강 지원 확대 한눈에 보기</h2>
+  <div class="svg-wrap">
+    <svg viewBox="0 0 680 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;margin:0 auto;">
+      <rect width="680" height="280" fill="#f0f4ff" rx="12"/>
+      <text x="340" y="32" text-anchor="middle" font-size="15" font-weight="900" fill="#0d3c85">2026년 정신건강 지원 주요 변화</text>
+
+      <!-- Bar 1: 예산 -->
+      <rect x="40" y="60" width="140" height="160" rx="8" fill="#bbdefb"/>
+      <rect x="40" y="92" width="140" height="128" rx="8" fill="#1565c0"/>
+      <text x="110" y="87" text-anchor="middle" font-size="11" fill="#1565c0" font-weight="700">2025년 예산</text>
+      <text x="110" y="120" text-anchor="middle" font-size="16" fill="#fff" font-weight="900">587억</text>
+      <text x="110" y="140" text-anchor="middle" font-size="11" fill="#fff">원</text>
+
+      <rect x="200" y="60" width="140" height="160" rx="8" fill="#bbdefb"/>
+      <rect x="200" y="58" width="140" height="162" rx="8" fill="#0d47a1"/>
+      <text x="270" y="53" text-anchor="middle" font-size="11" fill="#0d47a1" font-weight="700">2026년 예산</text>
+      <text x="270" y="102" text-anchor="middle" font-size="20" fill="#ffd740" font-weight="900">708억</text>
+      <text x="270" y="125" text-anchor="middle" font-size="13" fill="#fff">(+20.6%)</text>
+
+      <!-- Arrow -->
+      <path d="M180 140 L195 140" stroke="#f57c00" stroke-width="3" marker-end="url(#arrow)"/>
+
+      <!-- Center items -->
+      <rect x="370" y="60" width="140" height="70" rx="8" fill="#e8f5e9"/>
+      <text x="440" y="88" text-anchor="middle" font-size="12" font-weight="900" fill="#1b5e20">생명사랑 위기대응센터</text>
+      <text x="440" y="108" text-anchor="middle" font-size="18" font-weight="900" fill="#2e7d32">92 → 98개소</text>
+      <text x="440" y="124" text-anchor="middle" font-size="10" fill="#2e7d32">전국 17개 시도 완전 커버</text>
+
+      <rect x="370" y="145" width="140" height="70" rx="8" fill="#fff8e1"/>
+      <text x="440" y="170" text-anchor="middle" font-size="12" font-weight="900" fill="#e65100">자살시도자 치료비</text>
+      <text x="440" y="193" text-anchor="middle" font-size="14" font-weight="900" fill="#c62828">소득기준 완전 폐지</text>
+      <text x="440" y="209" text-anchor="middle" font-size="10" fill="#e65100">누구나 지원</text>
+
+      <rect x="530" y="60" width="130" height="155" rx="8" fill="#fce4ec"/>
+      <text x="595" y="90" text-anchor="middle" font-size="12" font-weight="900" fill="#880e4f">자살예방예산</text>
+      <text x="595" y="115" text-anchor="middle" font-size="13" font-weight="900" fill="#c62828">20.6% 증가</text>
+      <text x="595" y="138" text-anchor="middle" font-size="11" fill="#333">바우처 소득기준</text>
+      <text x="595" y="158" text-anchor="middle" font-size="13" font-weight="900" fill="#c62828">전면 폐지</text>
+      <text x="595" y="181" text-anchor="middle" font-size="11" fill="#333">심리상담센터 인력</text>
+      <text x="595" y="201" text-anchor="middle" font-size="13" font-weight="900" fill="#1565c0">2.6 → 5명</text>
+
+      <text x="340" y="262" text-anchor="middle" font-size="11" fill="#888">출처: 보건복지부 2026년 자살예방대책·정신건강정책</text>
+    </svg>
+  </div>
+
+  <!-- 신청 방법 -->
+  <h2>🏃 신청 방법 (단계별)</h2>
+  <div class="step-list">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div><strong>자격 확인</strong> — 국가건강검진에서 PHQ-9(우울증 선별검사) 10점 이상 / 정신건강복지센터·의원에서 소견서·의뢰서 발급</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div><strong>신청</strong> — 주민등록상 주소지 읍면동 행정복지센터 직접 방문 또는 복지로(bokjiro.go.kr) 온라인 신청 (만 19세 이상 본인만 온라인 가능)</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div><strong>바우처 발급</strong> — 심사 후 사회서비스이용권(바우처) 발급, 유효기간 120일</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div><strong>상담 기관 선택</strong> — 사회서비스전자바우처포털(www.socialservice.or.kr)에서 지정 상담기관 검색 후 예약</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">5</div>
+      <div><strong>상담 진행</strong> — 총 8회 상담 이용, 바우처로 결제 (본인부담금 제외)</div>
+    </div>
+  </div>
+
+  <!-- Deadline -->
+  <div class="deadline-box">
+    <div class="dl-title">⏰ 마감 주의: 예산 소진 시 조기 마감!</div>
+    <p>사업 기간은 2026년 12월 31일까지이지만, <strong>예산이 다 떨어지면 그 즉시 마감</strong>됩니다. 증상이 있다면 지금 당장 신청하세요. 작년에도 상반기에 조기 마감된 지역이 여럿 있었습니다.</p>
+  </div>
+
+  <!-- Checklist -->
+  <div class="checklist">
+    <h2>✅ 나는 해당될까? 자가 진단 체크리스트</h2>
+    <div class="check-item">최근 2주 이상 무기력하고, 아무것도 하기 싫다는 생각이 든다</div>
+    <div class="check-item">불안·걱정·공황 증상이 반복되어 일상생활이 어렵다</div>
+    <div class="check-item">국가건강검진 우울증 선별검사(PHQ-9)에서 10점 이상이 나왔다</div>
+    <div class="check-item">정신건강의학과·보건소 등에서 상담이 필요하다는 말을 들은 적 있다</div>
+    <div class="check-item">심리상담을 받고 싶지만 비용 때문에 포기한 경험이 있다</div>
+  </div>
+
+  <!-- Warning -->
+  <h2>⚠️ 주의사항</h2>
+  <div class="warning-box">
+    <ul>
+      <li>① 현재 급성 자살위기·정신증·조증 삽화 등 즉각 치료가 필요한 상태는 바우처 대상에서 제외됩니다 — 즉시 정신건강위기상담전화(☎1577-0199)로 연락하세요.</li>
+      <li>② 바우처는 지정된 상담기관에서만 사용 가능합니다. 비지정 기관에서 받은 상담은 소급 지원되지 않습니다.</li>
+      <li>③ 바우처 유효기간(120일) 내에 미사용하면 자동 소멸, 환급 불가합니다.</li>
+      <li>④ 소득에 따라 본인부담금 차이가 있으니 신청 시 담당자에게 정확한 본인부담액을 확인하세요.</li>
+    </ul>
+  </div>
+
+  <!-- Contact -->
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <p>🏢 <strong>보건복지부 정신건강정책과</strong> — ☎ 044-202-3859</p>
+    <p>🌐 <strong>복지로 온라인 신청</strong> — www.bokjiro.go.kr</p>
+    <p>🌐 <strong>사회서비스 전자바우처</strong> — www.socialservice.or.kr</p>
+    <p>🏢 <strong>주민센터(읍면동 행정복지센터)</strong> — 주민등록 주소지 방문</p>
+    <p>📞 <strong>정신건강 위기상담 전화</strong> — ☎ 1577-0199 (24시간)</p>
+    <p>📞 <strong>자살예방 상담전화</strong> — ☎ 1393 (24시간, 무료)</p>
+  </div>
+
+  <!-- Opinion -->
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"소득기준 폐지는 정신건강 지원의 패러다임 전환이다. 심리적 고통은 계층을 가리지 않는데 그간 지원은 저소득층에 한정되어 중간 소득 계층이 오히려 더 방치되어 왔다. 이번 개편으로 실질적 수요자에게 닿는 범위가 획기적으로 넓어질 것이다."</p>
+          <p class="author">— 정신건강복지정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"자살시도자 치료비 소득기준 폐지는 위기 상황에서 경제적 이유로 치료를 포기하는 일을 막는다는 점에서 생명권 보호의 기본 원칙에 가장 충실한 조치다."</p>
+          <p class="author">— 자살예방 현장 활동가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"소득 무관 지원은 예산 급팽창을 낳는다. 중산층까지 포함하면 실제 위기 계층에게 돌아가는 몫이 줄어들 수 있다. 재정 지속가능성을 확보하는 세부 설계가 수반되어야 한다."</p>
+          <p class="author">— 재정·사회정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"바우처 지정 상담기관이 도시 지역에 편중되어 있어 농어촌 주민은 여전히 실질적 접근이 어렵다. 온라인 상담 기관 확충이 병행되지 않으면 지역 간 불균형만 더 심화될 것이다."</p>
+          <p class="author">— 지역복지 현장 사회복지사</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hashtags -->
+  <div class="hashtags">
+    <span>#정신건강바우처</span>
+    <span>#심리상담무료</span>
+    <span>#자살예방</span>
+    <span>#복지뉴스</span>
+    <span>#2026복지정책</span>
+    <span>#마음투자지원</span>
+    <span>#자살시도자지원</span>
+    <span>#소득기준폐지</span>
+    <span>#정신건강복지</span>
+    <span>#생명사랑위기대응센터</span>
+  </div>
+
+  <!-- Disclaimer -->
+  <div class="disclaimer">
+    이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부는 담당 기관에 확인하세요. 본인부담금·지정기관 목록 등 세부 내용은 지역·시기에 따라 달라질 수 있습니다.
+  </div>
+
+  <div class="meta">작성일: 2026-06-10 | 복지뉴스 자동생성 시스템</div>
+
+</div>
+</body>
+</html>
