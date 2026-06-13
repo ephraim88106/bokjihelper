@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"우리 아이 다문화인데 공부비 최대 60만원 공짜로 준다고요?!" 7월 마감 임박 — 지금 신청 안 하면 1년 기다려야 합니다 | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; background: #fce4ec; color: #222; line-height: 1.7; }
+  .container { max-width: 800px; margin: 0 auto; background: #fff; }
+
+  /* 헤더 */
+  .top-header { background: #ad1457; color: #fff; padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
+  .top-header .badge { background: rgba(255,255,255,0.2); padding: 3px 10px; border-radius: 20px; font-weight: 700; }
+
+  /* 섹션 배지 */
+  .section-badge { background: #fce4ec; color: #ad1457; font-size: 13px; font-weight: 700; padding: 6px 16px; border-radius: 20px; display: inline-block; margin: 20px 24px 0; }
+
+  /* 메인 제목 */
+  h1.main-title { font-size: 26px; font-weight: 900; line-height: 1.4; padding: 14px 24px 0; color: #880e4f; }
+  h1.main-title em { font-style: normal; color: #ad1457; }
+
+  /* 훅 */
+  .hook { border-left: 5px solid #ad1457; margin: 20px 24px; padding: 14px 16px; background: #fce4ec; font-size: 15px; }
+  .hook .highlight { background: #ffeb3b; padding: 0 4px; font-weight: 700; }
+
+  /* 핵심 요약 박스 */
+  .summary-box { background: #2e7d32; color: #fff; margin: 20px 24px; padding: 20px; border-radius: 12px; }
+  .summary-box h2 { font-size: 16px; margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+  .summary-box ul { list-style: none; padding: 0; }
+  .summary-box ul li { padding: 5px 0; font-size: 14px; display: flex; gap: 8px; }
+  .summary-box ul li::before { content: "✅"; flex-shrink: 0; }
+
+  /* 섹션 */
+  .section { padding: 20px 24px; }
+  .section h2 { font-size: 18px; font-weight: 800; color: #880e4f; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 2px solid #f48fb1; }
+  .section p { font-size: 14px; margin-bottom: 10px; }
+
+  /* 표 */
+  table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 10px; }
+  th { background: #ad1457; color: #fff; padding: 10px 12px; text-align: left; }
+  td { padding: 9px 12px; border-bottom: 1px solid #e0e0e0; }
+  tr:nth-child(even) td { background: #fce4ec; }
+
+  /* 시행일정 박스 */
+  .deadline-box { border: 2px dashed #f57c00; border-radius: 10px; margin: 20px 24px; padding: 16px 20px; background: #fff8e1; }
+  .deadline-box h3 { color: #e65100; font-size: 16px; margin-bottom: 8px; }
+  .deadline-box p { font-size: 14px; color: #555; }
+
+  /* 신청 방법 */
+  .step-list { list-style: none; padding: 0; }
+  .step-list li { display: flex; gap: 14px; margin-bottom: 12px; align-items: flex-start; }
+  .step-num { background: #ad1457; color: #fff; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+  .step-list li p { font-size: 14px; }
+
+  /* 체크리스트 */
+  .checklist { list-style: none; padding: 0; }
+  .checklist li { padding: 7px 0; font-size: 14px; border-bottom: 1px dashed #f8bbd9; display: flex; gap: 8px; }
+  .checklist li::before { content: "✓"; color: #ad1457; font-weight: 900; flex-shrink: 0; }
+
+  /* 주의사항 */
+  .notice-list { list-style: none; padding: 0; }
+  .notice-list li { padding: 7px 0; font-size: 14px; border-bottom: 1px dashed #ddd; display: flex; gap: 8px; color: #444; }
+
+  /* 문의처 박스 */
+  .contact-box { background: #fce4ec; border-left: 5px solid #ad1457; margin: 20px 24px; padding: 16px 20px; border-radius: 0 10px 10px 0; }
+  .contact-box h3 { color: #880e4f; font-size: 16px; margin-bottom: 10px; }
+  .contact-box p { font-size: 14px; color: #333; margin-bottom: 6px; }
+
+  /* 찬반 론평 */
+  .opinion-section { margin: 30px 0; padding: 0 24px; }
+  .opinion-section > h2 { font-size: 18px; font-weight: 800; color: #880e4f; margin-bottom: 16px; padding-bottom: 6px; border-bottom: 2px solid #f48fb1; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  /* 해시태그 */
+  .hashtags { padding: 16px 24px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .hashtag { background: #fce4ec; color: #ad1457; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600; }
+
+  /* 면책조항 */
+  .disclaimer { background: #f5f5f5; margin: 10px 24px 20px; padding: 14px 16px; border-radius: 8px; font-size: 12px; color: #777; }
+
+  /* 메타 */
+  .meta { text-align: right; padding: 0 24px 24px; font-size: 12px; color: #aaa; }
+
+  /* SVG 영역 */
+  .svg-section { padding: 20px 24px; }
+  .svg-section h2 { font-size: 18px; font-weight: 800; color: #880e4f; margin-bottom: 14px; padding-bottom: 6px; border-bottom: 2px solid #f48fb1; }
+  svg { width: 100%; height: auto; }
+
+  /* 긴급 배너 */
+  .urgent-banner { background: #c62828; color: #fff; text-align: center; padding: 10px 20px; font-size: 15px; font-weight: 700; letter-spacing: 0.5px; }
+
+  @media (max-width: 600px) {
+    h1.main-title { font-size: 20px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    table { font-size: 12px; }
+    th, td { padding: 7px 8px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 긴급 배너 -->
+  <div class="urgent-banner">🚨 신청 마감 임박! 2026년 교육활동비 신청은 7월까지! 지금 바로 확인하세요</div>
+
+  <!-- 상단 헤더 -->
+  <div class="top-header">
+    <span>📅 2026년 6월 13일</span>
+    <span class="badge">오늘의 복지 뉴스 · 제2보</span>
+  </div>
+
+  <!-- 섹션 배지 -->
+  <span class="section-badge">🌏 다문화가족 지원</span>
+
+  <!-- 메인 제목 -->
+  <h1 class="main-title">
+    "우리 아이 다문화인데 공부비 <em>최대 60만원 공짜</em>로 준다고요?!"<br>
+    7월 마감 임박 — 지금 신청 안 하면 <em>1년 기다려야 합니다</em>
+  </h1>
+
+  <!-- 훅 -->
+  <div class="hook">
+    엄마가 외국에서 왔다는 이유로 우리 아이가 학원도, 책도 제대로 못 누리고 있지는 않으신가요?<br>
+    국가가 <span class="highlight">초등생 40만원 · 중학생 50만원 · 고등학생 60만원</span>을 카드 포인트로 쏩니다.
+    그런데 신청 기간이 <strong>7월까지</strong>입니다. 지금 읽고 바로 신청하세요.
+  </div>
+
+  <!-- 핵심 요약 박스 -->
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>기준 중위소득 <strong>100% 이하</strong> 다문화가족이면 소득 기준 여유 있음 — 웬만하면 해당됩니다</li>
+      <li>만 7세~18세 자녀에게 <strong>초등 40만원 / 중등 50만원 / 고등 60만원</strong> 연 1회 지급</li>
+      <li>신청 기간 <strong>5~7월</strong> — 지금이 마지막 기회, 놓치면 내년까지 기다려야 합니다</li>
+    </ul>
+  </div>
+
+  <!-- 배경/문제 섹션 -->
+  <div class="section">
+    <h2>📖 왜 이 지원이 생겼나</h2>
+    <p>
+      2025년 기준 국내 다문화가족은 약 <strong>38만 가구</strong>, 자녀 수는 30만 명에 육박합니다.
+      이 중 상당수는 부모의 언어·문화 차이로 인해 사교육 접근성이 낮고, 또래와의 교육 격차가 심각합니다.
+    </p>
+    <p>
+      여성가족부는 다문화 자녀의 교육 기회 균등을 위해 <strong>교육활동비 지원사업</strong>을 매년 운영합니다.
+      2026년에는 지원 단가가 소폭 인상됐으며, 교육급여 수급자를 제외한 기준 중위소득 100% 이하 가구라면
+      <strong>별도 수입 조사 없이 신청 가능</strong>합니다. 학원비, 교재비, 체험학습비 등에 자유롭게 쓸 수 있는
+      바우처(카드 포인트) 형태로 지급되어 활용도가 높습니다.
+    </p>
+  </div>
+
+  <!-- 상세 정보 표 -->
+  <div class="section">
+    <h2>📋 지원 내용 상세 (2026년 기준)</h2>
+    <table>
+      <tr><th>학교급</th><th>지원 대상 연령</th><th>연간 지원액</th><th>지급 방식</th></tr>
+      <tr><td>초등학생</td><td>만 7세~13세</td><td><strong>40만원</strong></td><td>카드 포인트</td></tr>
+      <tr><td>중학생</td><td>만 13세~16세</td><td><strong>50만원</strong></td><td>카드 포인트</td></tr>
+      <tr><td>고등학생</td><td>만 16세~18세</td><td><strong>60만원</strong></td><td>카드 포인트</td></tr>
+    </table>
+    <br>
+    <table>
+      <tr><th>구분</th><th>세부 내용</th></tr>
+      <tr><td>신청 대상</td><td>한쪽 부모가 외국인·귀화자인 다문화가족의 만 7~18세 자녀</td></tr>
+      <tr><td>소득 기준</td><td>기준 중위소득 <strong>100% 이하</strong> (4인 가구 기준 월 약 637만원 이하)</td></tr>
+      <tr><td>제외 대상</td><td>교육급여(기초수급) 수급 중인 자녀 (별도 더 높은 지원 있음)</td></tr>
+      <tr><td>사용처</td><td>학원비, 교재·학습자료, 체험학습, 문화·스포츠 활동 등</td></tr>
+      <tr><td>신청 기간</td><td>2026년 5월 ~ 7월 (지역별로 상이, 일부 조기 마감 가능)</td></tr>
+    </table>
+    <p style="margin-top:8px; font-size:12px; color:#888;">※ 지원 단가 및 기준은 지자체별 예산에 따라 다소 차이가 있을 수 있습니다.</p>
+  </div>
+
+  <!-- SVG 인포그래픽 -->
+  <div class="svg-section">
+    <h2>📊 학교급별 지원금 한눈에 보기</h2>
+    <svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg">
+      <!-- 배경 -->
+      <rect width="700" height="300" fill="#fce4ec" rx="12"/>
+      <text x="350" y="36" text-anchor="middle" font-size="17" font-weight="bold" fill="#880e4f">2026년 다문화가족 자녀 교육활동비</text>
+
+      <!-- 초등 막대 -->
+      <rect x="80" y="220" width="120" height="0" fill="#f48fb1" rx="6"/>
+      <rect x="80" y="120" width="120" height="100" fill="#f48fb1" rx="6"/>
+      <text x="140" y="112" text-anchor="middle" font-size="20" font-weight="bold" fill="#880e4f">40만원</text>
+      <text x="140" y="260" text-anchor="middle" font-size="14" font-weight="bold" fill="#555">초등학생</text>
+      <text x="140" y="278" text-anchor="middle" font-size="12" fill="#888">만 7~13세</text>
+
+      <!-- 중등 막대 -->
+      <rect x="280" y="220" width="120" height="0" fill="#e91e8c" rx="6"/>
+      <rect x="280" y="95" width="120" height="125" fill="#e91e8c" rx="6"/>
+      <text x="340" y="87" text-anchor="middle" font-size="20" font-weight="bold" fill="#880e4f">50만원</text>
+      <text x="340" y="260" text-anchor="middle" font-size="14" font-weight="bold" fill="#555">중학생</text>
+      <text x="340" y="278" text-anchor="middle" font-size="12" fill="#888">만 13~16세</text>
+
+      <!-- 고등 막대 -->
+      <rect x="480" y="220" width="120" height="0" fill="#ad1457" rx="6"/>
+      <rect x="480" y="70" width="120" height="150" fill="#ad1457" rx="6"/>
+      <text x="540" y="62" text-anchor="middle" font-size="20" font-weight="bold" fill="#880e4f">60만원</text>
+      <text x="540" y="260" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff" dy="-2"/>
+      <text x="540" y="258" text-anchor="middle" font-size="14" font-weight="bold" fill="#555">고등학생</text>
+      <text x="540" y="278" text-anchor="middle" font-size="12" fill="#888">만 16~18세</text>
+
+      <!-- 기준선 -->
+      <line x1="60" y1="220" x2="640" y2="220" stroke="#aaa" stroke-width="1.5" stroke-dasharray="4"/>
+    </svg>
+  </div>
+
+  <!-- 신청 방법 -->
+  <div class="section">
+    <h2>🖊️ 신청 방법 (단계별)</h2>
+    <ul class="step-list">
+      <li>
+        <div class="step-num">1</div>
+        <p><strong>거주지 확인:</strong> 자신이 사는 지역의 가족센터(다문화가족지원센터) 위치와 연락처를 확인합니다. 전국 가족센터 찾기: familyseoul.or.kr 또는 다누리 1577-1366</p>
+      </li>
+      <li>
+        <div class="step-num">2</div>
+        <p><strong>서류 준비:</strong> 부모 신분증, 외국인등록증(외국인 부모), 가족관계증명서 또는 출생증명서, 건강보험료 납부 확인서(소득 증빙용), 아동 학생증 또는 재학증명서</p>
+      </li>
+      <li>
+        <div class="step-num">3</div>
+        <p><strong>신청:</strong> 거주지 관할 <strong>가족센터 방문</strong> 또는 일부 지자체 <strong>온라인 신청</strong> 가능 — 가족센터에 먼저 전화로 신청 방법 확인 권장</p>
+      </li>
+      <li>
+        <div class="step-num">4</div>
+        <p><strong>심사 및 결정:</strong> 소득 확인 후 대상자 선정 통보 (약 1~3주 소요)</p>
+      </li>
+      <li>
+        <div class="step-num">5</div>
+        <p><strong>카드 포인트 지급:</strong> 선정 후 지정 카드사 포인트로 지급 — 가맹 학원·서점·체험학습 시설 등에서 사용</p>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 시행 일정 박스 -->
+  <div class="deadline-box">
+    <h3>⏰ 마감 임박! 신청 기간 확인</h3>
+    <p>📌 2026년 신청 기간: <strong>2026년 5월 ~ 7월</strong> (지역별 조기 마감 주의!)</p>
+    <p>📌 일부 지자체는 6월 말 접수 마감 — 지금 바로 내 지역 가족센터에 전화하세요.</p>
+    <p>📌 마감 후 신청 불가 — 다음 신청은 <strong>2027년 5월</strong>까지 기다려야 합니다.</p>
+  </div>
+
+  <!-- 자가 진단 체크리스트 -->
+  <div class="section">
+    <h2>✅ 내가 받을 수 있는지 5초 체크</h2>
+    <ul class="checklist">
+      <li>부 또는 모 중 한 명이 외국인이거나 귀화한 결혼이민자다</li>
+      <li>만 7세~18세 자녀가 현재 초·중·고에 재학 중이다</li>
+      <li>가구 소득인정액이 기준 중위소득 100% 이하다 (4인 가족 약 637만원 이하)</li>
+      <li>현재 교육급여(기초생활수급) 대상자가 아니다</li>
+      <li>아직 2026년 교육활동비를 신청하지 않았다 — 연 1회 지원이므로 반드시 신청해야 받습니다</li>
+    </ul>
+  </div>
+
+  <!-- 주의사항 -->
+  <div class="section">
+    <h2>⚠️ 주의사항</h2>
+    <ul class="notice-list">
+      <li>① 교육급여(기초수급자 자녀)는 본 사업 대상에서 <strong>제외</strong>됩니다. 교육급여를 이미 받는 경우 별도의 지원을 받고 있으니 혼동하지 마세요.</li>
+      <li>② 지원은 <strong>연 1회</strong>이며, 같은 연도 내 중복 신청 불가합니다.</li>
+      <li>③ 지급된 포인트는 <strong>연내 미사용 시 소멸</strong>될 수 있으니 기한 내 사용하세요.</li>
+      <li>④ 지역별로 예산이 달라 조기 마감되거나 추가 서류를 요구하는 경우가 있으니, 반드시 해당 지역 가족센터에 먼저 확인하세요.</li>
+    </ul>
+  </div>
+
+  <!-- 담당 기관 및 문의처 -->
+  <div class="contact-box">
+    <h3>📞 담당 기관 및 문의처</h3>
+    <p>🏢 <strong>주관 기관:</strong> 여성가족부 다문화가족과</p>
+    <p>📱 <strong>다누리 콜센터:</strong> <strong>1577-1366</strong> (24시간, 다국어 지원)</p>
+    <p>🏛️ <strong>방문 신청:</strong> 거주지 관할 <strong>가족센터(다문화가족지원센터)</strong></p>
+    <p>🌐 <strong>온라인:</strong> 가족센터 포털 familyseoul.or.kr / 다문화가족지원포털 다누리 danuri.go.kr</p>
+    <p>📄 <strong>전국 가족센터 찾기:</strong> 여성가족부 홈페이지 www.mogef.go.kr → 다문화가족지원센터</p>
+  </div>
+
+  <!-- 전문가 찬반 론평 -->
+  <div class="opinion-section">
+    <h2>💬 전문가 찬반 론평</h2>
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"교육활동비 지원은 다문화 가정 자녀가 교육 기회에서 소외되지 않도록 하는 직접적인 개입 수단입니다. 사용처를 학원·문화 활동 전반으로 넓혀 놓은 바우처 방식은 가정마다 다른 필요에 탄력적으로 대응할 수 있다는 점에서 높이 평가됩니다."</p>
+          <p class="author">— 다문화 교육 정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"기준 중위소득 100% 이하라는 비교적 넓은 소득 기준은 '경계선 다문화 가정'까지 포괄합니다. 아이의 국적이나 출생 여건이 아닌 부모 요인으로 발생하는 교육 불평등을 완화하는 데 긍정적인 역할을 합니다."</p>
+          <p class="author">— 이주민 지원 시민단체 활동가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"연 40~60만원은 실제 사교육비의 1~2개월치에 불과합니다. 지원 규모가 상징적 수준에 머무는 동안, 다문화 자녀의 학습 격차는 매년 누적됩니다. 단가를 최소 두 배로 올리지 않으면 체감 효과가 미미할 것입니다."</p>
+          <p class="author">— 교육복지 전문 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"신청 기간이 연 1회 2~3개월에 불과해, 홍보 부족과 언어 장벽 탓에 정작 필요한 가정이 신청 시기를 놓치는 경우가 빈번합니다. 상시 신청이나 자동 지급 방식으로의 전환이 필요합니다."</p>
+          <p class="author">— 사회복지 행정 연구자</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span class="hashtag">#다문화가족</span>
+    <span class="hashtag">#교육활동비</span>
+    <span class="hashtag">#다문화자녀지원</span>
+    <span class="hashtag">#2026복지</span>
+    <span class="hashtag">#결혼이민자</span>
+    <span class="hashtag">#다문화교육</span>
+    <span class="hashtag">#고등학생60만원</span>
+    <span class="hashtag">#신청마감임박</span>
+    <span class="hashtag">#다누리</span>
+    <span class="hashtag">#사회복지정책</span>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    ※ 이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부 및 신청 기간은 거주지 관할 가족센터 또는 여성가족부(1577-1366)에 직접 확인하세요. 지자체별 예산·일정에 따라 차이가 있을 수 있습니다.
+  </div>
+
+  <!-- 작성일 메타 -->
+  <p class="meta">작성일: 2026년 6월 13일 | 오늘의 복지뉴스 편집부</p>
+
+</div>
+</body>
+</html>
