@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"요양원 갔다가 낙상 당해도 아무도 몰랐다" 이제 끝납니다 — AI·로봇이 24시간 어르신 지킵니다, 2026년 스마트 돌봄 혁명 완전 정복 | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; background: #f8f9fa; color: #222; line-height: 1.7; }
+  .container { max-width: 800px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+
+  /* 상단 헤더 */
+  .top-header { background: #1565c0; color: #fff; padding: 10px 16px; border-radius: 8px 8px 0 0; display: flex; justify-content: space-between; align-items: center; font-size: 13px; flex-wrap: wrap; gap: 6px; }
+  .top-header .date-tag { background: rgba(255,255,255,0.2); padding: 3px 10px; border-radius: 20px; font-weight: 700; }
+
+  /* 섹션 배지 */
+  .section-badge { display: inline-block; background: #1565c0; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin: 18px 0 10px; }
+
+  /* 메인 제목 */
+  h1 { font-size: 28px; font-weight: 900; line-height: 1.4; color: #1a1a1a; margin-bottom: 18px; }
+  @media (max-width: 600px) { h1 { font-size: 21px; } }
+
+  /* 훅 */
+  .hook { border-left: 5px solid #1565c0; padding: 14px 18px; background: #f0f4ff; margin-bottom: 22px; font-size: 16px; border-radius: 0 8px 8px 0; }
+  .highlight { background: #dce8ff; color: #1565c0; font-weight: 900; padding: 0 4px; border-radius: 3px; }
+
+  /* 핵심 요약 박스 */
+  .summary-box { background: #e8f5e9; border-left: 5px solid #2e7d32; padding: 18px 20px; border-radius: 0 8px 8px 0; margin-bottom: 28px; }
+  .summary-box h2 { font-size: 15px; color: #2e7d32; font-weight: 900; margin-bottom: 10px; }
+  .summary-box ul { list-style: none; padding: 0; }
+  .summary-box ul li { font-size: 14px; padding: 4px 0; color: #1b5e20; font-weight: 700; }
+  .summary-box ul li::before { content: "✅ "; }
+
+  /* 섹션 헤딩 */
+  h2 { font-size: 19px; font-weight: 900; color: #1565c0; margin: 30px 0 12px; padding-bottom: 6px; border-bottom: 2px solid #bbdefb; }
+
+  /* 배경 섹션 */
+  .bg-section { background: #fafafa; padding: 16px 18px; border-radius: 8px; margin-bottom: 24px; font-size: 15px; }
+
+  /* 상세 정보 표 */
+  table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 14px; }
+  thead { background: #1565c0; color: #fff; }
+  thead th { padding: 10px 12px; text-align: left; font-weight: 700; }
+  tbody tr:nth-child(odd) { background: #f0f4ff; }
+  tbody tr:nth-child(even) { background: #fff; }
+  tbody td { padding: 10px 12px; border-bottom: 1px solid #d0dff0; vertical-align: top; }
+  tbody td:first-child { font-weight: 700; color: #1565c0; }
+
+  /* SVG 인포그래픽 */
+  .infographic { background: #f0f4ff; border: 1px solid #bbdefb; border-radius: 12px; padding: 20px; margin-bottom: 28px; text-align: center; overflow-x: auto; }
+  .infographic-title { font-size: 14px; font-weight: 700; color: #1565c0; margin-bottom: 14px; }
+
+  /* 신청 방법 */
+  .step-list { counter-reset: step; list-style: none; padding: 0; margin-bottom: 24px; }
+  .step-list li { counter-increment: step; display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid #f5f5f5; font-size: 15px; }
+  .step-list li::before { content: counter(step); background: #1565c0; color: #fff; min-width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+
+  /* 기한 박스 */
+  .deadline-box { border: 2px dashed #f57c00; background: #fff8e1; padding: 16px 20px; border-radius: 10px; margin-bottom: 26px; }
+  .deadline-box h3 { color: #e65100; font-size: 16px; font-weight: 900; margin-bottom: 8px; }
+  .deadline-box p { font-size: 14px; color: #555; line-height: 1.6; }
+
+  /* 자가진단 체크리스트 */
+  .checklist { background: #e3f2fd; border-radius: 10px; padding: 18px 20px; margin-bottom: 26px; }
+  .checklist h2 { color: #0d47a1; font-size: 17px; margin-bottom: 12px; border-bottom: 2px solid #90caf9; }
+  .checklist ul { list-style: none; padding: 0; }
+  .checklist ul li { padding: 8px 0; font-size: 14px; color: #333; border-bottom: 1px solid #bbdefb; }
+  .checklist ul li::before { content: "✓ "; color: #1565c0; font-weight: 900; }
+
+  /* 주의사항 */
+  .caution { background: #fff3cd; border-left: 4px solid #ffc107; padding: 16px 20px; border-radius: 0 8px 8px 0; margin-bottom: 26px; }
+  .caution h2 { color: #795548; font-size: 17px; margin-bottom: 12px; border-bottom: none; }
+  .caution p { font-size: 14px; color: #555; margin-bottom: 8px; line-height: 1.6; }
+
+  /* 문의처 박스 */
+  .contact-box { background: #1565c0; color: #fff; padding: 20px; border-radius: 10px; margin-bottom: 28px; }
+  .contact-box h2 { color: #fff; font-size: 17px; margin-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 8px; }
+  .contact-box p { font-size: 14px; margin-bottom: 6px; opacity: 0.93; }
+
+  /* 전문가 찬반 론평 */
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  @media (max-width: 600px) { .opinion-grid { grid-template-columns: 1fr; } }
+
+  /* 해시태그 */
+  .hashtags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+  .hashtag { background: #e3f2fd; color: #1565c0; padding: 5px 12px; border-radius: 20px; font-size: 13px; font-weight: 700; }
+
+  /* 면책조항 */
+  .disclaimer { background: #f5f5f5; color: #777; padding: 14px 18px; border-radius: 8px; font-size: 12px; margin-bottom: 14px; line-height: 1.6; }
+
+  /* 작성일 */
+  .meta { text-align: right; font-size: 12px; color: #aaa; }
+
+  /* 예산 하이라이트 카드 */
+  .budget-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+  .budget-card { background: #1565c0; color: #fff; border-radius: 12px; padding: 18px 16px; text-align: center; }
+  .budget-card .amount { font-size: 28px; font-weight: 900; }
+  .budget-card .label { font-size: 13px; opacity: 0.85; margin-top: 4px; }
+  @media (max-width: 600px) { .budget-cards { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 상단 헤더 -->
+  <div class="top-header">
+    <span class="date-tag">📅 2026년 6월 15일</span>
+    <span>오늘의 복지 뉴스 · 제2보</span>
+  </div>
+
+  <!-- 섹션 배지 -->
+  <span class="section-badge">🤖 AI·돌봄 혁신</span>
+
+  <!-- 메인 제목 -->
+  <h1>"요양원 갔다가 낙상 당해도 아무도 몰랐다" 이제 끝납니다 — AI·로봇이 24시간 어르신 지킵니다, 2026년 국가 스마트 돌봄 혁명 완전 정복</h1>
+
+  <!-- 훅 -->
+  <div class="hook">
+    "부모님 혼자 집에 두면 불안해서 잠을 못 잡니다." 이 걱정, 2026년부터 국가가 해결에 나섭니다.<br>
+    <span class="highlight">보건복지부가 총 257억원을 투입해 AI 복지상담·스마트홈 케어·돌봄로봇을 전국에 보급합니다.</span><br>
+    집에서 생활하는 노인·장애인이 AI 기술로 실시간 건강 모니터링을 받는 시대가 열렸습니다.
+  </div>
+
+  <!-- 핵심 요약 박스 -->
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>보건복지부 AI 복지·돌봄 혁신에 총 257억원 투입, 전국 확대 시행</li>
+      <li>스마트홈: AI가 낙상·이상 징후 실시간 감지 → 담당자에게 즉시 알림</li>
+      <li>AI 복지상담: 24시간 365일 맞춤형 복지 정보 안내 및 신청 지원</li>
+    </ul>
+  </div>
+
+  <!-- 예산 카드 -->
+  <div class="budget-cards">
+    <div class="budget-card">
+      <div class="amount">56.7억</div>
+      <div class="label">AI 복지·돌봄 혁신 TF 운영<br>(스마트홈·AI 복지상담·시범사업)</div>
+    </div>
+    <div class="budget-card">
+      <div class="amount">200억</div>
+      <div class="label">AI 응용제품 신속 상용화<br>(AX-Sprint 공모 지원사업)</div>
+    </div>
+  </div>
+
+  <!-- 배경 섹션 -->
+  <h2>📰 왜 지금 AI 돌봄인가?</h2>
+  <div class="bg-section">
+    <p>대한민국은 2025년 말 초고령사회(65세 이상 인구 20% 초과)에 진입했습니다. 그러나 요양보호사는 절대적으로 부족하고, 가족 돌봄은 한계에 달했습니다. 요양원·요양병원에서의 낙상 사고, 고독사, 고립 노인 문제는 매년 반복됩니다.</p><br>
+    <p>보건복지부는 이 문제를 해결하기 위해 2026년 <strong>AI 복지·돌봄 혁신 추진단(TF)</strong>을 출범하고, 집에서 필요한 의료·요양 서비스를 원스톱으로 받을 수 있는 <strong>스마트홈 케어 시스템</strong>을 전국에 도입하기 시작했습니다. 더불어 AI가 복지 대상자의 맞춤형 급여를 안내하고 신청까지 도와주는 <strong>AI 복지상담 서비스</strong>도 시범 운영 중입니다.</p>
+  </div>
+
+  <!-- 상세 정보 표 -->
+  <h2>📊 2026년 AI 복지·돌봄 혁신 주요 사업 현황</h2>
+  <table>
+    <thead>
+      <tr><th>사업명</th><th>주요 내용</th><th>예산</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>AI 복지상담</td><td>생성형 AI가 감정 소통하며 복지 급여 안내·신청 지원. 24시간 운영</td><td>TF 예산 포함</td></tr>
+      <tr><td>스마트홈 케어</td><td>노인·장애인 가정에 AI 센서 설치, 낙상·수면이상·바이탈 사인 실시간 감지 → 담당자 즉시 알림</td><td>TF 예산 포함</td></tr>
+      <tr><td>스마트 사회복지시설</td><td>요양원·복지관 내 AI 입소자 상태 모니터링, 배설·이동 보조 로봇 실증</td><td>TF 예산 포함</td></tr>
+      <tr><td>AX-Sprint 공모</td><td>AI 심리케어, 지역특화 복지 안내 AI, 고령친화 AI 제품 개발 기업 지원</td><td>200억원</td></tr>
+      <tr><td>노인맞춤돌봄 AI 연계</td><td>기존 노인맞춤돌봄서비스에 AI 고독·이상 감지 시스템 연동</td><td>별도 예산</td></tr>
+      <tr><td>돌봄로봇 실증</td><td>국립재활원 주관, 장애인·노인 일상 보조 돌봄로봇 개발·평가·보급</td><td>별도 예산</td></tr>
+    </tbody>
+  </table>
+
+  <!-- SVG 인포그래픽 -->
+  <div class="infographic">
+    <div class="infographic-title">🤖 2026 스마트 돌봄 시스템 — 어떻게 작동하나?</div>
+    <svg viewBox="0 0 700 360" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;">
+      <!-- 배경 -->
+      <rect width="700" height="360" fill="#f0f4ff" rx="12"/>
+
+      <!-- 타이틀 -->
+      <text x="350" y="30" text-anchor="middle" font-size="14" font-weight="bold" fill="#1565c0">AI 스마트홈 돌봄 작동 흐름도</text>
+
+      <!-- 단계 1: 가정 (어르신) -->
+      <rect x="30" y="55" width="140" height="80" rx="10" fill="#1565c0"/>
+      <text x="100" y="85" text-anchor="middle" font-size="18" fill="#fff">🏠</text>
+      <text x="100" y="107" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">어르신 가정</text>
+      <text x="100" y="125" text-anchor="middle" font-size="11" fill="#bbdefb">AI 센서 설치</text>
+
+      <!-- 화살표 1 -->
+      <line x1="170" y1="95" x2="230" y2="95" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+      <defs>
+        <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 Z" fill="#1565c0"/>
+        </marker>
+      </defs>
+      <text x="200" y="88" text-anchor="middle" font-size="10" fill="#555">실시간</text>
+      <text x="200" y="100" text-anchor="middle" font-size="10" fill="#555">데이터 전송</text>
+
+      <!-- 단계 2: AI 분석 -->
+      <rect x="230" y="55" width="140" height="80" rx="10" fill="#0d47a1"/>
+      <text x="300" y="85" text-anchor="middle" font-size="18" fill="#fff">🧠</text>
+      <text x="300" y="107" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">AI 분석 엔진</text>
+      <text x="300" y="125" text-anchor="middle" font-size="11" fill="#bbdefb">이상 패턴 감지</text>
+
+      <!-- 화살표 2 -->
+      <line x1="370" y1="95" x2="430" y2="95" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+      <text x="400" y="88" text-anchor="middle" font-size="10" fill="#555">즉시</text>
+      <text x="400" y="100" text-anchor="middle" font-size="10" fill="#555">알림</text>
+
+      <!-- 단계 3: 담당자 -->
+      <rect x="430" y="55" width="140" height="80" rx="10" fill="#1976d2"/>
+      <text x="500" y="85" text-anchor="middle" font-size="18" fill="#fff">📱</text>
+      <text x="500" y="107" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">담당 요원 알림</text>
+      <text x="500" y="125" text-anchor="middle" font-size="11" fill="#bbdefb">즉각 출동·조치</text>
+
+      <!-- 구분선 -->
+      <line x1="30" y1="165" x2="670" y2="165" stroke="#bbdefb" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+      <!-- 하단: AI가 감지하는 것들 -->
+      <text x="350" y="190" text-anchor="middle" font-size="13" font-weight="bold" fill="#0d47a1">AI가 24시간 감지하는 항목</text>
+
+      <rect x="40" y="205" width="140" height="60" rx="8" fill="#fff" stroke="#bbdefb"/>
+      <text x="110" y="230" text-anchor="middle" font-size="16">🚨</text>
+      <text x="110" y="250" text-anchor="middle" font-size="13" font-weight="bold" fill="#c62828">낙상 감지</text>
+      <text x="110" y="264" text-anchor="middle" font-size="11" fill="#666">움직임 이상 탐지</text>
+
+      <rect x="200" y="205" width="140" height="60" rx="8" fill="#fff" stroke="#bbdefb"/>
+      <text x="270" y="230" text-anchor="middle" font-size="16">🌙</text>
+      <text x="270" y="250" text-anchor="middle" font-size="13" font-weight="bold" fill="#1565c0">수면 패턴</text>
+      <text x="270" y="264" text-anchor="middle" font-size="11" fill="#666">이상 수면 경보</text>
+
+      <rect x="360" y="205" width="140" height="60" rx="8" fill="#fff" stroke="#bbdefb"/>
+      <text x="430" y="230" text-anchor="middle" font-size="16">❤️</text>
+      <text x="430" y="250" text-anchor="middle" font-size="13" font-weight="bold" fill="#1565c0">바이탈 사인</text>
+      <text x="430" y="264" text-anchor="middle" font-size="11" fill="#666">심박·혈압 이상</text>
+
+      <rect x="520" y="205" width="140" height="60" rx="8" fill="#fff" stroke="#bbdefb"/>
+      <text x="590" y="230" text-anchor="middle" font-size="16">🚶</text>
+      <text x="590" y="250" text-anchor="middle" font-size="13" font-weight="bold" fill="#1565c0">활동량</text>
+      <text x="590" y="264" text-anchor="middle" font-size="11" fill="#666">고립·무활동 감지</text>
+
+      <!-- 하단 안내 -->
+      <text x="350" y="295" text-anchor="middle" font-size="12" fill="#555">▼ AI 복지 상담 챗봇은 24시간 365일 맞춤 급여 안내 + 신청 지원</text>
+      <rect x="100" y="308" width="500" height="36" rx="8" fill="#1565c0"/>
+      <text x="350" y="332" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">💬 AI 복지상담: "나에게 맞는 복지가 뭔지 몰라요" → AI가 직접 알려드립니다</text>
+    </svg>
+  </div>
+
+  <!-- 신청 방법 -->
+  <h2>📝 스마트 돌봄 서비스 이용 방법</h2>
+  <ol class="step-list">
+    <li><strong>대상 확인:</strong> 65세 이상 독거 노인 또는 돌봄 필요 장애인, 지역사회 돌봄 서비스 대상자</li>
+    <li><strong>문의·신청:</strong> 주소지 읍·면·동 행정복지센터 방문 또는 노인맞춤돌봄서비스 신청 (복지로 www.bokjiro.go.kr)</li>
+    <li><strong>현장 조사:</strong> 담당 사회복지사 가정 방문 — 돌봄 수준 및 AI 센서 설치 여부 결정</li>
+    <li><strong>AI 장비 설치:</strong> 전문 기사가 가정을 방문해 AI 센서, 스마트 기기 설치 (설치비 무상 또는 보조)</li>
+    <li><strong>모니터링 시작:</strong> AI 시스템 가동 및 담당 요양보호사·사회복지사에게 모니터링 연동</li>
+  </ol>
+
+  <!-- 시행 일정 박스 -->
+  <div class="deadline-box">
+    <h3>⏰ 2026년 AI 돌봄 보급 일정</h3>
+    <p>📌 <strong>스마트홈 케어 시범사업:</strong> 2026년 상반기 시범 선정 완료, 하반기부터 본격 확산 시행<br>
+    📌 <strong>AX-Sprint 공모 사업:</strong> 2026년 공모 선정 기업 대상 지원금 집행, 제품 개발 착수<br>
+    📌 <strong>AI 복지상담 서비스:</strong> 2026년 하반기 전국 주요 지자체 시범 적용 예정<br>
+    📌 <strong>돌봄로봇 실증 평가:</strong> 국립재활원 주관 현장 실증 진행 중, 2026년 결과 발표 예정</p>
+  </div>
+
+  <!-- 자가진단 체크리스트 -->
+  <div class="checklist">
+    <h2>✅ 우리 부모님이 스마트 돌봄 대상인지 체크하세요</h2>
+    <ul>
+      <li>만 65세 이상이며 혼자 생활하고 있다 (독거 노인)</li>
+      <li>낙상 위험이 있거나 거동이 불편하다</li>
+      <li>가족이 가까이 없어 긴급 상황 발생 시 즉각 대응이 어렵다</li>
+      <li>치매 초기 또는 경도 인지 장애로 혼자 외출·생활이 위험하다</li>
+      <li>현재 노인맞춤돌봄서비스를 받고 있거나, 지역사회 돌봄 서비스를 이용 중이다</li>
+    </ul>
+  </div>
+
+  <!-- 주의사항 -->
+  <div class="caution">
+    <h2>⚠️ 이것만은 꼭 알아두세요</h2>
+    <p>① 스마트홈 케어 서비스는 현재 시범 운영 단계로, 전국 모든 지역에서 즉시 이용 가능하지 않을 수 있습니다.</p>
+    <p>② AI 돌봄은 기존 요양보호사·사회복지사의 역할을 보조하는 것이며, 완전히 대체하지 않습니다.</p>
+    <p>③ AI 센서 설치 시 어르신의 동의가 반드시 필요하며, 수집된 데이터는 개인정보보호법에 따라 보호됩니다.</p>
+    <p>④ AX-Sprint 공모는 기업 대상 지원사업으로, 개인 신청은 불가합니다.</p>
+  </div>
+
+  <!-- 담당 기관 및 문의처 -->
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <p>🏛️ <strong>주관 부처:</strong> 보건복지부 AI 복지·돌봄 혁신 추진단</p>
+    <p>📞 <strong>보건복지부 콜센터:</strong> ☎ <strong>129</strong> (24시간, 무료)</p>
+    <p>💻 <strong>노인맞춤돌봄서비스 신청:</strong> 복지로 www.bokjiro.go.kr</p>
+    <p>🏢 <strong>오프라인:</strong> 주소지 읍·면·동 행정복지센터 방문</p>
+    <p>🌐 <strong>AX-Sprint 공모 정보:</strong> 한국사회보장정보원 www.ssis.or.kr</p>
+    <p>🤖 <strong>서울시 AI 돌봄 로봇 문의:</strong> 서울시 어르신돌봄종합지원센터 ☎ 02-6951-0020</p>
+  </div>
+
+  <!-- 전문가 찬반 론평 -->
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"AI 스마트홈 케어는 돌봄 공백 문제를 기술로 보완하는 현실적 대안입니다. 독거 노인의 고독사·낙상 사망을 예방하는 데 있어 실시간 모니터링은 어떤 제도보다 효과적인 개입 수단이 될 수 있습니다."</p>
+          <p class="author">— 노인복지 정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"AI가 복지 급여를 안내하고 신청을 도와주는 복지상담 AI는 디지털 소외 계층에게도 정보 접근 기회를 확대할 수 있습니다. 특히 거동이 불편한 고령 수급자에게 실질적 혜택이 기대됩니다."</p>
+          <p class="author">— 사회서비스 정보화 전문가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"AI 기술이 아무리 발전해도 인간 돌봄의 정서적 교감을 완전히 대체할 수 없습니다. 기술 투자보다 요양보호사 처우 개선과 인력 확충에 예산이 먼저 집행되어야 합니다."</p>
+          <p class="author">— 노인돌봄 현장 활동가</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"AI 센서와 스마트홈 시스템은 디지털 기기 사용에 익숙하지 않은 고령자에게 오히려 부담이 될 수 있습니다. 기술 격차(디지털 디바이드)를 방치한 채 AI 돌봄만 확산하면 정작 가장 취약한 어르신이 소외될 위험이 있습니다."</p>
+          <p class="author">— 디지털 복지 격차 연구자</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span class="hashtag">#AI돌봄</span>
+    <span class="hashtag">#스마트홈케어</span>
+    <span class="hashtag">#돌봄로봇</span>
+    <span class="hashtag">#독거노인</span>
+    <span class="hashtag">#노인낙상예방</span>
+    <span class="hashtag">#AI복지상담</span>
+    <span class="hashtag">#보건복지부</span>
+    <span class="hashtag">#초고령사회</span>
+    <span class="hashtag">#2026복지혁신</span>
+    <span class="hashtag">#스마트복지시설</span>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    ※ 이 기사는 공개된 정보를 바탕으로 작성되었습니다. AI 돌봄 서비스의 구체적인 이용 가능 지역과 시기는 지자체 및 사업 진행 상황에 따라 달라질 수 있으며, 정확한 서비스 현황은 보건복지부 콜센터(129) 또는 주소지 행정복지센터에 직접 확인하시기 바랍니다.
+  </div>
+
+  <!-- 작성일 메타 -->
+  <p class="meta">작성일: 2026년 6월 15일 | 출처: 보건복지부, 한국사회보장정보원, 서울시</p>
+
+</div>
+</body>
+</html>
