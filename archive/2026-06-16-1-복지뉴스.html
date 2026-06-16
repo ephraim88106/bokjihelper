@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"보육원 나온 청년한테 나라가 月 50만원 + 목돈 2,255만원 줍니다" — 6월 22일 마감 임박, 자립준비청년 자립수당·청년미래적금 완전 정복 | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; background: #f5f5f5; color: #222; line-height: 1.7; }
+  .container { max-width: 800px; margin: 0 auto; background: #fff; padding-bottom: 40px; }
+
+  /* 상단 헤더 */
+  .top-header { background: #c62828; color: #fff; padding: 12px 20px; font-size: 13px; display: flex; justify-content: space-between; align-items: center; }
+  .top-header .date-tag { background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 20px; font-size: 12px; }
+  .top-header .issue-num { font-weight: 700; }
+
+  /* 섹션 배지 */
+  .section-badge { background: #c62828; color: #fff; display: inline-block; padding: 5px 14px; border-radius: 20px; font-size: 13px; font-weight: 700; margin: 20px 20px 10px; }
+
+  /* 메인 제목 */
+  h1 { font-size: 28px; font-weight: 900; line-height: 1.4; padding: 0 20px 16px; color: #111; }
+  h1 em { color: #c62828; font-style: normal; }
+
+  /* 훅 */
+  .hook { border-left: 5px solid #c62828; padding: 16px 20px; margin: 0 20px 24px; background: #fff8f8; font-size: 16px; line-height: 1.8; }
+  .hook .highlight { background: #ffd6d6; padding: 2px 5px; border-radius: 3px; font-weight: 700; }
+
+  /* 핵심 요약 박스 */
+  .summary-box { background: #e8f5e9; border-left: 5px solid #2e7d32; margin: 0 20px 28px; padding: 18px 20px; border-radius: 8px; }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; margin-bottom: 12px; }
+  .summary-box li { list-style: none; padding: 4px 0; font-size: 15px; }
+  .summary-box li::before { content: "✅ "; }
+
+  /* 섹션 제목 */
+  h2 { font-size: 20px; font-weight: 900; color: #c62828; padding: 28px 20px 12px; border-bottom: 2px solid #c62828; margin: 0 20px 16px; }
+
+  /* 본문 텍스트 */
+  .body-text { padding: 0 20px; font-size: 15px; line-height: 1.9; margin-bottom: 20px; }
+
+  /* 표 */
+  .table-wrap { padding: 0 20px; margin-bottom: 24px; overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { background: #c62828; color: #fff; padding: 10px 14px; text-align: left; }
+  td { padding: 10px 14px; border-bottom: 1px solid #eee; }
+  tr:nth-child(even) td { background: #fff5f5; }
+
+  /* SVG 인포그래픽 */
+  .infographic { padding: 0 20px; margin-bottom: 28px; }
+  .infographic svg { width: 100%; border-radius: 12px; }
+
+  /* 신청 방법 */
+  .steps { padding: 0 20px; margin-bottom: 24px; }
+  .step-item { display: flex; gap: 14px; margin-bottom: 14px; align-items: flex-start; }
+  .step-num { background: #c62828; color: #fff; min-width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 15px; }
+  .step-text { font-size: 15px; line-height: 1.7; padding-top: 4px; }
+
+  /* 시행 일정 박스 */
+  .deadline-box { border: 2px dashed #f57c00; border-radius: 10px; margin: 0 20px 28px; padding: 18px 20px; background: #fff8e1; }
+  .deadline-box h3 { color: #e65100; font-size: 17px; margin-bottom: 10px; }
+  .deadline-box p { font-size: 15px; }
+  .deadline-box strong { color: #c62828; }
+
+  /* 체크리스트 */
+  .checklist { padding: 0 20px; margin-bottom: 24px; }
+  .checklist li { list-style: none; padding: 8px 0; font-size: 15px; border-bottom: 1px solid #f0f0f0; }
+  .checklist li::before { content: "✓ "; color: #c62828; font-weight: 900; font-size: 18px; }
+
+  /* 주의사항 */
+  .caution { padding: 0 20px; margin-bottom: 24px; }
+  .caution li { list-style: none; padding: 7px 0; font-size: 14px; }
+
+  /* 담당 기관 */
+  .contact-box { background: #fff0f0; border-radius: 12px; margin: 0 20px 28px; padding: 20px; border: 1px solid #f8bbd0; }
+  .contact-box h3 { color: #c62828; font-size: 16px; margin-bottom: 12px; }
+  .contact-box p { font-size: 14px; line-height: 1.9; }
+  .contact-box a { color: #c62828; font-weight: 700; }
+
+  /* 찬반 론평 */
+  .opinion-section { margin: 0 20px 28px; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  /* 해시태그 */
+  .hashtags { padding: 0 20px; margin-bottom: 24px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .hashtags span { background: #fff0f0; color: #c62828; padding: 5px 12px; border-radius: 20px; font-size: 13px; font-weight: 700; }
+
+  /* 면책조항 */
+  .disclaimer { margin: 0 20px 16px; background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12px; color: #888; }
+
+  /* 작성일 */
+  .meta { text-align: right; padding: 0 20px; font-size: 12px; color: #aaa; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 21px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .top-header { flex-direction: column; gap: 6px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 상단 헤더 -->
+  <div class="top-header">
+    <span class="date-tag">📅 2026년 6월 16일</span>
+    <span class="issue-num">오늘의 복지 뉴스 · 제1보</span>
+  </div>
+
+  <!-- 섹션 배지 -->
+  <span class="section-badge">🏠 청년·자립 지원</span>
+
+  <!-- 메인 제목 -->
+  <h1>"보육원 나온 청년한테 나라가 <em>月 50만원 + 목돈 2,255만원</em> 줍니다" — <em>6월 22일 마감 임박</em>, 자립준비청년 자립수당·청년미래적금 완전 정복</h1>
+
+  <!-- 훅 -->
+  <div class="hook">
+    보육원이나 공동생활가정에서 보호가 끝난 청년, 혼자 사회에 나왔다고 그냥 버려지지 않습니다.<br>
+    <span class="highlight">월 50만원 자립수당</span>에 <span class="highlight">최대 2,255만원 목돈 적금</span>까지 — 그런데 정작 당사자들이 모르는 경우가 허다합니다.<br>
+    청년미래적금 신청은 <strong>6월 22일 시작</strong>, 지금 당장 준비해야 합니다.
+  </div>
+
+  <!-- 핵심 요약 박스 -->
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>자립준비청년(보호종료 5년 이내) = 매달 50만원 자립수당 최대 5년</li>
+      <li>청년미래적금 신청 기간: 2026년 6월 22일 ~ 7월 3일 (2주 뿐!)</li>
+      <li>두 지원을 함께 받으면 3년 후 최대 2,255만원 + 매달 50만원이 동시에 들어온다</li>
+    </ul>
+  </div>
+
+  <!-- 배경 섹션 -->
+  <h2>🔍 왜 이 지원이 생겼나</h2>
+  <div class="body-text">
+    아동복지시설·가정위탁에서 보호를 받던 아이들은 만 18세(또는 대학 재학 중이면 최대 24세)가 되면 갑자기 혼자 세상에 나와야 합니다. 가족의 지원도, 보증금도, 사회적 연결망도 없이 시작해야 하는 이 청년들을 '자립준비청년' 또는 '보호종료청년'이라고 부릅니다. 전국에 매년 약 2,500명이 이 과정을 겪습니다.<br><br>
+    이들을 위해 정부는 자립수당(월 50만원)과 함께 2026년 6월 청년미래적금을 새로 출시했습니다. 이 두 제도를 결합하면 매달 자립수당 50만원을 받으면서 동시에 3년간 목돈 2,255만원을 모을 수 있습니다.
+  </div>
+
+  <!-- 상세 정보 표 -->
+  <h2>📊 지원 내용 한눈에 비교</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>구분</th><th>자립수당</th><th>청년미래적금</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>지원 대상</td><td>보호종료 5년 이내 자립준비청년</td><td>만 19~34세 청년 (자립준비청년 포함)</td></tr>
+        <tr><td>지원 금액</td><td>월 50만원</td><td>월 최대 50만원 납입 + 정부 기여금 6~12%</td></tr>
+        <tr><td>기간</td><td>최대 5년 (60개월)</td><td>3년 만기</td></tr>
+        <tr><td>최대 수혜액</td><td>총 3,000만원</td><td>만기 시 최대 2,255만원</td></tr>
+        <tr><td>신청 기간</td><td>수시 신청</td><td>2026년 6월 22일 ~ 7월 3일</td></tr>
+        <tr><td>신청처</td><td>주민센터 / 아동보호전문기관</td><td>은행 앱 또는 영업점 (15개 은행)</td></tr>
+        <tr><td>소득 기준</td><td>별도 소득 기준 없음</td><td>연 소득 7,500만원 이하, 중위소득 200% 이하</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SVG 인포그래픽 -->
+  <h2>📈 자립준비청년 지원 구조 한눈에 보기</h2>
+  <div class="infographic">
+    <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" style="background:#fff9f9; border-radius:12px; border:1px solid #ffd0d0;">
+      <!-- 제목 -->
+      <text x="380" y="38" text-anchor="middle" font-size="17" font-weight="bold" fill="#c62828">자립준비청년 3년 목돈 수령 시뮬레이션</text>
+      <!-- 자립수당 막대 -->
+      <rect x="80" y="60" width="180" height="160" rx="8" fill="#c62828" opacity="0.85"/>
+      <text x="170" y="110" text-anchor="middle" font-size="14" fill="#fff" font-weight="bold">자립수당</text>
+      <text x="170" y="135" text-anchor="middle" font-size="22" fill="#fff" font-weight="900">월 50만원</text>
+      <text x="170" y="160" text-anchor="middle" font-size="12" fill="#fff">× 36개월</text>
+      <text x="170" y="200" text-anchor="middle" font-size="16" fill="#fff" font-weight="bold">= 1,800만원</text>
+      <!-- 플러스 -->
+      <text x="290" y="148" text-anchor="middle" font-size="36" fill="#c62828" font-weight="900">+</text>
+      <!-- 청년미래적금 막대 -->
+      <rect x="320" y="60" width="180" height="160" rx="8" fill="#ad1457" opacity="0.85"/>
+      <text x="410" y="110" text-anchor="middle" font-size="14" fill="#fff" font-weight="bold">청년미래적금</text>
+      <text x="410" y="135" text-anchor="middle" font-size="22" fill="#fff" font-weight="900">月 50만원</text>
+      <text x="410" y="160" text-anchor="middle" font-size="12" fill="#fff">납입 + 정부기여금</text>
+      <text x="410" y="200" text-anchor="middle" font-size="16" fill="#fff" font-weight="bold">= 최대 2,255만원</text>
+      <!-- 등호 -->
+      <text x="530" y="148" text-anchor="middle" font-size="36" fill="#c62828" font-weight="900">=</text>
+      <!-- 결과 박스 -->
+      <rect x="560" y="70" width="160" height="140" rx="10" fill="#fff0f0" stroke="#c62828" stroke-width="2.5"/>
+      <text x="640" y="110" text-anchor="middle" font-size="13" fill="#c62828" font-weight="bold">3년 후 총 수령액</text>
+      <text x="640" y="148" text-anchor="middle" font-size="26" fill="#c62828" font-weight="900">4,055만원</text>
+      <text x="640" y="172" text-anchor="middle" font-size="11" fill="#888">(최대 기준)</text>
+      <text x="640" y="195" text-anchor="middle" font-size="11" fill="#888">+ 이자소득세 면제</text>
+      <!-- 하단 메모 -->
+      <text x="380" y="275" text-anchor="middle" font-size="11" fill="#aaa">※ 자립수당 수령액(1,800만원) + 청년미래적금 만기 수령(최대 2,255만원) 합산 기준</text>
+    </svg>
+  </div>
+
+  <!-- 신청 방법 -->
+  <h2>🖊️ 신청 방법 (단계별)</h2>
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-text"><strong>자립수당 신청</strong> — 주소지 읍·면·동 주민센터 또는 가까운 아동보호전문기관 방문. 보호종료 확인서, 신분증 지참.</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-text"><strong>청년미래적금 신청 준비 (6월 22일 전)</strong> — 참여 은행 15곳 중 1곳을 선택. 주요 은행 앱(KB국민·우리·신한 등)에서 사전 알림 신청 가능.</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-text"><strong>6월 22일 ~ 7월 3일 청년미래적금 개좌 개설</strong> — 은행 앱 or 영업점. 월 납입금액(1~50만원) 설정. 이 기간 놓치면 다음 모집까지 대기.</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-text"><strong>서비스 통합 확인</strong> — '자립정보 ON' 홈페이지(www.jaripon.go.kr)에서 자립수당·주거·의료 등 전체 지원 이력 통합 조회.</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">5</div>
+      <div class="step-text"><strong>추가 지원 연계</strong> — 자립준비청년은 LH청약 특별공급, 대학등록금 전액 지원(국가장학금), 취업성공패키지도 우선 연계 가능.</div>
+    </div>
+  </div>
+
+  <!-- 시행 일정 박스 -->
+  <div class="deadline-box">
+    <h3>⏰ 청년미래적금 신청 기간 — 이 2주를 놓치면 안 됩니다!</h3>
+    <p>
+      📅 <strong>2026년 6월 22일(월) ~ 7월 3일(금)</strong> — 딱 2주<br>
+      🏦 참여 은행: KB국민·신한·우리·하나·NH농협·IBK기업 등 15개 은행<br>
+      📱 신청 방법: 은행 앱 또는 영업점 직접 방문 모두 가능<br>
+      ⚠️ <strong>이 기간 외에는 신청 불가</strong> — 다음 기회는 미정
+    </p>
+  </div>
+
+  <!-- 자가 진단 체크리스트 -->
+  <h2>✅ 나는 해당될까? 자가진단 체크리스트</h2>
+  <ul class="checklist">
+    <li>아동복지시설(보육원·그룹홈)이나 가정위탁에서 보호를 받다 만료된 청년인가요?</li>
+    <li>보호 종료 후 5년이 지나지 않았나요? (2021년 이후 종료 = 해당)</li>
+    <li>만 19세 ~ 34세 이하인가요?</li>
+    <li>자립수당을 아직 한 번도 신청하지 않았나요?</li>
+    <li>6월 22일 ~ 7월 3일에 은행 앱 또는 영업점 방문이 가능한가요?</li>
+  </ul>
+
+  <!-- 주의사항 -->
+  <h2>⚠️ 주의사항</h2>
+  <div class="caution">
+    <ul>
+      <li>① 청년미래적금은 만기 전 중도해지 시 정부 기여금이 모두 환수됩니다. 3년간 납입 유지가 중요합니다.</li>
+      <li>② 자립수당은 타 급여와 중복 수급 가능하나, 일부 지자체 수당과 조정될 수 있으니 담당 기관 확인 필수.</li>
+      <li>③ 청년미래적금 가입 후 청년도약계좌에서 '갈아타기'를 원하면 별도 전환 절차가 필요합니다.</li>
+      <li>④ 소득 증빙이 없는 미취업 청년도 자립수당 신청은 가능하나, 청년미래적금은 개인소득 확인이 필요합니다.</li>
+    </ul>
+  </div>
+
+  <!-- 담당 기관 -->
+  <div class="contact-box">
+    <h3>📞 담당 기관 및 문의처</h3>
+    <p>
+      🏢 <strong>자립수당 신청</strong> — 주소지 읍·면·동 주민센터 / 아동보호전문기관<br>
+      🌐 <strong>자립정보 통합 조회</strong> — <a href="http://www.jaripon.go.kr" target="_blank">자립정보 ON (www.jaripon.go.kr)</a><br>
+      ☎ <strong>보건복지상담센터</strong> — 국번 없이 <strong>129</strong> (24시간)<br>
+      🏦 <strong>청년미래적금 문의</strong> — 각 참여 은행 고객센터 또는 서민금융진흥원 1397<br>
+      📱 <strong>복지로 앱</strong> — '자립준비청년' 검색 시 전체 지원 목록 한눈에 확인
+    </p>
+  </div>
+
+  <!-- 전문가 찬반 론평 -->
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"자립준비청년에게 자립수당과 자산형성 수단을 동시에 연계한 것은, 단순 생계비 지원을 넘어 장기적 자립 기반을 구축하는 적절한 방향이다."</p>
+          <p class="author">— 아동복지 정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"2주라는 신청 기간이 짧아 일부 청년이 놓칠 수 있다는 우려는 있지만, 정부가 자립준비청년을 별도 우선 대상으로 명시한 것 자체가 진전이다."</p>
+          <p class="author">— 청년복지 시민단체 활동가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"월 50만원 자립수당은 서울 기준 월세조차 감당하기 어렵다. 실질적 자립을 위해서는 주거 지원과 취업 연계가 동반되지 않으면 용돈 수준에 그칠 수밖에 없다."</p>
+          <p class="author">— 주거권 사회복지 현장 활동가</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"청년미래적금의 중도해지 시 기여금 전액 환수 조항은, 소득 불안정한 자립준비청년에게 오히려 부담으로 작용할 수 있어 탄력적 유예 규정이 필요하다."</p>
+          <p class="author">— 사회보장 재정 연구자</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span>#자립준비청년</span>
+    <span>#보호종료청년</span>
+    <span>#자립수당50만원</span>
+    <span>#청년미래적금</span>
+    <span>#6월22일신청</span>
+    <span>#보육원출신청년</span>
+    <span>#2026복지지원</span>
+    <span>#목돈2255만원</span>
+    <span>#청년복지</span>
+    <span>#복지로신청</span>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    ※ 이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부 및 세부 요건은 담당 기관(주민센터·보건복지상담센터 129)에 반드시 확인하세요. 청년미래적금 일정 및 금리는 금융기관 사정에 따라 변경될 수 있습니다.
+  </div>
+
+  <p class="meta">작성일: 2026-06-16 | 오늘의 복지뉴스</p>
+
+</div>
+</body>
+</html>
