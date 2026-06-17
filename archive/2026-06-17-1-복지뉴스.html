@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"맞벌이인데 소득이 4,400만원이라 장려금 못 받는다고요?" 틀렸습니다 — 2026년 근로장려금 소득기준 대폭 완화, 최대 330만원 지금 당장 확인하세요 | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif; background: #fff8f2; color: #222; line-height: 1.7; }
+  .container { max-width: 780px; margin: 0 auto; padding: 20px 16px 60px; }
+
+  /* 상단 헤더 */
+  .top-header { background: linear-gradient(135deg, #f57c00, #ff9800); color: #fff; padding: 14px 20px; border-radius: 12px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  .top-header .date-tag { font-size: 13px; opacity: 0.9; }
+  .top-header .issue-tag { font-size: 13px; font-weight: 700; background: rgba(255,255,255,0.25); padding: 4px 12px; border-radius: 20px; }
+
+  /* 섹션 배지 */
+  .section-badge { display: inline-block; background: #f57c00; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 14px; border-radius: 20px; margin-bottom: 12px; }
+
+  /* 메인 제목 */
+  h1 { font-size: 26px; font-weight: 900; color: #bf360c; line-height: 1.4; margin-bottom: 20px; word-break: keep-all; }
+  @media (max-width: 600px) { h1 { font-size: 21px; } }
+
+  /* 훅 */
+  .hook { border-left: 5px solid #f57c00; background: #fff3e0; padding: 16px 20px; border-radius: 0 10px 10px 0; margin-bottom: 24px; font-size: 15px; line-height: 1.8; }
+  .hook .highlight { background: #ffe0b2; padding: 2px 6px; border-radius: 4px; font-weight: 700; color: #e65100; }
+
+  /* 핵심 요약 박스 */
+  .summary-box { background: #e8f5e9; border-left: 5px solid #2e7d32; padding: 18px 22px; border-radius: 0 12px 12px 0; margin-bottom: 28px; }
+  .summary-box h2 { font-size: 15px; color: #1b5e20; font-weight: 900; margin-bottom: 10px; }
+  .summary-box ul { list-style: none; padding: 0; }
+  .summary-box ul li { font-size: 14px; padding: 4px 0; color: #2e7d32; font-weight: 600; }
+  .summary-box ul li::before { content: "📌 "; }
+
+  /* 섹션 제목 */
+  h2 { font-size: 19px; font-weight: 800; color: #e65100; margin: 30px 0 14px; border-bottom: 2px solid #ffe0b2; padding-bottom: 6px; }
+
+  p { font-size: 15px; line-height: 1.85; margin-bottom: 14px; color: #333; }
+
+  /* 상세 정보 표 */
+  .info-table { width: 100%; border-collapse: collapse; margin: 16px 0 28px; font-size: 14px; }
+  .info-table th { background: #f57c00; color: #fff; padding: 10px 14px; text-align: left; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #ffe0b2; background: #fff; }
+  .info-table tr:nth-child(even) td { background: #fff8f2; }
+  .info-table .amount { font-weight: 800; color: #bf360c; font-size: 15px; }
+  @media (max-width: 600px) { .info-table th, .info-table td { padding: 8px 10px; font-size: 13px; } }
+
+  /* SVG 인포그래픽 */
+  .infographic { background: #fff; border: 2px solid #ffe0b2; border-radius: 14px; padding: 20px; margin: 24px 0; overflow-x: auto; }
+  .infographic h3 { font-size: 15px; font-weight: 800; color: #e65100; margin-bottom: 16px; text-align: center; }
+
+  /* 신청 방법 */
+  .steps { counter-reset: step; list-style: none; padding: 0; margin: 0 0 24px; }
+  .steps li { counter-increment: step; padding: 12px 16px 12px 52px; position: relative; background: #fff; border: 1px solid #ffe0b2; border-radius: 10px; margin-bottom: 10px; font-size: 14px; }
+  .steps li::before { content: counter(step); position: absolute; left: 14px; top: 50%; transform: translateY(-50%); background: #f57c00; color: #fff; width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 13px; }
+
+  /* 시행 일정 박스 */
+  .deadline-box { border: 2px dashed #f57c00; background: #fff8f2; padding: 18px 22px; border-radius: 12px; margin: 24px 0; }
+  .deadline-box h3 { font-size: 15px; color: #e65100; font-weight: 900; margin-bottom: 10px; }
+  .deadline-box p { font-size: 14px; margin: 0; color: #555; }
+  .deadline-box strong { color: #bf360c; }
+
+  /* 자가 진단 체크리스트 */
+  .checklist { background: #fff; border: 2px solid #f57c00; border-radius: 12px; padding: 20px; margin: 24px 0; }
+  .checklist h3 { font-size: 15px; font-weight: 900; color: #e65100; margin-bottom: 14px; }
+  .checklist ul { list-style: none; padding: 0; }
+  .checklist ul li { padding: 7px 0; font-size: 14px; border-bottom: 1px solid #fff3e0; color: #333; }
+  .checklist ul li:last-child { border-bottom: none; }
+  .checklist ul li::before { content: "✓ "; color: #f57c00; font-weight: 900; }
+
+  /* 주의사항 */
+  .caution { background: #fff3e0; border-radius: 10px; padding: 18px 22px; margin: 20px 0; }
+  .caution h3 { font-size: 15px; font-weight: 800; color: #e65100; margin-bottom: 10px; }
+  .caution p { font-size: 13px; color: #555; margin-bottom: 8px; }
+  .caution p:last-child { margin-bottom: 0; }
+
+  /* 담당 기관 박스 */
+  .contact-box { background: #fff3e0; border-left: 5px solid #f57c00; border-radius: 0 12px 12px 0; padding: 20px 22px; margin: 28px 0; }
+  .contact-box h3 { font-size: 15px; font-weight: 900; color: #e65100; margin-bottom: 12px; }
+  .contact-box p { font-size: 14px; margin-bottom: 6px; color: #333; }
+  .contact-box a { color: #f57c00; font-weight: 700; }
+
+  /* 전문가 찬반 론평 */
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  @media (max-width: 600px) { .opinion-grid { grid-template-columns: 1fr; } }
+
+  /* 해시태그 */
+  .hashtags { margin: 28px 0 20px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .hashtag { background: #fff3e0; color: #e65100; font-size: 13px; font-weight: 700; padding: 5px 14px; border-radius: 20px; border: 1px solid #ffcc80; }
+
+  /* 면책조항 */
+  .disclaimer { background: #f5f5f5; border-radius: 10px; padding: 14px 18px; font-size: 12px; color: #888; margin-top: 30px; }
+
+  /* 작성일 */
+  .meta { text-align: right; font-size: 12px; color: #aaa; margin-top: 14px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 상단 헤더 -->
+  <div class="top-header">
+    <span class="date-tag">📅 2026년 6월 17일 · 오늘의 복지 뉴스</span>
+    <span class="issue-tag">제1보 · 지원금·세금환급</span>
+  </div>
+
+  <!-- 섹션 배지 -->
+  <span class="section-badge">💰 근로장려금 2026</span>
+
+  <!-- 메인 제목 -->
+  <h1>"맞벌이인데 소득 4,400만원이라 근로장려금 못 받는다고요?" 틀렸습니다 — 소득기준 대폭 완화, 최대 330만원·9월 지급 확정, 지금 당장 자동신청 확인하세요</h1>
+
+  <!-- 훅 -->
+  <div class="hook">
+    매년 5월이면 "나는 안 되겠지"하고 포기하는 분들이 많습니다. 그런데 올해는 달라졌습니다.
+    <span class="highlight">맞벌이 가구 소득 상한이 4,400만원으로 껑충 뛰었고, 자동신청 제도가 전 연령으로 확대</span>됐습니다.
+    근로·사업·종교인 소득이 있다면 지금 당장 조건을 확인해보세요. 안 받으면 그냥 날리는 돈입니다.
+  </div>
+
+  <!-- 핵심 요약 박스 -->
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>맞벌이 소득 상한 4,400만원 — 기존보다 600만원 올라 더 많은 가구가 혜택</li>
+      <li>최대 330만원(맞벌이) · 자동신청 전 연령 확대 — 한 번 동의하면 매년 자동</li>
+      <li>9월 말 지급 · 재산 2억 4천만원 미만이면 신청 가능</li>
+    </ul>
+  </div>
+
+  <!-- 배경 -->
+  <h2>📰 왜 이 돈을 놓치면 안 되나</h2>
+  <p>근로장려금(EITC)은 국세청이 저·중소득 근로자·사업자 가구에 직접 현금을 돌려주는 제도입니다. 세금을 안 냈어도 받을 수 있고, 신청만 하면 됩니다. 그런데 매년 수백만 명이 자격이 되는데도 몰라서, 귀찮아서 신청을 안 해 돈을 그냥 포기합니다.</p>
+  <p>2026년 가장 큰 변화는 두 가지입니다. 첫째, <strong>맞벌이 가구 소득 상한이 3,800만원에서 4,400만원으로 600만원 인상</strong>됐습니다. 둘째, 60세 이상에게만 적용됐던 <strong>자동신청 동의 제도가 전 연령으로 확대</strong>돼, 한 번만 동의해두면 다음 해부터 신청하지 않아도 자동으로 처리됩니다.</p>
+
+  <!-- 상세 정보 표 -->
+  <h2>📊 2026년 근로장려금 지급 기준 한눈에 보기</h2>
+  <table class="info-table">
+    <thead>
+      <tr><th>구분</th><th>소득 상한</th><th>최대 지급액</th><th>재산 기준</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>단독가구</td><td>2,200만원 미만</td><td class="amount">최대 165만원</td><td rowspan="3" style="vertical-align:middle;">가구 전체 재산<br><strong>2억 4천만원 미만</strong><br><small>(1.7억 이상이면 감액)</small></td></tr>
+      <tr><td>홑벌이가구</td><td>3,200만원 미만</td><td class="amount">최대 285만원</td></tr>
+      <tr><td><strong>맞벌이가구 🆕</strong></td><td><strong>4,400만원 미만</strong></td><td class="amount"><strong>최대 330만원</strong></td></tr>
+    </tbody>
+  </table>
+  <table class="info-table">
+    <thead>
+      <tr><th>항목</th><th>내용</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>대상 소득 종류</td><td>근로소득, 사업소득(보험·방문판매 등 포함), 종교인 소득</td></tr>
+      <tr><td>정기 신청 기간</td><td>2026년 5월 1일 ~ 6월 1일</td></tr>
+      <tr><td>반기 신청 (하반기)</td><td>2026년 9월 1일 ~ 9월 15일 (하반기 반기 신청)</td></tr>
+      <tr><td>지급 시기 (정기)</td><td>2026년 <strong>9월 말</strong> 지급 예정</td></tr>
+      <tr><td>자동신청 제도</td><td>전 연령 확대 — 한 번 동의 후 매년 자동 신청</td></tr>
+      <tr><td>신청 채널</td><td>홈택스(PC/앱), ARS 1544-9944, 세무서 방문</td></tr>
+    </tbody>
+  </table>
+
+  <!-- SVG 인포그래픽 -->
+  <div class="infographic">
+    <h3>💡 가구 유형별 최대 지급액 비교</h3>
+    <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block;">
+      <!-- 배경 -->
+      <rect width="700" height="260" fill="#fff8f2" rx="10"/>
+      <!-- 축 -->
+      <line x1="80" y1="30" x2="80" y2="210" stroke="#ddd" stroke-width="1.5"/>
+      <line x1="80" y1="210" x2="660" y2="210" stroke="#ddd" stroke-width="1.5"/>
+      <!-- y축 눈금 -->
+      <text x="72" y="213" text-anchor="end" fill="#aaa" font-size="11">0</text>
+      <text x="72" y="163" text-anchor="end" fill="#aaa" font-size="11">100</text>
+      <text x="72" y="113" text-anchor="end" fill="#aaa" font-size="11">200</text>
+      <text x="72" y="63" text-anchor="end" fill="#aaa" font-size="11">300</text>
+      <line x1="78" y1="210" x2="82" y2="210" stroke="#bbb" stroke-width="1"/>
+      <line x1="78" y1="160" x2="82" y2="160" stroke="#bbb" stroke-width="1"/>
+      <line x1="78" y1="110" x2="82" y2="110" stroke="#bbb" stroke-width="1"/>
+      <line x1="78" y1="60" x2="82" y2="60" stroke="#bbb" stroke-width="1"/>
+      <!-- 단독가구 바 (165만원 → 165/330 * 150 = 75px 높이) -->
+      <rect x="140" y="135" width="120" height="75" fill="#ffb74d" rx="8"/>
+      <text x="200" y="128" text-anchor="middle" fill="#e65100" font-size="14" font-weight="bold">165만원</text>
+      <text x="200" y="230" text-anchor="middle" fill="#555" font-size="13" font-weight="600">단독가구</text>
+      <text x="200" y="244" text-anchor="middle" fill="#888" font-size="11">2,200만원 미만</text>
+      <!-- 홑벌이가구 바 (285만원 → 285/330 * 150 = 129.5px) -->
+      <rect x="295" y="80" width="120" height="130" fill="#ff9800" rx="8"/>
+      <text x="355" y="73" text-anchor="middle" fill="#e65100" font-size="14" font-weight="bold">285만원</text>
+      <text x="355" y="230" text-anchor="middle" fill="#555" font-size="13" font-weight="600">홑벌이가구</text>
+      <text x="355" y="244" text-anchor="middle" fill="#888" font-size="11">3,200만원 미만</text>
+      <!-- 맞벌이가구 바 (330만원 → 150px) -->
+      <rect x="450" y="60" width="120" height="150" fill="#f57c00" rx="8"/>
+      <text x="510" y="53" text-anchor="middle" fill="#bf360c" font-size="15" font-weight="bold">330만원 🆕</text>
+      <text x="510" y="230" text-anchor="middle" fill="#555" font-size="13" font-weight="600">맞벌이가구</text>
+      <text x="510" y="244" text-anchor="middle" fill="#888" font-size="11">4,400만원 미만</text>
+      <!-- 단위 -->
+      <text x="680" y="214" text-anchor="end" fill="#aaa" font-size="10">(만원)</text>
+    </svg>
+  </div>
+
+  <!-- 신청 방법 -->
+  <h2>🖊️ 신청 방법 (단계별)</h2>
+  <ol class="steps">
+    <li><strong>자격 확인:</strong> 홈택스(hometax.go.kr) → 근로장려금 신청 → 간편 자격 조회</li>
+    <li><strong>온라인 신청:</strong> 홈택스 PC 또는 손택스(모바일 앱) → 신청/제출 → 근로장려금 정기 신청</li>
+    <li><strong>ARS 신청:</strong> 1544-9944 전화 → 음성 안내에 따라 주민등록번호 입력 후 신청</li>
+    <li><strong>방문 신청:</strong> 가까운 세무서 방문 → 근로장려금 신청서 작성 (신분증 지참)</li>
+    <li><strong>자동신청 등록:</strong> 홈택스 → 자동신청 동의 → 내년부터 별도 신청 없이 자동 처리</li>
+  </ol>
+
+  <!-- 시행 일정 박스 -->
+  <div class="deadline-box">
+    <h3>⏰ 2026년 근로장려금 일정 총정리</h3>
+    <p>📌 정기 신청 마감: <strong>2026년 6월 1일</strong> (이미 마감 — 기한 후 신청 시 10% 감액 후 접수 가능)</p>
+    <p>📌 기한 후 신청: <strong>2026년 6월 2일 ~ 11월 30일</strong> (지급액 10% 차감)</p>
+    <p>📌 하반기 반기 신청: <strong>2026년 9월 1일 ~ 9월 15일</strong></p>
+    <p>📌 정기분 지급 예정일: <strong>2026년 9월 말</strong></p>
+  </div>
+
+  <!-- 자가 진단 체크리스트 -->
+  <div class="checklist">
+    <h3>🔍 나는 근로장려금 받을 수 있을까? 자가 진단</h3>
+    <ul>
+      <li>2025년에 근로·사업·종교인 소득이 있었다 (일용직·프리랜서·알바 포함)</li>
+      <li>단독가구라면 연 총소득 2,200만원 미만, 홑벌이라면 3,200만원 미만이다</li>
+      <li>맞벌이 부부라면 부부 합산 소득 4,400만원 미만이다</li>
+      <li>6월 1일 기준 가구원 전체 재산이 2억 4천만원 미만이다</li>
+      <li>신청 기간 내 홈택스·ARS·세무서를 통해 신청(또는 자동신청 등록)했다</li>
+    </ul>
+  </div>
+
+  <!-- 주의사항 -->
+  <div class="caution">
+    <h3>⚠️ 꼭 알아야 할 주의사항</h3>
+    <p>① 정기 신청(~6월 1일) 마감 이후 신청 시 지급액의 10%가 자동 감액됩니다. 지금이라도 기한 후 신청하세요 — 아예 안 받는 것보다는 낫습니다.</p>
+    <p>② 재산이 1억 7천만원 이상~2억 4천만원 미만이면 지급액이 감액됩니다. 자격이 없어지는 게 아니니 신청은 하세요.</p>
+    <p>③ 지급 계좌를 미리 홈택스에 등록해두세요. 계좌 정보가 없으면 지급이 지연됩니다.</p>
+    <p>④ 부양가족이 없는 단독가구라도 나이 제한 없이 신청 가능합니다 (단, 30세 이상이어야 함).</p>
+  </div>
+
+  <!-- 담당 기관 박스 -->
+  <div class="contact-box">
+    <h3>📞 담당 기관 및 문의처</h3>
+    <p>🏛️ <strong>국세청 홈택스:</strong> <a href="https://www.hometax.go.kr">www.hometax.go.kr</a></p>
+    <p>📱 <strong>손택스(모바일):</strong> 앱스토어 / 구글플레이에서 '손택스' 검색</p>
+    <p>☎️ <strong>국세청 ARS:</strong> 1544-9944 (24시간, 자동신청 가능)</p>
+    <p>☎️ <strong>국세청 상담센터:</strong> 126 (평일 09:00~18:00)</p>
+    <p>🏢 <strong>세무서 방문:</strong> 가까운 세무서 직접 방문 (신분증 지참)</p>
+  </div>
+
+  <!-- 전문가 찬반 론평 -->
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"맞벌이 소득 상한 인상은 실질적 지원 대상을 넓히는 적절한 조치입니다. 물가·임금 상승을 반영한 기준 현실화로, 기존에 경계선에 걸려 탈락했던 저소득 맞벌이 가구가 실질적 혜택을 받게 됩니다."</p>
+          <p class="author">— 노동·세제정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"자동신청 제도의 전 연령 확대는 제도 이용률을 획기적으로 높일 것입니다. 디지털 접근성이 낮은 취약계층일수록 신청 절차에서 배제되는 경향이 있었는데, 이 문제를 제도적으로 해소한 진일보한 변화입니다."</p>
+          <p class="author">— 복지행정 전문 연구자</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"소득 상한 인상이 표적 지원의 원칙을 희석시킬 수 있습니다. 맞벌이 4,400만원이면 중위소득 기준으로 낮지 않은 가구까지 포함되는 만큼, 재원의 효율적 배분 측면에서 보다 정밀한 검토가 필요합니다."</p>
+          <p class="author">— 재정경제 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"기한 후 신청 시 10% 감액 규정은 정보 접근에 취약한 계층에게 불리하게 작용합니다. 제도를 몰라서 늦게 신청하는 분들이 오히려 불이익을 받는 구조는 재검토가 필요합니다."</p>
+          <p class="author">— 사회복지 현장 활동가</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span class="hashtag">#근로장려금2026</span>
+    <span class="hashtag">#EITC</span>
+    <span class="hashtag">#맞벌이장려금</span>
+    <span class="hashtag">#4400만원</span>
+    <span class="hashtag">#최대330만원</span>
+    <span class="hashtag">#자동신청</span>
+    <span class="hashtag">#국세청장려금</span>
+    <span class="hashtag">#9월지급</span>
+    <span class="hashtag">#저소득지원</span>
+    <span class="hashtag">#세금환급</span>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부는 국세청 홈택스(www.hometax.go.kr) 또는 126(국세청 상담센터)에 확인하세요.
+  </div>
+
+  <!-- 작성일 메타 -->
+  <p class="meta">작성일: 2026년 6월 17일 · 오늘의 복지 뉴스 제1보</p>
+
+</div>
+</body>
+</html>
