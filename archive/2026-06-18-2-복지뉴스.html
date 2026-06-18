@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"마음이 무너지고 있는데 상담 한 번 못 받았다고요?" 국가가 8회 무료 상담비 줍니다 — 2026년 정신건강 바우처 전격 확대, 자살예방 예산 708억 투입 완전 정복 | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', '맑은 고딕', Malgun Gothic, sans-serif; background: #f5f5f5; color: #222; line-height: 1.7; }
+  .container { max-width: 780px; margin: 0 auto; background: #fff; padding: 0 0 40px; }
+
+  /* 상단 헤더 */
+  .top-header { background: #1565c0; color: #fff; padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; }
+  .top-header .date-tag { font-size: 13px; opacity: .85; }
+  .top-header .series { font-size: 13px; font-weight: 700; }
+
+  /* 배지 */
+  .badge-area { padding: 20px 24px 6px; }
+  .badge { display: inline-block; background: #1565c0; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; }
+
+  /* 메인 제목 */
+  h1 { font-size: 28px; font-weight: 900; line-height: 1.4; padding: 10px 24px 18px; color: #1a1a1a; }
+
+  /* 훅 */
+  .hook { border-left: 5px solid #1565c0; background: #e3f2fd; padding: 16px 20px; margin: 0 24px 24px; border-radius: 0 8px 8px 0; font-size: 15px; }
+  .hook .highlight { background: #bbdefb; padding: 0 4px; border-radius: 3px; font-weight: 700; }
+
+  /* 핵심 요약 박스 */
+  .summary-box { background: #e8f5e9; border-left: 5px solid #2e7d32; border-radius: 0 10px 10px 0; margin: 0 24px 28px; padding: 18px 20px; }
+  .summary-box h2 { font-size: 15px; color: #2e7d32; margin-bottom: 10px; }
+  .summary-box ul { list-style: none; }
+  .summary-box ul li::before { content: "📌 "; }
+  .summary-box ul li { font-size: 14px; margin-bottom: 6px; font-weight: 600; color: #1b5e20; }
+
+  /* 섹션 헤딩 */
+  h2 { font-size: 20px; font-weight: 800; color: #1565c0; margin: 28px 24px 14px; padding-bottom: 8px; border-bottom: 2px solid #1565c0; }
+
+  /* 본문 */
+  p { font-size: 15px; margin: 0 24px 16px; line-height: 1.8; }
+
+  /* 표 */
+  .info-table { width: calc(100% - 48px); margin: 0 24px 24px; border-collapse: collapse; font-size: 14px; }
+  .info-table th { background: #1565c0; color: #fff; padding: 10px 14px; text-align: left; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #eee; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #e3f2fd; }
+  .info-table td:first-child { font-weight: 700; color: #1565c0; white-space: nowrap; }
+
+  /* 신청 단계 */
+  .steps { margin: 0 24px 24px; }
+  .step { display: flex; align-items: flex-start; margin-bottom: 12px; }
+  .step-num { background: #1565c0; color: #fff; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; margin-right: 12px; margin-top: 2px; }
+  .step-text { font-size: 15px; flex: 1; }
+
+  /* 마감 박스 */
+  .deadline-box { margin: 0 24px 24px; border: 2px dashed #f57c00; border-radius: 10px; padding: 18px 20px; background: #fff8e1; }
+  .deadline-box h3 { color: #e65100; font-size: 16px; margin-bottom: 10px; }
+  .deadline-box p { margin: 0 0 6px; font-size: 14px; }
+
+  /* 체크리스트 */
+  .checklist { margin: 0 24px 24px; background: #f9f9f9; border-radius: 10px; padding: 18px 20px; }
+  .checklist h3 { font-size: 15px; font-weight: 700; margin-bottom: 12px; color: #333; }
+  .checklist ul { list-style: none; }
+  .checklist ul li { font-size: 14px; margin-bottom: 8px; padding-left: 28px; position: relative; }
+  .checklist ul li::before { content: "✓"; position: absolute; left: 0; color: #2e7d32; font-weight: 900; font-size: 16px; }
+
+  /* 주의사항 */
+  .caution { margin: 0 24px 24px; }
+  .caution h3 { font-size: 15px; font-weight: 700; margin-bottom: 10px; color: #1565c0; }
+  .caution p { font-size: 14px; margin: 0 0 8px; }
+
+  /* 문의처 박스 */
+  .contact-box { margin: 0 24px 28px; background: #e3f2fd; border-radius: 10px; padding: 18px 20px; }
+  .contact-box h3 { font-size: 15px; font-weight: 800; color: #0d47a1; margin-bottom: 10px; }
+  .contact-box p { font-size: 14px; margin: 0 0 6px; }
+  .contact-box a { color: #0d47a1; font-weight: 700; }
+
+  /* 전문가 찬반 론평 */
+  .opinion-section { margin: 0 24px 28px; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  /* 해시태그 */
+  .hashtags { padding: 0 24px 20px; font-size: 14px; color: #1565c0; line-height: 2; }
+
+  /* 면책조항 */
+  .disclaimer { margin: 0 24px 16px; background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12px; color: #888; }
+
+  /* 작성일 */
+  .meta { text-align: right; font-size: 12px; color: #aaa; padding: 0 24px; }
+
+  /* SVG 영역 */
+  .svg-wrap { margin: 0 24px 24px; }
+
+  /* 위기 배너 */
+  .crisis-banner { margin: 0 24px 24px; background: #0d47a1; color: #fff; border-radius: 10px; padding: 16px 20px; text-align: center; }
+  .crisis-banner p { color: #fff; margin: 0; font-size: 14px; }
+  .crisis-banner .num { font-size: 28px; font-weight: 900; color: #90caf9; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .info-table { font-size: 13px; }
+    .info-table th, .info-table td { padding: 8px 10px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 상단 헤더 -->
+  <div class="top-header">
+    <span class="date-tag">2026년 6월 18일 (목)</span>
+    <span class="series">오늘의 복지 뉴스 · 제2보</span>
+  </div>
+
+  <!-- 배지 -->
+  <div class="badge-area">
+    <span class="badge">🧠 정신건강 복지</span>
+  </div>
+
+  <!-- 메인 제목 -->
+  <h1>"마음이 무너지고 있는데 상담 한 번 못 받았다고요?" 국가가 8회 무료 상담비 줍니다 — 2026년 정신건강 바우처 전격 확대, 자살예방 예산 708억 투입 완전 정복</h1>
+
+  <!-- 훅 -->
+  <div class="hook">
+    심리상담 한 번에 5~15만원. 평범한 직장인·대학생·주부에게는 너무 비쌉니다. <span class="highlight">2026년 국가가 8회 심리상담을 사실상 무료로 제공하는 '정신건강 심리상담 바우처' 사업을 대폭 확대합니다.</span> 동시에 자살예방 예산을 작년보다 20.6% 늘린 708억 원으로 늘리고, 자살유족 원스톱 지원을 전국 17개 시도로 확대합니다.
+  </div>
+
+  <!-- 핵심 요약 박스 -->
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>우울·불안이 있으면 누구나 신청 가능 — 전문 심리상담 8회, 회당 최대 8만원 바우처</li>
+      <li>복지로(bokjiro.go.kr) 또는 동 행정복지센터에서 신청, 별도 진단서 불필요한 경우 많음</li>
+      <li>자살예방 예산 708억 확대 — 위기대응센터 98곳·자살유족 지원 전국 확대</li>
+    </ul>
+  </div>
+
+  <!-- 위기 배너 -->
+  <div class="crisis-banner">
+    <p>지금 당장 힘드신 분은 📞</p>
+    <p class="num">자살예방상담전화 1393</p>
+    <p>24시간 365일 무료 운영 · 익명 보장</p>
+  </div>
+
+  <!-- 배경/문제 섹션 -->
+  <h2>🔥 왜 이 정책이 나왔나</h2>
+  <p>
+    2026년 6월 서울신문 보도에 따르면 지난 10년간 청소년 자살이 45% 급증했습니다. 한국은 OECD 국가 중 자살률 최상위권을 벗어나지 못하고 있습니다. 전문가들은 "심리상담이 비싸서 못 가는 게 가장 큰 문제"라고 입을 모읍니다.
+  </p>
+  <p>
+    정부는 2026년 자살예방 예산을 전년 대비 <strong>20.6% 증액한 708억 원</strong>으로 확대하고, '정신건강 심리상담 바우처' 사업을 기존보다 더 넓은 대상에게 제공하기로 했습니다. 특히 자살시도자 치료비·심리검사 지원의 소득 기준을 폐지하여 소득이 높아도 위기 상황이면 누구나 지원받을 수 있게 됐습니다.
+  </p>
+
+  <!-- 상세 정보 표 -->
+  <h2>📋 정신건강 심리상담 바우처 상세</h2>
+  <table class="info-table">
+    <tr><th>항목</th><th>내용</th></tr>
+    <tr><td>사업 기간</td><td>2026년 1월 1일 ~ 12월 31일 (예산 소진 시 조기 마감)</td></tr>
+    <tr><td>지원 대상</td><td>우울·불안 등 정서적 어려움이 있는 전 국민<br>- 건강검진 우울증 선별(PHQ-9) 10점 이상인 자<br>- 정신건강복지센터·상담기관에서 서비스 필요 인정자<br>- 정신의료기관 진단서·소견서 보유자</td></tr>
+    <tr><td>지원 내용</td><td>전문 심리상담 8회 제공 (바우처 형태)</td></tr>
+    <tr><td>바우처 단가</td><td>1급 상담사: 회당 8만원 / 2급 상담사: 회당 7만원</td></tr>
+    <tr><td>본인 부담</td><td>일부 소득 기준에 따라 본인 부담금 발생 (저소득층 감면)</td></tr>
+    <tr><td>이용 기간</td><td>바우처 생성일로부터 120일 이내 모두 사용</td></tr>
+    <tr><td>신청 방법</td><td>복지로(bokjiro.go.kr) 온라인 신청 (만 19세 이상 본인)<br>또는 주소지 읍·면·동 행정복지센터 직접 방문</td></tr>
+    <tr><td>제공 기관</td><td>등록 민간 심리상담소, 정신건강복지센터, 청소년상담복지센터 등</td></tr>
+  </table>
+
+  <!-- SVG 인포그래픽 -->
+  <h2>📊 2026 정신건강·자살예방 정책 한눈에 보기</h2>
+  <div class="svg-wrap">
+    <svg viewBox="0 0 700 330" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:12px;background:#e3f2fd;">
+      <!-- 배경 -->
+      <rect width="700" height="330" fill="#e3f2fd" rx="12"/>
+      <text x="350" y="35" text-anchor="middle" font-size="16" font-weight="bold" fill="#0d47a1">2026 정신건강 복지 주요 지표</text>
+
+      <!-- 예산 증가 -->
+      <rect x="30" y="55" width="180" height="110" rx="10" fill="#1565c0"/>
+      <text x="120" y="83" text-anchor="middle" font-size="12" fill="#90caf9" font-weight="bold">자살예방 예산</text>
+      <text x="120" y="113" text-anchor="middle" font-size="28" fill="#fff" font-weight="900">708억</text>
+      <text x="120" y="135" text-anchor="middle" font-size="13" fill="#90caf9">전년 대비 +20.6%</text>
+      <text x="120" y="155" text-anchor="middle" font-size="11" fill="#64b5f6">역대 최대 규모</text>
+
+      <!-- 위기대응센터 -->
+      <rect x="230" y="55" width="180" height="110" rx="10" fill="#1976d2"/>
+      <text x="320" y="83" text-anchor="middle" font-size="12" fill="#90caf9" font-weight="bold">생명사랑 위기대응센터</text>
+      <text x="320" y="113" text-anchor="middle" font-size="28" fill="#fff" font-weight="900">98곳</text>
+      <text x="320" y="135" text-anchor="middle" font-size="13" fill="#90caf9">전국 확대 (기존 93곳)</text>
+      <text x="320" y="155" text-anchor="middle" font-size="11" fill="#64b5f6">24시간 위기 대응</text>
+
+      <!-- 유족 지원 -->
+      <rect x="430" y="55" width="240" height="110" rx="10" fill="#1e88e5"/>
+      <text x="550" y="83" text-anchor="middle" font-size="12" fill="#90caf9" font-weight="bold">자살유족 원스톱 지원</text>
+      <text x="550" y="113" text-anchor="middle" font-size="28" fill="#fff" font-weight="900">전국 17개</text>
+      <text x="550" y="135" text-anchor="middle" font-size="13" fill="#90caf9">시·도 전면 확대 (7월~)</text>
+      <text x="550" y="155" text-anchor="middle" font-size="11" fill="#64b5f6">심리+주거+법률 원스톱</text>
+
+      <!-- 바우처 흐름 -->
+      <text x="350" y="200" text-anchor="middle" font-size="13" font-weight="bold" fill="#0d47a1">심리상담 바우처 이용 흐름</text>
+
+      <!-- 흐름 박스들 -->
+      <rect x="30" y="215" width="110" height="50" rx="8" fill="#fff" stroke="#1565c0" stroke-width="1.5"/>
+      <text x="85" y="237" text-anchor="middle" font-size="11" fill="#1565c0" font-weight="bold">① 신청</text>
+      <text x="85" y="256" text-anchor="middle" font-size="10" fill="#555">복지로 / 주민센터</text>
+
+      <polygon points="145,239 162,231 162,247" fill="#1565c0"/>
+      <line x1="140" y1="239" x2="162" y2="239" stroke="#1565c0" stroke-width="1.5"/>
+
+      <rect x="165" y="215" width="110" height="50" rx="8" fill="#fff" stroke="#1565c0" stroke-width="1.5"/>
+      <text x="220" y="237" text-anchor="middle" font-size="11" fill="#1565c0" font-weight="bold">② 바우처 발급</text>
+      <text x="220" y="256" text-anchor="middle" font-size="10" fill="#555">120일 유효 8회</text>
+
+      <polygon points="280,239 297,231 297,247" fill="#1565c0"/>
+      <line x1="275" y1="239" x2="297" y2="239" stroke="#1565c0" stroke-width="1.5"/>
+
+      <rect x="300" y="215" width="110" height="50" rx="8" fill="#fff" stroke="#1565c0" stroke-width="1.5"/>
+      <text x="355" y="237" text-anchor="middle" font-size="11" fill="#1565c0" font-weight="bold">③ 기관 선택</text>
+      <text x="355" y="256" text-anchor="middle" font-size="10" fill="#555">등록 상담소 방문</text>
+
+      <polygon points="415,239 432,231 432,247" fill="#1565c0"/>
+      <line x1="410" y1="239" x2="432" y2="239" stroke="#1565c0" stroke-width="1.5"/>
+
+      <rect x="435" y="215" width="130" height="50" rx="8" fill="#1565c0"/>
+      <text x="500" y="237" text-anchor="middle" font-size="11" fill="#fff" font-weight="bold">④ 상담 진행</text>
+      <text x="500" y="256" text-anchor="middle" font-size="10" fill="#90caf9">회당 7~8만원 지원</text>
+
+      <text x="350" y="305" text-anchor="middle" font-size="11" fill="#90a4ae">※ 2026년 예산 소진 시 조기 마감될 수 있음. 서비스 제공기관은 복지로에서 조회 가능.</text>
+    </svg>
+  </div>
+
+  <!-- 자살예방 정책 섹션 -->
+  <h2>🆘 2026년 자살예방 정책 확대 내용</h2>
+  <table class="info-table">
+    <tr><th>정책명</th><th>주요 내용</th></tr>
+    <tr><td>예산 확대</td><td>자살예방 예산 708억 원 (전년 대비 +20.6%)</td></tr>
+    <tr><td>위기대응센터</td><td>생명사랑 위기대응센터 98곳으로 확대 (기존 93곳)</td></tr>
+    <tr><td>자살유족 지원</td><td>원스톱 지원(심리·주거·법률) 12개 시도 → 전국 17개 시도 확대 (2026년 7월)</td></tr>
+    <tr><td>소득기준 폐지</td><td>자살시도자 치료비·심리검사 지원 소득 기준 전면 폐지</td></tr>
+    <tr><td>청소년 예방</td><td>심리부검 실시, 학생 마음건강 지원법 제정 추진, 학교 내 정서교육 확대</td></tr>
+    <tr><td>전부처 협업</td><td>자살예방센터·서민금융·고용복지+·범죄피해자·청소년상담 등 6개 부처 연계체계 구축</td></tr>
+  </table>
+
+  <!-- 신청 방법 -->
+  <h2>✅ 바우처 신청 방법 (단계별)</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text"><strong>자격 확인</strong> — 건강검진 우울증 선별 결과(PHQ-9 10점 이상)가 있거나, 정신건강복지센터·보건소에서 서비스 필요 판정을 받으세요. 진단서 없이도 신청 가능한 경우가 있습니다.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text"><strong>온라인 신청</strong> — 복지로(bokjiro.go.kr) 로그인 → 서비스 신청 → 복지급여 신청 → "정신건강 심리상담 바우처" 검색 후 신청. 만 19세 이상 본인만 가능.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text"><strong>오프라인 신청</strong> — 주소지 또는 실거주지 읍·면·동 행정복지센터 방문 신청. 미성년자는 보호자 동행 필요.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-text"><strong>바우처 발급 후 상담기관 선택</strong> — 복지로 또는 사회서비스 전자바우처(e-v.or.kr)에서 내 집 근처 등록된 심리상담 기관을 찾아 예약하세요.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">5</div>
+      <div class="step-text"><strong>120일 내 8회 사용</strong> — 바우처 생성일로부터 120일 안에 8회를 모두 소진해야 합니다. 기간 경과 시 자동 소멸되니 일정을 미리 잡으세요.</div>
+    </div>
+  </div>
+
+  <!-- 마감 박스 -->
+  <div class="deadline-box">
+    <h3>⏰ 주의! 예산 소진 시 조기 마감</h3>
+    <p>2026년 사업 기간: <strong>1월 1일 ~ 12월 31일</strong></p>
+    <p>수요가 많아 <strong>예산 소진 시 연내라도 신청이 중단</strong>됩니다. 지금 바로 신청하는 것이 안전합니다.</p>
+    <p>바우처 유효기간: <strong>발급일로부터 120일</strong> 이내 사용 완료 필수</p>
+  </div>
+
+  <!-- 체크리스트 -->
+  <div class="checklist">
+    <h3>🔍 나는 신청할 수 있을까? 자가 진단</h3>
+    <ul>
+      <li>최근 2주 이상 우울감, 무기력함, 불안함이 지속되고 있다</li>
+      <li>올해 국가 건강검진에서 우울증 선별검사를 받았고 점수가 10점 이상이었다</li>
+      <li>정신건강복지센터·보건소·상담기관에서 심리상담이 필요하다는 말을 들은 적 있다</li>
+      <li>비용 때문에 심리상담을 포기한 경험이 있다</li>
+      <li>대한민국 국적자로 현재 건강보험에 가입되어 있다</li>
+    </ul>
+  </div>
+
+  <!-- 주의사항 -->
+  <div class="caution">
+    <h3>⚠️ 이것만은 주의하세요!</h3>
+    <p>① 바우처는 <strong>등록된 제공기관</strong>에서만 사용 가능합니다. 비등록 상담소에서 사용하면 지원이 적용되지 않습니다.</p>
+    <p>② 120일 유효기간을 넘기면 남은 회차가 자동 소멸됩니다. 신청 후 바로 기관을 예약하세요.</p>
+    <p>③ 소득 수준에 따라 일부 본인부담금이 발생할 수 있습니다. 사전에 구청·보건소에 확인하세요.</p>
+    <p>④ 자살 위기 상황이라면 즉시 <strong>1393(자살예방상담전화)</strong>에 전화하세요. 바우처 신청을 기다릴 필요 없이 즉시 연결됩니다.</p>
+  </div>
+
+  <!-- 담당 기관 -->
+  <div class="contact-box">
+    <h3>📞 담당 기관 및 문의처</h3>
+    <p>🏢 <strong>보건복지부 정신건강정책과</strong></p>
+    <p>📱 정신건강 위기상담전화: <strong>1577-0199</strong> (24시간)</p>
+    <p>📱 자살예방상담전화: <strong>1393</strong> (24시간)</p>
+    <p>🌐 바우처 신청: <a href="https://www.bokjiro.go.kr" target="_blank">복지로 (bokjiro.go.kr)</a></p>
+    <p>🌐 제공기관 찾기: <a href="https://www.e-v.or.kr" target="_blank">사회서비스 전자바우처 (e-v.or.kr)</a></p>
+    <p>🏛️ 오프라인: 주소지 읍·면·동 행정복지센터 / 가까운 정신건강복지센터</p>
+  </div>
+
+  <!-- 전문가 찬반 론평 -->
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"정신건강 심리상담 바우처는 소득 때문에 상담을 포기하던 중산층까지 포괄하는 현실적 설계입니다. 한국의 자살률이 OECD 최상위권임을 감안하면 이 규모의 예산 투자도 아직 부족하지만, 방향성은 명백히 옳습니다."</p>
+          <p class="author">— 정신건강 정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"자살유족은 가장 방치된 집단이었습니다. 원스톱 지원이 전국으로 확대되는 것은 오랫동안 현장에서 요구해온 변화입니다. 심리·주거·법률 지원을 한 곳에서 받을 수 있게 된다는 것은 유족의 2차 피해를 현저히 줄입니다."</p>
+          <p class="author">— 자살예방 현장 활동가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"바우처 8회는 심각한 우울증 치료에는 턱없이 부족합니다. 평균 치료 기간이 6개월~1년임을 고려하면 단기 처방에 그칠 위험이 있습니다. 단발성 지원보다 지속 치료를 보장하는 구조 설계가 필요합니다."</p>
+          <p class="author">— 임상심리 및 복지 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"등록 제공기관 수가 수요를 따라가지 못하면 바우처가 있어도 쓸 수 없는 사태가 발생합니다. 농어촌·지방 소도시의 경우 반경 30km 이내에 등록 기관이 없는 경우도 있어, 공급 기반을 함께 키우지 않으면 도시 편중 지원에 그칩니다."</p>
+          <p class="author">— 지역 사회복지 현장 연구자</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    #정신건강바우처 #심리상담무료 #자살예방 #복지로신청 #정신건강복지 #우울증지원 #심리상담지원 #자살유족지원 #마음건강 #1393
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부 및 금액은 담당 기관(보건복지부 1577-0199, 복지로, 행정복지센터)에 직접 확인하세요. 지원 기준과 예산은 변경될 수 있습니다. 지금 당장 도움이 필요하다면 자살예방상담전화 1393(24시간)으로 전화하세요.
+  </div>
+
+  <div class="meta">작성일: 2026년 6월 18일</div>
+
+</div>
+</body>
+</html>
