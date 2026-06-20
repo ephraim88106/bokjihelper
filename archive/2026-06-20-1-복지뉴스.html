@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"장애인 활동지원사 시급 올라도 나는 시간이 부족합니다" — 드디어 바뀝니다! 2026년 개인예산제+시간 53시간 확대, 지금 신청 안 하면 손해 | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', '맑은 고딕', sans-serif; background: #f5f7fa; color: #222; line-height: 1.7; }
+  .container { max-width: 720px; margin: 0 auto; padding: 16px; }
+
+  /* 헤더 */
+  .top-header { background: #1565c0; color: #fff; padding: 14px 20px; border-radius: 12px 12px 0 0; display: flex; justify-content: space-between; align-items: center; }
+  .top-header .date-tag { font-size: 12px; opacity: 0.85; }
+  .top-header .issue-tag { font-size: 12px; font-weight: 700; background: rgba(255,255,255,0.2); padding: 3px 10px; border-radius: 20px; }
+
+  /* 섹션 배지 */
+  .section-badge { display: inline-block; background: #1565c0; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 14px; border-radius: 20px; margin: 18px 0 8px; }
+
+  /* 메인 제목 */
+  h1 { font-size: 26px; font-weight: 900; color: #0d3d78; line-height: 1.4; margin-bottom: 18px; }
+  h1 em { color: #c62828; font-style: normal; }
+
+  /* 훅 */
+  .hook { border-left: 5px solid #1565c0; padding: 14px 18px; background: #e3f0ff; border-radius: 0 10px 10px 0; margin-bottom: 22px; font-size: 15px; }
+  .hook .highlight { background: #fff176; padding: 1px 4px; border-radius: 3px; font-weight: 700; }
+
+  /* 핵심 요약 박스 */
+  .summary-box { background: #e8f5e9; border-left: 5px solid #2e7d32; border-radius: 10px; padding: 18px 20px; margin-bottom: 24px; }
+  .summary-box h2 { color: #1b5e20; font-size: 15px; font-weight: 900; margin-bottom: 10px; }
+  .summary-box ul { padding-left: 18px; }
+  .summary-box li { font-size: 14px; margin-bottom: 6px; color: #1a3a1a; }
+
+  /* 섹션 제목 */
+  h2 { font-size: 19px; font-weight: 800; color: #1565c0; margin: 28px 0 12px; padding-bottom: 6px; border-bottom: 2px solid #1565c0; }
+
+  /* 표 */
+  table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 14px; }
+  th { background: #1565c0; color: #fff; padding: 10px 12px; text-align: left; }
+  td { padding: 9px 12px; border-bottom: 1px solid #e0e0e0; }
+  tr:nth-child(even) td { background: #f0f5ff; }
+
+  /* SVG 래퍼 */
+  .svg-wrap { background: #fff; border-radius: 12px; padding: 16px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); overflow-x: auto; }
+  .svg-wrap svg { display: block; margin: 0 auto; }
+
+  /* 신청방법 */
+  .step-list { list-style: none; padding: 0; margin-bottom: 24px; }
+  .step-list li { display: flex; align-items: flex-start; gap: 12px; padding: 12px 14px; background: #fff; border-radius: 10px; margin-bottom: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); font-size: 14px; }
+  .step-num { background: #1565c0; color: #fff; width: 28px; height: 28px; min-width: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; }
+
+  /* 마감 박스 */
+  .deadline-box { border: 2px dashed #f57c00; border-radius: 10px; padding: 16px 18px; background: #fff8e1; margin-bottom: 24px; }
+  .deadline-box h3 { color: #e65100; font-size: 15px; font-weight: 900; margin-bottom: 8px; }
+  .deadline-box p { font-size: 14px; color: #5d4037; }
+
+  /* 체크리스트 */
+  .check-list { list-style: none; padding: 0; margin-bottom: 24px; background: #fff; border-radius: 10px; padding: 18px 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+  .check-list h3 { font-size: 15px; font-weight: 900; color: #1565c0; margin-bottom: 12px; }
+  .check-list li { font-size: 14px; padding: 6px 0; border-bottom: 1px dashed #e0e0e0; display: flex; align-items: flex-start; gap: 8px; }
+  .check-list li:last-child { border-bottom: none; }
+  .check-list li span.ck { color: #2e7d32; font-weight: 900; font-size: 16px; }
+
+  /* 주의사항 */
+  .caution-box { background: #fce4ec; border-radius: 10px; padding: 16px 20px; margin-bottom: 24px; font-size: 14px; }
+  .caution-box h3 { color: #880e4f; font-size: 15px; font-weight: 900; margin-bottom: 10px; }
+  .caution-box p { margin-bottom: 6px; color: #4a0020; }
+
+  /* 문의처 */
+  .contact-box { background: #e3f2fd; border-radius: 12px; padding: 18px 20px; margin-bottom: 24px; }
+  .contact-box h3 { color: #0d47a1; font-size: 15px; font-weight: 900; margin-bottom: 10px; }
+  .contact-box p { font-size: 14px; color: #1a237e; margin-bottom: 5px; }
+
+  /* 찬반 론평 */
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  /* 해시태그 */
+  .hashtags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+  .hashtags span { background: #e3f0ff; color: #1565c0; font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 20px; }
+
+  /* 면책조항 */
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12px; color: #777; margin-bottom: 16px; }
+
+  /* 날짜 메타 */
+  .meta { text-align: right; font-size: 12px; color: #aaa; margin-bottom: 30px; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 20px; }
+    h2 { font-size: 16px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    table { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 상단 헤더 -->
+  <div class="top-header">
+    <span class="date-tag">📅 2026년 6월 20일 (토)</span>
+    <span class="issue-tag">오늘의 복지 뉴스 · 제1보</span>
+  </div>
+
+  <!-- 섹션 배지 -->
+  <span class="section-badge">🦽 장애인 복지</span>
+
+  <!-- 메인 제목 -->
+  <h1>"활동지원 시간이 너무 부족해서 혼자 화장실도 못 갑니다" — <em>드디어 바뀝니다!</em> 2026년 개인예산제 전국 확대 + 최중증 <em>53시간 추가</em>, 지금 신청 안 하면 손해입니다</h1>
+
+  <!-- 훅 -->
+  <div class="hook">
+    하루 24시간이 아닌 <span class="highlight">하루 몇 시간</span>밖에 살지 못하는 중증장애인들이 있습니다. 활동지원 시간이 부족해 혼자서는 화장실도 못 가고, 밥도 못 먹는 현실. 그 절박한 요구에 2026년 정부가 응답했습니다. 최중증장애인 활동지원 시간이 <span class="highlight">월 53시간 추가</span>되고, 내가 원하는 서비스를 내가 직접 선택할 수 있는 <span class="highlight">개인예산제</span>가 전국 33개 지역으로 확대됩니다.
+  </div>
+
+  <!-- 핵심 요약 박스 -->
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>✅ 활동지원 시급 <strong>1만 7,270원</strong>으로 인상 (2025년 대비 +3.9%)</li>
+      <li>✅ 최중증장애인 가산급여 <strong>205시간 → 258시간</strong> (月 53시간 추가)</li>
+      <li>✅ 개인예산제 시범사업 <strong>전국 33개 지역·960명</strong>으로 확대 — 내가 원하는 서비스 골라 쓴다</li>
+    </ul>
+  </div>
+
+  <!-- 배경/문제 섹션 -->
+  <h2>🔍 왜 이 정책이 나왔나</h2>
+  <p style="font-size:15px; margin-bottom:16px;">장애인 활동지원 제도는 혼자서 일상생활이 어려운 중증장애인에게 활동지원사를 연결해 주는 핵심 복지 서비스입니다. 하지만 지금까지의 문제는 크게 두 가지였습니다. 첫째, <strong>지원 시간이 턱없이 부족</strong>해 밤·새벽에는 사실상 방치 상태인 최중증장애인이 많았습니다. 둘째, 모든 서비스가 정부가 정해준 방식대로만 제공되어 <strong>개인의 다양한 필요를 채우지 못했습니다</strong>. 2026년 정부는 예산 2조 8,102억 원(전년 대비 +2,779억 원)을 투입해 이 두 가지 문제를 동시에 해결에 나섭니다.</p>
+
+  <!-- 상세 정보 표 -->
+  <h2>📊 2026년 장애인 활동지원 핵심 변경 사항</h2>
+  <table>
+    <tr><th>항목</th><th>2025년</th><th>2026년</th><th>변화</th></tr>
+    <tr><td>활동지원사 시급</td><td>1만 6,620원</td><td>1만 7,270원</td><td>+3.9% 인상</td></tr>
+    <tr><td>최중증 가산급여</td><td>월 205시간</td><td>월 258시간</td><td>+53시간</td></tr>
+    <tr><td>수급 인원</td><td>13만 3천 명</td><td>14만 명</td><td>+7,000명</td></tr>
+    <tr><td>개인예산제 시범</td><td>일부 지역</td><td>전국 33개 지역·960명</td><td>대폭 확대</td></tr>
+    <tr><td>총 예산</td><td>2조 5,323억원</td><td>2조 8,102억원</td><td>+2,779억원</td></tr>
+  </table>
+
+  <!-- SVG 인포그래픽 -->
+  <div class="svg-wrap">
+    <svg width="660" height="280" viewBox="0 0 660 280" xmlns="http://www.w3.org/2000/svg">
+      <text x="330" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="#1565c0">📈 2026년 활동지원 변화 한눈에 보기</text>
+
+      <!-- 시급 비교 -->
+      <rect x="30" y="50" width="180" height="36" rx="8" fill="#bbdefb"/>
+      <text x="120" y="73" text-anchor="middle" font-size="13" fill="#0d47a1">2025 시급: 16,620원</text>
+      <rect x="30" y="92" width="210" height="36" rx="8" fill="#1565c0"/>
+      <text x="120" y="115" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">2026 시급: 17,270원 ▲</text>
+      <text x="120" y="148" text-anchor="middle" font-size="12" fill="#555">시급 3.9% 인상</text>
+
+      <!-- 가산급여 시간 비교 -->
+      <rect x="240" y="50" width="170" height="36" rx="8" fill="#ffccbc"/>
+      <text x="325" y="73" text-anchor="middle" font-size="13" fill="#bf360c">2025 가산급여: 205h</text>
+      <rect x="240" y="92" width="210" height="36" rx="8" fill="#e64a19"/>
+      <text x="325" y="115" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">2026 가산급여: 258h ▲</text>
+      <text x="325" y="148" text-anchor="middle" font-size="12" fill="#555">+53시간 추가</text>
+
+      <!-- 수급 인원 -->
+      <rect x="470" y="50" width="160" height="36" rx="8" fill="#c8e6c9"/>
+      <text x="550" y="73" text-anchor="middle" font-size="13" fill="#1b5e20">2025 수급: 133,000명</text>
+      <rect x="470" y="92" width="175" height="36" rx="8" fill="#2e7d32"/>
+      <text x="550" y="115" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">2026 수급: 140,000명 ▲</text>
+      <text x="550" y="148" text-anchor="middle" font-size="12" fill="#555">+7,000명 확대</text>
+
+      <!-- 개인예산제 박스 -->
+      <rect x="30" y="170" width="600" height="85" rx="12" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+      <text x="330" y="198" text-anchor="middle" font-size="14" font-weight="bold" fill="#0d47a1">🆕 개인예산제란?</text>
+      <text x="330" y="220" text-anchor="middle" font-size="13" fill="#333">정부가 서비스를 지정해주는 대신 → 장애인 본인이 활동지원·주간활동·발달재활 등</text>
+      <text x="330" y="240" text-anchor="middle" font-size="13" fill="#333">필요한 서비스를 직접 선택! 전국 33개 지역 960명 대상 2026년 확대 시행</text>
+      <text x="330" y="260" text-anchor="middle" font-size="12" fill="#1565c0" font-weight="bold">내가 원하는 서비스 = 내가 결정한다</text>
+    </svg>
+  </div>
+
+  <!-- 신청 방법 -->
+  <h2>📋 개인예산제·활동지원 신청 방법</h2>
+  <ul class="step-list">
+    <li><span class="step-num">1</span><div><strong>자격 확인:</strong> 장애인 활동지원·주간활동·발달재활 서비스 수급자격이 있는 중증장애인</div></li>
+    <li><span class="step-num">2</span><div><strong>읍·면·동 주민센터 방문:</strong> 활동지원 수급 신청 또는 기존 수급자는 시간 확대 신청</div></li>
+    <li><span class="step-num">3</span><div><strong>개인예산제 신청:</strong> 한국장애인개발원(koddi.or.kr) 공고 확인 → 수행기관·지원기관 통해 접수</div></li>
+    <li><span class="step-num">4</span><div><strong>서울 거주 중증장애인:</strong> 서울형 개인예산제 별도 모집 — 수행기관 현장접수 또는 이메일(research@kfpd.org)</div></li>
+    <li><span class="step-num">5</span><div><strong>수급 결정 후:</strong> 담당 활동지원 기관 연결 → 개인지원계획 수립 → 서비스 시작</div></li>
+  </ul>
+
+  <!-- 시행 일정 박스 -->
+  <div class="deadline-box">
+    <h3>⏰ 시행 일정 및 신청 기간</h3>
+    <p>▸ <strong>단가 인상·가산급여 확대:</strong> 2026년 1월 1일부터 소급 적용</p>
+    <p>▸ <strong>개인예산제 시범사업:</strong> 2026년 연중 모집 (공고 수시 확인 필수)</p>
+    <p>▸ <strong>신규 수급 신청:</strong> 연중 상시 — 주민센터 방문 후 60일 이내 수급 결정</p>
+    <p style="margin-top:8px; color:#c62828; font-weight:700;">⚠️ 개인예산제 960명 선착순 마감 — 공고 확인 즉시 신청하세요!</p>
+  </div>
+
+  <!-- 자가 진단 체크리스트 -->
+  <div class="check-list">
+    <h3>✅ 내가 해당되는지 자가 진단 체크리스트</h1>
+    <ul style="list-style:none; padding:0;">
+      <li><span class="ck">✓</span> 장애등록증이 있고 장애 정도가 '심한 장애'(중증)에 해당한다</li>
+      <li><span class="ck">✓</span> 혼자 일상생활(식사·이동·화장실·목욕 등)이 어렵거나 도움이 필요하다</li>
+      <li><span class="ck">✓</span> 현재 활동지원 시간이 부족하거나 처음 신청하려 한다</li>
+      <li><span class="ck">✓</span> 활동지원·주간활동·발달재활 서비스 중 1개 이상을 이용 중이거나 자격이 있다</li>
+      <li><span class="ck">✓</span> 내 필요에 맞게 서비스를 직접 선택하고 싶다 (개인예산제 해당)</li>
+    </ul>
+  </div>
+
+  <!-- 주의사항 -->
+  <div class="caution-box">
+    <h3>⚠️ 주의사항</h3>
+    <p>① 개인예산제는 현재 '시범사업' 단계로 전국 모든 지역에서 신청 불가 — 33개 시범 지역 거주자만 해당</p>
+    <p>② 활동지원 수급 신청 시 소득·재산 심사 없음, 그러나 장애 정도 심사(서비스 지원 종합조사) 필수</p>
+    <p>③ 기초생활수급자도 본인부담금 면제 대상 — 가구 소득에 따라 본인부담금 차등 적용</p>
+    <p>④ 개인예산제 참여 후 서비스 변경 시 사전에 지원기관과 반드시 협의 필요</p>
+  </div>
+
+  <!-- 문의처 -->
+  <div class="contact-box">
+    <h3>📞 담당 기관 및 문의처</h3>
+    <p>▸ <strong>보건복지부 장애인서비스과:</strong> 044-202-3356</p>
+    <p>▸ <strong>국민연금공단 활동지원 수급 신청:</strong> 국번없이 1355</p>
+    <p>▸ <strong>한국장애인개발원 (개인예산제):</strong> 02-3433-0600 / www.koddi.or.kr</p>
+    <p>▸ <strong>주민센터 방문 신청:</strong> 전국 읍·면·동 주민센터 (연중 상시)</p>
+    <p>▸ <strong>서울시 복지포털:</strong> 02-2079-8100</p>
+  </div>
+
+  <!-- 전문가 찬반 론평 -->
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"개인예산제는 장애인을 복지 '수혜자'가 아니라 서비스를 선택하는 '주체'로 전환하는 패러다임 전환입니다. 최중증 가산급여 53시간 확대와 병행될 때 실질적인 자립 생활이 가능해집니다."</p>
+          <p class="author">— 장애인복지정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"시급 3.9% 인상은 활동지원사의 근로 여건을 개선하고, 나아가 서비스 품질 향상으로 이어집니다. 공급자와 수요자 양쪽 모두를 강화하는 균형 잡힌 정책 방향입니다."</p>
+          <p class="author">— 돌봄노동자 권익 활동가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"33개 지역 960명이라는 개인예산제 규모는 전국 14만 활동지원 수급자 대비 0.7%에 불과합니다. 상징적 시범사업에 그치지 않으려면 신속한 전국 확대 로드맵이 먼저 제시되어야 합니다."</p>
+          <p class="author">— 재정정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"개인예산제는 스스로 서비스를 선택하기 어려운 최중증 지적·자폐성 장애인에게 오히려 지원 공백을 만들 수 있습니다. 보호자 및 지원인력의 역량 강화 없이는 제도 취지가 훼손될 우려가 있습니다."</p>
+          <p class="author">— 발달장애인 지원 현장 활동가</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span>#장애인활동지원</span>
+    <span>#개인예산제</span>
+    <span>#중증장애인</span>
+    <span>#2026복지</span>
+    <span>#활동지원사시급</span>
+    <span>#최중증장애인</span>
+    <span>#가산급여53시간</span>
+    <span>#장애인복지</span>
+    <span>#보건복지부</span>
+    <span>#복지뉴스</span>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    ※ 이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부 및 신청 자격은 담당 기관(국민연금공단·주민센터·한국장애인개발원)에 직접 확인하세요.
+  </div>
+
+  <div class="meta">작성일: 2026년 6월 20일 | 출처: 보건복지부, 한국장애인개발원, 에이블뉴스</div>
+
+</div>
+</body>
+</html>
