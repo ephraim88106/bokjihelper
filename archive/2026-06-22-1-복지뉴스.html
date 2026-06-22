@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"전세사기 당하고 보증금 한 푼도 못 받았다고요?" 드디어 끝납니다 — 국가가 최소 1/3은 무조건 돌려줍니다, 3만 8천 피해자 지금 당장 확인하세요 | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; background: #f8f8f8; color: #222; line-height: 1.7; }
+  .container { max-width: 800px; margin: 0 auto; background: #fff; }
+
+  /* 상단 헤더 */
+  .top-bar { background: #c62828; color: #fff; padding: 10px 20px; font-size: 13px; display: flex; justify-content: space-between; align-items: center; }
+  .top-bar .date-tag { font-weight: 700; letter-spacing: 1px; }
+  .top-bar .series { opacity: 0.85; }
+
+  /* 배지 + 소제목 */
+  .category-wrap { padding: 20px 24px 10px; }
+  .badge { display: inline-block; background: #c62828; color: #fff; font-size: 11px; font-weight: 900; padding: 4px 12px; border-radius: 20px; letter-spacing: 1px; }
+  .sub-title { margin-top: 8px; font-size: 14px; color: #c62828; font-weight: 700; }
+
+  /* 메인 제목 */
+  h1.main-title { font-size: 26px; font-weight: 900; line-height: 1.4; padding: 10px 24px 20px; color: #111; word-break: keep-all; }
+  @media (max-width:600px) { h1.main-title { font-size: 20px; } }
+
+  /* 훅 */
+  .hook { border-left: 5px solid #c62828; background: #fff5f5; padding: 16px 20px; margin: 0 24px 20px; border-radius: 0 8px 8px 0; font-size: 15px; color: #333; }
+  .hook .highlight { background: #ffeb3b; padding: 0 4px; font-weight: 700; color: #111; border-radius: 3px; }
+
+  /* 핵심 요약 박스 */
+  .summary-box { background: #e8f5e9; border-left: 5px solid #2e7d32; border-radius: 8px; padding: 18px 20px; margin: 0 24px 24px; }
+  .summary-box h2 { font-size: 15px; color: #1b5e20; font-weight: 900; margin-bottom: 10px; }
+  .summary-box ul { list-style: none; padding: 0; }
+  .summary-box ul li { font-size: 14px; color: #2e7d32; font-weight: 700; padding: 3px 0; }
+  .summary-box ul li::before { content: "✅ "; }
+
+  /* 섹션 */
+  .section { padding: 0 24px 24px; }
+  .section h2 { font-size: 18px; font-weight: 900; color: #c62828; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 2px solid #c62828; }
+
+  /* 표 */
+  table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 10px 0; }
+  th { background: #c62828; color: #fff; padding: 10px; text-align: center; font-weight: 700; }
+  td { padding: 9px 10px; border: 1px solid #ddd; vertical-align: middle; }
+  tr:nth-child(even) td { background: #fafafa; }
+  .tag-red { color: #c62828; font-weight: 900; }
+
+  /* SVG 인포그래픽 */
+  .infographic { margin: 0 24px 24px; }
+  .infographic h2 { font-size: 18px; font-weight: 900; color: #c62828; margin-bottom: 14px; padding-bottom: 6px; border-bottom: 2px solid #c62828; }
+
+  /* 신청 방법 */
+  .step-box { margin: 10px 0; }
+  .step { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 12px; }
+  .step-num { background: #c62828; color: #fff; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; margin-top: 2px; }
+  .step-content { font-size: 14px; color: #333; }
+  .step-content strong { color: #c62828; display: block; margin-bottom: 2px; }
+
+  /* deadline-box */
+  .deadline-box { border: 2px dashed #f57c00; background: #fff8e1; border-radius: 10px; padding: 16px 20px; margin: 0 24px 24px; }
+  .deadline-box h3 { font-size: 15px; color: #e65100; font-weight: 900; margin-bottom: 8px; }
+  .deadline-box p { font-size: 14px; color: #bf360c; font-weight: 700; }
+
+  /* 체크리스트 */
+  .checklist { margin: 10px 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; border-bottom: 1px solid #eee; font-size: 14px; }
+  .check-item:last-child { border-bottom: none; }
+  .check-mark { color: #c62828; font-weight: 900; font-size: 16px; }
+
+  /* 주의사항 */
+  .caution { background: #fff3f3; border-radius: 8px; padding: 16px 20px; margin: 10px 0; }
+  .caution p { font-size: 14px; color: #444; padding: 4px 0; }
+
+  /* 문의처 */
+  .contact-box { background: #fce4e4; border-radius: 10px; padding: 18px 20px; margin: 10px 0; }
+  .contact-box h3 { font-size: 15px; color: #c62828; font-weight: 900; margin-bottom: 10px; }
+  .contact-item { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 8px; font-size: 14px; }
+  .contact-item .label { background: #c62828; color: #fff; padding: 2px 8px; border-radius: 4px; font-size: 12px; font-weight: 700; flex-shrink: 0; }
+
+  /* 찬반 론평 */
+  .opinion-section { margin: 10px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  @media (max-width: 600px) { .opinion-grid { grid-template-columns: 1fr; } }
+
+  /* 해시태그 */
+  .hashtags { padding: 4px 0 8px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .hashtag { background: #fce4e4; color: #c62828; font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 20px; }
+
+  /* 면책조항 */
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 12px; color: #888; line-height: 1.6; }
+
+  /* 작성일 */
+  .meta { text-align: right; font-size: 12px; color: #aaa; padding: 10px 24px 20px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 상단 헤더 -->
+  <div class="top-bar">
+    <span class="date-tag">📅 2026년 6월 22일</span>
+    <span class="series">오늘의 복지 뉴스 · 제1보</span>
+  </div>
+
+  <!-- 배지 + 소제목 -->
+  <div class="category-wrap">
+    <span class="badge">🏠 주거·전세사기 피해 구제</span>
+    <div class="sub-title">전세사기특별법 개정 — 최소보장제·선지급제 완전 정복</div>
+  </div>
+
+  <!-- 메인 제목 -->
+  <h1 class="main-title">"전세사기 당하고 보증금 한 푼도 못 받았다고요?" 드디어 끝납니다 — 국가가 최소 1/3은 무조건 돌려줍니다, 3만 8천 피해자 지금 당장 확인하세요</h1>
+
+  <!-- 훅 -->
+  <div class="hook">
+    경매가 끝났는데 보증금의 10%도 못 돌려받았다면? 지금까지는 그냥 당하는 수밖에 없었습니다.<br>
+    하지만 이제는 다릅니다. <span class="highlight">국가가 임차보증금의 최소 3분의 1을 무조건 보전해 줍니다.</span><br>
+    이미 경매가 끝난 피해자에게도 소급 적용됩니다. 지금 바로 확인하세요.
+  </div>
+
+  <!-- 핵심 요약 박스 -->
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>회복액이 보증금의 1/3 미만이면 국가가 차액을 보전 (최소보장제)</li>
+      <li>경매 종료 전에도 먼저 받을 수 있는 선지급·후정산제 신설</li>
+      <li>이미 경매 끝난 피해자도 소급 적용 — 신청 기한 2027년 5월 31일</li>
+    </ul>
+  </div>
+
+  <!-- 배경 섹션 -->
+  <div class="section">
+    <h2>📰 왜 이 법이 나왔나</h2>
+    <p style="font-size:14px; color:#333; line-height:1.8;">
+      2022~2023년 전국을 뒤흔든 전세사기 사태 이후, 피해자들은 경매를 통해 집을 잃어도 보증금의 극히 일부만 돌려받는 현실에 처했습니다.
+      특히 빌라·오피스텔 등 저가 주택의 경우 경매 낙찰가가 임차보증금보다 훨씬 낮아 사실상 전액을 날리는 사례가 속출했습니다.
+      피해자들의 집단 시위와 사회적 공론화 끝에, 2026년 4월 국회는 <strong style="color:#c62828;">전세사기피해자 지원 및 주거안정에 관한 특별법 개정안</strong>을 통과시켰습니다.
+      현재까지 <strong style="color:#c62828;">3만 8,503건</strong>이 피해자로 결정됐고, 피해주택 매입도 <strong style="color:#c62828;">8,357호</strong>까지 확대됐습니다.
+    </p>
+  </div>
+
+  <!-- 상세 정보 표 -->
+  <div class="section">
+    <h2>📊 핵심 지원 내용 총정리</h2>
+    <table>
+      <tr><th>제도</th><th>내용</th><th>비고</th></tr>
+      <tr>
+        <td><strong>최소보장제</strong></td>
+        <td>경·공매 후 회복액이 보증금의 1/3 미만이면 국가가 차액 보전</td>
+        <td class="tag-red">소급 적용 ✓</td>
+      </tr>
+      <tr>
+        <td><strong>선지급·후정산</strong></td>
+        <td>경매 종료 전에도 최소보장금 일부 또는 전부 선지급</td>
+        <td class="tag-red">신탁사기 포함</td>
+      </tr>
+      <tr>
+        <td><strong>피해주택 매입</strong></td>
+        <td>LH가 피해주택을 직접 매입해 피해자에게 임대</td>
+        <td>8,357호 확대</td>
+      </tr>
+      <tr>
+        <td><strong>긴급주거지원</strong></td>
+        <td>임시 공공임대주택 제공, 전세보증금 대출 이자 지원</td>
+        <td>LH 통해 신청</td>
+      </tr>
+      <tr>
+        <td><strong>법률지원</strong></td>
+        <td>무료 법률 상담, 소송대리, 경매 유예 신청 지원</td>
+        <td>법률구조공단</td>
+      </tr>
+      <tr>
+        <td><strong>정부 예산</strong></td>
+        <td>2026년 1회 추경으로 279억원 확보</td>
+        <td>국토교통부</td>
+      </tr>
+      <tr>
+        <td><strong>신청 기한</strong></td>
+        <td>피해자 결정 신청: 2027년 5월 31일까지</td>
+        <td class="tag-red">마감 임박 주의</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- SVG 인포그래픽 -->
+  <div class="infographic">
+    <h2>📈 최소보장제 작동 방식</h2>
+    <svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg" style="width:100%; border-radius:10px; background:#fff5f5;">
+      <!-- 제목 -->
+      <text x="350" y="35" text-anchor="middle" font-size="16" font-weight="bold" fill="#c62828">최소보장제 — 이렇게 작동합니다</text>
+
+      <!-- 기존 방식 (왼쪽) -->
+      <rect x="40" y="55" width="270" height="210" rx="10" fill="#ffebee" stroke="#c62828" stroke-width="1.5"/>
+      <text x="175" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#c62828">기존: 경매 후 손해 그대로</text>
+      <rect x="70" y="95" width="210" height="30" rx="5" fill="#ef9a9a"/>
+      <text x="175" y="115" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold">임차보증금 1억원</text>
+      <rect x="70" y="140" width="70" height="30" rx="5" fill="#c62828"/>
+      <text x="105" y="160" text-anchor="middle" font-size="11" fill="#fff">회복액 1천만원</text>
+      <text x="175" y="195" text-anchor="middle" font-size="13" font-weight="bold" fill="#b71c1c">❌ 9천만원 손실</text>
+      <text x="175" y="220" text-anchor="middle" font-size="11" fill="#888">국가 보전: 없음</text>
+      <text x="175" y="245" text-anchor="middle" font-size="11" fill="#888">피해자 부담: 전액</text>
+
+      <!-- 화살표 -->
+      <text x="350" y="165" text-anchor="middle" font-size="22" fill="#f57c00">➜</text>
+
+      <!-- 개정 방식 (오른쪽) -->
+      <rect x="390" y="55" width="270" height="210" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+      <text x="525" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e7d32">개정: 최소보장제 적용</text>
+      <rect x="420" y="95" width="210" height="30" rx="5" fill="#a5d6a7"/>
+      <text x="525" y="115" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold">임차보증금 1억원</text>
+      <rect x="420" y="140" width="70" height="30" rx="5" fill="#c62828"/>
+      <text x="455" y="160" text-anchor="middle" font-size="11" fill="#fff">회복액 1천만원</text>
+      <rect x="505" y="140" width="125" height="30" rx="5" fill="#2e7d32"/>
+      <text x="567" y="160" text-anchor="middle" font-size="11" fill="#fff" font-weight="bold">국가 보전 약 2,333만원</text>
+      <text x="525" y="195" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b5e20">✅ 최소 3,333만원 확보</text>
+      <text x="525" y="215" text-anchor="middle" font-size="11" fill="#2e7d32">(보증금의 1/3 = 최소보장)</text>
+      <text x="525" y="245" text-anchor="middle" font-size="11" fill="#888">부족분 국가가 메워줌</text>
+    </svg>
+  </div>
+
+  <!-- 신청 방법 -->
+  <div class="section">
+    <h2>📋 신청 방법 (단계별)</h2>
+    <div class="step-box">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <strong>피해자 결정 신청</strong>
+          주소지 관할 시·군·구청 또는 LH콜센터(1600-1004)에 신청. 2027년 5월 31일 마감.
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <strong>피해 사실 확인 서류 제출</strong>
+          임대차계약서, 확정일자, 전입신고 확인서, 보증금 미반환 증빙 서류 준비.
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <strong>피해자 결정 통지 수령</strong>
+          결정 후 지원 자격 확정. 최소보장·선지급 등 원하는 지원 항목 선택 신청.
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <strong>주거지원·법률지원 병행 신청</strong>
+          LH 긴급주거지원 또는 대한법률구조공단 법률지원 동시 신청 가능.
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <strong>최소보장금 지급</strong>
+          경·공매 종료 후 회복액 확인, 부족분 국가 보전금 지급.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- deadline-box -->
+  <div class="deadline-box">
+    <h3>⏰ 신청 기한 — 지금 당장 확인하세요!</h3>
+    <p>📌 피해자 결정 신청: <strong>2027년 5월 31일 마감</strong></p>
+    <p>📌 2025년 5월 31일 이전 최초 임대차계약 체결자만 해당</p>
+    <p>📌 이미 경·공매가 종료된 피해자도 소급 신청 가능</p>
+  </div>
+
+  <!-- 자가진단 체크리스트 -->
+  <div class="section">
+    <h2>✅ 내가 해당되는지 자가 진단</h2>
+    <div class="checklist">
+      <div class="check-item"><span class="check-mark">✓</span><span>보증금을 돌려받지 못한 임차인입니까?</span></div>
+      <div class="check-item"><span class="check-mark">✓</span><span>2025년 5월 31일 이전에 최초 임대차계약을 체결하셨습니까?</span></div>
+      <div class="check-item"><span class="check-mark">✓</span><span>집주인의 사기·악의적 채무불이행으로 피해를 입으셨습니까?</span></div>
+      <div class="check-item"><span class="check-mark">✓</span><span>이미 경매가 끝났더라도 소급 적용됩니다 — 확인하세요</span></div>
+      <div class="check-item"><span class="check-mark">✓</span><span>신탁 구조의 전세사기 피해도 선지급 대상입니다</span></div>
+    </div>
+  </div>
+
+  <!-- 주의사항 -->
+  <div class="section">
+    <h2>⚠️ 주의사항</h2>
+    <div class="caution">
+      <p>① 모든 임대차 분쟁이 해당되는 것은 아닙니다. 사기 의도·악의적 행위가 확인된 건에만 적용됩니다.</p>
+      <p>② 최소보장제는 경·공매 종료 후 실제 회복액 확인 이후 지급됩니다. 즉시 현금 지급이 아닙니다.</p>
+      <p>③ 선지급을 받은 경우 이후 회복액이 예상보다 많으면 정산(반환)이 발생할 수 있습니다.</p>
+      <p>④ 신청 기한(2027년 5월 31일)을 넘기면 구제 기회를 잃을 수 있으니 반드시 기한 내 신청하세요.</p>
+    </div>
+  </div>
+
+  <!-- 담당 기관 및 문의처 -->
+  <div class="section">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <div class="contact-box">
+      <h3>지원 창구 안내</h3>
+      <div class="contact-item"><span class="label">국토부</span><span>전세사기피해지원위원회 운영 — ☎ 1600-1004 (LH콜센터)</span></div>
+      <div class="contact-item"><span class="label">HUG</span><span>주택도시보증공사 전세피해지원센터 — ☎ 1566-9009</span></div>
+      <div class="contact-item"><span class="label">LH</span><span>긴급주거지원·피해주택 매입 신청 — ☎ 1600-1004</span></div>
+      <div class="contact-item"><span class="label">법률구조</span><span>대한법률구조공단 무료 법률지원 — ☎ 132</span></div>
+      <div class="contact-item"><span class="label">온라인</span><span>복지로 www.bokjiro.go.kr / 주택도시보증공사 www.khug.or.kr</span></div>
+    </div>
+  </div>
+
+  <!-- 전문가 찬반 론평 -->
+  <div class="section">
+    <h2>💬 전문가 찬반 론평</h2>
+    <div class="opinion-section">
+      <div class="opinion-grid">
+        <div class="opinion-pro">
+          <h3>🟢 찬성</h3>
+          <div class="opinion-card">
+            <p class="quote">"최소보장제는 국가가 주거 계약의 마지막 안전망 역할을 맡겠다는 선언입니다. 경매 후 10%도 못 받고 거리에 내몰린 피해자들에게 최소한의 존엄을 돌려주는 조치로, 뒤늦었지만 반드시 필요한 개입입니다."</p>
+            <p class="author">— 주거권 전문 법학 연구자</p>
+          </div>
+          <div class="opinion-card">
+            <p class="quote">"선지급·후정산 방식은 피해자가 법적 분쟁이 끝날 때까지 수년간 방치되던 문제를 해소합니다. 당장 살 곳이 없는 현실을 먼저 해결하고 정산은 나중에 한다는 접근은 복지 행정의 패러다임 전환입니다."</p>
+            <p class="author">— 사회복지정책 연구기관 연구위원</p>
+          </div>
+        </div>
+        <div class="opinion-con">
+          <h3>🔴 반대 / 우려</h3>
+          <div class="opinion-card">
+            <p class="quote">"국가가 민간 계약 손실을 무조건 보전해 주는 방식은 장기적으로 도덕적 해이를 유발할 수 있습니다. 재정 부담이 납세자에게 전가되는 구조이므로, 구상권 행사 및 가해자 환수 체계가 엄격히 병행돼야 합니다."</p>
+            <p class="author">— 재정경제 연구기관 선임 연구위원</p>
+          </div>
+          <div class="opinion-card">
+            <p class="quote">"피해 인정 기준이 여전히 모호해 실제 구제 사각지대가 발생할 우려가 있습니다. '사기 의도 증명' 요건을 충족하지 못한 피해자들이 동일한 상황에서 지원을 받지 못하는 형평성 문제를 해결해야 합니다."</p>
+            <p class="author">— 임차인 권리 시민단체 정책 활동가</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="section">
+    <div class="hashtags">
+      <span class="hashtag">#전세사기피해자</span>
+      <span class="hashtag">#최소보장제</span>
+      <span class="hashtag">#전세사기특별법</span>
+      <span class="hashtag">#선지급후정산</span>
+      <span class="hashtag">#보증금환급</span>
+      <span class="hashtag">#주거취약계층</span>
+      <span class="hashtag">#LH긴급주거</span>
+      <span class="hashtag">#복지뉴스</span>
+      <span class="hashtag">#2026복지</span>
+      <span class="hashtag">#청년주거권</span>
+    </div>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="section">
+    <div class="disclaimer">
+      이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부는 담당 기관(LH 1600-1004, HUG 1566-9009)에 확인하세요. 개인별 상황에 따라 지원 내용이 달라질 수 있습니다.
+    </div>
+  </div>
+
+  <!-- 작성일 -->
+  <div class="meta">작성일: 2026년 6월 22일 | 오늘의 복지 뉴스 제1보</div>
+
+</div>
+</body>
+</html>
