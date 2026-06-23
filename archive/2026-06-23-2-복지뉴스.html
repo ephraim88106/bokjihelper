@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"학교 그만뒀더니 급식도 상담도 다 끊겼다고요?" — 2026년 드디어 바뀝니다! 학교밖청소년 급식비 51% 증가·위기청소년 월 65만원·고립은둔 전문센터 14개소 완전 정복 | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', '맑은 고딕', sans-serif; background: #f7f8fa; color: #222; line-height: 1.7; }
+  .wrap { max-width: 780px; margin: 0 auto; background: #fff; padding-bottom: 40px; }
+
+  /* 상단 헤더 */
+  .top-bar { background: #ad1457; color: #fff; padding: 10px 24px; font-size: 13px; display: flex; justify-content: space-between; align-items: center; }
+  .top-bar .badge { background: rgba(255,255,255,0.2); border-radius: 20px; padding: 3px 12px; font-weight: 700; font-size: 12px; }
+
+  /* 섹션 배지 */
+  .section-badge { display: inline-block; background: #ad1457; color: #fff; border-radius: 20px; padding: 4px 16px; font-size: 12px; font-weight: 700; margin: 24px 24px 10px; }
+
+  /* 메인 제목 */
+  .main-title { font-size: 26px; font-weight: 900; line-height: 1.4; color: #111; padding: 0 24px; margin-bottom: 20px; }
+
+  /* 훅 */
+  .hook { border-left: 5px solid #ad1457; background: #fce4ec; padding: 18px 20px; margin: 0 24px 24px; border-radius: 0 8px 8px 0; font-size: 16px; line-height: 1.8; }
+  .hook .highlight { background: #f8bbd0; color: #880e4f; font-weight: 900; padding: 0 4px; border-radius: 3px; }
+
+  /* 핵심 요약 박스 */
+  .summary-box { background: #e8f5e9; border-left: 5px solid #2e7d32; border-radius: 8px; padding: 20px 24px; margin: 0 24px 28px; }
+  .summary-box h2 { color: #1b5e20; font-size: 15px; margin-bottom: 12px; }
+  .summary-box ul { list-style: none; padding: 0; }
+  .summary-box ul li { padding: 4px 0; font-size: 15px; font-weight: 600; }
+  .summary-box ul li::before { content: "📌 "; }
+
+  /* 섹션 공통 */
+  .section { padding: 0 24px; margin-bottom: 28px; }
+  .section h2 { font-size: 18px; font-weight: 900; color: #ad1457; margin-bottom: 14px; padding-bottom: 6px; border-bottom: 2px solid #f48fb1; }
+
+  /* 표 */
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { background: #ad1457; color: #fff; padding: 10px 12px; text-align: left; font-weight: 700; }
+  td { padding: 10px 12px; border-bottom: 1px solid #eee; vertical-align: top; }
+  tr:nth-child(even) td { background: #fce4ec; }
+  .amount { font-weight: 900; color: #ad1457; font-size: 15px; }
+
+  /* SVG 인포그래픽 */
+  .infographic { margin: 0 24px 28px; }
+  .infographic h2 { font-size: 18px; font-weight: 900; color: #ad1457; margin-bottom: 14px; padding-bottom: 6px; border-bottom: 2px solid #f48fb1; }
+
+  /* 신청 방법 */
+  .step-list { list-style: none; padding: 0; counter-reset: step; }
+  .step-list li { counter-increment: step; display: flex; align-items: flex-start; gap: 14px; margin-bottom: 14px; }
+  .step-list li::before { content: counter(step); background: #ad1457; color: #fff; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; margin-top: 2px; }
+
+  /* 마감 박스 */
+  .deadline-box { border: 2px dashed #f57c00; background: #fff8e1; border-radius: 10px; padding: 18px 20px; margin: 0 24px 28px; }
+  .deadline-box h3 { color: #e65100; font-size: 16px; font-weight: 900; margin-bottom: 8px; }
+
+  /* 체크리스트 */
+  .checklist { list-style: none; padding: 0; }
+  .checklist li { padding: 8px 0; border-bottom: 1px solid #f0f0f0; font-size: 15px; }
+  .checklist li::before { content: "✓ "; color: #ad1457; font-weight: 900; font-size: 16px; }
+
+  /* 주의사항 */
+  .caution p { margin-bottom: 10px; font-size: 14px; line-height: 1.7; }
+  .caution span.num { font-weight: 900; color: #ad1457; }
+
+  /* 문의처 박스 */
+  .contact-box { background: #ad1457; color: #fff; border-radius: 12px; padding: 20px 24px; margin: 0 24px 28px; }
+  .contact-box h2 { font-size: 16px; font-weight: 900; margin-bottom: 14px; }
+  .contact-box .contact-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; font-size: 15px; }
+  .contact-box .label { background: rgba(255,255,255,0.2); border-radius: 6px; padding: 2px 10px; font-size: 13px; font-weight: 700; white-space: nowrap; }
+  .contact-box a { color: #ffe082; text-decoration: none; font-weight: 700; }
+
+  /* 찬반 론평 */
+  .opinion-section { margin: 0 24px 28px; }
+  .opinion-section > h2 { font-size: 18px; font-weight: 900; color: #ad1457; margin-bottom: 16px; padding-bottom: 6px; border-bottom: 2px solid #f48fb1; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  /* 해시태그 */
+  .hashtags { padding: 0 24px; margin-bottom: 24px; }
+  .hashtags span { display: inline-block; background: #fce4ec; color: #ad1457; border-radius: 20px; padding: 4px 14px; font-size: 13px; font-weight: 700; margin: 4px 4px 4px 0; }
+
+  /* 면책조항 */
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 18px; margin: 0 24px 20px; font-size: 12px; color: #888; line-height: 1.7; }
+
+  /* 메타 */
+  .meta { text-align: right; padding: 0 24px; font-size: 12px; color: #aaa; }
+
+  /* 반응형 */
+  @media (max-width: 600px) {
+    .main-title { font-size: 20px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .top-bar { flex-direction: column; gap: 6px; text-align: center; }
+    table { font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 상단 헤더 -->
+  <div class="top-bar">
+    <span>📅 2026년 6월 23일 · 오늘의 복지 뉴스 · 제2보</span>
+    <span class="badge">🏫 학교밖·위기청소년</span>
+  </div>
+
+  <!-- 섹션 배지 -->
+  <span class="section-badge">학교밖청소년 · 고립은둔 · 위기청소년</span>
+
+  <!-- 메인 제목 -->
+  <h1 class="main-title">"학교 그만뒀더니 급식도 상담도 다 끊겼다고요?" — 2026년 드디어 바뀝니다! 급식비 예산 51% 증가·위기청소년 월 65만원·고립은둔 전문센터 14개소, 지금 당장 1388 누르세요</h1>
+
+  <!-- 훅 -->
+  <div class="hook">
+    대한민국에는 매년 <span class="highlight">약 5만 명</span>의 청소년이 학교를 떠납니다.<br>
+    학교를 나오는 순간 급식, 상담, 진로 지도 — 모든 것이 끊겨버립니다.<br>
+    2026년, 정부가 <span class="highlight">예산을 51.7% 대폭 증액</span>하며 이 사각지대를 메우기 시작했습니다.<br>
+    <strong>방 안에 혼자 갇혀 있는 청소년도, 거리를 떠도는 청소년도 — 이제 지원받을 수 있습니다.</strong>
+  </div>
+
+  <!-- 핵심 요약 박스 -->
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>학교밖청소년 급식비 지원 예산 15.9억 → 24.1억 (51.7% 증가), 2026년부터 적용</li>
+      <li>위기청소년 특별지원 대상 9~24세 확대, 생활지원 월 최대 65만원·건강지원 연 200만원</li>
+      <li>고립·은둔 청소년 전문지원센터 12→14개소 확충, 전담인력 36→48명으로 증가</li>
+    </ul>
+  </div>
+
+  <!-- 배경 섹션 -->
+  <div class="section">
+    <h2>🔍 왜 지금 이 정책이 나왔나요?</h2>
+    <p style="font-size:15px;line-height:1.9;">학교를 떠난 청소년은 교육부 통계에서도, 여성가족부 통계에서도 빠집니다. 이 <strong>"투명인간 청소년"</strong>이 매년 5만 명에 달하지만, 그동안 지원 예산은 턱없이 부족했습니다. 특히 코로나19 이후 방 안에 갇혀 사회와 완전히 단절된 <strong>고립·은둔 청소년</strong>이 급증하면서, 정부는 2026년 예산안에 관련 예산을 대폭 증액했습니다. 또한 위기청소년 특별지원 대상 연령을 기존 <strong>9~18세에서 9~24세</strong>로 올려 성인 문턱에서 지원이 끊기는 문제를 해결합니다.</p>
+  </div>
+
+  <!-- 상세 정보 표 -->
+  <div class="section">
+    <h2>📋 2026년 학교밖·위기청소년 지원 상세 표</h2>
+    <table>
+      <tr><th>지원 항목</th><th>지원 대상</th><th>지원 금액/규모</th><th>문의처</th></tr>
+      <tr>
+        <td><strong>급식비 지원</strong></td>
+        <td>학교 밖 청소년</td>
+        <td class="amount">예산 24.1억원<br><small>(전년比 +51.7%)</small></td>
+        <td>꿈드림센터 / 1388</td>
+      </tr>
+      <tr>
+        <td><strong>위기청소년 생활지원</strong></td>
+        <td>9~24세, 중위소득 100% 이하</td>
+        <td class="amount">월 최대 65만원</td>
+        <td>주민센터 / 정부24</td>
+      </tr>
+      <tr>
+        <td><strong>건강지원</strong></td>
+        <td>위기청소년 특별지원 해당자</td>
+        <td class="amount">연 최대 200만원</td>
+        <td>주민센터 / 1388</td>
+      </tr>
+      <tr>
+        <td><strong>학업지원</strong></td>
+        <td>위기청소년 특별지원 해당자</td>
+        <td class="amount">월 15~30만원</td>
+        <td>주민센터</td>
+      </tr>
+      <tr>
+        <td><strong>고립·은둔 전문지원</strong></td>
+        <td>사회적 단절 청소년</td>
+        <td class="amount">전국 14개소 센터<br>전담인력 48명</td>
+        <td>각 시·도 / 1388</td>
+      </tr>
+      <tr>
+        <td><strong>자격증 취득 지원</strong></td>
+        <td>자립 의지 있는 학교밖청소년</td>
+        <td class="amount">취업연계 강화</td>
+        <td>꿈드림센터</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- SVG 인포그래픽 -->
+  <div class="infographic">
+    <h2>📊 2026년 학교밖청소년 지원 예산 변화</h2>
+    <svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:12px;background:#fef9fc;">
+      <rect width="700" height="300" fill="#fef9fc" rx="12"/>
+      <text x="350" y="30" text-anchor="middle" font-size="15" font-weight="bold" fill="#ad1457">학교밖청소년 관련 예산 전년 대비 증감 (단위: 억원)</text>
+
+      <!-- 급식비 before -->
+      <rect x="60" y="130" width="90" height="110" fill="#f8bbd0" rx="6"/>
+      <text x="105" y="122" text-anchor="middle" font-size="13" fill="#888">2025년</text>
+      <text x="105" y="155" text-anchor="middle" font-size="15" font-weight="bold" fill="#880e4f">15.9억</text>
+      <text x="105" y="255" text-anchor="middle" font-size="12" fill="#555">급식비</text>
+
+      <!-- 급식비 after -->
+      <rect x="175" y="80" width="90" height="160" fill="#ad1457" rx="6"/>
+      <text x="220" y="72" text-anchor="middle" font-size="13" fill="#555">2026년</text>
+      <text x="220" y="108" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">24.1억</text>
+      <text x="220" y="124" text-anchor="middle" font-size="12" fill="#f8bbd0">+51.7%</text>
+      <text x="220" y="255" text-anchor="middle" font-size="12" fill="#555">급식비</text>
+
+      <!-- 고립은둔 before -->
+      <rect x="330" y="160" width="90" height="80" fill="#f8bbd0" rx="6"/>
+      <text x="375" y="152" text-anchor="middle" font-size="13" fill="#888">2025년</text>
+      <text x="375" y="185" text-anchor="middle" font-size="15" font-weight="bold" fill="#880e4f">13.2억</text>
+      <text x="375" y="255" text-anchor="middle" font-size="12" fill="#555">고립은둔</text>
+
+      <!-- 고립은둔 after -->
+      <rect x="445" y="110" width="90" height="130" fill="#880e4f" rx="6"/>
+      <text x="490" y="102" text-anchor="middle" font-size="13" fill="#555">2026년</text>
+      <text x="490" y="138" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">16억</text>
+      <text x="490" y="155" text-anchor="middle" font-size="12" fill="#f8bbd0">+2.8억↑</text>
+      <text x="490" y="255" text-anchor="middle" font-size="12" fill="#555">고립은둔</text>
+
+      <!-- 화살표 -->
+      <text x="155" y="185" text-anchor="middle" font-size="22" fill="#ad1457">→</text>
+      <text x="425" y="185" text-anchor="middle" font-size="22" fill="#880e4f">→</text>
+
+      <!-- 전담인력 -->
+      <text x="620" y="120" text-anchor="middle" font-size="13" font-weight="bold" fill="#ad1457">전담인력</text>
+      <text x="620" y="145" text-anchor="middle" font-size="13" fill="#888">36명</text>
+      <text x="620" y="165" text-anchor="middle" font-size="18" fill="#ad1457">↓</text>
+      <text x="620" y="190" text-anchor="middle" font-size="15" font-weight="bold" fill="#ad1457">48명</text>
+      <text x="620" y="210" text-anchor="middle" font-size="12" fill="#ad1457">(+33%)</text>
+      <text x="620" y="255" text-anchor="middle" font-size="12" fill="#555">센터인력</text>
+
+      <text x="350" y="285" text-anchor="middle" font-size="13" font-weight="bold" fill="#ad1457">▶ 위기청소년 지원 연령 9~18세 → 9~24세로 확대</text>
+    </svg>
+  </div>
+
+  <!-- 신청 방법 -->
+  <div class="section">
+    <h2>📝 신청 방법 (단계별)</h2>
+    <ul class="step-list">
+      <li><div><strong>1388 청소년상담전화</strong> 연락 — 학교밖청소년 지원·위기청소년 특별지원 모두 1388로 문의 시작. 24시간 운영.</div></li>
+      <li><div><strong>꿈드림센터(학교밖청소년지원센터) 방문</strong> — 급식비·직업훈련·검정고시 지원 연계. 전국 200여 개 운영.</div></li>
+      <li><div><strong>위기청소년 특별지원 신청</strong> — 주민센터에 <em>사회복지서비스 및 급여제공 신청서</em> 제출. 기준 중위소득 100% 이하, 9~24세 해당 시 신청 가능.</div></li>
+      <li><div><strong>고립·은둔 청소년 전문지원 연계</strong> — 시·도별 설치된 지원센터(14개소) 또는 1388을 통해 원스톱 패키지 신청. 방문상담 거부 시 아웃리치(찾아가는 상담) 요청 가능.</div></li>
+    </ul>
+  </div>
+
+  <!-- 마감 박스 -->
+  <div class="deadline-box">
+    <h3>⏰ 지금 당장 확인해야 하는 이유</h3>
+    <p style="font-size:15px;color:#5d4037;line-height:1.8;">📅 <strong>위기청소년 특별지원은 연간 예산 한도 내 선착순 지원</strong>입니다.<br>
+    예산이 소진되면 해당 연도 신청이 마감될 수 있습니다.<br>
+    <span style="color:#ad1457;font-weight:900;">고립은둔·학교밖·위기청소년 본인 또는 주변에 알고 있다면 지금 바로 1388!</span></p>
+  </div>
+
+  <!-- 자가진단 체크리스트 -->
+  <div class="section">
+    <h2>✅ 내가 혹은 주변이 해당되는지 자가 진단</h2>
+    <ul class="checklist">
+      <li>만 9세 이상 24세 이하의 청소년이 학교를 다니지 않고 있다</li>
+      <li>가구 소득이 기준 중위소득 100% 이하다 (4인 가족 월 649만원 이하)</li>
+      <li>6개월 이상 외출·대인관계가 거의 없고 방 안에 갇혀 생활하고 있다 (고립·은둔)</li>
+      <li>학교 급식 외에 규칙적인 식사를 하기 어려운 상황이다</li>
+      <li>가출·가정폭력·빈곤 등으로 위기 상황에 처한 청소년이 주변에 있다</li>
+    </ul>
+  </div>
+
+  <!-- 주의사항 -->
+  <div class="section caution">
+    <h2>⚠️ 주의사항</h2>
+    <p><span class="num">①</span> 위기청소년 특별지원은 생활지원·건강지원·학업지원 등 항목별로 신청하며, 중복 신청도 가능하지만 각 항목 한도를 초과할 수 없습니다.</p>
+    <p><span class="num">②</span> 고립·은둔 청소년 지원은 본인이 거부할 경우 강제 연결이 불가능합니다. 보호자 또는 주변인이 1388에 먼저 신고하면 전문가가 개입합니다.</p>
+    <p><span class="num">③</span> 급식비 지원은 꿈드림센터를 통한 연계이므로 반드시 해당 센터 등록이 선행되어야 합니다.</p>
+    <p><span class="num">④</span> 지원 내용과 금액은 시·도별로 다를 수 있으므로, 거주지 관할 주민센터 또는 1388에 정확한 내용을 반드시 확인하세요.</p>
+  </div>
+
+  <!-- 담당 기관 및 문의처 -->
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <div class="contact-row"><span class="label">청소년상담전화</span> ☎ <strong>1388</strong> (24시간)</div>
+    <div class="contact-row"><span class="label">여성가족부</span> ☎ <strong>02-2100-6313</strong></div>
+    <div class="contact-row"><span class="label">꿈드림센터(전국)</span> <a href="https://www.1388.go.kr">www.1388.go.kr</a></div>
+    <div class="contact-row"><span class="label">위기청소년 특별지원 신청</span> 주민센터 방문 / <a href="https://www.gov.kr">정부24</a></div>
+    <div class="contact-row"><span class="label">복지로 온라인 신청</span> <a href="https://www.bokjiro.go.kr">www.bokjiro.go.kr</a></div>
+  </div>
+
+  <!-- 전문가 찬반 론평 -->
+  <div class="opinion-section">
+    <h2>💬 전문가 찬반 론평</h2>
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"학교밖청소년 급식비 예산을 50% 이상 증액한 것은 의미있는 첫 걸음이다. 식사 문제 해결이 곧 심리 안정으로 이어지기 때문에, 급식 지원은 단순한 복지를 넘어 자립 기반을 만드는 투자다."</p>
+          <p class="author">— 청소년복지 정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"위기청소년 지원 연령을 24세로 상향한 것은 늦었지만 옳은 결정이다. 18~24세 구간은 성인도 청소년도 아닌 사각지대였고, 이 시기를 놓치면 사회적 비용이 훨씬 커진다."</p>
+          <p class="author">— 사회적 돌봄 현장 활동가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"전국 14개소 고립은둔 지원센터는 수요에 비해 턱없이 부족하다. 광역 단위로 1개 센터가 담당하는 구조로는 접근성 문제가 해결되지 않으며, 실제 서비스 연결률이 낮을 가능성이 높다."</p>
+          <p class="author">— 청소년정신건강 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"학교밖청소년 지원 예산이 증가했지만, 여전히 꿈드림센터 등록이라는 진입장벽이 존재한다. 센터를 방문조차 거부하는 고립청소년에게 급식비는 그림의 떡이 될 수 있다."</p>
+          <p class="author">— 비인가 대안교육 관계자</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span>#학교밖청소년</span>
+    <span>#고립은둔청소년</span>
+    <span>#위기청소년특별지원</span>
+    <span>#청소년급식비</span>
+    <span>#1388</span>
+    <span>#꿈드림센터</span>
+    <span>#월65만원지원</span>
+    <span>#청소년복지2026</span>
+    <span>#은둔청소년지원</span>
+    <span>#청소년사각지대</span>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    ※ 이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부 및 금액은 담당 기관(1388·여성가족부·주민센터)에 직접 확인하세요. 지원 기준 및 예산은 지역별·시기별로 다를 수 있습니다.
+  </div>
+
+  <p class="meta">작성일: 2026년 6월 23일 | 오늘의 복지 뉴스 편집팀</p>
+
+</div>
+</body>
+</html>
