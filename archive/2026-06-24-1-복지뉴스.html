@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"전기요금 밀려서 단전될 뻔했는데 최대 70만원이 공짜로 들어온다고요?!" — 2026년 에너지바우처 6월 15일 신청 시작, 지금 당장 확인하세요 | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans KR', sans-serif; background: #fff9f0; color: #333; line-height: 1.7; }
+  .container { max-width: 780px; margin: 0 auto; padding: 20px 16px 60px; }
+
+  /* 상단 헤더 */
+  .top-header { background: #f57c00; color: #fff; padding: 10px 18px; border-radius: 10px 10px 0 0; display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
+  .top-header .issue { font-weight: 700; }
+
+  /* 섹션 배지 */
+  .section-badge { display: inline-block; background: #f57c00; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin: 18px 0 8px; }
+
+  /* 메인 제목 */
+  h1 { font-size: 28px; font-weight: 900; color: #bf360c; line-height: 1.4; margin-bottom: 18px; }
+
+  /* 훅 */
+  .hook { border-left: 5px solid #f57c00; padding: 14px 18px; background: #fff3e0; border-radius: 0 8px 8px 0; margin-bottom: 22px; font-size: 15px; }
+  .highlight { background: #ffe082; padding: 2px 4px; border-radius: 3px; font-weight: 700; }
+
+  /* 핵심 요약 박스 */
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 18px 22px; margin-bottom: 26px; }
+  .summary-box h2 { color: #1b5e20; font-size: 15px; margin-bottom: 10px; }
+  .summary-box li { font-size: 14px; color: #2e7d32; font-weight: 700; margin-left: 18px; margin-bottom: 4px; }
+
+  /* 섹션 제목 */
+  h2 { font-size: 19px; font-weight: 800; color: #e65100; margin: 28px 0 12px; }
+  h3 { font-size: 16px; font-weight: 700; color: #f57c00; margin: 16px 0 8px; }
+
+  /* 상세 정보 표 */
+  table { width: 100%; border-collapse: collapse; margin: 14px 0 22px; font-size: 14px; }
+  th { background: #f57c00; color: #fff; padding: 10px 12px; text-align: left; }
+  td { padding: 9px 12px; border-bottom: 1px solid #ffe0b2; }
+  tr:nth-child(even) td { background: #fff8f0; }
+
+  /* SVG 래퍼 */
+  .svg-wrap { margin: 24px 0; overflow-x: auto; }
+
+  /* 신청 단계 */
+  .step-list { counter-reset: step; }
+  .step-item { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 14px; }
+  .step-num { background: #f57c00; color: #fff; font-weight: 900; font-size: 14px; min-width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .step-text { font-size: 14px; padding-top: 4px; }
+
+  /* 기한 강조 박스 */
+  .deadline-box { border: 2px dashed #f57c00; border-radius: 10px; padding: 16px 20px; margin: 24px 0; background: #fff8f0; }
+  .deadline-box .d-title { font-size: 16px; font-weight: 900; color: #e65100; margin-bottom: 6px; }
+  .deadline-box p { font-size: 14px; color: #555; }
+
+  /* 체크리스트 */
+  .checklist { background: #fff3e0; border-radius: 10px; padding: 18px 22px; margin: 20px 0; }
+  .checklist h2 { color: #e65100; font-size: 16px; margin-bottom: 10px; }
+  .checklist li { font-size: 14px; margin-bottom: 6px; list-style: none; }
+  .checklist li::before { content: "✓ "; color: #f57c00; font-weight: 900; }
+
+  /* 주의사항 */
+  .caution { background: #fce4ec; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 20px 0; }
+  .caution p { font-size: 14px; margin-bottom: 6px; }
+
+  /* 문의처 박스 */
+  .contact-box { background: #fff3e0; border: 1px solid #ffcc80; border-radius: 12px; padding: 18px 22px; margin: 24px 0; }
+  .contact-box h2 { color: #e65100; font-size: 16px; margin-bottom: 10px; }
+  .contact-box p { font-size: 14px; margin-bottom: 4px; }
+
+  /* 찬반 론평 */
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  /* 해시태그 */
+  .hashtag { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 16px; }
+  .hashtag span { background: #ffe0b2; color: #e65100; font-size: 13px; padding: 4px 10px; border-radius: 20px; font-weight: 600; }
+
+  /* 면책 */
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 18px; font-size: 12px; color: #888; margin-top: 20px; }
+
+  /* 작성일 */
+  .meta { text-align: right; font-size: 12px; color: #aaa; margin-top: 10px; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 20px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    table { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 상단 헤더 -->
+  <div class="top-header">
+    <span class="issue">📰 오늘의 복지 뉴스 · 제1보</span>
+    <span>2026년 6월 24일 (화)</span>
+  </div>
+
+  <!-- 섹션 배지 -->
+  <div class="section-badge">⚡ 에너지·생계지원</div>
+
+  <!-- 메인 제목 -->
+  <h1>"전기요금 밀려서 단전될 뻔했는데 최대 70만원이 공짜로 들어온다고요?!" — 2026년 에너지바우처 6월 15일 신청 시작, 지금 당장 확인하세요</h1>
+
+  <!-- 훅 -->
+  <div class="hook">
+    여름 폭염과 겨울 혹한, 에너지 요금 폭등으로 수급자 가정의 전기·가스 요금 고통이 극에 달했습니다. 그런데 국가가 올해도 <span class="highlight">최대 701,300원짜리 에너지바우처</span>를 줍니다. 이미 6월 15일부터 신청이 시작됐고, 신청하지 않으면 단 1원도 받지 못합니다.
+  </div>
+
+  <!-- 핵심 요약 박스 -->
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>신청 기간: 2026년 6월 15일 ~ 12월 31일 (신규 수급자)</li>
+      <li>지원 금액: 1인 295,200원 → 4인 이상 701,300원</li>
+      <li>신청처: 읍·면·동 행정복지센터 방문 또는 복지로(bokjiro.go.kr) 온라인</li>
+    </ul>
+  </div>
+
+  <!-- 배경/문제 섹션 -->
+  <h2>📋 왜 이 정책이 나왔나</h2>
+  <p>2022년 이후 에너지 가격 급등으로 기초생활수급 가구의 전기·가스 요금 부담이 급격히 증가했습니다. 특히 노인·장애인·영유아 세대는 냉방·난방을 포기하면 건강 위협을 받습니다. 정부는 이 같은 에너지 빈곤 문제를 해결하고자 에너지바우처 지원 단가를 해마다 인상해 왔으며, 2026년에는 역대 최고 지원금을 확정했습니다. 4인 이상 가구 기준 <strong>전년 대비 약 47,000원 인상</strong>되었습니다.</p>
+
+  <!-- 상세 정보 표 -->
+  <h2>💰 가구 규모별 지원 금액 (2026년 확정)</h2>
+  <table>
+    <tr><th>가구원 수</th><th>연간 지원 금액</th><th>전년 대비</th></tr>
+    <tr><td>1인 세대</td><td><strong>295,200원</strong></td><td>↑ 인상</td></tr>
+    <tr><td>2인 세대</td><td><strong>407,500원</strong></td><td>↑ 인상</td></tr>
+    <tr><td>3인 세대</td><td><strong>532,700원</strong></td><td>↑ 인상</td></tr>
+    <tr><td>4인 이상 세대</td><td><strong>701,300원</strong></td><td>↑ 인상</td></tr>
+  </table>
+
+  <h2>👥 신청 대상 (이 4가지 모두 해당해야)</h2>
+  <table>
+    <tr><th>조건</th><th>내용</th></tr>
+    <tr><td>복지 수급 자격</td><td>기초생활수급자 (생계·의료·주거·교육 급여 중 하나 이상)</td></tr>
+    <tr><td>세대 특성</td><td>노인(만 65세 이상), 영유아(만 6세 미만), 장애인, 임산부, 희귀·중증난치질환자 중 하나</td></tr>
+    <tr><td>거주 요건</td><td>대한민국 국민 (외국인 제외)</td></tr>
+    <tr><td>중복 제한</td><td>긴급복지지원 연료비, 연탄쿠폰 등 중복 수급 불가</td></tr>
+  </table>
+
+  <!-- SVG 인포그래픽 -->
+  <div class="svg-wrap">
+    <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;">
+      <rect width="700" height="260" fill="#fff9f0" rx="12"/>
+      <text x="350" y="32" text-anchor="middle" font-size="15" font-weight="bold" fill="#e65100">2026 에너지바우처 — 가구원 수별 연간 지원금</text>
+      <!-- 1인 -->
+      <rect x="50" y="180" width="60" height="50" fill="#f57c00" rx="4"/>
+      <text x="80" y="195" text-anchor="middle" font-size="10" fill="#fff">1인</text>
+      <text x="80" y="172" text-anchor="middle" font-size="11" font-weight="bold" fill="#e65100">295,200원</text>
+      <!-- 2인 -->
+      <rect x="180" y="143" width="60" height="87" fill="#fb8c00" rx="4"/>
+      <text x="210" y="158" text-anchor="middle" font-size="10" fill="#fff">2인</text>
+      <text x="210" y="135" text-anchor="middle" font-size="11" font-weight="bold" fill="#e65100">407,500원</text>
+      <!-- 3인 -->
+      <rect x="310" y="100" width="60" height="130" fill="#ff9800" rx="4"/>
+      <text x="340" y="115" text-anchor="middle" font-size="10" fill="#fff">3인</text>
+      <text x="340" y="92" text-anchor="middle" font-size="11" font-weight="bold" fill="#e65100">532,700원</text>
+      <!-- 4인 이상 -->
+      <rect x="440" y="50" width="60" height="180" fill="#e65100" rx="4"/>
+      <text x="470" y="65" text-anchor="middle" font-size="10" fill="#fff">4인+</text>
+      <text x="470" y="42" text-anchor="middle" font-size="11" font-weight="bold" fill="#bf360c">701,300원</text>
+      <!-- 바닥선 -->
+      <line x1="30" y1="230" x2="660" y2="230" stroke="#f57c00" stroke-width="1.5"/>
+      <!-- 사용처 안내 -->
+      <text x="570" y="110" font-size="12" fill="#555">💡 사용처</text>
+      <text x="570" y="128" font-size="11" fill="#777">• 전기요금</text>
+      <text x="570" y="144" font-size="11" fill="#777">• 도시가스</text>
+      <text x="570" y="160" font-size="11" fill="#777">• 지역난방</text>
+      <text x="570" y="176" font-size="11" fill="#777">• 등유·LPG</text>
+      <text x="570" y="192" font-size="11" fill="#777">• 연탄</text>
+      <!-- 기간 -->
+      <text x="350" y="248" text-anchor="middle" font-size="11" fill="#888">사용 기간: 2026.7.1 ~ 2027.5.31</text>
+    </svg>
+  </div>
+
+  <!-- 신청 방법 -->
+  <h2>📝 신청 방법 (단계별)</h2>
+  <div class="step-list">
+    <div class="step-item"><div class="step-num">1</div><div class="step-text"><strong>자격 확인:</strong> 기초생활수급 자격 여부 확인 → 복지로(www.bokjiro.go.kr) 또는 주민센터 문의</div></div>
+    <div class="step-item"><div class="step-num">2</div><div class="step-text"><strong>신청 서류 준비:</strong> 신분증, 국민행복카드 (없으면 현장 발급 안내)</div></div>
+    <div class="step-item"><div class="step-num">3</div><div class="step-text"><strong>신청:</strong> 가까운 읍·면·동 행정복지센터 방문 <em>또는</em> 복지로 홈페이지(온라인)</div></div>
+    <div class="step-item"><div class="step-num">4</div><div class="step-text"><strong>바우처 수령:</strong> 국민행복카드에 포인트 자동 충전 (2026년 7월 1일부터 사용 가능)</div></div>
+    <div class="step-item"><div class="step-num">5</div><div class="step-text"><strong>사용:</strong> 에너지 요금 고지서 자동차감 또는 연료 구입 시 국민행복카드 제시</div></div>
+  </div>
+  <p style="font-size:13px;color:#888;margin-top:8px;">※ 작년에 이미 수급했고 정보 변동이 없는 가구는 <strong>자동 갱신</strong> (별도 신청 불필요)</p>
+
+  <!-- 기한 강조 박스 -->
+  <div class="deadline-box">
+    <div class="d-title">⏰ 신청 기간 — 지금 바로 신청하세요!</div>
+    <p>🗓 <strong>2026년 6월 15일(월) ~ 2026년 12월 31일(목)</strong></p>
+    <p>📌 사용 기간: 2026년 7월 1일 ~ 2027년 5월 31일 (11개월)</p>
+    <p style="color:#c62828;font-weight:700;margin-top:6px;">⚠ 신청하지 않으면 단 1원도 지급되지 않습니다!</p>
+  </div>
+
+  <!-- 자가진단 체크리스트 -->
+  <div class="checklist">
+    <h2>✅ 나는 받을 수 있을까? 자가진단 체크리스트</h2>
+    <ul>
+      <li>현재 기초생활수급자(생계·의료·주거·교육 급여 중 하나)입니까?</li>
+      <li>만 65세 이상 노인, 만 6세 미만 영유아, 장애인, 임산부 중 해당자가 세대에 있습니까?</li>
+      <li>대한민국 국민이며 주민등록이 되어 있습니까?</li>
+      <li>긴급복지지원 연료비나 연탄쿠폰을 동시에 받고 있지 않습니까?</li>
+      <li>국민행복카드를 보유하고 있거나 발급받을 수 있습니까?</li>
+    </ul>
+    <p style="font-size:13px;color:#555;margin-top:8px;">→ 5개 모두 해당하면 100% 신청 가능!</p>
+  </div>
+
+  <!-- 주의사항 -->
+  <div class="caution">
+    <h2 style="color:#c62828;font-size:16px;margin-bottom:10px;">⚠ 꼭 알아야 할 주의사항</h2>
+    <p>① 에너지바우처는 <strong>현금 인출 불가</strong> — 지정 에너지 분야에만 사용 가능</p>
+    <p>② 기존 수급자도 <strong>세대원 변동·주소 변경</strong> 시에는 반드시 재신청 필요</p>
+    <p>③ 사용 기간(2027년 5월 31일) 내 미사용 잔액은 <strong>자동 소멸</strong></p>
+    <p>④ 긴급복지지원 연료비 등 <strong>유사 지원과 중복 수급 불가</strong>, 이미 받고 있다면 상담 후 선택</p>
+  </div>
+
+  <!-- 담당 기관 및 문의처 -->
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <p>🏛 <strong>신청처:</strong> 가까운 읍·면·동 행정복지센터 (주민센터)</p>
+    <p>🌐 <strong>온라인 신청:</strong> 복지로 www.bokjiro.go.kr</p>
+    <p>📱 <strong>에너지바우처 공식:</strong> www.energyv.or.kr</p>
+    <p>📞 <strong>콜센터:</strong> 한국에너지공단 1670-0900 / 복지로 129</p>
+    <p>🕐 <strong>운영시간:</strong> 평일 09:00 ~ 18:00</p>
+  </div>
+
+  <!-- 찬반 론평 -->
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"에너지 빈곤은 단순한 요금 문제가 아니라 생명권 문제입니다. 지원 단가를 해마다 현실화하는 것은 최소한의 사회적 책무이며, 이번 역대 최고 수준의 인상은 방향성 면에서 정확합니다."</p>
+          <p class="author">— 사회복지학과 교수</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"자동 갱신 도입으로 행정 문턱이 낮아진 것은 긍정적입니다. 수급자 본인이 신청을 놓쳐 혜택을 받지 못하는 '사각지대 신청 실패' 현상이 실제 현장에서 빈번했기 때문입니다."</p>
+          <p class="author">— 에너지복지 현장 활동가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"대상을 세대 특성(노인·장애인 등)으로 제한하면 청·장년 수급 가구는 동일한 에너지 빈곤 상태에서도 지원을 받지 못합니다. 보편적 에너지기본권 관점에서 대상 확대 논의가 시급합니다."</p>
+          <p class="author">— 빈곤정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"바우처 방식은 현금 지원 대비 행정비용이 높고 사용처가 제한됩니다. 취약계층 일부는 스마트폰이나 인터넷 접근이 어려워 온라인 신청 옵션의 실효성이 낮다는 점도 개선 과제입니다."</p>
+          <p class="author">— 재정사회정책 연구자</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="hashtag">
+    <span>#에너지바우처2026</span>
+    <span>#기초생활수급자</span>
+    <span>#전기요금지원</span>
+    <span>#복지뉴스</span>
+    <span>#에너지빈곤</span>
+    <span>#국민행복카드</span>
+    <span>#6월신청</span>
+    <span>#복지로</span>
+    <span>#에너지취약계층</span>
+    <span>#생계지원</span>
+  </div>
+
+  <!-- 면책 -->
+  <div class="disclaimer">
+    이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부는 담당 기관(읍·면·동 행정복지센터, 한국에너지공단 1670-0900)에 확인하세요.
+  </div>
+
+  <div class="meta">작성일: 2026년 6월 24일 | 오늘의 복지 뉴스</div>
+
+</div>
+</body>
+</html>

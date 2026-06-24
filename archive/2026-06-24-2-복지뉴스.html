@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"같이 살수록 연금이 줄어드는 나라" 10년간 1,678만원 손해본 어르신들… 기초연금 부부감액 드디어 폐지 초읽기! | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans KR', sans-serif; background: #f9f0ff; color: #333; line-height: 1.7; }
+  .container { max-width: 780px; margin: 0 auto; padding: 20px 16px 60px; }
+
+  /* 상단 헤더 */
+  .top-header { background: #6a1b9a; color: #fff; padding: 10px 18px; border-radius: 10px 10px 0 0; display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
+  .top-header .issue { font-weight: 700; }
+
+  /* 섹션 배지 */
+  .section-badge { display: inline-block; background: #6a1b9a; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin: 18px 0 8px; }
+
+  /* 메인 제목 */
+  h1 { font-size: 27px; font-weight: 900; color: #4a148c; line-height: 1.4; margin-bottom: 18px; }
+
+  /* 훅 */
+  .hook { border-left: 5px solid #6a1b9a; padding: 14px 18px; background: #f3e5f5; border-radius: 0 8px 8px 0; margin-bottom: 22px; font-size: 15px; }
+  .highlight { background: #e1bee7; padding: 2px 4px; border-radius: 3px; font-weight: 700; }
+
+  /* 핵심 요약 박스 */
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 18px 22px; margin-bottom: 26px; }
+  .summary-box h2 { color: #1b5e20; font-size: 15px; margin-bottom: 10px; }
+  .summary-box li { font-size: 14px; color: #2e7d32; font-weight: 700; margin-left: 18px; margin-bottom: 4px; }
+
+  /* 섹션 제목 */
+  h2 { font-size: 19px; font-weight: 800; color: #4a148c; margin: 28px 0 12px; }
+  h3 { font-size: 16px; font-weight: 700; color: #6a1b9a; margin: 16px 0 8px; }
+
+  /* 상세 정보 표 */
+  table { width: 100%; border-collapse: collapse; margin: 14px 0 22px; font-size: 14px; }
+  th { background: #6a1b9a; color: #fff; padding: 10px 12px; text-align: left; }
+  td { padding: 9px 12px; border-bottom: 1px solid #e1bee7; }
+  tr:nth-child(even) td { background: #fce4ec; }
+
+  /* SVG 래퍼 */
+  .svg-wrap { margin: 24px 0; overflow-x: auto; }
+
+  /* 신청 단계 */
+  .step-item { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 14px; }
+  .step-num { background: #6a1b9a; color: #fff; font-weight: 900; font-size: 14px; min-width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .step-text { font-size: 14px; padding-top: 4px; }
+
+  /* 기한 강조 박스 */
+  .deadline-box { border: 2px dashed #6a1b9a; border-radius: 10px; padding: 16px 20px; margin: 24px 0; background: #f3e5f5; }
+  .deadline-box .d-title { font-size: 16px; font-weight: 900; color: #4a148c; margin-bottom: 6px; }
+  .deadline-box p { font-size: 14px; color: #555; }
+
+  /* 체크리스트 */
+  .checklist { background: #f3e5f5; border-radius: 10px; padding: 18px 22px; margin: 20px 0; }
+  .checklist h2 { color: #4a148c; font-size: 16px; margin-bottom: 10px; }
+  .checklist li { font-size: 14px; margin-bottom: 6px; list-style: none; }
+  .checklist li::before { content: "✓ "; color: #6a1b9a; font-weight: 900; }
+
+  /* 주의사항 */
+  .caution { background: #fce4ec; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 20px 0; }
+  .caution p { font-size: 14px; margin-bottom: 6px; }
+
+  /* 문의처 박스 */
+  .contact-box { background: #f3e5f5; border: 1px solid #ce93d8; border-radius: 12px; padding: 18px 22px; margin: 24px 0; }
+  .contact-box h2 { color: #4a148c; font-size: 16px; margin-bottom: 10px; }
+  .contact-box p { font-size: 14px; margin-bottom: 4px; }
+
+  /* 찬반 론평 */
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  /* 해시태그 */
+  .hashtag { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 16px; }
+  .hashtag span { background: #e1bee7; color: #4a148c; font-size: 13px; padding: 4px 10px; border-radius: 20px; font-weight: 600; }
+
+  /* 면책 */
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 18px; font-size: 12px; color: #888; margin-top: 20px; }
+
+  /* 작성일 */
+  .meta { text-align: right; font-size: 12px; color: #aaa; margin-top: 10px; }
+
+  /* 손실 강조 박스 */
+  .loss-box { background: #fce4ec; border: 2px solid #c62828; border-radius: 10px; padding: 16px 20px; margin: 20px 0; text-align: center; }
+  .loss-box .big-num { font-size: 36px; font-weight: 900; color: #c62828; }
+  .loss-box p { font-size: 13px; color: #555; margin-top: 4px; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 20px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    table { font-size: 12px; }
+    .loss-box .big-num { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 상단 헤더 -->
+  <div class="top-header">
+    <span class="issue">📰 오늘의 복지 뉴스 · 제2보</span>
+    <span>2026년 6월 24일 (화)</span>
+  </div>
+
+  <!-- 섹션 배지 -->
+  <div class="section-badge">👴 노인·기초연금</div>
+
+  <!-- 메인 제목 -->
+  <h1>"같이 살수록 연금이 줄어드는 나라" 10년간 1,678만원 손해본 어르신들… 기초연금 부부감액 드디어 폐지 초읽기!</h1>
+
+  <!-- 훅 -->
+  <div class="hook">
+    부부가 함께 산다는 이유만으로 기초연금을 20%씩 깎이는 부부감액 제도. 혼자 사는 어르신보다 <span class="highlight">10년 누적 1,678만원</span>을 덜 받아온 노인 부부 수백만 명에게 드디어 변화의 신호가 오고 있습니다. 국회 법안 발의와 정부 검토안이 동시에 나왔습니다.
+  </div>
+
+  <!-- 핵심 요약 박스 -->
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>2026년 기초연금 선정기준액: 단독가구 월 247만원 (전년比 19만원↑)</li>
+      <li>부부감액 현황: 각 20% 삭감 → 두 사람 합산 월 55만 9,520원 (단독 2명分의 80%)</li>
+      <li>폐지 논의: 국회안 2028년 전면폐지 vs 정부안 단계적 감축</li>
+    </ul>
+  </div>
+
+  <!-- 배경/문제 섹션 -->
+  <h2>📋 부부감액, 왜 생겼고 왜 문제인가</h2>
+  <p>기초연금 부부감액은 2014년 제도 도입 당시 "두 사람이 함께 살면 생활비가 절약된다"는 논리로 설계되었습니다. 부부가 함께 기초연금을 받을 경우 각각 20%를 감액합니다. 단독가구 기준 최대 월 349,700원이지만, 부부 각각은 279,760원밖에 받지 못합니다.</p>
+  <p style="margin-top:10px;">문제는 <strong>노인 부부가 단순히 결혼·동거를 유지한다는 이유로 불이익을 받는다</strong>는 점입니다. 실제로 노인 2명이 각자 독립 세대를 유지했다면 합산 699,400원을 받을 수 있지만, 같은 집에 살면 559,520원에 그칩니다. 매달 13만 9,880원 차이, 10년이면 무려 1,678만원 손실입니다.</p>
+
+  <!-- 손실 강조 박스 -->
+  <div class="loss-box">
+    <div class="big-num">-1,678만원</div>
+    <p>부부가 함께 살았다는 이유만으로 10년간 입는 누적 손실</p>
+    <p>(단독가구 2명 합산 대비 / 월 139,880원 × 120개월)</p>
+  </div>
+
+  <!-- 상세 정보 표 -->
+  <h2>📊 2026년 기초연금 주요 수치</h2>
+  <table>
+    <tr><th>구분</th><th>2025년</th><th>2026년</th><th>변화</th></tr>
+    <tr><td>단독가구 선정기준액</td><td>월 228만원</td><td><strong>월 247만원</strong></td><td>↑19만원</td></tr>
+    <tr><td>부부가구 선정기준액</td><td>월 364만 8,000원</td><td><strong>월 395만 2,000원</strong></td><td>↑30만 4,000원</td></tr>
+    <tr><td>최대 기초연금액</td><td>월 342,510원</td><td><strong>월 349,700원</strong></td><td>↑7,190원(+2.1%)</td></tr>
+    <tr><td>부부 각각 수령액(감액 후)</td><td>월 274,000원</td><td><strong>월 279,760원</strong></td><td>↑5,760원</td></tr>
+    <tr><td>근로소득 공제</td><td>월 112만원</td><td><strong>월 116만원</strong></td><td>↑4만원</td></tr>
+  </table>
+
+  <h2>⚖️ 부부감액 폐지 방안 비교</h2>
+  <table>
+    <tr><th>구분</th><th>국회 발의안</th><th>정부 검토안</th></tr>
+    <tr><td>방식</td><td>일괄 단계적 폐지</td><td>저소득 우선 단계적 감축</td></tr>
+    <tr><td>2026년</td><td>감액률 10%로 인하</td><td>현행 유지</td></tr>
+    <tr><td>2027년</td><td>감액률 5%로 인하</td><td>감액률 15%로 인하</td></tr>
+    <tr><td>2028년</td><td><strong>전면 폐지</strong></td><td>단계 지속</td></tr>
+    <tr><td>2030년</td><td>—</td><td>감액률 10%</td></tr>
+    <tr><td>대상</td><td>전체 부부 수급자</td><td>소득 하위 40% 우선</td></tr>
+  </table>
+
+  <!-- SVG 인포그래픽 -->
+  <div class="svg-wrap">
+    <svg viewBox="0 0 700 270" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;">
+      <rect width="700" height="270" fill="#f9f0ff" rx="12"/>
+      <text x="350" y="30" text-anchor="middle" font-size="14" font-weight="bold" fill="#4a148c">기초연금 부부감액 — 단독 vs 부부 수령액 비교</text>
+
+      <!-- 단독 두 명 -->
+      <rect x="60" y="80" width="100" height="130" fill="#6a1b9a" rx="6"/>
+      <text x="110" y="75" text-anchor="middle" font-size="11" fill="#4a148c" font-weight="bold">단독가구 A</text>
+      <text x="110" y="127" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">349,700원</text>
+      <text x="110" y="145" text-anchor="middle" font-size="10" fill="#e1bee7">월 수령액</text>
+
+      <rect x="200" y="80" width="100" height="130" fill="#6a1b9a" rx="6"/>
+      <text x="250" y="75" text-anchor="middle" font-size="11" fill="#4a148c" font-weight="bold">단독가구 B</text>
+      <text x="250" y="127" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">349,700원</text>
+      <text x="250" y="145" text-anchor="middle" font-size="10" fill="#e1bee7">월 수령액</text>
+
+      <!-- 합산 화살표 -->
+      <text x="185" y="230" text-anchor="middle" font-size="12" fill="#4a148c" font-weight="bold">합산 699,400원</text>
+
+      <!-- VS -->
+      <text x="370" y="150" text-anchor="middle" font-size="22" fill="#c62828" font-weight="900">VS</text>
+
+      <!-- 부부 -->
+      <rect x="440" y="107" width="100" height="103" fill="#ab47bc" rx="6"/>
+      <text x="490" y="102" text-anchor="middle" font-size="11" fill="#4a148c" font-weight="bold">부부 A (감액)</text>
+      <text x="490" y="143" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">279,760원</text>
+      <text x="490" y="161" text-anchor="middle" font-size="10" fill="#f3e5f5">각각 -20%</text>
+
+      <rect x="560" y="107" width="100" height="103" fill="#ab47bc" rx="6"/>
+      <text x="610" y="102" text-anchor="middle" font-size="11" fill="#4a148c" font-weight="bold">부부 B (감액)</text>
+      <text x="610" y="143" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">279,760원</text>
+      <text x="610" y="161" text-anchor="middle" font-size="10" fill="#f3e5f5">각각 -20%</text>
+
+      <text x="560" y="230" text-anchor="middle" font-size="12" fill="#c62828" font-weight="bold">합산 559,520원 (▼139,880원)</text>
+
+      <!-- 기준선 -->
+      <line x1="30" y1="210" x2="680" y2="210" stroke="#ce93d8" stroke-width="1" stroke-dasharray="5,3"/>
+    </svg>
+  </div>
+
+  <!-- 기한 강조 박스 -->
+  <div class="deadline-box">
+    <div class="d-title">📅 기초연금 신청·수급 관련 일정</div>
+    <p>🗓 2026년 선정기준액 적용: <strong>2026년 1월 1일부터</strong></p>
+    <p>🗓 부부감액 폐지 법안: <strong>국회 심사 중 (2026년 하반기 결과 주목)</strong></p>
+    <p>🗓 신규 수급 신청: <strong>만 65세 생일 이전 달 1일부터 가능 (연중 상시)</strong></p>
+    <p style="color:#c62828;font-weight:700;margin-top:6px;">⚠ 만 65세가 됐는데 아직 신청 안 했다면 지금 바로 주민센터로!</p>
+  </div>
+
+  <!-- 자가진단 체크리스트 -->
+  <div class="checklist">
+    <h2>✅ 기초연금 받을 수 있나? 자가진단 체크리스트</h2>
+    <ul>
+      <li>만 65세 이상 대한민국 국민이신가요?</li>
+      <li>단독가구라면 월 소득인정액이 247만원 이하인가요?</li>
+      <li>부부가구라면 합산 소득인정액이 395만 2,000원 이하인가요?</li>
+      <li>공무원·군인·사립학교교직원 연금 수급자가 아닌가요?</li>
+      <li>부부 모두 수급 중이라면 부부감액 20% 적용을 확인하셨나요?</li>
+    </ul>
+    <p style="font-size:13px;color:#555;margin-top:8px;">→ 가까운 읍·면·동 행정복지센터에서 무료 상담 가능!</p>
+  </div>
+
+  <!-- 주의사항 -->
+  <div class="caution">
+    <h2 style="color:#c62828;font-size:16px;margin-bottom:10px;">⚠ 꼭 알아야 할 주의사항</h2>
+    <p>① 소득인정액은 실제 소득 + <strong>금융재산·부동산 환산액</strong>을 합산해 산출 — 직접 소득이 없어도 탈락 가능</p>
+    <p>② 공무원·군인·사립교직원 등 <strong>직역연금 수급자는 원칙적으로 대상 제외</strong></p>
+    <p>③ 부부감액 폐지는 아직 <strong>확정되지 않은 입법 논의</strong> — 현재는 여전히 20% 감액 적용</p>
+    <p>④ 기초연금 수급 후 소득·재산 변동이 생기면 <strong>즉시 신고 의무</strong> (미신고 시 환수)</p>
+  </div>
+
+  <!-- 담당 기관 및 문의처 -->
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <p>🏛 <strong>신청처:</strong> 가까운 읍·면·동 행정복지센터 (연중 상시)</p>
+    <p>🌐 <strong>온라인:</strong> 복지로 www.bokjiro.go.kr</p>
+    <p>📞 <strong>국민연금공단 콜센터:</strong> 1355 (기초연금 담당)</p>
+    <p>📞 <strong>보건복지부 상담:</strong> 129</p>
+    <p>🕐 <strong>운영시간:</strong> 평일 09:00 ~ 18:00</p>
+  </div>
+
+  <!-- 찬반 론평 -->
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"결혼 여부가 복지 수급액을 좌우하는 제도는 헌법상 평등 원칙과 충돌합니다. 부부감액은 노인 동거·혼인에 명백한 불이익을 주며, 폐지는 당연한 방향입니다."</p>
+          <p class="author">— 노인복지정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"10년 누적 1,678만원의 손실은 저소득 노인 부부에게 결코 작지 않습니다. 폐지를 통해 노인 빈곤율을 실질적으로 낮출 수 있는 기회입니다."</p>
+          <p class="author">— 사회보장학과 교수</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"부부감액 전면 폐지 시 재정 소요가 수조 원에 달합니다. 인구고령화로 기초연금 재정 부담이 급증하는 상황에서 지속가능성을 먼저 확보해야 합니다."</p>
+          <p class="author">— 재정경제 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"기초생활수급 노인과 기초연금만 받는 노인 간 역전 현상이 이미 발생하고 있습니다. 최저 보장 수준 설계 없이 단순 폐지만 추진하면 새로운 형평성 문제가 생길 수 있습니다."</p>
+          <p class="author">— 사회복지 현장 활동가</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="hashtag">
+    <span>#기초연금2026</span>
+    <span>#부부감액폐지</span>
+    <span>#노인복지</span>
+    <span>#복지뉴스</span>
+    <span>#선정기준액247만원</span>
+    <span>#연금개혁</span>
+    <span>#노인빈곤</span>
+    <span>#1678만원손해</span>
+    <span>#기초연금신청</span>
+    <span>#65세이상</span>
+  </div>
+
+  <!-- 면책 -->
+  <div class="disclaimer">
+    이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 수급 여부 및 감액 규모는 국민연금공단(☎ 1355) 또는 가까운 행정복지센터에 직접 확인하세요. 부부감액 폐지 입법은 현재 진행 중으로 확정 내용이 아닙니다.
+  </div>
+
+  <div class="meta">작성일: 2026년 6월 24일 | 오늘의 복지 뉴스</div>
+
+</div>
+</body>
+</html>
