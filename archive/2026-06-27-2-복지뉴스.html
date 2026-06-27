@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"활동지원사 못 구해 집에 갇혔다고요?" 2026년 드디어 바뀝니다 — 최중증 가산급여 258시간·전문수당 3배 인상, 14만 명 지금 확인하세요!</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; background: #f0f4ff; color: #222; line-height: 1.75; }
+  .container { max-width: 760px; margin: 0 auto; padding: 20px 16px 60px; }
+
+  .top-header { background: #1565c0; color: #fff; padding: 12px 20px; border-radius: 10px 10px 0 0; display: flex; justify-content: space-between; align-items: center; font-size: 13px; flex-wrap: wrap; gap: 6px; }
+  .top-header .date-tag { opacity: 0.85; }
+  .top-header .issue-tag { font-weight: 700; }
+
+  .section-badge { display: inline-block; background: #1565c0; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 14px; border-radius: 20px; margin: 20px 0 12px; }
+
+  .main-title { font-size: 28px; font-weight: 900; color: #1a1a1a; line-height: 1.4; margin-bottom: 20px; }
+
+  .hook { border-left: 5px solid #1565c0; padding: 16px 18px; background: #e3f2fd; border-radius: 0 10px 10px 0; margin-bottom: 26px; font-size: 15px; line-height: 1.85; }
+  .highlight { color: #0d47a1; font-weight: 800; }
+
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 18px 22px; margin-bottom: 30px; }
+  .summary-box h3 { color: #1b5e20; font-size: 15px; font-weight: 900; margin-bottom: 10px; }
+  .summary-box ul { list-style: none; padding: 0; }
+  .summary-box ul li { font-size: 14px; line-height: 1.85; padding: 3px 0; }
+  .summary-box ul li::before { content: "📌 "; }
+
+  h2 { font-size: 20px; font-weight: 800; color: #1565c0; margin: 32px 0 14px; border-bottom: 2px solid #bbdefb; padding-bottom: 6px; }
+
+  p { font-size: 15px; line-height: 1.85; margin-bottom: 14px; }
+
+  table { width: 100%; border-collapse: collapse; margin: 14px 0 24px; font-size: 14px; border-radius: 8px; overflow: hidden; }
+  th { background: #1565c0; color: #fff; padding: 11px 14px; text-align: left; }
+  td { padding: 11px 14px; border-bottom: 1px solid #d0e4f7; }
+  tr:nth-child(even) td { background: #e3f2fd; }
+  tr:last-child td { border-bottom: none; }
+
+  .step-list { list-style: none; padding: 0; margin: 12px 0 24px; }
+  .step-list li { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px; }
+  .step-num { background: #1565c0; color: #fff; border-radius: 50%; width: 32px; height: 32px; min-width: 32px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; margin-top: 2px; }
+  .step-text { font-size: 14px; line-height: 1.75; }
+  .step-text a { color: #1565c0; }
+
+  .deadline-box { border: 2px dashed #f57c00; border-radius: 12px; padding: 18px 22px; margin: 26px 0; background: #fff8e1; }
+  .deadline-box h3 { color: #e65100; font-size: 17px; font-weight: 900; margin-bottom: 8px; }
+  .deadline-box p { font-size: 14px; color: #333; margin: 0; }
+
+  .checklist { background: #fff; border: 1px solid #bbdefb; border-radius: 12px; padding: 18px 22px; margin: 22px 0; }
+  .checklist h3 { font-size: 16px; font-weight: 800; margin-bottom: 12px; color: #1a1a1a; }
+  .checklist ul { list-style: none; padding: 0; }
+  .checklist ul li { font-size: 14px; padding: 8px 0; border-bottom: 1px solid #e3f2fd; }
+  .checklist ul li:last-child { border-bottom: none; }
+  .checklist ul li::before { content: "✓ "; color: #1565c0; font-weight: 800; }
+
+  .notice { background: #fff3e0; border-left: 5px solid #ff6d00; padding: 16px 20px; border-radius: 0 10px 10px 0; margin: 22px 0; }
+  .notice p { font-size: 14px; margin: 0 0 8px; }
+  .notice p:last-child { margin: 0; }
+
+  .contact-box { background: #e3f2fd; border-radius: 12px; padding: 20px 22px; margin: 26px 0; }
+  .contact-box h3 { color: #0d47a1; font-size: 17px; font-weight: 800; margin-bottom: 14px; }
+  .contact-box p { font-size: 14px; margin-bottom: 8px; }
+  .contact-box p:last-child { margin: 0; }
+  .contact-box a { color: #0d47a1; }
+
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  .hashtags { margin: 26px 0; }
+  .hashtag { display: inline-block; background: #e3f2fd; color: #0d47a1; border-radius: 20px; padding: 5px 13px; font-size: 13px; margin: 4px; font-weight: 600; }
+
+  .disclaimer { background: #f5f5f5; border-radius: 10px; padding: 14px 18px; margin-top: 32px; }
+  .disclaimer p { font-size: 12px; color: #777; margin: 0; }
+
+  .meta { text-align: right; font-size: 12px; color: #999; margin-top: 14px; }
+
+  svg { display: block; width: 100%; max-width: 680px; }
+
+  @media (max-width: 600px) {
+    .main-title { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    table { font-size: 12px; }
+    th, td { padding: 8px 10px; }
+    .top-header { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="top-header">
+    <span class="date-tag">2026년 6월 27일 (토)</span>
+    <span class="issue-tag">오늘의 복지 뉴스 · 제2보</span>
+  </div>
+
+  <span class="section-badge">♿ 장애인 활동지원</span>
+
+  <h1 class="main-title">"활동지원사 못 구해서 일주일째 집에 갇혔다고요?" — 2026년 드디어 바뀝니다! 최중증 가산급여 258시간·전문수당 3배 인상, 대상 14만 명 지금 당장 확인하세요!</h1>
+
+  <div class="hook">
+    하루 종일 홀로 생활하기 어려운 중증 장애인이 활동지원사를 구하지 못해 방치되는 사례가 전국에서 끊이지 않습니다. <span class="highlight">2026년, 정부가 활동지원 단가를 올리고 최중증 장애인 가산급여 시간을 53시간 더 늘렸습니다.</span> 전문수당도 5만원에서 15만원으로 3배 뛰었습니다. 내 등급이 해당되는지 지금 확인하세요.
+  </div>
+
+  <div class="summary-box">
+    <h3>📌 이것만 알면 됩니다</h3>
+    <ul>
+      <li>활동지원 급여 단가 <strong>16,620원 → 17,270원</strong> (3.9% 인상), 기본급여 대상 <strong>14만 명</strong>으로 확대</li>
+      <li>최중증 가산급여 시간 <strong>205시간 → 258시간</strong>으로 53시간 추가</li>
+      <li>최중증 발달장애인 통합돌봄 전문수당 <strong>월 5만 → 15만원</strong> (3배 인상)</li>
+    </ul>
+  </div>
+
+  <h2>📋 이 정책, 왜 나왔나요?</h2>
+  <p>장애인 활동지원 서비스는 일상생활과 사회활동이 어려운 장애인에게 활동보조인을 연결해주는 핵심 복지제도입니다. 그러나 활동지원사 부족 현상이 심각해지면서 <strong>특히 심야·공휴일 등 취약 시간대에 최중증 장애인이 아무런 지원 없이 방치</strong>되는 문제가 사회적 이슈로 떠올랐습니다.</p>
+  <p>활동지원사들이 최중증 장애인 돌봄을 기피하는 이유 중 하나가 낮은 수당이었습니다. 정부는 2026년 단가를 3.9% 인상하고, 최중증 가산급여 시간을 50시간 이상 늘리며 전문수당도 3배로 올려 매칭률을 높이겠다는 방침입니다. 기본급여 대상자도 이전보다 크게 확대되었습니다.</p>
+
+  <h2>💰 2026년 장애인 활동지원 주요 변화</h2>
+  <table>
+    <thead>
+      <tr><th>항목</th><th>2025년</th><th>2026년</th><th>비고</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>활동지원 급여 단가</strong></td>
+        <td>시간당 16,620원</td>
+        <td>시간당 17,270원 ▲</td>
+        <td>3.9% 인상</td>
+      </tr>
+      <tr>
+        <td><strong>기본급여 대상</strong></td>
+        <td>약 13만 명</td>
+        <td>14만 명 ▲</td>
+        <td>대상 확대</td>
+      </tr>
+      <tr>
+        <td><strong>최중증 가산급여 시간</strong></td>
+        <td>월 205시간</td>
+        <td>월 258시간 ▲</td>
+        <td>53시간 추가</td>
+      </tr>
+      <tr>
+        <td><strong>심야·공휴일 가산수당</strong></td>
+        <td>시간당 4,500원</td>
+        <td>시간당 4,950원 ▲</td>
+        <td>최중증 해당 시 추가 지급</td>
+      </tr>
+      <tr>
+        <td><strong>그 외 시간대 가산수당</strong></td>
+        <td>시간당 3,000원</td>
+        <td>시간당 3,300원 ▲</td>
+        <td>최중증 해당 시 추가 지급</td>
+      </tr>
+      <tr>
+        <td><strong>통합돌봄 전문수당</strong></td>
+        <td>월 5만원</td>
+        <td>월 15만원 ▲</td>
+        <td>최중증 발달장애인 대상, 3배 인상</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>📊 한눈에 보는 변화 (인포그래픽)</h2>
+  <svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" style="background:#fff;border-radius:12px;border:1px solid #bbdefb;margin-bottom:24px;">
+    <rect width="680" height="320" fill="#fff" rx="12"/>
+    <text x="340" y="32" text-anchor="middle" font-size="15" font-weight="bold" fill="#0d47a1" font-family="sans-serif">2025 → 2026 장애인 활동지원 핵심 변화</text>
+
+    <!-- 급여 단가 -->
+    <text x="120" y="65" text-anchor="middle" font-size="12" fill="#555" font-family="sans-serif">급여 단가 (시간당)</text>
+    <rect x="25" y="75" width="190" height="28" fill="#bbdefb" rx="5"/>
+    <text x="120" y="94" text-anchor="middle" font-size="13" font-weight="bold" fill="#0d47a1" font-family="sans-serif">2025: 16,620원</text>
+    <rect x="25" y="110" width="197" height="28" fill="#1565c0" rx="5"/>
+    <text x="123" y="129" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff" font-family="sans-serif">2026: 17,270원 ▲</text>
+    <text x="232" y="120" font-size="18" fill="#1976d2" font-family="sans-serif">↑</text>
+    <text x="233" y="112" font-size="10" fill="#1976d2" font-weight="bold" font-family="sans-serif">+3.9%</text>
+
+    <!-- 최중증 가산급여 시간 -->
+    <text x="530" y="65" text-anchor="middle" font-size="12" fill="#555" font-family="sans-serif">최중증 가산급여 (월)</text>
+    <rect x="400" y="75" width="205" height="28" fill="#bbdefb" rx="5"/>
+    <text x="502" y="94" text-anchor="middle" font-size="13" font-weight="bold" fill="#0d47a1" font-family="sans-serif">2025: 205시간</text>
+    <rect x="400" y="110" width="258" height="28" fill="#0d47a1" rx="5"/>
+    <text x="529" y="129" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff" font-family="sans-serif">2026: 258시간 ▲</text>
+    <text x="667" y="120" font-size="18" fill="#1976d2" font-family="sans-serif">↑</text>
+    <text x="668" y="112" font-size="10" fill="#1976d2" font-weight="bold" font-family="sans-serif">+53h</text>
+
+    <!-- 전문수당 -->
+    <text x="145" y="185" text-anchor="middle" font-size="12" fill="#555" font-family="sans-serif">통합돌봄 전문수당 (월)</text>
+    <rect x="25" y="195" width="200" height="28" fill="#bbdefb" rx="5"/>
+    <text x="125" y="214" text-anchor="middle" font-size="13" font-weight="bold" fill="#0d47a1" font-family="sans-serif">2025: 월 5만원</text>
+    <rect x="25" y="230" width="300" height="28" fill="#1565c0" rx="5"/>
+    <text x="175" y="249" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff" font-family="sans-serif">2026: 월 15만원 (3배 ▲)</text>
+
+    <!-- 기본급여 대상 -->
+    <text x="535" y="185" text-anchor="middle" font-size="12" fill="#555" font-family="sans-serif">기본급여 대상 인원</text>
+    <rect x="400" y="195" width="200" height="28" fill="#bbdefb" rx="5"/>
+    <text x="500" y="214" text-anchor="middle" font-size="13" font-weight="bold" fill="#0d47a1" font-family="sans-serif">2025: 약 13만 명</text>
+    <rect x="400" y="230" width="215" height="28" fill="#0a2e78" rx="5"/>
+    <text x="507" y="249" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff" font-family="sans-serif">2026: 14만 명 ▲ 확대</text>
+
+    <text x="340" y="300" text-anchor="middle" font-size="11" fill="#aaa" font-family="sans-serif">출처: 보건복지부 2026년 장애인 정책 변경사항 / 국민연금공단</text>
+  </svg>
+
+  <h2>🔍 최중증 장애인 기준이란?</h2>
+  <p>가산급여와 전문수당을 더 받으려면 <strong>'최중증'</strong>으로 분류되어야 합니다. 판정 기준은 <strong>서비스 지원 종합조사 기능제한(X1) 영역 합산점수</strong>로 결정됩니다.</p>
+  <table>
+    <thead>
+      <tr><th>구분</th><th>최중증 해당 기준 (점수)</th><th>지급 혜택</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>성인 장애인</td>
+        <td>기능제한 X1 합산 <strong>360점 이상</strong></td>
+        <td>가산급여 258시간 + 가산수당</td>
+      </tr>
+      <tr>
+        <td>아동 장애인</td>
+        <td>기능제한 X1 합산 <strong>280점 이상</strong></td>
+        <td>가산급여 258시간 + 가산수당</td>
+      </tr>
+      <tr>
+        <td>최중증 발달장애인</td>
+        <td>위 기준 해당 + 발달장애</td>
+        <td>통합돌봄 전문수당 <strong>월 15만원</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>✅ 신청 방법 (단계별)</h2>
+  <ul class="step-list">
+    <li>
+      <span class="step-num">1</span>
+      <span class="step-text"><strong>신청 가능 대상 확인</strong> — 만 6세 이상 65세 미만 모든 등록 장애인. 장애 유형·등급 불문, 65세 이후에도 기존 수급자는 계속 이용 가능</span>
+    </li>
+    <li>
+      <span class="step-num">2</span>
+      <span class="step-text"><strong>주민센터 신청</strong> — 주소지 읍·면·동 행정복지센터에 신청서 제출 → 국민연금공단 서비스 지원 종합조사 실시</span>
+    </li>
+    <li>
+      <span class="step-num">3</span>
+      <span class="step-text"><strong>온라인 신청</strong> — <a href="https://www.bokjiro.go.kr" target="_blank">복지로(bokjiro.go.kr)</a> 또는 <a href="https://www.nhis.or.kr" target="_blank">국민건강보험공단 홈페이지</a></span>
+    </li>
+    <li>
+      <span class="step-num">4</span>
+      <span class="step-text"><strong>종합조사 후 급여 결정</strong> — 조사 결과에 따라 급여량(시간) 결정. 최중증 해당 시 가산급여 추가 인정. 바우처 카드 발급 후 제공기관에서 활동지원사 매칭</span>
+    </li>
+  </ul>
+
+  <div class="deadline-box">
+    <h3>⏰ 신청 기한 — 연중 상시, 빠를수록 이득!</h3>
+    <p>장애인 활동지원은 <strong>연중 상시 신청</strong>이 가능합니다. 다만 급여는 신청월 기준으로 산정됩니다. 이미 수급 중인 분도 단가·가산급여 시간이 자동 반영되나, <strong>최중증 판정을 아직 받지 않은 분은 재조사 신청</strong>을 통해 추가 급여를 받을 수 있습니다.</p>
+  </div>
+
+  <div class="checklist">
+    <h3>🔍 나도 받을 수 있을까? 자가 진단 체크리스트</h3>
+    <ul>
+      <li>만 6세 이상 65세 미만의 등록 장애인이다</li>
+      <li>일상생활(식사·이동·배변 등)과 사회활동을 혼자 수행하기 어렵다</li>
+      <li>기능제한 종합조사 점수가 성인 360점 또는 아동 280점 이상이다 (최중증 가산 해당)</li>
+      <li>발달장애가 있으며 최중증에 해당한다 — 통합돌봄 전문수당 月 15만원 대상</li>
+      <li>현재 수급 중이지만 최중증 재판정을 받지 않았다 — 재조사 신청으로 추가 급여 가능</li>
+    </ul>
+  </div>
+
+  <h2>⚠️ 주의사항</h2>
+  <div class="notice">
+    <p>① 65세 이상이 되면 노인장기요양보험으로 전환. 단, 65세 이전부터 수급 중이던 경우 계속 이용 가능 여부 별도 확인 필요.</p>
+    <p>② 활동지원사는 본인이 지정한 제공기관을 통해 매칭. 급여 시간이 늘어도 제공기관·지원사가 없으면 실 이용이 어려울 수 있음. 지역 내 제공기관 현황 사전 확인 권장.</p>
+    <p>③ 가산급여(최중증)는 자동 부여가 아닌 종합조사 결과 기반. 현재 수급자도 점수 미확인이라면 재조사를 신청해야 함.</p>
+    <p>④ 본인부담금이 있으며 소득 구간별로 다름. 기초생활수급자는 면제, 차상위 이하는 감면.</p>
+  </div>
+
+  <div class="contact-box">
+    <h3>📞 담당 기관 및 문의처</h3>
+    <p>🏛️ <strong>보건복지부 장애인서비스 과</strong> — 주민센터 또는 아래 기관에 문의</p>
+    <p>📞 <strong>국민연금공단 콜센터</strong> — <strong>1355</strong> (평일 09:00~18:00)</p>
+    <p>📞 <strong>보건복지부 복지상담 콜센터</strong> — <strong>129</strong> (24시간)</p>
+    <p>🌐 <strong>복지로 온라인 신청</strong> — <a href="https://www.bokjiro.go.kr" target="_blank">www.bokjiro.go.kr</a></p>
+    <p>🏢 <strong>방문 신청</strong> — 전국 읍·면·동 행정복지센터 (주민센터)</p>
+  </div>
+
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"최중증 가산급여 시간을 53시간 늘린 것은 현장의 공백을 채우는 데 의미 있는 조치입니다. 심야·공휴일 기피를 줄이기 위한 가산수당 인상과 함께 매칭률 개선 효과가 기대됩니다."</p>
+          <p class="author">— 장애인복지 정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"전문수당 3배 인상은 오랫동안 저평가된 최중증 돌봄 노동의 가치를 국가가 인정하기 시작한 신호입니다. 돌봄 공백 해소의 마중물이 될 것입니다."</p>
+          <p class="author">— 장애인 인권 시민단체 활동가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"시간당 17,270원은 여전히 일반 가사·돌봄 서비스 시장 단가에 비해 낮습니다. 인력 수급 문제를 근본적으로 해결하려면 단가 현실화 수준이 더 높아야 합니다."</p>
+          <p class="author">— 재정·사회보장 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"급여 시간은 늘었지만 지역 내 활동지원 제공기관 자체가 부족한 농어촌·도서 지역에서는 실질적 서비스 이용이 여전히 불가능한 구조입니다. 인프라 확충 없는 급여 확대는 숫자에 그칠 수 있습니다."</p>
+          <p class="author">— 사회복지 현장 실무자</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    <span class="hashtag">#장애인활동지원</span>
+    <span class="hashtag">#최중증장애인</span>
+    <span class="hashtag">#활동지원사</span>
+    <span class="hashtag">#2026장애인복지</span>
+    <span class="hashtag">#가산급여확대</span>
+    <span class="hashtag">#발달장애인</span>
+    <span class="hashtag">#통합돌봄</span>
+    <span class="hashtag">#복지로신청</span>
+    <span class="hashtag">#장애인바우처</span>
+    <span class="hashtag">#돌봄공백해소</span>
+  </div>
+
+  <div class="disclaimer">
+    <p>이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부 및 급여 시간은 국민연금공단(☎ 1355) 또는 관할 읍·면·동 행정복지센터에 직접 확인하세요.</p>
+  </div>
+
+  <p class="meta">작성일: 2026년 6월 27일 | 출처: 보건복지부, 국민연금공단, 대한민국 정책브리핑</p>
+
+</div>
+</body>
+</html>
