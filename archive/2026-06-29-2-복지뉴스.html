@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"범죄 피해 입고도 아무것도 못 받았다고요?" 완전히 틀렸습니다 — 치료비 최대 3,000만원·생계비 최대 12개월·심리상담 무료, 지금 당장 신청하세요! | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    background: #f1f8e9;
+    color: #333;
+    line-height: 1.7;
+  }
+  .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+
+  /* 상단 헤더 */
+  .top-header {
+    background: #2e7d32;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+  }
+  .top-header .date-tag { background: rgba(255,255,255,0.25); padding: 3px 10px; border-radius: 20px; }
+  .top-header .series { font-weight: 700; }
+
+  /* 섹션 배지 */
+  .section-badge {
+    background: #e8f5e9;
+    border-left: 5px solid #2e7d32;
+    padding: 10px 16px;
+    margin: 20px 0 12px;
+    font-size: 13px;
+    color: #1b5e20;
+    font-weight: 700;
+    border-radius: 0 8px 8px 0;
+  }
+
+  h1 {
+    font-size: 26px;
+    font-weight: 900;
+    color: #1b5e20;
+    line-height: 1.4;
+    margin-bottom: 18px;
+  }
+
+  /* 훅 */
+  .hook {
+    border-left: 6px solid #2e7d32;
+    padding: 14px 18px;
+    background: #e8f5e9;
+    border-radius: 0 10px 10px 0;
+    margin-bottom: 22px;
+    font-size: 15px;
+  }
+  .highlight { background: #c8e6c9; padding: 2px 6px; border-radius: 4px; font-weight: 700; }
+
+  /* 핵심 요약 박스 */
+  .summary-box {
+    background: #1b5e20;
+    color: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .summary-box h2 { font-size: 16px; margin-bottom: 12px; }
+  .summary-box ul { list-style: none; }
+  .summary-box ul li { padding: 5px 0; font-size: 15px; }
+  .summary-box ul li::before { content: "✅ "; }
+
+  /* 섹션 제목 */
+  h2 {
+    font-size: 19px;
+    font-weight: 800;
+    color: #2e7d32;
+    margin: 28px 0 12px;
+    border-bottom: 2px solid #c8e6c9;
+    padding-bottom: 6px;
+  }
+
+  p { margin-bottom: 14px; font-size: 15px; }
+
+  /* 상세 정보 표 */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 24px;
+    font-size: 14px;
+  }
+  th {
+    background: #2e7d32;
+    color: #fff;
+    padding: 10px 12px;
+    text-align: left;
+  }
+  td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #c8e6c9;
+    background: #fff;
+  }
+  tr:nth-child(even) td { background: #f1f8e9; }
+  .amount { font-weight: 900; color: #1b5e20; font-size: 16px; }
+
+  /* SVG 인포그래픽 */
+  .svg-wrap {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(46,125,50,0.1);
+  }
+  .svg-wrap h2 { margin-top: 0; }
+
+  /* 신청 방법 */
+  .steps { list-style: none; margin: 14px 0 24px; }
+  .steps li {
+    background: #fff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .step-num {
+    background: #2e7d32;
+    color: #fff;
+    font-weight: 900;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 14px;
+  }
+
+  /* deadline-box */
+  .deadline-box {
+    border: 3px dashed #2e7d32;
+    border-radius: 14px;
+    padding: 18px 22px;
+    margin: 24px 0;
+    background: #f1f8e9;
+  }
+  .deadline-box .deadline-title {
+    font-size: 17px;
+    font-weight: 900;
+    color: #1b5e20;
+    margin-bottom: 10px;
+  }
+  .deadline-box ul { list-style: none; }
+  .deadline-box ul li { padding: 4px 0; font-size: 14px; }
+  .deadline-box ul li::before { content: "📌 "; }
+
+  /* 체크리스트 */
+  .checklist {
+    background: #fff;
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin: 20px 0;
+    border: 1.5px solid #c8e6c9;
+  }
+  .checklist h2 { margin-top: 0; }
+  .checklist ul { list-style: none; }
+  .checklist ul li { padding: 7px 0; font-size: 14px; border-bottom: 1px dashed #c8e6c9; }
+  .checklist ul li:last-child { border-bottom: none; }
+  .checklist ul li::before { content: "✓ "; font-weight: 900; color: #2e7d32; }
+
+  /* 주의사항 */
+  .caution {
+    background: #e8f5e9;
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin: 20px 0;
+  }
+  .caution h2 { margin-top: 0; }
+  .caution ol { padding-left: 0; list-style: none; }
+  .caution ol li { padding: 6px 0; font-size: 14px; }
+  .caution ol li::before { font-weight: 700; color: #2e7d32; }
+  .caution ol li:nth-child(1)::before { content: "① "; }
+  .caution ol li:nth-child(2)::before { content: "② "; }
+  .caution ol li:nth-child(3)::before { content: "③ "; }
+  .caution ol li:nth-child(4)::before { content: "④ "; }
+
+  /* 담당기관 박스 */
+  .contact-box {
+    background: linear-gradient(135deg, #2e7d32, #388e3c);
+    color: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin: 24px 0;
+  }
+  .contact-box h2 { color: #fff; border-bottom: 2px solid rgba(255,255,255,0.3); }
+  .contact-box p { font-size: 14px; margin-bottom: 8px; }
+  .contact-box a { color: #c8e6c9; text-decoration: underline; }
+
+  /* 찬반 론평 */
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .opinion-pro, .opinion-con {
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .opinion-pro {
+    background: #e8f5e9;
+    border-left: 5px solid #2e7d32;
+  }
+  .opinion-con {
+    background: #fff3e0;
+    border-left: 5px solid #c62828;
+  }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card {
+    background: #fff;
+    padding: 14px 16px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 8px;
+  }
+  .opinion-card .author {
+    font-size: 12px;
+    color: #777;
+    text-align: right;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  /* 해시태그 */
+  .hashtags {
+    margin: 22px 0;
+    line-height: 2.2;
+  }
+  .hashtags span {
+    display: inline-block;
+    background: #c8e6c9;
+    color: #1b5e20;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin: 3px 4px;
+  }
+
+  /* 면책조항 */
+  .disclaimer {
+    background: #f5f5f5;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 22px 0;
+    font-size: 12px;
+    color: #888;
+    line-height: 1.6;
+  }
+
+  /* 작성일 */
+  .meta {
+    text-align: right;
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 10px;
+    padding-bottom: 20px;
+  }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 20px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .top-header { flex-direction: column; gap: 6px; }
+    table { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 상단 헤더 -->
+  <div class="top-header">
+    <span class="date-tag">2026년 6월 29일 (월)</span>
+    <span class="series">오늘의 복지 뉴스 · 제2보</span>
+  </div>
+
+  <!-- 섹션 배지 -->
+  <div class="section-badge">⚖️ 범죄피해자 복지 | 경제적 지원 완전 정복</div>
+
+  <!-- 메인 제목 -->
+  <h1>"범죄 피해 입고도 아무것도 못 받았다고요?" 완전히 틀렸습니다 — 치료비 최대 3,000만원·생계비 매달 지급·심리상담 무료, 90%가 모르는 범죄피해자 지원제도 지금 당장 신청하세요!</h1>
+
+  <!-- 훅 -->
+  <div class="hook">
+    범죄 피해를 입었다면 정부가 경제적으로 책임집니다. <span class="highlight">치료비 최대 3,000만원, 생계비 최대 12개월, 심리치료비 별도 지원</span> — 그런데 피해자 대부분이 이 제도를 몰라서 아무것도 신청하지 않습니다. 가해자가 돈이 없어도 국가가 대신 지급합니다. 지금 바로 확인하세요.
+  </div>
+
+  <!-- 핵심 요약 박스 -->
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>치료비: 5주 이상 진단 시 연간 1인 최대 1,500만원 (총 5,000만원 한도)</li>
+      <li>생계비: 1인 월 70만원부터 최대 12개월 지급 — 소득 없어도 가능</li>
+      <li>신청: 검찰청 피해자지원실(☎1577-2584) 또는 경찰서 피해자전담경찰관</li>
+    </ul>
+  </div>
+
+  <!-- 배경/문제 섹션 -->
+  <h2>🏛️ 왜 대부분 모를까 — 이 제도가 숨어있는 이유</h2>
+  <p>범죄피해자 지원제도는 1987년부터 시행된 오랜 제도입니다. 그러나 피해자들이 범죄 신고 후 즉시 안내받아야 할 이 정보가 <strong>경찰서와 검찰청 창구에서 충분히 전달되지 않는다</strong>는 지적이 끊이지 않습니다. 실제로 피해 직후 충격 상태에서 서류를 챙기기 어렵고, 가해자 처벌에 집중하다 보면 지원금 신청을 잊게 됩니다.</p>
+  <p>정부는 이를 해결하기 위해 2027년 상반기 온라인 통합지원시스템 구축을 예고했습니다. 현재도 경찰 신고 단계에서 피해자전담경찰관이 안내를 해야 하지만, 아직 많은 피해자가 제도를 몰라 지원받지 못하고 있습니다. <strong>지금 당장 신청 가능합니다.</strong></p>
+
+  <!-- 상세 정보 표 -->
+  <h2>📋 지원 항목 상세</h2>
+  <table>
+    <tr>
+      <th>지원 항목</th>
+      <th>지원 조건</th>
+      <th>지원 금액</th>
+    </tr>
+    <tr>
+      <td><strong>치료비 (의료비)</strong></td>
+      <td>5주 이상 진단 수령 시</td>
+      <td class="amount">연 1인 최대 1,500만원 (총 5,000만원)</td>
+    </tr>
+    <tr>
+      <td><strong>심리치료비</strong></td>
+      <td>정신과 진료 또는 심리상담 시</td>
+      <td class="amount">실비 지원 (별도 한도)</td>
+    </tr>
+    <tr>
+      <td><strong>생계비</strong></td>
+      <td>범죄로 생계 곤란 시</td>
+      <td class="amount">1인 월 70만원 / 2인 120만원 (최대 12개월)</td>
+    </tr>
+    <tr>
+      <td><strong>장례비</strong></td>
+      <td>사망 피해 발생 시</td>
+      <td>유족 지원</td>
+    </tr>
+    <tr>
+      <td><strong>학자금</strong></td>
+      <td>학업 중단 위기 시</td>
+      <td>지원 가능</td>
+    </tr>
+    <tr>
+      <td><strong>법률 지원</strong></td>
+      <td>형사 소송 관련</td>
+      <td>무료 법률 조력</td>
+    </tr>
+  </table>
+
+  <!-- SVG 인포그래픽 -->
+  <div class="svg-wrap">
+    <h2>📊 범죄피해자 생계비 지원 가구 규모별 월 지원액</h2>
+    <svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;display:block;margin:0 auto">
+      <defs>
+        <linearGradient id="g_a" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#81c784"/>
+          <stop offset="100%" stop-color="#2e7d32"/>
+        </linearGradient>
+        <linearGradient id="g_b" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#4caf50"/>
+          <stop offset="100%" stop-color="#1b5e20"/>
+        </linearGradient>
+        <linearGradient id="g_c" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#388e3c"/>
+          <stop offset="100%" stop-color="#1a3a1c"/>
+        </linearGradient>
+        <linearGradient id="g_d" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#2e7d32"/>
+          <stop offset="100%" stop-color="#0a1f0b"/>
+        </linearGradient>
+      </defs>
+      <rect width="700" height="320" fill="#f1f8e9" rx="14"/>
+      <!-- 가이드선 -->
+      <line x1="70" y1="30" x2="70" y2="250" stroke="#ccc" stroke-width="1.5"/>
+      <line x1="70" y1="250" x2="680" y2="250" stroke="#ccc" stroke-width="1.5"/>
+      <line x1="70" y1="190" x2="680" y2="190" stroke="#e0f0e0" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="70" y1="130" x2="680" y2="130" stroke="#e0f0e0" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="70" y1="70" x2="680" y2="70" stroke="#e0f0e0" stroke-width="1" stroke-dasharray="4,4"/>
+      <!-- Y축 라벨 -->
+      <text x="62" y="254" fill="#999" font-size="11" text-anchor="end">0</text>
+      <text x="62" y="194" fill="#999" font-size="11" text-anchor="end">70만원</text>
+      <text x="62" y="134" fill="#999" font-size="11" text-anchor="end">150만원</text>
+      <text x="62" y="74" fill="#999" font-size="11" text-anchor="end">200만원</text>
+      <!-- 1인 70만원 -->
+      <rect x="100" y="163" width="100" height="87" rx="8" fill="url(#g_a)"/>
+      <text x="150" y="153" fill="#2e7d32" font-size="17" font-weight="900" text-anchor="middle">70만원</text>
+      <text x="150" y="278" fill="#444" font-size="13" font-weight="700" text-anchor="middle">1인 가구</text>
+      <!-- 2인 120만원 -->
+      <rect x="240" y="107" width="100" height="143" rx="8" fill="url(#g_b)"/>
+      <text x="290" y="97" fill="#1b5e20" font-size="17" font-weight="900" text-anchor="middle">120만원</text>
+      <text x="290" y="278" fill="#444" font-size="13" font-weight="700" text-anchor="middle">2인 가구</text>
+      <!-- 3인 160만원 -->
+      <rect x="380" y="71" width="100" height="179" rx="8" fill="url(#g_c)"/>
+      <text x="430" y="61" fill="#1b5e20" font-size="17" font-weight="900" text-anchor="middle">160만원</text>
+      <text x="430" y="278" fill="#444" font-size="13" font-weight="700" text-anchor="middle">3인 가구</text>
+      <!-- 4인 200만원 -->
+      <rect x="520" y="40" width="100" height="210" rx="8" fill="url(#g_d)"/>
+      <text x="570" y="30" fill="#1b5e20" font-size="17" font-weight="900" text-anchor="middle">200만원</text>
+      <text x="570" y="278" fill="#444" font-size="13" font-weight="700" text-anchor="middle">4인 가구</text>
+      <!-- 설명 -->
+      <text x="375" y="305" fill="#888" font-size="11" text-anchor="middle">※ 2인 초과 시 1인당 40만원 추가 / 최대 12개월 지급</text>
+    </svg>
+  </div>
+
+  <!-- 신청 방법 -->
+  <h2>📝 신청 방법 — 단계별 안내</h2>
+  <ul class="steps">
+    <li><span class="step-num">1</span><div><strong>신고 즉시 안내 요청</strong> — 경찰 신고 후 "피해자전담경찰관 안내 요청"이라고 말하면 지원 제도를 설명해 줍니다</div></li>
+    <li><span class="step-num">2</span><div><strong>서류 준비</strong> — 범죄 피해 사실 확인서, 진단서(5주 이상), 소득 확인 서류, 가족관계증명서, 통장 사본</div></li>
+    <li><span class="step-num">3</span><div><strong>신청 창구 선택</strong> — ① 거주지 관할 검찰청 피해자지원실 방문 ② 경찰서 피해자전담경찰관 통해 신청 ③ 정부24(gov.kr) 온라인 신청</div></li>
+    <li><span class="step-num">4</span><div><strong>범죄피해자지원센터 연계</strong> — 전국 60개 이상 센터에서 법률·심리 상담, 경제적 지원 연계 도움</div></li>
+  </ul>
+
+  <!-- deadline-box -->
+  <div class="deadline-box">
+    <div class="deadline-title">⏰ 신청 시한 — 피해 사실 안 날로부터 최대 2년</div>
+    <ul>
+      <li>범죄 피해 사실을 안 날로부터 <strong>2년 이내</strong> 신청 필수</li>
+      <li>범죄 발생일로부터 <strong>10년</strong>이 넘으면 신청 불가</li>
+      <li>피해를 이미 입었다면 지금 당장 신청 가능 — 늦을수록 손해</li>
+      <li>긴급지원 필요 시 신청 전 구두 접수만으로도 즉시 지원 가능</li>
+    </ul>
+  </div>
+
+  <!-- 자가 진단 체크리스트 -->
+  <div class="checklist">
+    <h2>🔍 나도 받을 수 있을까? 자가 진단 체크리스트</h2>
+    <ul>
+      <li>강도, 폭행, 성범죄, 사기, 스토킹 등 형사범죄의 피해를 입었다</li>
+      <li>치료를 받았거나 5주 이상 진단을 받은 적 있다</li>
+      <li>범죄 때문에 일을 못하거나 수입이 줄었다</li>
+      <li>범죄 발생 후 10년이 지나지 않았고, 인지한 지 2년 이내이다</li>
+      <li>경찰에 신고하거나 고소장을 제출한 이력이 있다</li>
+    </ul>
+    <p style="margin-top:12px;font-size:13px;color:#888;">3개 이상 해당 → 지금 즉시 ☎1577-2584로 전화하세요!</p>
+  </div>
+
+  <!-- 주의사항 -->
+  <div class="caution">
+    <h2>⚠️ 꼭 알아야 할 주의사항</h2>
+    <ol>
+      <li>가해자가 무죄 판결을 받거나 도주해도 국가가 피해자 지원금을 지급 — 가해자 유무죄와 무관</li>
+      <li>다른 기관(보험사, 사회보장 제도)에서 지원을 받은 금액은 중복 지급 불가</li>
+      <li>외국인 피해자는 일부 지원 항목 제한 — 합법 체류 외국인은 원칙적 신청 가능</li>
+      <li>신청 서류 미비로 반려되는 경우 많음 — 범죄피해자지원센터(☎1577-1295)에 먼저 상담 권장</li>
+    </ol>
+  </div>
+
+  <!-- 담당 기관 및 문의처 -->
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <p>⚖️ <strong>검찰청 피해자지원실</strong> — ☎ 1577-2584 (전국 공통)</p>
+    <p>🚔 <strong>경찰서 피해자전담경찰관</strong> — 관할 경찰서에 방문 또는 전화</p>
+    <p>🏢 <strong>범죄피해자지원센터</strong> — ☎ 1577-1295 (법률·심리·경제 종합지원)</p>
+    <p>🌐 <strong>정부24</strong> — www.gov.kr → "범죄피해자 경제적 지원" 검색</p>
+    <p>📞 <strong>찾기쉬운 생활법령 정보</strong> — www.easylaw.go.kr → "범죄피해자" 검색</p>
+    <p>🆘 <strong>긴급 신변보호 요청</strong> — ☎ 112 (위험 상황 시)</p>
+  </div>
+
+  <!-- 전문가 찬반 론평 -->
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"범죄피해자 지원은 국가의 형사사법 실패에 대한 보완책이다. 가해자 검거율이 낮을수록 피해자 지원의 역할은 더 커진다. 현행 지원 한도는 여전히 실제 피해 규모에 미치지 못하므로 상향 조정이 필요하다."</p>
+          <p class="author">— 피해자권리 법학 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"심리치료비 지원은 피해자 사회 복귀를 앞당기는 핵심 투자다. 경제적 지원에 심리 재활을 결합해야 진정한 피해 회복이 가능하다는 점에서, 현행 심리상담 지원 확대는 올바른 방향이다."</p>
+          <p class="author">— 피해자 심리재활 상담사</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"지원 기준이 '5주 이상 진단'에 집중되어 있어 경미한 피해나 사기·스토킹 등 장기 심리 피해의 경우 지원에서 배제되기 쉽다. 피해 유형에 따른 맞춤형 기준 재정립이 시급하다."</p>
+          <p class="author">— 사회복지 현장 활동가</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"범죄피해자 지원 예산은 국가 전체 복지 예산 대비 극히 미미한 수준이다. 재원 확충 없이 지원 항목만 늘리면 심사 기간이 길어지고 실제 수혜까지 수개월이 걸리는 문제가 반복될 수 있다."</p>
+          <p class="author">— 형사정책 연구원</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span>#범죄피해자지원</span>
+    <span>#치료비지원</span>
+    <span>#생계비지원</span>
+    <span>#피해자복지</span>
+    <span>#심리치료비</span>
+    <span>#범죄피해자지원센터</span>
+    <span>#1577-2584</span>
+    <span>#피해자전담경찰관</span>
+    <span>#국가지원제도</span>
+    <span>#복지사각지대해소</span>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    ※ 이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부, 지원 금액, 신청 절차는 검찰청 피해자지원실(☎1577-2584) 또는 범죄피해자지원센터(☎1577-1295)에 반드시 직접 확인하시기 바랍니다. 피해 상황에 따라 지원 내용이 달라질 수 있습니다.
+  </div>
+
+  <!-- 작성일 메타 -->
+  <div class="meta">작성일: 2026년 6월 29일 | 오늘의 복지 뉴스 편집부</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"한국에서 아이 키우는데 아무도 알려줬다고요?" 내일이 마감! 다문화 자녀 초등 40만원·중등 50만원·고등 60만원 교육활동비 6월 30일 신청 마감 | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    background: #fff8f0;
+    color: #333;
+    line-height: 1.7;
+  }
+  .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+
+  /* 상단 헤더 */
+  .top-header {
+    background: #f57c00;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+  }
+  .top-header .date-tag { background: rgba(255,255,255,0.25); padding: 3px 10px; border-radius: 20px; }
+  .top-header .series { font-weight: 700; }
+
+  /* 섹션 배지 */
+  .section-badge {
+    background: #fff3e0;
+    border-left: 5px solid #f57c00;
+    padding: 10px 16px;
+    margin: 20px 0 12px;
+    font-size: 13px;
+    color: #e65100;
+    font-weight: 700;
+    border-radius: 0 8px 8px 0;
+  }
+
+  h1 {
+    font-size: 26px;
+    font-weight: 900;
+    color: #bf360c;
+    line-height: 1.4;
+    margin-bottom: 18px;
+  }
+
+  /* 훅 */
+  .hook {
+    border-left: 6px solid #f57c00;
+    padding: 14px 18px;
+    background: #fff3e0;
+    border-radius: 0 10px 10px 0;
+    margin-bottom: 22px;
+    font-size: 15px;
+  }
+  .highlight { background: #ffe082; padding: 2px 6px; border-radius: 4px; font-weight: 700; }
+
+  /* 핵심 요약 박스 */
+  .summary-box {
+    background: #1b5e20;
+    color: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .summary-box h2 { font-size: 16px; margin-bottom: 12px; }
+  .summary-box ul { list-style: none; }
+  .summary-box ul li { padding: 5px 0; font-size: 15px; }
+  .summary-box ul li::before { content: "✅ "; }
+
+  /* 섹션 제목 */
+  h2 {
+    font-size: 19px;
+    font-weight: 800;
+    color: #e65100;
+    margin: 28px 0 12px;
+    border-bottom: 2px solid #ffe0b2;
+    padding-bottom: 6px;
+  }
+
+  p { margin-bottom: 14px; font-size: 15px; }
+
+  /* 상세 정보 표 */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 24px;
+    font-size: 14px;
+  }
+  th {
+    background: #f57c00;
+    color: #fff;
+    padding: 10px 12px;
+    text-align: left;
+  }
+  td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #ffe0b2;
+    background: #fff;
+  }
+  tr:nth-child(even) td { background: #fff8f0; }
+  .amount { font-weight: 900; color: #e65100; font-size: 16px; }
+
+  /* SVG 인포그래픽 */
+  .svg-wrap {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(245,124,0,0.1);
+  }
+  .svg-wrap h2 { margin-top: 0; }
+
+  /* 신청 방법 */
+  .steps { list-style: none; margin: 14px 0 24px; }
+  .steps li {
+    background: #fff;
+    border: 1.5px solid #ffe0b2;
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .step-num {
+    background: #f57c00;
+    color: #fff;
+    font-weight: 900;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 14px;
+  }
+
+  /* deadline-box */
+  .deadline-box {
+    border: 3px dashed #f57c00;
+    border-radius: 14px;
+    padding: 18px 22px;
+    margin: 24px 0;
+    background: #fff8f0;
+  }
+  .deadline-box .deadline-title {
+    font-size: 17px;
+    font-weight: 900;
+    color: #bf360c;
+    margin-bottom: 10px;
+  }
+  .deadline-box ul { list-style: none; }
+  .deadline-box ul li { padding: 4px 0; font-size: 14px; }
+  .deadline-box ul li::before { content: "🗓️ "; }
+
+  /* 체크리스트 */
+  .checklist {
+    background: #fff;
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin: 20px 0;
+    border: 1.5px solid #ffe0b2;
+  }
+  .checklist h2 { margin-top: 0; }
+  .checklist ul { list-style: none; }
+  .checklist ul li { padding: 7px 0; font-size: 14px; border-bottom: 1px dashed #ffe0b2; }
+  .checklist ul li:last-child { border-bottom: none; }
+  .checklist ul li::before { content: "✓ "; font-weight: 900; color: #f57c00; }
+
+  /* 주의사항 */
+  .caution {
+    background: #fff3e0;
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin: 20px 0;
+  }
+  .caution h2 { margin-top: 0; }
+  .caution ol { padding-left: 0; list-style: none; }
+  .caution ol li { padding: 6px 0; font-size: 14px; }
+  .caution ol li::before { font-weight: 700; color: #e65100; }
+  .caution ol li:nth-child(1)::before { content: "① "; }
+  .caution ol li:nth-child(2)::before { content: "② "; }
+  .caution ol li:nth-child(3)::before { content: "③ "; }
+  .caution ol li:nth-child(4)::before { content: "④ "; }
+
+  /* 담당기관 박스 */
+  .contact-box {
+    background: linear-gradient(135deg, #f57c00, #ff9800);
+    color: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin: 24px 0;
+  }
+  .contact-box h2 { color: #fff; border-bottom: 2px solid rgba(255,255,255,0.3); }
+  .contact-box p { font-size: 14px; margin-bottom: 8px; }
+  .contact-box a { color: #fff3e0; text-decoration: underline; }
+
+  /* 찬반 론평 */
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .opinion-pro, .opinion-con {
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .opinion-pro {
+    background: #e8f5e9;
+    border-left: 5px solid #2e7d32;
+  }
+  .opinion-con {
+    background: #fff3e0;
+    border-left: 5px solid #c62828;
+  }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card {
+    background: #fff;
+    padding: 14px 16px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 8px;
+  }
+  .opinion-card .author {
+    font-size: 12px;
+    color: #777;
+    text-align: right;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  /* 해시태그 */
+  .hashtags {
+    margin: 22px 0;
+    line-height: 2.2;
+  }
+  .hashtags span {
+    display: inline-block;
+    background: #ffe0b2;
+    color: #e65100;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin: 3px 4px;
+  }
+
+  /* 면책조항 */
+  .disclaimer {
+    background: #f5f5f5;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 22px 0;
+    font-size: 12px;
+    color: #888;
+    line-height: 1.6;
+  }
+
+  /* 작성일 */
+  .meta {
+    text-align: right;
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 10px;
+    padding-bottom: 20px;
+  }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 20px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .top-header { flex-direction: column; gap: 6px; }
+    table { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 상단 헤더 -->
+  <div class="top-header">
+    <span class="date-tag">2026년 6월 29일 (월)</span>
+    <span class="series">오늘의 복지 뉴스 · 제1보</span>
+  </div>
+
+  <!-- 섹션 배지 -->
+  <div class="section-badge">📚 다문화·이주민 복지 | 교육지원 정책</div>
+
+  <!-- 메인 제목 -->
+  <h1>"한국에서 아이 키우는데 아무도 알려줬다고요?" 내일이 마감! 다문화 자녀 초등 40만원·중등 50만원·고등 60만원 교육활동비 — 6월 30일까지 신청 안 하면 1년 기다려야 합니다!</h1>
+
+  <!-- 훅 -->
+  <div class="hook">
+    다문화가정 부모님, 혹시 이 사실 알고 계셨나요? 정부가 매년 다문화가족 자녀에게 <span class="highlight">연간 최대 60만 원의 교육활동비</span>를 지원합니다. 그런데 많은 가정이 이 제도를 몰라서 매년 놓치고 있습니다. <strong>2026년 신청 마감이 바로 내일(6월 30일)</strong>입니다. 지금 바로 확인하세요.
+  </div>
+
+  <!-- 핵심 요약 박스 -->
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>기준중위소득 100% 이하 다문화가족의 7~18세 자녀 대상, 교육급여 미수급자</li>
+      <li>초등 연 40만원 · 중등 연 50만원 · 고등 연 60만원 현금 지급</li>
+      <li>신청 마감: 2026년 6월 30일 — 지역 가족센터 방문 또는 복지로 온라인 신청</li>
+    </ul>
+  </div>
+
+  <!-- 배경/문제 섹션 -->
+  <h2>🏫 왜 이 지원이 만들어졌나</h2>
+  <p>국내 다문화 학생 수는 2025년 처음으로 <strong>20만 명</strong>을 돌파했습니다. 전체 학생 인구의 약 4%에 해당합니다. 이 아이들 중 상당수는 언어 장벽, 경제적 어려움, 사회적 고립으로 교육 기회에서 소외될 위험에 처해 있습니다. 학원비, 교재비, 체험학습비 등 교육 관련 지출은 가계 부담을 키우는 주요 요인입니다. 정부는 이를 해소하기 위해 다문화가족 자녀 교육활동비 지원사업을 운영하고 있으며, 매년 수만 명의 학생이 혜택을 받지 못하고 있다는 현장 보고가 이어지고 있습니다.</p>
+  <p>특히 최근에는 F-6(결혼이민) 비자 외국인 배우자도 한국인과 동일하게 복지 급여 신청이 가능하도록 제도가 확대되면서, 이 교육활동비 역시 신청 가능 대상이 넓어졌습니다.</p>
+
+  <!-- 상세 정보 표 -->
+  <h2>📋 지원 내용 상세</h2>
+  <table>
+    <tr>
+      <th>구분</th>
+      <th>지원 대상</th>
+      <th>지원 금액</th>
+    </tr>
+    <tr>
+      <td>초등학생</td>
+      <td>만 7세 이상 ~ 초등학교 재학 중</td>
+      <td class="amount">연 40만원</td>
+    </tr>
+    <tr>
+      <td>중학생</td>
+      <td>중학교 재학 중</td>
+      <td class="amount">연 50만원</td>
+    </tr>
+    <tr>
+      <td>고등학생</td>
+      <td>고등학교 재학 중</td>
+      <td class="amount">연 60만원</td>
+    </tr>
+    <tr>
+      <td>소득 기준</td>
+      <td colspan="2">기준중위소득 100% 이하 (교육급여 수급자 제외)</td>
+    </tr>
+    <tr>
+      <td>신청 기간</td>
+      <td colspan="2"><strong>2026년 6월 30일까지</strong> (일부 지역 상이)</td>
+    </tr>
+    <tr>
+      <td>신청 방법</td>
+      <td colspan="2">거주지 가족센터 방문 또는 복지로(www.bokjiro.go.kr) 온라인 신청</td>
+    </tr>
+  </table>
+
+  <!-- SVG 인포그래픽 -->
+  <div class="svg-wrap">
+    <h2>📊 학교급별 교육활동비 지원액 비교</h2>
+    <svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;display:block;margin:0 auto">
+      <defs>
+        <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#ffb74d"/>
+          <stop offset="100%" stop-color="#f57c00"/>
+        </linearGradient>
+        <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#ff8a65"/>
+          <stop offset="100%" stop-color="#e64a19"/>
+        </linearGradient>
+        <linearGradient id="g3" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#ef5350"/>
+          <stop offset="100%" stop-color="#b71c1c"/>
+        </linearGradient>
+      </defs>
+      <!-- 배경 -->
+      <rect width="700" height="300" fill="#fff8f0" rx="14"/>
+      <!-- Y축 가이드 -->
+      <line x1="80" y1="30" x2="80" y2="240" stroke="#eee" stroke-width="1.5"/>
+      <line x1="80" y1="240" x2="660" y2="240" stroke="#eee" stroke-width="1.5"/>
+      <!-- 눈금선 -->
+      <line x1="80" y1="173" x2="660" y2="173" stroke="#f0e0d0" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="80" y1="107" x2="660" y2="107" stroke="#f0e0d0" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="80" y1="40" x2="660" y2="40" stroke="#f0e0d0" stroke-width="1" stroke-dasharray="4,4"/>
+      <!-- Y축 라벨 -->
+      <text x="70" y="244" fill="#999" font-size="11" text-anchor="end">0</text>
+      <text x="70" y="177" fill="#999" font-size="11" text-anchor="end">20만원</text>
+      <text x="70" y="111" fill="#999" font-size="11" text-anchor="end">40만원</text>
+      <text x="70" y="44" fill="#999" font-size="11" text-anchor="end">60만원</text>
+      <!-- 막대: 초등 40만원 -->
+      <rect x="130" y="107" width="120" height="133" rx="8" fill="url(#g1)"/>
+      <text x="190" y="98" fill="#e65100" font-size="20" font-weight="900" text-anchor="middle">40만원</text>
+      <text x="190" y="270" fill="#555" font-size="14" font-weight="700" text-anchor="middle">초등학생</text>
+      <!-- 막대: 중등 50만원 -->
+      <rect x="290" y="74" width="120" height="166" rx="8" fill="url(#g2)"/>
+      <text x="350" y="64" fill="#bf360c" font-size="20" font-weight="900" text-anchor="middle">50만원</text>
+      <text x="350" y="270" fill="#555" font-size="14" font-weight="700" text-anchor="middle">중학생</text>
+      <!-- 막대: 고등 60만원 -->
+      <rect x="450" y="40" width="120" height="200" rx="8" fill="url(#g3)"/>
+      <text x="510" y="30" fill="#b71c1c" font-size="20" font-weight="900" text-anchor="middle">60만원</text>
+      <text x="510" y="270" fill="#555" font-size="14" font-weight="700" text-anchor="middle">고등학생</text>
+      <!-- 제목 -->
+      <text x="350" y="295" fill="#aaa" font-size="11" text-anchor="middle">※ 연간 1회 지급 / 기준중위소득 100% 이하 가구</text>
+    </svg>
+  </div>
+
+  <!-- 신청 방법 -->
+  <h2>📝 신청 방법 (지금 당장!)</h2>
+  <ul class="steps">
+    <li><span class="step-num">1</span><div><strong>소득 기준 확인</strong> — 기준중위소득 100% 이하인지 확인 (4인 가족 기준 월 약 610만원 이하)</div></li>
+    <li><span class="step-num">2</span><div><strong>서류 준비</strong> — 가족관계증명서, 주민등록등본, 건강보험료 납부확인서(12개월분), 지원신청서, 재학증명서</div></li>
+    <li><span class="step-num">3</span><div><strong>신청</strong> — ① 거주지 가족센터 방문 ② 복지로(www.bokjiro.go.kr) 온라인 신청 ③ 교육비 원클릭(oneclick.neis.go.kr)</div></li>
+    <li><span class="step-num">4</span><div><strong>결과 확인</strong> — 심사 후 통장 입금 (지역별로 수령 방식 상이)</div></li>
+  </ul>
+
+  <!-- deadline-box -->
+  <div class="deadline-box">
+    <div class="deadline-title">⏰ 신청 마감 일정 — 놓치면 내년까지 기다려야 합니다!</div>
+    <ul>
+      <li>2026년 6월 30일 (화) — 대부분 지역 접수 마감 (일부 지역 조기 마감)</li>
+      <li>온라인 신청: 복지로(www.bokjiro.go.kr) — 자정까지 접수 가능</li>
+      <li>방문 신청: 거주지 가족센터 업무시간 내 (통상 오전 9시~오후 6시)</li>
+      <li>마감 후 신청 불가 → 2027년 사업 재신청 필요</li>
+    </ul>
+  </div>
+
+  <!-- 자가 진단 체크리스트 -->
+  <div class="checklist">
+    <h2>🔍 나도 받을 수 있을까? 자가 진단 체크리스트</h2>
+    <ul>
+      <li>우리 가족은 다문화가족(한국인 + 결혼이민자 또는 귀화자)이다</li>
+      <li>자녀가 초등학교, 중학교, 고등학교에 재학 중이다 (만 7~18세)</li>
+      <li>가구 소득이 기준중위소득 100% 이하이다</li>
+      <li>현재 교육급여(기초생활수급자)를 받고 있지 않다</li>
+      <li>가족관계증명서, 건강보험료 납부확인서를 발급받을 수 있다</li>
+    </ul>
+    <p style="margin-top:12px;font-size:13px;color:#888;">5개 중 4개 이상 해당된다면 → 지금 즉시 신청하세요!</p>
+  </div>
+
+  <!-- 주의사항 -->
+  <div class="caution">
+    <h2>⚠️ 꼭 알아야 할 주의사항</h2>
+    <ol>
+      <li>교육급여(기초생활수급자) 대상 가구는 이 사업 신청 불가 — 교육급여로 별도 지원 받기 때문</li>
+      <li>신청 기간은 지역별로 다를 수 있음 — 거주 지역 가족센터에 먼저 전화 확인 권장</li>
+      <li>다자녀 가정은 자녀별로 각각 신청 가능 (3명이면 최대 150만원까지)</li>
+      <li>지원금은 용도 지정 없이 현금 지급 — 학원비, 교재비, 체험학습비 등 자유롭게 사용</li>
+    </ol>
+  </div>
+
+  <!-- 담당 기관 및 문의처 -->
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <p>🏢 <strong>다문화가족지원센터(가족센터)</strong> — 거주지 관할 센터에 직접 신청</p>
+    <p>🌐 <strong>복지로</strong> — www.bokjiro.go.kr (온라인 신청 가능)</p>
+    <p>🌐 <strong>교육비 원클릭</strong> — oneclick.neis.go.kr</p>
+    <p>📞 <strong>다누리 콜센터</strong> — ☎ 1577-1366 (다국어 상담, 24시간)</p>
+    <p>📞 <strong>여성가족부 콜센터</strong> — ☎ 1365</p>
+    <p>📞 <strong>복지로 고객센터</strong> — ☎ 129</p>
+  </div>
+
+  <!-- 전문가 찬반 론평 -->
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"다문화 학생 20만 명 시대에 교육활동비 지원 확대는 사회 통합의 가장 효과적인 투자다. 언어·문화적 격차가 학업 격차로 이어지는 악순환을 끊기 위해 현금 지원 규모를 더 늘려야 한다."</p>
+          <p class="author">— 이주민 교육복지 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"지원 금액보다 더 중요한 것은 '알림'이다. 이 사업은 실제 수혜율이 대상자 대비 40%대에 그치는 것으로 추정된다. 가족센터와 학교 간 연계를 강화해 정보 사각지대를 없애야 한다."</p>
+          <p class="author">— 다문화가족 정책 활동가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"현금 지급 방식은 교육 목적 외 사용을 막을 수단이 없다. 바우처 방식으로 전환하거나 사용 내역 확인 절차를 마련해 정책 효과를 높일 필요가 있다."</p>
+          <p class="author">— 재정정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"소득 기준 100% 이하라는 선정 방식이 너무 단순하다. 실질 생활고를 겪는 가구를 우선 선발하는 별도 기준을 마련하지 않으면 정작 가장 어려운 가정이 혜택을 받지 못하는 역설이 생길 수 있다."</p>
+          <p class="author">— 사회복지학과 교수</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span>#다문화가족지원</span>
+    <span>#교육활동비</span>
+    <span>#다문화학생</span>
+    <span>#복지혜택</span>
+    <span>#6월30일마감</span>
+    <span>#이주민복지</span>
+    <span>#결혼이민자</span>
+    <span>#초중고지원금</span>
+    <span>#복지로신청</span>
+    <span>#다문화교육지원2026</span>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    ※ 이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부, 신청 기간, 소득 기준 등은 거주지 가족센터 또는 다누리 콜센터(☎ 1577-1366)에 반드시 직접 확인하시기 바랍니다.
+  </div>
+
+  <!-- 작성일 메타 -->
+  <div class="meta">작성일: 2026년 6월 29일 | 오늘의 복지 뉴스 편집부</div>
+
+</div>
+</body>
+</html>
