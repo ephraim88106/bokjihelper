@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>아이돌봄 서비스 2026 대개편 — 중위소득 250%까지 확대·국가자격제 시행</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans KR', '맑은 고딕', sans-serif; background: #f5f5f5; color: #333; }
+  .container { max-width: 800px; margin: 0 auto; background: #fff; padding: 0 0 40px; }
+
+  /* 헤더 */
+  .top-header { background: #1565c0; color: #fff; padding: 14px 24px; font-size: 13px; display: flex; justify-content: space-between; align-items: center; }
+  .top-header .date-tag { background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 20px; font-size: 12px; }
+
+  /* 배지 */
+  .badge-wrap { padding: 20px 24px 0; }
+  .badge { display: inline-block; background: #1565c0; color: #fff; padding: 5px 14px; border-radius: 20px; font-size: 12px; font-weight: 700; }
+
+  /* 메인 제목 */
+  h1 { padding: 16px 24px 0; font-size: 27px; font-weight: 900; line-height: 1.4; color: #1a1a1a; }
+  h1 span { color: #1565c0; }
+
+  /* 훅 */
+  .hook { margin: 20px 24px; border-left: 5px solid #1565c0; padding: 14px 18px; background: #e3f2fd; border-radius: 0 8px 8px 0; font-size: 15px; line-height: 1.8; }
+  .hook .highlight { background: #ffeb3b; padding: 1px 4px; border-radius: 3px; font-weight: 700; }
+
+  /* 핵심 요약 */
+  .summary-box { margin: 20px 24px; background: #e8f5e9; border-left: 5px solid #2e7d32; border-radius: 0 8px 8px 0; padding: 18px 20px; }
+  .summary-box h2 { font-size: 15px; color: #2e7d32; margin-bottom: 10px; font-weight: 900; }
+  .summary-box ul { padding-left: 18px; }
+  .summary-box li { font-size: 14px; line-height: 1.8; color: #1b5e20; font-weight: 600; }
+
+  /* 섹션 제목 */
+  h2 { padding: 24px 24px 0; font-size: 20px; font-weight: 800; color: #0d47a1; }
+
+  /* 본문 */
+  .body-text { padding: 12px 24px 0; font-size: 14.5px; line-height: 1.9; color: #444; }
+
+  /* 표 */
+  .table-wrap { padding: 16px 24px 0; overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  thead tr { background: #1565c0; color: #fff; }
+  thead th { padding: 11px 10px; text-align: center; font-weight: 700; }
+  tbody tr:nth-child(even) { background: #e3f2fd; }
+  tbody td { padding: 10px; text-align: center; border-bottom: 1px solid #ddd; }
+  .em { color: #1565c0; font-weight: 800; }
+
+  /* SVG 인포그래픽 */
+  .svg-wrap { padding: 24px 24px 0; }
+  .svg-wrap svg { width: 100%; max-width: 700px; height: auto; display: block; }
+
+  /* 신청 방법 */
+  .steps { padding: 16px 24px 0; }
+  .step { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 14px; }
+  .step-num { min-width: 34px; height: 34px; border-radius: 50%; background: #1565c0; color: #fff; font-weight: 900; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+  .step-text { font-size: 14px; line-height: 1.7; padding-top: 5px; }
+
+  /* 시행 일정 박스 */
+  .deadline-box { margin: 20px 24px; border: 2px dashed #f57c00; border-radius: 10px; padding: 16px 20px; background: #fff8e1; }
+  .deadline-box .title { font-size: 14px; font-weight: 900; color: #e65100; margin-bottom: 8px; }
+  .deadline-box ul { padding-left: 18px; }
+  .deadline-box li { font-size: 13.5px; line-height: 1.8; color: #555; }
+
+  /* 자가진단 체크리스트 */
+  .checklist { margin: 20px 24px; background: #e3f2fd; border-radius: 10px; padding: 18px 20px; }
+  .checklist h2 { font-size: 16px; color: #0d47a1; margin-bottom: 12px; padding: 0; font-weight: 900; }
+  .checklist .item { font-size: 14px; line-height: 1.8; margin-bottom: 6px; }
+  .checklist .item::before { content: "✓ "; color: #1565c0; font-weight: 900; }
+
+  /* 주의사항 */
+  .caution { padding: 0 24px; }
+  .caution h2 { font-size: 18px; color: #b71c1c; padding: 0 0 10px; }
+  .caution ol { padding-left: 20px; }
+  .caution li { font-size: 14px; line-height: 1.9; color: #555; margin-bottom: 4px; }
+
+  /* 문의처 */
+  .contact-box { margin: 20px 24px; background: #e3f2fd; border-radius: 10px; padding: 18px 20px; border-left: 5px solid #1565c0; }
+  .contact-box h2 { font-size: 16px; color: #0d47a1; margin-bottom: 10px; font-weight: 900; padding: 0; }
+  .contact-box p { font-size: 14px; line-height: 1.8; }
+  .contact-box a { color: #1565c0; font-weight: 700; }
+
+  /* 찬반 론평 */
+  .opinion-section { margin: 30px 24px 0; }
+  .opinion-section > h2 { padding: 0 0 14px; font-size: 19px; color: #333; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; border-radius: 12px; padding: 20px; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; border-radius: 12px; padding: 20px; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  /* 해시태그 */
+  .hashtags { padding: 20px 24px 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .hashtags span { background: #e3f2fd; color: #1565c0; padding: 5px 12px; border-radius: 20px; font-size: 13px; font-weight: 700; }
+
+  /* 면책조항 */
+  .disclaimer { margin: 24px 24px 0; background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; }
+
+  /* 작성일 */
+  .meta { text-align: right; padding: 12px 24px 0; font-size: 12px; color: #aaa; }
+
+  /* 반응형 */
+  @media (max-width: 600px) {
+    h1 { font-size: 21px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    table { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 상단 헤더 -->
+  <div class="top-header">
+    <span>오늘의 복지 뉴스 · 제2보</span>
+    <span class="date-tag">📅 2026년 7월 3일</span>
+  </div>
+
+  <!-- 배지 -->
+  <div class="badge-wrap">
+    <span class="badge">🔵 돌봄·아동·맞벌이가구</span>
+  </div>
+
+  <!-- 메인 제목 -->
+  <h1>"맞벌이인데 아이돌봄 신청했더니 소득 초과라고요?"<br>
+  완전히 달라졌습니다 — 2026년 드디어 <span>중위소득 250%</span>까지 확대,<br>
+  <span>4인 가족 월 871만 원</span> 이하면 지금 바로 신청 가능합니다!</h1>
+
+  <!-- 훅 -->
+  <div class="hook">
+    맞벌이 가정에서 아이돌봄 서비스를 신청했다가 "소득 초과"로 탈락한 경험, 있으신가요?
+    2026년부터 지원 기준이 <span class="highlight">중위소득 200%에서 250%로 대폭 상향</span>됐습니다.
+    거기다 돌봄 선생님 자격까지 <span class="highlight">국가가 직접 발급하는 공식 자격증</span>으로 바뀌어
+    믿고 맡길 수 있게 됐습니다. 지금 바로 내가 해당되는지 확인하세요.
+  </div>
+
+  <!-- 핵심 요약 -->
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>지원 소득 기준: 중위소득 200% 이하 → 250% 이하로 확대 (4인 기준 月 약 871만 원 이하)</li>
+      <li>취약가구(한부모·조손·장애·청소년부모) 연 지원시간 960h → 1,080h로 확대</li>
+      <li>아이돌봄사 국가자격제 시행 — 전문 교육·범죄경력조회 이수자만 자격증 발급</li>
+    </ul>
+  </div>
+
+  <!-- 배경 -->
+  <h2>📰 왜 이번에 이렇게 크게 바뀌었나요?</h2>
+  <div class="body-text">
+    그동안 아이돌봄 서비스는 중위소득 200% 이하 가구만 정부 지원을 받을 수 있었습니다.
+    그 결과 평범한 맞벌이 가정이 정작 혜택에서 제외되는 경우가 많았고,
+    "돈 버는 부모는 지원 못 받는다"는 불만이 꾸준히 제기됐습니다.
+    2026년 정부는 <strong>지원 기준을 중위소득 250%로 올려</strong> 사실상 일반 직장인 맞벌이 가정까지
+    포용하기로 했습니다. 또한 민간 아이돌봄 시장에서 자격 미검증 돌봄 제공자로 인한
+    안전 사고가 반복되자, <strong>아이돌봄사 국가자격제</strong>를 도입해 돌봄 인력 전문성과 신뢰성을
+    국가가 직접 보증하기로 했습니다.
+  </div>
+
+  <!-- 상세 정보 표 -->
+  <h2>📊 2026년 아이돌봄 서비스 핵심 변화</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>항목</th>
+          <th>2025년 이전</th>
+          <th>2026년</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>정부지원 소득 기준</td>
+          <td>중위소득 200% 이하</td>
+          <td class="em">중위소득 250% 이하</td>
+        </tr>
+        <tr>
+          <td>4인 가구 기준 월 소득 상한</td>
+          <td>약 697만 원</td>
+          <td class="em">약 871만 원</td>
+        </tr>
+        <tr>
+          <td>취약가구 연 지원시간</td>
+          <td>960시간</td>
+          <td class="em">1,080시간</td>
+        </tr>
+        <tr>
+          <td>돌봄 인력 자격</td>
+          <td>교육 이수 민간 자격</td>
+          <td class="em">아이돌봄사 국가자격증</td>
+        </tr>
+        <tr>
+          <td>민간 서비스기관</td>
+          <td>자유 운영</td>
+          <td class="em">등록제 의무화</td>
+        </tr>
+        <tr>
+          <td>대상 아동 연령</td>
+          <td>생후 3개월~만 12세</td>
+          <td class="em">생후 3개월~만 12세 (유지)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SVG 인포그래픽 -->
+  <div class="svg-wrap">
+    <svg viewBox="0 0 700 290" xmlns="http://www.w3.org/2000/svg">
+      <rect width="700" height="290" fill="#e8f4fd" rx="12"/>
+      <text x="350" y="34" text-anchor="middle" font-size="16" font-weight="900" fill="#0d47a1">2026 아이돌봄 서비스 지원 대상 확대</text>
+
+      <!-- 파이차트 형태 비교 -->
+      <!-- 2025년 원 -->
+      <circle cx="185" cy="160" r="100" fill="#bbdefb" stroke="#1565c0" stroke-width="3"/>
+      <circle cx="185" cy="160" r="70" fill="#1565c0"/>
+      <text x="185" y="148" text-anchor="middle" font-size="13" fill="#fff" font-weight="900">중위소득</text>
+      <text x="185" y="168" text-anchor="middle" font-size="22" fill="#fff" font-weight="900">200%</text>
+      <text x="185" y="185" text-anchor="middle" font-size="11" fill="#fff">이하 지원</text>
+      <text x="185" y="278" text-anchor="middle" font-size="13" fill="#555" font-weight="700">2025년 이전</text>
+      <text x="185" y="295" text-anchor="middle" font-size="12" fill="#888">(월 약 697만원↓)</text>
+
+      <!-- 화살표 -->
+      <line x1="305" y1="160" x2="370" y2="160" stroke="#f57c00" stroke-width="3"/>
+      <polygon points="370,153 385,160 370,167" fill="#f57c00"/>
+      <text x="337" y="150" text-anchor="middle" font-size="13" fill="#f57c00" font-weight="900">확대!</text>
+
+      <!-- 2026년 원 -->
+      <circle cx="520" cy="160" r="115" fill="#bbdefb" stroke="#1565c0" stroke-width="3"/>
+      <circle cx="520" cy="160" r="82" fill="#0d47a1"/>
+      <text x="520" y="146" text-anchor="middle" font-size="13" fill="#fff" font-weight="900">중위소득</text>
+      <text x="520" y="169" text-anchor="middle" font-size="26" fill="#ffeb3b" font-weight="900">250%</text>
+      <text x="520" y="188" text-anchor="middle" font-size="12" fill="#fff">이하 지원</text>
+      <text x="520" y="278" text-anchor="middle" font-size="13" fill="#555" font-weight="700">2026년</text>
+      <text x="520" y="295" text-anchor="middle" font-size="12" fill="#888">(월 약 871만원↓)</text>
+    </svg>
+  </div>
+
+  <!-- 신청 방법 -->
+  <h2>🖊️ 신청 방법 (단계별)</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text"><strong>자격 확인:</strong> 생후 3개월~만 12세 자녀 + 가구 소득인정액이 중위소득 250% 이하인지 확인. 복지로(www.bokjiro.go.kr)에서 모의계산 가능</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text"><strong>신청 접수:</strong> 읍·면·동 행정복지센터(주민센터) 방문 신청 또는 복지로 홈페이지 온라인 신청</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text"><strong>소득조사 및 지원유형 결정:</strong> 담당 공무원이 소득 확인 후 A형(영아종일제) 또는 시간제 중 맞는 유형 안내</div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-text"><strong>서비스제공기관 연계:</strong> 시·군·구 서비스제공기관(이제 등록제 의무화)에서 아이돌봄사 매칭</div>
+    </div>
+    <div class="step">
+      <div class="step-num">5</div>
+      <div class="step-text"><strong>서비스 이용 및 비용 납부:</strong> 소득 구간에 따라 정부지원금 차감 후 본인부담금 납부 (저소득일수록 지원율 높음)</div>
+    </div>
+  </div>
+
+  <!-- 시행 일정 박스 -->
+  <div class="deadline-box">
+    <div class="title">⏰ 놓치면 안 되는 일정!</div>
+    <ul>
+      <li>중위소득 250%까지 지원 기준 확대: 2026년 1월 1일부터 시행 중 (지금 바로 신청 가능)</li>
+      <li>아이돌봄사 국가자격제: 2026년 4월 23일부터 본격 시행 (기존 돌봄 제공자는 유예기간 내 자격 취득 필요)</li>
+      <li>민간 서비스제공기관 등록제: 2026년 4월 23일부터 의무화 (미등록 기관 이용 시 정부지원 불가)</li>
+      <li>예산 소진 시 대기 발생 가능 — 빨리 신청할수록 유리</li>
+    </ul>
+  </div>
+
+  <!-- 자가진단 체크리스트 -->
+  <div class="checklist">
+    <h2>🔍 나도 받을 수 있을까? 자가진단</h2>
+    <div class="item">만 12세 이하(초등학생 이하) 자녀가 있다</div>
+    <div class="item">부모 또는 양육자가 취업·학업·질병 등으로 직접 돌봄이 어려운 상황이다</div>
+    <div class="item">가구 소득인정액이 중위소득 250% 이하다 (4인 가구 월 871만 원 이하)</div>
+    <div class="item">한부모·조손·장애·청소년부모 가구에 해당한다면 연 최대 1,080시간 이용 가능</div>
+    <div class="item">거주지 관할 읍·면·동 주민센터 또는 복지로에 신청할 준비가 되어 있다</div>
+    <p style="font-size:12px;color:#555;margin-top:10px;">✓ 1~3번 해당 → 바로 신청! | ✓ 4번 해당 → 취약가구 추가 지원시간 꼭 챙기기</p>
+  </div>
+
+  <!-- 주의사항 -->
+  <div class="caution">
+    <h2>⚠️ 주의사항</h2>
+    <ol>
+      <li>소득 구간에 따라 정부 지원 비율이 달라지므로, 중위소득 250%에 가까울수록 본인부담금이 높아짐 — 반드시 사전 모의계산 확인</li>
+      <li>2026년 4월 23일 이후 국가자격증 미취득 아이돌봄사가 제공하는 서비스는 정부 지원 대상에서 제외될 수 있음</li>
+      <li>민간 앱 기반 개인 돌봄 서비스는 등록제 대상이 아닐 수 있어 정부지원 적용 불가 — 서비스제공기관 등록 여부 확인 필수</li>
+      <li>시간제 서비스는 연간 총 시간 한도 내 이용 — 초과 이용 시 전액 본인 부담</li>
+    </ol>
+  </div>
+
+  <!-- 문의처 -->
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <p>🏛 <strong>여성가족부 아이돌봄 서비스:</strong> ☎ 1577-2514</p>
+    <p>💻 <strong>아이돌봄 서비스 홈페이지:</strong> <a href="https://www.idolbom.go.kr" target="_blank">www.idolbom.go.kr</a></p>
+    <p>🏠 <strong>신청 장소:</strong> 거주지 읍·면·동 행정복지센터(주민센터)</p>
+    <p>💻 <strong>복지로 온라인 신청:</strong> <a href="https://www.bokjiro.go.kr" target="_blank">www.bokjiro.go.kr</a></p>
+  </div>
+
+  <!-- 전문가 찬반 론평 -->
+  <div class="opinion-section">
+    <h2>💬 전문가 찬반 론평</h2>
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"중위소득 250%까지의 기준 확대는 그동안 '소득 과잉'이라는 이유로 복지 사각에 놓였던 일반 맞벌이 가정을 제도 안으로 포용한 현실적 결단입니다."</p>
+          <p class="author">— 가족정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"국가자격제 도입으로 돌봄 인력의 진입 기준이 표준화됨으로써 아동 안전 사고 위험이 줄어들고, 종사자 처우 개선의 제도적 기반도 마련됐습니다."</p>
+          <p class="author">— 아동권리 시민단체 활동가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"지원 대상이 급격히 확대되면서 예산 대비 서비스 공급이 따라가지 못해, 오히려 진짜 저소득 취약가구가 대기 순서에서 밀릴 수 있다는 우려가 있습니다."</p>
+          <p class="author">— 재정정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"국가자격제 시행 초기 현장 인력 부족이 불가피한데, 유예기간 동안 기존 돌봄사가 이탈할 경우 서비스 공백이 발생할 수 있는 현실적 위험에 대한 대책이 미흡합니다."</p>
+          <p class="author">— 사회복지 현장 활동가</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span>#아이돌봄서비스</span>
+    <span>#2026아이돌봄</span>
+    <span>#중위소득250</span>
+    <span>#맞벌이육아</span>
+    <span>#아이돌봄사</span>
+    <span>#국가자격제</span>
+    <span>#육아지원</span>
+    <span>#돌봄확대</span>
+    <span>#취약가구</span>
+    <span>#여성가족부</span>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    이 기사는 공개된 정보를 바탕으로 작성되었습니다. 지원 기준·금액은 개인 상황 및 지자체 여건에 따라 달라질 수 있으며, 정확한 지원 여부는 여성가족부(☎1577-2514) 또는 가까운 주민센터에 확인하세요.
+  </div>
+
+  <!-- 작성일 -->
+  <div class="meta">작성일: 2026년 7월 3일 | 출처: 여성가족부·복지로·정책브리핑</div>
+
+</div>
+</body>
+</html>
