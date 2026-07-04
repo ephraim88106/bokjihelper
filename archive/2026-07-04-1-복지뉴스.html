@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"이번 여름 전기세 감당 안 된다고요?" 틀렸습니다 — 추경으로 130만 가구 에너지바우처 대폭 확대, 계절 제한까지 폐지! 냉방·난방 원하는 때 마음껏 쓰세요! | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; background: #f5f5f5; color: #222; line-height: 1.7; }
+  .container { max-width: 780px; margin: 0 auto; background: #fff; padding: 0 0 40px; }
+
+  /* 상단 헤더 */
+  .top-header { background: #f57c00; color: #fff; padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
+  .top-header .date-tag { font-weight: 700; letter-spacing: 0.5px; }
+  .top-header .issue-tag { background: rgba(255,255,255,0.25); padding: 3px 10px; border-radius: 20px; font-size: 12px; }
+
+  /* 본문 패딩 */
+  .content { padding: 24px 28px; }
+
+  /* 섹션 배지 */
+  .section-badge { display: inline-block; background: #fff3e0; color: #f57c00; border: 1.5px solid #f57c00; border-radius: 20px; padding: 4px 14px; font-size: 12px; font-weight: 700; margin-bottom: 12px; }
+
+  /* 메인 제목 */
+  .main-title { font-size: 26px; font-weight: 900; line-height: 1.4; color: #bf360c; margin-bottom: 20px; word-break: keep-all; }
+
+  /* 훅 */
+  .hook { border-left: 5px solid #f57c00; padding: 14px 18px; background: #fff8f0; margin-bottom: 24px; font-size: 15px; color: #333; border-radius: 0 8px 8px 0; }
+  .hook .highlight { background: #ffe082; padding: 1px 4px; border-radius: 3px; font-weight: 700; }
+
+  /* 핵심 요약 박스 */
+  .summary-box { background: #e8f5e9; border-left: 5px solid #2e7d32; border-radius: 8px; padding: 18px 20px; margin-bottom: 28px; }
+  .summary-box h3 { color: #1b5e20; font-size: 15px; font-weight: 900; margin-bottom: 10px; }
+  .summary-box ul { list-style: none; padding: 0; }
+  .summary-box ul li { padding: 4px 0; font-size: 14px; color: #2e7d32; font-weight: 700; }
+  .summary-box ul li::before { content: "📌 "; }
+
+  /* 섹션 제목 */
+  h2 { font-size: 19px; font-weight: 900; color: #e65100; margin: 30px 0 14px; padding-bottom: 8px; border-bottom: 2px solid #f57c00; }
+
+  /* 상세 정보 표 */
+  table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 14px; }
+  th { background: #f57c00; color: #fff; padding: 10px 12px; text-align: left; }
+  td { padding: 10px 12px; border-bottom: 1px solid #eee; }
+  tr:nth-child(even) td { background: #fff8f0; }
+  tr:last-child td { border-bottom: none; }
+
+  /* SVG 인포그래픽 */
+  .infographic { margin: 24px 0; text-align: center; }
+  .infographic svg { max-width: 100%; }
+
+  /* 신청 방법 */
+  .step-list { counter-reset: step; list-style: none; padding: 0; }
+  .step-list li { counter-increment: step; padding: 12px 16px 12px 54px; position: relative; background: #fff8f0; border-radius: 8px; margin-bottom: 10px; font-size: 14px; }
+  .step-list li::before { content: counter(step); position: absolute; left: 16px; top: 50%; transform: translateY(-50%); background: #f57c00; color: #fff; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; }
+
+  /* 시행 일정 박스 */
+  .deadline-box { border: 2px dashed #f57c00; border-radius: 10px; padding: 16px 20px; margin: 24px 0; background: #fff8f0; }
+  .deadline-box h3 { color: #e65100; font-size: 15px; font-weight: 900; margin-bottom: 8px; }
+  .deadline-box p { font-size: 14px; color: #555; }
+  .deadline-box .big-date { font-size: 20px; font-weight: 900; color: #bf360c; display: block; margin-top: 6px; }
+
+  /* 자가진단 체크리스트 */
+  .checklist { background: #fff3e0; border-radius: 10px; padding: 18px 20px; margin: 24px 0; }
+  .checklist h3 { color: #e65100; font-size: 15px; font-weight: 900; margin-bottom: 12px; }
+  .checklist ul { list-style: none; padding: 0; }
+  .checklist ul li { padding: 6px 0; font-size: 14px; color: #333; }
+  .checklist ul li::before { content: "✓ "; color: #f57c00; font-weight: 900; font-size: 16px; }
+
+  /* 주의사항 */
+  .caution { background: #fbe9e7; border-radius: 10px; padding: 18px 20px; margin: 24px 0; }
+  .caution h3 { color: #b71c1c; font-size: 15px; font-weight: 900; margin-bottom: 10px; }
+  .caution p { font-size: 14px; color: #555; margin-bottom: 6px; }
+
+  /* 담당 기관 박스 */
+  .contact-box { background: #fff3e0; border-radius: 10px; padding: 18px 20px; margin: 24px 0; border-left: 5px solid #f57c00; }
+  .contact-box h3 { color: #e65100; font-size: 15px; font-weight: 900; margin-bottom: 10px; }
+  .contact-box p { font-size: 14px; color: #444; margin-bottom: 5px; }
+  .contact-box a { color: #f57c00; text-decoration: none; font-weight: 700; }
+
+  /* 찬반 론평 */
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  /* 해시태그 */
+  .hashtags { margin: 24px 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .hashtags span { background: #fff3e0; color: #f57c00; border: 1px solid #f57c00; border-radius: 20px; padding: 4px 12px; font-size: 13px; font-weight: 700; }
+
+  /* 면책조항 */
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; margin-top: 24px; font-size: 12px; color: #888; line-height: 1.6; }
+
+  /* 작성일 */
+  .meta { text-align: right; font-size: 12px; color: #aaa; margin-top: 16px; }
+
+  /* 모바일 반응형 */
+  @media (max-width: 600px) {
+    .content { padding: 16px 16px; }
+    .main-title { font-size: 20px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    table { font-size: 12px; }
+    th, td { padding: 8px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 상단 헤더 -->
+  <div class="top-header">
+    <span class="date-tag">📅 2026년 7월 4일 (토)</span>
+    <span class="issue-tag">오늘의 복지 뉴스 · 제1보</span>
+  </div>
+
+  <div class="content">
+    <!-- 섹션 배지 -->
+    <span class="section-badge">⚡ 에너지 복지 · 저소득층 냉난방비</span>
+
+    <!-- 메인 제목 -->
+    <h1 class="main-title">"이번 여름 전기세 감당 안 된다고요?" 틀렸습니다 — 추경으로 130만 가구에 에너지바우처 대폭 확대, 계절 제한까지 폐지! 1인 가구 29만원·4인 이상 70만원, 지금 당장 주민센터 달려가세요!</h1>
+
+    <!-- 훅 -->
+    <div class="hook">
+      에어컨을 켜고 싶어도 전기 요금이 무서워 참고 있나요? 이제 그럴 필요 없습니다. 2026년 정부가 <span class="highlight">에너지바우처 지원 규모를 대폭 확대</span>하고, 더 나아가 냉방·난방 구분하던 계절 제한까지 완전히 없앴습니다. 올여름, 당신이 바우처를 받을 자격이 있는지 지금 바로 확인하세요.
+    </div>
+
+    <!-- 핵심 요약 박스 -->
+    <div class="summary-box">
+      <h3>📌 이것만 알면 됩니다</h3>
+      <ul>
+        <li>2026 추경으로 102억원 추가 투입 → 지원 가구 130만 7천 가구로 확대</li>
+        <li>냉방·난방 계절 제한 폐지 → 2026년 7월~2027년 5월 내 자유롭게 사용</li>
+        <li>1인 가구 295,200원 / 4인 이상 가구 701,300원 지원</li>
+      </ul>
+    </div>
+
+    <!-- 배경/문제 섹션 -->
+    <h2>📢 왜 이번에 이렇게 크게 바뀌었나?</h2>
+    <p style="font-size:15px; color:#444; margin-bottom:16px; line-height:1.8;">
+      2026년 여름은 기록적인 폭염이 예고된 상황입니다. 에너지 취약계층인 저소득 노인·장애인 가구는 폭염 속에서도 전기요금 부담 때문에 에어컨을 아예 켜지 못하는 경우가 다반사였습니다. 정부는 이를 심각하게 보고 2026년 추가경정예산(추경)을 통해 <strong>102억원을 긴급 투입</strong>해 지원 가구를 기존보다 크게 늘렸습니다. 동시에 그동안 "냉방 기간에만 냉방 카드 사용, 난방 기간에만 난방 카드 사용"으로 나뉘던 계절 제한을 완전히 폐지했습니다. 이제 여름에 모아뒀다가 겨울에 쓸 수도 있고, 반대도 가능합니다.
+    </p>
+
+    <!-- 상세 정보 표 -->
+    <h2>💰 2026년 에너지바우처 지원 금액 한눈에 보기</h2>
+    <table>
+      <thead>
+        <tr><th>가구원 수</th><th>연간 지원 금액</th><th>비고</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1인 가구</td><td><strong>295,200원</strong></td><td>전기·도시가스·지역난방 사용 가능</td></tr>
+        <tr><td>2인 가구</td><td><strong>400,800원</strong></td><td>사용 기간 내 계절 무관 자유 사용</td></tr>
+        <tr><td>3인 가구</td><td><strong>566,700원</strong></td><td>국민행복카드 또는 실물 바우처 형태</td></tr>
+        <tr><td>4인 이상 가구</td><td><strong>701,300원</strong></td><td>2026.7.1~2027.5.31 사용 가능</td></tr>
+      </tbody>
+    </table>
+
+    <!-- SVG 인포그래픽 -->
+    <div class="infographic">
+      <svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg" width="680" height="260">
+        <rect width="680" height="260" fill="#fff8f0" rx="14"/>
+        <text x="340" y="34" text-anchor="middle" font-size="15" font-weight="bold" fill="#e65100">2026 에너지바우처 가구원수별 지원금액 (연간)</text>
+        <!-- 1인 -->
+        <rect x="60" y="55" width="100" height="140" fill="#f57c00" rx="6" opacity="0.9"/>
+        <text x="110" y="50" text-anchor="middle" font-size="12" fill="#777">1인 가구</text>
+        <text x="110" y="135" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">295,200원</text>
+        <!-- 2인 -->
+        <rect x="195" y="40" width="100" height="155" fill="#fb8c00" rx="6" opacity="0.9"/>
+        <text x="245" y="35" text-anchor="middle" font-size="12" fill="#777">2인 가구</text>
+        <text x="245" y="122" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">400,800원</text>
+        <!-- 3인 -->
+        <rect x="330" y="20" width="100" height="175" fill="#ef6c00" rx="6" opacity="0.9"/>
+        <text x="380" y="15" text-anchor="middle" font-size="12" fill="#777">3인 가구</text>
+        <text x="380" y="110" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">566,700원</text>
+        <!-- 4인+ -->
+        <rect x="465" y="5" width="100" height="190" fill="#e65100" rx="6" opacity="0.9"/>
+        <text x="515" y="0" text-anchor="middle" font-size="12" fill="#777">4인 이상</text>
+        <text x="515" y="100" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">701,300원</text>
+        <!-- 범례 -->
+        <rect x="170" y="215" width="15" height="15" fill="#f57c00" rx="3"/>
+        <text x="192" y="227" font-size="12" fill="#666">에너지바우처 지원금액</text>
+        <text x="340" y="250" text-anchor="middle" font-size="11" fill="#aaa">※ 2026년 추경 반영 기준 / 출처: 한국에너지공단</text>
+      </svg>
+    </div>
+
+    <!-- 신청 방법 -->
+    <h2>📋 신청 방법 — 이렇게 하면 됩니다</h2>
+    <ol class="step-list">
+      <li><strong>자격 확인</strong> — 생계급여 또는 의료급여 수급 가구이면서, 가구원 중 노인(65세↑)·영유아(6세↓)·장애인·임산부·중증질환자·한부모가족 해당자 있어야 함</li>
+      <li><strong>신청 장소 선택</strong> — ① 주소지 읍면동 주민센터(행정복지센터) 방문 신청 ② 복지로 온라인(www.bokjiro.go.kr) 신청</li>
+      <li><strong>서류 준비</strong> — 신분증, 복지급여 수급자 확인서 (담당자가 행정정보 공동이용으로 확인 가능, 별도 서류 최소화)</li>
+      <li><strong>국민행복카드 수령</strong> — 기존 국민행복카드 소지자는 자동 충전, 없는 경우 카드사 연계 신규 발급</li>
+      <li><strong>사용</strong> — 전기·도시가스·지역난방·등유·LPG 가맹점에서 2026년 7월 1일 ~ 2027년 5월 31일 내 자유롭게 사용</li>
+    </ol>
+
+    <!-- 시행 일정 박스 -->
+    <div class="deadline-box">
+      <h3>⏰ 사용 기간 & 신청 일정</h3>
+      <p>사용 기간: <span class="big-date">2026년 7월 1일 ~ 2027년 5월 31일</span></p>
+      <p style="margin-top:8px; font-size:13px; color:#666;">※ 올해부터 계절 제한 완전 폐지 — 여름에 모아서 겨울에 써도 OK!</p>
+      <p style="margin-top:6px; font-size:13px; color:#666;">※ 신청은 연중 상시 가능, 늦게 신청하면 사용 기간이 줄어들어 손해!</p>
+    </div>
+
+    <!-- 자가진단 체크리스트 -->
+    <div class="checklist">
+      <h3>🔍 내가 에너지바우처 대상인지 5초 체크!</h3>
+      <ul>
+        <li>우리 집이 기초생활수급 생계급여 또는 의료급여를 받고 있다</li>
+        <li>가구원 중 만 65세 이상 노인이 있다 (또는 만 6세 미만 영유아)</li>
+        <li>가구원 중 장애인 등록자가 있다</li>
+        <li>임신 중이거나 산후 12개월 이내 산모가 있다</li>
+        <li>한부모가족 지원 대상 가구이다</li>
+      </ul>
+      <p style="margin-top:10px; font-size:13px; color:#888;">→ 1번 + 2~5번 중 하나 이상 해당되면 신청 대상!</p>
+    </div>
+
+    <!-- 주의사항 -->
+    <div class="caution">
+      <h3>⚠️ 꼭 알아야 할 주의사항</h3>
+      <p>① 에너지바우처와 긴급복지지원법상 연료비 지원, 연탄쿠폰, 연탄전환 사업은 <strong>중복 수급 불가</strong>입니다.</p>
+      <p>② 국민행복카드로 지급되므로, 미가맹 소규모 가게나 인터넷 결제에는 사용 불가합니다.</p>
+      <p>③ 사용 기간(2027.5.31) 내 미사용 잔액은 <strong>자동 소멸</strong>되므로 반드시 기간 내 사용하세요.</p>
+      <p>④ 가구원 변동(사망·이사·수급 자격 변경) 시 즉시 담당 주민센터에 신고해야 합니다.</p>
+    </div>
+
+    <!-- 담당 기관 및 문의처 -->
+    <div class="contact-box">
+      <h3>📞 담당 기관 및 문의처</h3>
+      <p>🏢 <strong>한국에너지공단 에너지바우처 콜센터</strong> — ☎ 1670-5796</p>
+      <p>🏛️ <strong>주소지 읍면동 주민센터(행정복지센터)</strong> — 방문 또는 전화 문의</p>
+      <p>💻 <strong>온라인 신청</strong> — <a href="https://www.bokjiro.go.kr" target="_blank">복지로 www.bokjiro.go.kr</a></p>
+      <p>🌐 <strong>에너지바우처 공식 사이트</strong> — <a href="https://www.energyv.or.kr" target="_blank">www.energyv.or.kr</a></p>
+      <p>☎ <strong>보건복지 상담센터</strong> — 129 (24시간)</p>
+    </div>
+
+    <!-- 전문가 찬반 론평 -->
+    <h2>💬 전문가 찬반 론평</h2>
+    <div class="opinion-section">
+      <div class="opinion-grid">
+        <div class="opinion-pro">
+          <h3>🟢 찬성</h3>
+          <div class="opinion-card">
+            <p class="quote">"계절 제한 폐지는 에너지 빈곤층 실생활에 맞는 매우 합리적인 개선입니다. 폭염 피해가 주로 노인·장애인 저소득 가구에 집중되는 현실을 감안하면 추경 확대는 마땅한 조치입니다."</p>
+            <p class="author">— 에너지복지 정책 연구자</p>
+          </div>
+          <div class="opinion-card">
+            <p class="quote">"지원 가구 수가 130만을 넘어선 것은 의미 있는 진전입니다. 기존에 탈락했던 경계선 가구까지 포함될 경우 실질적 냉방 접근권이 크게 개선될 것으로 기대됩니다."</p>
+            <p class="author">— 주거·환경 시민단체 활동가</p>
+          </div>
+        </div>
+        <div class="opinion-con">
+          <h3>🔴 반대 / 우려</h3>
+          <div class="opinion-card">
+            <p class="quote">"추경 투입 자체는 환영하지만, 단가 인상 없이 가구 수만 늘릴 경우 1인 가구 지원금 29만원으로는 여름 한 달 전기요금도 충당하기 어렵습니다. 지원 단가의 현실화가 선행돼야 합니다."</p>
+            <p class="author">— 재정·사회정책 연구자</p>
+          </div>
+          <div class="opinion-card">
+            <p class="quote">"신청 사각지대가 여전히 문제입니다. 독거노인·중증장애인 등 정작 가장 취약한 가구가 신청 방법을 몰라 수혜를 못 받는 경우가 반복되고 있어, 자동 지급 방식 전환을 검토해야 합니다."</p>
+            <p class="author">— 노인복지 현장 활동가</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 해시태그 -->
+    <div class="hashtags">
+      <span>#에너지바우처2026</span>
+      <span>#여름냉방비지원</span>
+      <span>#저소득층전기세</span>
+      <span>#기초생활수급자혜택</span>
+      <span>#에너지복지</span>
+      <span>#계절제한폐지</span>
+      <span>#냉방지원금</span>
+      <span>#취약계층지원</span>
+      <span>#복지로신청</span>
+      <span>#2026추경복지</span>
+    </div>
+
+    <!-- 면책조항 -->
+    <div class="disclaimer">
+      이 기사는 공개된 정보를 바탕으로 작성되었습니다. 지원 금액, 대상 기준, 신청 방법 등은 정책 변경에 따라 달라질 수 있으므로, 정확한 지원 여부는 담당 기관(주민센터, 한국에너지공단 콜센터 1670-5796)에 반드시 확인하세요.
+    </div>
+
+    <!-- 작성일 메타 -->
+    <div class="meta">작성일: 2026년 7월 4일 | 출처: 한국에너지공단, 보건복지부, 기독일보 복지면</div>
+  </div>
+</div>
+</body>
+</html>
