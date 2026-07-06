@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"소득이 높아도 이제 다 받습니다!" 2026년 난임부부 시술비 소득기준 전면 폐지·최대 25회 확대 — 체외수정 110만원·인공수정 30만원, 지금 보건소 달려가세요! | 오늘의 복지 뉴스</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans KR', Apple SD Gothic Neo, sans-serif; background: #fafafa; color: #222; line-height: 1.8; }
+  .container { max-width: 780px; margin: 0 auto; padding: 16px; }
+
+  /* 상단 헤더 */
+  .top-header { background: #ad1457; color: #fff; padding: 12px 20px; border-radius: 10px 10px 0 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; }
+  .top-header .date-tag { font-size: 13px; background: rgba(255,255,255,0.2); padding: 3px 10px; border-radius: 20px; }
+  .top-header .issue-num { font-size: 13px; font-weight: 700; }
+
+  /* 섹션 배지 */
+  .section-badge { display: inline-block; background: #ad1457; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 14px; border-radius: 20px; margin: 18px 0 10px; }
+
+  /* 메인 제목 */
+  .main-title { font-size: 26px; font-weight: 900; line-height: 1.45; color: #1a1a1a; margin-bottom: 20px; word-break: keep-all; }
+
+  /* 훅 */
+  .hook { border-left: 5px solid #ad1457; padding: 14px 18px; background: #fce4ec; border-radius: 0 8px 8px 0; margin-bottom: 22px; font-size: 16px; color: #333; }
+  .highlight { color: #ad1457; font-weight: 900; }
+
+  /* 핵심 요약 박스 */
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 18px 22px; margin-bottom: 24px; }
+  .summary-box h3 { color: #1b5e20; font-size: 16px; font-weight: 900; margin-bottom: 10px; }
+  .summary-box ul { list-style: none; padding: 0; }
+  .summary-box ul li { padding: 4px 0; font-size: 15px; color: #2e7d32; font-weight: 700; }
+  .summary-box ul li::before { content: "✅ "; }
+
+  /* 섹션 제목 */
+  h2 { font-size: 20px; font-weight: 900; color: #ad1457; margin: 28px 0 12px; border-bottom: 2px solid #f8bbd0; padding-bottom: 6px; }
+
+  /* 본문 */
+  p { font-size: 15px; line-height: 1.9; color: #333; margin-bottom: 14px; word-break: keep-all; }
+
+  /* 표 */
+  .info-table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 14px; }
+  .info-table th { background: #ad1457; color: #fff; padding: 11px 14px; text-align: center; font-weight: 700; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #eee; text-align: center; }
+  .info-table tr:nth-child(even) td { background: #fce4ec; }
+  .info-table .highlight-cell { color: #ad1457; font-weight: 900; }
+
+  /* SVG 인포그래픽 */
+  .infographic { background: #fff; border: 1px solid #f8bbd0; border-radius: 12px; padding: 20px; margin: 22px 0; text-align: center; }
+  .infographic h3 { color: #ad1457; font-size: 16px; font-weight: 900; margin-bottom: 16px; }
+
+  /* 신청 단계 */
+  .steps { margin: 18px 0; }
+  .step { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 14px; }
+  .step-num { background: #ad1457; color: #fff; border-radius: 50%; width: 32px; height: 32px; min-width: 32px; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 15px; }
+  .step-content { font-size: 15px; color: #333; padding-top: 5px; }
+
+  /* 시행 일정 박스 */
+  .deadline-box { border: 2px dashed #f57c00; border-radius: 10px; padding: 16px 20px; background: #fff8e1; margin: 22px 0; }
+  .deadline-box h3 { color: #f57c00; font-size: 16px; font-weight: 900; margin-bottom: 8px; }
+  .deadline-box p { font-size: 15px; color: #333; margin: 0; }
+
+  /* 자가 진단 체크리스트 */
+  .checklist { background: #fff; border: 1px solid #f8bbd0; border-radius: 10px; padding: 18px 20px; margin: 22px 0; }
+  .checklist h3 { color: #ad1457; font-size: 16px; font-weight: 900; margin-bottom: 12px; }
+  .checklist ul { list-style: none; padding: 0; }
+  .checklist ul li { padding: 6px 0; font-size: 15px; border-bottom: 1px solid #fce4ec; }
+  .checklist ul li:last-child { border-bottom: none; }
+  .checklist ul li::before { content: "✓ "; color: #ad1457; font-weight: 900; }
+
+  /* 주의사항 */
+  .caution { background: #fff3e0; border-left: 4px solid #f57c00; border-radius: 0 8px 8px 0; padding: 16px 20px; margin: 22px 0; }
+  .caution h3 { color: #e65100; font-size: 16px; font-weight: 900; margin-bottom: 10px; }
+  .caution p { font-size: 14px; color: #444; margin-bottom: 6px; }
+
+  /* 담당 기관 박스 */
+  .contact-box { background: #fce4ec; border-radius: 12px; padding: 18px 22px; margin: 22px 0; }
+  .contact-box h3 { color: #880e4f; font-size: 16px; font-weight: 900; margin-bottom: 12px; }
+  .contact-box p { font-size: 14px; color: #333; margin-bottom: 6px; }
+  .contact-box a { color: #ad1457; font-weight: 700; }
+
+  /* 찬반 론평 */
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  /* 해시태그 */
+  .hashtags { margin: 22px 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .hashtag { background: #fce4ec; color: #ad1457; font-size: 13px; font-weight: 700; padding: 5px 12px; border-radius: 20px; }
+
+  /* 면책조항 */
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 18px; margin: 22px 0; }
+  .disclaimer p { font-size: 12px; color: #888; margin: 0; }
+
+  /* 작성일 */
+  .meta { text-align: right; font-size: 12px; color: #bbb; margin-top: 10px; }
+
+  /* 모바일 반응형 */
+  @media (max-width: 600px) {
+    .main-title { font-size: 20px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .info-table th, .info-table td { padding: 8px 8px; font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 상단 헤더 -->
+  <div class="top-header">
+    <span class="date-tag">📅 2026년 7월 6일 (월)</span>
+    <span class="issue-num">오늘의 복지 뉴스 · 제1보</span>
+  </div>
+
+  <!-- 섹션 배지 -->
+  <span class="section-badge">👶 임신·출산·난임 지원</span>
+
+  <!-- 메인 제목 -->
+  <h1 class="main-title">"소득이 높아도 이제 다 받습니다!" 2026년 난임부부 시술비 소득기준 전면 폐지·최대 25회 확대 — 체외수정 110만원·인공수정 30만원, 지금 보건소 달려가세요!</h1>
+
+  <!-- 훅 -->
+  <div class="hook">
+    연봉이 높다는 이유로, 맞벌이라는 이유로 난임 시술비를 한 푼도 못 받으셨나요? <span class="highlight">2026년부터 소득기준이 완전히 사라졌습니다.</span> 이제 소득과 무관하게 모든 난임 부부가 동일한 국가 지원을 받을 수 있습니다. 체외수정 최대 20회, 인공수정 최대 5회, 회당 최대 110만 원 — 몰라서 못 받는 지원을 지금 챙기세요.
+  </div>
+
+  <!-- 핵심 요약 박스 -->
+  <div class="summary-box">
+    <h3>📌 이것만 알면 됩니다</h3>
+    <ul>
+      <li>소득기준 전면 폐지 → 고소득 맞벌이도 동일 지원 가능</li>
+      <li>출산당 최대 25회 (체외수정 20회 + 인공수정 5회)</li>
+      <li>시술 시작 전 보건소 방문해 지원결정통지서 먼저 발급받아야!</li>
+    </ul>
+  </div>
+
+  <!-- 배경/문제 섹션 -->
+  <h2>📖 왜 이 정책이 나왔나</h2>
+  <p>대한민국 합계출산율이 0.75명(2024년)으로 역대 최저를 기록하면서 정부는 저출산 극복을 위한 고강도 지원책을 쏟아내고 있습니다. 기존 난임 시술비 지원은 건강보험료 기준 소득 상위 계층을 제외해 지원 사각지대가 발생했습니다. "아이를 낳고 싶어도 시술비가 수백만 원인데 나라는 소득이 높다며 아무 도움도 안 준다"는 불만이 폭증하자, 보건복지부는 2026년부터 소득 기준을 완전히 없애고 모든 난임 부부에게 동일한 혜택을 적용하기로 했습니다.</p>
+  <p>특히 2025년까지는 '부부당' 지원 횟수였던 기준이 2026년부터 <strong>'출산당'</strong> 기준으로 바뀌어, 첫째 아이 임신에 시술 횟수를 소진했더라도 둘째·셋째를 준비하면 다시 처음부터 지원을 받을 수 있게 됐습니다.</p>
+
+  <!-- 상세 정보 표 -->
+  <h2>📊 2025년 vs 2026년 무엇이 달라졌나</h2>
+  <table class="info-table">
+    <tr>
+      <th>구분</th>
+      <th>2025년</th>
+      <th>2026년</th>
+    </tr>
+    <tr>
+      <td>소득 기준</td>
+      <td>일부 계층 제외</td>
+      <td class="highlight-cell">전면 폐지</td>
+    </tr>
+    <tr>
+      <td>지원 기준</td>
+      <td>부부당</td>
+      <td class="highlight-cell">출산당 (재시작 가능)</td>
+    </tr>
+    <tr>
+      <td>체외수정 지원 횟수</td>
+      <td>제한적</td>
+      <td class="highlight-cell">최대 20회</td>
+    </tr>
+    <tr>
+      <td>인공수정 지원 횟수</td>
+      <td>최대 5회</td>
+      <td>최대 5회 (유지)</td>
+    </tr>
+    <tr>
+      <td>사실혼 부부</td>
+      <td>일부 가능</td>
+      <td class="highlight-cell">동일 지원</td>
+    </tr>
+    <tr>
+      <td>유효기간</td>
+      <td>3개월</td>
+      <td class="highlight-cell">6개월로 연장</td>
+    </tr>
+  </table>
+
+  <h2>💰 시술 종류별 1회 최대 지원금</h2>
+  <table class="info-table">
+    <tr>
+      <th>시술 종류</th>
+      <th>1회당 최대 지원금</th>
+      <th>최대 횟수</th>
+    </tr>
+    <tr>
+      <td>체외수정 (신선배아)</td>
+      <td class="highlight-cell">110만 원</td>
+      <td>20회</td>
+    </tr>
+    <tr>
+      <td>체외수정 (동결배아)</td>
+      <td class="highlight-cell">50만 원</td>
+      <td>20회 포함</td>
+    </tr>
+    <tr>
+      <td>인공수정</td>
+      <td class="highlight-cell">30만 원</td>
+      <td>5회</td>
+    </tr>
+    <tr>
+      <td>배아동결비·착상보조제 등</td>
+      <td colspan="2">별도 추가 지원</td>
+    </tr>
+  </table>
+
+  <!-- SVG 인포그래픽 -->
+  <div class="infographic">
+    <h3>🎨 난임부부 시술비 지원 한눈에 보기</h3>
+    <svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;">
+      <!-- 배경 -->
+      <rect width="680" height="320" rx="12" fill="#fff0f5"/>
+
+      <!-- 중앙 타이틀 -->
+      <text x="340" y="36" text-anchor="middle" font-size="15" font-weight="bold" fill="#880e4f">2026 난임 지원 총정리</text>
+
+      <!-- 카드 1: 소득 폐지 -->
+      <rect x="20" y="55" width="150" height="110" rx="10" fill="#ad1457"/>
+      <text x="95" y="90" text-anchor="middle" font-size="28" fill="white">🚫</text>
+      <text x="95" y="116" text-anchor="middle" font-size="13" font-weight="bold" fill="white">소득기준</text>
+      <text x="95" y="135" text-anchor="middle" font-size="13" font-weight="bold" fill="white">전면 폐지</text>
+      <text x="95" y="155" text-anchor="middle" font-size="11" fill="#fce4ec">고소득도 OK</text>
+
+      <!-- 카드 2: 체외수정 -->
+      <rect x="185" y="55" width="150" height="110" rx="10" fill="#c2185b"/>
+      <text x="260" y="90" text-anchor="middle" font-size="28" fill="white">🧬</text>
+      <text x="260" y="116" text-anchor="middle" font-size="13" font-weight="bold" fill="white">체외수정</text>
+      <text x="260" y="135" text-anchor="middle" font-size="20" font-weight="900" fill="white">최대 20회</text>
+      <text x="260" y="155" text-anchor="middle" font-size="11" fill="#fce4ec">1회 최대 110만원</text>
+
+      <!-- 카드 3: 인공수정 -->
+      <rect x="350" y="55" width="150" height="110" rx="10" fill="#d81b60"/>
+      <text x="425" y="90" text-anchor="middle" font-size="28" fill="white">💉</text>
+      <text x="425" y="116" text-anchor="middle" font-size="13" font-weight="bold" fill="white">인공수정</text>
+      <text x="425" y="135" text-anchor="middle" font-size="20" font-weight="900" fill="white">최대 5회</text>
+      <text x="425" y="155" text-anchor="middle" font-size="11" fill="#fce4ec">1회 최대 30만원</text>
+
+      <!-- 카드 4: 출산당 -->
+      <rect x="515" y="55" width="150" height="110" rx="10" fill="#e91e8c"/>
+      <text x="590" y="90" text-anchor="middle" font-size="28" fill="white">👶</text>
+      <text x="590" y="116" text-anchor="middle" font-size="13" font-weight="bold" fill="white">출산당 기준</text>
+      <text x="590" y="135" text-anchor="middle" font-size="13" font-weight="bold" fill="white">재시작 가능</text>
+      <text x="590" y="155" text-anchor="middle" font-size="11" fill="#fce4ec">둘째도 NEW 25회</text>
+
+      <!-- 하단 흐름 -->
+      <rect x="20" y="190" width="640" height="60" rx="10" fill="#fce4ec" stroke="#ad1457" stroke-width="1.5"/>
+      <text x="340" y="214" text-anchor="middle" font-size="13" font-weight="bold" fill="#880e4f">📋 신청 순서</text>
+      <text x="340" y="238" text-anchor="middle" font-size="12" fill="#ad1457">병원 난임 진단 → 보건소 신청 → 지원결정통지서 발급 → 시술 진행 → 정부 지원 적용</text>
+
+      <!-- 경고 -->
+      <rect x="20" y="268" width="640" height="38" rx="8" fill="#fff8e1" stroke="#f57c00" stroke-width="1.5"/>
+      <text x="340" y="292" text-anchor="middle" font-size="12" font-weight="bold" fill="#e65100">⚠️ 반드시 시술 시작 전에 지원결정통지서를 먼저 발급받아야 합니다!</text>
+    </svg>
+  </div>
+
+  <!-- 신청 방법 -->
+  <h2>📝 신청 방법 (단계별)</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content"><strong>정부 지정 난임시술 의료기관 방문</strong> — 난임 진단서 발급 (필수)</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content"><strong>주소지 관할 보건소 방문 또는 e보건소 온라인 신청</strong> — 난임진단서·신분증·건강보험증 지참</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content"><strong>지원결정통지서 발급</strong> (유효기간 6개월) — 반드시 시술 전에 받아야!</div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content"><strong>지정 의료기관에서 시술 진행</strong> — 비용에서 지원금 자동 차감</div>
+    </div>
+    <div class="step">
+      <div class="step-num">5</div>
+      <div class="step-content"><strong>다음 회차 시술 전 통지서 갱신 신청</strong> — 유효기간 내 재발급 가능</div>
+    </div>
+  </div>
+
+  <!-- 시행 일정 박스 -->
+  <div class="deadline-box">
+    <h3>⏰ 시행 일정 & 신청 안내</h3>
+    <p>✔ <strong>2026년 1월 1일부터</strong> 소득기준 폐지 및 출산당 지원 횟수 기준 시행<br>
+    ✔ <strong>지원결정통지서 유효기간 6개월</strong> (기존 3개월 → 2배 연장)<br>
+    ✔ 시술 중인 분도 변경된 기준 적용 여부 보건소에 문의 권장</p>
+  </div>
+
+  <!-- 자가 진단 체크리스트 -->
+  <div class="checklist">
+    <h3>🔍 나도 받을 수 있을까? 자가 진단 체크리스트</h3>
+    <ul>
+      <li>정부 지정 난임시술 의료기관에서 난임 진단을 받은 적 있다</li>
+      <li>법률혼 또는 1년 이상 사실혼 관계이다</li>
+      <li>대한민국 국적자이거나 건강보험 가입 가능한 외국인 배우자가 있다</li>
+      <li>시술 전에 보건소에서 지원결정통지서를 발급받았다 (또는 발급 예정)</li>
+      <li>기존에 횟수를 소진했어도 출산 후 다시 임신을 준비 중이다</li>
+    </ul>
+  </div>
+
+  <!-- 주의사항 -->
+  <div class="caution">
+    <h3>⚠️ 주의사항</h3>
+    <p>① <strong>시술 시작 전에 반드시 신청</strong>해야 합니다. 이미 시술을 시작한 후 신청하면 해당 회차는 지원받지 못할 수 있습니다.</p>
+    <p>② 개인 사유로 시술을 중단하면 해당 회차는 소진 처리됩니다. 의학적 사유 중단만 예외 인정됩니다.</p>
+    <p>③ 사실혼 부부는 1년 이상 사실혼 증빙서류(주민등록등본, 보증인 확인서 등)를 추가 제출해야 합니다.</p>
+    <p>④ 외국에서 시술받는 경우 지원 대상에서 제외됩니다. 반드시 국내 지정 의료기관 이용!</p>
+  </div>
+
+  <!-- 담당 기관 박스 -->
+  <div class="contact-box">
+    <h3>📞 담당 기관 및 문의처</h3>
+    <p>🏥 <strong>신청 기관:</strong> 주소지 관할 보건소 / e보건소 공공보건포털</p>
+    <p>📱 <strong>온라인 신청:</strong> <a href="https://www.e-health.go.kr" target="_blank">e보건소 (www.e-health.go.kr)</a></p>
+    <p>🖥️ <strong>정부24 신청:</strong> <a href="https://www.gov.kr" target="_blank">www.gov.kr</a> → 난임부부 시술비 지원 검색</p>
+    <p>📞 <strong>문의:</strong> 보건복지상담센터 ☎ 129 / 보건소 모자보건실</p>
+    <p>📌 <strong>담당 부처:</strong> 보건복지부 인구정책실</p>
+  </div>
+
+  <!-- 전문가 찬반 론평 -->
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"소득기준 폐지는 출산 지원 정책의 형평성 측면에서 진일보한 결정이다. 고소득 맞벌이 부부도 시술비 부담으로 출산을 포기하는 사례가 적지 않았는데, 이번 개편으로 그 장벽이 허물어졌다."</p>
+          <p class="author">— 저출산·고령사회 정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"출산당 횟수 기준 전환은 다자녀 가정 지원을 실질화한다. 첫째 임신에 시술 횟수를 소진한 부부도 둘째·셋째를 시도할 수 있는 길을 열어준 것은 저출산 극복 정책의 핵심적 조치다."</p>
+          <p class="author">— 모자보건 전문 연구자</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"소득기준 폐지로 고소득층에도 재정이 지원되면서 취약계층 집중 지원 효과가 희석될 수 있다. 재정 배분의 우선순위를 재검토할 필요가 있다."</p>
+          <p class="author">— 재정경제 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"시술 횟수를 25회까지 늘리면 무분별한 반복 시술이 증가할 수 있고, 모체 건강에 대한 위험도 고려해야 한다. 횟수 확대와 함께 의학적 관리 기준도 강화해야 한다."</p>
+          <p class="author">— 여성 건강 전문 사회복지 연구자</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span class="hashtag">#난임부부지원</span>
+    <span class="hashtag">#시술비지원2026</span>
+    <span class="hashtag">#소득기준폐지</span>
+    <span class="hashtag">#체외수정지원</span>
+    <span class="hashtag">#인공수정지원</span>
+    <span class="hashtag">#출산당25회</span>
+    <span class="hashtag">#보건소신청</span>
+    <span class="hashtag">#저출산정책</span>
+    <span class="hashtag">#맞벌이부부혜택</span>
+    <span class="hashtag">#복지뉴스</span>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    <p>※ 이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부 및 지원 금액은 담당 기관(보건소, 보건복지부)에 반드시 확인하세요. 지원 기준은 변경될 수 있습니다.</p>
+  </div>
+
+  <!-- 작성일 메타 -->
+  <p class="meta">작성일: 2026년 7월 6일 | 출처: 보건복지부, 정부24, e보건소</p>
+
+</div>
+</body>
+</html>
