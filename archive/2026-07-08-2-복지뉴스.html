@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"장애인이라서 일 못한다고요?" 2026년 3만 5천 자리 열립니다 — 심한 장애인 복지일자리 1,600개 신설·발달장애인 주간활동 3,000명 추가, 지금 주민센터로 달려가세요! | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; background: #f5f5f5; color: #222; line-height: 1.7; font-size: 16px; }
+  .container { max-width: 780px; margin: 0 auto; background: #fff; padding: 0 0 40px; }
+
+  /* 상단 헤더 */
+  .top-header { background: #1565c0; color: #fff; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; font-size: 13px; }
+  .top-header .date-tag { background: rgba(255,255,255,0.2); border-radius: 20px; padding: 4px 12px; font-weight: 700; }
+  .top-header .issue-tag { font-size: 12px; opacity: 0.9; }
+
+  /* 배지 + 소제목 */
+  .badge-section { background: #e3f2fd; padding: 16px 24px 12px; border-bottom: 1px solid #bbdefb; }
+  .badge { display: inline-block; background: #1565c0; color: #fff; border-radius: 20px; padding: 4px 14px; font-size: 12px; font-weight: 700; margin-bottom: 6px; }
+  .sub-title { font-size: 14px; color: #1565c0; font-weight: 600; }
+
+  /* 메인 제목 */
+  .main-title { padding: 24px 24px 10px; font-size: 28px; font-weight: 900; line-height: 1.35; color: #1a1a1a; }
+  .main-title span.point { color: #1565c0; }
+
+  /* 훅 */
+  .hook { margin: 16px 24px; border-left: 5px solid #1565c0; background: #e3f2fd; padding: 16px 18px; border-radius: 0 8px 8px 0; font-size: 15px; line-height: 1.8; }
+  .hook .highlight { background: #90caf9; color: #0d3a6e; padding: 1px 6px; border-radius: 4px; font-weight: 700; }
+
+  /* 핵심 요약 박스 */
+  .summary-box { margin: 20px 24px; background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 20px 22px; }
+  .summary-box h3 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 12px; }
+  .summary-box ul { list-style: none; }
+  .summary-box ul li { padding: 5px 0; font-size: 15px; font-weight: 600; }
+  .summary-box ul li::before { content: "📌 "; }
+
+  /* 섹션 공통 */
+  .section { padding: 24px 24px 8px; }
+  .section h2 { font-size: 20px; font-weight: 900; color: #0d3a6e; border-bottom: 3px solid #1565c0; padding-bottom: 8px; margin-bottom: 16px; }
+  .section p { font-size: 15px; line-height: 1.85; color: #333; margin-bottom: 12px; }
+
+  /* 상세 정보 표 */
+  .info-table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 14px; }
+  .info-table th { background: #1565c0; color: #fff; padding: 10px 14px; text-align: left; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #e0e0e0; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #e3f2fd; }
+  .info-table td strong { color: #0d3a6e; }
+
+  /* SVG 인포그래픽 */
+  .infographic { margin: 20px 24px; text-align: center; }
+  .infographic svg { width: 100%; max-width: 700px; height: auto; }
+
+  /* 신청 방법 단계 */
+  .steps { margin: 10px 0; }
+  .step { display: flex; align-items: flex-start; margin-bottom: 14px; }
+  .step-num { background: #1565c0; color: #fff; border-radius: 50%; width: 32px; height: 32px; min-width: 32px; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; margin-right: 14px; margin-top: 2px; }
+  .step-content { font-size: 15px; line-height: 1.7; color: #333; }
+  .step-content strong { color: #0d3a6e; }
+
+  /* 시행 일정 박스 */
+  .deadline-box { margin: 20px 24px; border: 3px dashed #f57c00; border-radius: 12px; padding: 18px 20px; background: #fff8e1; }
+  .deadline-box h3 { color: #e65100; font-weight: 900; font-size: 17px; margin-bottom: 12px; }
+  .deadline-box ul { list-style: none; }
+  .deadline-box ul li { padding: 5px 0; font-size: 14px; color: #333; }
+  .deadline-box ul li::before { content: "⏰ "; }
+
+  /* 자가진단 체크리스트 */
+  .checklist { margin: 10px 0; }
+  .checklist-item { display: flex; align-items: flex-start; margin-bottom: 10px; font-size: 15px; }
+  .check-icon { color: #1565c0; font-weight: 900; margin-right: 10px; font-size: 18px; }
+
+  /* 주의사항 */
+  .caution-list { list-style: none; }
+  .caution-list li { padding: 7px 0; font-size: 14px; color: #444; border-bottom: 1px dashed #ddd; }
+
+  /* 담당기관 박스 */
+  .contact-box { margin: 20px 24px; background: #e3f2fd; border-radius: 12px; padding: 20px 22px; }
+  .contact-box h3 { color: #0d3a6e; font-weight: 900; font-size: 16px; margin-bottom: 14px; }
+  .contact-item { display: flex; align-items: center; margin-bottom: 10px; font-size: 14px; }
+  .contact-item .icon { font-size: 20px; margin-right: 12px; }
+  .contact-item strong { color: #0d3a6e; }
+
+  /* 전문가 찬반 */
+  .opinion-section { margin: 30px 0; }
+  .opinion-section > h2 { font-size: 20px; font-weight: 900; color: #0d3a6e; border-bottom: 3px solid #1565c0; padding-bottom: 8px; margin-bottom: 16px; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  /* 해시태그 */
+  .hashtags { margin: 20px 24px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .hashtag { background: #bbdefb; color: #0d3a6e; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 700; }
+
+  /* 면책조항 */
+  .disclaimer { margin: 20px 24px; background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 13px; color: #777; }
+
+  /* 작성일 메타 */
+  .meta { text-align: right; padding: 8px 24px; font-size: 12px; color: #999; }
+
+  @media (max-width: 600px) {
+    .main-title { font-size: 21px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .top-header { flex-direction: column; gap: 6px; text-align: center; }
+    .info-table { font-size: 13px; }
+    .step-content { font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 상단 헤더 -->
+  <div class="top-header">
+    <span class="date-tag">📅 2026년 7월 8일 수요일</span>
+    <span class="issue-tag">오늘의 복지 뉴스 · 제2보 · 장애인 분야</span>
+  </div>
+
+  <!-- 배지 + 소제목 -->
+  <div class="badge-section">
+    <div class="badge">♿ 장애인 일자리·서비스 확대</div>
+    <div class="sub-title">2026 장애인일자리 3만 5,846명 모집 + 발달장애인 주간활동 3,000명 추가</div>
+  </div>
+
+  <!-- 메인 제목 -->
+  <h1 class="main-title">
+    "장애인이라서 일 못한다고요?" <span class="point">2026년 3만 5천 자리</span> 열립니다 —<br>
+    심한 장애인 복지일자리 <span class="point">1,600개 신설</span>·발달장애인 주간활동 <span class="point">3,000명 추가</span>,<br>
+    지금 주민센터로 달려가세요!
+  </h1>
+
+  <!-- 훅 -->
+  <div class="hook">
+    "장애가 있어서 일자리도 없다"는 말은 이제 옛말입니다. 2026년 정부가 장애인일자리를 <span class="highlight">3만 5,846명</span>으로 대폭 확대하고, 그 중 <span class="highlight">심한 장애인</span>을 위한 복지일자리 1,600개를 신규 신설했습니다. 여기에 발달장애인 주간활동서비스 이용자도 <span class="highlight">1만 2,000명 → 1만 5,000명</span>으로 3,000명 늘었습니다. 올해 놓치면 내년까지 기다려야 합니다.
+  </div>
+
+  <!-- 핵심 요약 박스 -->
+  <div class="summary-box">
+    <h3>📌 이것만 알면 됩니다</h3>
+    <ul>
+      <li>2026년 장애인일자리 총 3만 5,846명 — 전년 대비 2,300명 확대</li>
+      <li>심한 장애인 복지일자리 1,600개 신규 신설 (월 최대 64시간 참여)</li>
+      <li>발달장애인 주간활동서비스 대상 1만 2천 → 1만 5천명 (3,000명↑)</li>
+    </ul>
+  </div>
+
+  <!-- 배경/문제 섹션 -->
+  <div class="section">
+    <h2>📢 왜 지금 이 정책이 나왔나</h2>
+    <p>
+      대한민국 등록 장애인은 약 263만 명(2024년 기준)이지만, 취업률은 비장애인의 절반에도 못 미칩니다. 특히 <strong>'심한 장애인'</strong>(구 중증 장애인)의 고용률은 더욱 낮아, 사회 참여 자체가 막혀 있는 경우가 많습니다.
+    </p>
+    <p>
+      정부는 국정과제로 '<strong>심한 장애인의 사회 참여 확대</strong>'를 명시하고, 2026년부터 복지형 일자리 신규 물량 1,600개를 심한 장애인에게 집중 배분하기로 했습니다. 또한 낮 시간대 갈 곳이 없어 고립되는 성인 발달장애인 문제를 해결하기 위해 주간활동서비스를 <strong>3,000명 추가 확대</strong>했습니다.
+    </p>
+    <p>
+      단순 생계 지원에서 벗어나 장애인이 지역사회에서 <strong>의미 있는 역할과 소득</strong>을 얻을 수 있도록 돕는 방향으로 복지 패러다임이 전환되고 있습니다.
+    </p>
+  </div>
+
+  <!-- 상세 정보 표 -->
+  <div class="section">
+    <h2>📋 장애인일자리 유형별 상세 정보</h2>
+    <table class="info-table">
+      <tr>
+        <th>일자리 유형</th>
+        <th>대상</th>
+        <th>근무 조건</th>
+        <th>월 급여(예시)</th>
+      </tr>
+      <tr>
+        <td><strong>일반형 전일제</strong></td>
+        <td>경·중증 장애인</td>
+        <td>주 40시간 (8시간×5일)</td>
+        <td>최저임금 적용</td>
+      </tr>
+      <tr>
+        <td><strong>일반형 시간제</strong></td>
+        <td>경·중증 장애인</td>
+        <td>월 60시간 이내</td>
+        <td>시간당 최저임금</td>
+      </tr>
+      <tr>
+        <td><strong>복지형 일자리</strong></td>
+        <td><strong>심한 장애인 우선</strong></td>
+        <td>월 최대 64시간</td>
+        <td>약 65만원 내외</td>
+      </tr>
+      <tr>
+        <td><strong>특화형 (안마사 파견)</strong></td>
+        <td>시각장애인</td>
+        <td>기관별 상이</td>
+        <td>기관별 협약</td>
+      </tr>
+      <tr>
+        <td><strong>특화형 (요양보호보조)</strong></td>
+        <td>발달장애인</td>
+        <td>주 20시간 이내</td>
+        <td>별도 수당 지급</td>
+      </tr>
+    </table>
+
+    <h2 style="margin-top: 24px;">📋 발달장애인 주간활동서비스 주요 내용</h2>
+    <table class="info-table">
+      <tr>
+        <th>항목</th>
+        <th>내용</th>
+      </tr>
+      <tr>
+        <td><strong>대상</strong></td>
+        <td>만 18세 이상 성인 발달장애인 (지적·자폐성)</td>
+      </tr>
+      <tr>
+        <td><strong>2026년 정원</strong></td>
+        <td><strong>1만 5,000명</strong> (전년 대비 3,000명 확대)</td>
+      </tr>
+      <tr>
+        <td><strong>기본형 이용 시간</strong></td>
+        <td>월 132시간</td>
+      </tr>
+      <tr>
+        <td><strong>확장형 이용 시간</strong></td>
+        <td>월 176시간</td>
+      </tr>
+      <tr>
+        <td><strong>서비스 내용</strong></td>
+        <td>지역사회 참여, 사회성 향상 프로그램, 여가·문화 활동</td>
+      </tr>
+      <tr>
+        <td><strong>신청 장소</strong></td>
+        <td>거주지 읍·면·동 행정복지센터 (주민센터)</td>
+      </tr>
+      <tr>
+        <td><strong>본인부담금</strong></td>
+        <td>소득 수준에 따라 차등 (기초수급자 0원)</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- SVG 인포그래픽 -->
+  <div class="infographic">
+    <svg viewBox="0 0 680 340" xmlns="http://www.w3.org/2000/svg">
+      <rect width="680" height="340" fill="#fafafa" rx="16"/>
+      <text x="340" y="36" text-anchor="middle" font-size="17" font-weight="900" fill="#0d3a6e">2026 장애인 지원 확대 현황</text>
+
+      <!-- 일자리 카드 -->
+      <rect x="30" y="55" width="190" height="200" fill="#1565c0" rx="12"/>
+      <text x="125" y="90" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">장애인일자리</text>
+      <text x="125" y="125" text-anchor="middle" font-size="32" font-weight="900" fill="#fff">3만</text>
+      <text x="125" y="165" text-anchor="middle" font-size="32" font-weight="900" fill="#fff">5,846명</text>
+      <text x="125" y="200" text-anchor="middle" font-size="13" fill="#90caf9">↑ 2,300명 확대</text>
+      <text x="125" y="240" text-anchor="middle" font-size="12" fill="#bbdefb">전년 대비 +7%</text>
+
+      <!-- 복지형 일자리 카드 -->
+      <rect x="245" y="55" width="190" height="200" fill="#0288d1" rx="12"/>
+      <text x="340" y="90" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">심한 장애인</text>
+      <text x="340" y="110" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">복지형 일자리</text>
+      <text x="340" y="155" text-anchor="middle" font-size="32" font-weight="900" fill="#fff">+1,600</text>
+      <text x="340" y="185" text-anchor="middle" font-size="16" fill="#e1f5fe">신규 신설</text>
+      <text x="340" y="220" text-anchor="middle" font-size="12" fill="#b3e5fc">국정과제 직접 반영</text>
+      <text x="340" y="240" text-anchor="middle" font-size="12" fill="#b3e5fc">월 64시간·65만원</text>
+
+      <!-- 주간활동 카드 -->
+      <rect x="460" y="55" width="190" height="200" fill="#1976d2" rx="12"/>
+      <text x="555" y="90" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">발달장애인</text>
+      <text x="555" y="110" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">주간활동서비스</text>
+      <text x="555" y="155" text-anchor="middle" font-size="26" font-weight="900" fill="#fff">1만 5천명</text>
+      <text x="555" y="185" text-anchor="middle" font-size="15" fill="#e3f2fd">↑ 3,000명 추가</text>
+      <text x="555" y="215" text-anchor="middle" font-size="12" fill="#b3e5fc">기본 월 132시간</text>
+      <text x="555" y="235" text-anchor="middle" font-size="12" fill="#b3e5fc">확장 월 176시간</text>
+
+      <!-- 하단 설명 -->
+      <text x="340" y="300" text-anchor="middle" font-size="12" fill="#999">※ 선착순 선발 — 지금 바로 주민센터에서 신청하세요</text>
+    </svg>
+  </div>
+
+  <!-- 신청 방법 -->
+  <div class="section">
+    <h2>📝 장애인일자리 신청 방법</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content"><strong>거주지 시·군·구청 또는 행정복지센터 방문</strong><br>장애인일자리 모집 공고는 지자체별로 다릅니다. 거주지 읍·면·동 주민센터에 방문하거나 전화로 신청 시기와 서류를 확인하세요.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content"><strong>구비 서류 준비</strong><br>장애인등록증(복지카드), 신분증, 가족관계증명서, 소득 관련 서류(필요 시). 정확한 서류는 담당 기관 확인 필수.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content"><strong>선발 기준 평가</strong><br>소득 수준, 장애 정도, 참여 이력 등을 종합 심사합니다. 심한 장애인, 저소득층, 장기 미취업자에게 우선순위가 부여됩니다.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content"><strong>참여 확정 후 배치</strong><br>2026년 1월 1일~12월 31일까지 참여. 상반기 모집을 놓쳤다면 추가 모집 공고를 수시로 확인하세요.</div>
+      </div>
+    </div>
+
+    <h2 style="margin-top: 20px;">📝 발달장애인 주간활동서비스 신청 방법</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content"><strong>읍·면·동 주민센터 방문 신청</strong><br>만 18세 이상 지적·자폐성 장애인이 신청 가능합니다. 발달장애인 지원센터 또는 주민센터에서 신청서를 작성하세요.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content"><strong>수급 자격 조사 및 등록</strong><br>담당 공무원이 수급 요건(장애 유형·등급·소득)을 확인한 뒤 이용 가능 시간(기본형/확장형)을 결정합니다.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content"><strong>제공기관 선택 및 서비스 개시</strong><br>지역 내 발달장애인 주간활동 제공기관 중 원하는 곳을 선택합니다. 서비스 내용(프로그램·시간·장소)을 미리 비교하세요.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 시행 일정 박스 -->
+  <div class="deadline-box" style="margin: 0 24px 20px;">
+    <h3>⏰ 신청 기한 및 일정 — 놓치면 1년 기다립니다!</h3>
+    <ul>
+      <li><strong>장애인일자리 하반기 추가 모집</strong> — 지자체별 상이 (7~8월 중 공고 예정)</li>
+      <li><strong>발달장애인 주간활동서비스</strong> — 연중 수시 신청 가능 (정원 초과 시 대기)</li>
+      <li><strong>1월 참여 확정자</strong> — 이미 참여 중, 추가 모집 공고 수시 확인 필수</li>
+      <li><strong>거주지 시·군·구청 장애인 부서</strong>에 전화 먼저 확인 후 방문 권장</li>
+    </ul>
+  </div>
+
+  <!-- 자가진단 체크리스트 -->
+  <div class="section">
+    <h2>✅ 내가 해당될까? 자가진단 체크리스트</h2>
+    <div class="checklist">
+      <div class="checklist-item"><span class="check-icon">✓</span><span>장애인등록증(복지카드)을 보유하고 있으며, 장애 유형이 지체·뇌병변·시각·청각·정신·지적·자폐성 등에 해당한다</span></div>
+      <div class="checklist-item"><span class="check-icon">✓</span><span>현재 취업하지 않은 상태이거나, 불안정한 단기 일자리에만 참여하고 있다</span></div>
+      <div class="checklist-item"><span class="check-icon">✓</span><span>(발달장애인) 만 18세 이상 성인으로, 낮 시간에 참여할 수 있는 주간활동 프로그램이 필요하다</span></div>
+      <div class="checklist-item"><span class="check-icon">✓</span><span>소득이 낮거나 기초생활수급자·차상위 계층으로, 우선 선발 기준에 해당할 가능성이 있다</span></div>
+      <div class="checklist-item"><span class="check-icon">✓</span><span>과거 장애인일자리에 참여한 적이 없거나, 참여 기간이 짧아 추가 참여 기회를 얻을 수 있다</span></div>
+    </div>
+    <p style="margin-top:10px; font-size:14px; color:#777;">→ 하나라도 해당된다면 지금 바로 거주지 주민센터나 시·군·구 장애인 부서(☎ 129)에 문의하세요!</p>
+  </div>
+
+  <!-- 주의사항 -->
+  <div class="section">
+    <h2>⚠️ 꼭 알아야 할 주의사항</h2>
+    <ul class="caution-list">
+      <li>① 장애인일자리는 <strong>지자체별 모집 시기와 인원이 다릅니다.</strong> 전국 공통 신청 창구가 없으므로 반드시 거주지 시·군·구청에 개별 확인하세요.</li>
+      <li>② 복지형 일자리는 <strong>심한 장애인 우선 배정</strong>이지만 경증 장애인도 여석이 있을 경우 지원할 수 있습니다. 단, 우선순위에서 밀릴 수 있습니다.</li>
+      <li>③ 발달장애인 주간활동서비스는 <strong>정원이 소진되면 대기자 명단</strong>에 오릅니다. 빠를수록 유리하니 서두르세요.</li>
+      <li>④ 일자리 참여 중에는 <strong>고용보험, 산재보험</strong>이 적용되지 않는 유형도 있습니다. 유형별 처우 조건을 사전에 꼭 확인하세요.</li>
+    </ul>
+  </div>
+
+  <!-- 담당기관 박스 -->
+  <div class="contact-box">
+    <h3>📞 담당 기관 및 문의처</h3>
+    <div class="contact-item">
+      <span class="icon">🏢</span>
+      <span><strong>보건복지부 장애인정책국</strong> — ☎ 129 (보건복지상담 콜센터)</span>
+    </div>
+    <div class="contact-item">
+      <span class="icon">🏛</span>
+      <span><strong>거주지 시·군·구청 장애인 부서</strong> — 지역별 일자리 모집 공고·신청 접수</span>
+    </div>
+    <div class="contact-item">
+      <span class="icon">🤝</span>
+      <span><strong>한국장애인고용공단</strong> — ☎ 1588-1519 / abled.or.kr</span>
+    </div>
+    <div class="contact-item">
+      <span class="icon">💻</span>
+      <span><strong>복지로</strong> — bokjiro.go.kr (장애인 서비스 통합 검색)</span>
+    </div>
+    <div class="contact-item">
+      <span class="icon">🧩</span>
+      <span><strong>중앙발달장애인지원센터</strong> — ☎ 1577-1705 / broso.or.kr</span>
+    </div>
+  </div>
+
+  <!-- 전문가 찬반 론평 -->
+  <div class="section opinion-section">
+    <h2>💬 전문가 찬반 론평</h2>
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"장애인일자리 확대, 특히 심한 장애인을 위한 복지형 일자리 신설은 단순한 수급자 지원을 넘어 사회 구성원으로서의 역할을 부여한다는 점에서 의미가 큽니다. 소득과 사회 참여를 동시에 보장하는 방향은 장애인 자립의 핵심입니다."</p>
+          <p class="author">— 장애인복지정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"성인 발달장애인을 위한 주간활동서비스 3,000명 확대는 낮 시간 고립의 문제를 완화하고, 가족 돌봄 부담도 동시에 줄여주는 이중 효과가 있습니다. 꾸준한 정원 확대가 이어지길 기대합니다."</p>
+          <p class="author">— 발달장애 가족지원 활동가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"복지형 일자리 월 65만원 수준의 급여는 최저생계를 보조하기에도 부족합니다. 명목상 일자리 수를 늘리는 것보다, 실질적 임금 수준과 근로 조건을 개선하는 데 초점을 맞춰야 합니다."</p>
+          <p class="author">— 장애인 노동권 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"주간활동서비스 정원을 3,000명 늘렸지만, 기존 대기자 수를 고려하면 여전히 공급이 수요를 따라가지 못합니다. 제공기관 인프라 확충과 전문인력 처우 개선 없이는 서비스 질 저하가 불가피합니다."</p>
+          <p class="author">— 사회복지시설 현장 활동가</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span class="hashtag">#장애인일자리2026</span>
+    <span class="hashtag">#심한장애인</span>
+    <span class="hashtag">#발달장애인주간활동</span>
+    <span class="hashtag">#장애인복지</span>
+    <span class="hashtag">#복지형일자리</span>
+    <span class="hashtag">#장애인고용</span>
+    <span class="hashtag">#사회참여</span>
+    <span class="hashtag">#보건복지부</span>
+    <span class="hashtag">#장애인지원</span>
+    <span class="hashtag">#주간활동서비스</span>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    ⚠️ 이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 자격, 모집 일정, 신청 방법은 거주지 시·군·구청 장애인 부서 또는 보건복지부 콜센터(☎ 129)에 직접 확인하세요. 지자체별로 세부 기준이 다를 수 있습니다.
+  </div>
+
+  <!-- 작성일 메타 -->
+  <div class="meta">작성일: 2026년 7월 8일 | 출처: 보건복지부, 한국장애인고용공단, 중앙발달장애인지원센터</div>
+
+</div>
+</body>
+</html>
