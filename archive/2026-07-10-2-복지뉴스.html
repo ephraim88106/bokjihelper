@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>"보호종료 됐다고 혼자 싸우라고요?" 자립준비청년이 몰라서 못 받는 월 50만원 자립수당 + 심리상담 8회 완전 무료 — 주민센터 한 번이면 됩니다, 지금 당장 신청하세요! | 오늘의 복지 뉴스</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Malgun Gothic', '맑은 고딕', Arial, sans-serif; background: #f8f9fa; color: #222; line-height: 1.7; }
+    .container { max-width: 720px; margin: 0 auto; background: #fff; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.10); overflow: hidden; }
+
+    .header { background: linear-gradient(135deg, #e65100 0%, #f57c00 100%); color: #fff; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; }
+    .header .date-tag { background: rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; }
+    .header .issue-tag { font-size: 13px; font-weight: 700; opacity: 0.9; }
+
+    .section-badge { display: inline-block; background: #fff3e0; color: #e65100; font-size: 12px; font-weight: 900; padding: 5px 14px; border-radius: 20px; margin: 20px 24px 8px; border: 1.5px solid #f57c00; }
+
+    h1 { font-size: 24px; font-weight: 900; line-height: 1.45; color: #111; padding: 0 24px 16px; }
+
+    .hook { margin: 0 24px 20px; padding: 16px 20px; border-left: 5px solid #f57c00; background: #fff8f0; border-radius: 0 8px 8px 0; font-size: 15px; line-height: 1.8; }
+    .hook .highlight { background: #fff3e0; color: #e65100; font-weight: 900; padding: 1px 4px; border-radius: 3px; }
+
+    .summary-box { margin: 0 24px 24px; background: #e8f5e9; border-left: 5px solid #2e7d32; border-radius: 8px; padding: 16px 20px; }
+    .summary-box h2 { color: #1b5e20; font-size: 15px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+    .summary-box p { font-size: 14px; color: #1b5e20; line-height: 1.7; margin-bottom: 4px; }
+
+    h2 { font-size: 18px; font-weight: 900; color: #111; padding: 20px 24px 10px; border-top: 2px solid #f0f0f0; }
+
+    .body-text { padding: 0 24px 16px; font-size: 15px; line-height: 1.8; color: #333; }
+    .body-text p + p { margin-top: 10px; }
+
+    .info-table { margin: 0 24px 24px; border-collapse: collapse; width: calc(100% - 48px); }
+    .info-table th { background: #f57c00; color: #fff; padding: 10px 14px; font-size: 13px; font-weight: 700; text-align: left; }
+    .info-table td { padding: 10px 14px; font-size: 14px; border-bottom: 1px solid #eee; vertical-align: top; }
+    .info-table tr:nth-child(even) td { background: #fff8f0; }
+    .info-table .label { color: #e65100; font-weight: 700; white-space: nowrap; min-width: 130px; }
+
+    .svg-container { margin: 0 24px 24px; }
+
+    .steps { margin: 0 24px 24px; }
+    .step { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 14px; }
+    .step-num { background: #f57c00; color: #fff; width: 32px; height: 32px; min-width: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 15px; }
+    .step-text { font-size: 14px; line-height: 1.7; padding-top: 4px; }
+
+    .deadline-box { margin: 0 24px 24px; border: 2.5px dashed #f57c00; border-radius: 12px; padding: 16px 20px; background: #fff8f0; }
+    .deadline-box h3 { color: #e65100; font-size: 16px; font-weight: 900; margin-bottom: 10px; }
+    .deadline-box p { font-size: 14px; color: #333; line-height: 1.7; margin-bottom: 6px; }
+
+    .checklist { margin: 0 24px 24px; }
+    .checklist h3 { font-size: 16px; font-weight: 900; color: #111; margin-bottom: 12px; }
+    .check-item { display: flex; gap: 10px; margin-bottom: 10px; font-size: 14px; line-height: 1.6; }
+    .check-mark { color: #2e7d32; font-weight: 900; font-size: 16px; min-width: 20px; }
+
+    .caution { margin: 0 24px 24px; background: #fff3cd; border-left: 4px solid #ffc107; border-radius: 0 8px 8px 0; padding: 14px 18px; }
+    .caution h3 { color: #856404; font-size: 15px; font-weight: 900; margin-bottom: 8px; }
+    .caution p { font-size: 13px; color: #555; line-height: 1.7; margin-bottom: 4px; }
+
+    .contact-box { margin: 0 24px 24px; background: #fff3e0; border-radius: 12px; padding: 18px 20px; }
+    .contact-box h3 { color: #e65100; font-size: 16px; font-weight: 900; margin-bottom: 12px; }
+    .contact-item { font-size: 14px; line-height: 1.8; margin-bottom: 4px; }
+    .contact-item strong { color: #e65100; }
+
+    .opinion-section { margin: 0 24px 24px; }
+    .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+    .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+    .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+    .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+    .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+    .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    .opinion-card:last-child { margin-bottom: 0; }
+    .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+    .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+    .hashtags { padding: 0 24px 20px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .hashtag { background: #fff3e0; color: #e65100; padding: 5px 12px; border-radius: 20px; font-size: 13px; font-weight: 700; border: 1px solid #f57c00; }
+
+    .disclaimer { margin: 0 24px 20px; background: #f5f5f5; border-radius: 8px; padding: 14px 18px; }
+    .disclaimer p { font-size: 12px; color: #888; line-height: 1.6; }
+
+    .meta { text-align: right; padding: 0 24px 20px; font-size: 12px; color: #aaa; }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 0 24px 24px; }
+    .card { background: #fff8f0; border: 2px solid #f57c00; border-radius: 12px; padding: 16px; }
+    .card h3 { color: #e65100; font-size: 15px; font-weight: 900; margin-bottom: 10px; }
+    .card p { font-size: 14px; color: #333; line-height: 1.7; }
+    .card .big-num { font-size: 28px; font-weight: 900; color: #f57c00; display: block; margin-bottom: 4px; }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 19px; }
+      .opinion-grid { grid-template-columns: 1fr; }
+      .two-col { grid-template-columns: 1fr; }
+      .info-table { font-size: 12px; }
+      .info-table td, .info-table th { padding: 8px 10px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- 1. 상단 헤더 -->
+    <div class="header">
+      <span class="date-tag">📅 2026년 7월 10일</span>
+      <span class="issue-tag">오늘의 복지 뉴스 · 제2보</span>
+    </div>
+
+    <!-- 2. 섹션 배지 -->
+    <span class="section-badge">🌱 자립준비청년 · 아동보호 자립 지원</span>
+
+    <!-- 3. 메인 제목 -->
+    <h1>"보호종료 됐다고 혼자 싸우라고요?" 자립준비청년이 몰라서 못 받는 월 50만원 자립수당 + 심리상담 8회 완전 무료 — 주민센터 한 번이면 됩니다, 지금 당장 신청하세요!</h1>
+
+    <!-- 4. 훅 -->
+    <div class="hook">
+      아동양육시설·위탁가정에서 18세가 되면 하루아침에 '사회'로 내던져집니다. <span class="highlight">자립준비청년의 절반 이상이 자립 후 경제적 어려움을 경험</span>하며, 정신건강 문제는 더욱 심각합니다. 그런데 지금 이 순간, 국가가 매달 50만원을 최대 5년간 주고 전문 심리상담도 8회 완전 무료로 지원하는 제도가 운영 중입니다. 몰라서 못 받는 청년이 너무 많습니다. 지금 바로 확인하세요.
+    </div>
+
+    <!-- 5. 핵심 요약 박스 -->
+    <div class="summary-box">
+      <h2>📌 이것만 알면 됩니다</h2>
+      <p>① 자립수당: 보호종료 청년에게 매월 50만원씩 최대 60개월(5년) 지급 — 복지로·주민센터 신청</p>
+      <p>② 정신건강 심리상담 바우처: 자립준비청년은 소득 무관 8회 전액 무료 (1회 50분 이상 1:1 대면)</p>
+      <p>③ 주거·의료비·미래적금까지 — 자립 전방위 지원 패키지 모두 챙길 수 있습니다</p>
+    </div>
+
+    <!-- 6. 배경/문제 섹션 -->
+    <h2>📢 왜 이 지원이 필요한가요?</h2>
+    <div class="body-text">
+      <p>자립준비청년(보호종료아동)은 아동양육시설·공동생활가정·위탁가정 등에서 보호를 받다가 만 18세가 되면 보호가 종료되는 청년입니다. 일반 청년과 달리 부모나 가족이라는 안전망이 없어 경제, 주거, 정신건강 등 모든 면에서 훨씬 취약합니다.</p>
+      <p>보건복지부 조사에 따르면 보호종료 후 많은 자립준비청년이 우울·불안 등 정신건강 어려움을 겪고 있으며, 고립·고독사 위험도 높은 것으로 나타났습니다. 이를 위해 정부는 자립수당(월 50만원, 최대 5년)을 지급하고, 2026년부터는 '정신건강 심리상담 바우처' 사업에서 자립준비청년을 전액 무료 이용 대상으로 지정했습니다.</p>
+    </div>
+
+    <!-- 두 개 카드 -->
+    <div class="two-col">
+      <div class="card">
+        <h3>💰 자립수당</h3>
+        <span class="big-num">월 50만원</span>
+        <p>보호종료 후 최대 <strong>60개월(5년)</strong> 동안 매월 20일 지급. 취업 여부와 관계없이 지원.</p>
+      </div>
+      <div class="card">
+        <h3>🧠 심리상담 바우처</h3>
+        <span class="big-num">8회 무료</span>
+        <p>소득 기준 없이 <strong>전액 무료</strong>. 1회당 50분 이상 1:1 전문 대면 상담. 120일 이내 사용.</p>
+      </div>
+    </div>
+
+    <!-- 7. 상세 정보 표 -->
+    <h2>📋 지원 내용 상세 비교</h2>
+    <table class="info-table">
+      <tr>
+        <th>구분</th>
+        <th>자립수당</th>
+        <th>심리상담 바우처</th>
+      </tr>
+      <tr>
+        <td class="label">지원 대상</td>
+        <td>만 18세 이후 보호종료 후 5년 이내 자립준비청년</td>
+        <td>자립준비청년 및 보호연장아동 전원</td>
+      </tr>
+      <tr>
+        <td class="label">지원 금액</td>
+        <td>월 50만원</td>
+        <td>전액 무료 (본인부담금 0원)</td>
+      </tr>
+      <tr>
+        <td class="label">지원 기간</td>
+        <td>보호종료월부터 최대 60회(5년)</td>
+        <td>총 8회, 바우처 생성일로부터 120일 이내</td>
+      </tr>
+      <tr>
+        <td class="label">소득 기준</td>
+        <td>없음 (무관)</td>
+        <td>없음 (무관)</td>
+      </tr>
+      <tr>
+        <td class="label">지급 방식</td>
+        <td>매월 20일 본인 명의 계좌 입금</td>
+        <td>바우처 발급 → 전문 상담기관 이용</td>
+      </tr>
+      <tr>
+        <td class="label">신청 방법</td>
+        <td>복지로(bokjiro.go.kr) 온라인 또는 주민센터 방문</td>
+        <td>주민등록 거주지 동 행정복지센터 방문 또는 복지로 온라인</td>
+      </tr>
+    </table>
+
+    <!-- 8. SVG 인포그래픽 -->
+    <h2>📊 자립준비청년 지원 패키지 한눈에</h2>
+    <div class="svg-container">
+      <svg viewBox="0 0 580 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:12px;background:#fff8f0;">
+        <text x="290" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#e65100" font-family="Arial">자립준비청년 주요 지원 패키지</text>
+        <!-- 4 boxes -->
+        <!-- Box 1: 자립수당 -->
+        <rect x="20" y="45" width="125" height="90" rx="10" fill="#f57c00" opacity="0.15"/>
+        <rect x="20" y="45" width="125" height="6" rx="3" fill="#f57c00"/>
+        <text x="82" y="80" text-anchor="middle" font-size="13" font-weight="900" fill="#e65100" font-family="Arial">💰 자립수당</text>
+        <text x="82" y="100" text-anchor="middle" font-size="18" font-weight="900" fill="#f57c00" font-family="Arial">월 50만원</text>
+        <text x="82" y="120" text-anchor="middle" font-size="11" fill="#555" font-family="Arial">최대 5년(60개월)</text>
+
+        <!-- Box 2: 심리상담 -->
+        <rect x="160" y="45" width="125" height="90" rx="10" fill="#6a1b9a" opacity="0.12"/>
+        <rect x="160" y="45" width="125" height="6" rx="3" fill="#6a1b9a"/>
+        <text x="222" y="80" text-anchor="middle" font-size="13" font-weight="900" fill="#6a1b9a" font-family="Arial">🧠 심리상담</text>
+        <text x="222" y="100" text-anchor="middle" font-size="18" font-weight="900" fill="#6a1b9a" font-family="Arial">8회 무료</text>
+        <text x="222" y="120" text-anchor="middle" font-size="11" fill="#555" font-family="Arial">120일 이내 사용</text>
+
+        <!-- Box 3: 의료비 -->
+        <rect x="300" y="45" width="125" height="90" rx="10" fill="#1565c0" opacity="0.12"/>
+        <rect x="300" y="45" width="125" height="6" rx="3" fill="#1565c0"/>
+        <text x="362" y="80" text-anchor="middle" font-size="13" font-weight="900" fill="#1565c0" font-family="Arial">🏥 의료비 경감</text>
+        <text x="362" y="100" text-anchor="middle" font-size="13" font-weight="900" fill="#1565c0" font-family="Arial">급여 2종 수준</text>
+        <text x="362" y="120" text-anchor="middle" font-size="11" fill="#555" font-family="Arial">본인부담금 대폭 경감</text>
+
+        <!-- Box 4: 주거 -->
+        <rect x="440" y="45" width="125" height="90" rx="10" fill="#2e7d32" opacity="0.12"/>
+        <rect x="440" y="45" width="125" height="6" rx="3" fill="#2e7d32"/>
+        <text x="502" y="80" text-anchor="middle" font-size="13" font-weight="900" fill="#2e7d32" font-family="Arial">🏠 주거 지원</text>
+        <text x="502" y="100" text-anchor="middle" font-size="13" font-weight="900" fill="#2e7d32" font-family="Arial">LH 공공임대</text>
+        <text x="502" y="120" text-anchor="middle" font-size="11" fill="#555" font-family="Arial">우선 입주 연계</text>
+
+        <!-- Bottom note -->
+        <rect x="20" y="150" width="545" height="55" rx="10" fill="#fff3e0"/>
+        <text x="292" y="172" text-anchor="middle" font-size="12" fill="#e65100" font-weight="700" font-family="Arial">📌 위 모든 지원은 중복 수령 가능 — 하나만 받지 말고 전부 챙기세요!</text>
+        <text x="292" y="192" text-anchor="middle" font-size="11" fill="#555" font-family="Arial">신청 창구: 복지로(bokjiro.go.kr) 또는 주민등록 거주지 동 행정복지센터</text>
+      </svg>
+    </div>
+
+    <!-- 9. 신청 방법 -->
+    <h2>📝 신청 방법 (자립수당 + 심리상담 바우처)</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text"><strong>자격 확인</strong> — 만 18세 이후 보호종료(또는 보호연장종료), 보호종료일로부터 5년 이내인지 확인</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text"><strong>신청 경로 선택</strong> — ① 복지로(bokjiro.go.kr) 온라인 신청 또는 ② 주민등록 거주지 동 행정복지센터 방문 신청</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text"><strong>서류 제출</strong> — 보호종료 확인서, 신분증, 통장 사본 (심리상담 바우처는 보호종료 증빙서류만으로 전액 무료 적용)</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-text"><strong>수당 지급 개시</strong> — 자립수당 승인 후 매월 20일 본인 계좌로 50만원 지급 시작</div>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-text"><strong>심리상담 바우처 발급 후 이용</strong> — 바우처 발급일로부터 120일 이내 지정 상담기관에서 8회 전액 무료 상담 이용</div>
+      </div>
+    </div>
+
+    <!-- 10. 시행 일정 박스 -->
+    <div class="deadline-box">
+      <h3>⏰ 지금 당장 신청할 수 있습니다!</h3>
+      <p>▶ <strong>자립수당:</strong> 상시 접수 중 — 보호종료 후 5년 이내라면 지금 당장 신청 가능</p>
+      <p>▶ <strong>심리상담 바우처:</strong> 상시 접수 중 — 단, 예산 소진 시 대기 가능 (조기 신청 권장)</p>
+      <p>▶ 두 가지 모두 동 행정복지센터 1곳 방문으로 동시 신청 가능 — 시간 아끼세요</p>
+    </div>
+
+    <!-- 11. 자가 진단 체크리스트 -->
+    <div class="checklist">
+      <h3>✅ 나는 해당될까? 자가 진단 체크리스트</h3>
+      <div class="check-item"><span class="check-mark">✓</span> 아동양육시설·공동생활가정·가정위탁 등에서 보호받다가 종료된 청년이다</div>
+      <div class="check-item"><span class="check-mark">✓</span> 보호종료일로부터 아직 5년(60개월)이 지나지 않았다</div>
+      <div class="check-item"><span class="check-mark">✓</span> 자립수당(월 50만원)을 신청한 적이 없거나, 아직 수령 중이다</div>
+      <div class="check-item"><span class="check-mark">✓</span> 정신건강·심리적 어려움이 있어 전문 상담이 필요하다고 느낀다</div>
+      <div class="check-item"><span class="check-mark">✓</span> 주거·의료비·취업 등 복합적인 어려움으로 추가 지원이 필요하다</div>
+    </div>
+
+    <!-- 12. 주의사항 -->
+    <div class="caution">
+      <h3>⚠️ 주의사항</h3>
+      <p>① 자립수당은 보호종료일이 속한 달부터 소급 적용되므로, 늦게 신청해도 소급 지급이 가능한지 담당 기관에 확인하세요</p>
+      <p>② 심리상담 바우처는 2026년부터 '정신건강 심리상담 바우처'로 명칭이 변경됨 — 기관 안내 시 혼동하지 마세요</p>
+      <p>③ 바우처 예산은 연간 한정 — 특히 상반기에 소진될 수 있으니 조기 신청 권장</p>
+      <p>④ 기타 자립 지원(미래적금·주거지원 등)은 자립지원전담기관(17개 시·도 설치) 통해 패키지로 안내받을 수 있음</p>
+    </div>
+
+    <!-- 13. 담당 기관 및 문의처 -->
+    <div class="contact-box">
+      <h3>📞 담당 기관 및 문의처</h3>
+      <div class="contact-item"><strong>보건복지부 아동권리과</strong> ☎ 129 (복지상담 콜센터)</div>
+      <div class="contact-item"><strong>복지로 (온라인 신청)</strong> bokjiro.go.kr</div>
+      <div class="contact-item"><strong>동 행정복지센터</strong> — 주민등록 거주지 방문 신청 (자립수당·바우처 동시 신청 가능)</div>
+      <div class="contact-item"><strong>자립지원전담기관</strong> — 시·도별 1곳씩 17개 설치 (심리·주거·취업 종합 상담)</div>
+      <div class="contact-item"><strong>정신건강복지센터 (심리상담 바우처 연계)</strong> ☎ 1577-0199</div>
+    </div>
+
+    <!-- 14. 전문가 찬반 론평 -->
+    <h2>💬 전문가 찬반 론평</h2>
+    <div class="opinion-section">
+      <div class="opinion-grid">
+        <div class="opinion-pro">
+          <h3>🟢 찬성</h3>
+          <div class="opinion-card">
+            <p class="quote">"자립준비청년에게 소득 기준 없이 심리상담을 전액 지원하는 것은, 경제적 부담 때문에 도움을 포기하는 청년을 막는 결정적 조치다."</p>
+            <p class="author">— 아동복지 정책 연구자</p>
+          </div>
+          <div class="opinion-card">
+            <p class="quote">"자립수당 월 50만원은 사회 첫 발을 내딛는 청년의 생존 마지노선이다. 5년이라는 지원 기간이 자립의 '여유'를 만들어준다."</p>
+            <p class="author">— 자립준비청년 지원 현장 활동가</p>
+          </div>
+        </div>
+        <div class="opinion-con">
+          <h3>🔴 반대 / 우려</h3>
+          <div class="opinion-card">
+            <p class="quote">"월 50만원은 현 물가 수준에서 생계 유지에 턱없이 부족하다. 지급 금액을 현실화하지 않으면 제도의 실효성은 제한적이다."</p>
+            <p class="author">— 재정복지 정책 연구자</p>
+          </div>
+          <div class="opinion-card">
+            <p class="quote">"바우처 예산이 조기 소진되는 현상이 반복된다. 수요에 맞는 예산 확보 없이는 필요한 청년이 혜택에서 배제될 위험이 크다."</p>
+            <p class="author">— 사회복지학과 교수</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 15. 해시태그 -->
+    <div class="hashtags">
+      <span class="hashtag">#자립준비청년</span>
+      <span class="hashtag">#자립수당월50만원</span>
+      <span class="hashtag">#심리상담바우처</span>
+      <span class="hashtag">#보호종료청년</span>
+      <span class="hashtag">#정신건강지원</span>
+      <span class="hashtag">#8회무료상담</span>
+      <span class="hashtag">#복지로신청</span>
+      <span class="hashtag">#아동보호자립</span>
+      <span class="hashtag">#청년복지2026</span>
+      <span class="hashtag">#복지뉴스</span>
+    </div>
+
+    <!-- 16. 면책조항 -->
+    <div class="disclaimer">
+      <p>이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부는 담당 기관에 확인하세요.</p>
+    </div>
+
+    <!-- 17. 작성일 메타 -->
+    <div class="meta">작성일: 2026년 7월 10일</div>
+
+  </div>
+</body>
+</html>
