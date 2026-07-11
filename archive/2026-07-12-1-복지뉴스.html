@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"우리 아이가 자해한다는 걸 학교도 몰랐다고요?" 드디어 나라가 움직였습니다 — 범정부 청소년 자살예방 9대 대책, AI 위기감지부터 전교 상담사까지 지금 당장 확인하세요! | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+    background: #f4f7fb;
+    color: #222;
+    line-height: 1.7;
+  }
+  .container { max-width: 780px; margin: 0 auto; padding: 16px; }
+
+  /* 상단 헤더 */
+  .top-header {
+    background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+    color: #fff;
+    padding: 14px 20px;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .top-header .date-tag {
+    background: rgba(255,255,255,0.2);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .top-header .series-tag {
+    font-size: 13px;
+    opacity: 0.9;
+    font-weight: 600;
+  }
+
+  /* 카드 본문 */
+  .card {
+    background: #fff;
+    border-radius: 0 0 12px 12px;
+    padding: 28px 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+
+  /* 배지 */
+  .badge {
+    display: inline-block;
+    background: #1565c0;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+  }
+  .sub-title {
+    color: #1565c0;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  /* 메인 제목 */
+  h1 {
+    font-size: 26px;
+    font-weight: 900;
+    color: #111;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    word-break: keep-all;
+  }
+
+  /* 훅 */
+  .hook {
+    border-left: 5px solid #1565c0;
+    padding: 14px 18px;
+    background: #e3f0fd;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 22px;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  .hook .highlight {
+    color: #0d47a1;
+    font-weight: 900;
+  }
+
+  /* 핵심 요약 박스 */
+  .summary-box {
+    background: #e8f5e9;
+    border-left: 5px solid #2e7d32;
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+  }
+  .summary-box h2 {
+    color: #1b5e20;
+    font-size: 15px;
+    font-weight: 900;
+    margin-bottom: 10px;
+  }
+  .summary-box ul {
+    list-style: none;
+    padding: 0;
+  }
+  .summary-box ul li {
+    font-size: 14px;
+    padding: 3px 0;
+    color: #2e7d32;
+    font-weight: 700;
+  }
+  .summary-box ul li::before { content: "✅ "; }
+
+  /* 섹션 제목 */
+  h2 {
+    font-size: 19px;
+    font-weight: 900;
+    color: #1565c0;
+    margin: 28px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e3f0fd;
+  }
+
+  /* 본문 텍스트 */
+  p { font-size: 15px; margin-bottom: 14px; line-height: 1.8; }
+
+  /* 표 */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 24px;
+    font-size: 14px;
+  }
+  th {
+    background: #1565c0;
+    color: #fff;
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: 700;
+  }
+  td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #e0e0e0;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #f0f4ff; }
+
+  /* SVG 래퍼 */
+  .svg-wrap {
+    background: #f0f4ff;
+    border-radius: 12px;
+    padding: 18px 12px;
+    margin: 20px 0;
+    text-align: center;
+  }
+  .svg-wrap p {
+    font-size: 12px;
+    color: #888;
+    margin-top: 8px;
+  }
+
+  /* 신청 방법 */
+  .steps { margin: 16px 0; }
+  .step-item {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 14px;
+    align-items: flex-start;
+  }
+  .step-num {
+    background: #1565c0;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 900;
+    flex-shrink: 0;
+  }
+  .step-text { font-size: 14px; padding-top: 4px; line-height: 1.7; }
+  .step-text strong { color: #1565c0; }
+
+  /* 시행 일정 박스 */
+  .deadline-box {
+    border: 2px dashed #f57c00;
+    border-radius: 10px;
+    padding: 16px 20px;
+    background: #fff8e1;
+    margin: 24px 0;
+  }
+  .deadline-box h3 { color: #e65100; font-size: 16px; font-weight: 900; margin-bottom: 10px; }
+  .deadline-box ul { list-style: none; padding: 0; }
+  .deadline-box ul li { font-size: 14px; padding: 4px 0; color: #bf360c; font-weight: 600; }
+  .deadline-box ul li::before { content: "⏰ "; }
+
+  /* 체크리스트 */
+  .checklist { list-style: none; padding: 0; margin: 14px 0; }
+  .checklist li {
+    padding: 8px 12px;
+    border-bottom: 1px solid #e8f0fe;
+    font-size: 14px;
+  }
+  .checklist li::before { content: "✓ "; color: #1565c0; font-weight: 900; }
+
+  /* 주의사항 */
+  .caution-list { list-style: none; padding: 0; margin: 14px 0; }
+  .caution-list li {
+    font-size: 14px;
+    padding: 6px 0;
+    border-bottom: 1px solid #fce4ec;
+  }
+
+  /* 담당기관 박스 */
+  .contact-box {
+    background: #e8eaf6;
+    border-left: 5px solid #1565c0;
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
+    margin: 20px 0;
+  }
+  .contact-box h3 { color: #1565c0; font-weight: 900; margin-bottom: 10px; font-size: 16px; }
+  .contact-box p { font-size: 14px; margin-bottom: 6px; }
+
+  /* 찬반 론평 */
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .opinion-pro, .opinion-con {
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .opinion-pro {
+    background: #e8f5e9;
+    border-left: 5px solid #2e7d32;
+  }
+  .opinion-con {
+    background: #fff3e0;
+    border-left: 5px solid #c62828;
+  }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card {
+    background: #fff;
+    padding: 14px 16px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 8px;
+  }
+  .opinion-card .author {
+    font-size: 12px;
+    color: #777;
+    text-align: right;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  /* 해시태그 */
+  .hashtags {
+    margin: 24px 0 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .hashtags span {
+    background: #e3f0fd;
+    color: #1565c0;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  /* 면책조항 */
+  .disclaimer {
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 12px;
+    color: #888;
+    margin-top: 20px;
+    line-height: 1.7;
+  }
+
+  /* 작성일 */
+  .meta {
+    text-align: right;
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 12px;
+  }
+
+  /* 반응형 */
+  @media (max-width: 600px) {
+    h1 { font-size: 20px; }
+    h2 { font-size: 16px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .card { padding: 18px 14px; }
+    table { font-size: 12px; }
+    .step-text { font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <!-- 상단 헤더 -->
+  <div class="top-header">
+    <span class="date-tag">📅 2026년 7월 12일 (일)</span>
+    <span class="series-tag">오늘의 복지 뉴스 · 제1보</span>
+  </div>
+
+  <div class="card">
+    <!-- 배지 + 소제목 -->
+    <span class="badge">🧠 정신건강 · 자살예방</span>
+    <p class="sub-title">범정부 청소년 자살예방 9대 분야 대책</p>
+
+    <!-- 메인 제목 -->
+    <h1>"우리 아이가 자해한다는 걸 학교도 몰랐다고요?" 드디어 나라가 움직였습니다 — 범정부 청소년 자살예방 9대 대책, AI 위기감지부터 전교 상담사까지 지금 당장 확인하세요!</h1>
+
+    <!-- 훅 -->
+    <div class="hook">
+      우리나라 10대 청소년 자살률은 인구 10만 명당 8명. 전체 사망 원인 중 자살이 1위입니다. 그런데 <span class="highlight">학교도, 부모도, 병원도 몰랐던 경우가 태반</span>이었습니다. 2026년 6월, 정부가 15개 부처를 총동원해 '범정부 청소년 자살예방 대책'을 전격 발표했습니다. AI가 24시간 온라인 자해 게시물을 모니터링하고, 모든 학교에 전문 상담인력이 배치됩니다. <span class="highlight">내 아이, 내 학교가 달라집니다 — 지금 바로 확인하세요.</span>
+    </div>
+
+    <!-- 핵심 요약 박스 -->
+    <div class="summary-box">
+      <h2>📌 이것만 알면 됩니다</h2>
+      <ul>
+        <li>2035년까지 청소년 자살률 절반 감축 목표 (10만 명당 8명 → 4.2명)</li>
+        <li>AI 위기징후 발굴 시스템 2026년 말 구축, 온라인 자해정보 24시간 차단</li>
+        <li>모든 학교 전문 상담인력 배치 + 보호자 동의 없이 학교장 긴급지원 가능</li>
+      </ul>
+    </div>
+
+    <!-- 배경/문제 -->
+    <h2>📊 왜 지금 이 대책이 나왔나</h2>
+    <p>2024년 기준, 우리나라 청소년(10~19세) 자살률은 인구 10만 명당 8명으로 OECD 평균의 1.5배 수준입니다. 특히 최근 SNS와 온라인 커뮤니티를 통한 자해·자살 유발 정보 확산이 급격히 증가했습니다. 더욱 심각한 것은 자살 원인 미상 사례가 폭발적으로 늘고 있다는 점입니다 — 아이가 왜 스스로 목숨을 끊었는지조차 파악하지 못하는 경우가 늘고 있습니다.</p>
+    <p>이에 보건복지부·교육부·경찰청·방송통신위원회 등 15개 부처가 협력해 2026년 6월 '청소년 자살예방 범정부 추진 대책'을 발표했으며, 9대 분야 대책이 순차적으로 시행됩니다.</p>
+
+    <!-- 상세 정보 표 -->
+    <h2>📋 9대 분야 핵심 대책 요약</h2>
+    <table>
+      <tr>
+        <th>분야</th>
+        <th>주요 대책</th>
+        <th>시행 시점</th>
+      </tr>
+      <tr>
+        <td>① 학생·청소년</td>
+        <td>사회정서교육 6→17차시 확대, 모든 학교 상담인력 배치, 학교장 긴급지원 제도 활성화</td>
+        <td>2026년 하반기</td>
+      </tr>
+      <tr>
+        <td>② 자살 긴급대응</td>
+        <td>경찰·소방 자살시도자 정보 교육청 공유, 위기개입팀 24시간 운영</td>
+        <td>2026년 하반기</td>
+      </tr>
+      <tr>
+        <td>③ 미디어·온라인</td>
+        <td>AI로 자해·자살 유발정보 24시간 모니터링, SNS 플랫폼 즉시 삭제 의무화</td>
+        <td>2026년 12월</td>
+      </tr>
+      <tr>
+        <td>④ 자살 장소 관리</td>
+        <td>고위험 장소 접근 제한, 투신 위험 지역 안전시설 확충</td>
+        <td>2026~2027년</td>
+      </tr>
+      <tr>
+        <td>⑤ 경제위기자 지원</td>
+        <td>채무·실직 위기자 정신건강 연계 지원 강화</td>
+        <td>2026년 하반기</td>
+      </tr>
+      <tr>
+        <td>⑥ 고립·위기가족</td>
+        <td>사회적 고립 가구 발굴·연계 서비스 확대</td>
+        <td>2026년 하반기</td>
+      </tr>
+      <tr>
+        <td>⑦ 돌봄·간병 부담</td>
+        <td>중증환자 간병인 심리지원 프로그램 신설</td>
+        <td>2026년 하반기</td>
+      </tr>
+      <tr>
+        <td>⑧ 특수직군 보호</td>
+        <td>군인·소방관·의료종사자 자살예방 특별 관리</td>
+        <td>2026년 하반기</td>
+      </tr>
+      <tr>
+        <td>⑨ 범죄피해자 회복</td>
+        <td>성범죄·폭력 피해자 트라우마 전문 치료 연계</td>
+        <td>2026년 하반기</td>
+      </tr>
+    </table>
+
+    <!-- SVG 인포그래픽 -->
+    <div class="svg-wrap">
+      <svg viewBox="0 0 620 280" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="blueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#1565c0;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#42a5f5;stop-opacity:1" />
+          </linearGradient>
+          <linearGradient id="greenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#2e7d32;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#66bb6a;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <!-- 배경 -->
+        <rect width="620" height="280" fill="#f0f4ff" rx="12"/>
+        <text x="310" y="30" text-anchor="middle" font-size="15" font-weight="bold" fill="#1565c0">📉 청소년 자살률 감축 로드맵 (인구 10만 명당)</text>
+
+        <!-- 막대 그래프 -->
+        <!-- 2024 현재 -->
+        <rect x="80" y="60" width="80" height="160" fill="url(#blueGrad)" rx="6"/>
+        <text x="120" y="52" text-anchor="middle" font-size="20" font-weight="900" fill="#1565c0">8명</text>
+        <text x="120" y="240" text-anchor="middle" font-size="13" fill="#555">2024년(현재)</text>
+
+        <!-- 화살표 -->
+        <text x="210" y="145" font-size="28" fill="#f57c00">→</text>
+
+        <!-- 2030 목표 -->
+        <rect x="240" y="105" width="80" height="115" fill="#42a5f5" rx="6"/>
+        <text x="280" y="97" text-anchor="middle" font-size="18" font-weight="900" fill="#1565c0">6.5명</text>
+        <text x="280" y="240" text-anchor="middle" font-size="13" fill="#555">2030년 목표</text>
+
+        <!-- 화살표 -->
+        <text x="370" y="145" font-size="28" fill="#f57c00">→</text>
+
+        <!-- 2035 목표 -->
+        <rect x="400" y="135" width="80" height="85" fill="url(#greenGrad)" rx="6"/>
+        <text x="440" y="127" text-anchor="middle" font-size="18" font-weight="900" fill="#2e7d32">4.2명</text>
+        <text x="440" y="240" text-anchor="middle" font-size="13" fill="#555">2035년 목표</text>
+
+        <!-- 감소율 -->
+        <rect x="520" y="100" width="85" height="60" fill="#fff3e0" rx="8"/>
+        <text x="562" y="123" text-anchor="middle" font-size="13" fill="#e65100" font-weight="bold">목표</text>
+        <text x="562" y="142" text-anchor="middle" font-size="18" fill="#bf360c" font-weight="900">-47.5%</text>
+        <text x="562" y="157" text-anchor="middle" font-size="11" fill="#e65100">10년 간 감축</text>
+
+        <!-- 설명 -->
+        <text x="310" y="268" text-anchor="middle" font-size="11" fill="#888">※ 교육부·보건복지부 등 15개 부처 범정부 대책 발표 (2026.06)</text>
+      </svg>
+      <p>인포그래픽: 청소년 자살률 감축 목표 수치 시각화</p>
+    </div>
+
+    <!-- 신청 방법 -->
+    <h2>📞 내 자녀·주변 청소년을 위해 지금 할 수 있는 것</h2>
+    <div class="steps">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-text"><strong>학교 Wee클래스 상담 신청</strong> — 담임교사 또는 Wee클래스 상담사에게 직접 요청. 보호자 동의 없어도 학교장 권한으로 긴급 상담·치료 연계 가능</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-text"><strong>정신건강복지센터 연계 요청</strong> — 주소지 관할 정신건강복지센터에 아동·청소년 위기 상담 신청 (전화 또는 방문)</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-text"><strong>자살예방상담전화 1393</strong> — 24시간 무료, 전국 어디서나 이용 가능. 전화가 어려우면 문자·카카오톡 채널로도 연결됩니다</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div class="step-text"><strong>AI 위기징후 발굴 시스템 (2026년 말 개통)</strong> — SNS·커뮤니티에서 자해·자살 관련 게시물 자동 탐지, 고위험 청소년에게 전문가 아웃리치 연결</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">5</div>
+        <div class="step-text"><strong>청소년 심리부검 사업 (2027년 도입)</strong> — 자살 사망 청소년의 디지털 기록 추적 분석, 원인 규명 및 재발 방지 활용</div>
+      </div>
+    </div>
+
+    <!-- 시행 일정 박스 -->
+    <div class="deadline-box">
+      <h3>⏰ 주요 시행 일정 (놓치지 마세요!)</h3>
+      <ul>
+        <li>2026년 6월 — 청소년 분야 대책 발표 (완료)</li>
+        <li>2026년 하반기 — 전교 상담인력 배치 시작, 긴급지원 제도 활성화</li>
+        <li>2026년 12월 — AI 위기징후 발굴 시스템 구축 완료</li>
+        <li>2027년 — 청소년 심리부검 사업 본격 도입</li>
+        <li>2030년 목표 — 자살률 10만 명당 6.5명으로 감축</li>
+        <li>2035년 목표 — 자살률 10만 명당 4.2명 (현재 대비 -47.5%)</li>
+      </ul>
+    </div>
+
+    <!-- 자가 진단 체크리스트 -->
+    <h2>✅ 우리 아이·학교가 해당되는지 체크하세요</h2>
+    <ul class="checklist">
+      <li>최근 갑자기 성적 하락, 결석 증가, 친구 관계 단절이 생겼다</li>
+      <li>SNS에서 자해·자살 관련 계정을 팔로우하거나 관련 게시물을 올린 적 있다</li>
+      <li>잠을 못 자거나, 밥을 안 먹거나, 하루 종일 방에만 있는 날이 늘었다</li>
+      <li>학교 Wee클래스나 정신건강복지센터를 한 번도 이용해 본 적 없다</li>
+      <li>자살·자해에 대해 직접 말하거나 글로 표현한 적이 있다</li>
+    </ul>
+
+    <!-- 주의사항 -->
+    <h2>⚠️ 부모·선생님이 반드시 알아야 할 주의사항</h2>
+    <ol class="caution-list" style="list-style:none;padding:0;">
+      <li style="padding:8px 0;border-bottom:1px solid #e3f2fd;">① 자해나 자살 언급을 "관심 끌기"로 무시하면 절대 안 됩니다 — 반드시 진지하게 받아들이고 전문가와 상담하세요</li>
+      <li style="padding:8px 0;border-bottom:1px solid #e3f2fd;">② "왜 죽고 싶어?"라는 직접 질문이 자살 충동을 키우지 않습니다 — 오히려 마음을 열게 하므로 솔직히 물어보세요</li>
+      <li style="padding:8px 0;border-bottom:1px solid #e3f2fd;">③ 자살 시도 후 퇴원했다고 끝이 아닙니다 — 퇴원 후 3개월이 재발 위험이 가장 높으므로 지속 관리가 필수입니다</li>
+      <li style="padding:8px 0;">④ SNS 자해 커뮤니티·자살방법 공유 게시물을 발견하면 즉시 방송통신심의위원회(1377) 또는 플랫폼 신고 기능을 이용하세요</li>
+    </ol>
+
+    <!-- 담당 기관 및 문의처 -->
+    <div class="contact-box">
+      <h3>📍 담당 기관 및 문의처</h3>
+      <p>🔵 <strong>자살예방상담전화</strong> — ☎ 1393 (24시간, 무료)</p>
+      <p>🔵 <strong>청소년상담복지센터</strong> — ☎ 1388 (24시간, 문자 가능)</p>
+      <p>🔵 <strong>정신건강위기상담전화</strong> — ☎ 1577-0199 (24시간)</p>
+      <p>🔵 <strong>학교 Wee클래스</strong> — 담임교사 통해 신청 또는 직접 방문</p>
+      <p>🔵 <strong>주관 부처</strong> — 보건복지부 정신건강정책과 (044-202-3860)</p>
+      <p>🔵 <strong>교육부 학생건강정책과</strong> — (044-203-6892)</p>
+    </div>
+
+    <!-- 전문가 찬반 론평 -->
+    <h2>💬 전문가 찬반 론평</h2>
+    <div class="opinion-section">
+      <div class="opinion-grid">
+        <div class="opinion-pro">
+          <h3>🟢 찬성</h3>
+          <div class="opinion-card">
+            <p class="quote">"15개 부처가 한 테이블에 앉아 9개 분야를 동시에 다루는 범정부 대책은 전례 없는 시도다. 특히 AI 위기징후 발굴 시스템은 기존 사각지대를 메울 핵심 도구가 될 것이며, 조기 개입이 실제 자살 예방에 가장 효과적이라는 근거가 충분하다."</p>
+            <p class="author">— 청소년정신건강 연구자</p>
+          </div>
+          <div class="opinion-card">
+            <p class="quote">"보호자 동의 없이도 학교장이 긴급 상담·치료를 진행할 수 있게 된 것은 매우 중요한 진전이다. 이전에는 부모가 반대하면 위기 청소년을 아무도 도울 수 없었는데, 이 조항 하나가 수십 명의 생명을 살릴 수 있다."</p>
+            <p class="author">— 학교사회복지 현장 활동가</p>
+          </div>
+        </div>
+        <div class="opinion-con">
+          <h3>🔴 반대 / 우려</h3>
+          <div class="opinion-card">
+            <p class="quote">"대책의 방향은 옳으나, 전국 모든 학교에 전문 상담인력을 '배치'하려면 수천 명의 전문가가 필요하다. 현재 양성 인력 규모로는 수년이 걸리며, 지방 소규모 학교는 실질적 혜택에서 배제될 수 있다는 점이 우려된다."</p>
+            <p class="author">— 사회복지학과 교수</p>
+          </div>
+          <div class="opinion-card">
+            <p class="quote">"AI 모니터링 시스템 도입은 청소년 표현의 자유와 프라이버시 침해 논란을 피하기 어렵다. '자살 언급'과 '예술적 표현'을 AI가 어떻게 구분할 것인지 명확한 기준 없이는 오탐(false positive)이 반복될 수 있다."</p>
+            <p class="author">— 정보인권 시민단체 활동가</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 해시태그 -->
+    <div class="hashtags">
+      <span>#청소년자살예방</span>
+      <span>#범정부대책</span>
+      <span>#자살예방1393</span>
+      <span>#AI위기감지</span>
+      <span>#학교상담인력</span>
+      <span>#정신건강복지</span>
+      <span>#Wee클래스</span>
+      <span>#자살률절반</span>
+      <span>#청소년심리</span>
+      <span>#보건복지부2026</span>
+    </div>
+
+    <!-- 면책조항 -->
+    <div class="disclaimer">
+      ⚠️ 이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부는 담당 기관에 확인하세요. 자살·자해 위기 상황에서는 지체 없이 1393 또는 1388로 연락하시기 바랍니다.
+    </div>
+
+    <p class="meta">작성일: 2026년 7월 12일 | 오늘의 복지 뉴스 편집팀</p>
+  </div>
+</div>
+</body>
+</html>

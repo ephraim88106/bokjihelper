@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"결혼이민자·외국인 자녀인데 복지 못 받는다고요?" 완전히 틀렸습니다 — 2026년 이주배경가족 지원 전면 확대, 200만 명이 새로 혜택 받습니다 지금 신청하세요! | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+    background: #f4f7fb;
+    color: #222;
+    line-height: 1.7;
+  }
+  .container { max-width: 780px; margin: 0 auto; padding: 16px; }
+
+  /* 상단 헤더 */
+  .top-header {
+    background: linear-gradient(135deg, #ad1457 0%, #880e4f 100%);
+    color: #fff;
+    padding: 14px 20px;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .top-header .date-tag {
+    background: rgba(255,255,255,0.2);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .top-header .series-tag {
+    font-size: 13px;
+    opacity: 0.9;
+    font-weight: 600;
+  }
+
+  /* 카드 본문 */
+  .card {
+    background: #fff;
+    border-radius: 0 0 12px 12px;
+    padding: 28px 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+
+  /* 배지 */
+  .badge {
+    display: inline-block;
+    background: #ad1457;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+  }
+  .sub-title {
+    color: #ad1457;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  /* 메인 제목 */
+  h1 {
+    font-size: 26px;
+    font-weight: 900;
+    color: #111;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    word-break: keep-all;
+  }
+
+  /* 훅 */
+  .hook {
+    border-left: 5px solid #ad1457;
+    padding: 14px 18px;
+    background: #fce4ec;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 22px;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  .hook .highlight {
+    color: #880e4f;
+    font-weight: 900;
+  }
+
+  /* 핵심 요약 박스 */
+  .summary-box {
+    background: #e8f5e9;
+    border-left: 5px solid #2e7d32;
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+  }
+  .summary-box h2 {
+    color: #1b5e20;
+    font-size: 15px;
+    font-weight: 900;
+    margin-bottom: 10px;
+  }
+  .summary-box ul {
+    list-style: none;
+    padding: 0;
+  }
+  .summary-box ul li {
+    font-size: 14px;
+    padding: 3px 0;
+    color: #2e7d32;
+    font-weight: 700;
+  }
+  .summary-box ul li::before { content: "✅ "; }
+
+  /* 섹션 제목 */
+  h2 {
+    font-size: 19px;
+    font-weight: 900;
+    color: #ad1457;
+    margin: 28px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #fce4ec;
+  }
+
+  /* 본문 텍스트 */
+  p { font-size: 15px; margin-bottom: 14px; line-height: 1.8; }
+
+  /* 표 */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 24px;
+    font-size: 14px;
+  }
+  th {
+    background: #ad1457;
+    color: #fff;
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: 700;
+  }
+  td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #e0e0e0;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #fce4ec; }
+
+  /* SVG 래퍼 */
+  .svg-wrap {
+    background: #fce4ec;
+    border-radius: 12px;
+    padding: 18px 12px;
+    margin: 20px 0;
+    text-align: center;
+  }
+  .svg-wrap p {
+    font-size: 12px;
+    color: #888;
+    margin-top: 8px;
+  }
+
+  /* 신청 방법 */
+  .steps { margin: 16px 0; }
+  .step-item {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 14px;
+    align-items: flex-start;
+  }
+  .step-num {
+    background: #ad1457;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 900;
+    flex-shrink: 0;
+  }
+  .step-text { font-size: 14px; padding-top: 4px; line-height: 1.7; }
+  .step-text strong { color: #ad1457; }
+
+  /* 시행 일정 박스 */
+  .deadline-box {
+    border: 2px dashed #f57c00;
+    border-radius: 10px;
+    padding: 16px 20px;
+    background: #fff8e1;
+    margin: 24px 0;
+  }
+  .deadline-box h3 { color: #e65100; font-size: 16px; font-weight: 900; margin-bottom: 10px; }
+  .deadline-box ul { list-style: none; padding: 0; }
+  .deadline-box ul li { font-size: 14px; padding: 4px 0; color: #bf360c; font-weight: 600; }
+  .deadline-box ul li::before { content: "⏰ "; }
+
+  /* 체크리스트 */
+  .checklist { list-style: none; padding: 0; margin: 14px 0; }
+  .checklist li {
+    padding: 8px 12px;
+    border-bottom: 1px solid #fce4ec;
+    font-size: 14px;
+  }
+  .checklist li::before { content: "✓ "; color: #ad1457; font-weight: 900; }
+
+  /* 주의사항 */
+  .caution-list { list-style: none; padding: 0; margin: 14px 0; }
+
+  /* 담당기관 박스 */
+  .contact-box {
+    background: #fce4ec;
+    border-left: 5px solid #ad1457;
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
+    margin: 20px 0;
+  }
+  .contact-box h3 { color: #ad1457; font-weight: 900; margin-bottom: 10px; font-size: 16px; }
+  .contact-box p { font-size: 14px; margin-bottom: 6px; }
+
+  /* 찬반 론평 */
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .opinion-pro, .opinion-con {
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .opinion-pro {
+    background: #e8f5e9;
+    border-left: 5px solid #2e7d32;
+  }
+  .opinion-con {
+    background: #fff3e0;
+    border-left: 5px solid #c62828;
+  }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card {
+    background: #fff;
+    padding: 14px 16px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 8px;
+  }
+  .opinion-card .author {
+    font-size: 12px;
+    color: #777;
+    text-align: right;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  /* 해시태그 */
+  .hashtags {
+    margin: 24px 0 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .hashtags span {
+    background: #fce4ec;
+    color: #ad1457;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  /* 면책조항 */
+  .disclaimer {
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 12px;
+    color: #888;
+    margin-top: 20px;
+    line-height: 1.7;
+  }
+
+  /* 작성일 */
+  .meta {
+    text-align: right;
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 12px;
+  }
+
+  /* 강조 박스 */
+  .info-box {
+    background: #f3e5f5;
+    border-left: 4px solid #ad1457;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 18px;
+    margin: 16px 0;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  /* 반응형 */
+  @media (max-width: 600px) {
+    h1 { font-size: 20px; }
+    h2 { font-size: 16px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .card { padding: 18px 14px; }
+    table { font-size: 12px; }
+    .step-text { font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <!-- 상단 헤더 -->
+  <div class="top-header">
+    <span class="date-tag">📅 2026년 7월 12일 (일)</span>
+    <span class="series-tag">오늘의 복지 뉴스 · 제2보</span>
+  </div>
+
+  <div class="card">
+    <!-- 배지 + 소제목 -->
+    <span class="badge">🌏 다문화 · 이주배경가족</span>
+    <p class="sub-title">제5차 건강가정기본계획 — 이주배경가족 지원 전면 확대</p>
+
+    <!-- 메인 제목 -->
+    <h1>"결혼이민자·외국인 자녀인데 복지 못 받는다고요?" 완전히 틀렸습니다 — 2026년 이주배경가족 지원 전면 확대, 200만 명이 새로 혜택 받습니다 지금 신청하세요!</h1>
+
+    <!-- 훅 -->
+    <div class="hook">
+      "한국인이랑 결혼했는데 비자 때문에 수당 못 받는다더라" — 이제 그 말은 옛날이야기입니다. 2026년부터 정부가 '다문화가족 지원' 틀을 완전히 뜯어고쳐 <span class="highlight">결혼이민자·귀화자·외국인 자녀·이주노동자 가정까지</span> 지원 대상을 대폭 넓혔습니다. 출산지원금, 건강보험, 의료통역, 언어 교육까지 — <span class="highlight">몰라서 못 받은 지원금이 한두 가지가 아닙니다.</span> 지금 바로 확인하세요.
+    </div>
+
+    <!-- 핵심 요약 박스 -->
+    <div class="summary-box">
+      <h2>📌 이것만 알면 됩니다</h2>
+      <ul>
+        <li>'다문화가족'에서 '이주배경가족' 전체로 지원 대상 확대 (미등록 이주 아동 포함)</li>
+        <li>전국 보건소 의료통역 서비스 전면 확대, 언어 장벽 없이 진료 가능</li>
+        <li>다문화가족지원센터 → 다문화이주민+센터로 개편, 서비스 범위 대폭 확장</li>
+      </ul>
+    </div>
+
+    <!-- 배경/문제 -->
+    <h2>📊 왜 지금 이 정책이 나왔나</h2>
+    <p>우리나라 이주 배경 주민 수는 2026년 현재 약 250만 명을 넘어섰습니다. 결혼이민자 약 17만 명, 귀화자 약 22만 명, 외국인 근로자 가정 자녀까지 포함하면 실질적인 수혜 대상은 더 많습니다. 그러나 기존 '다문화가족지원법'은 <strong>한국인과 결혼한 외국인</strong>에게만 초점을 맞춰, 미등록 이주 아동이나 외국인 근로자 가정은 복지 사각지대에 방치돼 왔습니다.</p>
+    <p>2026년 시행된 '제5차 건강가정기본계획(2026~2030)'은 이 문제를 정면 돌파합니다. 지원 대상을 '이주배경가족 전체'로 확대하고, 기존 다문화가족지원센터를 <strong>'다문화이주민+센터'</strong>로 개편해 더 넓은 범위의 서비스를 제공합니다.</p>
+
+    <div class="info-box">
+      💡 <strong>이주배경가족이란?</strong> 결혼이민자 가족·귀화자 가족·중도입국 자녀 가족·외국인 근로자 가정·난민 인정자 가족 등 이주 경험이 있는 모든 가족을 포함합니다.
+    </div>
+
+    <!-- 상세 정보 표 -->
+    <h2>📋 2026년 달라지는 지원 내용</h2>
+    <table>
+      <tr>
+        <th>지원 분야</th>
+        <th>기존 (2025년까지)</th>
+        <th>변경 (2026년~)</th>
+      </tr>
+      <tr>
+        <td>지원 대상</td>
+        <td>다문화가족(한국인+외국인 결혼)</td>
+        <td>이주배경가족 전체 (미등록 이주 아동 포함)</td>
+      </tr>
+      <tr>
+        <td>지원 기관</td>
+        <td>다문화가족지원센터</td>
+        <td>다문화이주민+센터 (서비스 범위 확대)</td>
+      </tr>
+      <tr>
+        <td>의료 서비스</td>
+        <td>일부 보건소만 의료통역 제공</td>
+        <td>전국 모든 보건소 의료통역 전면 확대</td>
+      </tr>
+      <tr>
+        <td>한국어 교육</td>
+        <td>결혼이민자 중심</td>
+        <td>이주노동자·중도입국 자녀까지 확대</td>
+      </tr>
+      <tr>
+        <td>출산·양육 지원</td>
+        <td>한국인 배우자 필수</td>
+        <td>외국인 단독 세대도 일부 지원 가능</td>
+      </tr>
+      <tr>
+        <td>사회통합 프로그램</td>
+        <td>귀화 희망자 중심</td>
+        <td>장기 체류 외국인 전체로 확대</td>
+      </tr>
+    </table>
+
+    <!-- SVG 인포그래픽 -->
+    <div class="svg-wrap">
+      <svg viewBox="0 0 620 300" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+        <!-- 배경 -->
+        <rect width="620" height="300" fill="#fce4ec" rx="12"/>
+        <text x="310" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#880e4f">🌏 이주배경가족 지원 확대: 전·후 비교</text>
+
+        <!-- 기존 원 (왼쪽) -->
+        <circle cx="175" cy="165" r="100" fill="#e91e63" opacity="0.15"/>
+        <circle cx="175" cy="165" r="100" fill="none" stroke="#e91e63" stroke-width="2" stroke-dasharray="6,3"/>
+        <text x="175" y="130" text-anchor="middle" font-size="13" font-weight="bold" fill="#880e4f">기존</text>
+        <text x="175" y="150" text-anchor="middle" font-size="11" fill="#555">한국인+외국인</text>
+        <text x="175" y="167" text-anchor="middle" font-size="11" fill="#555">결혼가족만</text>
+        <text x="175" y="184" text-anchor="middle" font-size="17" font-weight="900" fill="#e91e63">약 39만 가족</text>
+        <text x="175" y="203" text-anchor="middle" font-size="10" fill="#888">결혼이민자+귀화자</text>
+
+        <!-- 화살표 -->
+        <text x="295" y="173" font-size="32" fill="#f57c00">⇒</text>
+
+        <!-- 확대 원 (오른쪽) -->
+        <circle cx="455" cy="165" r="115" fill="#ad1457" opacity="0.12"/>
+        <circle cx="455" cy="165" r="115" fill="none" stroke="#ad1457" stroke-width="3"/>
+        <text x="455" y="120" text-anchor="middle" font-size="13" font-weight="bold" fill="#880e4f">변경</text>
+        <text x="455" y="140" text-anchor="middle" font-size="10" fill="#555">결혼이민자 · 귀화자</text>
+        <text x="455" y="157" text-anchor="middle" font-size="10" fill="#555">이주노동자 가정</text>
+        <text x="455" y="174" text-anchor="middle" font-size="10" fill="#555">중도입국 자녀 가정</text>
+        <text x="455" y="191" text-anchor="middle" font-size="10" fill="#555">미등록 이주 아동 포함</text>
+        <text x="455" y="213" text-anchor="middle" font-size="18" font-weight="900" fill="#ad1457">약 250만+ 주민</text>
+
+        <!-- 신규 뱃지 -->
+        <rect x="360" y="224" width="60" height="22" fill="#f57c00" rx="6"/>
+        <text x="390" y="239" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold">NEW</text>
+
+        <!-- 하단 설명 -->
+        <text x="310" y="285" text-anchor="middle" font-size="11" fill="#888">※ 제5차 건강가정기본계획(2026~2030) 기준</text>
+      </svg>
+      <p>인포그래픽: 이주배경가족 지원 대상 확대 비교</p>
+    </div>
+
+    <!-- 신청 방법 -->
+    <h2>📍 실제로 어떻게 신청하나요?</h2>
+    <div class="steps">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-text"><strong>가까운 다문화이주민+센터 방문 또는 전화</strong> — 전국 228개 지역에 설치. 포털에서 "다문화가족지원센터"로 검색하면 내 지역 센터 확인 가능 (2026년 하반기 명칭 변경 예정)</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-text"><strong>복지로(www.bokjiro.go.kr) 온라인 신청</strong> — 출산지원금·양육수당·한국어 교육 등 항목별 온라인 신청 가능. 외국어 지원 페이지 별도 운영</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-text"><strong>보건소 의료통역 서비스 이용</strong> — 전국 보건소 방문 시 영어·중국어·베트남어·따갈로그어 등 통역 지원. 사전 예약 불필요</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div class="step-text"><strong>다누리콜센터 1577-1366</strong> — 24시간 운영, 13개 언어 지원. 어떤 복지 혜택을 받을 수 있는지 상담 가능</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">5</div>
+        <div class="step-text"><strong>사회통합프로그램(KIIP) 참여</strong> — 장기 체류 외국인이면 국적·비자 종류 관계없이 한국어 교육·사회 이해 과정 수강 가능 (이수 시 귀화·체류 가산점 부여)</div>
+      </div>
+    </div>
+
+    <!-- 시행 일정 박스 -->
+    <div class="deadline-box">
+      <h3>⏰ 주요 시행 일정 (놓치지 마세요!)</h3>
+      <ul>
+        <li>2026년 1월 — 제5차 건강가정기본계획 시행 시작</li>
+        <li>2026년 상반기 — 전국 보건소 의료통역 서비스 전면 확대 완료</li>
+        <li>2026년 하반기 — 다문화가족지원센터 → 다문화이주민+센터 순차 개편</li>
+        <li>2026년 하반기 — 이주노동자 가정 서비스 확대 적용 시작</li>
+        <li>2027년 — 미등록 이주 아동 지원 조례·법령 정비 완료 예정</li>
+        <li>2030년 — 이주배경가족 자립역량 강화 5개년 계획 완성</li>
+      </ul>
+    </div>
+
+    <!-- 자가 진단 체크리스트 -->
+    <h2>✅ 내가 받을 수 있는 지원인지 확인하세요</h2>
+    <ul class="checklist">
+      <li>한국인과 결혼한 외국인이거나, 한국에서 귀화한 경우</li>
+      <li>외국인 노동자로 한국에 체류 중이며 자녀를 키우고 있는 경우</li>
+      <li>해외에서 태어나 한국으로 이주한 자녀(중도입국 자녀)가 있는 경우</li>
+      <li>비자 문제로 정부 지원 신청이 어렵다는 말을 들어본 경우</li>
+      <li>병원에 가고 싶지만 언어가 달라 포기한 경험이 있는 경우</li>
+    </ul>
+
+    <!-- 주의사항 -->
+    <h2>⚠️ 신청 전 반드시 확인할 주의사항</h2>
+    <ol class="caution-list" style="list-style:none;padding:0;">
+      <li style="padding:8px 0;border-bottom:1px solid #fce4ec;">① 비자 종류(F-2, F-5, F-6 등)에 따라 받을 수 있는 지원이 다릅니다 — 다누리콜센터(1577-1366)에 내 비자로 가능한 혜택을 먼저 확인하세요</li>
+      <li style="padding:8px 0;border-bottom:1px solid #fce4ec;">② 미등록(불법체류) 이주 아동의 경우 일부 지원(의료·교육)은 가능하지만, 보호자 체류 신분에 따라 달라지므로 반드시 상담 먼저 받으세요</li>
+      <li style="padding:8px 0;border-bottom:1px solid #fce4ec;">③ 이민자 출산지원금·아동수당은 체류 자격 유지 기간이 6개월 이상이어야 하는 경우가 많습니다 — 체류 기간을 꼭 확인하세요</li>
+      <li style="padding:8px 0;">④ 센터 명칭이 2026년 하반기부터 순차적으로 바뀌므로, 아직 기존 이름으로 운영 중인 곳도 있습니다. 전화로 미리 확인하고 방문하세요</li>
+    </ol>
+
+    <!-- 담당 기관 및 문의처 -->
+    <div class="contact-box">
+      <h3>📍 담당 기관 및 문의처</h3>
+      <p>🌸 <strong>다누리콜센터</strong> — ☎ 1577-1366 (24시간, 13개 언어 지원)</p>
+      <p>🌸 <strong>다문화이주민+센터 찾기</strong> — 다누리포털 www.liveinkorea.kr</p>
+      <p>🌸 <strong>복지로 온라인 신청</strong> — www.bokjiro.go.kr (외국어 서비스 포함)</p>
+      <p>🌸 <strong>주관 부처</strong> — 여성가족부 가족정책과 (02-2100-6247)</p>
+      <p>🌸 <strong>보건소 의료통역 안내</strong> — 주소지 관할 보건소 직접 문의</p>
+      <p>🌸 <strong>사회통합프로그램 신청</strong> — www.socinet.go.kr</p>
+    </div>
+
+    <!-- 전문가 찬반 론평 -->
+    <h2>💬 전문가 찬반 론평</h2>
+    <div class="opinion-section">
+      <div class="opinion-grid">
+        <div class="opinion-pro">
+          <h3>🟢 찬성</h3>
+          <div class="opinion-card">
+            <p class="quote">"기존 '다문화가족'이라는 협소한 틀을 깨고 이주배경을 가진 모든 가족으로 확대한 것은 사회통합의 관점에서 정책의 성숙도를 보여주는 조치다. 미등록 이주 아동에 대한 포용은 특히 국제 인권 기준에 부합하는 방향이다."</p>
+            <p class="author">— 이주민지원 복지정책 연구자</p>
+          </div>
+          <div class="opinion-card">
+            <p class="quote">"보건소 의료통역 전국 확대는 이주 주민들이 가장 절실히 요청해온 서비스다. 언어 장벽으로 인한 의료 접근성 격차를 줄이는 데 실질적 효과가 있을 것이며, 이는 특히 농촌 지역 결혼이민자에게 큰 도움이 된다."</p>
+            <p class="author">— 다문화 지역사회 활동가</p>
+          </div>
+        </div>
+        <div class="opinion-con">
+          <h3>🔴 반대 / 우려</h3>
+          <div class="opinion-card">
+            <p class="quote">"지원 대상이 대폭 확대되었지만 예산과 인력은 그에 비례해 증가했는지 의문이다. 기존 다문화가족지원센터도 인력 부족으로 대기 시간이 길었는데, 이주노동자 가정까지 흡수하면 서비스 질이 오히려 저하될 우려가 있다."</p>
+            <p class="author">— 사회서비스 재정 연구자</p>
+          </div>
+          <div class="opinion-card">
+            <p class="quote">"미등록 이주 아동 지원 확대는 환영할 만하지만, 이것이 보호자의 불법 체류를 묵인하는 신호로 오해받을 수 있다. 아동 보호와 출입국 관리의 충돌을 어떻게 법적으로 정리할지 명확한 기준이 먼저 마련돼야 한다."</p>
+            <p class="author">— 이민·출입국 법률 전문가</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 해시태그 -->
+    <div class="hashtags">
+      <span>#이주배경가족</span>
+      <span>#다문화지원확대</span>
+      <span>#결혼이민자</span>
+      <span>#다누리1577</span>
+      <span>#의료통역무료</span>
+      <span>#외국인복지</span>
+      <span>#건강가정기본계획</span>
+      <span>#중도입국자녀</span>
+      <span>#여성가족부2026</span>
+      <span>#사회통합프로그램</span>
+    </div>
+
+    <!-- 면책조항 -->
+    <div class="disclaimer">
+      ⚠️ 이 기사는 공개된 정보를 바탕으로 작성되었습니다. 비자 종류·체류 기간에 따라 지원 내용이 달라질 수 있으므로, 정확한 지원 여부는 다누리콜센터(1577-1366) 또는 담당 기관에 반드시 확인하세요.
+    </div>
+
+    <p class="meta">작성일: 2026년 7월 12일 | 오늘의 복지 뉴스 편집팀</p>
+  </div>
+</div>
+</body>
+</html>
