@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"시골 살면 매달 15만원 그냥 줍니다" — 직업·소득 상관없이 주민등록만 있으면 현금 지급! 농어촌 기본소득 17개 군 확대, 강원 화천 등 신규 7개 군 8월부터 시작 | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; background: #fff8f0; color: #222; line-height: 1.7; }
+  .container { max-width: 760px; margin: 0 auto; background: #fff; padding: 0 0 40px; box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+
+  /* 상단 헤더 */
+  .top-header { background: linear-gradient(135deg, #f57c00, #ff9800); color: #fff; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; }
+  .top-header .date-tag { font-size: 13px; opacity: 0.9; }
+  .top-header .issue-tag { font-size: 13px; font-weight: 700; background: rgba(255,255,255,0.25); border-radius: 20px; padding: 3px 12px; }
+
+  /* 섹션 배지 */
+  .section-badge { background: #fff3e0; padding: 20px 24px 0; }
+  .badge { display: inline-block; background: #f57c00; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-bottom: 8px; }
+  .sub-title { color: #f57c00; font-size: 14px; font-weight: 700; }
+
+  /* 메인 제목 */
+  .main-title-wrap { padding: 10px 24px 20px; background: #fff3e0; }
+  h1 { font-size: 26px; font-weight: 900; line-height: 1.4; color: #bf360c; word-break: keep-all; }
+
+  /* 훅 */
+  .hook { border-left: 5px solid #f57c00; margin: 20px 24px; padding: 16px 18px; background: #fff8f0; border-radius: 0 8px 8px 0; font-size: 16px; line-height: 1.8; }
+  .highlight { background: #ffe0b2; padding: 2px 6px; border-radius: 4px; font-weight: 700; color: #bf360c; }
+
+  /* 핵심 요약 박스 */
+  .summary-box { margin: 20px 24px; background: #e8f5e9; border-radius: 12px; padding: 20px 22px; border-left: 5px solid #2e7d32; }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; margin-bottom: 12px; }
+  .summary-box ul { list-style: none; }
+  .summary-box ul li { padding: 5px 0; font-size: 15px; }
+  .summary-box ul li::before { content: "📌 "; }
+
+  /* 섹션 제목 */
+  h2.section-h2 { font-size: 18px; font-weight: 800; color: #e65100; margin: 28px 24px 12px; padding-bottom: 6px; border-bottom: 2px solid #ffe0b2; }
+
+  /* 본문 */
+  .content { padding: 0 24px; font-size: 15px; line-height: 1.9; color: #333; }
+  .content p { margin-bottom: 14px; }
+
+  /* 표 */
+  .table-wrap { padding: 0 24px; overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { background: #f57c00; color: #fff; padding: 10px 12px; text-align: left; font-weight: 700; }
+  td { padding: 10px 12px; border-bottom: 1px solid #ffe0b2; vertical-align: top; }
+  tr:nth-child(even) td { background: #fff8f0; }
+
+  /* SVG 인포그래픽 */
+  .infographic { padding: 0 24px; margin: 24px 0; }
+  .infographic svg { width: 100%; height: auto; border-radius: 12px; }
+
+  /* 신청 단계 */
+  .steps { padding: 0 24px; }
+  .step-item { display: flex; align-items: flex-start; margin-bottom: 14px; }
+  .step-num { min-width: 32px; height: 32px; background: #f57c00; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 15px; margin-right: 14px; margin-top: 2px; }
+  .step-text { font-size: 15px; line-height: 1.7; }
+  .step-text strong { color: #e65100; }
+
+  /* 시행일정 박스 */
+  .deadline-box { margin: 24px 24px; border: 2px dashed #f57c00; border-radius: 12px; padding: 18px 20px; background: #fff8f0; }
+  .deadline-box h3 { color: #e65100; font-size: 16px; margin-bottom: 10px; }
+  .deadline-box p { font-size: 15px; margin-bottom: 6px; }
+
+  /* 자가진단 체크리스트 */
+  .checklist { margin: 20px 24px; background: #fff3e0; border-radius: 12px; padding: 18px 20px; }
+  .checklist h3 { color: #e65100; font-size: 16px; margin-bottom: 12px; }
+  .checklist ul { list-style: none; }
+  .checklist ul li { padding: 6px 0; font-size: 15px; }
+  .checklist ul li::before { content: "✓ "; color: #f57c00; font-weight: 900; }
+
+  /* 주의사항 */
+  .caution { margin: 0 24px; }
+  .caution p { font-size: 14px; margin-bottom: 8px; line-height: 1.7; }
+
+  /* 문의처 박스 */
+  .contact-box { margin: 24px 24px; background: #fff3e0; border-radius: 12px; padding: 18px 20px; border-left: 5px solid #f57c00; }
+  .contact-box h3 { color: #e65100; font-size: 16px; margin-bottom: 10px; }
+  .contact-box p { font-size: 14px; margin-bottom: 6px; }
+
+  /* 찬반 론평 */
+  .opinion-section { margin: 30px 24px; }
+  .opinion-section > h2 { color: #333; font-size: 18px; font-weight: 800; margin-bottom: 16px; padding-bottom: 6px; border-bottom: 2px solid #ffe0b2; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  /* 해시태그 */
+  .hashtags { padding: 0 24px; margin: 20px 0; }
+  .hashtags span { display: inline-block; background: #fff3e0; color: #e65100; font-size: 13px; font-weight: 700; padding: 4px 10px; border-radius: 20px; margin: 4px 4px 4px 0; }
+
+  /* 면책조항 */
+  .disclaimer { margin: 20px 24px 10px; background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12px; color: #777; line-height: 1.6; }
+
+  /* 작성일 */
+  .meta { text-align: right; padding: 0 24px; font-size: 12px; color: #aaa; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 20px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .top-header { flex-direction: column; gap: 6px; }
+    th, td { font-size: 13px; padding: 8px 10px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 상단 헤더 -->
+  <div class="top-header">
+    <span class="date-tag">📅 2026년 7월 15일 · 오늘의 복지 뉴스</span>
+    <span class="issue-tag">제1보</span>
+  </div>
+
+  <!-- 섹션 배지 -->
+  <div class="section-badge">
+    <span class="badge">💰 지원금·정책 변화</span>
+    <div class="sub-title">농어촌 기본소득 | 인구감소지역 확대</div>
+  </div>
+
+  <!-- 메인 제목 -->
+  <div class="main-title-wrap">
+    <h1>"시골 살면 매달 15만원 그냥 줍니다" — 직업·소득 따위 안 봅니다! 농어촌 기본소득 17개 군으로 확대, 강원 화천·전북 진안·무주·전남 구례·보성·충북 보은·경북 청송 8월부터 지급 시작!</h1>
+  </div>
+
+  <!-- 훅 -->
+  <div class="hook">
+    "농사 짓지 않아도 괜찮습니다. 직장인이어도 됩니다. 해당 군에 주민등록만 있으면 됩니다."<br>
+    농림축산식품부가 올해 하반기 <span class="highlight">농어촌 기본소득 시범지역을 17개 군으로 확대</span>했습니다.
+    강원 화천, 전북 진안·무주, 전남 구례·보성, 충북 보은, 경북 청송 — 7개 군이 신규 추가됩니다.
+    해당 지역 주민이라면 <span class="highlight">1인당 월 15만원, 지역사랑상품권</span>으로 2026년 8월부터 받습니다. 지금 당장 확인하세요!
+  </div>
+
+  <!-- 핵심 요약 박스 -->
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>지급 대상: 17개 지정 군에 주민등록 후 30일 이상 실거주 중인 주민 (직업·소득 불문)</li>
+      <li>지급액: 1인당 월 15만원 (지역사랑상품권 — 현금처럼 사용 가능)</li>
+      <li>신규 7개 군 시작: 2026년 8월부터 지급 예정</li>
+    </ul>
+  </div>
+
+  <!-- 배경 섹션 -->
+  <h2 class="section-h2">🔍 왜 이 정책이 나왔나</h2>
+  <div class="content">
+    <p>대한민국 농어촌은 지금 '사람이 사라지는 위기'를 맞고 있습니다. 인구감소지역으로 지정된 89개 시·군·구 가운데 군 지역의 인구 유출은 매년 가속화되고 있습니다. 농사를 이어받을 젊은 사람도 없고, 마트·병원·학교도 하나둘 문을 닫는 현실입니다.</p>
+    <p>농림축산식품부는 이 문제를 해결하기 위해 2024년부터 농어촌 기본소득 시범사업을 시작했습니다. 핵심 철학은 단순합니다 — <strong>"그 지역에 살기로 선택한 것 자체를 국가가 지원한다."</strong> 농업인이 아니어도 됩니다. 고소득자도 받을 수 있습니다. 30일 이상 실제로 살고 있다는 사실 하나로 충분합니다.</p>
+    <p>2026년에는 기존 10개 군에 이어 7개 군이 추가로 선정되며 총 17개 군으로 확대됩니다. 2027년까지 시범사업을 운영하고, 2028년 이후 본사업 확대 여부를 결정할 계획입니다.</p>
+  </div>
+
+  <!-- 상세 정보 표 -->
+  <h2 class="section-h2">📊 핵심 정보 한눈에</h2>
+  <div class="table-wrap">
+    <table>
+      <tr><th>항목</th><th>내용</th></tr>
+      <tr><td><strong>사업명</strong></td><td>농어촌 기본소득 시범사업</td></tr>
+      <tr><td><strong>지급 대상</strong></td><td>17개 지정 군 주민등록 + 30일 이상 실거주자 (직업·소득 무관)</td></tr>
+      <tr><td><strong>지급액</strong></td><td>1인당 월 15만원</td></tr>
+      <tr><td><strong>지급 방식</strong></td><td>지역사랑상품권 (현금처럼 사용 / 역외 사용 불가)</td></tr>
+      <tr><td><strong>신규 7개 군 시작</strong></td><td>2026년 8월</td></tr>
+      <tr><td><strong>사업 기간</strong></td><td>~2027년 말 (이후 본사업 여부 결정)</td></tr>
+      <tr><td><strong>신규 지역</strong></td><td>강원 화천·충북 보은·전북 진안·무주·전남 구례·보성·경북 청송</td></tr>
+      <tr><td><strong>기존 지역(10개)</strong></td><td>경북 의성·영양·청도·봉화, 전남 고흥·신안, 강원 정선·양구, 충남 청양, 전북 임실 등</td></tr>
+      <tr><td><strong>주관 기관</strong></td><td>농림축산식품부 / 각 군청</td></tr>
+    </table>
+  </div>
+
+  <!-- SVG 인포그래픽 -->
+  <div class="infographic">
+    <h2 class="section-h2">📈 농어촌 기본소득 확대 현황</h2>
+    <svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg" style="background:#fff8f0; border-radius:12px;">
+      <!-- 제목 -->
+      <text x="350" y="36" text-anchor="middle" font-size="17" font-weight="900" fill="#bf360c">농어촌 기본소득 시범사업 확대 현황</text>
+
+      <!-- 2024년 막대 -->
+      <rect x="80" y="80" width="140" height="120" fill="#ffcc80" rx="8"/>
+      <text x="150" y="72" text-anchor="middle" font-size="13" font-weight="700" fill="#e65100">2024년 시작</text>
+      <text x="150" y="145" text-anchor="middle" font-size="34" font-weight="900" fill="#e65100">2개</text>
+      <text x="150" y="172" text-anchor="middle" font-size="12" fill="#bf360c">군</text>
+      <text x="150" y="218" text-anchor="middle" font-size="12" fill="#777">경북 의성·영양 외</text>
+
+      <!-- 화살표 -->
+      <text x="270" y="148" text-anchor="middle" font-size="28" fill="#f57c00">→</text>
+
+      <!-- 2025년 막대 -->
+      <rect x="300" y="60" width="140" height="140" fill="#ffb74d" rx="8"/>
+      <text x="370" y="52" text-anchor="middle" font-size="13" font-weight="700" fill="#e65100">2025년</text>
+      <text x="370" y="135" text-anchor="middle" font-size="34" font-weight="900" fill="#e65100">10개</text>
+      <text x="370" y="162" text-anchor="middle" font-size="12" fill="#bf360c">군</text>
+      <text x="370" y="218" text-anchor="middle" font-size="12" fill="#777">기존 사업지 확대</text>
+
+      <!-- 화살표 -->
+      <text x="490" y="148" text-anchor="middle" font-size="28" fill="#f57c00">→</text>
+
+      <!-- 2026년 막대 (가장 큼) -->
+      <rect x="520" y="40" width="140" height="160" fill="#f57c00" rx="8"/>
+      <text x="590" y="32" text-anchor="middle" font-size="13" font-weight="700" fill="#e65100">2026년 8월~</text>
+      <text x="590" y="125" text-anchor="middle" font-size="40" font-weight="900" fill="#fff">17개</text>
+      <text x="590" y="155" text-anchor="middle" font-size="14" fill="#fff">군 (신규 +7)</text>
+      <text x="590" y="220" text-anchor="middle" font-size="12" fill="#777">화천·보은·진안·무주·구례·보성·청송</text>
+
+      <!-- 하단 설명 -->
+      <text x="350" y="275" text-anchor="middle" font-size="13" fill="#f57c00" font-weight="700">💰 1인당 월 15만원 지역사랑상품권 지급</text>
+    </svg>
+  </div>
+
+  <!-- 신청 방법 -->
+  <h2 class="section-h2">🖊️ 신청 방법 (단계별)</h2>
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-text"><strong>거주지 확인</strong> — 자신의 주민등록이 17개 지정 군 중 한 곳에 있는지 확인합니다.</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-text"><strong>실거주 30일 충족 여부 확인</strong> — 주민등록 후 실제로 30일 이상 거주했는지 체크합니다.</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-text"><strong>읍·면 행정복지센터 방문 또는 온라인 신청</strong> — 신분증 지참 후 방문하거나, 군청 공고에 따라 온라인 신청서를 제출합니다.</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-text"><strong>실거주 확인 조사</strong> — 담당 공무원이 실제 거주 여부를 확인합니다.</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">5</div>
+      <div class="step-text"><strong>지역사랑상품권 발급 및 지급</strong> — 신청 완료 후 심사를 거쳐 매월 지역사랑상품권 형태로 지급됩니다.</div>
+    </div>
+  </div>
+
+  <!-- 시행 일정 박스 -->
+  <div class="deadline-box">
+    <h3>⏰ 시행 일정 & 신청 시기</h3>
+    <p>📅 <strong>신규 7개 군 지급 시작:</strong> 2026년 8월 (신청 접수는 7월 중순~말 예정)</p>
+    <p>📅 <strong>사업 운영 기간:</strong> 2026년~2027년 말</p>
+    <p>📅 <strong>본사업 확대 결정:</strong> 2028년 이후</p>
+    <p>⚠️ <strong>각 군청 공고 확인 필수</strong> — 신청 일정·서류는 군마다 다를 수 있습니다!</p>
+  </div>
+
+  <!-- 자가 진단 체크리스트 -->
+  <div class="checklist">
+    <h3>✅ 나도 받을 수 있을까? 자가 진단</h3>
+    <ul>
+      <li>내 주민등록 주소가 17개 지정 군 중 한 곳이다</li>
+      <li>해당 군에 30일 이상 실제로 거주하고 있다</li>
+      <li>대한민국 국민이다 (외국인은 별도 확인 필요)</li>
+      <li>이미 다른 기본소득 시범사업과 중복 지원받고 있지 않다</li>
+      <li>해당 군청 공고 발표 후 기간 내 신청할 의사가 있다</li>
+    </ul>
+  </div>
+
+  <!-- 주의사항 -->
+  <h2 class="section-h2">⚠️ 주의사항</h2>
+  <div class="caution content">
+    <p>① <strong>역외 사용 불가</strong> — 지역사랑상품권은 해당 군 내 가맹점에서만 사용 가능합니다. 현금 환급은 불가합니다.</p>
+    <p>② <strong>실거주 확인 필수</strong> — 주민등록만 옮겨놓고 실제로 살지 않으면 지급 대상에서 제외됩니다. 공무원 실거주 확인 조사가 진행됩니다.</p>
+    <p>③ <strong>군별 신청 일정 상이</strong> — 17개 군마다 신청 시작일과 마감일이 다를 수 있으므로, 반드시 거주 군청 홈페이지와 공고를 확인하세요.</p>
+    <p>④ <strong>사업 종료 가능성</strong> — 본 사업은 2027년까지 시범사업으로 운영됩니다. 2028년 이후 본사업 전환 여부는 미확정입니다.</p>
+  </div>
+
+  <!-- 문의처 박스 -->
+  <div class="contact-box">
+    <h3>📞 담당 기관 및 문의처</h3>
+    <p>🏛 <strong>농림축산식품부 농촌사회서비스정책과</strong></p>
+    <p>📞 대표전화: 044-201-1000 (정부세종청사)</p>
+    <p>🌐 농림축산식품부 홈페이지: <strong>www.mafra.go.kr</strong></p>
+    <p>🏘 <strong>거주 군청 행정복지센터</strong> 방문 또는 전화 문의 (가장 정확한 신청 일정 확인 가능)</p>
+    <p>💻 온라인 신청: 정부24 (www.gov.kr) — 향후 군청 공고 후 개설 예정</p>
+  </div>
+
+  <!-- 전문가 찬반 론평 -->
+  <div class="opinion-section">
+    <h2>💬 전문가 찬반 론평</h2>
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"소득·직업 불문 지역 거주 자체를 지원 기준으로 삼는 것은 농촌 인구 소멸 대응에서 기존 농업 보조금 방식보다 훨씬 포용적이다. 귀농·귀촌 유인 효과도 기대된다."</p>
+          <p class="author">— 농촌경제 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"월 15만원의 소득 보장이 농어촌 지역 소비를 활성화하고, 지역 내 상권과 자영업자 생존에도 실질적인 도움이 된다는 점에서 지역 재생 정책의 모범 사례로 볼 수 있다."</p>
+          <p class="author">— 지역발전·균형개발 연구자</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"주민등록 이전만으로 수급 요건이 충족되면 '페이퍼 이주' 형태의 허위 거주 신고가 늘어날 수 있다. 실거주 검증 시스템이 충분히 마련되지 않으면 형평성 문제가 발생한다."</p>
+          <p class="author">— 재정정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"지역사랑상품권 형태의 지급은 사용처가 제한되어 실제 생활 물가 상승에 대응하기 어렵고, 대형 유통망 부재로 역내 소비 효과가 제한적일 수 있다."</p>
+          <p class="author">— 사회복지정책 현장 활동가</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span>#농어촌기본소득</span>
+    <span>#월15만원</span>
+    <span>#인구감소지역</span>
+    <span>#강원화천</span>
+    <span>#전북진안무주</span>
+    <span>#전남구례보성</span>
+    <span>#충북보은</span>
+    <span>#경북청송</span>
+    <span>#귀농귀촌</span>
+    <span>#지역사랑상품권</span>
+    <span>#2026복지</span>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    이 기사는 공개된 정보를 바탕으로 작성되었습니다. 지급 대상, 신청 일정, 지급 방식 등 세부 사항은 군별 공고에 따라 달라질 수 있습니다. 정확한 지원 여부 및 신청 방법은 거주 군청 또는 읍·면 행정복지센터에 직접 확인하세요.
+  </div>
+
+  <!-- 작성일 -->
+  <div class="meta">작성일: 2026년 7월 15일 | 오늘의 복지 뉴스 제1보</div>
+
+</div>
+</body>
+</html>
