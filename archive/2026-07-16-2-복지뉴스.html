@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"구급차 타고 4곳 돌다 숨졌다" — 드디어 끝납니다! 응급실 뺑뺑이 이송체계 혁신 9월 전국 확대, 3개월 시범 미수용 0건 성과 오늘 대통령 직접 보고 받았다 | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; background: #fff5f5; color: #222; line-height: 1.7; }
+  .container { max-width: 780px; margin: 0 auto; padding: 16px; }
+
+  /* 헤더 */
+  .top-header { background: #c62828; color: #fff; padding: 14px 20px; border-radius: 12px 12px 0 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .top-header .date-tag { font-size: 13px; background: rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px; }
+  .top-header .issue-tag { font-size: 13px; font-weight: 700; }
+
+  /* 배지 */
+  .badge { display: inline-block; background: #c62828; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
+
+  /* 제목 */
+  h1 { font-size: 28px; font-weight: 900; line-height: 1.4; color: #7f0000; margin-bottom: 18px; word-break: keep-all; }
+  @media (max-width: 600px) { h1 { font-size: 22px; } }
+
+  /* 훅 */
+  .hook { border-left: 5px solid #c62828; padding: 14px 18px; background: #ffebee; border-radius: 0 10px 10px 0; margin-bottom: 24px; font-size: 16px; }
+  .hook .highlight { background: #c62828; color: #fff; padding: 2px 6px; border-radius: 4px; font-weight: 700; }
+
+  /* 핵심 요약 */
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 18px 22px; margin-bottom: 24px; }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; }
+  .summary-box ul { list-style: none; padding: 0; }
+  .summary-box ul li { padding: 4px 0; font-size: 15px; }
+  .summary-box ul li::before { content: "📌 "; }
+
+  /* 섹션 제목 */
+  h2.section-title { font-size: 20px; font-weight: 900; color: #7f0000; border-bottom: 3px solid #c62828; padding-bottom: 8px; margin: 28px 0 16px; }
+
+  /* 본문 */
+  p { margin-bottom: 14px; font-size: 15px; }
+
+  /* 표 */
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 14px; }
+  .info-table th { background: #c62828; color: #fff; padding: 10px 14px; text-align: left; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #e0e0e0; background: #fff; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #fff5f5; }
+
+  /* SVG 래퍼 */
+  .svg-wrap { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(198,40,40,0.08); overflow-x: auto; }
+  .svg-wrap h3 { font-size: 15px; color: #7f0000; font-weight: 700; margin-bottom: 14px; }
+
+  /* 신청 단계 */
+  .steps { list-style: none; padding: 0; margin-bottom: 24px; counter-reset: step; }
+  .steps li { counter-increment: step; display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid #ffcdd2; font-size: 15px; }
+  .steps li::before { content: counter(step); background: #c62828; color: #fff; min-width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 13px; flex-shrink: 0; }
+
+  /* 기한 박스 */
+  .deadline-box { border: 2px dashed #f57c00; border-radius: 10px; padding: 16px 20px; background: #fff8e1; margin-bottom: 24px; }
+  .deadline-box .title { color: #e65100; font-weight: 900; font-size: 16px; margin-bottom: 8px; }
+  .deadline-box p { font-size: 14px; margin: 0; }
+
+  /* 체크리스트 */
+  .checklist { background: #ffebee; border-radius: 12px; padding: 18px 22px; margin-bottom: 24px; }
+  .checklist h3 { color: #7f0000; font-size: 16px; font-weight: 900; margin-bottom: 12px; }
+  .checklist ul { list-style: none; padding: 0; }
+  .checklist ul li { padding: 6px 0; font-size: 15px; }
+  .checklist ul li::before { content: "✓ "; color: #c62828; font-weight: 900; }
+
+  /* 주의사항 */
+  .caution { background: #fff3e0; border-radius: 12px; padding: 18px 22px; margin-bottom: 24px; }
+  .caution h3 { color: #e65100; font-size: 16px; font-weight: 900; margin-bottom: 10px; }
+  .caution p { font-size: 14px; margin-bottom: 6px; }
+
+  /* 문의처 */
+  .contact-box { background: #ffcdd2; border-left: 5px solid #c62828; border-radius: 0 12px 12px 0; padding: 18px 22px; margin-bottom: 24px; }
+  .contact-box h3 { color: #7f0000; font-size: 16px; font-weight: 900; margin-bottom: 10px; }
+  .contact-box p { font-size: 14px; margin-bottom: 6px; }
+
+  /* 찬반 론평 */
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  @media (max-width: 600px) { .opinion-grid { grid-template-columns: 1fr; } }
+
+  /* 해시태그 */
+  .hashtags { margin-bottom: 24px; }
+  .hashtags span { display: inline-block; background: #ffcdd2; color: #c62828; font-size: 13px; font-weight: 700; padding: 4px 10px; border-radius: 20px; margin: 4px 4px 4px 0; }
+
+  /* 면책조항 */
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 18px; font-size: 13px; color: #757575; margin-bottom: 16px; }
+
+  /* 작성일 */
+  .meta { text-align: right; font-size: 12px; color: #9e9e9e; }
+
+  /* 카드 래퍼 */
+  .card { background: #fff; border-radius: 0 0 12px 12px; padding: 24px 20px; box-shadow: 0 2px 12px rgba(198,40,40,0.08); }
+
+  /* 성과 카드 */
+  .result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 24px; }
+  .result-card { background: #c62828; color: #fff; border-radius: 10px; padding: 16px 12px; text-align: center; }
+  .result-card .num { font-size: 32px; font-weight: 900; }
+  .result-card .label { font-size: 12px; margin-top: 4px; opacity: 0.9; }
+  @media (max-width: 600px) { .result-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="top-header">
+    <span class="date-tag">📅 2026년 7월 16일 목요일</span>
+    <span class="issue-tag">오늘의 복지 뉴스 · 제2보</span>
+  </div>
+  <div class="card">
+    <br>
+    <span class="badge">🚑 응급의료 · 의료복지</span>
+
+    <h1>"구급차 타고 4곳을 돌다 숨졌습니다" — 드디어 끝납니다! 응급실 뺑뺑이 이송체계 혁신 9월 전국 확대, 시범 3개월 미수용 0건 성과 오늘 대통령이 직접 보고 받았다</h1>
+
+    <div class="hook">
+      119 구급차에 누운 채로 <span class="highlight">응급실 4곳을 전전하다 사망</span>한 사례들. 이 비극이 드디어 끝날 수 있습니다. 호남권 3개월 시범사업에서 '미수용 0건'이라는 기적 같은 결과가 나왔고, 이재명 대통령이 오늘(7월 16일) 복지부 업무보고에서 직접 "별도 보고하라"고 지시했습니다. 9월부터 전국으로 확대됩니다.
+    </div>
+
+    <div class="summary-box">
+      <h2>📌 이것만 알면 됩니다</h2>
+      <ul>
+        <li>응급환자 이송체계 혁신 시범사업 — 호남권 3개월간 미수용 0건 달성</li>
+        <li>2026년 9월부터 전국 확대 시행 예정</li>
+        <li>임산부·신생아 등 고위험군 집중 대응 체계 법적 근거도 마련 중</li>
+      </ul>
+    </div>
+
+    <h2 class="section-title">📰 배경 — 얼마나 심각했나</h2>
+    <p>대한민국에서 '응급실 뺑뺑이'로 인한 사망 사례는 매년 반복됩니다. 2024년 한 해에만 응급환자 이송 거부 사례가 수천 건에 달했고, 그 중 일부는 치료를 받지 못한 채 사망했습니다. 특히 <strong>임산부, 신생아, 외상 환자</strong>가 취약했습니다.</p>
+    <p>문제의 핵심은 단순했습니다. 어느 병원이 지금 환자를 받을 수 있는지, 119 구급대원이 실시간으로 알 방법이 없었습니다. 전화로 일일이 확인하다 보니 이송 중 귀한 시간이 낭비됐고, 결국 '아무 데도 안 받아준다'는 최악의 상황이 반복됐습니다.</p>
+
+    <h2 class="section-title">🏆 시범사업 성과</h2>
+    <div class="result-grid">
+      <div class="result-card">
+        <div class="num">0건</div>
+        <div class="label">호남권 3개월 미수용 건수</div>
+      </div>
+      <div class="result-card">
+        <div class="num">37명</div>
+        <div class="label">한 달간 추가 생존자 추산</div>
+      </div>
+      <div class="result-card">
+        <div class="num">9월</div>
+        <div class="label">전국 확대 시행 목표</div>
+      </div>
+    </div>
+
+    <h2 class="section-title">📋 이송체계 혁신 핵심 내용</h2>
+    <table class="info-table">
+      <tr><th>항목</th><th>기존 문제</th><th>개선 내용</th></tr>
+      <tr><td>병원 수용 현황 파악</td><td>전화로 일일이 확인</td><td>실시간 병상·수용 가능 현황 디지털 통합 시스템</td></tr>
+      <tr><td>이송 결정 주체</td><td>구급대원 개인 판단</td><td>광역 이송조정센터가 최적 병원 실시간 지정</td></tr>
+      <tr><td>응급실 거부 시</td><td>처벌 규정 미약</td><td>법적 수용 의무·감점제 도입 (응급의료법 개정 추진)</td></tr>
+      <tr><td>임산부·신생아</td><td>별도 체계 없음</td><td>산부인과·신생아 전문 이송 경로 별도 운영</td></tr>
+      <tr><td>의료진 보호</td><td>고액 배상 부담</td><td>응급실·신생아중환자실 전문의 배상보험 국가 지원 확대</td></tr>
+      <tr><td>시행 범위</td><td>호남권 시범</td><td>2026년 9월 전국 확대</td></tr>
+    </table>
+
+    <div class="svg-wrap">
+      <h3>📊 응급실 뺑뺑이 해결 — 기존 vs 혁신 이송 흐름 비교</h3>
+      <svg viewBox="0 0 700 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;">
+        <rect width="700" height="340" fill="#fff9f9" rx="10"/>
+        <text x="350" y="26" text-anchor="middle" font-size="14" font-weight="bold" fill="#7f0000">이송 프로세스 비교</text>
+
+        <!-- 기존 -->
+        <rect x="20" y="40" width="310" height="280" fill="#ffcdd2" rx="8"/>
+        <text x="175" y="62" text-anchor="middle" font-size="13" font-weight="bold" fill="#c62828">기존 — 전화 탐색 방식 ❌</text>
+        <!-- 단계 박스들 -->
+        <rect x="55"  y="76" width="200" height="34" fill="#c62828" rx="6"/>
+        <text x="155" y="97" text-anchor="middle" font-size="12" fill="#fff">119 신고 접수</text>
+
+        <rect x="55" y="124" width="200" height="34" fill="#e53935" rx="6"/>
+        <text x="155" y="145" text-anchor="middle" font-size="12" fill="#fff">병원 A에 전화 → 거부</text>
+
+        <rect x="55" y="172" width="200" height="34" fill="#e53935" rx="6"/>
+        <text x="155" y="193" text-anchor="middle" font-size="12" fill="#fff">병원 B에 전화 → 거부</text>
+
+        <rect x="55" y="220" width="200" height="34" fill="#e53935" rx="6"/>
+        <text x="155" y="241" text-anchor="middle" font-size="12" fill="#fff">병원 C·D 전전 → 시간 낭비</text>
+
+        <rect x="55" y="268" width="200" height="34" fill="#7f0000" rx="6"/>
+        <text x="155" y="289" text-anchor="middle" font-size="12" fill="#fff">최악의 경우 사망 😢</text>
+
+        <!-- 화살표 -->
+        <text x="155" y="115" text-anchor="middle" font-size="16" fill="#c62828">↓</text>
+        <text x="155" y="163" text-anchor="middle" font-size="16" fill="#c62828">↓</text>
+        <text x="155" y="211" text-anchor="middle" font-size="16" fill="#c62828">↓</text>
+        <text x="155" y="259" text-anchor="middle" font-size="16" fill="#c62828">↓</text>
+
+        <!-- 중간 화살표 -->
+        <text x="350" y="185" text-anchor="middle" font-size="22" fill="#333">→</text>
+
+        <!-- 혁신 -->
+        <rect x="370" y="40" width="310" height="280" fill="#e8f5e9" rx="8"/>
+        <text x="525" y="62" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e7d32">혁신 — 통합 조정 방식 ✅</text>
+
+        <rect x="405" y="76" width="200" height="34" fill="#2e7d32" rx="6"/>
+        <text x="505" y="97" text-anchor="middle" font-size="12" fill="#fff">119 신고 접수</text>
+
+        <rect x="405" y="124" width="200" height="34" fill="#388e3c" rx="6"/>
+        <text x="505" y="145" text-anchor="middle" font-size="12" fill="#fff">광역조정센터 실시간 분석</text>
+
+        <rect x="405" y="172" width="200" height="34" fill="#43a047" rx="6"/>
+        <text x="505" y="193" text-anchor="middle" font-size="12" fill="#fff">수용 가능 최적 병원 즉시 지정</text>
+
+        <rect x="405" y="220" width="200" height="34" fill="#4caf50" rx="6"/>
+        <text x="505" y="241" text-anchor="middle" font-size="12" fill="#fff">직접 이송 — 1회 수용</text>
+
+        <rect x="405" y="268" width="200" height="34" fill="#1b5e20" rx="6"/>
+        <text x="505" y="289" text-anchor="middle" font-size="12" fill="#fff">골든타임 내 치료 시작 🎯</text>
+
+        <text x="505" y="115" text-anchor="middle" font-size="16" fill="#2e7d32">↓</text>
+        <text x="505" y="163" text-anchor="middle" font-size="16" fill="#2e7d32">↓</text>
+        <text x="505" y="211" text-anchor="middle" font-size="16" fill="#2e7d32">↓</text>
+        <text x="505" y="259" text-anchor="middle" font-size="16" fill="#2e7d32">↓</text>
+      </svg>
+    </div>
+
+    <h2 class="section-title">🔍 전국 확대 추진 일정</h2>
+    <ol class="steps">
+      <li>2026년 7월 — 각 시도, 지역별 이송지침 개정안 마련 (현재 진행 중)</li>
+      <li>2026년 8월 — 전국 이송체계 보완 및 의료기관 협약 체결</li>
+      <li>2026년 9월 — 전국 확대 시행 (광역 이송조정센터 전국 운영 시작)</li>
+      <li>2026년 하반기 — 응급의료법 개정안 국회 심의 (수용 의무·감점제 법제화)</li>
+      <li>2027년 — 의료진 배상보험 국가 지원 확대 및 임산부 전용 이송경로 전국 완성</li>
+    </ol>
+
+    <div class="deadline-box">
+      <div class="title">⏰ 시민이 지금 바로 알아야 할 것</div>
+      <p>• 응급 상황 발생 시 <strong>119 신고</strong>가 최우선 — 9월부터는 구급대원이 최적 병원을 즉시 안내</p>
+      <p>• 임산부·고위험 임신 중에는 <strong>가까운 권역응급의료센터</strong>와 미리 연락처 파악해 두기</p>
+      <p>• 응급실 수용 거부를 경험한 경우 <strong>보건복지부 129</strong>로 민원 접수 가능</p>
+    </div>
+
+    <div class="checklist">
+      <h3>✅ 가족 응급 대비 체크리스트</h3>
+      <ul>
+        <li>우리 집 근처 권역응급의료센터 위치를 알고 있나요?</li>
+        <li>119 신고 시 환자 정보(기저질환, 복용약)를 빠르게 말할 수 있나요?</li>
+        <li>가족 중 임산부·신생아가 있다면 담당 산부인과와 응급 연락처를 저장해 두셨나요?</li>
+        <li>심폐소생술(CPR) 기본 교육을 받으셨나요? (전국 소방서 무료 교육)</li>
+        <li>해외여행·장거리 이동 시 응급의료정보제공앱(E-Gen) 설치하셨나요?</li>
+      </ul>
+    </div>
+
+    <div class="caution">
+      <h3>⚠️ 주의사항</h3>
+      <p>① 9월 전국 확대 후에도 초기에는 일부 지역·병원별 시스템 연동이 완전하지 않을 수 있음</p>
+      <p>② 응급실 수용 의무 법제화는 국회 통과가 전제 — 현재 추진 단계</p>
+      <p>③ 경증 환자의 응급실 이용은 자제 — 응급실 과부하가 뺑뺑이의 주요 원인</p>
+      <p>④ 전국 확대 일정은 지역별 준비 상황에 따라 일부 조정될 수 있음</p>
+    </div>
+
+    <div class="contact-box">
+      <h3>📞 담당 기관 및 문의처</h3>
+      <p>🚑 <strong>응급의료 신고</strong> — ☎ <strong>119</strong> (24시간 응급 이송)</p>
+      <p>🏢 <strong>보건복지부</strong> 응급의료과 — 국번 없이 <strong>129</strong></p>
+      <p>🏥 <strong>중앙응급의료센터</strong> — ☎ 02-3702-5000 / www.e-gen.or.kr</p>
+      <p>📱 <strong>응급의료정보 앱 'E-Gen'</strong> — 가까운 응급실·운영 현황 실시간 확인</p>
+    </div>
+
+    <h2 class="section-title">💬 전문가 찬반 론평</h2>
+    <div class="opinion-section">
+      <div class="opinion-grid">
+        <div class="opinion-pro">
+          <h3>🟢 찬성</h3>
+          <div class="opinion-card">
+            <p class="quote">"호남권 3개월 미수용 0건은 단순한 수치가 아닙니다. 실시간 통합 정보 시스템이 작동하면 응급실 뺑뺑이는 사실상 사라집니다. 전국 확대를 서두를수록 더 많은 생명을 구할 수 있습니다."</p>
+            <p class="author">— 응급의학 분야 연구자</p>
+          </div>
+          <div class="opinion-card">
+            <p class="quote">"광역 이송조정센터 방식은 구급대원의 판단 부담을 줄이고, 병원의 자의적 거부를 구조적으로 차단합니다. 법적 수용 의무와 결합되면 효과는 배가됩니다."</p>
+            <p class="author">— 공공의료 정책 연구자</p>
+          </div>
+        </div>
+        <div class="opinion-con">
+          <h3>🔴 반대 / 우려</h3>
+          <div class="opinion-card">
+            <p class="quote">"수용 의무를 법으로 강제하면 의료진이 감당하기 어려운 환자를 억지로 받게 됩니다. 인력과 시설이 뒷받침되지 않은 수용 강제는 또 다른 의료 사고의 씨앗이 될 수 있습니다."</p>
+            <p class="author">— 의료현장 전문가</p>
+          </div>
+          <div class="opinion-card">
+            <p class="quote">"시범사업 성과는 호남권이라는 특정 지역의 결과입니다. 수도권·도심 과밀 응급실에 동일한 시스템을 적용할 때 같은 효과가 나타날지는 별도의 검증이 필요합니다."</p>
+            <p class="author">— 보건의료 시민단체 활동가</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hashtags">
+      <span>#응급실뺑뺑이</span>
+      <span>#응급의료개혁</span>
+      <span>#이송체계혁신</span>
+      <span>#전국확대</span>
+      <span>#복지부업무보고</span>
+      <span>#119</span>
+      <span>#임산부응급</span>
+      <span>#골든타임</span>
+      <span>#의료복지</span>
+      <span>#복지뉴스2026</span>
+    </div>
+
+    <div class="disclaimer">
+      이 기사는 공개된 정보를 바탕으로 작성되었습니다. 응급의료법 개정 및 전국 확대 일정은 추진 중인 사안으로 변동될 수 있습니다. 응급 상황에서는 반드시 119에 신고하세요. 정확한 정책 내용은 보건복지부(☎ 129) 또는 중앙응급의료센터(www.e-gen.or.kr)에서 확인하세요.
+    </div>
+    <div class="meta">작성일: 2026년 7월 16일 | 출처: 보건복지부 업무보고, 경향신문, 한국일보, 뉴스핌, 아시아투데이</div>
+  </div>
+</div>
+</body>
+</html>
