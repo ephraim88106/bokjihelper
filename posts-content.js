@@ -1,5 +1,6 @@
 // Auto-generated. News article bodies, loaded only by article.html.
 export const newsContent = {
+  203: "<iframe src=\"archive/2026-07-18-참전유공자배우자15만원생계-복지뉴스.html\" style=\"width:100%;min-height:1500px;border:none;\" loading=\"lazy\" title=\"복지뉴스\"></iframe>",
   202: "<iframe src=\"archive/2026-07-18-기준중위소득70이하면본인부-복지뉴스.html\" style=\"width:100%;min-height:1500px;border:none;\" loading=\"lazy\" title=\"복지뉴스\"></iframe>",
   201: "<iframe src=\"archive/2026-07-19-청각장애등록만하면5년에한번-복지뉴스.html\" style=\"width:100%;min-height:1500px;border:none;\" loading=\"lazy\" title=\"복지뉴스\"></iframe>",
   200: "<iframe src=\"archive/2026-07-19-학대피해청소년쉼터입소시가해-복지뉴스.html\" style=\"width:100%;min-height:1500px;border:none;\" loading=\"lazy\" title=\"복지뉴스\"></iframe>",
