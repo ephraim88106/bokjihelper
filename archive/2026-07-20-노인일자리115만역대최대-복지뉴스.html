@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"65세 넘었다고 집에만 계신다고요?" 나라가 115만 자리 만들었습니다 — 월 최대 76만원·하반기 추가모집 지금 진행중, 이 글 안 보면 진짜 손해! | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans KR', sans-serif; background: #f8f4ff; color: #222; line-height: 1.7; font-size: 16px; }
+  .container { max-width: 760px; margin: 0 auto; padding: 20px 16px 60px; }
+
+  /* 헤더 */
+  .date-tag { display: inline-block; background: #6a1b9a; color: #fff; font-size: 13px; font-weight: 700; padding: 5px 14px; border-radius: 20px; margin-bottom: 10px; }
+  .issue-label { font-size: 13px; color: #888; margin-bottom: 18px; }
+
+  /* 배지 */
+  .badge { display: inline-block; background: #ede7f6; color: #6a1b9a; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 14px; margin-bottom: 10px; }
+
+  /* 메인 제목 */
+  h1.main-title { font-size: 26px; font-weight: 900; line-height: 1.4; color: #1a0033; margin-bottom: 20px; }
+  .point { color: #6a1b9a; }
+
+  /* 훅 */
+  .hook { border-left: 5px solid #6a1b9a; padding: 16px 20px; background: #f3e5f5; border-radius: 0 12px 12px 0; margin-bottom: 24px; font-size: 15px; }
+  .highlight { background: #e1bee7; padding: 2px 6px; border-radius: 4px; font-weight: 700; }
+
+  /* 핵심 요약 박스 */
+  .summary-box { background: #e8f5e9; border-left: 5px solid #2e7d32; padding: 18px 20px; border-radius: 0 12px 12px 0; margin-bottom: 28px; }
+  .summary-box h2 { color: #1b5e20; font-size: 16px; font-weight: 900; margin-bottom: 10px; }
+  .summary-box ul { padding-left: 18px; }
+  .summary-box li { color: #2e7d32; font-weight: 600; margin-bottom: 6px; font-size: 15px; }
+
+  /* 섹션 제목 */
+  h2.section-title { font-size: 20px; font-weight: 800; color: #4a148c; margin: 32px 0 14px; border-bottom: 2px solid #ce93d8; padding-bottom: 8px; }
+
+  /* 표 */
+  table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 14px; }
+  th { background: #6a1b9a; color: #fff; padding: 10px 12px; text-align: left; }
+  td { padding: 10px 12px; border-bottom: 1px solid #e0e0e0; vertical-align: top; }
+  tr:nth-child(even) td { background: #f8f4ff; }
+  .amount { color: #6a1b9a; font-weight: 800; font-size: 15px; }
+
+  /* SVG 인포그래픽 */
+  .infographic-wrap { background: #fff; border-radius: 16px; padding: 20px; box-shadow: 0 2px 12px rgba(106,27,154,0.1); margin-bottom: 28px; text-align: center; }
+  .infographic-title { font-size: 15px; font-weight: 700; color: #4a148c; margin-bottom: 14px; }
+
+  /* 신청 방법 */
+  .step-list { list-style: none; padding: 0; }
+  .step-list li { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; }
+  .step-num { background: #6a1b9a; color: #fff; width: 30px; height: 30px; min-width: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; }
+  .step-text { font-size: 15px; padding-top: 4px; }
+
+  /* 시행 일정 박스 */
+  .deadline-box { border: 2.5px dashed #f57c00; background: #fff8e1; border-radius: 12px; padding: 18px 20px; margin-bottom: 24px; }
+  .deadline-box .title { font-size: 16px; font-weight: 800; color: #e65100; margin-bottom: 10px; }
+  .deadline-box p { font-size: 14px; color: #5d4037; line-height: 1.8; }
+
+  /* 체크리스트 */
+  .checklist { background: #fff; border: 1.5px solid #ce93d8; border-radius: 12px; padding: 18px 20px; margin-bottom: 24px; }
+  .checklist h2 { font-size: 16px; font-weight: 800; color: #4a148c; margin-bottom: 12px; }
+  .checklist ul { list-style: none; padding: 0; }
+  .checklist li { padding: 7px 0; border-bottom: 1px solid #f3e5f5; font-size: 15px; }
+  .checklist li:last-child { border-bottom: none; }
+  .check { color: #6a1b9a; font-weight: 700; margin-right: 8px; }
+
+  /* 주의사항 */
+  .caution { background: #fce4ec; border-radius: 12px; padding: 18px 20px; margin-bottom: 24px; }
+  .caution h2 { font-size: 16px; font-weight: 800; color: #880e4f; margin-bottom: 10px; }
+  .caution p { font-size: 14px; color: #4a0e23; line-height: 1.8; }
+
+  /* 담당 기관 박스 */
+  .contact-box { background: #ede7f6; border-radius: 12px; padding: 18px 20px; margin-bottom: 28px; }
+  .contact-box h2 { font-size: 16px; font-weight: 800; color: #4a148c; margin-bottom: 10px; }
+  .contact-box p { font-size: 14px; color: #333; line-height: 1.9; }
+  .contact-box a { color: #6a1b9a; font-weight: 700; text-decoration: none; }
+
+  /* 찬반 론평 */
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  /* 해시태그 */
+  .hashtags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+  .hashtag { background: #ede7f6; color: #6a1b9a; font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 16px; }
+
+  /* 면책조항 */
+  .disclaimer { background: #f5f5f5; border-radius: 10px; padding: 14px 16px; font-size: 12px; color: #888; line-height: 1.7; margin-bottom: 16px; }
+
+  /* 작성일 */
+  .meta { text-align: right; font-size: 12px; color: #bbb; }
+
+  /* 모바일 */
+  @media (max-width: 600px) {
+    h1.main-title { font-size: 21px; }
+    h2.section-title { font-size: 18px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    table { font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 상단 헤더 -->
+  <div class="date-tag">📅 2026년 7월 20일</div>
+  <p class="issue-label">오늘의 복지 뉴스 · 제1보</p>
+
+  <!-- 섹션 배지 -->
+  <span class="badge">🧓 노인 일자리</span>
+
+  <!-- 메인 제목 -->
+  <h1 class="main-title">"65세 넘었다고 집에만 계신다고요?" 나라가 <span class="point">115만 자리</span> 만들었습니다 — 월 최대 76만원·하반기 추가모집 지금 진행중, 이 글 안 보면 진짜 손해!</h1>
+
+  <!-- 훅 -->
+  <div class="hook">
+    퇴직 후 소일거리도 없고, 연금만으로는 생활이 빡빡한 어르신들께 반가운 소식입니다.<br>
+    2026년 노인일자리 사업이 <span class="highlight">역대 최대 규모 115만 2천 개</span>로 대폭 확대됐습니다.<br>
+    하반기 결원 추가모집이 지금 이 순간도 진행 중입니다. 지역 주민센터에 바로 물어보세요.
+  </div>
+
+  <!-- 핵심 요약 박스 -->
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>만 65세 이상(일부 60세 이상)이면 누구나 신청 가능, 건강 상태·소득 따지지 않는 유형도 있음</li>
+      <li>공익활동형 月 29만원 / 사회서비스형 月 최대 76만원 — 최대 12개월 지속 참여 가능</li>
+      <li>온라인(노인일자리여기·seniorro.or.kr) 또는 주민센터·노인복지관 방문 즉시 신청</li>
+    </ul>
+  </div>
+
+  <!-- 배경 섹션 -->
+  <h2 class="section-title">🔍 왜 이 정책이 나왔나</h2>
+  <p style="font-size:15px;line-height:1.9;margin-bottom:20px;">
+    대한민국은 세계에서 가장 빠르게 고령화가 진행되는 나라입니다. 2026년 현재 65세 이상 인구가 전체의 20%를 넘어섰습니다.
+    그러나 절반 가까운 어르신들이 "할 일이 없다"고 호소합니다. 노인 빈곤율은 OECD 최고 수준이며,
+    단순히 돈을 주는 것보다 <strong>사회 참여를 통한 활력 유지</strong>가 더 효과적이라는 연구가 쌓이면서 정부가 예산을 대폭 늘렸습니다.
+    2025년 109만 8천 개에서 2026년에는 <strong>115만 2천 개</strong>로 5만 4천 개가 새로 생겼습니다.
+  </p>
+
+  <!-- 상세 정보 표 -->
+  <h2 class="section-title">📊 유형별 지원 내용 상세</h2>
+  <table>
+    <thead>
+      <tr><th>유형</th><th>지원 대상</th><th>월 급여</th><th>근무 시간</th><th>특이 조건</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>공익활동형</strong></td>
+        <td>만 65세 이상<br>기초연금 수급자</td>
+        <td class="amount">월 29만원</td>
+        <td>월 30시간 내외</td>
+        <td>기초연금 수급자만 신청</td>
+      </tr>
+      <tr>
+        <td><strong>사회서비스형</strong></td>
+        <td>만 65세 이상</td>
+        <td class="amount">월 62만원~</td>
+        <td>주 3일·일 3시간</td>
+        <td>소득 무관 신청 가능</td>
+      </tr>
+      <tr>
+        <td><strong>시장형(취업알선)</strong></td>
+        <td>만 60세 이상</td>
+        <td class="amount">월 최대 76만원</td>
+        <td>사업체별 상이</td>
+        <td>기업 연계 취업 지원</td>
+      </tr>
+      <tr>
+        <td><strong>노노케어</strong></td>
+        <td>만 65세 이상<br>(돌봄 제공자)</td>
+        <td class="amount">월 29만원</td>
+        <td>주 5일</td>
+        <td>독거 어르신 가정 방문</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- SVG 인포그래픽 -->
+  <div class="infographic-wrap">
+    <div class="infographic-title">📈 노인일자리 사업 규모 연도별 추이 (단위: 만 개)</div>
+    <svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:560px;">
+      <!-- 배경 -->
+      <rect width="560" height="220" fill="#faf5ff" rx="10"/>
+      <!-- Y축 가이드 라인 -->
+      <line x1="60" y1="30" x2="60" y2="180" stroke="#ddd" stroke-width="1.5"/>
+      <line x1="60" y1="180" x2="520" y2="180" stroke="#ddd" stroke-width="1.5"/>
+      <!-- 보조선 -->
+      <line x1="60" y1="130" x2="520" y2="130" stroke="#eee" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="60" y1="80" x2="520" y2="80" stroke="#eee" stroke-width="1" stroke-dasharray="4,4"/>
+      <!-- Y축 라벨 -->
+      <text x="50" y="184" text-anchor="end" font-size="11" fill="#999">80만</text>
+      <text x="50" y="134" text-anchor="end" font-size="11" fill="#999">100만</text>
+      <text x="50" y="84" text-anchor="end" font-size="11" fill="#999">110만</text>
+      <!-- 막대 -->
+      <!-- 2022: 84만 -->
+      <rect x="80" y="152" width="60" height="28" fill="#ce93d8" rx="5"/>
+      <text x="110" y="148" text-anchor="middle" font-size="11" fill="#6a1b9a" font-weight="700">84만</text>
+      <text x="110" y="198" text-anchor="middle" font-size="12" fill="#555">2022</text>
+      <!-- 2023: 90만 -->
+      <rect x="160" y="140" width="60" height="40" fill="#ab47bc" rx="5"/>
+      <text x="190" y="136" text-anchor="middle" font-size="11" fill="#6a1b9a" font-weight="700">90만</text>
+      <text x="190" y="198" text-anchor="middle" font-size="12" fill="#555">2023</text>
+      <!-- 2024: 103만 -->
+      <rect x="240" y="106" width="60" height="74" fill="#9c27b0" rx="5"/>
+      <text x="270" y="102" text-anchor="middle" font-size="11" fill="#4a148c" font-weight="700">103만</text>
+      <text x="270" y="198" text-anchor="middle" font-size="12" fill="#555">2024</text>
+      <!-- 2025: 109.8만 -->
+      <rect x="320" y="88" width="60" height="92" fill="#7b1fa2" rx="5"/>
+      <text x="350" y="84" text-anchor="middle" font-size="11" fill="#4a148c" font-weight="700">109.8만</text>
+      <text x="350" y="198" text-anchor="middle" font-size="12" fill="#555">2025</text>
+      <!-- 2026: 115.2만 (역대 최대) -->
+      <rect x="400" y="60" width="68" height="120" fill="#6a1b9a" rx="5"/>
+      <text x="434" y="54" text-anchor="middle" font-size="12" fill="#4a148c" font-weight="900">115.2만</text>
+      <text x="434" y="198" text-anchor="middle" font-size="12" fill="#555" font-weight="700">2026</text>
+      <!-- 역대 최대 배지 -->
+      <rect x="390" y="34" width="90" height="20" fill="#f57c00" rx="10"/>
+      <text x="435" y="47" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">🏆 역대 최대!</text>
+    </svg>
+  </div>
+
+  <!-- 신청 방법 -->
+  <h2 class="section-title">📝 신청 방법 (단계별)</h2>
+  <ul class="step-list">
+    <li>
+      <div class="step-num">1</div>
+      <div class="step-text"><strong>유형 확인</strong> — 공익활동형(기초연금 수급자) / 사회서비스형·시장형(소득 무관) 중 나에게 맞는 유형 선택</div>
+    </li>
+    <li>
+      <div class="step-num">2</div>
+      <div class="step-text"><strong>공고 확인</strong> — 노인일자리여기(<a href="https://www.seniorro.or.kr" target="_blank" style="color:#6a1b9a;">seniorro.or.kr</a>) 또는 거주 지역 주민센터·노인복지관에서 진행 중인 모집 공고 확인</div>
+    </li>
+    <li>
+      <div class="step-num">3</div>
+      <div class="step-text"><strong>구비 서류 준비</strong> — 신분증, 통장 사본, 기초연금 수급 확인서(공익활동형에 한해), 건강보험료 납부 확인서</div>
+    </li>
+    <li>
+      <div class="step-num">4</div>
+      <div class="step-text"><strong>신청 제출</strong> — 온라인(노인일자리여기 사이트) 또는 주민센터·노인복지관 방문 접수</div>
+    </li>
+    <li>
+      <div class="step-num">5</div>
+      <div class="step-text"><strong>심사 및 배치</strong> — 수행기관 담당자 면담 후 배치 통보. 보통 1~2주 소요</div>
+    </li>
+  </ul>
+
+  <!-- 시행 일정 박스 -->
+  <div class="deadline-box">
+    <div class="title">⏰ 하반기 추가모집 지금 진행 중!</div>
+    <p>
+      📌 상반기 본모집은 종료됐지만 <strong>하반기 결원 추가모집이 현재 수시 진행 중</strong>입니다.<br>
+      📌 지역마다 모집 기간이 다릅니다 — <strong>오늘 당장 주민센터나 노인복지관에 전화</strong>해 보세요.<br>
+      📌 온라인: seniorro.or.kr 접속 → 지역 입력 → 진행 중 공고 바로 확인 가능<br>
+      📌 2026년 연간 예산: <strong>2조 2천억원</strong> (역대 최대 투입)
+    </p>
+  </div>
+
+  <!-- 자가 진단 체크리스트 -->
+  <div class="checklist">
+    <h2>✅ 나는 신청할 수 있을까? 자가 진단</h2>
+    <ul>
+      <li><span class="check">✓</span> 만 65세 이상이다 (시장형·취업알선형은 만 60세 이상)</li>
+      <li><span class="check">✓</span> 건강 상태가 가벼운 활동이 가능한 수준이다</li>
+      <li><span class="check">✓</span> 현재 전일제 취업 상태가 아니다</li>
+      <li><span class="check">✓</span> 국민기초생활보장법상 생계·의료급여 수급자가 아니다 (공익활동형 해당)</li>
+      <li><span class="check">✓</span> 사회 활동에 참여하고 월 소득이 생기면 좋겠다고 생각한다</li>
+    </ul>
+  </div>
+
+  <!-- 주의사항 -->
+  <div class="caution">
+    <h2>⚠️ 꼭 알아야 할 주의사항</h2>
+    <p>
+      ① 공익활동형은 <strong>기초연금 수급자만 신청 가능</strong> — 수급 여부를 먼저 확인하세요.<br>
+      ② 이미 전일제(주 36시간 이상) 취업 중이면 공익활동형·사회서비스형 신청 불가합니다.<br>
+      ③ 배치 인원이 한정되어 있어 인기 유형은 선착순 마감 — <strong>오늘 당장 문의</strong>하세요.<br>
+      ④ 참여 중 소득이 발생하면 기초연금·생계급여에 영향을 줄 수 있으니 담당자에게 꼭 확인하세요.
+    </p>
+  </div>
+
+  <!-- 담당 기관 박스 -->
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <p>
+      🏢 <strong>주관 부처</strong>: 보건복지부 노인정책관실<br>
+      📱 <strong>대표 전화</strong>: <a href="tel:15443388">☎ 1544-3388</a> (노인일자리 상담 전용 — 가까운 수행기관 연결)<br>
+      🌐 <strong>온라인 신청</strong>: <a href="https://www.seniorro.or.kr" target="_blank">노인일자리여기 (seniorro.or.kr)</a><br>
+      🏛 <strong>오프라인</strong>: 주민센터·노인복지관·시니어클럽·대한노인회 지부 방문<br>
+      📋 <strong>복지로 검색</strong>: <a href="https://www.bokjiro.go.kr" target="_blank">www.bokjiro.go.kr</a> → "노인일자리" 검색
+    </p>
+  </div>
+
+  <!-- 찬반 론평 -->
+  <h2 class="section-title">💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"노인일자리 사업은 단순한 소득 보전을 넘어 사회 참여와 인지 기능 유지에 실질적인 효과를 발휘한다. 115만 개 규모 확대는 고령사회 진입에 대응하는 필요 불가결한 정책 방향이다."</p>
+          <p class="author">— 노인복지정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"노인 빈곤율 OECD 최고 수준이라는 현실에서, 소액이라도 안정적인 공적 일자리를 제공하는 것은 기본적인 사회 안전망 역할을 한다. 예산 확대는 올바른 선택이다."</p>
+          <p class="author">— 사회보장 현장 활동가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"월 29만원 수준의 공익활동형은 실질적인 소득 보완 효과가 미미하다. 사업 규모 확대보다 단가 현실화가 더 시급한 과제이며, 예산 배분 방식을 재검토해야 한다."</p>
+          <p class="author">— 재정사회정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"민간 고용 시장을 잠식할 수 있다는 우려가 있다. 노인 일자리와 청년 일자리가 동일 직종에서 경합하는 구조적 문제를 방치하면 세대 갈등을 심화시킬 수 있다."</p>
+          <p class="author">— 고용노동시장 연구자</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span class="hashtag">#노인일자리</span>
+    <span class="hashtag">#2026노인일자리</span>
+    <span class="hashtag">#65세이상신청</span>
+    <span class="hashtag">#월76만원</span>
+    <span class="hashtag">#추가모집</span>
+    <span class="hashtag">#공익활동형</span>
+    <span class="hashtag">#사회서비스형</span>
+    <span class="hashtag">#노노케어</span>
+    <span class="hashtag">#역대최대115만</span>
+    <span class="hashtag">#복지뉴스</span>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부와 현재 모집 현황은 담당 기관(1544-3388 또는 주민센터)에 직접 확인하세요.
+    지역·수행기관에 따라 모집 시기와 조건이 다를 수 있습니다.
+  </div>
+
+  <p class="meta">작성일: 2026-07-20 | 오늘의 복지 뉴스</p>
+
+</div>
+</body>
+</html>
