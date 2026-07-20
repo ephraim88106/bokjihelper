@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"월급 170만원 받아도 생계급여 탑니다" — 34세 이하 청년이면 지금 당장 신청하세요! 추가공제 月 60만원으로 올랐는데 몰라서 못 받는 사람 수두룩 | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans KR', sans-serif; background: #fff9f9; color: #222; line-height: 1.7; font-size: 16px; }
+  .container { max-width: 760px; margin: 0 auto; padding: 20px 16px 60px; }
+
+  /* 헤더 */
+  .date-tag { display: inline-block; background: #c62828; color: #fff; font-size: 13px; font-weight: 700; padding: 5px 14px; border-radius: 20px; margin-bottom: 10px; }
+  .issue-label { font-size: 13px; color: #888; margin-bottom: 18px; }
+
+  /* 배지 */
+  .badge { display: inline-block; background: #ffebee; color: #c62828; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 14px; margin-bottom: 10px; }
+
+  /* 메인 제목 */
+  h1.main-title { font-size: 26px; font-weight: 900; line-height: 1.4; color: #1a0000; margin-bottom: 20px; }
+  .point { color: #c62828; }
+
+  /* 훅 */
+  .hook { border-left: 5px solid #c62828; padding: 16px 20px; background: #ffebee; border-radius: 0 12px 12px 0; margin-bottom: 24px; font-size: 15px; }
+  .highlight { background: #ffcdd2; padding: 2px 6px; border-radius: 4px; font-weight: 700; }
+
+  /* 핵심 요약 박스 */
+  .summary-box { background: #e8f5e9; border-left: 5px solid #2e7d32; padding: 18px 20px; border-radius: 0 12px 12px 0; margin-bottom: 28px; }
+  .summary-box h2 { color: #1b5e20; font-size: 16px; font-weight: 900; margin-bottom: 10px; }
+  .summary-box ul { padding-left: 18px; }
+  .summary-box li { color: #2e7d32; font-weight: 600; margin-bottom: 6px; font-size: 15px; }
+
+  /* 섹션 제목 */
+  h2.section-title { font-size: 20px; font-weight: 800; color: #b71c1c; margin: 32px 0 14px; border-bottom: 2px solid #ef9a9a; padding-bottom: 8px; }
+
+  /* 표 */
+  table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 14px; }
+  th { background: #c62828; color: #fff; padding: 10px 12px; text-align: left; }
+  td { padding: 10px 12px; border-bottom: 1px solid #e0e0e0; vertical-align: top; }
+  tr:nth-child(even) td { background: #fff9f9; }
+  .amount { color: #c62828; font-weight: 800; font-size: 15px; }
+  .highlight-row td { background: #ffebee !important; font-weight: 700; }
+
+  /* SVG 인포그래픽 */
+  .infographic-wrap { background: #fff; border-radius: 16px; padding: 20px; box-shadow: 0 2px 12px rgba(198,40,40,0.1); margin-bottom: 28px; text-align: center; }
+  .infographic-title { font-size: 15px; font-weight: 700; color: #b71c1c; margin-bottom: 14px; }
+
+  /* 예시 박스 */
+  .example-box { background: #fff3e0; border-left: 5px solid #f57c00; padding: 18px 20px; border-radius: 0 12px 12px 0; margin-bottom: 24px; }
+  .example-box h3 { color: #e65100; font-size: 16px; font-weight: 800; margin-bottom: 10px; }
+  .example-box p { font-size: 15px; color: #5d4037; line-height: 1.9; }
+
+  /* 신청 방법 */
+  .step-list { list-style: none; padding: 0; }
+  .step-list li { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; }
+  .step-num { background: #c62828; color: #fff; width: 30px; height: 30px; min-width: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; }
+  .step-text { font-size: 15px; padding-top: 4px; }
+
+  /* 시행 일정 박스 */
+  .deadline-box { border: 2.5px dashed #f57c00; background: #fff8e1; border-radius: 12px; padding: 18px 20px; margin-bottom: 24px; }
+  .deadline-box .title { font-size: 16px; font-weight: 800; color: #e65100; margin-bottom: 10px; }
+  .deadline-box p { font-size: 14px; color: #5d4037; line-height: 1.8; }
+
+  /* 체크리스트 */
+  .checklist { background: #fff; border: 1.5px solid #ef9a9a; border-radius: 12px; padding: 18px 20px; margin-bottom: 24px; }
+  .checklist h2 { font-size: 16px; font-weight: 800; color: #b71c1c; margin-bottom: 12px; }
+  .checklist ul { list-style: none; padding: 0; }
+  .checklist li { padding: 7px 0; border-bottom: 1px solid #ffebee; font-size: 15px; }
+  .checklist li:last-child { border-bottom: none; }
+  .check { color: #c62828; font-weight: 700; margin-right: 8px; }
+
+  /* 주의사항 */
+  .caution { background: #fce4ec; border-radius: 12px; padding: 18px 20px; margin-bottom: 24px; }
+  .caution h2 { font-size: 16px; font-weight: 800; color: #880e4f; margin-bottom: 10px; }
+  .caution p { font-size: 14px; color: #4a0e23; line-height: 1.8; }
+
+  /* 담당 기관 박스 */
+  .contact-box { background: #ffebee; border-radius: 12px; padding: 18px 20px; margin-bottom: 28px; }
+  .contact-box h2 { font-size: 16px; font-weight: 800; color: #b71c1c; margin-bottom: 10px; }
+  .contact-box p { font-size: 14px; color: #333; line-height: 1.9; }
+  .contact-box a { color: #c62828; font-weight: 700; text-decoration: none; }
+
+  /* 찬반 론평 */
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  /* 해시태그 */
+  .hashtags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+  .hashtag { background: #ffebee; color: #c62828; font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 16px; }
+
+  /* 면책조항 */
+  .disclaimer { background: #f5f5f5; border-radius: 10px; padding: 14px 16px; font-size: 12px; color: #888; line-height: 1.7; margin-bottom: 16px; }
+
+  /* 작성일 */
+  .meta { text-align: right; font-size: 12px; color: #bbb; }
+
+  /* 모바일 */
+  @media (max-width: 600px) {
+    h1.main-title { font-size: 21px; }
+    h2.section-title { font-size: 18px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    table { font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 상단 헤더 -->
+  <div class="date-tag">📅 2026년 7월 20일</div>
+  <p class="issue-label">오늘의 복지 뉴스 · 제2보</p>
+
+  <!-- 섹션 배지 -->
+  <span class="badge">💼 청년 복지</span>
+
+  <!-- 메인 제목 -->
+  <h1 class="main-title">"월급 170만원 받아도 <span class="point">생계급여</span> 탑니다" — 34세 이하 청년이면 지금 당장 신청하세요! 추가공제 月 60만원으로 올랐는데 몰라서 못 받는 사람 수두룩</h1>
+
+  <!-- 훅 -->
+  <div class="hook">
+    "일하면 생계급여 끊긴다"는 말, 2026년부터 청년에겐 더 이상 사실이 아닙니다.<br>
+    <span class="highlight">만 34세 이하 청년은 이제 월급에서 최대 60만원을 먼저 빼고</span> 급여 수급 여부를 따집니다.<br>
+    작년(29세 이하·40만원 공제)보다 혜택이 대폭 늘었지만, 이 사실을 모르는 청년이 절반 이상입니다.
+  </div>
+
+  <!-- 핵심 요약 박스 -->
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>만 34세 이하 근로·자활 청년 → 월 소득에서 60만원 우선 공제 + 나머지의 30% 추가 공제</li>
+      <li>월급 170만원 받아도 계산상 생계급여 수급권이 유지될 수 있음</li>
+      <li>주민센터·복지로(bokjiro.go.kr)·☎ 129에서 자격 여부 즉시 확인 가능</li>
+    </ul>
+  </div>
+
+  <!-- 배경 섹션 -->
+  <h2 class="section-title">🔍 왜 이 정책이 나왔나</h2>
+  <p style="font-size:15px;line-height:1.9;margin-bottom:20px;">
+    기초생활보장제도의 오래된 딜레마가 있습니다. "일하면 소득이 생겨 수급권이 끊기고, 수급권이 끊기면 오히려 더 가난해진다"는 이른바 <strong>복지 함정(Welfare Trap)</strong>입니다.
+    특히 20~30대 청년들은 취업·아르바이트로 조금만 벌어도 수급 자격을 잃어, 차라리 일하지 않는 선택을 하는 경우가 생겼습니다.
+    이를 해결하기 위해 정부는 2026년부터 청년 근로소득공제를 <strong>34세 이하로 연령을 올리고, 공제액도 月 40만원 → 60만원으로 인상</strong>했습니다.
+    이제 일하면서도 생계급여를 받는 청년이 늘어나게 됩니다.
+  </p>
+
+  <!-- 상세 정보 표 -->
+  <h2 class="section-title">📊 공제 제도 변경 전·후 비교</h2>
+  <table>
+    <thead>
+      <tr><th>항목</th><th>2025년 (구 제도)</th><th>2026년 (개정 제도)</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>적용 연령</td>
+        <td>만 29세 이하</td>
+        <td class="amount">만 34세 이하</td>
+      </tr>
+      <tr>
+        <td>정액 공제</td>
+        <td>月 40만원</td>
+        <td class="amount">月 60만원</td>
+      </tr>
+      <tr>
+        <td>추가 공제율</td>
+        <td>정액 공제 후 30%</td>
+        <td class="amount">정액 공제 후 30%</td>
+      </tr>
+      <tr class="highlight-row">
+        <td><strong>실질 혜택 예시</strong><br>(월 170만원 근로 시)</td>
+        <td>170만원 - 40만원 = 130만원<br>→ 130만원 × 70% = 91만원 소득 인정</td>
+        <td>170만원 - 60만원 = 110만원<br>→ 110만원 × 70% = <strong style="color:#c62828;">77만원 소득 인정</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 실제 계산 예시 박스 -->
+  <div class="example-box">
+    <h3>💡 실제 계산 예시 (1인 가구 기준)</h3>
+    <p>
+      📍 2026년 1인 가구 생계급여 최대 지급액: <strong>약 71만 3천원</strong><br>
+      📍 기준 중위소득 32% = 약 71만원<br><br>
+      <strong>[청년 34세·월급 170만원인 경우]</strong><br>
+      170만원 - 60만원(정액 공제) = 110만원<br>
+      110만원 × 30% = 33만원 추가 공제<br>
+      <strong>최종 소득 인정액 = 77만원</strong><br><br>
+      → 77만원 &gt; 71.3만원이면 생계급여 0원, 하지만 <strong>주거·의료·교육급여는 별도 기준</strong>이라 계속 받을 수 있습니다!<br>
+      → 월급이 약 160만원 이하이면 생계급여까지 함께 받는 경우가 많습니다.
+    </p>
+  </div>
+
+  <!-- SVG 인포그래픽 -->
+  <div class="infographic-wrap">
+    <div class="infographic-title">💸 월급 170만원 청년의 공제 전·후 소득 인정액 비교</div>
+    <svg viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:520px;">
+      <rect width="520" height="200" fill="#fff9f9" rx="10"/>
+      <!-- 2025 막대 -->
+      <rect x="60" y="50" width="140" height="40" fill="#ef9a9a" rx="6"/>
+      <text x="130" y="74" text-anchor="middle" font-size="13" fill="#b71c1c" font-weight="700">소득 인정액 91만원</text>
+      <rect x="60" y="100" width="90" height="30" fill="#c62828" rx="6"/>
+      <text x="105" y="120" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">공제 52만원</text>
+      <text x="130" y="160" text-anchor="middle" font-size="13" fill="#555" font-weight="700">2025년 (구제도)</text>
+      <text x="130" y="178" text-anchor="middle" font-size="11" fill="#888">29세 이하·40만원 공제</text>
+      <!-- 화살표 -->
+      <text x="260" y="100" text-anchor="middle" font-size="28" fill="#c62828">→</text>
+      <!-- 2026 막대 -->
+      <rect x="310" y="62" width="120" height="40" fill="#ffcdd2" rx="6"/>
+      <text x="370" y="86" text-anchor="middle" font-size="13" fill="#b71c1c" font-weight="700">소득 인정액 77만원</text>
+      <rect x="310" y="108" width="120" height="30" fill="#c62828" rx="6"/>
+      <text x="370" y="127" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">공제 93만원 ⬆️</text>
+      <text x="370" y="160" text-anchor="middle" font-size="13" fill="#c62828" font-weight="900">2026년 (신제도)</text>
+      <text x="370" y="178" text-anchor="middle" font-size="11" fill="#888">34세 이하·60만원 공제</text>
+      <!-- 개선 배지 -->
+      <rect x="420" y="55" width="85" height="22" fill="#c62828" rx="10"/>
+      <text x="462" y="70" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">소득 인정 ↓ 유리!</text>
+    </svg>
+  </div>
+
+  <!-- 신청 방법 -->
+  <h2 class="section-title">📝 신청 방법 (단계별)</h2>
+  <ul class="step-list">
+    <li>
+      <div class="step-num">1</div>
+      <div class="step-text"><strong>자격 확인</strong> — 복지로(bokjiro.go.kr) 내 '복지 서비스 모의계산' 또는 ☎ 129 상담으로 수급 가능 여부 먼저 확인</div>
+    </li>
+    <li>
+      <div class="step-num">2</div>
+      <div class="step-text"><strong>신청 서류 준비</strong> — 신분증, 금융정보제공동의서, 근로소득 확인 서류(급여명세서·근로계약서), 임대차 계약서(주거 확인용)</div>
+    </li>
+    <li>
+      <div class="step-num">3</div>
+      <div class="step-text"><strong>신청 접수</strong> — 주소지 주민센터(행정복지센터) 방문 또는 복지로 온라인 신청</div>
+    </li>
+    <li>
+      <div class="step-num">4</div>
+      <div class="step-text"><strong>조사 및 결정</strong> — 접수 후 30일 이내 소득·재산 조사 → 수급 결정 통보</div>
+    </li>
+    <li>
+      <div class="step-num">5</div>
+      <div class="step-text"><strong>급여 수령</strong> — 매월 20일 지정 계좌로 입금. 이미 수급 중이면 담당자에게 청년 근로소득 공제 적용 확인 요청</div>
+    </li>
+  </ul>
+
+  <!-- 시행 일정 박스 -->
+  <div class="deadline-box">
+    <div class="title">⏰ 이미 시행 중! 지금 당장 확인하세요</div>
+    <p>
+      📌 청년 근로소득 추가공제 개선안은 <strong>2026년 1월 1일부터 이미 시행 중</strong>입니다.<br>
+      📌 기존 수급자인데 청년 공제가 제대로 적용됐는지 모른다면 — <strong>주민센터 담당자에게 즉시 확인</strong>하세요.<br>
+      📌 소급 적용이 될 수 있으니, 올해 초부터 받지 못한 금액이 있다면 소급 청구를 꼭 챙기세요.<br>
+      📌 복지로 모의계산: <a href="https://www.bokjiro.go.kr" target="_blank" style="color:#c62828;font-weight:700;">www.bokjiro.go.kr</a>
+    </p>
+  </div>
+
+  <!-- 자가 진단 체크리스트 -->
+  <div class="checklist">
+    <h2>✅ 나는 신청할 수 있을까? 자가 진단</h2>
+    <ul>
+      <li><span class="check">✓</span> 만 34세 이하 (1992년생 이후)이고 근로 소득이 있다</li>
+      <li><span class="check">✓</span> 가구의 소득 인정액이 기준 중위소득 32% 이하로 예상된다</li>
+      <li><span class="check">✓</span> 재산(주택·금융자산 등)이 기초생활보장 기준 이하이다</li>
+      <li><span class="check">✓</span> 부양의무자 기준에 걸리지 않는다 (의료급여는 별도 확인 필요)</li>
+      <li><span class="check">✓</span> 현재 기초생활 수급권자이고 근로를 시작해 급여 삭감이 걱정된다</li>
+    </ul>
+  </div>
+
+  <!-- 주의사항 -->
+  <div class="caution">
+    <h2>⚠️ 꼭 알아야 할 주의사항</h2>
+    <p>
+      ① 청년 공제는 <strong>근로·사업 소득에만 적용</strong> — 금융소득·재산 소득에는 해당 없음.<br>
+      ② 이미 수급 중인데 근로 소득이 생겼다면 <strong>의무적으로 신고</strong>해야 합니다. 미신고 시 부정수급으로 처리될 수 있음.<br>
+      ③ 생계급여는 끊겼더라도 <strong>의료·주거·교육급여는 별도 기준</strong>으로 계속 받을 수 있는 경우가 많으니 포기하지 마세요.<br>
+      ④ 부양의무자 기준은 <strong>생계·의료·주거·교육 급여마다 다름</strong> — 개별 확인이 필요합니다.
+    </p>
+  </div>
+
+  <!-- 담당 기관 박스 -->
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <p>
+      🏢 <strong>주관 부처</strong>: 보건복지부 기초생활보장과<br>
+      📱 <strong>복지 상담 전화</strong>: <a href="tel:129">☎ 129</a> (보건복지상담센터 — 24시간 운영)<br>
+      🌐 <strong>온라인 신청·모의계산</strong>: <a href="https://www.bokjiro.go.kr" target="_blank">복지로 (bokjiro.go.kr)</a><br>
+      🏛 <strong>오프라인 신청</strong>: 주소지 주민센터(행정복지센터) 방문<br>
+      📋 <strong>청년 복지 통합 안내</strong>: <a href="https://www.mohw.go.kr" target="_blank">보건복지부 (mohw.go.kr)</a>
+    </p>
+  </div>
+
+  <!-- 찬반 론평 -->
+  <h2 class="section-title">💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"근로소득 공제 확대는 '일하면 손해'라는 복지 함정을 깨는 핵심 수단이다. 34세 이하로 연령 상한을 올린 것은 불안정 청년 노동 현실을 반영한 진일보한 개선이다."</p>
+          <p class="author">— 사회보장제도 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"청년들이 저임금 일자리를 기피하는 이유 중 하나가 급여 삭감 우려였다. 공제 한도 상향은 근로 유인을 높이는 동시에 자립 역량을 강화하는 이중 효과를 낸다."</p>
+          <p class="author">— 청년 자립 지원 현장 활동가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"공제 한도 상향은 긍정적이나 근본 해법이 아니다. 생계급여 기준선 자체가 낮아 공제를 아무리 올려도 실질 수혜가 제한적이다. 기준 중위소득 연동 방식을 근본적으로 재설계해야 한다."</p>
+          <p class="author">— 사회복지학 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"공제 혜택이 있어도 현장 담당자들이 정확히 적용하지 못하는 사례가 여전히 많다. 제도 개선만큼 중요한 것이 일선 창구의 정보 역량 강화다."</p>
+          <p class="author">— 지역사회 복지관 종사자</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span class="hashtag">#청년생계급여</span>
+    <span class="hashtag">#34세이하</span>
+    <span class="hashtag">#근로소득공제</span>
+    <span class="hashtag">#60만원공제</span>
+    <span class="hashtag">#복지함정탈출</span>
+    <span class="hashtag">#기초생활수급</span>
+    <span class="hashtag">#2026기초생활</span>
+    <span class="hashtag">#청년복지</span>
+    <span class="hashtag">#생계급여신청</span>
+    <span class="hashtag">#복지뉴스</span>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 수급 여부와 공제 적용 금액은 가구 상황에 따라 다릅니다.
+    반드시 주민센터 또는 복지 상담 전화(☎ 129)를 통해 개인별로 확인하세요.
+  </div>
+
+  <p class="meta">작성일: 2026-07-20 | 오늘의 복지 뉴스</p>
+
+</div>
+</body>
+</html>
