@@ -1,7 +1,7 @@
 // Auto-generated. News article bodies, loaded only by article.html.
 export const newsContent = {
-  205: "<iframe src="archive/2026-07-20-청년생계급여60만원공제-복지뉴스.html" style="width:100%;border:none;" scrolling="no" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight+"px"" loading="lazy" title="복지뉴스"></iframe>",
-  204: "<iframe src="archive/2026-07-20-노인일자리115만역대최대-복지뉴스.html" style="width:100%;border:none;" scrolling="no" onload="this.style.height=this.contentWindow.document.documentElement.scrollHeight+"px"" loading="lazy" title="복지뉴스"></iframe>",
+  205: "<iframe src=\"archive/2026-07-20-청년생계급여60만원공제-복지뉴스.html\" style=\"width:100%;border:none;\" scrolling=\"no\" onload=\"this.style.height=this.contentWindow.document.documentElement.scrollHeight+'px'\" loading=\"lazy\" title=\"복지뉴스\"></iframe>",
+  204: "<iframe src=\"archive/2026-07-20-노인일자리115만역대최대-복지뉴스.html\" style=\"width:100%;border:none;\" scrolling=\"no\" onload=\"this.style.height=this.contentWindow.document.documentElement.scrollHeight+'px'\" loading=\"lazy\" title=\"복지뉴스\"></iframe>",
   203: "<iframe src=\"archive/2026-07-18-참전유공자배우자15만원생계-복지뉴스.html\" style=\"width:100%;border:none;\" scrolling=\"no\" onload=\"this.style.height=this.contentWindow.document.documentElement.scrollHeight+'px'\" loading=\"lazy\" title=\"복지뉴스\"></iframe>",
   202: "<iframe src=\"archive/2026-07-18-기준중위소득70이하면본인부-복지뉴스.html\" style=\"width:100%;border:none;\" scrolling=\"no\" onload=\"this.style.height=this.contentWindow.document.documentElement.scrollHeight+'px'\" loading=\"lazy\" title=\"복지뉴스\"></iframe>",
   201: "<iframe src=\"archive/2026-07-19-청각장애등록만하면5년에한번-복지뉴스.html\" style=\"width:100%;border:none;\" scrolling=\"no\" onload=\"this.style.height=this.contentWindow.document.documentElement.scrollHeight+'px'\" loading=\"lazy\" title=\"복지뉴스\"></iframe>",
