@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>65세인데 기초연금 탈락했다고요? 7월부터 기준이 바뀌었습니다 | 복지헬퍼</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', '맑은 고딕', sans-serif; background: #f5f7fa; color: #222; line-height: 1.7; }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 0 0 40px; border-radius: 0 0 12px 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.1); }
+
+  /* 상단 헤더 */
+  .top-header { background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%); color: #fff; padding: 18px 24px 14px; border-radius: 0; }
+  .top-header .date-tag { font-size: 12px; opacity: 0.85; letter-spacing: 1px; margin-bottom: 6px; }
+  .top-header .series-title { font-size: 14px; font-weight: 700; opacity: 0.95; }
+
+  /* 본문 */
+  .content { padding: 28px 24px; }
+
+  /* 섹션 배지 */
+  .section-badge { display: inline-block; background: #1565c0; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-bottom: 14px; letter-spacing: 0.5px; }
+
+  /* 메인 제목 */
+  .main-title { font-size: 26px; font-weight: 900; line-height: 1.4; color: #0a1c3a; margin-bottom: 20px; }
+
+  /* 훅 */
+  .hook { border-left: 5px solid #1565c0; padding: 14px 18px; background: #e3f2fd; border-radius: 0 8px 8px 0; margin-bottom: 22px; font-size: 15px; line-height: 1.8; }
+  .hook .highlight { background: #fff176; padding: 1px 4px; border-radius: 3px; font-weight: 700; }
+
+  /* 핵심 요약 박스 */
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 10px; padding: 18px 20px; margin-bottom: 26px; }
+  .summary-box h3 { color: #1b5e20; font-size: 15px; font-weight: 900; margin-bottom: 10px; }
+  .summary-box ul { padding-left: 18px; }
+  .summary-box ul li { font-size: 14px; color: #1b5e20; font-weight: 600; margin-bottom: 5px; line-height: 1.6; }
+
+  /* 섹션 제목 */
+  h2 { font-size: 18px; font-weight: 900; color: #1565c0; margin: 28px 0 12px; border-bottom: 2px solid #e3f2fd; padding-bottom: 6px; }
+
+  /* 본문 텍스트 */
+  p { font-size: 15px; line-height: 1.8; margin-bottom: 14px; color: #333; }
+
+  /* 상세 정보 표 */
+  .info-table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 14px; }
+  .info-table th { background: #1565c0; color: #fff; padding: 10px 14px; text-align: left; font-weight: 700; }
+  .info-table td { padding: 9px 14px; border-bottom: 1px solid #e0e0e0; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #f5f9ff; }
+  .info-table .label { font-weight: 700; color: #1565c0; width: 40%; }
+
+  /* SVG 인포그래픽 */
+  .infographic { text-align: center; margin: 24px 0; }
+  .infographic svg { max-width: 100%; height: auto; }
+
+  /* 신청 방법 */
+  .step-list { counter-reset: step; list-style: none; padding: 0; margin: 12px 0 24px; }
+  .step-list li { counter-increment: step; display: flex; align-items: flex-start; gap: 14px; margin-bottom: 14px; }
+  .step-list li::before { content: counter(step); display: flex; align-items: center; justify-content: center; min-width: 30px; height: 30px; background: #1565c0; color: #fff; border-radius: 50%; font-weight: 900; font-size: 14px; margin-top: 2px; }
+  .step-list li .step-text { font-size: 14px; line-height: 1.7; color: #333; }
+  .step-list li .step-text strong { color: #1565c0; }
+
+  /* 시행 일정 박스 */
+  .deadline-box { border: 2px dashed #f57c00; background: #fff8f0; border-radius: 10px; padding: 16px 20px; margin: 24px 0; }
+  .deadline-box h3 { color: #e65100; font-size: 15px; font-weight: 900; margin-bottom: 10px; }
+  .deadline-box ul { padding-left: 18px; }
+  .deadline-box ul li { font-size: 14px; color: #bf360c; margin-bottom: 6px; line-height: 1.6; }
+
+  /* 자가진단 체크리스트 */
+  .checklist { background: #f9f9f9; border-radius: 10px; padding: 16px 20px; margin: 24px 0; }
+  .checklist h3 { font-size: 15px; font-weight: 900; color: #333; margin-bottom: 12px; }
+  .checklist ul { list-style: none; padding: 0; }
+  .checklist ul li { font-size: 14px; color: #333; padding: 7px 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 10px; }
+  .checklist ul li:last-child { border-bottom: none; }
+  .check-mark { color: #1565c0; font-size: 18px; font-weight: 900; }
+
+  /* 주의사항 */
+  .caution { background: #fff8e1; border-radius: 10px; padding: 16px 20px; margin: 24px 0; }
+  .caution h3 { font-size: 15px; font-weight: 900; color: #f57c00; margin-bottom: 10px; }
+  .caution p { font-size: 14px; color: #5d4037; margin-bottom: 8px; line-height: 1.7; }
+
+  /* 담당 기관 박스 */
+  .contact-box { background: #e3f2fd; border-radius: 10px; padding: 18px 20px; margin: 24px 0; border-left: 5px solid #1565c0; }
+  .contact-box h3 { font-size: 15px; font-weight: 900; color: #1565c0; margin-bottom: 12px; }
+  .contact-box .contact-item { font-size: 14px; color: #333; margin-bottom: 8px; line-height: 1.7; }
+  .contact-box .contact-item strong { color: #1565c0; }
+
+  /* 찬반 론평 */
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  /* 해시태그 */
+  .hashtags { margin: 28px 0 20px; }
+  .hashtags a { display: inline-block; background: #e3f2fd; color: #1565c0; font-size: 13px; font-weight: 700; padding: 5px 12px; border-radius: 20px; margin: 4px 4px 4px 0; text-decoration: none; }
+
+  /* 면책조항 */
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12px; color: #777; line-height: 1.7; margin-top: 24px; }
+
+  /* 작성일 메타 */
+  .meta { text-align: right; font-size: 12px; color: #aaa; margin-top: 16px; }
+
+  @media (max-width: 600px) {
+    .content { padding: 20px 16px; }
+    .main-title { font-size: 20px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .info-table { font-size: 13px; }
+    h2 { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <!-- 상단 헤더 -->
+  <div class="top-header">
+    <div class="date-tag">📅 2026년 7월 24일 (목) · 오늘의 복지 뉴스</div>
+    <div class="series-title">복지헬퍼 뉴스 · 제212보</div>
+  </div>
+
+  <div class="content">
+    <!-- 섹션 배지 -->
+    <span class="section-badge">👴 노인·고령자 지원</span>
+
+    <!-- 메인 제목 -->
+    <h1 class="main-title">"65세인데 기초연금 탈락했다고요?" 7월부터 기준이 바뀌었습니다 — 단독가구 소득 月 247만원 이하면 무조건 재신청, 최대 月 349,360원 지금 안 챙기면 평생 손해!</h1>
+
+    <!-- 훅 -->
+    <div class="hook">
+      작년에 기초연금 신청했다가 소득이 조금 넘어서 탈락한 적 있으신가요? <span class="highlight">2026년부터 기준 금액이 대폭 올랐습니다.</span> 단독가구 기준 월 소득인정액 247만원 이하면 이제 받을 수 있습니다. 한 달에 최대 349,360원 — 1년이면 419만원입니다. 재신청 안 하면 그냥 날리는 돈입니다.
+    </div>
+
+    <!-- 핵심 요약 박스 -->
+    <div class="summary-box">
+      <h3>📌 이것만 알면 됩니다</h3>
+      <ul>
+        <li>2026년 단독가구 선정기준 월 247만원(부부가구 395만 2천원)으로 인상</li>
+        <li>기초연금 월 최대 349,360원 — 부부 동시 수급 시 최대 64만원</li>
+        <li>과거 탈락자도 '수급희망이력관리' 등록하면 자격 생기면 자동 재신청 가능</li>
+      </ul>
+    </div>
+
+    <!-- 배경 섹션 -->
+    <h2>왜 기준이 바뀌었나요?</h2>
+    <p>기초연금 선정기준액은 매년 물가·소득 상승을 반영해 조정됩니다. 2025년 단독가구 기준은 월 228만원이었는데, 2026년에는 <strong>19만원 올라 247만원</strong>으로 높아졌습니다. 부부가구도 365만원에서 395만 2천원으로 30만원 이상 상향됐습니다.</p>
+    <p>이 기준이 오른다는 뜻은, 지난해에는 소득인정액이 조금 넘어서 탈락했던 어르신들이 올해는 새롭게 수혜 대상이 될 수 있다는 의미입니다. 추가로, 일하는 어르신이 최저임금 인상 때문에 기초연금을 잃지 않도록 <strong>근로소득 공제액도 112만원에서 116만원으로 높아졌습니다.</strong></p>
+
+    <!-- 상세 정보 표 -->
+    <h2>2026년 기초연금 핵심 수치</h2>
+    <table class="info-table">
+      <tr><th>항목</th><th>2025년</th><th>2026년 (변경)</th></tr>
+      <tr><td class="label">단독가구 선정기준</td><td>월 228만원</td><td><strong>월 247만원 ▲19만↑</strong></td></tr>
+      <tr><td class="label">부부가구 선정기준</td><td>월 365만원</td><td><strong>월 395만 2천원 ▲30만↑</strong></td></tr>
+      <tr><td class="label">월 최대 수령액(단독)</td><td>342,510원</td><td><strong>349,360원 ▲6,850↑</strong></td></tr>
+      <tr><td class="label">부부 동시 수급 최대</td><td>약 548,000원</td><td><strong>약 640,000원</strong></td></tr>
+      <tr><td class="label">근로소득 공제액</td><td>월 112만원</td><td><strong>월 116만원 ▲4만↑</strong></td></tr>
+      <tr><td class="label">지급 대상</td><td>만 65세 이상</td><td>만 65세 이상 (동일)</td></tr>
+      <tr><td class="label">소득 기준 없음 여부</td><td>소득·재산 하위 70% 노인</td><td>하위 70% (동일)</td></tr>
+    </table>
+
+    <!-- SVG 인포그래픽 -->
+    <div class="infographic">
+      <svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" width="680" height="320">
+        <rect width="680" height="320" fill="#f0f4ff" rx="12"/>
+        <text x="340" y="36" text-anchor="middle" font-size="17" font-weight="900" fill="#1565c0">📊 기초연금 2025 → 2026 비교</text>
+
+        <!-- 단독가구 -->
+        <rect x="40" y="60" width="280" height="110" rx="10" fill="#fff" stroke="#1565c0" stroke-width="2"/>
+        <text x="180" y="84" text-anchor="middle" font-size="13" font-weight="700" fill="#1565c0">👤 단독가구 선정기준</text>
+        <rect x="60" y="96" width="100" height="54" rx="8" fill="#cfd8dc"/>
+        <text x="110" y="118" text-anchor="middle" font-size="12" fill="#546e7a">2025년</text>
+        <text x="110" y="140" text-anchor="middle" font-size="18" font-weight="900" fill="#546e7a">228만원</text>
+        <rect x="180" y="96" width="120" height="54" rx="8" fill="#1565c0"/>
+        <text x="240" y="118" text-anchor="middle" font-size="12" fill="#fff">2026년</text>
+        <text x="240" y="140" text-anchor="middle" font-size="18" font-weight="900" fill="#fff">247만원</text>
+        <text x="180" y="158" text-anchor="middle" font-size="12" fill="#c62828" font-weight="700">▲ 19만원 상향</text>
+
+        <!-- 최대 수령액 -->
+        <rect x="360" y="60" width="280" height="110" rx="10" fill="#fff" stroke="#1565c0" stroke-width="2"/>
+        <text x="500" y="84" text-anchor="middle" font-size="13" font-weight="700" fill="#1565c0">💰 월 최대 수령액(단독)</text>
+        <rect x="380" y="96" width="100" height="54" rx="8" fill="#cfd8dc"/>
+        <text x="430" y="118" text-anchor="middle" font-size="12" fill="#546e7a">2025년</text>
+        <text x="430" y="140" text-anchor="middle" font-size="15" font-weight="900" fill="#546e7a">342,510원</text>
+        <rect x="500" y="96" width="120" height="54" rx="8" fill="#1565c0"/>
+        <text x="560" y="118" text-anchor="middle" font-size="12" fill="#fff">2026년</text>
+        <text x="560" y="140" text-anchor="middle" font-size="15" font-weight="900" fill="#fff">349,360원</text>
+        <text x="500" y="158" text-anchor="middle" font-size="12" fill="#c62828" font-weight="700">▲ 6,850원 인상</text>
+
+        <!-- 부부 수급 -->
+        <rect x="40" y="188" width="280" height="90" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+        <text x="180" y="210" text-anchor="middle" font-size="13" font-weight="700" fill="#2e7d32">👫 부부 동시 수급 최대</text>
+        <text x="180" y="242" text-anchor="middle" font-size="22" font-weight="900" fill="#2e7d32">月 최대 64만원</text>
+        <text x="180" y="265" text-anchor="middle" font-size="12" fill="#388e3c">연간 768만원 수령 가능</text>
+
+        <!-- 근로소득 공제 -->
+        <rect x="360" y="188" width="280" height="90" rx="10" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
+        <text x="500" y="210" text-anchor="middle" font-size="13" font-weight="700" fill="#e65100">💼 근로소득 공제 확대</text>
+        <text x="500" y="242" text-anchor="middle" font-size="22" font-weight="900" fill="#e65100">116만원으로 ▲</text>
+        <text x="500" y="265" text-anchor="middle" font-size="12" fill="#bf360c">일해도 기초연금 지키기!</text>
+
+        <text x="340" y="302" text-anchor="middle" font-size="11" fill="#888">※ 소득인정액 = 소득평가액 + 재산의 소득환산액 | 출처: 보건복지부 2026년 기초연금 고시</text>
+      </svg>
+    </div>
+
+    <!-- 신청 방법 -->
+    <h2>신청 방법 — 이렇게 하면 됩니다</h2>
+    <ul class="step-list">
+      <li><div class="step-text"><strong>자격 확인:</strong> 만 65세 이상, 단독가구 월 소득인정액 247만원 이하 (부부가구 395만 2천원 이하) 확인</div></li>
+      <li><div class="step-text"><strong>신청 장소:</strong> 주소지 관할 읍·면·동 주민센터 방문 또는 복지로(www.bokjiro.go.kr) 온라인 신청</div></li>
+      <li><div class="step-text"><strong>준비 서류:</strong> 신분증, 통장 사본, 금융정보 제공 동의서 (현장에서 작성 가능)</div></li>
+      <li><div class="step-text"><strong>수급희망이력관리:</strong> 과거 탈락자는 이력 등록 시, 자격 발생 시점에 자동 재신청 처리 (재방문 불필요)</div></li>
+      <li><div class="step-text"><strong>지급:</strong> 매월 25일 지정 통장으로 지급 (신청일 기준 익월부터)</div></li>
+    </ul>
+
+    <!-- 시행 일정 박스 -->
+    <div class="deadline-box">
+      <h3>⏰ 핵심 일정 — 이 날짜를 기억하세요!</h3>
+      <ul>
+        <li>📌 2026년 1월 1일부터 새 기준 적용 (2025년 말 신청해도 2026년분부터 변경 기준 적용)</li>
+        <li>📌 만 65세 도래 1개월 전부터 사전 신청 가능</li>
+        <li>📌 신청 후 심사 기간 약 30일 — 빨리 신청할수록 빨리 받습니다</li>
+        <li>📌 수급이력관리 등록자 — 자격 생기면 담당자가 연락해 자동 재신청 진행</li>
+      </ul>
+    </div>
+
+    <!-- 자가진단 체크리스트 -->
+    <div class="checklist">
+      <h3>🔍 나도 받을 수 있을까? — 자가진단 체크리스트</h3>
+      <ul>
+        <li><span class="check-mark">✓</span> 만 65세 이상이다</li>
+        <li><span class="check-mark">✓</span> 단독가구 기준 월 소득인정액 247만원 이하다 (부부: 395만 2천원 이하)</li>
+        <li><span class="check-mark">✓</span> 대한민국 국적으로 국내 거주 중이다</li>
+        <li><span class="check-mark">✓</span> 공무원·군인·사학·별정우체국 연금 수급자가 아니다</li>
+        <li><span class="check-mark">✓</span> 이전에 탈락했지만 올해 기준 새로 확인해보지 않았다</li>
+      </ul>
+    </div>
+
+    <!-- 주의사항 -->
+    <div class="caution">
+      <h3>⚠️ 이것만은 꼭 주의하세요</h3>
+      <p>① 소득인정액은 단순 월급이 아닙니다. 근로소득·사업소득·재산(집·자동차 등)을 환산한 값이라 직접 계산하기 어렵습니다. 반드시 주민센터에서 확인을 받으세요.</p>
+      <p>② 공무원·군인·사립학교 교직원 연금 수급자(및 그 배우자)는 원칙적으로 수급 대상에서 제외됩니다.</p>
+      <p>③ 신청일 기준 익월부터 지급되므로, 조건이 되는 분은 하루라도 빨리 신청하는 것이 유리합니다.</p>
+      <p>④ 재산·소득 변동이 있으면 수급 중에도 금액이 바뀌거나 중지될 수 있으니 매년 갱신 사항을 확인하세요.</p>
+    </div>
+
+    <!-- 담당 기관 및 문의처 -->
+    <div class="contact-box">
+      <h3>📞 담당 기관 및 문의처</h3>
+      <div class="contact-item"><strong>신청 장소:</strong> 주소지 읍·면·동 주민센터</div>
+      <div class="contact-item"><strong>온라인 신청:</strong> 복지로 (www.bokjiro.go.kr) → 서비스 신청</div>
+      <div class="contact-item"><strong>국민연금공단 노인장기요양보험:</strong> ☎ 1355 (무료, 24시간)</div>
+      <div class="contact-item"><strong>보건복지부 복지로 콜센터:</strong> ☎ 129 (무료)</div>
+      <div class="contact-item"><strong>스마트폰 앱:</strong> 복지로 앱 → '기초연금 신청' 검색</div>
+    </div>
+
+    <!-- 전문가 찬반 론평 -->
+    <h2>💬 전문가 찬반 론평</h2>
+    <div class="opinion-section">
+      <div class="opinion-grid">
+        <div class="opinion-pro">
+          <h3>🟢 찬성</h3>
+          <div class="opinion-card">
+            <p class="quote">"선정기준액을 물가 상승률 이상으로 올린 것은 적절합니다. 고령화 사회에서 노인 빈곤율을 실질적으로 낮추려면 기준이 현실을 반영해야 합니다. 이번 개편으로 소득 경계선 근처에 있던 어르신들이 혜택을 받게 된 것은 긍정적입니다."</p>
+            <p class="author">— 노인복지정책 연구자</p>
+          </div>
+          <div class="opinion-card">
+            <p class="quote">"근로소득 공제 확대는 일하는 어르신에게 기초연금을 빼앗지 않겠다는 정책 철학을 보여줍니다. 최저임금 인상의 역설적 피해를 막는 실용적 조치입니다."</p>
+            <p class="author">— 고령사회 소득보장 전문가</p>
+          </div>
+        </div>
+        <div class="opinion-con">
+          <h3>🔴 반대 / 우려</h3>
+          <div class="opinion-card">
+            <p class="quote">"기초연금 지출이 이미 연간 27조원을 넘어섰습니다. 선정 기준을 계속 올리면 재정 부담이 기하급수적으로 늘어나는데, 지속가능성에 대한 면밀한 검토 없이 인상이 반복되는 것은 우려스럽습니다."</p>
+            <p class="author">— 재정경제 연구자</p>
+          </div>
+          <div class="opinion-card">
+            <p class="quote">"기초연금 인상 혜택이 소득 하위 70%에 집중되다 보니, 정작 가장 빈곤한 1분위 어르신의 생계급여와 중복 조정 문제가 여전히 해소되지 않고 있습니다. 취약층 집중 지원으로 체계를 개편할 필요가 있습니다."</p>
+            <p class="author">— 사회복지학 연구자</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 해시태그 -->
+    <div class="hashtags">
+      <a href="#">#기초연금</a>
+      <a href="#">#2026기초연금</a>
+      <a href="#">#노인복지</a>
+      <a href="#">#기초연금인상</a>
+      <a href="#">#선정기준액</a>
+      <a href="#">#65세지원금</a>
+      <a href="#">#복지신청</a>
+      <a href="#">#노후준비</a>
+      <a href="#">#수급희망이력관리</a>
+      <a href="#">#복지헬퍼</a>
+    </div>
+
+    <!-- 면책조항 -->
+    <div class="disclaimer">
+      ※ 이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부 및 수급액은 개인별 소득인정액 산정 결과에 따라 다를 수 있으므로, 반드시 담당 기관(주민센터, 국민연금공단)에 확인하세요.
+    </div>
+
+    <!-- 작성일 메타 -->
+    <div class="meta">작성일: 2026년 7월 24일 | 복지헬퍼 뉴스팀</div>
+  </div>
+</div>
+</body>
+</html>
