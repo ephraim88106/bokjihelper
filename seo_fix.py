@@ -25,6 +25,8 @@ SITE_NAME   = "WelfareFinder"
 SITE_DESC   = "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스"
 GA_ID       = "G-KJ560D6VGG"          # 없으면 None
 OG_IMAGE    = SITE + "/assets/og-default.png"
+# 네이버 서치어드바이저 HTML 태그 방식 content 값 (웹마스터도구에서 발급)
+NAVER_VERIFY = ""
 DEAD_DOMAINS = []          # canonical 이 잘못 가리키던 죽은 도메인들
 ARTICLE_RE  = re.compile(r"^\d{4}-\d{2}-\d{2}")   # 글로 취급할 파일명 패턴
 # ────────────────────────────────────────────────────────────────────
@@ -121,6 +123,9 @@ def build_block(rel, src):
     title, desc, url = get_title(src), get_description(src), clean_url(rel)
     h = head_of(src)
     parts = [BEGIN]
+
+    if NAVER_VERIFY and rel == "index.html":
+        parts.append('<meta name="naver-site-verification" content="%s">' % NAVER_VERIFY)
 
     if not re.search(r'<meta\s+name=["\']description["\']', h, flags=re.I):
         parts.append('<meta name="description" content="%s">' % esc(desc))
