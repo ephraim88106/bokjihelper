@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"장애 있다고 집에만 계셨나요?" 나라가 3만 5천 개 일자리 만들었습니다 — 월 최대 57만원·시각장애인 안마사·발달장애인 보조까지, 지금 안 알면 내년에도 또 기회 놓칩니다! | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: #f4f7fb; color: #222; line-height: 1.8; }
+  .container { max-width: 720px; margin: 0 auto; padding: 20px 16px 60px; }
+
+  /* 헤더 */
+  .top-header { background: #1565c0; color: #fff; padding: 12px 18px; border-radius: 10px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
+  .top-header .date-tag { font-weight: 700; letter-spacing: 1px; }
+  .top-header .series { opacity: 0.85; }
+
+  /* 배지 */
+  .badge { display: inline-block; background: #e3f2fd; color: #1565c0; border: 1.5px solid #1565c0; border-radius: 20px; padding: 4px 14px; font-size: 12px; font-weight: 700; margin-bottom: 12px; }
+
+  /* 제목 */
+  h1 { font-size: 26px; font-weight: 900; line-height: 1.4; color: #0d47a1; margin-bottom: 18px; word-break: keep-all; }
+
+  /* 훅 */
+  .hook { border-left: 5px solid #1565c0; background: #e3f2fd; padding: 16px 18px; border-radius: 0 10px 10px 0; margin-bottom: 22px; font-size: 16px; color: #333; }
+  .hook .highlight { background: #bbdefb; padding: 2px 6px; border-radius: 4px; font-weight: 700; color: #0d47a1; }
+
+  /* 핵심 요약 박스 */
+  .summary-box { background: #2e7d32; color: #fff; border-radius: 12px; padding: 20px 22px; margin-bottom: 24px; }
+  .summary-box h2 { font-size: 16px; font-weight: 900; margin-bottom: 12px; letter-spacing: 0.5px; }
+  .summary-box ul { list-style: none; padding: 0; }
+  .summary-box ul li { padding: 5px 0; font-size: 15px; line-height: 1.6; }
+  .summary-box ul li::before { content: "✅ "; }
+
+  /* 섹션 제목 */
+  h2 { font-size: 19px; font-weight: 900; color: #0d47a1; margin: 28px 0 12px; padding-bottom: 6px; border-bottom: 2px solid #90caf9; }
+  h3 { font-size: 16px; font-weight: 800; color: #1565c0; margin: 16px 0 8px; }
+
+  /* 본문 */
+  p { font-size: 15px; color: #333; margin-bottom: 14px; word-break: keep-all; }
+
+  /* 표 */
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+  th { background: #1565c0; color: #fff; padding: 10px 12px; text-align: left; font-weight: 700; }
+  td { padding: 10px 12px; border-bottom: 1px solid #ddd; vertical-align: top; }
+  tr:nth-child(even) td { background: #e3f2fd; }
+  td strong { color: #0d47a1; }
+
+  /* 신청 단계 */
+  .step-list { list-style: none; padding: 0; counter-reset: step-counter; margin: 12px 0; }
+  .step-list li { counter-increment: step-counter; padding: 12px 14px 12px 58px; background: #fff; border-radius: 10px; margin-bottom: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); position: relative; font-size: 15px; }
+  .step-list li::before { content: counter(step-counter); position: absolute; left: 14px; top: 50%; transform: translateY(-50%); background: #1565c0; color: #fff; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 15px; }
+
+  /* 데드라인 박스 */
+  .deadline-box { border: 2.5px dashed #f57c00; border-radius: 12px; padding: 18px 20px; margin: 22px 0; background: #fff8e1; }
+  .deadline-box .dl-title { color: #e65100; font-weight: 900; font-size: 17px; margin-bottom: 10px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 5px 0; }
+
+  /* 체크리스트 */
+  .checklist { background: #fff; border: 1.5px solid #90caf9; border-radius: 12px; padding: 18px 20px; margin: 18px 0; }
+  .checklist h3 { color: #0d47a1; margin-top: 0; font-size: 16px; }
+  .checklist ul { list-style: none; padding: 0; }
+  .checklist ul li { padding: 7px 0; font-size: 14px; border-bottom: 1px solid #f0f0f0; }
+  .checklist ul li:last-child { border-bottom: none; }
+  .checklist ul li::before { content: "✓ "; color: #1565c0; font-weight: 900; }
+
+  /* 주의사항 */
+  .caution { background: #fff3e0; border-left: 4px solid #f57c00; border-radius: 0 10px 10px 0; padding: 16px 18px; margin: 18px 0; }
+  .caution p { font-size: 14px; color: #555; margin-bottom: 6px; }
+  .caution p:last-child { margin-bottom: 0; }
+
+  /* 문의처 */
+  .contact-box { background: #e3f2fd; border-radius: 12px; padding: 18px 20px; margin: 22px 0; }
+  .contact-box h3 { color: #0d47a1; font-size: 16px; margin-bottom: 10px; }
+  .contact-box p { font-size: 14px; color: #333; margin-bottom: 6px; }
+  .contact-box p:last-child { margin-bottom: 0; }
+  .contact-box strong { color: #1565c0; }
+
+  /* 찬반 론평 */
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  /* 해시태그 */
+  .hashtags { margin: 24px 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .hashtags span { background: #e3f2fd; color: #1565c0; border-radius: 20px; padding: 5px 13px; font-size: 13px; font-weight: 600; border: 1px solid #90caf9; }
+
+  /* 면책 */
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12px; color: #888; margin-top: 30px; }
+
+  /* 작성일 */
+  .meta { text-align: right; font-size: 12px; color: #aaa; margin-top: 12px; }
+
+  /* 강조 수치 카드 */
+  .stat-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 16px 0; }
+  .stat-card { background: #1565c0; color: #fff; border-radius: 10px; padding: 16px 12px; text-align: center; }
+  .stat-card .num { font-size: 24px; font-weight: 900; display: block; }
+  .stat-card .label { font-size: 12px; opacity: 0.85; margin-top: 4px; display: block; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 21px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    table { font-size: 13px; }
+    .top-header { flex-direction: column; gap: 4px; text-align: center; }
+    .stat-cards { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 상단 헤더 -->
+  <div class="top-header">
+    <span class="date-tag">📅 2026년 7월 25일</span>
+    <span class="series">오늘의 복지 뉴스 · 제2보</span>
+  </div>
+
+  <!-- 배지 -->
+  <div class="badge">♿ 장애인 일자리</div>
+
+  <!-- 메인 제목 -->
+  <h1>"장애 있다고 집에만 계셨나요?" 나라가 3만 5천 개 일자리 만들었습니다 — 월 최대 57만원·시각장애인 안마사·발달장애인 보조까지, 지금 안 알면 내년에도 또 기회 놓칩니다!</h1>
+
+  <!-- 훅 -->
+  <div class="hook">
+    장애가 있다는 이유만으로 일할 기회조차 차단된 현실. 2026년, 정부가 이 벽을 조금 더 허물었습니다. 전년보다 <span class="highlight">2,300명 늘어난 3만 5,846명</span>을 장애인일자리 사업으로 뽑습니다. 공공기관에서 일하고 월급 받는 공식 일자리, <span class="highlight">당신이 대상자인지 지금 확인해야 합니다.</span>
+  </div>
+
+  <!-- 핵심 요약 박스 -->
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>2026년 장애인일자리 <strong>3만 5,846명</strong> — 작년보다 2,300명 대폭 확대</li>
+      <li>복지형(심한 장애인 우선) 月 <strong>577,920원</strong>, 일반형은 최저임금 적용</li>
+      <li>18세 이상 미취업 장애인이면 누구나 신청 가능, 거주지 시·군·구청 문의</li>
+    </ul>
+  </div>
+
+  <!-- 수치 카드 -->
+  <div class="stat-cards">
+    <div class="stat-card">
+      <span class="num">3만 5,846명</span>
+      <span class="label">2026년 전체 모집</span>
+    </div>
+    <div class="stat-card">
+      <span class="num">+2,300명</span>
+      <span class="label">전년 대비 증가</span>
+    </div>
+    <div class="stat-card">
+      <span class="num">577,920원</span>
+      <span class="label">복지형 월 보수</span>
+    </div>
+  </div>
+
+  <!-- 배경/문제 -->
+  <h2>🔍 왜 이 사업이 중요한가</h2>
+  <p>우리나라 장애인 경제활동참가율은 비장애인의 절반 수준에 불과합니다. 취업 의지가 있어도 접근할 수 있는 일자리 자체가 적고, 적합한 직무를 찾기도 쉽지 않습니다.</p>
+  <p>정부의 장애인일자리 사업은 공공기관과 복지시설에서 실질적으로 일할 수 있는 일자리를 직접 만들어 제공합니다. 단순 보조금이 아니라 <strong>실제로 출근해서 일하고 급여를 받는 공식 일자리</strong>입니다. 2026년에는 특히 <strong>심한 장애인</strong>을 위한 복지형 일자리가 1,600개나 늘었습니다.</p>
+
+  <!-- 상세 정보 표 -->
+  <h2>📋 일자리 유형별 상세 안내</h2>
+  <table>
+    <tr>
+      <th>유형</th>
+      <th>주요 직무</th>
+      <th>근무 조건</th>
+      <th>월 급여</th>
+    </tr>
+    <tr>
+      <td><strong>일반형 (전일제)</strong></td>
+      <td>공공기관 행정보조, 복지 업무 지원</td>
+      <td>주 40시간 (전일 근무)</td>
+      <td>최저임금 적용<br>(2026년 기준)</td>
+    </tr>
+    <tr>
+      <td><strong>일반형 (시간제)</strong></td>
+      <td>공공기관 행정보조, 민원 안내 등</td>
+      <td>주 20시간</td>
+      <td>시간당 최저임금</td>
+    </tr>
+    <tr>
+      <td><strong>복지형 (참여형)</strong></td>
+      <td>환경도우미, 주차단속 보조, 공공시설 도우미</td>
+      <td>주 14시간 이내<br>월 56시간</td>
+      <td><strong>월 577,920원</strong><br>(고용·산재보험 포함)</td>
+    </tr>
+    <tr>
+      <td><strong>특화형 (시각장애인)</strong></td>
+      <td>시각장애인 안마사 기관·기업 파견</td>
+      <td>기관별 상이</td>
+      <td>별도 급여 기준</td>
+    </tr>
+    <tr>
+      <td><strong>특화형 (발달장애인)</strong></td>
+      <td>요양보호사 보조 업무</td>
+      <td>기관별 상이</td>
+      <td>별도 급여 기준</td>
+    </tr>
+  </table>
+  <p style="font-size:13px;color:#777;">※ 고용·산재보험 필수 가입 (참여 중 사고도 보험 보장)</p>
+
+  <!-- SVG 인포그래픽 -->
+  <h2>📊 2026 장애인 일자리 확대 현황</h2>
+  <svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:12px;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+    <rect width="680" height="320" fill="#f8fbff" rx="12"/>
+    <text x="340" y="34" font-size="14" font-weight="bold" fill="#0d47a1" text-anchor="middle">2026년 장애인일자리 유형별 확대 현황</text>
+
+    <!-- 범례 레이블 -->
+    <text x="60" y="68" font-size="12" fill="#555">일반형</text>
+    <text x="60" y="130" font-size="12" fill="#555">복지형</text>
+    <text x="60" y="192" font-size="12" fill="#555">특화형</text>
+    <text x="60" y="254" font-size="12" fill="#555">합 계</text>
+
+    <!-- 2025년 바 -->
+    <rect x="120" y="50" width="156" height="26" fill="#90caf9" rx="4"/>
+    <text x="282" y="68" font-size="11" fill="#1565c0" font-weight="bold">  기존</text>
+
+    <!-- 2026년 바 (일반형 +650) -->
+    <rect x="120" y="83" width="182" height="26" fill="#1565c0" rx="4"/>
+    <text x="308" y="101" font-size="11" fill="#1565c0" font-weight="bold">  +650개</text>
+
+    <!-- 2025 복지형 -->
+    <rect x="120" y="112" width="220" height="26" fill="#90caf9" rx="4"/>
+    <!-- 2026 복지형 -->
+    <rect x="120" y="145" width="284" height="26" fill="#1565c0" rx="4"/>
+    <text x="410" y="163" font-size="11" fill="#c62828" font-weight="900">  +1,600개 (심한 장애 우선)</text>
+
+    <!-- 2025 특화형 -->
+    <rect x="120" y="174" width="88" height="26" fill="#90caf9" rx="4"/>
+    <!-- 2026 특화형 -->
+    <rect x="120" y="207" width="108" height="26" fill="#1565c0" rx="4"/>
+    <text x="234" y="225" font-size="11" fill="#1565c0" font-weight="bold">  +50개</text>
+
+    <!-- 합계 화살표 -->
+    <rect x="120" y="236" width="336" height="28" fill="#e3f2fd" rx="4" stroke="#1565c0" stroke-width="1.5"/>
+    <text x="288" y="255" font-size="12" fill="#0d47a1" text-anchor="middle" font-weight="900">3만 5,846명 (전년 +2,300명)</text>
+
+    <!-- 범례 박스 -->
+    <rect x="440" y="60" width="14" height="14" fill="#90caf9" rx="2"/>
+    <text x="460" y="72" font-size="11" fill="#555">2025년</text>
+    <rect x="440" y="82" width="14" height="14" fill="#1565c0" rx="2"/>
+    <text x="460" y="94" font-size="11" fill="#555">2026년 (확대)</text>
+
+    <!-- 하단 설명 -->
+    <text x="340" y="300" font-size="11" fill="#888" text-anchor="middle">* 복지형 증가분 1,600개는 심한 장애인 우선 배정</text>
+  </svg>
+
+  <!-- 신청 방법 -->
+  <h2>📝 신청 방법 — 4단계</h2>
+  <ol class="step-list">
+    <li><strong>거주지 시·군·구청 장애인복지과 문의</strong> — 내가 신청할 수 있는 유형과 지역 내 모집 일정 확인</li>
+    <li><strong>참여 신청서 작성 및 제출</strong> — 장애인등록증, 신분증, 건강보험료 납부 확인서 등 서류 준비</li>
+    <li><strong>선발 심사</strong> — 소득 수준, 장애 정도, 과거 참여 이력 등 기준에 따라 우선순위 선발</li>
+    <li><strong>사업수행기관 배치 후 근무 시작</strong> — 배치된 기관에서 근무 후 매월 급여 수령</li>
+  </ol>
+
+  <!-- 시행 일정 박스 -->
+  <div class="deadline-box">
+    <div class="dl-title">⏰ 모집 일정 — 놓치면 내년까지 기다려야 합니다!</div>
+    <p>▶ <strong>모집 공고:</strong> 지자체별 11~12월 중 (거주지 시·군·구청 홈페이지 공고)</p>
+    <p>▶ <strong>근무 기간:</strong> 2026년 1월 1일 ~ 12월 31일 (1년 계약)</p>
+    <p>▶ 이미 2026년 1월 시작된 사업이지만, 결원 발생 시 연중 추가 모집 가능</p>
+    <p>▶ 2027년 참여를 위해서는 <strong>올해 11월부터 미리 준비</strong>하세요!</p>
+  </div>
+
+  <!-- 자가 진단 체크리스트 -->
+  <div class="checklist">
+    <h3>✅ 내가 신청 가능한지 확인하세요</h3>
+    <ul>
+      <li>만 18세 이상의 등록 장애인이다</li>
+      <li>현재 미취업 상태이거나 취업 연계가 필요하다</li>
+      <li>복지형은 '심한 장애인(종전 1~3급)' 해당자가 우선 선발됨을 알고 있다</li>
+      <li>시각장애가 있으면 특화형(안마사 파견) 유형이 별도로 존재함을 몰랐다</li>
+      <li>발달장애인이라면 요양보호사 보조 특화형 유형을 아직 알아보지 않았다</li>
+    </ul>
+    <p style="margin-top:10px;font-size:13px;color:#1565c0;font-weight:700;">2개 이상 해당 → 지금 바로 거주지 구청 장애인복지과에 전화하세요!</p>
+  </div>
+
+  <!-- 주의사항 -->
+  <h2>⚠️ 주의사항</h2>
+  <div class="caution">
+    <p>① 사업 유형·정원·급여는 지자체별로 다르므로 거주지 시·군·구청에서 반드시 확인하세요.</p>
+    <p>② 복지형 월 577,920원은 주 56시간 기준이며, 근무 시간에 따라 달라집니다.</p>
+    <p>③ 동일 유형 장기 참여자는 우선순위에서 불이익을 받을 수 있습니다(형평성 원칙).</p>
+    <p>④ 참여 중 국민기초생활보장 수급자는 근로소득 공제 후 급여가 반영되므로 담당자에게 확인하세요.</p>
+  </div>
+
+  <!-- 문의처 -->
+  <div class="contact-box">
+    <h3>📞 담당 기관 및 문의처</h3>
+    <p>▶ <strong>보건복지부 장애인권익지원과</strong> ☎ 044-202-3302</p>
+    <p>▶ <strong>한국장애인개발원</strong> ☎ 02-3433-0600 (www.koddi.or.kr)</p>
+    <p>▶ <strong>거주지 시·군·구청 장애인복지과</strong> — 지역별 모집 공고 및 신청 접수</p>
+    <p>▶ <strong>복지로</strong> www.bokjiro.go.kr → '장애인일자리' 검색</p>
+    <p style="margin-top:10px;font-size:13px;color:#555;">💡 구청 문의 시 "2026년 장애인일자리사업 신청 또는 연중 결원 모집" 이라고 말씀하세요</p>
+  </div>
+
+  <!-- 전문가 찬반 론평 -->
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"복지형 일자리 1,600개를 심한 장애인에게 우선 배정한 것은 사회적 취약성에 대한 정교한 정책 설계입니다. 중증 장애인의 사회참여를 확대한다는 목표에 부합합니다."</p>
+          <p class="author">— 장애인 고용 정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"발달장애인 요양보호사 보조 직무와 같은 특화형 일자리는 장애 특성에 맞는 맞춤형 고용을 실현하는 좋은 모델입니다. 이러한 직무 발굴이 지속될 필요가 있습니다."</p>
+          <p class="author">— 발달장애인 지원 현장 활동가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"복지형 월 577,920원은 최저생계 수준에도 미치지 못합니다. 공공 일자리가 장애인을 저임금 노동에 고착시키는 역할을 할 수 있다는 비판을 真摯히 받아들여야 합니다."</p>
+          <p class="author">— 노동권익 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"장애인일자리가 공공기관 단기 공급형에 그치는 한계를 벗어나지 못하고 있습니다. 민간 기업의 장애인 고용 의무를 실질적으로 이행시키는 구조 개편이 병행돼야 합니다."</p>
+          <p class="author">— 사회복지학 전공 연구자</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span>#장애인일자리</span>
+    <span>#복지형일자리</span>
+    <span>#장애인고용</span>
+    <span>#중증장애인</span>
+    <span>#시각장애인안마사</span>
+    <span>#발달장애인</span>
+    <span>#장애인복지</span>
+    <span>#보건복지부</span>
+    <span>#2026복지정책</span>
+    <span>#장애인지원</span>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    ※ 이 기사는 공개된 정보를 바탕으로 작성되었습니다. 유형별 급여·정원·신청 일정 등 세부 사항은 거주지 시·군·구청 또는 한국장애인개발원에서 직접 확인하세요. 지자체별로 모집 시기와 조건이 다를 수 있습니다.
+  </div>
+
+  <!-- 작성일 -->
+  <div class="meta">작성일: 2026년 7월 25일 | 복지뉴스 편집팀</div>
+
+</div>
+</body>
+</html>
