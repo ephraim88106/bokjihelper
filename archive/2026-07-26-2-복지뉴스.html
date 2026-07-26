@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>자살위기 전부처 총력 대응 2026 — 109 전화 한 통으로 병원·경찰·복지관 동시 연결!</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans KR', '맑은 고딕', sans-serif; background: #f3eef8; color: #222; line-height: 1.75; }
+  .container { max-width: 760px; margin: 0 auto; padding: 20px 16px 60px; }
+
+  /* 상단 헤더 */
+  .top-header { background: #6a1b9a; color: #fff; border-radius: 12px 12px 0 0; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  .top-header .date-tag { font-size: 13px; background: rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px; }
+  .top-header .series { font-size: 13px; font-weight: 700; letter-spacing: 0.5px; }
+
+  /* 본문 카드 */
+  .card { background: #fff; border-radius: 0 0 12px 12px; padding: 28px 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+
+  /* 섹션 배지 */
+  .badge { display: inline-block; background: #6a1b9a; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 14px; border-radius: 20px; margin-bottom: 14px; letter-spacing: 0.5px; }
+
+  /* 메인 제목 */
+  .main-title { font-size: 26px; font-weight: 900; line-height: 1.4; color: #4a148c; margin-bottom: 22px; word-break: keep-all; }
+
+  /* 훅 */
+  .hook { border-left: 5px solid #6a1b9a; background: #f3e5f5; padding: 16px 18px; border-radius: 0 10px 10px 0; margin-bottom: 22px; font-size: 15px; line-height: 1.8; }
+  .hook .highlight { background: #ffd600; padding: 1px 6px; border-radius: 3px; font-weight: 800; }
+
+  /* 핵심 요약 박스 */
+  .summary-box { background: #2e7d32; color: #fff; border-radius: 12px; padding: 20px 22px; margin-bottom: 26px; }
+  .summary-box h3 { font-size: 15px; font-weight: 900; margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+  .summary-box ul { list-style: none; padding: 0; }
+  .summary-box ul li { padding: 5px 0; font-size: 15px; border-bottom: 1px solid rgba(255,255,255,0.15); }
+  .summary-box ul li:last-child { border-bottom: none; }
+  .summary-box ul li::before { content: "✅ "; }
+
+  /* 섹션 제목 */
+  h2 { font-size: 18px; font-weight: 800; color: #4a148c; margin: 28px 0 12px; border-bottom: 2px solid #6a1b9a; padding-bottom: 6px; }
+
+  /* 본문 */
+  p { font-size: 15px; margin-bottom: 14px; line-height: 1.8; word-break: keep-all; }
+
+  /* 표 */
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+  th { background: #6a1b9a; color: #fff; padding: 10px 12px; text-align: left; font-weight: 700; }
+  td { padding: 9px 12px; border-bottom: 1px solid #e8d5f5; vertical-align: top; }
+  tr:nth-child(even) td { background: #f9f2ff; }
+
+  /* SVG 인포그래픽 */
+  .svg-wrap { background: #f3e5f5; border-radius: 12px; padding: 20px 16px; margin: 20px 0; overflow-x: auto; }
+  .svg-wrap svg { display: block; margin: 0 auto; }
+
+  /* 신청 단계 */
+  .steps { margin: 14px 0; }
+  .step-item { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 12px; }
+  .step-num { min-width: 34px; height: 34px; background: #6a1b9a; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 15px; }
+  .step-text { font-size: 15px; padding-top: 5px; line-height: 1.7; }
+
+  /* 시행 일정 박스 */
+  .deadline-box { border: 2px dashed #f57c00; background: #fff8f0; border-radius: 10px; padding: 16px 20px; margin: 22px 0; }
+  .deadline-box h3 { color: #e65100; font-size: 16px; margin-bottom: 10px; }
+  .deadline-box ul { list-style: none; padding: 0; }
+  .deadline-box ul li { font-size: 14px; padding: 4px 0; }
+  .deadline-box ul li::before { content: "📅 "; }
+
+  /* 자가 진단 체크리스트 */
+  .checklist { background: #e8f5e9; border-radius: 10px; padding: 18px 20px; margin: 20px 0; }
+  .checklist h3 { color: #1b5e20; font-size: 16px; margin-bottom: 12px; }
+  .checklist ul { list-style: none; padding: 0; }
+  .checklist ul li { font-size: 14px; padding: 6px 0; border-bottom: 1px solid rgba(0,100,0,0.1); }
+  .checklist ul li:last-child { border-bottom: none; }
+  .checklist ul li::before { content: "✓ "; font-weight: 900; color: #2e7d32; }
+
+  /* 주의사항 */
+  .caution { background: #fff3e0; border-left: 4px solid #e65100; border-radius: 0 10px 10px 0; padding: 16px 18px; margin: 20px 0; }
+  .caution h3 { color: #bf360c; margin-bottom: 10px; font-size: 16px; }
+  .caution ol { padding-left: 18px; }
+  .caution ol li { font-size: 14px; padding: 4px 0; line-height: 1.7; }
+
+  /* 담당 기관 박스 */
+  .contact-box { background: #f3e5f5; border-radius: 12px; padding: 20px 22px; margin: 22px 0; }
+  .contact-box h3 { color: #4a148c; font-size: 16px; margin-bottom: 12px; }
+  .contact-box p { font-size: 14px; margin-bottom: 6px; }
+  .contact-box a { color: #6a1b9a; font-weight: 700; }
+
+  /* 긴급 전화 강조 박스 */
+  .emergency-box { background: #4a148c; color: #fff; border-radius: 12px; padding: 22px 24px; margin: 22px 0; text-align: center; }
+  .emergency-box .num { font-size: 52px; font-weight: 900; letter-spacing: 4px; color: #ffd600; line-height: 1.2; }
+  .emergency-box .label { font-size: 16px; margin-top: 6px; opacity: 0.9; }
+
+  /* 찬반 론평 */
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  /* 해시태그 */
+  .hashtags { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0; }
+  .hashtag { background: #f3e5f5; color: #6a1b9a; padding: 5px 12px; border-radius: 20px; font-size: 13px; font-weight: 700; }
+
+  /* 면책조항 */
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12px; color: #888; margin-top: 24px; }
+
+  /* 작성일 */
+  .meta { text-align: right; font-size: 12px; color: #aaa; margin-top: 12px; }
+
+  /* 모바일 */
+  @media (max-width: 600px) {
+    .main-title { font-size: 21px; }
+    .card { padding: 20px 16px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    th, td { font-size: 12px; padding: 7px 8px; }
+    .emergency-box .num { font-size: 40px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="top-header">
+    <span class="date-tag">📅 2026년 7월 26일</span>
+    <span class="series">오늘의 복지 뉴스 · 제2보</span>
+  </div>
+  <div class="card">
+    <span class="badge">🧠 정신건강·자살예방</span>
+
+    <h1 class="main-title">"혼자 버티지 마세요" — 정부가 처음으로 <span style="color:#6a1b9a;">18개 부처</span>를 한꺼번에 동원했습니다! 자살위기 선제 대응 총력전 선언, <span style="color:#e53935;">109</span> 한 통으로 병원·경찰·복지관 동시 연결!</h1>
+
+    <div class="hook">
+      지금 이 순간에도 누군가는 아무에게도 말 못하고 홀로 버티고 있습니다. 정부가 처음으로 복지부·교육부·경찰청·여성가족부 등 <span class="highlight">18개 부처와 전국 지자체를 동시에 움직이는 '자살위기 선제 대응 체계'</span>를 가동했습니다. 위기 징후를 미리 포착하고, 전화 한 통으로 의료·복지·법집행이 즉시 연결되는 이 체계 — 아는 것만으로도 내 가족을 살릴 수 있습니다.
+    </div>
+
+    <div class="summary-box">
+      <h3>📌 이것만 알면 됩니다</h3>
+      <ul>
+        <li>자살위기 상담 통합번호 <strong>109</strong> — 24시간 365일 운영, 문자·채팅도 가능</li>
+        <li>전국 정신건강복지센터 <strong>260개소</strong>가 위기 징후 발굴·연계 역할 수행</li>
+        <li>취약계층(독거노인·기초수급자·실직자·청소년) 대상 <strong>선제적 위기 발굴</strong>로 패러다임 전환</li>
+      </ul>
+    </div>
+
+    <h2>🔍 왜 지금인가 — 배경과 통계</h2>
+    <p>OECD 국가 중 자살률 최상위권이라는 불명예를 대한민국은 20년 가까이 안고 있습니다. 2023년 자살 사망자는 1만 3,900여 명, 하루 평균 38명. 이는 교통사고 사망자의 약 3배에 달합니다. 특히 코로나 이후 경제난·고립·정신건강 위기가 겹치며 40~60대 중년 남성과 20~30대 청년층의 자살률이 동반 상승하는 위험 신호가 뚜렷해졌습니다.</p>
+    <p>그동안의 대응 방식은 '사후 개입'이 중심이었습니다. 이미 위기에 빠진 사람이 스스로 전화를 걸어야만 도움을 받을 수 있었습니다. 정부는 이 구조를 바꾸겠다고 선언했습니다. 핵심은 <strong>'위험 신호를 먼저 발견하고 먼저 찾아가는' 선제적 대응</strong>입니다.</p>
+
+    <h2>📊 2026년 자살예방 정책 주요 내용</h2>
+    <table>
+      <tr>
+        <th>추진 과제</th>
+        <th>내용</th>
+        <th>담당 부처</th>
+      </tr>
+      <tr>
+        <td><strong>고위험군 집중 관리</strong></td>
+        <td>자살시도 이력자·정신건강 위기자에 대한 24시간 사례 관리 강화</td>
+        <td>보건복지부</td>
+      </tr>
+      <tr>
+        <td><strong>위기 징후 선제 발굴</strong></td>
+        <td>공과금 장기 미납, 독거노인 안부 미확인 등 빅데이터 활용 위기가구 파악</td>
+        <td>복지부·행안부 협업</td>
+      </tr>
+      <tr>
+        <td><strong>취약계층 연계 체계</strong></td>
+        <td>기초수급자·실직자·퇴원 정신질환자 등 취약군 지원기관 간 정보 공유</td>
+        <td>복지부·고용부</td>
+      </tr>
+      <tr>
+        <td><strong>지자체 현장 체계</strong></td>
+        <td>228개 지자체 자살예방 전담인력 배치, 보건소 정신건강팀 인력 확충</td>
+        <td>행안부·지자체</td>
+      </tr>
+      <tr>
+        <td><strong>109 상담 강화</strong></td>
+        <td>상담인력 140명 운영, 문자·채팅 채널 추가, 112·119와 실시간 연계</td>
+        <td>복지부</td>
+      </tr>
+      <tr>
+        <td><strong>미디어 가이드라인</strong></td>
+        <td>자살 보도 기준 강화, SNS 플랫폼 위험 콘텐츠 자동 감지 협력</td>
+        <td>방통위·언론계</td>
+      </tr>
+    </table>
+
+    <div class="emergency-box">
+      <div class="num">📞 109</div>
+      <div class="label">자살예방 상담전화 (구 1393 포함 통합) · 24시간 365일 무료</div>
+      <div style="margin-top:10px; font-size:13px; opacity:0.85;">전화가 어렵다면 문자(109) · 카카오톡 '마음이음' 채팅 상담도 가능합니다</div>
+    </div>
+
+    <h2>📈 인포그래픽 — 선제적 대응 시스템 흐름도</h2>
+    <div class="svg-wrap">
+      <svg viewBox="0 0 680 340" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:680px;">
+        <rect width="680" height="340" fill="#f3e5f5" rx="10"/>
+        <text x="340" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#4a148c">2026년 자살위기 선제 대응 체계 흐름도</text>
+
+        <!-- 위기 신호 탐지 -->
+        <rect x="30" y="50" width="150" height="60" rx="10" fill="#7b1fa2" />
+        <text x="105" y="77" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold">위기 신호 탐지</text>
+        <text x="105" y="96" text-anchor="middle" font-size="11" fill="#e1bee7">빅데이터·현장 발굴</text>
+
+        <line x1="180" y1="80" x2="220" y2="80" stroke="#7b1fa2" stroke-width="2" marker-end="url(#arrow)"/>
+
+        <!-- 정신건강복지센터 -->
+        <rect x="220" y="50" width="150" height="60" rx="10" fill="#6a1b9a"/>
+        <text x="295" y="77" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold">정신건강복지센터</text>
+        <text x="295" y="96" text-anchor="middle" font-size="11" fill="#e1bee7">260개소·사례 배정</text>
+
+        <line x1="370" y1="80" x2="410" y2="80" stroke="#7b1fa2" stroke-width="2" marker-end="url(#arrow2)"/>
+
+        <!-- 109 통합 상담 -->
+        <rect x="410" y="50" width="150" height="60" rx="10" fill="#4a148c"/>
+        <text x="485" y="77" text-anchor="middle" font-size="13" fill="#ffd600" font-weight="bold">☎ 109 상담</text>
+        <text x="485" y="96" text-anchor="middle" font-size="11" fill="#e1bee7">24시간·140명 운영</text>
+
+        <!-- 화살표 마커 -->
+        <defs>
+          <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 z" fill="#7b1fa2"/>
+          </marker>
+          <marker id="arrow2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 z" fill="#7b1fa2"/>
+          </marker>
+        </defs>
+
+        <!-- 하단 연계 기관들 -->
+        <line x1="295" y1="110" x2="295" y2="150" stroke="#9c27b0" stroke-width="2"/>
+        <line x1="485" y1="110" x2="485" y2="150" stroke="#9c27b0" stroke-width="2"/>
+        <line x1="105" y1="110" x2="105" y2="150" stroke="#9c27b0" stroke-width="2"/>
+        <line x1="105" y1="150" x2="580" y2="150" stroke="#9c27b0" stroke-width="2"/>
+
+        <!-- 연계 기관 박스들 -->
+        <rect x="30" y="160" width="120" height="55" rx="8" fill="#fff" stroke="#9c27b0" stroke-width="2"/>
+        <text x="90" y="186" text-anchor="middle" font-size="12" fill="#4a148c" font-weight="bold">🚨 112 경찰</text>
+        <text x="90" y="204" text-anchor="middle" font-size="11" fill="#666">긴급 출동 연계</text>
+
+        <rect x="175" y="160" width="120" height="55" rx="8" fill="#fff" stroke="#9c27b0" stroke-width="2"/>
+        <text x="235" y="186" text-anchor="middle" font-size="12" fill="#4a148c" font-weight="bold">🏥 정신과 병원</text>
+        <text x="235" y="204" text-anchor="middle" font-size="11" fill="#666">응급 입원 연계</text>
+
+        <rect x="320" y="160" width="120" height="55" rx="8" fill="#fff" stroke="#9c27b0" stroke-width="2"/>
+        <text x="380" y="186" text-anchor="middle" font-size="12" fill="#4a148c" font-weight="bold">🏘️ 지역 복지관</text>
+        <text x="380" y="204" text-anchor="middle" font-size="11" fill="#666">사후 돌봄 지원</text>
+
+        <rect x="465" y="160" width="120" height="55" rx="8" fill="#fff" stroke="#9c27b0" stroke-width="2"/>
+        <text x="525" y="186" text-anchor="middle" font-size="12" fill="#4a148c" font-weight="bold">📋 고용·복지 연계</text>
+        <text x="525" y="204" text-anchor="middle" font-size="11" fill="#666">실직·채무 지원</text>
+
+        <!-- 화살표 -->
+        <line x1="90" y1="150" x2="90" y2="160" stroke="#9c27b0" stroke-width="2"/>
+        <line x1="235" y1="150" x2="235" y2="160" stroke="#9c27b0" stroke-width="2"/>
+        <line x1="380" y1="150" x2="380" y2="160" stroke="#9c27b0" stroke-width="2"/>
+        <line x1="525" y1="150" x2="525" y2="160" stroke="#9c27b0" stroke-width="2"/>
+
+        <!-- 하단 통합 -->
+        <line x1="90" y1="215" x2="90" y2="255" stroke="#9c27b0" stroke-width="1.5"/>
+        <line x1="235" y1="215" x2="235" y2="255" stroke="#9c27b0" stroke-width="1.5"/>
+        <line x1="380" y1="215" x2="380" y2="255" stroke="#9c27b0" stroke-width="1.5"/>
+        <line x1="525" y1="215" x2="525" y2="255" stroke="#9c27b0" stroke-width="1.5"/>
+        <line x1="90" y1="255" x2="525" y2="255" stroke="#9c27b0" stroke-width="1.5"/>
+        <line x1="307" y1="255" x2="307" y2="270" stroke="#9c27b0" stroke-width="2"/>
+
+        <rect x="180" y="270" width="255" height="50" rx="10" fill="#4a148c"/>
+        <text x="307" y="293" text-anchor="middle" font-size="13" fill="#ffd600" font-weight="bold">🌱 사후 지속 관리</text>
+        <text x="307" y="311" text-anchor="middle" font-size="11" fill="#e1bee7">정신건강복지센터 담당자 배정·6개월 추적 관리</text>
+      </svg>
+    </div>
+
+    <h2>📞 109 — 이렇게 달라졌습니다</h2>
+    <p>2024년 1월부터 분산됐던 자살예방 상담번호가 <strong>109</strong>로 통합됐습니다. 기존 1393, 정신건강 위기상담 전화 등 여러 번호를 외울 필요 없이 <strong>109</strong> 하나만 기억하면 됩니다. 2026년 현재 상담인력은 140명으로 확충됐으며(2024년 대비 40명 증원), 월 평균 2만 8천 건 이상의 상담이 이뤄지고 있습니다.</p>
+    <p>전화가 어렵다면 <strong>문자(109)</strong>나 <strong>카카오톡 채널 '마음이음'</strong>을 통한 채팅 상담도 가능합니다. 본인뿐 아니라 주변 지인이 걱정된다면 대신 연락해도 됩니다.</p>
+
+    <h2>📋 위기 신호 — 이런 증상이 보이면 즉시 연락하세요</h2>
+    <div class="steps">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-text"><strong>"죽고 싶다", "사라지고 싶다"는 말을 반복</strong> — 농담처럼 말해도 절대 그냥 넘기지 마세요. 구체적인 방법이나 날짜를 언급한다면 즉시 109에 전화하세요.</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-text"><strong>갑작스러운 평온함</strong> — 극도로 힘들었던 사람이 갑자기 차분해지는 것은 결심의 신호일 수 있습니다. 귀중품을 나눠주거나 지인에게 작별을 고하는 행동도 위험 신호입니다.</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-text"><strong>사회적 고립 심화</strong> — 연락을 끊고 집 밖으로 나오지 않으며 아무것도 의미 없다는 말을 자주 한다면 빠른 개입이 필요합니다.</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div class="step-text"><strong>나 자신이 위기라면</strong> — 109에 전화하거나, 가장 가까운 정신건강복지센터를 방문하세요. 찾아가기 어렵다면 109 전화로 '방문 상담 요청'을 하면 담당자가 직접 옵니다.</div>
+      </div>
+    </div>
+
+    <div class="deadline-box">
+      <h3>⏰ 2026년 정신건강 지원 주요 일정</h3>
+      <ul>
+        <li>2026년 1월 1일 — 전부처 자살위기 선제 대응 체계 본격 가동</li>
+        <li>2026년 상반기 — 전국 228개 지자체 자살예방 전담 인력 배치 완료 예정</li>
+        <li>2026년 하반기 — 빅데이터 기반 위기가구 자동 감지 시스템 전국 확대</li>
+        <li>연중 수시 — 정신건강복지센터 무료 상담 및 사례 관리 (예약 없이 방문 가능)</li>
+      </ul>
+    </div>
+
+    <div class="checklist">
+      <h3>🔍 나 또는 주변인이 위기인지 자가 진단 체크리스트</h3>
+      <ul>
+        <li>최근 2주 이상 심한 우울감, 무기력증이 지속되고 있다</li>
+        <li>"없어지고 싶다", "다 끝내고 싶다"는 생각이 든 적이 있다</li>
+        <li>잠을 거의 못 자거나 반대로 너무 많이 자고, 식욕이 없다</li>
+        <li>주변 사람과의 연락이 급격히 줄었거나 혼자 지내는 시간이 크게 늘었다</li>
+        <li>최근 실직, 이별, 사별, 채무 등 심각한 생활 위기 상황을 겪었다</li>
+      </ul>
+    </div>
+
+    <div class="caution">
+      <h3>⚠️ 주의사항</h3>
+      <ol>
+        <li>"그런 말 하지 마", "왜 그래?" 같은 반응보다 조용히 듣고 "많이 힘들었겠구나. 나 여기 있어."라고 공감하는 것이 위기 개입에 훨씬 효과적입니다.</li>
+        <li>자살에 대해 직접 물어보는 것("혹시 죽고 싶다는 생각이 드는 거야?")은 오히려 자살을 유발하지 않습니다. 솔직한 질문이 오히려 안도감을 줄 수 있습니다.</li>
+        <li>정신건강복지센터 상담은 무료이며, 정신질환자가 아니어도 누구나 이용할 수 있습니다. '정신과'라는 거부감 없이 복지관 상담이라고 생각하고 문을 두드리세요.</li>
+        <li>109 상담 내용은 의료 기록이나 수사 정보로 연결되지 않습니다. 단, 생명이 위독한 긴급 상황에서는 출동을 요청할 수 있습니다.</li>
+      </ol>
+    </div>
+
+    <div class="contact-box">
+      <h3>📞 담당 기관 및 문의처</h3>
+      <p>🔹 <strong>자살예방 통합 상담전화</strong> — ☎ <strong>109</strong> (24시간, 무료, 문자도 가능)</p>
+      <p>🔹 <strong>정신건강 위기상담 전화</strong> — ☎ <strong>1577-0199</strong> (24시간)</p>
+      <p>🔹 <strong>카카오톡 채팅 상담</strong> — 카카오톡 검색 "마음이음"</p>
+      <p>🔹 <strong>보건복지부 자살예방 정책</strong> — <a href="https://www.mohw.go.kr" target="_blank">www.mohw.go.kr</a></p>
+      <p>🔹 <strong>중앙자살예방센터</strong> — <a href="https://www.spckorea.or.kr" target="_blank">www.spckorea.or.kr</a></p>
+      <p>🔹 <strong>정신건강복지센터 위치 찾기</strong> — <a href="https://www.mentalhealth.go.kr" target="_blank">www.mentalhealth.go.kr</a></p>
+    </div>
+
+    <h2>💬 전문가 찬반 론평</h2>
+    <div class="opinion-section">
+      <div class="opinion-grid">
+        <div class="opinion-pro">
+          <h3>🟢 찬성</h3>
+          <div class="opinion-card">
+            <p class="quote">"기존 '위기자가 스스로 전화하는' 사후 모델에서 '국가가 먼저 찾아가는' 선제 모델로 전환한 것은 자살 예방 패러다임의 본질적 혁신입니다. 빅데이터를 활용한 위기가구 사전 발굴은 특히 스스로 도움을 요청하기 어려운 중년 남성층에게 효과적일 것입니다."</p>
+            <p class="author">— 자살예방정책 연구자</p>
+          </div>
+          <div class="opinion-card">
+            <p class="quote">"18개 부처가 협력하는 범정부 체계 구성은 그동안 복지부 단독으로 감당하기 어려웠던 고용·주거·부채 등 자살 위험 요인을 부처별로 동시에 해소할 수 있다는 점에서 의미가 큽니다."</p>
+            <p class="author">— 정신보건 사회복지학과 교수</p>
+          </div>
+        </div>
+        <div class="opinion-con">
+          <h3>🔴 반대 / 우려</h3>
+          <div class="opinion-card">
+            <p class="quote">"개인의 공과금 체납·통화 패턴 같은 생활 데이터를 위기 감지에 활용하는 것은 잠재적으로 개인정보 침해 소지가 있습니다. 선의의 복지 목적이라도 데이터 활용 범위와 보호 기준에 대한 명확한 법적 근거 마련이 선행되어야 합니다."</p>
+            <p class="author">— 시민사회 인권 활동가</p>
+          </div>
+          <div class="opinion-card">
+            <p class="quote">"상담사 140명이 월 2만 8천 건 이상의 전화를 응대하면 1인당 200건 이상입니다. 통계적으로는 운영 가능해 보이지만 야간·주말 집중 현상을 감안하면 상담 품질의 균일성이 우려됩니다. 인력 확충 속도가 수요 증가를 따라잡고 있는지 지속적인 모니터링이 필요합니다."</p>
+            <p class="author">— 정신건강 현장 활동가</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hashtags">
+      <span class="hashtag">#자살예방</span>
+      <span class="hashtag">#109상담</span>
+      <span class="hashtag">#정신건강</span>
+      <span class="hashtag">#위기상담</span>
+      <span class="hashtag">#정신건강복지센터</span>
+      <span class="hashtag">#범정부대응</span>
+      <span class="hashtag">#마음이음</span>
+      <span class="hashtag">#자살위기선제대응</span>
+      <span class="hashtag">#복지정책2026</span>
+      <span class="hashtag">#생명존중</span>
+    </div>
+
+    <div class="disclaimer">
+      ⚠️ 이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부와 이용 방법은 담당 기관(109, 보건복지부)에 반드시 확인하세요. 지금 당장 힘드신 분이 있다면 109에 전화하거나, 가까운 정신건강복지센터를 방문해 주세요.
+    </div>
+    <div class="meta">작성일: 2026년 7월 26일 | 복지뉴스 편집팀</div>
+  </div>
+</div>
+</body>
+</html>
