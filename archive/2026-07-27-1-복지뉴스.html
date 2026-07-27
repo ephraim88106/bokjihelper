@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"나라를 위해 싸웠는데 요양비도 못 내셨다고요?" 보훈요양원 본인부담금 정부가 최대 80% 대신 냅니다 — 국가유공자·참전유공자 2026 보훈복지 대개편, 몰라서 못 받으면 억울! | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', '맑은 고딕', sans-serif; background: #f5f5f5; color: #222; font-size: 16px; line-height: 1.7; }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 0 0 40px; }
+
+  /* 헤더 */
+  .top-header { background: #1a237e; color: #fff; text-align: center; padding: 14px 20px; font-size: 13px; letter-spacing: 1px; }
+  .top-header span { background: #ffd600; color: #1a237e; border-radius: 4px; padding: 2px 8px; font-weight: 700; margin-right: 6px; }
+
+  /* 배지 */
+  .badge-row { padding: 18px 20px 6px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; }
+  .badge-main { background: #1a237e; color: #fff; }
+  .badge-sub { background: #e8eaf6; color: #1a237e; }
+
+  /* 메인 타이틀 */
+  .main-title { font-size: 26px; font-weight: 900; color: #111; padding: 10px 20px 14px; line-height: 1.4; word-break: keep-all; }
+  .main-title em { color: #c62828; font-style: normal; }
+
+  /* 훅 */
+  .hook { border-left: 5px solid #1a237e; background: #e8eaf6; padding: 16px 18px; margin: 0 20px 20px; border-radius: 0 8px 8px 0; font-size: 15px; }
+  .hook .highlight { background: #ffd600; padding: 1px 4px; font-weight: 700; }
+
+  /* 핵심 요약 */
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 10px; padding: 18px 20px; margin: 0 20px 24px; }
+  .summary-box h3 { color: #2e7d32; font-size: 15px; font-weight: 900; margin-bottom: 10px; }
+  .summary-box ul { list-style: none; padding: 0; }
+  .summary-box ul li { padding: 4px 0 4px 22px; position: relative; font-size: 14px; }
+  .summary-box ul li::before { content: "📌"; position: absolute; left: 0; }
+
+  /* 섹션 제목 */
+  h2 { font-size: 18px; font-weight: 900; color: #1a237e; padding: 22px 20px 8px; border-bottom: 2px solid #e8eaf6; margin-bottom: 12px; }
+
+  /* 본문 */
+  .content { padding: 0 20px; font-size: 15px; line-height: 1.8; }
+  .content p { margin-bottom: 14px; }
+
+  /* 표 */
+  .info-table { width: 100%; border-collapse: collapse; margin: 0 0 20px; font-size: 14px; }
+  .info-table th { background: #1a237e; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { padding: 10px 12px; border-bottom: 1px solid #e0e0e0; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #f5f5f5; }
+  .table-wrap { padding: 0 20px; overflow-x: auto; margin-bottom: 10px; }
+
+  /* SVG 인포그래픽 */
+  .infographic { padding: 0 20px; margin-bottom: 20px; }
+
+  /* 신청 단계 */
+  .steps { padding: 0 20px; margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 14px; }
+  .step-num { width: 34px; height: 34px; border-radius: 50%; background: #1a237e; color: #fff; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 15px; }
+  .step-text { font-size: 14px; line-height: 1.7; padding-top: 4px; }
+
+  /* 시행일정 박스 */
+  .deadline-box { border: 2px dashed #f57c00; border-radius: 10px; padding: 16px 18px; margin: 0 20px 20px; background: #fff8e1; }
+  .deadline-box h3 { color: #e65100; font-size: 15px; font-weight: 900; margin-bottom: 8px; }
+  .deadline-box p { font-size: 14px; margin: 0; }
+
+  /* 체크리스트 */
+  .checklist { padding: 0 20px; margin-bottom: 20px; }
+  .checklist-item { display: flex; gap: 10px; padding: 8px 0; border-bottom: 1px solid #f0f0f0; font-size: 14px; }
+  .checklist-item span:first-child { color: #2e7d32; font-weight: 900; font-size: 16px; flex-shrink: 0; }
+
+  /* 주의사항 */
+  .caution { padding: 0 20px; margin-bottom: 20px; }
+  .caution-item { padding: 8px 0; font-size: 14px; }
+  .caution-num { font-weight: 900; color: #c62828; margin-right: 6px; }
+
+  /* 담당기관 박스 */
+  .contact-box { background: #e8eaf6; border-radius: 10px; padding: 18px 20px; margin: 0 20px 20px; }
+  .contact-box h3 { color: #1a237e; font-size: 15px; font-weight: 900; margin-bottom: 10px; }
+  .contact-item { font-size: 14px; padding: 4px 0; }
+  .contact-item strong { color: #1a237e; }
+
+  /* 찬반 론평 */
+  .opinion-section { padding: 0 20px; margin-bottom: 20px; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; border-radius: 12px; padding: 18px 16px; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; border-radius: 12px; padding: 18px 16px; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 12px; font-weight: 900; font-size: 15px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 12px; font-weight: 900; font-size: 15px; }
+  .opinion-card { background: #fff; padding: 12px 14px; border-radius: 8px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 13px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 6px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  /* 해시태그 */
+  .hashtags { padding: 10px 20px 16px; }
+  .hashtag { display: inline-block; background: #e8eaf6; color: #1a237e; border-radius: 20px; padding: 4px 12px; margin: 4px 4px 4px 0; font-size: 13px; font-weight: 600; }
+
+  /* 면책 */
+  .disclaimer { margin: 0 20px; background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12px; color: #888; line-height: 1.7; }
+
+  /* 날짜 */
+  .meta { text-align: right; padding: 10px 20px 0; font-size: 12px; color: #aaa; }
+
+  @media (max-width: 600px) {
+    .main-title { font-size: 20px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .info-table { font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 상단 헤더 -->
+  <div class="top-header">
+    <span>2026.07.27</span> 오늘의 복지 뉴스 · 제1보
+  </div>
+
+  <!-- 배지 -->
+  <div class="badge-row">
+    <span class="badge badge-main">보훈복지</span>
+    <span class="badge badge-sub">국가유공자</span>
+    <span class="badge badge-sub">요양비 지원</span>
+    <span class="badge badge-sub">참전유공자</span>
+  </div>
+
+  <!-- 메인 제목 -->
+  <h1 class="main-title">"나라를 위해 싸웠는데 요양비도 못 내셨다고요?" <em>보훈요양원 본인부담금 정부가 최대 80% 대신 냅니다</em> — 국가유공자·참전유공자 2026 보훈복지 대개편, 몰라서 못 받으면 억울!</h1>
+
+  <!-- 훅 -->
+  <div class="hook">
+    대한민국을 지킨 분들이 늙어서 요양비를 못 내 시설을 포기하고 있었습니다. 보건복지부가 마침내 칼을 뽑았습니다. <span class="highlight">2026년부터 보훈요양원 본인부담금을 최대 80%까지 정부가 직접 부담</span>합니다. 참전명예수당도 월 49만 원으로 올랐고, 요양원 외 재가돌봄·주거지원까지 생애 전반 패키지가 완성됐습니다. 신청 안 하면 한 푼도 받지 못합니다.
+  </div>
+
+  <!-- 핵심 요약 -->
+  <div class="summary-box">
+    <h3>📌 이것만 알면 됩니다</h3>
+    <ul>
+      <li>독립·상이 국가유공자 중 의료급여자 → 본인부담금 <strong>80% 정부 부담</strong></li>
+      <li>참전유공자·비상이유공자도 최대 <strong>60% 감면</strong>, 생활곤란자 40% 추가 지원</li>
+      <li>신청 창구: 주소지 관할 <strong>보훈(지)청 방문 신청</strong> (대리 신청 가능)</li>
+    </ul>
+  </div>
+
+  <!-- 배경 -->
+  <h2>📰 왜 이 정책이 나왔나</h2>
+  <div class="content">
+    <p>국가보훈부 통계에 따르면 전국 보훈요양원 8개소 입소 대기자 중 상당수가 본인부담금을 감당하지 못해 입소를 포기하거나, 입소 후에도 가족에게 경제적 부담을 떠넘겨야 했습니다. 장기요양보험 적용을 받더라도 본인부담분(통상 15~20%)이 월 30~50만 원에 달해 저소득 유공자 가정에는 큰 부담이었습니다.</p>
+    <p>정은경 보건복지부 장관은 2026년 6월 18일 광주보훈요양원을 직접 방문해 "나라를 위해 헌신하신 분들이 노후 돌봄 비용 때문에 고통받는 일은 없어야 한다"며 본인부담금 지원 강화를 공식 약속했습니다. 이 정책은 국가보훈부와 보건복지부가 협업해 추진하는 범부처 보훈복지 강화 사업의 핵심 축입니다.</p>
+    <p>복권위원회도 216억 원 규모의 '보훈복지서비스 향상 지원 사업'을 통해 보훈원, 보훈복지타운, 전국 8개 보훈요양원, 장기요양서비스, 휴양시설을 통합 지원합니다.</p>
+  </div>
+
+  <!-- 상세 정보 표 -->
+  <h2>📋 본인부담금 지원 대상 및 감면율</h2>
+  <div class="table-wrap">
+    <table class="info-table">
+      <tr><th>대상 구분</th><th>조건</th><th>지원율</th></tr>
+      <tr><td><strong>독립유공자 / 상이 국가유공자</strong></td><td>의료급여자 및 본인부담금 감경대상자</td><td><strong style="color:#c62828;">80% 지원</strong></td></tr>
+      <tr><td>독립유공자 / 상이 국가유공자</td><td>생활곤란자</td><td>80% 지원</td></tr>
+      <tr><td><strong>비상이 유공자 / 배우자·부모(선순위유족)</strong></td><td>의료급여자 및 본인부담금 감경대상자</td><td><strong>60% 지원</strong></td></tr>
+      <tr><td>비상이 유공자 / 배우자·부모</td><td>생활곤란자</td><td>40% 지원</td></tr>
+      <tr><td><strong>고엽제후유의증환자(장애등급 판정자) / 참전유공자</strong></td><td>의료급여자 및 본인부담금 감경대상자</td><td><strong>60% 지원</strong></td></tr>
+    </table>
+  </div>
+
+  <!-- 참전명예수당 + 재가돌봄 표 -->
+  <h2>💰 함께 받을 수 있는 보훈복지 패키지</h2>
+  <div class="table-wrap">
+    <table class="info-table">
+      <tr><th>혜택</th><th>내용</th><th>대상</th></tr>
+      <tr><td>참전명예수당</td><td>월 49만 원 지급</td><td>6.25·베트남전 참전유공자</td></tr>
+      <tr><td>재가보훈 돌봄</td><td>주 1~3회 방문 (가사·건강·치매예방)</td><td>65세 이상 거동불편 참전·배우자</td></tr>
+      <tr><td>주택우선공급</td><td>신규 공공주택 일정 물량 우선 공급</td><td>무주택 참전유공자</td></tr>
+      <tr><td>보훈요양원 입소</td><td>요양급여 본인부담 최대 80% 감면</td><td>등록 유공자 및 유족</td></tr>
+      <tr><td>국립묘지 안장</td><td>생애 마지막 국가 예우</td><td>국가유공자 본인</td></tr>
+    </table>
+  </div>
+
+  <!-- SVG 인포그래픽 -->
+  <h2>📊 본인부담금 감면 효과 (월 기준 예시)</h2>
+  <div class="infographic">
+    <svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:12px;background:#f8f9fa;">
+      <text x="340" y="30" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a237e">보훈요양원 월 본인부담금 예시 (기존 vs 지원 후)</text>
+
+      <!-- 막대: 기존 -->
+      <rect x="60" y="50" width="100" height="160" fill="#bdbdbd" rx="6"/>
+      <text x="110" y="222" text-anchor="middle" font-size="12" fill="#555">기존</text>
+      <text x="110" y="45" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">월 40만원</text>
+
+      <!-- 막대: 독립·상이유공자 -->
+      <rect x="210" y="130" width="100" height="80" fill="#ef9a9a" rx="6"/>
+      <rect x="210" y="50" width="100" height="80" fill="#c62828" rx="6"/>
+      <text x="260" y="222" text-anchor="middle" font-size="11" fill="#555">독립·상이</text>
+      <text x="260" y="235" text-anchor="middle" font-size="11" fill="#555">국가유공자</text>
+      <text x="260" y="45" text-anchor="middle" font-size="12" font-weight="bold" fill="#c62828">8만원</text>
+      <text x="260" y="98" text-anchor="middle" font-size="11" fill="#fff">정부부담</text>
+      <text x="260" y="112" text-anchor="middle" font-size="11" fill="#fff">32만원</text>
+
+      <!-- 막대: 비상이유공자 -->
+      <rect x="360" y="106" width="100" height="104" fill="#ef9a9a" rx="6"/>
+      <rect x="360" y="50" width="100" height="56" fill="#1a237e" rx="6"/>
+      <text x="410" y="222" text-anchor="middle" font-size="11" fill="#555">비상이·참전</text>
+      <text x="410" y="235" text-anchor="middle" font-size="11" fill="#555">유공자</text>
+      <text x="410" y="45" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a237e">16만원</text>
+      <text x="410" y="78" text-anchor="middle" font-size="11" fill="#fff">정부부담</text>
+      <text x="410" y="90" text-anchor="middle" font-size="11" fill="#fff">24만원</text>
+
+      <!-- 범례 -->
+      <rect x="520" y="80" width="14" height="14" fill="#c62828" rx="2"/>
+      <text x="540" y="92" font-size="12" fill="#333">정부 부담분</text>
+      <rect x="520" y="104" width="14" height="14" fill="#ef9a9a" rx="2"/>
+      <text x="540" y="116" font-size="12" fill="#333">본인 부담분</text>
+      <rect x="520" y="128" width="14" height="14" fill="#bdbdbd" rx="2"/>
+      <text x="540" y="140" font-size="12" fill="#333">기존 전액 자부담</text>
+
+      <text x="340" y="255" text-anchor="middle" font-size="11" fill="#999">※ 월 본인부담금 40만원 기준 예시 / 실제 금액은 개인 상황에 따라 다름</text>
+    </svg>
+  </div>
+
+  <!-- 신청 방법 -->
+  <h2>🖊️ 신청 방법 (단계별)</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text"><strong>보훈요양원 입소 자격 확인</strong> — 한국보훈복지의료공단 홈페이지(bohun.or.kr) 또는 ☎1588-0607로 입소 가능 여부 확인</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text"><strong>본인부담금 지원 신청</strong> — 주소지 관할 보훈(지)청 방문 신청. 본인 외 가족 대리 신청 가능</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text"><strong>서류 제출</strong> — 국가유공자 등록증, 의료급여증 또는 감경 확인서, 통장 사본, 입소 확인서</div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-text"><strong>심사 후 지원금 지급</strong> — 심사 완료 후 매월 실제 부담액에서 지원율 적용, 차액만 납부</div>
+    </div>
+  </div>
+
+  <!-- 시행 일정 박스 -->
+  <div class="deadline-box">
+    <h3>⏰ 지금 바로 신청하세요</h3>
+    <p>• 2026년 6월 18일 보건복지부 공식 발표 — <strong>즉시 시행</strong><br>
+    • 보훈(지)청 방문: 평일 09:00~18:00<br>
+    • 국가보훈부 상담: ☎1577-0606<br>
+    • 이미 요양원에 계신 분도 소급 신청 가능(담당 보훈청 확인)</p>
+  </div>
+
+  <!-- 자가 진단 체크리스트 -->
+  <h2>✅ 나도 받을 수 있을까? 자가 진단</h2>
+  <div class="checklist">
+    <div class="checklist-item"><span>✓</span><span>6.25전쟁·베트남전 등 국가유공자로 등록되어 있다</span></div>
+    <div class="checklist-item"><span>✓</span><span>보훈요양원 또는 보훈복지타운 입소(예정)이다</span></div>
+    <div class="checklist-item"><span>✓</span><span>의료급여 수급자이거나 본인부담금 감경대상자이다</span></div>
+    <div class="checklist-item"><span>✓</span><span>65세 이상이고 거동이 불편해 재가돌봄이 필요하다</span></div>
+    <div class="checklist-item"><span>✓</span><span>주거 지원(공공주택 우선공급)이 필요한 무주택 유공자이다</span></div>
+  </div>
+
+  <!-- 주의사항 -->
+  <h2>⚠️ 주의사항</h2>
+  <div class="caution">
+    <div class="caution-item"><span class="caution-num">①</span>민간 요양원에 입소 중인 경우에는 이 본인부담금 지원이 적용되지 않습니다 — 반드시 <strong>보훈요양원(공단 운영 8개소)</strong> 입소여야 합니다.</div>
+    <div class="caution-item"><span class="caution-num">②</span>지원율은 의료급여자·생활곤란자 여부에 따라 달라집니다 — 본인의 수급 자격을 반드시 확인한 후 신청하세요.</div>
+    <div class="caution-item"><span class="caution-num">③</span>유족(배우자·부모 선순위)도 지원 대상이나 형제·자매 등 하위 순위 유족은 대상에서 제외될 수 있습니다.</div>
+    <div class="caution-item"><span class="caution-num">④</span>참전명예수당(월 49만 원)은 별도 수급으로 요양원 본인부담금 지원과 동시 수령 가능합니다.</div>
+  </div>
+
+  <!-- 담당 기관 -->
+  <div class="contact-box">
+    <h3>📞 담당 기관 및 문의처</h3>
+    <div class="contact-item">🏢 <strong>국가보훈부</strong> — ☎1577-0606 / mpva.go.kr</div>
+    <div class="contact-item">🏥 <strong>한국보훈복지의료공단</strong> — ☎1588-0607 / bohun.or.kr</div>
+    <div class="contact-item">📍 <strong>관할 보훈(지)청</strong> — 주소지 기준 방문 신청</div>
+    <div class="contact-item">💻 <strong>온라인 상담</strong> — 국가보훈부 홈페이지(mpva.go.kr) '민원·상담' 메뉴</div>
+  </div>
+
+  <!-- 전문가 찬반 론평 -->
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"국가를 위해 헌신한 보훈 대상자가 노후 돌봄 비용 때문에 시설 이용을 포기하는 현실은 국가 책임 복지의 공백입니다. 본인부담금 최대 80% 지원은 그 공백을 메우는 최소한의 조치로 평가합니다."</p>
+          <p class="author">— 보훈·사회정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"복권기금과 보건복지부·보훈부 협업으로 재원을 분담한 구조는 지속 가능성 측면에서도 긍정적입니다. 수혜 대상 확대를 위한 추가 예산 확보가 뒷받침된다면 보훈복지 수준을 선진국 수준으로 끌어올릴 수 있습니다."</p>
+          <p class="author">— 고령사회 돌봄 정책 연구자</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"전국 보훈요양원이 8개소에 불과해 지방 거주 유공자는 사실상 혜택을 받기 어렵습니다. 공간 확충 없이 비용 지원만 강화하면 대기 문제가 악화될 우려가 있습니다."</p>
+          <p class="author">— 노인복지 현장 활동가</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"의료급여자·생활곤란자 기준으로 한정된 탓에 중산층 유공자는 여전히 상당한 부담을 지게 됩니다. 소득 기준 완화나 지원 대상 폭 확대를 병행 검토해야 한다고 봅니다."</p>
+          <p class="author">— 재정·복지 정책 연구자</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span class="hashtag">#보훈복지</span>
+    <span class="hashtag">#국가유공자지원</span>
+    <span class="hashtag">#보훈요양원</span>
+    <span class="hashtag">#참전유공자</span>
+    <span class="hashtag">#본인부담금감면</span>
+    <span class="hashtag">#요양비지원</span>
+    <span class="hashtag">#복지뉴스</span>
+    <span class="hashtag">#2026복지</span>
+    <span class="hashtag">#보훈부</span>
+    <span class="hashtag">#복지헬퍼</span>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부 및 지원율은 주소지 관할 보훈(지)청 또는 국가보훈부(☎1577-0606)에 반드시 확인하세요.
+  </div>
+  <div class="meta">작성일: 2026-07-27</div>
+
+</div>
+</body>
+</html>

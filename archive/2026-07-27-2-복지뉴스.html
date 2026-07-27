@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"월세 20만원 나라가 준다는데 나는 왜 못 받았냐고요?" 2026 청년월세지원 드디어 상시화 — 1년 365일 신청 가능, 최대 480만원·청약통장 없어도 됩니다! | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', '맑은 고딕', sans-serif; background: #f5f5f5; color: #222; font-size: 16px; line-height: 1.7; }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 0 0 40px; }
+
+  .top-header { background: #b71c1c; color: #fff; text-align: center; padding: 14px 20px; font-size: 13px; letter-spacing: 1px; }
+  .top-header span { background: #ffd600; color: #b71c1c; border-radius: 4px; padding: 2px 8px; font-weight: 700; margin-right: 6px; }
+
+  .badge-row { padding: 18px 20px 6px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; }
+  .badge-main { background: #c62828; color: #fff; }
+  .badge-sub { background: #ffebee; color: #c62828; }
+
+  .main-title { font-size: 26px; font-weight: 900; color: #111; padding: 10px 20px 14px; line-height: 1.4; word-break: keep-all; }
+  .main-title em { color: #c62828; font-style: normal; }
+
+  .hook { border-left: 5px solid #c62828; background: #ffebee; padding: 16px 18px; margin: 0 20px 20px; border-radius: 0 8px 8px 0; font-size: 15px; }
+  .hook .highlight { background: #ffd600; padding: 1px 4px; font-weight: 700; }
+
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 10px; padding: 18px 20px; margin: 0 20px 24px; }
+  .summary-box h3 { color: #2e7d32; font-size: 15px; font-weight: 900; margin-bottom: 10px; }
+  .summary-box ul { list-style: none; padding: 0; }
+  .summary-box ul li { padding: 4px 0 4px 22px; position: relative; font-size: 14px; }
+  .summary-box ul li::before { content: "📌"; position: absolute; left: 0; }
+
+  h2 { font-size: 18px; font-weight: 900; color: #c62828; padding: 22px 20px 8px; border-bottom: 2px solid #ffebee; margin-bottom: 12px; }
+
+  .content { padding: 0 20px; font-size: 15px; line-height: 1.8; }
+  .content p { margin-bottom: 14px; }
+
+  .info-table { width: 100%; border-collapse: collapse; margin: 0 0 20px; font-size: 14px; }
+  .info-table th { background: #c62828; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { padding: 10px 12px; border-bottom: 1px solid #e0e0e0; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #f5f5f5; }
+  .table-wrap { padding: 0 20px; overflow-x: auto; margin-bottom: 10px; }
+
+  .infographic { padding: 0 20px; margin-bottom: 20px; }
+
+  .steps { padding: 0 20px; margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 14px; }
+  .step-num { width: 34px; height: 34px; border-radius: 50%; background: #c62828; color: #fff; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 15px; }
+  .step-text { font-size: 14px; line-height: 1.7; padding-top: 4px; }
+
+  .deadline-box { border: 2px dashed #f57c00; border-radius: 10px; padding: 16px 18px; margin: 0 20px 20px; background: #fff8e1; }
+  .deadline-box h3 { color: #e65100; font-size: 15px; font-weight: 900; margin-bottom: 8px; }
+  .deadline-box p { font-size: 14px; margin: 0; }
+
+  .checklist { padding: 0 20px; margin-bottom: 20px; }
+  .checklist-item { display: flex; gap: 10px; padding: 8px 0; border-bottom: 1px solid #f0f0f0; font-size: 14px; }
+  .checklist-item span:first-child { color: #2e7d32; font-weight: 900; font-size: 16px; flex-shrink: 0; }
+
+  .caution { padding: 0 20px; margin-bottom: 20px; }
+  .caution-item { padding: 8px 0; font-size: 14px; }
+  .caution-num { font-weight: 900; color: #c62828; margin-right: 6px; }
+
+  .contact-box { background: #ffebee; border-radius: 10px; padding: 18px 20px; margin: 0 20px 20px; }
+  .contact-box h3 { color: #c62828; font-size: 15px; font-weight: 900; margin-bottom: 10px; }
+  .contact-item { font-size: 14px; padding: 4px 0; }
+  .contact-item strong { color: #c62828; }
+
+  .opinion-section { padding: 0 20px; margin-bottom: 20px; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; border-radius: 12px; padding: 18px 16px; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; border-radius: 12px; padding: 18px 16px; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 12px; font-weight: 900; font-size: 15px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 12px; font-weight: 900; font-size: 15px; }
+  .opinion-card { background: #fff; padding: 12px 14px; border-radius: 8px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 13px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 6px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  .hashtags { padding: 10px 20px 16px; }
+  .hashtag { display: inline-block; background: #ffebee; color: #c62828; border-radius: 20px; padding: 4px 12px; margin: 4px 4px 4px 0; font-size: 13px; font-weight: 600; }
+
+  .disclaimer { margin: 0 20px; background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12px; color: #888; line-height: 1.7; }
+  .meta { text-align: right; padding: 10px 20px 0; font-size: 12px; color: #aaa; }
+
+  @media (max-width: 600px) {
+    .main-title { font-size: 20px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .info-table { font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="top-header">
+    <span>2026.07.27</span> 오늘의 복지 뉴스 · 제2보
+  </div>
+
+  <div class="badge-row">
+    <span class="badge badge-main">청년주거</span>
+    <span class="badge badge-sub">월세지원</span>
+    <span class="badge badge-sub">청년정책</span>
+    <span class="badge badge-sub">주거복지</span>
+  </div>
+
+  <h1 class="main-title">"월세 20만원 나라가 준다는데 나는 왜 못 받았냐고요?" <em>2026 청년월세지원 드디어 상시화</em> — 1년 365일 신청 가능, 최대 480만원·청약통장 없어도 됩니다!</h1>
+
+  <div class="hook">
+    작년까지 청년월세지원은 '한시 특별지원'이라는 이름으로 일정 기간만 신청 받아 놓쳐도 속수무책이었습니다. 2026년부터 달라졌습니다. <span class="highlight">연중 언제든 신청할 수 있는 상시 제도로 완전 전환</span>됐고, 청약통장 가입 요건까지 폐지됐습니다. 월 최대 20만 원씩 24개월, 총 480만 원을 받을 수 있습니다. 지금 신청하지 않으면 그냥 버리는 돈입니다.
+  </div>
+
+  <div class="summary-box">
+    <h3>📌 이것만 알면 됩니다</h3>
+    <ul>
+      <li>만 19~34세 독립 거주 무주택 청년 → 소득·재산 기준 충족 시 <strong>월 최대 20만 원 × 24개월 = 480만 원</strong></li>
+      <li>2026년부터 <strong>상시 신청(연중 수시)</strong>으로 전환 — 청약통장 없어도 신청 가능</li>
+      <li>신청: 복지로 온라인(bokjiro.go.kr) 또는 <strong>주민센터 방문</strong></li>
+    </ul>
+  </div>
+
+  <h2>📰 왜 제도가 바뀌었나</h2>
+  <div class="content">
+    <p>정부는 2021년부터 청년월세 한시 특별지원을 2회(2022·2023년) 운영했지만, 신청 기간을 놓친 청년들의 불만이 끊이지 않았습니다. 특히 학업·취업으로 행정 정보를 접하기 어려운 저소득 청년일수록 지원을 받지 못하는 역설이 반복됐습니다.</p>
+    <p>이에 정부는 2026년을 '제2차 청년정책 기본계획' 원년으로 삼고, 청년월세지원을 상시 지원 제도로 전환했습니다. 청약통장 가입 조건도 폐지해 진입 장벽을 낮췄습니다. 월세를 내고 있는 청년이라면 언제든 복지로에서 신청해 소득·재산 기준만 충족하면 지원받을 수 있게 됐습니다.</p>
+    <p>한국부동산원에 따르면 서울 청년 1인 가구의 평균 월세는 66만 원(2025년 기준)으로 최저임금 근로자 월급의 30%를 넘습니다. 이 제도는 그 부담의 일부를 국가가 분담하겠다는 선언입니다.</p>
+  </div>
+
+  <h2>📋 지원 자격 한눈에 보기</h2>
+  <div class="table-wrap">
+    <table class="info-table">
+      <tr><th>구분</th><th>기준</th><th>세부 내용</th></tr>
+      <tr><td><strong>나이</strong></td><td>만 19~34세</td><td>신청일 기준 (병역 이행 기간 최대 6년 추가)</td></tr>
+      <tr><td><strong>주거</strong></td><td>독립 거주 무주택 청년</td><td>부모와 다른 주소지에 거주, 본인 명의 주택 없음</td></tr>
+      <tr><td><strong>소득</strong></td><td>중위소득 60% 이하</td><td>1인 가구 약 월 133만 원 이하 (2026년 기준)</td></tr>
+      <tr><td><strong>재산</strong></td><td>본인 재산 1.22억 이하</td><td>부모 재산 기준도 별도 적용</td></tr>
+      <tr><td><strong>임차 유형</strong></td><td>월세 계약</td><td>임차보증금 5천만 원·월세 70만 원 이하 (지자체별 상이)</td></tr>
+    </table>
+  </div>
+
+  <!-- 지원 불가 케이스 표 -->
+  <h2>🚫 이런 경우엔 못 받습니다</h2>
+  <div class="table-wrap">
+    <table class="info-table">
+      <tr><th>제외 사유</th><th>설명</th></tr>
+      <tr><td>부모와 같은 주소 거주</td><td>독립 거주 요건 불충족</td></tr>
+      <tr><td>2촌 이내 혈족 소유 주택 임차</td><td>부모·형제 소유 집에서 월세 내는 경우 제외</td></tr>
+      <tr><td>공공임대주택 거주</td><td>LH·SH 공공임대 입주자는 중복 수혜 불가</td></tr>
+      <tr><td>주거급여 수급자</td><td>주거급여액 차감 후 차액만 지원 (일부 가능)</td></tr>
+    </table>
+  </div>
+
+  <!-- SVG 인포그래픽 -->
+  <h2>📊 지원 규모 한눈에 보기</h2>
+  <div class="infographic">
+    <svg viewBox="0 0 680 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:12px;background:#fff8f8;">
+      <text x="340" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#c62828">청년월세지원 — 총 지원금 계산기</text>
+
+      <!-- 타임라인 바 -->
+      <rect x="40" y="55" width="580" height="40" fill="#ffcdd2" rx="8"/>
+      <rect x="40" y="55" width="290" height="40" fill="#c62828" rx="8"/>
+      <text x="185" y="81" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">지원 기간 24개월</text>
+      <text x="475" y="81" text-anchor="middle" font-size="13" fill="#c62828">총 지원 기간 기준</text>
+
+      <!-- 수치 강조 -->
+      <rect x="60" y="115" width="170" height="70" fill="#c62828" rx="10"/>
+      <text x="145" y="148" text-anchor="middle" font-size="13" fill="#fff">월 최대</text>
+      <text x="145" y="172" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffd600">20만 원</text>
+
+      <text x="280" y="155" text-anchor="middle" font-size="28" fill="#c62828">×</text>
+
+      <rect x="310" y="115" width="170" height="70" fill="#b71c1c" rx="10"/>
+      <text x="395" y="148" text-anchor="middle" font-size="13" fill="#fff">최대</text>
+      <text x="395" y="172" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffd600">24개월</text>
+
+      <text x="520" y="155" text-anchor="middle" font-size="28" fill="#c62828">=</text>
+
+      <rect x="548" y="108" width="110" height="80" fill="#ffd600" rx="10"/>
+      <text x="603" y="140" text-anchor="middle" font-size="12" font-weight="bold" fill="#c62828">총 최대</text>
+      <text x="603" y="163" text-anchor="middle" font-size="20" font-weight="bold" fill="#c62828">480</text>
+      <text x="603" y="181" text-anchor="middle" font-size="14" font-weight="bold" fill="#c62828">만 원</text>
+
+      <text x="340" y="210" text-anchor="middle" font-size="11" fill="#999">※ 실제 월세 범위 내에서 지급 / 관리비·보증금 제외</text>
+    </svg>
+  </div>
+
+  <h2>🖊️ 신청 방법 (단계별)</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text"><strong>자격 확인</strong> — 나이·소득·주거 요건 확인. 복지로 홈페이지(bokjiro.go.kr)에서 자가 모의 계산 가능</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text"><strong>서류 준비</strong> — 임대차계약서, 최근 3개월 월세 이체 내역(계좌이체 확인서), 통장 사본, 가족관계증명서, 소득·재산 신고서</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text"><strong>신청</strong> — 복지로 온라인(bokjiro.go.kr) 또는 주민센터 방문 신청. 연중 상시 접수 가능</div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-text"><strong>심사 및 지급</strong> — 소득·재산 조사 후 지급 결정. 승인 후 매월 실제 월세 이체 내역 기준으로 통장 입금</div>
+    </div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>⏰ 지금 바로 신청 가능합니다!</h3>
+    <p>• 2026년부터 <strong>상시 신청</strong> — 마감 기한 없음<br>
+    • 복지로 온라인: bokjiro.go.kr → '청년월세지원' 검색<br>
+    • 주민센터 방문: 평일 09:00~18:00<br>
+    • 청년월세지원 콜센터: ☎1600-0777 (국토교통부)</p>
+  </div>
+
+  <h2>✅ 나도 받을 수 있을까? 자가 진단</h2>
+  <div class="checklist">
+    <div class="checklist-item"><span>✓</span><span>만 19~34세이고 부모와 다른 주소지에서 독립 거주 중이다</span></div>
+    <div class="checklist-item"><span>✓</span><span>본인 명의 주택이 없고, 월세 계약서가 있다</span></div>
+    <div class="checklist-item"><span>✓</span><span>소득이 중위소득 60% 이하이다 (1인 기준 월 약 133만 원 이하)</span></div>
+    <div class="checklist-item"><span>✓</span><span>LH·SH 공공임대주택이나 친족 소유 주택에 거주하지 않는다</span></div>
+    <div class="checklist-item"><span>✓</span><span>매달 월세를 계좌이체로 납부하고 있어 이체 내역 증빙이 가능하다</span></div>
+  </div>
+
+  <h2>⚠️ 주의사항</h2>
+  <div class="caution">
+    <div class="caution-item"><span class="caution-num">①</span>월세를 현금으로 내고 있다면 이체 내역 증빙이 어려울 수 있습니다 — 신청 전 월세를 <strong>계좌이체</strong>로 전환하세요.</div>
+    <div class="caution-item"><span class="caution-num">②</span>지원금은 임차보증금·관리비·전기세·가스비에는 적용되지 않고 <strong>순수 월세분만</strong> 지원됩니다.</div>
+    <div class="caution-item"><span class="caution-num">③</span>주거급여 수급자는 월세 지원액 중 주거급여액을 제외한 차액만 지원됩니다 (중복 지원 부분 조정).</div>
+    <div class="caution-item"><span class="caution-num">④</span>소득·재산은 가구원 기준으로 조사되므로, 부모 소득이 높으면 탈락할 수 있습니다 — 복지로에서 모의 계산 먼저 해보세요.</div>
+  </div>
+
+  <div class="contact-box">
+    <h3>📞 담당 기관 및 문의처</h3>
+    <div class="contact-item">🏠 <strong>국토교통부 마이홈 포털</strong> — myhome.go.kr / ☎1600-1004</div>
+    <div class="contact-item">💻 <strong>복지로 온라인 신청</strong> — bokjiro.go.kr / ☎129 (보건복지 상담)</div>
+    <div class="contact-item">📍 <strong>주민센터(행정복지센터)</strong> — 주소지 관할 방문 신청</div>
+    <div class="contact-item">📱 <strong>청년정책 통합 앱</strong> — 청년ON 앱에서도 신청 안내 확인 가능</div>
+  </div>
+
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"한시 특별지원 방식은 정보 접근성이 떨어지는 취약 청년이 오히려 소외되는 구조적 역설을 낳았습니다. 상시화 전환은 그 역설을 바로잡는 정책적 진보로 평가합니다."</p>
+          <p class="author">— 청년복지 정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"청약통장 가입 요건 폐지는 무의미한 진입 장벽을 제거한 것입니다. 이런 규제 합리화가 청년 정책 전반으로 확산되어야 합니다."</p>
+          <p class="author">— 주거시민단체 활동가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"월세 보조금이 공급을 늘리지 않는 한 집주인의 임대료 인상 유인으로 작용할 수 있습니다. 수요 측 지원만으로는 청년 주거 문제를 근본적으로 해결하기 어렵습니다."</p>
+          <p class="author">— 부동산·주거 정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"상시화로 신청 건수가 급증할 경우 지방자치단체의 심사 역량이 한계에 부딪혀 지급 지연이 발생할 가능성이 있습니다. 전담 인력 확충이 선행되어야 합니다."</p>
+          <p class="author">— 사회복지 행정 전문가</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    <span class="hashtag">#청년월세지원</span>
+    <span class="hashtag">#청년주거복지</span>
+    <span class="hashtag">#월세지원신청</span>
+    <span class="hashtag">#2026청년정책</span>
+    <span class="hashtag">#청년복지</span>
+    <span class="hashtag">#주거급여</span>
+    <span class="hashtag">#독립청년</span>
+    <span class="hashtag">#복지로</span>
+    <span class="hashtag">#480만원</span>
+    <span class="hashtag">#복지헬퍼</span>
+  </div>
+
+  <div class="disclaimer">
+    이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부 및 금액은 복지로(bokjiro.go.kr) 또는 주소지 주민센터에 반드시 확인하세요.
+  </div>
+  <div class="meta">작성일: 2026-07-27</div>
+
+</div>
+</body>
+</html>
