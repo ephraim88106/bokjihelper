@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"50살에 취업하면 나라가 360만원 줍니다" — 일손부족 일자리 동행 인센티브 7월 시행, 전국 1,000명 선착순! 지금 고용센터 안 가면 진짜 기회 날립니다 | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans KR', Apple SD Gothic Neo, sans-serif; background: #fff8f0; color: #222; line-height: 1.7; font-size: 16px; }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding-bottom: 40px; }
+
+  /* HEADER */
+  .top-header { background: #e65100; color: #fff; padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; }
+  .top-header .date-tag { font-size: 13px; opacity: 0.85; }
+  .top-header .series { font-size: 13px; font-weight: 700; letter-spacing: 1px; }
+
+  .hero { padding: 28px 24px 20px; border-bottom: 3px solid #e65100; }
+  .badge { display: inline-block; background: #e65100; color: #fff; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+  h1 { font-size: 26px; font-weight: 900; line-height: 1.4; color: #3e2723; word-break: keep-all; }
+
+  /* HOOK */
+  .hook { border-left: 5px solid #e65100; background: #fff3e0; padding: 16px 20px; margin: 20px 24px; border-radius: 0 8px 8px 0; font-size: 16px; }
+  .highlight { color: #bf360c; font-weight: 900; }
+
+  /* SUMMARY BOX */
+  .summary-box { background: #2e7d32; color: #fff; margin: 0 24px 24px; border-radius: 12px; padding: 20px 22px; }
+  .summary-box h2 { font-size: 16px; margin-bottom: 12px; opacity: 0.85; }
+  .summary-box ul { list-style: none; padding: 0; }
+  .summary-box ul li { padding: 4px 0; font-size: 15px; font-weight: 700; }
+  .summary-box ul li::before { content: "📌 "; }
+
+  /* SECTION */
+  .section { padding: 20px 24px; }
+  .section h2 { font-size: 19px; font-weight: 900; color: #bf360c; margin-bottom: 14px; border-bottom: 2px solid #ffe0b2; padding-bottom: 6px; }
+  .section p { margin-bottom: 12px; color: #333; }
+
+  /* TABLE */
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14px; }
+  th { background: #e65100; color: #fff; padding: 10px 12px; text-align: left; }
+  td { padding: 9px 12px; border-bottom: 1px solid #e0e0e0; }
+  tr:nth-child(even) td { background: #fff8e1; }
+
+  /* SVG WRAP */
+  .svg-wrap { padding: 10px 24px 20px; }
+  .svg-wrap h2 { font-size: 18px; font-weight: 900; color: #bf360c; margin-bottom: 12px; }
+
+  /* STEPS */
+  .steps { counter-reset: step; padding: 0 24px; }
+  .step-item { display: flex; gap: 14px; margin-bottom: 16px; align-items: flex-start; }
+  .step-num { min-width: 34px; height: 34px; background: #e65100; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 16px; }
+  .step-text { padding-top: 4px; }
+
+  /* DEADLINE BOX */
+  .deadline-box { border: 2.5px dashed #e65100; border-radius: 12px; padding: 18px 20px; margin: 20px 24px; background: #fff8e1; }
+  .deadline-box h3 { color: #bf360c; font-size: 17px; font-weight: 900; margin-bottom: 10px; }
+  .deadline-box p { color: #5d4037; font-size: 15px; }
+
+  /* CHECKLIST */
+  .checklist { background: #fff3e0; border-radius: 12px; padding: 18px 22px; margin: 0 24px 24px; border-left: 5px solid #e65100; }
+  .checklist h2 { font-size: 17px; font-weight: 900; color: #bf360c; margin-bottom: 12px; }
+  .checklist ul { list-style: none; }
+  .checklist ul li { padding: 5px 0; color: #e65100; font-weight: 700; font-size: 15px; }
+  .checklist ul li::before { content: "✓ "; }
+
+  /* CAUTION */
+  .caution { margin: 0 24px 24px; }
+  .caution h2 { font-size: 17px; font-weight: 900; color: #c62828; margin-bottom: 10px; }
+  .caution ol { padding-left: 18px; }
+  .caution ol li { margin-bottom: 8px; font-size: 15px; }
+
+  /* CONTACT BOX */
+  .contact-box { background: #bf360c; color: #fff; margin: 0 24px 24px; border-radius: 12px; padding: 20px 22px; }
+  .contact-box h2 { font-size: 16px; font-weight: 900; margin-bottom: 14px; }
+  .contact-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+  .contact-item { background: rgba(255,255,255,0.15); border-radius: 8px; padding: 8px 14px; font-size: 14px; }
+  .contact-item strong { display: block; font-size: 13px; opacity: 0.8; }
+
+  /* HIGHLIGHT BOX */
+  .highlight-box { background: linear-gradient(135deg, #e65100, #f57c00); color: #fff; margin: 0 24px 24px; border-radius: 12px; padding: 22px; text-align: center; }
+  .highlight-box .amount { font-size: 48px; font-weight: 900; letter-spacing: -1px; }
+  .highlight-box .label { font-size: 16px; opacity: 0.9; margin-top: 4px; }
+
+  /* OPINION */
+  .opinion-section { margin: 0 24px 24px; }
+  .opinion-section h2 { font-size: 18px; font-weight: 900; color: #333; margin-bottom: 16px; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; border-radius: 12px; padding: 18px; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; border-radius: 12px; padding: 18px; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 12px; font-weight: 900; font-size: 15px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 12px; font-weight: 900; font-size: 15px; }
+  .opinion-card { background: #fff; padding: 12px 14px; border-radius: 8px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 13px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 6px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  /* HASHTAGS */
+  .hashtags { padding: 10px 24px 20px; }
+  .hashtags span { display: inline-block; background: #fff3e0; color: #e65100; border-radius: 20px; padding: 4px 12px; margin: 4px 3px; font-size: 13px; font-weight: 700; }
+
+  /* DISCLAIMER */
+  .disclaimer { background: #f5f5f5; border-radius: 8px; margin: 0 24px 20px; padding: 14px 18px; font-size: 12px; color: #777; }
+
+  /* META */
+  .meta { text-align: right; padding: 0 24px; font-size: 12px; color: #aaa; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 21px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .top-header { flex-direction: column; gap: 4px; }
+    .highlight-box .amount { font-size: 36px; }
+    .contact-row { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="top-header">
+    <span class="date-tag">📅 2026년 7월 29일</span>
+    <span class="series">오늘의 복지 뉴스 · 제2보</span>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="badge">💼 일자리·중장년 지원</div>
+    <h1>"50살에 취업하면 나라가 <span style="color:#e65100;">360만원</span> 줍니다" — 일손부족 일자리 동행 인센티브 7월 시행, <span style="color:#c62828;">전국 1,000명 선착순</span>이라 지금 고용센터 안 가면 진짜 기회 날립니다!</h1>
+  </div>
+
+  <!-- HIGHLIGHT BOX -->
+  <div class="highlight-box">
+    <div class="amount">최대 360만원</div>
+    <div class="label">만 50~64세 · 제조·운수·창고업 취업 시 국가가 직접 지급</div>
+  </div>
+
+  <!-- HOOK -->
+  <div class="hook">
+    나이 때문에 취업을 포기했다고요? 2026년 7월 1일부터 나라가 먼저 돈을 줍니다. <span class="highlight">만 50~64세가 고용노동부 훈련을 마치고 인력 부족 업종에 취업하면 최대 360만원의 인센티브를 지급</span>합니다. 문제는 전국 1,000명 선착순이라는 것. 이 글을 읽는 지금이 가장 빠른 순간입니다.
+  </div>
+
+  <!-- SUMMARY BOX -->
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>만 50~64세 · 중장년 훈련 수료 후 인력부족 업종 취업 시 최대 360만원</li>
+      <li>6개월 근속 → 180만원 / 12개월 근속 → 180만원 추가 지급</li>
+      <li>전국 1,000명 한정 · 7월 1일부터 선착순 접수 중, 지금 고용센터 방문!</li>
+    </ul>
+  </div>
+
+  <!-- 배경 -->
+  <div class="section">
+    <h2>🔍 왜 이 제도가 생겼나</h2>
+    <p>제조업·운수업·창고업 등 핵심 산업군에서 구인난이 심화되고 있습니다. 반면 만 50세 이상 중장년층은 취업 시장에서 연령 차별로 어려움을 겪고 있습니다. 이 두 문제를 동시에 해결하기 위해 고용노동부가 '일손부족 일자리 동행 인센티브' 사업을 2026년 7월 1일부터 시범 시행했습니다.</p>
+    <p>단순 취업 연계가 아니라 <strong>국가 훈련 이수 → 인력부족 업종 취업 → 근속 유지</strong>라는 경로를 완수한 사람에게 현금 인센티브를 지급하는 방식입니다. 취업 후에도 실질적 근속을 유도하는 설계가 특징입니다.</p>
+    <p>2026년은 시범 사업으로 전국 1,000명에게만 지급하기 때문에 <strong>빠른 신청이 절대적으로 유리</strong>합니다.</p>
+  </div>
+
+  <!-- TABLE -->
+  <div class="section">
+    <h2>📊 지원 조건 및 금액 상세</h2>
+    <table>
+      <thead><tr><th>항목</th><th>내용</th></tr></thead>
+      <tbody>
+        <tr><td><strong>지원 대상</strong></td><td>취업일 기준 만 50~64세 대한민국 국적자</td></tr>
+        <tr><td><strong>훈련 조건</strong></td><td>고용노동부/관련 기관 운영 중장년 훈련·일경험 프로그램 수료</td></tr>
+        <tr><td><strong>취업 업종</strong></td><td>제조업·운수업·창고업 등 인력부족 지정 업종</td></tr>
+        <tr><td><strong>1차 지급 (6개월 근속)</strong></td><td>인센티브 <strong>180만원</strong></td></tr>
+        <tr><td><strong>2차 지급 (12개월 근속)</strong></td><td>인센티브 <strong>180만원 추가</strong></td></tr>
+        <tr><td><strong>최대 수령액</strong></td><td><strong>360만원</strong> (6개월 + 12개월)</td></tr>
+        <tr><td><strong>지원 인원</strong></td><td>전국 1,000명 한정 (선착순)</td></tr>
+        <tr><td><strong>접수 시작</strong></td><td>2026년 7월 1일부터</td></tr>
+        <tr><td><strong>신청 장소</strong></td><td>전국 지방고용노동청 및 고용센터</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SVG INFOGRAPHIC -->
+  <div class="svg-wrap">
+    <h2>📈 인센티브 지급 타임라인</h2>
+    <svg viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:10px;background:#fff8f0;">
+      <!-- 타임라인 선 -->
+      <line x1="60" y1="100" x2="620" y2="100" stroke="#e0e0e0" stroke-width="3"/>
+
+      <!-- 시작점: 훈련 수료·취업 -->
+      <circle cx="80" cy="100" r="18" fill="#e65100"/>
+      <text x="80" y="105" text-anchor="middle" font-size="12" fill="white" font-weight="bold">시작</text>
+      <text x="80" y="130" text-anchor="middle" font-size="11" fill="#555">훈련 수료</text>
+      <text x="80" y="143" text-anchor="middle" font-size="11" fill="#555">취업</text>
+
+      <!-- 화살표 점선 -->
+      <line x1="100" y1="100" x2="330" y2="100" stroke="#f57c00" stroke-width="2.5" stroke-dasharray="8,4"/>
+
+      <!-- 6개월 체크포인트 -->
+      <circle cx="350" cy="100" r="22" fill="#f57c00"/>
+      <text x="350" y="95" text-anchor="middle" font-size="11" fill="white" font-weight="bold">6개월</text>
+      <text x="350" y="108" text-anchor="middle" font-size="11" fill="white" font-weight="bold">근속</text>
+      <text x="350" y="140" text-anchor="middle" font-size="15" fill="#e65100" font-weight="bold">+180만원</text>
+      <rect x="295" y="50" width="110" height="30" rx="6" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+      <text x="350" y="70" text-anchor="middle" font-size="13" fill="#bf360c" font-weight="bold">1차 인센티브</text>
+
+      <!-- 화살표 점선 -->
+      <line x1="374" y1="100" x2="580" y2="100" stroke="#c62828" stroke-width="2.5" stroke-dasharray="8,4"/>
+
+      <!-- 12개월 체크포인트 -->
+      <circle cx="600" cy="100" r="22" fill="#c62828"/>
+      <text x="600" y="95" text-anchor="middle" font-size="11" fill="white" font-weight="bold">12개월</text>
+      <text x="600" y="108" text-anchor="middle" font-size="11" fill="white" font-weight="bold">근속</text>
+      <text x="600" y="140" text-anchor="middle" font-size="15" fill="#c62828" font-weight="bold">+180만원</text>
+      <rect x="545" y="50" width="110" height="30" rx="6" fill="#ffebee" stroke="#c62828" stroke-width="1.5"/>
+      <text x="600" y="70" text-anchor="middle" font-size="13" fill="#b71c1c" font-weight="bold">2차 인센티브</text>
+
+      <!-- 합계 -->
+      <text x="340" y="190" text-anchor="middle" font-size="14" fill="#e65100" font-weight="bold">총 최대 360만원 수령!</text>
+    </svg>
+  </div>
+
+  <!-- 대상 업종 -->
+  <div class="section">
+    <h2>🏭 인력부족 취업 가능 업종</h2>
+    <table>
+      <thead><tr><th>업종</th><th>세부 예시</th></tr></thead>
+      <tbody>
+        <tr><td>제조업</td><td>금속·기계·자동차 부품·식품 가공·전자 조립 등</td></tr>
+        <tr><td>운수업</td><td>화물차 운전·택배 배송·버스·특수차량 운전 등</td></tr>
+        <tr><td>창고업</td><td>물류창고 운영·재고 관리·하역 작업 등</td></tr>
+        <tr><td>기타 인력부족 지정 업종</td><td>고용노동부 고시 기준 — 고용센터 확인 필요</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:13px;color:#888;margin-top:8px;">※ 정확한 해당 업종 목록은 거주지 관할 고용센터에서 확인하세요.</p>
+  </div>
+
+  <!-- 신청 방법 -->
+  <div class="section">
+    <h2>📝 신청 방법 (단계별)</h2>
+  </div>
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-text"><strong>훈련 프로그램 참여</strong><br>고용노동부 또는 관련 기관이 운영하는 중장년 직업훈련·일경험 프로그램에 먼저 등록·수료해야 합니다. 고용센터에서 안내받을 수 있습니다.</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-text"><strong>인력부족 업종 취업</strong><br>훈련 수료 후 제조·운수·창고업 등 인력부족 지정 업종에 실제 취업합니다.</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-text"><strong>인센티브 신청서 제출</strong><br>취업 후 관할 지방고용노동청 고용센터에 인센티브 신청서를 제출합니다. 선착순 쿼터가 있으므로 빠를수록 유리합니다.</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-text"><strong>6개월 근속 → 1차 지급 (180만원)</strong><br>고용센터가 근속 확인 후 1차 인센티브 180만원을 지급합니다.</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">5</div>
+      <div class="step-text"><strong>12개월 근속 → 2차 지급 (180만원 추가)</strong><br>12개월 근속이 확인되면 2차 인센티브 180만원을 추가 지급받아 총 360만원을 수령합니다.</div>
+    </div>
+  </div>
+
+  <!-- DEADLINE BOX -->
+  <div class="deadline-box">
+    <h3>⏰ 선착순 1,000명 — 지금 바로 신청하세요!</h3>
+    <p>7월 1일부터 전국 7개 지방고용노동청별로 쿼터가 배정되어 선착순 접수 중입니다. <strong>이미 신청이 진행 중</strong>이므로 관할 지방고용노동청 고용센터에 즉시 방문하거나 전화 문의하는 것이 가장 빠릅니다. 쿼터 소진 시 추가 접수가 불가합니다.</p>
+  </div>
+
+  <!-- CHECKLIST -->
+  <div class="checklist">
+    <h2>✅ 자가진단 체크리스트 — 나도 받을 수 있을까?</h2>
+    <ul>
+      <li>만 50세 이상 64세 이하이다</li>
+      <li>대한민국 국적자이다</li>
+      <li>고용노동부 또는 관련 기관의 중장년 훈련·일경험 프로그램을 수료했거나 수료 예정이다</li>
+      <li>제조·운수·창고업 등 인력부족 업종에 취업하거나 취업 의향이 있다</li>
+      <li>최소 6개월 이상 근속할 의지가 있다</li>
+    </ul>
+  </div>
+
+  <!-- CAUTION -->
+  <div class="caution">
+    <h2>⚠️ 꼭 알아야 할 주의사항</h2>
+    <ol>
+      <li><strong>선착순 마감</strong> — 전국 1,000명 한정이며 지역별 쿼터가 있습니다. 이미 7월 1일부터 접수가 시작됐으므로 빠른 행동이 필요합니다.</li>
+      <li><strong>훈련 수료 선행 필수</strong> — 훈련 없이 바로 취업한 경우 인센티브 대상에서 제외됩니다. 훈련 → 취업의 순서를 반드시 지켜야 합니다.</li>
+      <li><strong>근속 유지 조건</strong> — 중간에 퇴직·이직하면 남은 인센티브는 지급되지 않습니다. 6개월, 12개월 시점에 재직 중이어야 합니다.</li>
+      <li><strong>2026년 시범 사업</strong> — 이 제도는 올해 시범 운영으로, 내년 확대 여부는 미정입니다. 올해 안에 기회를 잡는 것이 현명합니다.</li>
+    </ol>
+  </div>
+
+  <!-- CONTACT BOX -->
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <div class="contact-row">
+      <div class="contact-item"><strong>고용노동부 상담</strong>☎ 1350 (무료)</div>
+      <div class="contact-item"><strong>신청 장소</strong>관할 지방고용노동청 고용센터</div>
+      <div class="contact-item"><strong>온라인 조회</strong>워크넷 work.go.kr</div>
+      <div class="contact-item"><strong>담당 부처</strong>고용노동부 고령자고용과</div>
+    </div>
+  </div>
+
+  <!-- OPINION -->
+  <div class="opinion-section">
+    <h2>💬 전문가 찬반 론평</h2>
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"제조·운수업 인력난과 중장년 취업난을 동시에 해결하는 수요 기반 설계입니다. 단순 알선이 아닌 근속 인센티브를 붙인 점이 실효성을 높일 것으로 기대합니다."</p>
+          <p class="author">— 고령자고용정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"50대 이상은 숙련도와 책임감이 높아 제조업 현장에서 즉시 전력이 될 수 있습니다. 국가가 전환 비용을 지원하는 이 모델은 산업 생태계에도 긍정적입니다."</p>
+          <p class="author">— 중장년 취업 지원 현장 활동가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"전국 1,000명 한도는 수요 대비 너무 작습니다. 인센티브가 확인된 후에야 예산을 확대하는 관행은 필요한 사람이 가장 먼저 배제되는 구조를 만듭니다."</p>
+          <p class="author">— 노동시장 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"인센티브만으로는 장기 근속이 보장되지 않습니다. 사업장의 임금 체계·근로 환경 개선 없이 근속 인센티브만 제공하면 12개월 후 이탈이 반복될 수 있습니다."</p>
+          <p class="author">— 직업능력개발 정책 연구자</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HASHTAGS -->
+  <div class="hashtags">
+    <span>#중장년재취업</span>
+    <span>#50대취업지원금</span>
+    <span>#일손부족인센티브</span>
+    <span>#동행인센티브</span>
+    <span>#360만원지원</span>
+    <span>#고용센터</span>
+    <span>#제조업취업</span>
+    <span>#운수업지원</span>
+    <span>#2026일자리정책</span>
+    <span>#선착순지원금</span>
+  </div>
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+    이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부·업종 목록·지역별 쿼터 현황은 관할 고용센터(☎1350) 또는 고용노동부에 직접 확인하세요. 시범 사업으로 세부 기준이 변경될 수 있습니다.
+  </div>
+
+  <div class="meta">작성일: 2026년 7월 29일 | 복지헬퍼 편집팀</div>
+
+</div>
+</body>
+</html>
