@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"시설 나오면 끝이라고요?" 보호종료청년 자립수당 월 50만원에 미래적금 2,200만원까지 — 5년 안에 신청 안 하면 평생 후회합니다! | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans KR', sans-serif; background: #f7f9fc; color: #222; font-size: 16px; line-height: 1.7; }
+  .container { max-width: 720px; margin: 0 auto; padding: 16px; }
+
+  /* Header */
+  .top-header { background: #1565c0; color: #fff; padding: 10px 16px; font-size: 13px; letter-spacing: 0.5px; display: flex; justify-content: space-between; align-items: center; }
+  .top-header .issue { font-weight: 700; }
+
+  /* Category badge */
+  .badge { display: inline-block; background: #1565c0; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin: 18px 0 10px; }
+
+  /* Main title */
+  .main-title { font-size: 26px; font-weight: 900; line-height: 1.4; color: #111; margin-bottom: 16px; word-break: keep-all; }
+  .main-title em { color: #1565c0; font-style: normal; }
+
+  /* Hook */
+  .hook { border-left: 5px solid #1565c0; padding: 14px 18px; background: #e3f0fd; border-radius: 0 10px 10px 0; margin-bottom: 22px; font-size: 16px; color: #1a1a1a; }
+  .hook .highlight { background: #fff9c4; padding: 0 4px; font-weight: 700; }
+
+  /* Summary box */
+  .summary-box { background: #2e7d32; color: #fff; border-radius: 12px; padding: 18px 20px; margin-bottom: 24px; }
+  .summary-box h2 { font-size: 15px; margin-bottom: 10px; font-weight: 800; }
+  .summary-box ul { padding-left: 18px; }
+  .summary-box ul li { font-size: 14px; line-height: 1.8; }
+
+  /* Section */
+  h2 { font-size: 19px; font-weight: 800; color: #1565c0; margin: 28px 0 12px; padding-bottom: 6px; border-bottom: 2px solid #1565c0; }
+  p { margin-bottom: 14px; font-size: 15px; color: #333; }
+
+  /* Info table */
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 22px; font-size: 14px; }
+  .info-table th { background: #1565c0; color: #fff; padding: 10px 12px; text-align: left; font-weight: 700; }
+  .info-table td { padding: 10px 12px; border-bottom: 1px solid #ddd; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #f0f7ff; }
+  .info-table .val { font-weight: 700; color: #1565c0; }
+
+  /* SVG container */
+  .svg-wrap { background: #fff; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 24px; overflow-x: auto; }
+
+  /* Steps */
+  .steps { counter-reset: step; margin-bottom: 24px; }
+  .step-item { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 14px; }
+  .step-num { background: #1565c0; color: #fff; font-weight: 900; font-size: 14px; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .step-text { font-size: 14px; padding-top: 5px; color: #333; }
+  .step-text strong { color: #1565c0; }
+
+  /* Deadline box */
+  .deadline-box { border: 2px dashed #f57c00; border-radius: 12px; padding: 16px 20px; background: #fff8e1; margin-bottom: 24px; }
+  .deadline-box h3 { color: #f57c00; font-size: 15px; font-weight: 800; margin-bottom: 10px; }
+  .deadline-box p { font-size: 14px; margin-bottom: 6px; color: #555; }
+
+  /* Checklist */
+  .checklist { background: #f3f7ff; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .checklist h3 { font-size: 15px; font-weight: 800; color: #1565c0; margin-bottom: 12px; }
+  .checklist ul { list-style: none; }
+  .checklist ul li { font-size: 14px; padding: 6px 0; border-bottom: 1px solid #dce8ff; color: #333; }
+  .checklist ul li::before { content: "✓ "; color: #1565c0; font-weight: 700; }
+  .checklist ul li:last-child { border-bottom: none; }
+
+  /* Caution */
+  .caution { background: #fff3f3; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; border-left: 5px solid #c62828; }
+  .caution h3 { color: #c62828; font-size: 15px; font-weight: 800; margin-bottom: 10px; }
+  .caution p { font-size: 14px; color: #555; margin-bottom: 8px; }
+
+  /* Contact box */
+  .contact-box { background: #1565c0; color: #fff; border-radius: 12px; padding: 18px 20px; margin-bottom: 24px; }
+  .contact-box h3 { font-size: 15px; font-weight: 800; margin-bottom: 12px; }
+  .contact-box p { font-size: 14px; margin-bottom: 6px; }
+  .contact-box a { color: #ffe082; }
+
+  /* Opinion */
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  /* Hashtags */
+  .hashtags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+  .hashtags span { background: #e3f0fd; color: #1565c0; font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 20px; }
+
+  /* Disclaimer */
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12px; color: #888; margin-bottom: 16px; line-height: 1.6; }
+
+  /* Meta */
+  .meta { text-align: right; font-size: 12px; color: #aaa; padding-bottom: 20px; }
+
+  @media (max-width: 600px) {
+    .main-title { font-size: 20px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .top-header { flex-direction: column; gap: 4px; font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+<div class="top-header">
+  <span>📅 2026년 8월 1일 · 오늘의 복지 뉴스 제1보</span>
+  <span class="issue">청년 자립 지원 특집</span>
+</div>
+
+<div class="container">
+
+  <span class="badge">🏠 청년 자립 · 보호종료</span>
+
+  <h1 class="main-title">"시설 나오면 끝이라고요?" <em>보호종료청년 자립수당 월 50만원</em>에 미래적금 2,200만원까지 — 5년 안에 신청 안 하면 평생 후회합니다!</h1>
+
+  <div class="hook">
+    보호시설이나 가정위탁에서 만 18세가 되어 나온 순간, 아무 연고 없이 세상에 혼자 서야 합니다. 그 청년들을 위해 <span class="highlight">나라가 월 50만원을 최대 60회(5년), 총 3,000만원을 지급</span>합니다. 대부분이 몰라서 신청조차 못 하고 있습니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>보호종료 후 5년 이내라면 <strong>지금 당장 신청 가능</strong> (소득 기준 없음)</li>
+      <li>자립수당 월 50만원 × 최대 60회 + 미래적금 최대 2,200만원 + 자립정착금 1,000만원</li>
+      <li>복지로 온라인 또는 관할 주민센터에서 신청, 당장 오늘 접수 가능</li>
+    </ul>
+  </div>
+
+  <h2>📖 배경 — 왜 이 정책이 생겼나</h2>
+  <p>아동복지시설·공동생활가정·가정위탁 등에서 보호를 받다가 만 18세 이후 보호가 종료되면, 청년은 하루아침에 의지할 곳 없는 세상으로 나옵니다. 이를 <strong>'보호종료청년'</strong> 또는 <strong>'자립준비청년'</strong>이라 부릅니다.</p>
+  <p>이들의 자립 실패율은 일반 청년 대비 훨씬 높습니다. 고독사, 주거 불안정, 취업 실패가 반복되는 악순환을 끊기 위해 정부는 2019년부터 자립수당을 도입했고, 2026년 들어 지원 범위와 금액을 대폭 확대했습니다.</p>
+  <p>특히 2024년 2월부터는 만 15세 이후 조기 보호종료된 경우도 지원 대상에 포함되어 <strong>더 많은 청년이 혜택을 받을 수 있게</strong>됐습니다.</p>
+
+  <h2>📊 지원 내용 상세</h2>
+  <table class="info-table">
+    <tr><th>구분</th><th>내용</th></tr>
+    <tr><td>자립수당</td><td class="val">월 50만원 × 최대 60회차 (보호종료일이 속한 달부터 산정)</td></tr>
+    <tr><td>자립정착금</td><td class="val">1,000만원 이상 (전국 17개 시·도 지급, 지자체별 최대 1,500만원)</td></tr>
+    <tr><td>청년미래적금</td><td class="val">본인 적립 + 정부 매칭 → 최대 2,200만원 수령 가능</td></tr>
+    <tr><td>주거 지원</td><td>LH 공공임대 우선공급 + 월세 보증금 무이자 대출</td></tr>
+    <tr><td>구직 지원금</td><td>취업 준비 기간 월 최대 50만원 구직촉진수당 별도 신청 가능</td></tr>
+    <tr><td>지원 기간</td><td>보호종료일부터 최대 5년 (60회차) 이내 신청 필수</td></tr>
+    <tr><td>지급일</td><td>매월 20일 본인 명의 계좌 입금</td></tr>
+    <tr><td>소득 기준</td><td class="val">없음 (소득·재산 상관없이 신청 가능)</td></tr>
+  </table>
+
+  <h2>📈 자립 지원 전체 패키지 한눈에 보기</h2>
+  <div class="svg-wrap">
+    <svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;">
+      <defs>
+        <linearGradient id="bg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1565c0"/><stop offset="100%" stop-color="#1976d2"/></linearGradient>
+        <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2e7d32"/><stop offset="100%" stop-color="#388e3c"/></linearGradient>
+        <linearGradient id="bg3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#6a1b9a"/><stop offset="100%" stop-color="#7b1fa2"/></linearGradient>
+        <linearGradient id="bg4" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f57c00"/><stop offset="100%" stop-color="#fb8c00"/></linearGradient>
+      </defs>
+      <!-- Title -->
+      <text x="340" y="30" text-anchor="middle" font-size="15" font-weight="800" fill="#111">자립준비청년 4대 지원 패키지 (2026)</text>
+
+      <!-- Card 1: 자립수당 -->
+      <rect x="20" y="50" width="145" height="240" rx="12" fill="url(#bg1)"/>
+      <text x="92" y="80" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">💰 자립수당</text>
+      <text x="92" y="115" text-anchor="middle" font-size="24" fill="#fff" font-weight="900">月50만</text>
+      <text x="92" y="140" text-anchor="middle" font-size="12" fill="#bbe1ff">최대 60회차</text>
+      <text x="92" y="175" text-anchor="middle" font-size="11" fill="#e3f2fd">총 최대</text>
+      <text x="92" y="205" text-anchor="middle" font-size="22" fill="#ffe082" font-weight="900">3,000만원</text>
+      <text x="92" y="265" text-anchor="middle" font-size="10" fill="#cce3ff">소득기준 없음</text>
+      <text x="92" y="280" text-anchor="middle" font-size="10" fill="#cce3ff">매월 20일 지급</text>
+
+      <!-- Card 2: 자립정착금 -->
+      <rect x="178" y="50" width="145" height="240" rx="12" fill="url(#bg2)"/>
+      <text x="250" y="80" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">🏦 자립정착금</text>
+      <text x="250" y="115" text-anchor="middle" font-size="24" fill="#fff" font-weight="900">1,000만</text>
+      <text x="250" y="140" text-anchor="middle" font-size="12" fill="#c8e6c9">일시금 지급</text>
+      <text x="250" y="175" text-anchor="middle" font-size="11" fill="#e8f5e9">지자체별 최대</text>
+      <text x="250" y="205" text-anchor="middle" font-size="22" fill="#ffe082" font-weight="900">1,500만원</text>
+      <text x="250" y="265" text-anchor="middle" font-size="10" fill="#c8e6c9">전국 17개 시·도</text>
+      <text x="250" y="280" text-anchor="middle" font-size="10" fill="#c8e6c9">보호종료 전 신청</text>
+
+      <!-- Card 3: 미래적금 -->
+      <rect x="336" y="50" width="145" height="240" rx="12" fill="url(#bg3)"/>
+      <text x="408" y="80" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">📈 미래적금</text>
+      <text x="408" y="115" text-anchor="middle" font-size="24" fill="#fff" font-weight="900">최대</text>
+      <text x="408" y="145" text-anchor="middle" font-size="22" fill="#fff" font-weight="900">2,200만원</text>
+      <text x="408" y="175" text-anchor="middle" font-size="11" fill="#e1bee7">본인 적립+정부 매칭</text>
+      <text x="408" y="205" text-anchor="middle" font-size="20" fill="#ffe082" font-weight="900">목돈 마련</text>
+      <text x="408" y="265" text-anchor="middle" font-size="10" fill="#d1c4e9">은행 협약 적금</text>
+      <text x="408" y="280" text-anchor="middle" font-size="10" fill="#d1c4e9">자립지원기관 연계</text>
+
+      <!-- Card 4: 주거+기타 -->
+      <rect x="494" y="50" width="165" height="240" rx="12" fill="url(#bg4)"/>
+      <text x="577" y="80" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">🏠 주거+구직</text>
+      <text x="577" y="110" text-anchor="middle" font-size="12" fill="#fff">LH 공공임대</text>
+      <text x="577" y="130" text-anchor="middle" font-size="14" fill="#ffe082" font-weight="800">우선공급</text>
+      <text x="577" y="160" text-anchor="middle" font-size="12" fill="#fff">보증금 무이자 대출</text>
+      <text x="577" y="185" text-anchor="middle" font-size="12" fill="#fff">구직촉진수당</text>
+      <text x="577" y="205" text-anchor="middle" font-size="14" fill="#ffe082" font-weight="800">月 최대 50만원</text>
+      <text x="577" y="260" text-anchor="middle" font-size="10" fill="#fff3e0">고용센터 연계</text>
+      <text x="577" y="278" text-anchor="middle" font-size="10" fill="#fff3e0">자립지원기관 사례관리</text>
+
+      <!-- Bottom label -->
+      <text x="340" y="308" text-anchor="middle" font-size="12" fill="#888">※ 중복 수령 가능 · 신청 기한: 보호종료 후 5년 이내</text>
+    </svg>
+  </div>
+
+  <h2>📋 신청 방법 (단계별)</h2>
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-text"><strong>보호종료 여부 확인</strong> — 아동복지시설·공동생활가정·가정위탁 등 보호종료 사실 확인. 만 15세 이후 조기 종료자도 포함.</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-text"><strong>신청 방법 선택</strong> — ① 복지로(www.bokjiro.go.kr) 온라인 신청 ② 주민등록상 주소지 관할 <strong>읍·면·동 주민센터</strong> 방문 신청</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-text"><strong>구비 서류 제출</strong> — 신분증, 보호종료 확인서(시설·가정위탁 담당자 발급), 통장 사본. 자립정착금은 시설 퇴소 전 담당 사회복지사에게 요청.</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-text"><strong>심사 및 지급 결정</strong> — 접수 후 약 2~3주 내 결정 통보. 승인 후 매월 20일부터 자립수당 지급 시작.</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">5</div>
+      <div class="step-text"><strong>미래적금·주거지원 추가 신청</strong> — 자립지원전담기관 연계 후 미래적금 개설, LH 주거 신청 진행. 자립지원 전담기관 매칭을 요청하면 원스톱 연계 가능.</div>
+    </div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>⏰ 절대 놓치면 안 되는 신청 기한</h3>
+    <p>✔ 자립수당은 <strong>보호종료일부터 5년 이내(60회차)</strong> 신청 가능. 늦게 신청하면 신청일 이후 회차만 인정, 이전 기간 소급 불가!</p>
+    <p>✔ 자립정착금은 <strong>보호종료 전 시설 담당자</strong>에게 신청해야 누락 없이 수령 가능.</p>
+    <p>✔ 미래적금은 보호종료 후 일정 기간 내 개설 조건 있으니 자립지원기관 통해 즉시 확인 필수.</p>
+  </div>
+
+  <div class="checklist">
+    <h3>✅ 자가 진단 체크리스트 — 나는 해당될까?</h3>
+    <ul>
+      <li>아동복지시설·공동생활가정·가정위탁에서 보호받은 경험이 있다</li>
+      <li>만 18세 이후(또는 만 15세 이후 조기 종료) 보호가 끝났다</li>
+      <li>보호종료일 기준 아직 5년(60회차)이 지나지 않았다</li>
+      <li>현재 본인 명의 통장이 있거나 개설 가능하다</li>
+      <li>자립수당을 아직 한 번도 신청한 적이 없다</li>
+    </ul>
+  </div>
+
+  <div class="caution">
+    <h3>⚠️ 주의사항</h3>
+    <p>① 보호종료 후 신청일 기준으로 회차가 산정됩니다. 과거 기간은 소급 지급되지 않으니 빠를수록 유리합니다.</p>
+    <p>② 사망, 군 복무, 수감 기간은 수당 지급이 중단되나 지급 기간에서 제외되어 해당 회차는 보존됩니다.</p>
+    <p>③ 자립수당과 자립정착금은 중복 수령 가능하지만, 다른 국가 보조금(기초생활급여 등)과 소득에 반영될 수 있으니 확인 필요.</p>
+    <p>④ 민간 자립지원기관 이름으로 과도한 수수료를 요구하면 사기일 수 있으니 반드시 공식 기관(주민센터, 복지로) 통해 신청하세요.</p>
+  </div>
+
+  <div class="contact-box">
+    <h3>📞 담당 기관 및 문의처</h3>
+    <p>• <strong>복지로 온라인 신청</strong>: <a href="https://www.bokjiro.go.kr" target="_blank">www.bokjiro.go.kr</a></p>
+    <p>• <strong>복지상담 콜센터</strong>: ☎ 129 (24시간)</p>
+    <p>• <strong>읍·면·동 주민센터</strong>: 주민등록 주소지 관할 센터 방문</p>
+    <p>• <strong>아동권리보장원 자립지원팀</strong>: ☎ 02-6383-7000</p>
+    <p>• <strong>자립지원전담기관</strong>: 전국 17개 시·도 소재 (복지로에서 가까운 기관 검색)</p>
+    <p>• <strong>보건복지부 아동복지정책과</strong>: ☎ 044-202-3425</p>
+  </div>
+
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"보호종료 이후 사회적 안전망이 전무하던 청년들에게 월 50만원 수당은 단순한 용돈이 아니라 사회 참여의 최소 발판입니다. 60회차 지급은 자립의 '골든타임'을 실질적으로 보호하는 제도적 진전입니다."</p>
+          <p class="author">— 아동자립 정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"자립정착금 1,000만원에 미래적금 2,200만원까지 합치면 보호종료청년이 스스로 주거를 마련할 수 있는 종잣돈이 됩니다. 소득기준 없이 보호종료 사실만으로 지급되는 것이 이 제도의 핵심 강점입니다."</p>
+          <p class="author">— 청소년 자립 지원 활동가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"현금 지원만으로는 자립이 완성되지 않습니다. 수당을 받는 동안 사례관리·멘토링·취업 연계가 동시에 이루어지지 않으면 5년 후 또다시 같은 위기가 반복될 수 있습니다."</p>
+          <p class="author">— 사회복지학과 교수</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"자립지원전담기관의 인력과 예산이 수요를 따라가지 못하고 있습니다. 대상자 수는 확대됐지만 현장에서 1인 담당자가 수십 명을 관리하는 구조가 지속되면 실질적 사례관리 품질이 보장되기 어렵습니다."</p>
+          <p class="author">— 사회복지 현장 활동가</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    <span>#자립준비청년</span>
+    <span>#보호종료청년</span>
+    <span>#자립수당</span>
+    <span>#자립정착금</span>
+    <span>#청년복지</span>
+    <span>#미래적금</span>
+    <span>#아동복지시설</span>
+    <span>#가정위탁</span>
+    <span>#보호종료</span>
+    <span>#청년지원2026</span>
+  </div>
+
+  <div class="disclaimer">
+    ※ 이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부와 금액은 담당 기관(주민센터·복지로·아동권리보장원)에 직접 확인하세요. 지자체별 자립정착금 금액은 상이할 수 있습니다.
+  </div>
+
+  <div class="meta">작성일: 2026-08-01 | 오늘의 복지 뉴스</div>
+
+</div>
+</body>
+</html>
