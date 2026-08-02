@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"월 소득 250만원인데도 복지 받을 수 있다고요?" 차상위계층이면 연간 100만원 이상 혜택 — 모르면 평생 손해, 지금 바로 확인하세요! | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans KR', Apple SD Gothic Neo, sans-serif; background: #fff; color: #222; line-height: 1.75; font-size: 15px; max-width: 780px; margin: 0 auto; padding: 0 16px 40px; }
+  .top-header { background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%); color: #fff; padding: 14px 18px; border-radius: 10px; margin: 18px 0 20px; display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 700; }
+  .badge { background: rgba(255,255,255,0.25); padding: 3px 10px; border-radius: 30px; font-size: 12px; }
+  .category-badge { display: inline-block; background: #1565c0; color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 800; margin-bottom: 10px; }
+  h1 { font-size: 26px; font-weight: 900; line-height: 1.4; color: #1a1a1a; margin-bottom: 16px; }
+  h1 .point { color: #0d47a1; }
+  .hook { border-left: 5px solid #1565c0; background: #e3f2fd; padding: 14px 18px; margin: 18px 0; border-radius: 0 8px 8px 0; font-size: 15.5px; }
+  .hook .highlight { background: #bbdefb; padding: 1px 4px; border-radius: 3px; font-weight: 800; }
+  .summary-box { background: #1b5e20; color: #fff; border-radius: 12px; padding: 20px 22px; margin: 20px 0; }
+  .summary-box h2 { font-size: 16px; margin-bottom: 12px; }
+  .summary-box ul { list-style: none; }
+  .summary-box ul li { padding: 5px 0; font-size: 14.5px; }
+  .summary-box ul li::before { content: "📌 "; }
+  h2 { font-size: 19px; font-weight: 800; margin: 28px 0 12px; color: #1565c0; }
+  h3 { font-size: 16px; font-weight: 800; margin: 18px 0 8px; color: #333; }
+  p { margin-bottom: 12px; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+  th { background: #1565c0; color: #fff; padding: 10px 12px; text-align: center; font-weight: 800; }
+  td { padding: 10px 12px; border: 1px solid #bbdefb; text-align: center; }
+  tr:nth-child(even) td { background: #e3f2fd; }
+  .amount { font-weight: 900; font-size: 16px; color: #0d47a1; }
+  .deadline-box { border: 3px dashed #1565c0; background: #e3f2fd; border-radius: 10px; padding: 16px 18px; margin: 22px 0; }
+  .deadline-box .dl-title { font-size: 15px; font-weight: 900; color: #1565c0; margin-bottom: 8px; }
+  .step-list { list-style: none; counter-reset: step-counter; margin: 14px 0; }
+  .step-list li { counter-increment: step-counter; padding: 10px 14px; border-left: 4px solid #1565c0; background: #e3f2fd; margin-bottom: 8px; border-radius: 0 8px 8px 0; position: relative; padding-left: 46px; }
+  .step-list li::before { content: "STEP " counter(step-counter); position: absolute; left: 10px; font-size: 11px; font-weight: 900; color: #1565c0; top: 12px; }
+  .checklist { list-style: none; margin: 12px 0; }
+  .checklist li { padding: 8px 0; border-bottom: 1px solid #bbdefb; font-size: 14.5px; }
+  .checklist li::before { content: "✓ "; color: #1565c0; font-weight: 900; }
+  .caution { margin: 6px 0; }
+  .contact-box { background: linear-gradient(135deg, #e3f2fd, #bbdefb); border-left: 5px solid #1565c0; border-radius: 10px; padding: 18px 20px; margin: 22px 0; }
+  .contact-box .ct-title { font-size: 16px; font-weight: 900; color: #1565c0; margin-bottom: 10px; }
+  .contact-box p { margin: 4px 0; font-size: 14.5px; }
+  .benefit-card { background: #fff; border: 2px solid #1565c0; border-radius: 10px; padding: 14px 16px; margin: 8px 0; }
+  .benefit-card .b-title { font-weight: 900; color: #0d47a1; font-size: 15px; margin-bottom: 6px; }
+  .benefit-card .b-amount { font-size: 20px; font-weight: 900; color: #e65100; }
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  .hashtags { margin: 24px 0; color: #1565c0; font-weight: 700; font-size: 14px; line-height: 2; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; margin: 22px 0; font-size: 12.5px; color: #777; }
+  .meta { text-align: right; font-size: 12px; color: #aaa; margin-top: 10px; }
+  svg { width: 100%; max-width: 700px; display: block; margin: 0 auto; }
+  .income-box { background: #0d47a1; color: #fff; border-radius: 10px; padding: 16px 18px; margin: 14px 0; }
+  .income-box table { color: #fff; }
+  .income-box th { background: rgba(255,255,255,0.2); }
+  .income-box td { border-color: rgba(255,255,255,0.2); }
+  @media (max-width: 600px) {
+    h1 { font-size: 21px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    table { font-size: 13px; }
+    th, td { padding: 8px 6px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- STEP 1: 상단 헤더 -->
+<div class="top-header">
+  <span>📅 2026년 8월 2일</span>
+  <span class="badge">오늘의 복지 뉴스 · 제2보</span>
+</div>
+
+<!-- STEP 2: 섹션 배지 -->
+<span class="category-badge">🏛️ 제도·자격 확인</span>
+
+<!-- STEP 3: 메인 제목 -->
+<h1>"월 소득 250만원인데도 <span class="point">복지 받을 수 있다고요?</span>" 차상위계층이면 연간 100만원 이상 혜택 — 모르면 평생 손해, 지금 바로 확인하세요!</h1>
+
+<!-- STEP 4: 훅 -->
+<div class="hook">
+  "기초수급자는 아니니까 나는 아무것도 못 받겠지"라고 생각하셨다면 큰 오산입니다. <span class="highlight">차상위계층으로만 확인받으면 전기료·의료비·문화비·통신비까지 연간 최소 100만원 이상</span> 아낄 수 있습니다. 2026년에는 기준이 완화돼 더 많은 분들이 해당됩니다.
+</div>
+
+<!-- STEP 5: 핵심 요약 박스 -->
+<div class="summary-box">
+  <h2>📌 이것만 알면 됩니다</h2>
+  <ul>
+    <li>차상위계층 = 기준 중위소득 50% 이하 가구 (4인 가구 월 324만 7천원 이하)</li>
+    <li>주민센터에서 '차상위계층 확인서' 발급받으면 10여 가지 혜택 동시 적용</li>
+    <li>부양의무자 기준 완화로 2026년 더 많은 가구가 자격 충족</li>
+  </ul>
+</div>
+
+<!-- STEP 6: 배경/문제 -->
+<h2>📖 차상위계층이란? 왜 이게 중요한가</h2>
+<p>우리나라 복지 제도는 '기초생활수급자'만 받는 게 아닙니다. 그 바로 위 소득 구간, 즉 <strong>기준 중위소득 50% 이하</strong>에 해당하는 가구를 '차상위계층'으로 분류하고, 이 분들에게도 다양한 지원을 제공합니다. 문제는 상당수의 가구가 본인이 차상위계층인지도 모르고, 자격 확인 신청을 하지 않아 혜택을 통째로 놓친다는 것입니다.</p>
+
+<p>더 큰 문제는 혜택이 꽤 크다는 겁니다. 전기요금 할인, 통신요금 감면, 의료비 본인부담금 경감, 문화누리카드, 에너지바우처, 교육비 지원까지 합산하면 <strong>연간 100만원을 훌쩍 넘는 절감 효과</strong>가 있습니다. 2026년에는 중위소득 인상(4인 가구 기준 649만원으로 6.51% 상승)으로 차상위계층 소득 기준도 함께 올라 <strong>이전보다 더 많은 분들이 해당</strong>될 수 있습니다.</p>
+
+<!-- STEP 7: 소득 기준 표 -->
+<h2>💰 2026년 차상위계층 소득 기준 (기준 중위소득 50%)</h2>
+<table>
+  <tr>
+    <th>가구원수</th>
+    <th>월 소득 기준 (세전 합산)</th>
+    <th>비고</th>
+  </tr>
+  <tr>
+    <td>1인 가구</td>
+    <td class="amount">약 114만원 이하</td>
+    <td>재산·금융재산 함께 심사</td>
+  </tr>
+  <tr>
+    <td>2인 가구</td>
+    <td class="amount">약 188만원 이하</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>3인 가구</td>
+    <td class="amount">약 241만원 이하</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>4인 가구</td>
+    <td class="amount">약 324만원 이하</td>
+    <td>2026년 기준 중위소득 6.51% 인상 반영</td>
+  </tr>
+  <tr>
+    <td>5인 가구</td>
+    <td class="amount">약 402만원 이하</td>
+    <td></td>
+  </tr>
+</table>
+<p style="font-size:12.5px;color:#888;">※ 소득만으로 판단하지 않습니다. 재산, 금융재산, 부채 등을 함께 고려한 소득인정액을 기준으로 합니다. 정확한 자격은 주민센터 상담을 통해 확인하세요.</p>
+
+<!-- STEP 8: SVG 인포그래픽 — 차상위계층 혜택 지도 -->
+<h2>📊 차상위계층이 받을 수 있는 혜택 한눈에 보기</h2>
+<svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="차상위계층 혜택 인포그래픽">
+  <rect width="700" height="380" rx="14" fill="#e3f2fd"/>
+  <text x="350" y="32" text-anchor="middle" font-size="15" font-weight="900" fill="#0d47a1">차상위계층 주요 혜택 한눈에 보기 (2026년)</text>
+
+  <!-- 중앙 원 -->
+  <circle cx="350" cy="200" r="55" fill="#1565c0"/>
+  <text x="350" y="193" text-anchor="middle" font-size="13" font-weight="900" fill="#fff">차상위</text>
+  <text x="350" y="213" text-anchor="middle" font-size="13" font-weight="900" fill="#fff">계층</text>
+
+  <!-- 혜택 카드 6개 -->
+  <!-- 상단 왼쪽 -->
+  <rect x="40" y="55" width="180" height="68" rx="10" fill="#fff" stroke="#1565c0" stroke-width="2"/>
+  <text x="130" y="82" text-anchor="middle" font-size="12" font-weight="900" fill="#1565c0">⚡ 전기요금 할인</text>
+  <text x="130" y="104" text-anchor="middle" font-size="13" font-weight="900" fill="#e65100">월 8,000원 할인</text>
+
+  <!-- 상단 오른쪽 -->
+  <rect x="480" y="55" width="180" height="68" rx="10" fill="#fff" stroke="#1565c0" stroke-width="2"/>
+  <text x="570" y="82" text-anchor="middle" font-size="12" font-weight="900" fill="#1565c0">📱 통신요금 감면</text>
+  <text x="570" y="104" text-anchor="middle" font-size="13" font-weight="900" fill="#e65100">월 최대 35% 할인</text>
+
+  <!-- 중간 왼쪽 -->
+  <rect x="20" y="165" width="190" height="68" rx="10" fill="#fff" stroke="#1565c0" stroke-width="2"/>
+  <text x="115" y="192" text-anchor="middle" font-size="12" font-weight="900" fill="#1565c0">🏥 의료비 경감</text>
+  <text x="115" y="214" text-anchor="middle" font-size="13" font-weight="900" fill="#e65100">본인부담 50% 감면</text>
+
+  <!-- 중간 오른쪽 -->
+  <rect x="490" y="165" width="190" height="68" rx="10" fill="#fff" stroke="#1565c0" stroke-width="2"/>
+  <text x="585" y="192" text-anchor="middle" font-size="12" font-weight="900" fill="#1565c0">🎭 문화누리카드</text>
+  <text x="585" y="214" text-anchor="middle" font-size="13" font-weight="900" fill="#e65100">연 14만원 지원</text>
+
+  <!-- 하단 왼쪽 -->
+  <rect x="40" y="280" width="180" height="68" rx="10" fill="#fff" stroke="#1565c0" stroke-width="2"/>
+  <text x="130" y="307" text-anchor="middle" font-size="12" font-weight="900" fill="#1565c0">🌡️ 에너지바우처</text>
+  <text x="130" y="329" text-anchor="middle" font-size="13" font-weight="900" fill="#e65100">냉난방비 지원</text>
+
+  <!-- 하단 오른쪽 -->
+  <rect x="480" y="280" width="180" height="68" rx="10" fill="#fff" stroke="#1565c0" stroke-width="2"/>
+  <text x="570" y="307" text-anchor="middle" font-size="12" font-weight="900" fill="#1565c0">📚 교육비 지원</text>
+  <text x="570" y="329" text-anchor="middle" font-size="13" font-weight="900" fill="#e65100">급식비·교재비 등</text>
+
+  <!-- 연결선 -->
+  <line x1="220" y1="89" x2="300" y2="165" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="4"/>
+  <line x1="480" y1="89" x2="400" y2="165" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="4"/>
+  <line x1="210" y1="199" x2="295" y2="200" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="4"/>
+  <line x1="490" y1="199" x2="405" y2="200" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="4"/>
+  <line x1="220" y1="314" x2="305" y2="242" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="4"/>
+  <line x1="480" y1="314" x2="395" y2="242" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="4"/>
+</svg>
+
+<!-- 혜택 상세 -->
+<h2>🎁 차상위계층 혜택 상세 (2026년 기준)</h2>
+
+<div class="benefit-card">
+  <div class="b-title">⚡ 전기요금 할인</div>
+  <div class="b-amount">월 최대 8,000원 할인 → 연간 96,000원 절감</div>
+  <p style="margin-top:6px;font-size:13.5px;">한국전력공사에 차상위계층 확인서 제출 → 자동 할인 적용. 별도 신청 필요.</p>
+</div>
+
+<div class="benefit-card">
+  <div class="b-title">📱 통신요금 감면 (알뜰폰·이동통신)</div>
+  <div class="b-amount">가입비 면제 + 월 통신요금 최대 35% 할인</div>
+  <p style="margin-top:6px;font-size:13.5px;">이동통신사 또는 알뜰폰 매장에서 차상위 확인서 제출. 약정요금에서 직접 할인.</p>
+</div>
+
+<div class="benefit-card">
+  <div class="b-title">🏥 의료급여 2종 또는 본인부담 경감</div>
+  <div class="b-amount">외래 진료비 본인부담 50% 감면</div>
+  <p style="margin-top:6px;font-size:13.5px;">의료급여 2종에 해당하거나 건강보험 본인부담 경감 적용. 처방전당 부담금 대폭 감소.</p>
+</div>
+
+<div class="benefit-card">
+  <div class="b-title">🎭 문화누리카드 (2026년 신규 발급)</div>
+  <div class="b-amount">1인당 연 14만원 (공연·영화·여행·스포츠 사용 가능)</div>
+  <p style="margin-top:6px;font-size:13.5px;">2026년 신규 발급은 2월부터 시작. 놓친 분들은 지금도 신청 가능. 잔여 예산 소진 전에 서둘러야 합니다.</p>
+</div>
+
+<div class="benefit-card">
+  <div class="b-title">🌡️ 에너지바우처 (냉난방비)</div>
+  <div class="b-amount">1인 29만원 ~ 4인이상 70만원 (노인·장애인 등 추가 조건 필요)</div>
+  <p style="margin-top:6px;font-size:13.5px;">별도 신청 필요. 노인·장애인·영유아·임산부 등 취약 유형 조건 추가 충족 시 수령 가능.</p>
+</div>
+
+<div class="benefit-card">
+  <div class="b-title">📚 교육비 지원</div>
+  <div class="b-amount">급식비 무료 + 교육 활동 지원금 (학교별 상이)</div>
+  <p style="margin-top:6px;font-size:13.5px;">학교에 차상위계층 확인서 제출 시 급식비 전액 면제, 방과후 학교 프로그램 할인 적용.</p>
+</div>
+
+<!-- STEP 9: 신청 방법 -->
+<h2>📋 차상위계층 확인 신청 방법</h2>
+<ol class="step-list">
+  <li><strong>자격 예비 확인</strong> — 가구 월 소득을 합산해 기준 중위소득 50% 이하인지 자가 진단 (복지로 모의계산 활용)</li>
+  <li><strong>서류 준비</strong> — 신분증, 가족관계증명서, 금융정보 제공 동의서 (주민센터에서 한 번에 안내받을 수 있음)</li>
+  <li><strong>신청 접수</strong> — 주소지 읍면동 행정복지센터(주민센터) 방문 신청 또는 복지로(www.bokjiro.go.kr) 온라인 신청</li>
+  <li><strong>조사 및 심사</strong> — 소득·재산 조사 후 통상 2~4주 내 결과 통보</li>
+  <li><strong>확인서 발급 및 혜택 신청</strong> — 차상위계층 확인서 발급 후 각 기관(한국전력, 이동통신사, 문화누리카드센터 등)에 제출</li>
+</ol>
+
+<!-- STEP 10: 시행 일정 박스 -->
+<div class="deadline-box">
+  <div class="dl-title">⏰ 2026년 차상위계층 혜택 신청 일정</div>
+  <ul style="list-style:none;font-size:14.5px;">
+    <li>📅 <strong>차상위 확인 신청:</strong> 연중 상시 (주민센터 또는 복지로)</li>
+    <li>🎭 <strong>문화누리카드:</strong> 2026년 2월 발급 시작 → 예산 소진 시 종료 (서두르세요!)</li>
+    <li>⚡ <strong>전기요금 할인:</strong> 확인서 발급 후 즉시 신청 가능</li>
+    <li>📱 <strong>통신요금 감면:</strong> 이동통신사 방문 후 즉시 적용</li>
+  </ul>
+</div>
+
+<!-- STEP 11: 자가 진단 체크리스트 -->
+<h2>🧐 나도 차상위계층? 자가 진단 체크리스트</h2>
+<ul class="checklist">
+  <li>우리 가구의 월 소득 합산이 위 표의 기준금액 이하인가요? (소득인정액 기준)</li>
+  <li>기초수급자는 아니지만 생활이 빠듯해 복지 지원이 필요한 상황인가요?</li>
+  <li>전기·가스·통신요금을 아낄 수 있다면 살림에 도움이 되나요?</li>
+  <li>자녀 학교 급식비, 교육비 부담이 크게 느껴지시나요?</li>
+  <li>문화·여가 생활을 즐기고 싶지만 비용이 부담스러우신가요?</li>
+</ul>
+<p><strong>3개 이상 해당하신다면 → 지금 바로 주민센터 방문해서 차상위계층 확인 신청을 해보세요!</strong></p>
+
+<!-- STEP 12: 주의사항 -->
+<h2>⚠️ 주의사항</h2>
+<p class="caution">① 차상위계층 확인은 <strong>소득인정액</strong> 기준으로 하며, 단순 월급만이 아닌 재산·금융재산·부채를 환산해 합산합니다. 월급이 기준 이하여도 재산이 많으면 탈락할 수 있습니다.</p>
+<p class="caution">② 차상위계층 <strong>유형별로 조건이 다릅니다</strong>. 자활참여자, 장애인, 한부모가족, 본인부담경감 대상자 등으로 구분되며, 각 유형마다 세부 기준이 다릅니다.</p>
+<p class="caution">③ 확인서를 발급받더라도 <strong>각 혜택마다 별도 신청</strong>이 필요합니다. 문화누리카드·에너지바우처 등은 반드시 개별 신청하세요.</p>
+<p class="caution">④ 자격이 인정되어도 <strong>매년 재확인(갱신)</strong>이 필요할 수 있습니다. 소득·재산 변동 시 자격이 박탈될 수 있으니 주민센터에 확인하세요.</p>
+
+<!-- STEP 13: 담당 기관 문의처 -->
+<div class="contact-box">
+  <div class="ct-title">📞 담당 기관 및 문의처</div>
+  <p>🏢 <strong>신청 장소:</strong> 주소지 읍면동 행정복지센터(주민센터)</p>
+  <p>🌐 <strong>온라인 신청:</strong> 복지로 (www.bokjiro.go.kr) → 차상위계층 확인</p>
+  <p>🌐 <strong>모의 계산:</strong> 복지로 → 복지서비스 → 모의계산</p>
+  <p>📞 <strong>보건복지상담센터:</strong> ☎ 129 (24시간, 무료)</p>
+  <p>📞 <strong>문화누리카드 안내:</strong> ☎ 1544-3412</p>
+  <p>📞 <strong>한국전력 할인 신청:</strong> ☎ 123 (한국전력 고객센터)</p>
+</div>
+
+<!-- STEP 14: 전문가 찬반 론평 -->
+<h2>💬 전문가 찬반 론평</h2>
+<div class="opinion-section">
+  <div class="opinion-grid">
+    <div class="opinion-pro">
+      <h3>🟢 찬성</h3>
+      <div class="opinion-card">
+        <p class="quote">"차상위계층 제도는 빈곤의 덫에 걸리지 않도록 기초수급자 바로 위 계층을 지원하는 완충장치입니다. 2026년 소득 기준 확대로 더 많은 가구가 혜택을 받게 된 것은 복지 사각지대를 줄이는 올바른 방향입니다. 특히 통합적 혜택 연계가 행정 비효율을 줄이고 수혜자 접근성을 높이는 면에서 긍정적입니다."</p>
+        <p class="author">— 사회복지학과 교수</p>
+      </div>
+      <div class="opinion-card">
+        <p class="quote">"차상위계층은 기초수급자보다 낙인감이 적어 스스로 신청하는 비율이 높아지는 추세입니다. 문화누리카드, 통신비 감면 등 일상적 혜택과 연계되면서 단순 생계 지원을 넘어 삶의 질을 높이는 통합복지 모델로 자리 잡고 있다는 점에서 의미 있는 제도입니다."</p>
+        <p class="author">— 복지정책 연구자</p>
+      </div>
+    </div>
+    <div class="opinion-con">
+      <h3>🔴 반대 / 우려</h3>
+      <div class="opinion-card">
+        <p class="quote">"차상위계층 확인 이후 각 혜택마다 별도 신청이 필요하다는 점이 여전히 큰 장벽입니다. 행정 역량이 부족한 노인·장애인 가구의 경우 확인서를 발급받고도 실제 혜택을 연결받지 못하는 사례가 많습니다. 원스톱 자동 연계 시스템 도입이 시급합니다."</p>
+        <p class="author">— 재정경제 연구자</p>
+      </div>
+      <div class="opinion-card">
+        <p class="quote">"차상위계층 기준은 공식 소득인정액 기반이지만 비공식 소득·자산 반영이 불완전합니다. 일부는 기준 소득을 충족하지 못해 혜택을 받지 못하면서도 실제 생활 수준이 더 열악한 역차별 사례도 있습니다. 제도의 실효성 있는 운영을 위한 지속적인 기준 정비가 필요합니다."</p>
+        <p class="author">— 주거시민단체 활동가</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 15: 해시태그 -->
+<div class="hashtags">
+  #차상위계층 #차상위혜택 #복지지원 #전기요금할인 #문화누리카드 #통신요금감면 #의료비경감 #에너지바우처 #2026복지 #복지로신청 #저소득층지원 #생활복지
+</div>
+
+<!-- STEP 16: 면책조항 -->
+<div class="disclaimer">
+  이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부는 담당 기관에 확인하세요. 소득인정액 산정 기준, 지원 금액 등은 시행령·고시 개정에 따라 변경될 수 있습니다.
+</div>
+
+<!-- STEP 17: 작성일 메타 -->
+<p class="meta">작성일: 2026년 8월 2일 · 복지헬퍼 편집팀</p>
+
+</body>
+</html>

@@ -1,5 +1,7 @@
 // Auto-generated. News article bodies, loaded only by article.html.
 export const newsContent = {
+  229: "<iframe src=\"archive/2026-08-02-2-복지뉴스.html\" style=\"width:100%;border:none;\" scrolling=\"no\" onload=\"this.style.height=this.contentWindow.document.documentElement.scrollHeight+'px'\" loading=\"lazy\" title=\"복지뉴스\"></iframe>",
+  228: "<iframe src=\"archive/2026-08-02-1-복지뉴스.html\" style=\"width:100%;border:none;\" scrolling=\"no\" onload=\"this.style.height=this.contentWindow.document.documentElement.scrollHeight+'px'\" loading=\"lazy\" title=\"복지뉴스\"></iframe>",
   227: "<iframe src=\"archive/2026-08-01-2-복지뉴스.html\" style=\"width:100%;border:none;\" scrolling=\"no\" onload=\"this.style.height=this.contentWindow.document.documentElement.scrollHeight+\'px\'\" loading=\"lazy\" title=\"복지뉴스\"></iframe>",
   226: "<iframe src=\"archive/2026-08-01-1-복지뉴스.html\" style=\"width:100%;border:none;\" scrolling=\"no\" onload=\"this.style.height=this.contentWindow.document.documentElement.scrollHeight+\'px\'\" loading=\"lazy\" title=\"복지뉴스\"></iframe>",
 
