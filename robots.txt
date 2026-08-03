@@ -23,4 +23,4 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-Sitemap: https://bokjihelper.pages.dev/sitemap.xml
+Sitemap: https://welfare.ephseed.com/sitemap.xml
