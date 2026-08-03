@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"폭염에 혼자 집에서 숨졌다" — 37도 극한폭염 지금 당장 무더위쉼터로 가세요! 신청 없이 무료·전국 4만 곳·당일 입장, 독거노인·장애인 지금 이걸 모르면 정말 위험합니다 | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: #fff8f0; color: #222; line-height: 1.7; }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding-bottom: 40px; }
+
+  /* 헤더 */
+  .top-header { background: #c62828; color: #fff; padding: 14px 24px; font-size: 13px; display: flex; justify-content: space-between; align-items: center; }
+  .top-header .issue-no { font-weight: 700; font-size: 14px; }
+
+  /* 긴급 배너 */
+  .urgent-banner { background: #ff1744; color: #fff; text-align: center; padding: 10px; font-size: 15px; font-weight: 900; letter-spacing: 0.5px; }
+
+  /* 섹션 배지 */
+  .section-badge { display: inline-block; background: #c62828; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin: 22px 24px 10px; }
+  .sub-category { font-size: 13px; color: #c62828; font-weight: 700; padding: 0 24px; margin-bottom: 6px; }
+
+  /* 메인 제목 */
+  h1 { font-size: 25px; font-weight: 900; line-height: 1.4; color: #7f0000; padding: 0 24px; margin-bottom: 18px; }
+
+  /* 훅 */
+  .hook { border-left: 5px solid #c62828; background: #ffebee; padding: 16px 20px; margin: 0 24px 22px; border-radius: 0 10px 10px 0; font-size: 15px; line-height: 1.8; }
+  .hook .highlight { background: #ffe082; font-weight: 700; padding: 1px 4px; border-radius: 3px; }
+
+  /* 핵심 요약 박스 */
+  .summary-box { background: #e8f5e9; border-left: 5px solid #2e7d32; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 0 24px 24px; }
+  .summary-box h2 { font-size: 15px; color: #1b5e20; font-weight: 900; margin-bottom: 10px; }
+  .summary-box ul { list-style: none; }
+  .summary-box ul li { font-size: 14px; color: #1b5e20; padding: 3px 0; }
+  .summary-box ul li::before { content: "✅ "; }
+
+  /* 섹션 제목 */
+  h2 { font-size: 18px; font-weight: 900; color: #c62828; margin: 28px 24px 10px; border-bottom: 2px solid #c62828; padding-bottom: 6px; }
+
+  /* 본문 */
+  p { font-size: 15px; color: #333; padding: 0 24px; margin-bottom: 14px; line-height: 1.85; }
+
+  /* 표 */
+  .table-wrap { overflow-x: auto; margin: 0 24px 24px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { background: #c62828; color: #fff; padding: 12px 14px; text-align: left; font-weight: 700; }
+  td { padding: 11px 14px; border-bottom: 1px solid #ffe0e0; }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: #fff8f8; }
+
+  /* SVG 인포그래픽 */
+  .infographic { margin: 0 24px 24px; }
+
+  /* 신청 단계 */
+  .steps { margin: 0 24px 24px; }
+  .step { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 14px; }
+  .step-num { background: #c62828; color: #fff; font-weight: 900; font-size: 15px; border-radius: 50%; min-width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .step-content { font-size: 14px; color: #333; padding-top: 6px; line-height: 1.7; }
+
+  /* 신청 기한 박스 */
+  .deadline-box { border: 2.5px dashed #f57c00; background: #fff8e1; border-radius: 12px; padding: 18px 22px; margin: 0 24px 24px; }
+  .deadline-box .dl-title { font-size: 15px; font-weight: 900; color: #e65100; margin-bottom: 8px; }
+  .deadline-box p { padding: 0; margin: 0; font-size: 14px; color: #555; }
+
+  /* 체크리스트 */
+  .checklist { margin: 0 24px 24px; background: #fff3f3; border-radius: 12px; padding: 18px 22px; }
+  .checklist h3 { font-size: 15px; font-weight: 900; color: #c62828; margin-bottom: 12px; }
+  .checklist ul { list-style: none; }
+  .checklist ul li { font-size: 14px; color: #333; padding: 5px 0; border-bottom: 1px dashed #ffd0d0; }
+  .checklist ul li:last-child { border-bottom: none; }
+  .checklist ul li::before { content: "✓ "; color: #c62828; font-weight: 900; }
+
+  /* 주의사항 */
+  .caution { margin: 0 24px 24px; background: #fff8e1; border-radius: 12px; padding: 18px 22px; }
+  .caution h3 { font-size: 15px; font-weight: 900; color: #e65100; margin-bottom: 10px; }
+  .caution p { padding: 0; margin: 0 0 6px; font-size: 14px; color: #555; }
+
+  /* 문의처 박스 */
+  .contact-box { background: #ffebee; border-radius: 12px; padding: 18px 22px; margin: 0 24px 24px; }
+  .contact-box h3 { font-size: 15px; font-weight: 900; color: #b71c1c; margin-bottom: 10px; }
+  .contact-box p { padding: 0; margin: 0 0 5px; font-size: 14px; color: #333; }
+  .contact-box a { color: #c62828; text-decoration: none; font-weight: 700; }
+
+  /* 전문가 찬반 */
+  .opinion-section { margin: 0 24px 24px; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; border-radius: 12px; padding: 18px; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; border-radius: 12px; padding: 18px; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 12px; font-weight: 900; font-size: 15px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 12px; font-weight: 900; font-size: 15px; }
+  .opinion-card { background: #fff; padding: 14px; border-radius: 8px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 13px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 7px; }
+  .opinion-card .author { font-size: 11px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  /* 해시태그 */
+  .hashtags { padding: 0 24px; margin-bottom: 20px; }
+  .hashtags span { display: inline-block; background: #ffebee; color: #c62828; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 20px; margin: 3px 2px; }
+
+  /* 면책조항 */
+  .disclaimer { background: #f5f5f5; border-radius: 10px; padding: 14px 18px; margin: 0 24px 20px; font-size: 12px; color: #888; line-height: 1.7; }
+
+  /* 작성일 */
+  .meta { text-align: right; font-size: 12px; color: #aaa; padding: 0 24px; }
+
+  /* 온열질환 증상 카드 */
+  .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 0 24px 24px; }
+  .symptom-card { background: #fff; border: 2px solid #ffcdd2; border-radius: 10px; padding: 14px; text-align: center; }
+  .symptom-card .icon { font-size: 28px; margin-bottom: 6px; }
+  .symptom-card .name { font-size: 13px; font-weight: 700; color: #c62828; margin-bottom: 4px; }
+  .symptom-card .desc { font-size: 12px; color: #666; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 19px; }
+    .opinion-grid, .symptom-grid { grid-template-columns: 1fr; }
+    .table-wrap { margin: 0 12px 20px; }
+    h2 { font-size: 16px; margin: 22px 16px 8px; }
+    p, .hook, .summary-box, .steps, .deadline-box, .checklist, .caution, .contact-box, .opinion-section, .hashtags, .disclaimer, .meta { margin-left: 12px; margin-right: 12px; padding-left: 16px; padding-right: 16px; }
+    .infographic, .symptom-grid { margin: 0 12px 20px; }
+    .section-badge { margin: 16px 16px 8px; }
+    .sub-category { padding: 0 16px; }
+    h1 { padding: 0 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 상단 헤더 -->
+  <div class="top-header">
+    <span>📅 2026년 8월 3일 (월)</span>
+    <span class="issue-no">오늘의 복지 뉴스 · 제2보</span>
+  </div>
+
+  <!-- 긴급 배너 -->
+  <div class="urgent-banner">🚨 폭염 긴급 경보 — 오늘 서울 낮 최고 37도! 취약계층 지금 행동하세요!</div>
+
+  <!-- 섹션 배지 -->
+  <div class="section-badge">🔥 폭염 위기 현장</div>
+  <div class="sub-category">취약계층 안전 · 온열질환 예방 · 무더위쉼터</div>
+
+  <!-- 메인 제목 -->
+  <h1>"폭염에 혼자 집에서 숨졌다" — 37도 극한폭염 지금 당장 무더위쉼터로 가세요! 신청 없이 무료·전국 4만 곳·당일 입장, 독거노인·장애인 지금 이걸 모르면 정말 위험합니다</h1>
+
+  <!-- 훅 -->
+  <div class="hook">
+    오늘(8월 3일)부터 수도권에 극한 폭염이 시작됩니다. 서울 낮 최고 37도. 올해 온열질환자가 이미 <strong>1,889명</strong>이고, 폭염 사망자 대부분은 혼자 집에 있던 독거노인입니다. <span class="highlight">무더위쉼터는 신청서도 없고, 자격 조건도 없고, 돈도 안 냅니다. 지금 당장 가까운 경로당·복지관·도서관·은행에 들어가면 됩니다.</span> 이 사실을 모르는 어르신이 너무 많습니다.
+  </div>
+
+  <!-- 핵심 요약 -->
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>무더위쉼터 — 전국 4만여 곳 운영 중, 자격·신청 없이 누구나 무료 입장</li>
+      <li>독거노인·장애인 등 취약계층 — 폭염주의보 시 하루 1회, 중대경보 시 2회 안부 확인 실시</li>
+      <li>온열질환 의심 시 즉시 119 신고 — 쉼터에서 쉬다가 어지럽거나 의식 이상이면 바로 신고</li>
+    </ul>
+  </div>
+
+  <!-- 배경 -->
+  <h2>🔍 왜 지금 이게 중요한가</h2>
+  <p>중앙재난안전대책본부는 오늘 폭염 대응을 2단계로 격상했습니다. 올해 누적 온열질환자는 이미 1,889명이고 사망자도 속출하고 있습니다. 지난해 온열질환 추정 사망자 중 <strong>68.6%가 65세 이상</strong>이었으며, 이들 대부분은 에어컨도 없는 집에 혼자 있다가 쓰러졌습니다.</p>
+  <p>문제는 무더위쉼터가 전국에 4만 곳 넘게 있는데도 어르신들이 모르거나 "민폐가 될까봐" 안 간다는 것입니다. 갈 곳이 없어서 더위를 참다 쓰러지는 일이 없도록 — 지금 바로 알아두어야 합니다.</p>
+
+  <!-- 상세 정보 표 -->
+  <h2>📊 무더위쉼터 이용 정보 한눈에</h2>
+  <div class="table-wrap">
+    <table>
+      <tr><th>항목</th><th>내용</th></tr>
+      <tr><td>운영 기간</td><td>폭염 대책 기간: <strong>5월 15일 ~ 9월 30일</strong></td></tr>
+      <tr><td>전국 쉼터 수</td><td><strong>약 4만 곳 이상</strong></td></tr>
+      <tr><td>이용 자격</td><td><strong>누구나 무료</strong> (자격 조건·신청서 없음)</td></tr>
+      <tr><td>이용 가능 장소</td><td>경로당, 동 주민센터, 복지관, 공공도서관, 은행 지점, 대형마트, 지하철 역사 등</td></tr>
+      <tr><td>독거노인 안부 확인</td><td>폭염주의보 시 하루 1회, 폭염경보 시 하루 2회 전화/방문</td></tr>
+      <tr><td>위치 찾는 방법</td><td>안전디딤돌 앱 → '무더위쉼터' 검색 / 행정안전부 재난안전정보포털</td></tr>
+      <tr><td>응급상황 시</td><td>즉시 ☎ 119 신고, 그늘진 서늘한 곳으로 이동 후 물 섭취</td></tr>
+      <tr><td>폭염 단계</td><td>주의보(최고 33도↑·2일 이상) → 경보(최고 35도↑·2일 이상) → 중대경보</td></tr>
+    </table>
+  </div>
+
+  <!-- SVG 인포그래픽 -->
+  <h2>🌡️ 온열질환 위험 취약계층 분포</h2>
+  <div class="infographic">
+    <svg viewBox="0 0 680 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:12px;background:#fff8f0;">
+      <rect width="680" height="280" fill="#fff8f0" rx="12"/>
+      <text x="340" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#c62828">2025년 온열질환 사망자 연령별 분포 및 주요 위험 요인</text>
+
+      <!-- 파이 차트 대신 바 차트 -->
+      <!-- 65세 이상 68.6% -->
+      <rect x="60" y="55" width="390" height="38" rx="8" fill="#ef9a9a"/>
+      <rect x="60" y="55" width="390" height="38" rx="8" fill="#c62828"/>
+      <text x="72" y="79" font-size="14" font-weight="bold" fill="#fff">65세 이상 노인</text>
+      <text x="460" y="79" font-size="16" font-weight="bold" fill="#c62828">68.6%</text>
+
+      <!-- 50~64세 -->
+      <rect x="60" y="108" width="220" height="38" rx="8" fill="#ef9a9a"/>
+      <text x="72" y="132" font-size="14" font-weight="bold" fill="#7f0000">50~64세</text>
+      <text x="290" y="132" font-size="16" font-weight="bold" fill="#e53935">22.1%</text>
+
+      <!-- 기타 -->
+      <rect x="60" y="161" width="80" height="38" rx="8" fill="#ffcdd2"/>
+      <text x="72" y="185" font-size="14" font-weight="bold" fill="#999">기타</text>
+      <text x="150" y="185" font-size="16" font-weight="bold" fill="#bbb">9.3%</text>
+
+      <!-- 위험 요소 -->
+      <line x1="520" y1="50" x2="520" y2="230" stroke="#ddd" stroke-width="1"/>
+      <text x="600" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#c62828">주요 위험 요소</text>
+      <text x="535" y="105" font-size="12" fill="#555">🏠 에어컨 없는 주택</text>
+      <text x="535" y="130" font-size="12" fill="#555">🧓 독거 고령자</text>
+      <text x="535" y="155" font-size="12" fill="#555">💊 만성질환자</text>
+      <text x="535" y="180" font-size="12" fill="#555">♿ 거동 불편 장애인</text>
+      <text x="535" y="205" font-size="12" fill="#555">🚧 야외 노동자</text>
+
+      <text x="340" y="252" text-anchor="middle" font-size="12" fill="#e65100" font-weight="bold">※ 사망자 10명 중 7명이 65세 이상 — 지금 주변 어르신을 확인하세요!</text>
+    </svg>
+  </div>
+
+  <!-- 온열질환 증상 카드 -->
+  <h2>🩺 이런 증상이면 즉시 119!</h2>
+  <div class="symptom-grid">
+    <div class="symptom-card">
+      <div class="icon">🥵</div>
+      <div class="name">열사병</div>
+      <div class="desc">체온 40도 이상, 의식 혼미, 피부 뜨겁고 건조 → 즉시 119</div>
+    </div>
+    <div class="symptom-card">
+      <div class="icon">💦</div>
+      <div class="name">열탈진</div>
+      <div class="desc">땀을 많이 흘리고 극심한 피로·현기증·구역질 → 시원한 곳 이동 + 물 섭취</div>
+    </div>
+    <div class="symptom-card">
+      <div class="icon">😵</div>
+      <div class="name">열실신</div>
+      <div class="desc">갑자기 어지럽거나 쓰러짐, 의식 잃음 → 즉시 119, 다리 위로 올리기</div>
+    </div>
+    <div class="symptom-card">
+      <div class="icon">🦵</div>
+      <div class="name">열경련</div>
+      <div class="desc">근육 경련, 다리·복부 통증 → 시원한 곳 이동, 이온음료 섭취</div>
+    </div>
+  </div>
+
+  <!-- 신청 방법 -->
+  <h2>📋 무더위쉼터 이용하는 법 (단계별)</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content"><strong>스마트폰에 '안전디딤돌' 앱 설치</strong> — 행정안전부 공식 앱. 내 위치 기반으로 가장 가까운 무더위쉼터 지도에 바로 표시됩니다.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content"><strong>앱이 없다면 전화로 확인</strong> — 읍·면·동 행정복지센터에 전화하면 내 동네 가장 가까운 쉼터를 바로 알려줍니다.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content"><strong>그냥 들어가면 됩니다</strong> — 경로당, 복지관, 도서관, 은행 어디든 '무더위쉼터' 표지가 붙어 있으면 신분증이나 신청서 없이 바로 이용 가능합니다.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content"><strong>주변 독거노인·장애인 이웃에게 알려주세요</strong> — 주민센터에 연락하면 담당 복지사가 안부 확인과 함께 쉼터 동행을 도와줍니다.</div>
+    </div>
+  </div>
+
+  <!-- 시행 일정 박스 -->
+  <div class="deadline-box">
+    <div class="dl-title">⚡ 오늘 지금 당장 행동하세요!</div>
+    <p>폭염 중대경보 발령 시 사망 위험이 급증합니다. 낮 12시~오후 5시 사이 야외 활동을 최소화하고, 집에 에어컨이 없다면 무더위쉼터로 이동하세요. 이웃 어르신이 혼자라면 지금 전화 한 통만 해도 생명을 구할 수 있습니다.</p>
+  </div>
+
+  <!-- 자가 진단 체크리스트 -->
+  <div class="checklist">
+    <h3>🔎 우리 집·우리 이웃 위험 체크리스트</h3>
+    <ul>
+      <li>집에 에어컨이 없거나 켜기 어려운 경제적 상황이다</li>
+      <li>65세 이상 혼자 사는 어르신이 주변에 있다</li>
+      <li>장애인이나 만성질환자로 이동이 불편한 가족이 있다</li>
+      <li>최근 야외에서 땀을 많이 흘리고 극도로 피로감을 느꼈다</li>
+      <li>주변에 무더위쉼터가 어디 있는지 모른다</li>
+    </ul>
+  </div>
+
+  <!-- 주의사항 -->
+  <div class="caution">
+    <h3>⚠️ 주의사항</h3>
+    <p>① 온열질환 초기 증상(어지럼증, 두통, 구역감)이 나타나면 즉시 서늘한 곳으로 이동하고 물을 마셔야 합니다.</p>
+    <p>② 의식 혼미나 고열(40도 이상)이 있으면 반드시 즉시 119에 신고해야 합니다. 지체하면 사망에 이를 수 있습니다.</p>
+    <p>③ 알코올 음료와 카페인 음료는 탈수를 악화시킵니다. 폭염 중에는 물이나 이온음료를 자주 마시세요.</p>
+    <p>④ 차량 안에 어린이나 노인을 혼자 남겨두지 마세요. 차량 내부 온도는 외부보다 40도 이상 높아질 수 있습니다.</p>
+  </div>
+
+  <!-- 문의처 -->
+  <div class="contact-box">
+    <h3>📞 담당 기관 및 문의처</h3>
+    <p>🚨 <strong>응급상황 (온열질환 의심)</strong>: ☎ <a href="tel:119">119</a> (즉시 신고)</p>
+    <p>🏢 <strong>무더위쉼터 위치 문의</strong>: 읍·면·동 행정복지센터 / ☎ 정부민원안내 110</p>
+    <p>📱 <strong>안전디딤돌 앱</strong>: 구글플레이 · 앱스토어에서 '안전디딤돌' 검색</p>
+    <p>🌐 <strong>행정안전부 재난안전정보포털</strong>: <a href="https://www.safekorea.go.kr" target="_blank">www.safekorea.go.kr</a></p>
+    <p>👴 <strong>독거노인 안부 연결</strong>: 동 주민센터 또는 ☎ 복지로 129</p>
+  </div>
+
+  <!-- 전문가 찬반 론평 -->
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성 / 긍정 평가</h3>
+        <div class="opinion-card">
+          <p class="quote">"무더위쉼터 제도는 별도 예산 없이 기존 공공시설을 활용하는 저비용 고효율 안전망이다. 접근 문턱을 없앤 것이 핵심이며, 인지도만 높이면 폭염 취약계층 사망을 상당 부분 줄일 수 있다."</p>
+          <p class="author">— 재난안전 정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"독거노인 안부 확인 체계가 폭염 시 강화되는 것은 매우 긍정적이다. 현장에서는 이 연락을 통해 실제로 응급상황을 조기 발견하는 사례가 해마다 보고된다."</p>
+          <p class="author">— 노인복지 현장 활동가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"쉼터의 수는 많지만 냉방 성능이 불균등하고, 일부 시설은 노후화로 실질적인 냉방 효과가 없는 경우도 있다. 쉼터 지정에 그치지 않고 냉방 품질을 관리하는 기준이 필요하다."</p>
+          <p class="author">— 공공시설 환경복지 연구원</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"독거노인 안부 확인을 담당하는 인력의 업무 부담이 폭염 기간 중 급증한다. 인력 지원 없는 의무화는 현장 복지사의 소진으로 이어지고 결국 사각지대를 키울 수 있다."</p>
+          <p class="author">— 사회복지 현장 실천가</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span>#무더위쉼터</span>
+    <span>#폭염취약계층</span>
+    <span>#온열질환예방</span>
+    <span>#독거노인안부</span>
+    <span>#37도폭염</span>
+    <span>#폭염대응2026</span>
+    <span>#안전디딤돌앱</span>
+    <span>#119신고</span>
+    <span>#복지사각지대</span>
+    <span>#여름철복지</span>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    ※ 이 기사는 공개된 정보를 바탕으로 작성되었습니다. 정확한 지원 여부 및 가까운 무더위쉼터 위치는 행정복지센터(☎110) 또는 안전디딤돌 앱에서 직접 확인하세요. 온열질환 의심 시 즉시 119에 신고하시기 바랍니다.
+  </div>
+
+  <div class="meta">작성일: 2026년 8월 3일 | 오늘의 복지 뉴스</div>
+
+</div>
+</body>
+</html>
