@@ -33,7 +33,10 @@ SITE_DESC   = "복지 제도와 지원금을 상황에 맞게 찾아주는 맞�
 GA_ID       = "G-KJ560D6VGG"          # 없으면 None
 OG_IMAGE    = SITE + "/assets/og-default.png"
 # 네이버 서치어드바이저 HTML 태그 방식 content 값 (웹마스터도구에서 발급)
-NAVER_VERIFY = ""
+# welfare.ephseed.com 용 (2026-08-03 발급).
+# 값이 비어 있으면 seo_fix.py 가 실행될 때마다 네이버 소유확인 태그를 지워버린다.
+# 반드시 실제 코드를 채워둘 것.
+NAVER_VERIFY = "5bc28406d7eafc8b05bb80b396e15ab2fd366915"
 DEAD_DOMAINS = []          # canonical 이 잘못 가리키던 죽은 도메인들
 ARTICLE_RE  = re.compile(r"^\d{4}-\d{2}-\d{2}")   # 글로 취급할 파일명 패턴
 # ────────────────────────────────────────────────────────────────────
