@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"상담 받고 싶은데 돈이 없어서 포기했다고요?" 나라가 심리상담비 연 64만원 줍니다 — 정신건강 바우처, 소득 낮으면 본인 부담 0원! | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Malgun Gothic', '맑은 고딕', sans-serif; background: #f9f9f9; color: #222; font-size: 16px; line-height: 1.7; }
+  .container { max-width: 780px; margin: 0 auto; padding: 20px 16px 60px; background: #fff; }
+
+  /* 상단 헤더 */
+  .top-bar { background: #1565c0; color: #fff; padding: 10px 16px; font-size: 13px; display: flex; justify-content: space-between; align-items: center; border-radius: 6px 6px 0 0; }
+  .top-bar .issue { font-weight: 700; }
+
+  /* 배지 */
+  .badge { display: inline-block; background: #1565c0; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin: 18px 0 8px; }
+
+  /* 제목 */
+  h1 { font-size: 28px; font-weight: 900; color: #1a1a1a; line-height: 1.4; margin-bottom: 16px; }
+  @media(max-width:600px){ h1{font-size:22px;} }
+
+  /* 훅 */
+  .hook { border-left: 5px solid #1565c0; padding: 14px 18px; background: #e3f2fd; margin-bottom: 22px; font-size: 16px; line-height: 1.8; }
+  .hook .highlight { background: #ffe082; padding: 0 3px; font-weight: 700; }
+
+  /* 핵심 요약 박스 */
+  .summary-box { background: #e8f5e9; border-left: 5px solid #2e7d32; border-radius: 8px; padding: 18px 20px; margin-bottom: 26px; }
+  .summary-box h2 { color: #1b5e20; font-size: 16px; margin-bottom: 10px; }
+  .summary-box ul { padding-left: 18px; }
+  .summary-box li { margin-bottom: 6px; font-size: 15px; }
+
+  /* 섹션 제목 */
+  h2 { font-size: 20px; font-weight: 800; color: #1565c0; margin: 28px 0 12px; }
+  h3 { font-size: 17px; font-weight: 700; margin: 16px 0 8px; color: #333; }
+
+  /* 표 */
+  table { width: 100%; border-collapse: collapse; margin-bottom: 22px; font-size: 14px; }
+  th { background: #1565c0; color: #fff; padding: 10px 12px; text-align: left; }
+  td { padding: 10px 12px; border-bottom: 1px solid #eee; vertical-align: top; }
+  tr:nth-child(even) td { background: #fafafa; }
+
+  /* 신청 단계 */
+  .steps { counter-reset: step; padding-left: 0; list-style: none; }
+  .steps li { counter-increment: step; display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; }
+  .steps li::before { content: counter(step); min-width: 32px; height: 32px; background: #1565c0; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 15px; flex-shrink: 0; }
+
+  /* 기한 박스 */
+  .deadline-box { border: 2.5px dashed #f57c00; border-radius: 10px; padding: 18px 20px; margin: 24px 0; background: #fff8e1; }
+  .deadline-box h3 { color: #e65100; font-size: 17px; margin-bottom: 8px; }
+
+  /* 체크리스트 */
+  .checklist { background: #e8eaf6; border-radius: 10px; padding: 18px 22px; margin-bottom: 24px; }
+  .checklist h3 { color: #283593; margin-bottom: 12px; }
+  .checklist li { list-style: none; margin-bottom: 8px; font-size: 15px; }
+  .checklist li::before { content: "✓ "; color: #1565c0; font-weight: 900; }
+
+  /* 주의사항 */
+  .caution { background: #fff3e0; border-radius: 10px; padding: 18px 20px; margin-bottom: 24px; }
+  .caution h3 { color: #bf360c; margin-bottom: 10px; }
+  .caution p { margin-bottom: 8px; font-size: 14px; }
+
+  /* 담당 기관 */
+  .contact-box { background: #e3f2fd; border-radius: 10px; padding: 20px; margin-bottom: 24px; border-left: 5px solid #1565c0; }
+  .contact-box h3 { color: #0d47a1; margin-bottom: 12px; font-size: 17px; }
+  .contact-box p { font-size: 15px; margin-bottom: 6px; }
+
+  /* 찬반 론평 */
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  @media(max-width:600px){ .opinion-grid{grid-template-columns:1fr;} }
+
+  /* 해시태그 */
+  .hashtags { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0; }
+  .hashtags span { background: #e3f2fd; color: #1565c0; border-radius: 20px; padding: 4px 14px; font-size: 13px; font-weight: 600; }
+
+  /* 면책 */
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12px; color: #777; margin-top: 24px; }
+
+  /* 작성일 */
+  .meta { text-align: right; font-size: 12px; color: #aaa; margin-top: 12px; }
+
+  /* SVG 래퍼 */
+  .svg-wrap { overflow-x: auto; margin: 20px 0; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 상단 헤더 -->
+  <div class="top-bar">
+    <span>📅 2026년 8월 4일</span>
+    <span class="issue">오늘의 복지 뉴스 · 제2보</span>
+  </div>
+
+  <!-- 배지 -->
+  <div class="badge">🧠 정신건강·자살예방 지원</div>
+
+  <!-- 메인 제목 -->
+  <h1>"상담 받고 싶은데 돈이 없어서 포기했다고요?" 나라가 심리상담비 연 64만원 줍니다 — 정신건강 바우처, 소득 낮으면 본인 부담 0원!</h1>
+
+  <!-- 훅 -->
+  <div class="hook">
+    우울·불안으로 정신건강의학과나 상담소를 찾고 싶었지만 "회당 8만~10만원"이라는 상담료에 발길을 돌린 분들이 많습니다. 정부는
+    <span class="highlight">2026년 정신건강 심리상담 바우처</span>를 통해 전문 상담사 1회 방문에 8만원을 지원합니다. 기준 중위소득 70% 이하 가구는 <span class="highlight">본인 부담 0원</span>. 지금 주민센터에 신청하면 이번 달부터 적용됩니다.
+  </div>
+
+  <!-- 핵심 요약 박스 -->
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>지원액: 1급 상담사 기준 <strong>회당 8만원 × 연 8회 = 연 64만원</strong></li>
+      <li>기준 중위소득 70% 이하(1인 가구 약 191만원 이하) → <strong>본인 부담 0원</strong></li>
+      <li>신청: 읍·면·동 행정복지센터 또는 <strong>복지로(bokjiro.go.kr)</strong></li>
+    </ul>
+  </div>
+
+  <!-- 배경 -->
+  <h2>📋 왜 지금 이 정책인가</h2>
+  <p>
+    2026년 정부가 발표한 '청년 자살률 10년 내 절반 감축 계획'에 따르면, 한국의 20~30대 자살률은 OECD 상위권으로 경제적 어려움과 정신건강 서비스 접근성 부족이 주요 원인으로 꼽힙니다. 자살예방 예산을 전년 대비 <strong>20.6% 늘려 708억원</strong>으로 확대한 정부는, 위기 대응뿐 아니라 <strong>일상적 정신건강 관리</strong>가 핵심이라 판단해 심리상담 바우처를 강화했습니다. "비용 부담으로 상담을 못 받는 구조부터 해결하겠다"는 취지입니다.
+  </p>
+
+  <!-- 상세 정보 표 -->
+  <h2>📊 2026년 정신건강 심리상담 바우처 상세 정보</h2>
+  <table>
+    <tr><th>항목</th><th>내용</th></tr>
+    <tr><td><strong>지원 대상</strong></td><td>우울·불안 등 정서적 어려움이 있는 모든 주민 (연령 제한 없음)</td></tr>
+    <tr><td><strong>소득 기준</strong></td><td>기준 중위소득 100% 이하 (4인 가구 월 649만원 이하)</td></tr>
+    <tr><td><strong>지원금액</strong></td><td>1급 상담사 기준 회당 8만원 × 연 8회 = 최대 64만원</td></tr>
+    <tr><td><strong>본인 부담</strong></td><td>중위소득 70% 이하 → 0원 / 70~100% → 일부 부담 (약 20~30%)</td></tr>
+    <tr><td><strong>상담 형태</strong></td><td>대면 상담 (지정 상담기관 방문)</td></tr>
+    <tr><td><strong>제공 기관</strong></td><td>지역 내 보건복지부 지정 정신건강 바우처 제공기관</td></tr>
+    <tr><td><strong>신청 기간</strong></td><td>연중 상시 (예산 소진 시 조기 마감)</td></tr>
+    <tr><td><strong>주관 부처</strong></td><td>보건복지부 정신건강정책과</td></tr>
+  </table>
+
+  <!-- SVG 인포그래픽 -->
+  <h2>📈 소득 구간별 본인 부담금 비교</h2>
+  <div class="svg-wrap">
+    <svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:680px;">
+      <rect width="680" height="260" fill="#fff"/>
+      <text x="340" y="26" text-anchor="middle" font-size="15" font-weight="bold" fill="#1565c0">소득 구간별 회당(8만원) 본인 부담금</text>
+
+      <!-- 막대 배경 -->
+      <rect x="80" y="45" width="560" height="40" fill="#e3f2fd" rx="6"/>
+      <rect x="80" y="100" width="560" height="40" fill="#e3f2fd" rx="6"/>
+      <rect x="80" y="155" width="560" height="40" fill="#e3f2fd" rx="6"/>
+      <rect x="80" y="210" width="560" height="40" fill="#e3f2fd" rx="6"/>
+
+      <!-- 중위 70% 이하 -->
+      <rect x="80" y="45" width="0" height="40" fill="#1565c0" rx="6"/>
+      <text x="86" y="70" font-size="13" fill="#333" font-weight="bold">중위소득 70% 이하 (1인 191만원↓)</text>
+      <text x="620" y="70" font-size="13" fill="#1565c0" font-weight="900" text-anchor="end">본인 부담 0원</text>
+
+      <!-- 70~85% -->
+      <rect x="80" y="100" width="112" height="40" fill="#42a5f5" rx="6"/>
+      <text x="86" y="125" font-size="13" fill="#333" font-weight="bold">중위소득 70~85%</text>
+      <text x="620" y="125" font-size="13" fill="#1565c0" font-weight="900" text-anchor="end">약 1만 6천원 (20%)</text>
+
+      <!-- 85~100% -->
+      <rect x="80" y="155" width="168" height="40" fill="#90caf9" rx="6"/>
+      <text x="86" y="180" font-size="13" fill="#333" font-weight="bold">중위소득 85~100%</text>
+      <text x="620" y="180" font-size="13" fill="#1565c0" font-weight="900" text-anchor="end">약 2만 4천원 (30%)</text>
+
+      <!-- 100% 초과 -->
+      <rect x="80" y="210" width="560" height="40" fill="#bbdefb" rx="6"/>
+      <text x="86" y="235" font-size="13" fill="#555">중위소득 100% 초과</text>
+      <text x="620" y="235" font-size="13" fill="#999" font-weight="700" text-anchor="end">바우처 미해당 (전액 본인 부담)</text>
+
+      <text x="340" y="258" text-anchor="middle" font-size="11" fill="#999">※ 실제 본인 부담은 지자체별 상이 / 지정 기관 확인 필수</text>
+    </svg>
+  </div>
+
+  <!-- 신청 방법 -->
+  <h2>🖊️ 신청 방법 (단계별)</h2>
+  <ol class="steps">
+    <li><strong>자격 확인</strong> — 건강보험료 납부액으로 소득 기준(중위소득 100% 이하) 해당 여부 확인 (복지로 모의계산 활용 가능)</li>
+    <li><strong>서류 준비</strong> — 신분증, 건강보험료 납부확인서(최근 3개월), 바우처 신청서 (현장 작성 가능)</li>
+    <li><strong>접수</strong> — ① 읍·면·동 행정복지센터 방문 또는 ② 복지로(www.bokjiro.go.kr) 온라인 신청</li>
+    <li><strong>바우처 카드 수령</strong> — 승인 후 국민행복카드(바우처 전용카드)로 지원금 탑재</li>
+    <li><strong>상담 기관 예약 후 이용</strong> — 지정 기관 방문 시 국민행복카드로 결제 → 본인 부담분만 추가 납부</li>
+  </ol>
+
+  <!-- 기한 박스 -->
+  <div class="deadline-box">
+    <h3>⏰ 지금 신청해야 하는 이유</h3>
+    <p>정신건강 심리상담 바우처는 <strong>연중 상시 신청</strong>이지만, 지자체 예산이 소진되면 대기 또는 조기 마감됩니다. 특히 하반기(8~12월)는 신청자가 몰리는 시기입니다. <strong>8월 중 신청 시 하반기 상담 일정 확보 가능</strong>하니 서두르세요.</p>
+  </div>
+
+  <!-- 자가진단 체크리스트 -->
+  <div class="checklist">
+    <h3>✅ 나는 대상일까? 자가 진단</h3>
+    <ul>
+      <li>최근 2주 이상 우울하거나 의욕이 없는 날이 계속된다</li>
+      <li>불안·공황·수면 문제로 일상생활이 어렵다</li>
+      <li>가구 월 소득이 기준 중위소득 100% 이하다 (4인 가구 649만원↓)</li>
+      <li>상담을 받고 싶지만 비용이 부담되어 미뤄왔다</li>
+      <li>정신건강의학과 진료 외에 비의료적 심리 상담을 원한다</li>
+    </ul>
+    <p style="margin-top:10px; font-size:13px; color:#555;">※ 위 항목 중 3개 이상 해당 시, 바로 주민센터에 신청하세요.</p>
+  </div>
+
+  <!-- 주의사항 -->
+  <div class="caution">
+    <h3>⚠️ 꼭 알아야 할 주의사항</h3>
+    <p>① 바우처는 보건복지부 지정 기관에서만 사용 가능합니다. 미지정 사설 상담소는 해당되지 않습니다.</p>
+    <p>② 연 8회 한도를 초과한 상담은 전액 본인 부담입니다.</p>
+    <p>③ 국민행복카드가 없는 경우 신청 시 함께 발급 신청이 가능합니다.</p>
+    <p>④ 정신건강의학과 의료 행위(진료·약 처방)는 별도 건강보험 적용 사항으로, 이 바우처와 다릅니다.</p>
+  </div>
+
+  <!-- 담당 기관 -->
+  <div class="contact-box">
+    <h3>📞 담당 기관 및 문의처</h3>
+    <p>🏛️ <strong>주관 부처:</strong> 보건복지부 정신건강정책과</p>
+    <p>📲 <strong>정신건강위기상담전화:</strong> ☎ 1577-0199 (24시간)</p>
+    <p>📲 <strong>자살예방상담전화:</strong> ☎ 109 (24시간 무료)</p>
+    <p>💻 <strong>온라인 신청:</strong> 복지로 www.bokjiro.go.kr</p>
+    <p>🏢 <strong>방문 신청:</strong> 주소지 읍·면·동 행정복지센터</p>
+    <p>📍 <strong>지정 기관 검색:</strong> 복지로 → '정신건강 심리상담 바우처' 검색 → 제공기관 찾기</p>
+  </div>
+
+  <!-- 전문가 찬반 론평 -->
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"비용 장벽을 낮춰 정신건강 서비스 접근성을 높이는 것은 자살예방 정책의 가장 효과적인 첫 단계입니다. 기준 중위소득 70% 이하에게 전액 무료를 제공하는 이번 설계는 취약계층 집중 지원이라는 측면에서 바람직합니다."</p>
+          <p class="author">— 정신건강 정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"1급 상담사와의 전문 상담은 약물치료와 달리 근본적 심리 회복력을 키웁니다. 연 8회 지원은 단기 위기 개입에서 장기 자립적 정신건강 관리로 전환하는 교두보가 될 수 있습니다."</p>
+          <p class="author">— 상담심리학 교수</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"연 8회는 심각한 우울·불안 환자에게는 턱없이 부족합니다. 회당 8만원 지원으로는 수도권 전문 상담사 시장 단가(회당 12~15만원)와 괴리가 커, 지정 기관이 지방에 편중될 우려가 있습니다."</p>
+          <p class="author">— 재정·복지 정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"바우처 지정 기관 수가 지역별로 극도로 불균형한 상황에서, '신청은 되는데 이용할 기관이 없다'는 문제가 반복될 수 있습니다. 공급망 확충 없는 수요 지원은 반쪽짜리 정책에 그칩니다."</p>
+          <p class="author">— 지역사회 정신건강 현장 활동가</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 해시태그 -->
+  <div class="hashtags">
+    <span>#정신건강바우처</span>
+    <span>#심리상담지원</span>
+    <span>#자살예방</span>
+    <span>#청년정신건강</span>
+    <span>#본인부담0원</span>
+    <span>#복지로신청</span>
+    <span>#국민행복카드</span>
+    <span>#상담비지원</span>
+    <span>#보건복지부</span>
+    <span>#2026복지정책</span>
+  </div>
+
+  <!-- 면책조항 -->
+  <div class="disclaimer">
+    ※ 이 기사는 공개된 정보를 바탕으로 작성되었습니다. 지원 금액·본인 부담률·지정 기관은 지자체별로 상이할 수 있으며, 정확한 지원 여부는 읍·면·동 행정복지센터 또는 정신건강위기상담전화(1577-0199)에 확인하세요.
+  </div>
+
+  <!-- 작성일 -->
+  <p class="meta">작성일: 2026년 8월 4일</p>
+
+</div>
+</body>
+</html>
