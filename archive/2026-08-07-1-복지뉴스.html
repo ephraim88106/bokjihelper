@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"이미 지급됐는데 아직도 신청 안 하셨어요?" 민생회복 소비쿠폰 최대 55만원 — 12월 31일까지 안 쓰면 자동 소멸, 지금 당장 받으세요! | 오늘의 복지 뉴스</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; background: #fafafa; color: #222; }
+  .container { max-width: 720px; margin: 0 auto; padding: 0 16px 60px; }
+
+  /* 헤더 */
+  .top-header { background: #f57c00; color: #fff; padding: 12px 20px; font-size: 13px; font-weight: 700; letter-spacing: 1px; }
+
+  /* 배지 */
+  .badge { display: inline-block; background: #ff6d00; color: #fff; font-size: 11px; font-weight: 900; padding: 4px 10px; border-radius: 20px; margin: 18px 0 8px; letter-spacing: 0.5px; }
+
+  /* 메인 제목 */
+  h1 { font-size: 26px; font-weight: 900; line-height: 1.4; color: #bf360c; margin-bottom: 16px; word-break: keep-all; }
+
+  /* 훅 */
+  .hook { border-left: 5px solid #f57c00; padding: 14px 16px; background: #fff3e0; margin-bottom: 22px; font-size: 16px; line-height: 1.7; color: #333; border-radius: 0 8px 8px 0; }
+  .hook .highlight { background: #ff6d00; color: #fff; padding: 1px 5px; border-radius: 3px; font-weight: 900; }
+
+  /* 핵심 요약 박스 */
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 18px 20px; margin-bottom: 28px; }
+  .summary-box h2 { font-size: 15px; font-weight: 900; color: #1b5e20; margin-bottom: 10px; }
+  .summary-box ul { list-style: none; padding: 0; }
+  .summary-box ul li { font-size: 15px; line-height: 1.8; color: #2e7d32; font-weight: 700; }
+  .summary-box ul li::before { content: "📌 "; }
+
+  /* 섹션 제목 */
+  h2 { font-size: 20px; font-weight: 900; color: #e65100; margin: 32px 0 14px; border-bottom: 3px solid #f57c00; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 900; color: #bf360c; margin: 18px 0 8px; }
+
+  /* 본문 */
+  p { font-size: 15px; line-height: 1.85; color: #333; margin-bottom: 14px; word-break: keep-all; }
+
+  /* 표 */
+  .info-table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 14px; }
+  .info-table th { background: #f57c00; color: #fff; padding: 10px 12px; text-align: left; font-weight: 900; }
+  .info-table td { border: 1px solid #ddd; padding: 10px 12px; background: #fff; line-height: 1.6; }
+  .info-table tr:nth-child(even) td { background: #fff8f0; }
+
+  /* SVG 영역 */
+  .svg-wrap { background: #fff; border-radius: 12px; padding: 20px 10px; margin: 24px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.07); overflow-x: auto; }
+  .svg-wrap h3 { text-align: center; font-size: 14px; color: #555; margin-bottom: 14px; }
+
+  /* 단계별 신청 */
+  .step-list { list-style: none; padding: 0; margin: 14px 0; }
+  .step-list li { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; }
+  .step-num { min-width: 32px; height: 32px; background: #f57c00; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 15px; flex-shrink: 0; }
+  .step-text { font-size: 15px; line-height: 1.7; color: #333; padding-top: 4px; }
+
+  /* 기한 박스 */
+  .deadline-box { border: 2.5px dashed #f57c00; border-radius: 12px; padding: 18px 20px; background: #fff8f0; margin: 24px 0; }
+  .deadline-box .deadline-title { font-size: 18px; font-weight: 900; color: #e65100; margin-bottom: 10px; }
+  .deadline-box p { margin: 0; font-size: 15px; line-height: 1.8; }
+
+  /* 체크리스트 */
+  .checklist { background: #fff; border-radius: 12px; border: 1.5px solid #f57c00; padding: 18px 20px; margin: 20px 0; }
+  .checklist h3 { font-size: 16px; font-weight: 900; color: #e65100; margin-bottom: 12px; }
+  .checklist ul { list-style: none; padding: 0; }
+  .checklist ul li { font-size: 15px; line-height: 1.8; color: #333; padding: 4px 0; }
+  .checklist ul li::before { content: "✓ "; color: #f57c00; font-weight: 900; }
+
+  /* 주의사항 */
+  .caution { background: #fff8f0; border-radius: 12px; padding: 18px 20px; margin: 20px 0; }
+  .caution h3 { font-size: 16px; font-weight: 900; color: #bf360c; margin-bottom: 10px; }
+  .caution p { margin-bottom: 8px; font-size: 15px; line-height: 1.8; }
+
+  /* 문의처 */
+  .contact-box { background: #fff3e0; border-left: 5px solid #f57c00; border-radius: 0 12px 12px 0; padding: 18px 20px; margin: 24px 0; }
+  .contact-box h3 { font-size: 16px; font-weight: 900; color: #e65100; margin-bottom: 10px; }
+  .contact-box p { font-size: 15px; line-height: 1.8; margin: 0; }
+
+  /* 찬반 론평 */
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  /* 해시태그 */
+  .hashtags { margin: 24px 0; font-size: 14px; color: #f57c00; line-height: 2; word-break: break-all; }
+
+  /* 면책조항 */
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12px; color: #777; line-height: 1.8; margin-top: 24px; }
+
+  /* 작성일 */
+  .meta { text-align: right; font-size: 12px; color: #aaa; margin-top: 12px; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 20px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .info-table { font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+<div class="top-header">📅 2026년 8월 7일 · 오늘의 복지 뉴스 · 제1보</div>
+<div class="container">
+
+  <div class="badge">💰 자금·지원금</div>
+
+  <h1>"이미 지급됐는데 아직도 신청 안 하셨어요?" 민생회복 소비쿠폰 최대 55만원 — 12월 31일까지 안 쓰면 자동 소멸, 지금 당장 받으세요!</h1>
+
+  <div class="hook">
+    지금 이 순간에도 수백만 명의 통장에 <span class="highlight">15만~55만원짜리 쿠폰이 잠자고 있습니다.</span> 신청하지 않아서, 방법을 몰라서, 아니면 "나는 해당 안 되겠지"라고 지레 포기해서. 2026년 12월 31일 자정, 한 번도 쓰지 못한 채 소멸되는 쿠폰이 수백억 원에 달할 것으로 추산됩니다. 지금 이 글을 읽는 당신은 그 수백만 명 중 한 명이 아니어야 합니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>민생회복 소비쿠폰 2차 신청 진행 중 — 소득 하위 90% 10만원 추가 지급</li>
+      <li>1차+2차 합산 최대 55만원 (취약계층 포함 시 최대 60만원)</li>
+      <li>사용기한 2026년 12월 31일 — 미사용 금액은 환불 없이 전액 소멸</li>
+    </ul>
+  </div>
+
+  <h2>📣 민생회복 소비쿠폰이란?</h2>
+  <p>2026년 정부가 경기 침체와 고물가·고금리로 지친 국민의 생활을 직접 지원하고, 지역 소상공인 매출을 끌어올리기 위해 마련한 <strong>전 국민 소비 지원 쿠폰 정책</strong>입니다. 카드사 포인트·선불카드·지역사랑상품권 형태로 지급되며, 가맹점에서 현금처럼 사용할 수 있습니다.</p>
+  <p>1차는 소득에 관계없이 전 국민에게 7월부터 지급을 시작했고, 2차는 소득 상위 10%를 제외한 하위 90% 국민을 대상으로 추가 지급이 진행 중입니다.</p>
+
+  <h2>💸 지급 금액 한눈에 보기</h2>
+  <table class="info-table">
+    <tr>
+      <th>구분</th>
+      <th>지급 대상</th>
+      <th>지급 금액</th>
+      <th>비고</th>
+    </tr>
+    <tr>
+      <td>1차</td>
+      <td>전 국민 (소득 무관)</td>
+      <td>1인 15만~45만원</td>
+      <td>7월 21일부터 지급 시작</td>
+    </tr>
+    <tr>
+      <td>2차</td>
+      <td>소득 하위 90%</td>
+      <td>10만원 추가 지급</td>
+      <td>2026년 7월 22일부터 접수</td>
+    </tr>
+    <tr>
+      <td>취약계층 추가</td>
+      <td>기초수급자·차상위계층</td>
+      <td>최대 60만원</td>
+      <td>1·2차 합산 최고액</td>
+    </tr>
+    <tr>
+      <td>사용기한</td>
+      <td colspan="2">2026년 12월 31일 (미사용 시 자동 소멸)</td>
+      <td>환불 불가</td>
+    </tr>
+  </table>
+
+  <!-- SVG 인포그래픽 -->
+  <div class="svg-wrap">
+    <h3>📊 민생회복 소비쿠폰 수령 금액 비교 (가구 유형별)</h3>
+    <svg viewBox="0 0 680 300" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif">
+      <!-- 배경 -->
+      <rect width="680" height="300" fill="#fff8f0" rx="12"/>
+
+      <!-- 막대 배경 -->
+      <text x="40" y="36" font-size="13" fill="#888" font-weight="700">수령 금액 (만원)</text>
+
+      <!-- Y축 눈금 -->
+      <line x1="80" y1="50" x2="80" y2="240" stroke="#ddd" stroke-width="1.5"/>
+      <text x="55" y="244" font-size="11" fill="#aaa">0</text>
+      <text x="47" y="194" font-size="11" fill="#aaa">15</text>
+      <text x="47" y="144" font-size="11" fill="#aaa">30</text>
+      <text x="47" y="94" font-size="11" fill="#aaa">45</text>
+      <text x="47" y="54" font-size="11" fill="#aaa">60</text>
+      <line x1="78" y1="194" x2="640" y2="194" stroke="#eee" stroke-width="1"/>
+      <line x1="78" y1="144" x2="640" y2="144" stroke="#eee" stroke-width="1"/>
+      <line x1="78" y1="94" x2="640" y2="94" stroke="#eee" stroke-width="1"/>
+      <line x1="78" y1="54" x2="640" y2="54" stroke="#ffd" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+      <!-- 막대 1: 일반 국민 (1차만) -->
+      <rect x="110" y="107" width="80" height="133" fill="#ffcc80" rx="6"/>
+      <text x="150" y="100" font-size="13" fill="#e65100" font-weight="900" text-anchor="middle">15만원</text>
+      <text x="150" y="266" font-size="12" fill="#555" text-anchor="middle" font-weight="700">일반국민</text>
+      <text x="150" y="280" font-size="11" fill="#888" text-anchor="middle">(1차 최소)</text>
+
+      <!-- 막대 2: 소득 하위 90% -->
+      <rect x="230" y="77" width="80" height="163" fill="#fb8c00" rx="6"/>
+      <text x="270" y="70" font-size="13" fill="#bf360c" font-weight="900" text-anchor="middle">25만원</text>
+      <text x="270" y="266" font-size="12" fill="#555" text-anchor="middle" font-weight="700">하위 90%</text>
+      <text x="270" y="280" font-size="11" fill="#888" text-anchor="middle">(1차+2차)</text>
+
+      <!-- 막대 3: 1차 최대 -->
+      <rect x="350" y="54" width="80" height="186" fill="#ef6c00" rx="6"/>
+      <text x="390" y="47" font-size="13" fill="#bf360c" font-weight="900" text-anchor="middle">45만원</text>
+      <text x="390" y="266" font-size="12" fill="#555" text-anchor="middle" font-weight="700">일반 최대</text>
+      <text x="390" y="280" font-size="11" fill="#888" text-anchor="middle">(1차 최대+2차)</text>
+
+      <!-- 막대 4: 취약계층 -->
+      <rect x="470" y="50" width="80" height="190" fill="#e65100" rx="6"/>
+      <rect x="470" y="50" width="80" height="190" fill="url(#stripe)" rx="6" opacity="0.4"/>
+      <defs>
+        <pattern id="stripe" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)">
+          <rect width="4" height="8" fill="#fff" opacity="0.5"/>
+        </pattern>
+      </defs>
+      <text x="510" y="43" font-size="14" fill="#c62828" font-weight="900" text-anchor="middle">최대 60만원</text>
+      <text x="510" y="266" font-size="12" fill="#555" text-anchor="middle" font-weight="700">취약계층</text>
+      <text x="510" y="280" font-size="11" fill="#888" text-anchor="middle">(기초수급·차상위)</text>
+
+      <!-- 소멸 경고선 -->
+      <line x1="620" y1="50" x2="640" y2="50" stroke="#c62828" stroke-width="2" stroke-dasharray="4,3"/>
+      <text x="640" y="54" font-size="11" fill="#c62828" font-weight="900" text-anchor="end">⚠ 12/31 소멸</text>
+    </svg>
+  </div>
+
+  <h2>🛒 어디서 쓸 수 있나요?</h2>
+  <p>민생회복 소비쿠폰은 지역 내 <strong>소상공인 가맹점</strong>에서 사용 가능합니다. 편의점, 마트(동네 슈퍼 포함), 음식점, 약국, 미용실, 의류점, 학원 등 생활 밀착형 업종에서 현금처럼 결제됩니다. 다만 대형마트 직영점(이마트·홈플러스 본점 등), 백화점, 온라인 쇼핑몰(쿠팡·네이버쇼핑 등)에서는 사용이 불가합니다.</p>
+  <p>지역사랑상품권으로 수령한 경우에는 해당 지자체 관내 가맹점에서만 사용 가능하오니, 수령 형태에 따라 가맹점을 확인하세요.</p>
+
+  <h2>📱 어떻게 신청하나요?</h2>
+  <ul class="step-list">
+    <li>
+      <div class="step-num">1</div>
+      <div class="step-text"><strong>온라인 신청:</strong> 정부24(gov.kr) 또는 모바일 앱 접속 → '민생회복 소비쿠폰' 검색 → 본인 인증 후 신청 (공동인증서·간편인증 가능)</div>
+    </li>
+    <li>
+      <div class="step-num">2</div>
+      <div class="step-text"><strong>카드사 앱 신청:</strong> 본인 명의 카드사 앱(신한·KB·삼성·현대·롯데 등) → 쿠폰 신청 메뉴 → 지역사랑상품권 또는 카드 포인트 선택 후 신청</div>
+    </li>
+    <li>
+      <div class="step-num">3</div>
+      <div class="step-text"><strong>오프라인 신청:</strong> 주소지 관할 읍·면·동 행정복지센터 방문 → 신분증 제시 → 선불카드 또는 지역사랑상품권 즉시 수령</div>
+    </li>
+    <li>
+      <div class="step-num">4</div>
+      <div class="step-text"><strong>수령 확인:</strong> 카드사 앱 또는 제로페이·지역사랑상품권 앱에서 잔액 확인 — 잊고 있으면 소멸됩니다!</div>
+    </li>
+  </ul>
+
+  <div class="deadline-box">
+    <div class="deadline-title">⏰ 핵심 일정 정리</div>
+    <p>
+      ✅ 1차 지급 개시: 2026년 7월 21일 (이미 시작됨)<br>
+      ✅ 2차 신청 접수: 2026년 7월 22일 ~ (소득 하위 90%)<br>
+      ⚠️ <strong>사용 기한: 2026년 12월 31일 자정 — 이후 잔액 전액 소멸, 환불 불가!</strong><br>
+      📋 오프라인 신청: 읍·면·동 행정복지센터 방문 (상시 접수)
+    </p>
+  </div>
+
+  <h2>✅ 나는 해당이 될까? 자가 진단</h2>
+  <div class="checklist">
+    <h3>다음 중 하나라도 해당되면 반드시 신청하세요</h3>
+    <ul>
+      <li>국내 거주 대한민국 국민이다 (외국 국적자 제외)</li>
+      <li>2026년 7월 기준 건강보험료 납부 또는 의료급여 수급 중이다</li>
+      <li>기초생활수급자, 차상위계층, 한부모가족 지원 대상이다</li>
+      <li>아직 1차 쿠폰을 수령하지 않았거나 신청 여부를 모른다</li>
+      <li>쿠폰을 받았으나 잔액이 남아 있고 아직 사용하지 않았다</li>
+    </ul>
+  </div>
+
+  <h2>⚠️ 주의사항</h2>
+  <div class="caution">
+    <h3>반드시 확인하세요</h3>
+    <p>① 소득 상위 10% (건강보험료 기준)는 지급 대상에서 제외됩니다. 단, 기초수급자·차상위계층은 소득 무관 지급됩니다.</p>
+    <p>② 가족 구성원별로 각자 신청해야 합니다. 대표자 1인이 가족 전체를 대신 신청할 수 없습니다.</p>
+    <p>③ 사용처 제한 — 대형마트 직영·백화점·온라인몰·유흥업소에서는 사용 불가입니다.</p>
+    <p>④ 사용기한 내 미사용 금액은 환불·이월·재지급이 모두 불가합니다. 잊지 말고 연내에 사용하세요.</p>
+  </div>
+
+  <div class="contact-box">
+    <h3>📞 담당 기관 및 문의처</h3>
+    <p>
+      🏛 <strong>정부24:</strong> gov.kr / 앱 검색 '민생회복 소비쿠폰'<br>
+      ☎ <strong>정부민원안내콜센터:</strong> 110 (24시간 운영)<br>
+      🏢 <strong>읍·면·동 행정복지센터</strong> 방문 신청 가능 (신분증 지참)<br>
+      💳 <strong>각 카드사 고객센터:</strong> 신한 1544-7000 / KB 1588-1688 / 삼성 1588-8700
+    </p>
+  </div>
+
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"민생회복 소비쿠폰은 경기 침체기에 가처분 소득을 직접 보전해 주는 즉효성 있는 수단입니다. 특히 취약계층에게 추가 지급이 집중된다는 점에서 소득재분배 효과도 기대할 수 있습니다."</p>
+          <p class="author">— 소비경제 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"지역 소상공인 매출이 실질적으로 오르는 효과가 현장에서 확인됩니다. 대형마트를 제외한 지역 가맹점 중심의 사용처 설계는 골목상권 살리기라는 정책 목표에 부합합니다."</p>
+          <p class="author">— 지역경제 활성화 전문가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"전 국민 지원에 투입되는 재정 규모가 막대합니다. 단기 소비 진작 효과가 있더라도 국가 채무 증가로 중장기 재정 건전성이 훼손될 수 있다는 점을 간과해서는 안 됩니다."</p>
+          <p class="author">— 재정경제 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"디지털 접근성이 낮은 고령층과 장애인은 온라인 신청 과정에서 소외될 우려가 있습니다. 오프라인 신청 창구가 있다 해도 정보 접근 격차로 인해 정작 가장 필요한 분들이 못 받는 역설이 생길 수 있습니다."</p>
+          <p class="author">— 디지털 복지 연구자</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #민생회복소비쿠폰 #소비쿠폰신청방법 #2026지원금 #전국민쿠폰 #소득하위90퍼센트 #지역사랑상품권 #정부24신청 #복지지원금 #취약계층지원 #소상공인살리기
+  </div>
+
+  <div class="disclaimer">
+    이 기사는 공개된 정보를 바탕으로 작성되었습니다. 지급 대상·금액·사용처는 지자체·카드사별로 다를 수 있으며, 정확한 지원 여부는 정부24(gov.kr) 또는 담당 기관에 반드시 확인하세요.
+  </div>
+  <div class="meta">작성일: 2026-08-07 | 오늘의 복지 뉴스 편집팀</div>
+
+</div>
+</body>
+</html>
