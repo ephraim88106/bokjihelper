@@ -1459,6 +1459,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://welfare.ephseed.com/archive/2026-08-09-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://welfare.ephseed.com/archive/2026-08-09-2-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://welfare.ephseed.com/archive/2026_%EA%B3%A0%EC%9C%A0%EA%B0%80_%ED%94%BC%ED%95%B4%EC%A7%80%EC%9B%90%EA%B8%88</loc>
     <lastmod>2026-08-09</lastmod>
     <changefreq>weekly</changefreq>
