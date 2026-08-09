@@ -75,17 +75,15 @@ def read_recent_urls(days=3):
     return [u for u in all_urls if any(d in u for d in recent_dates)]
 
 
-# ─────────── Sitemap Ping ───────────
-def ping_sitemap():
-    sitemap_url = SITE + "/sitemap.xml"
-    ping_url    = "https://www.google.com/ping?sitemap=" + sitemap_url
-    try:
-        resp = urlopen(ping_url, timeout=10)
-        print(f"[v] Sitemap Ping 성공 ({resp.status}) => {sitemap_url}")
-        return True
-    except URLError as e:
-        print(f"[!] Sitemap Ping 실패: {e}")
-        return False
+# ─────────── Sitemap 안내 ───────────
+def note_sitemap():
+    """
+    Google Sitemap Ping은 2023년 6월 폐지됨.
+    대신: Search Console에서 sitemap.xml을 한 번 등록하면 구글이 알아서 주기적으로 수집합니다.
+    등록 URL: https://search.google.com/search-console/sitemaps
+    제출할 사이트맵: https://welfare.ephseed.com/sitemap.xml
+    """
+    print(f"[i] sitemap.xml => {SITE}/sitemap.xml (GSC에 등록 권장)")
 
 
 # ─────────── OAuth2 토큰 발급 ───────────
@@ -156,10 +154,10 @@ def main():
     parser.add_argument("--ping-only", action="store_true")
     args = parser.parse_args()
 
-    # 항상 Ping 먼저
-    ping_sitemap()
+    # sitemap 안내 (ping은 2023년 폐지됨)
+    note_sitemap()
     if args.ping_only:
-        print("[i] --ping-only 완료.")
+        print("[i] --ping-only: sitemap 안내만 출력")
         return
 
     # 서비스 계정 키 없으면 종료
