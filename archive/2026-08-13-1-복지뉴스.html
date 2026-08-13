@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>장애인연금 장애수당 차이 — 지급 대상과 중복 수급 가능 여부 정리</title>
+<meta name="description" content="장애인연금과 장애수당은 근거 법률부터 다른 별개 제도라 동시에 받을 수 없습니다. 2026년 기초급여 349,700원·부가급여 최대 9만 원, 선정기준액 단독 140만 원, 장애수당 월 6만 원, 장애아동수당 금액과 65세 기초연금 전환까지 정리했습니다.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    background: #f8f9fa;
+    color: #222;
+    line-height: 1.7;
+  }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge {
+    display: inline-block;
+    background: #1565c0;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.35;
+    color: #1a1a1a;
+    margin-bottom: 18px;
+    word-break: keep-all;
+  }
+
+  .hook {
+    border-left: 5px solid #1565c0;
+    padding: 14px 18px;
+    background: #e3f2fd;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 22px;
+    font-size: 15px;
+  }
+  .hook .highlight { color: #1565c0; font-weight: 900; }
+
+  .summary-box {
+    background: #e8f5e9;
+    border: 2px solid #2e7d32;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 26px;
+  }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+
+  h2 { font-size: 19px; font-weight: 900; color: #1565c0; margin: 28px 0 12px; border-bottom: 2px solid #bbdefb; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #1565c0; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #e3f2fd; }
+  .big-number { font-size: 20px; font-weight: 900; color: #1565c0; }
+
+  .formula {
+    background: #f5faff;
+    border: 1px solid #bbdefb;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 20px;
+    font-size: 14.5px;
+    line-height: 1.9;
+    word-break: keep-all;
+  }
+  .formula b { color: #1565c0; }
+
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #e3f2fd; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #1565c0; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+
+  .deadline-box {
+    border: 2px dashed #f57c00;
+    background: #fff8e1;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 22px;
+  }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0; }
+
+  .checklist { background: #e3f2fd; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #90caf9; color: #1565c0; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #1565c0; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+
+  .caution { background: #fff3e0; border-left: 4px solid #f57c00; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+
+  .contact-box { background: #e3f2fd; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #1565c0; border-color: #90caf9; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  .hashtags { font-size: 13px; color: #1565c0; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-08-13-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="장애인연금 장애수당 차이 — 지급 대상과 중복 수급 가능 여부 정리">
+<meta property="og:description" content="장애인연금과 장애수당은 근거 법률부터 다른 별개 제도라 동시에 받을 수 없습니다. 2026년 기초급여 349,700원·부가급여 최대 9만 원, 선정기준액 단독 140만 원, 장애수당 월 6만 원, 장애아동수당 금액과 65세 기초연금 전환까지 정리했습니다.">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-08-13-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-08-13T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-08-13T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-08-13-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-08-13-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "장애인연금 장애수당 차이 — 지급 대상과 중복 수급 가능 여부 정리", "description": "장애인연금과 장애수당은 근거 법률부터 다른 별개 제도라 동시에 받을 수 없습니다. 2026년 기초급여 349,700원·부가급여 최대 9만 원, 선정기준액 단독 140만 원, 장애수당 월 6만 원, 장애아동수당 금액과 65세 기초연금 전환까지 정리했습니다.", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-08-13", "dateModified": "2026-08-13", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 장애인 소득보장</div>
+  <div class="section-badge">장애인연금·장애수당</div>
+
+  <h1>장애인연금 장애수당 차이 — 지급 대상과 중복 수급 가능 여부 정리</h1>
+
+  <div class="hook">
+    장애인 등록을 마치고 읍·면·동 행정복지센터에 갔더니 <span class="highlight">"연금은 안 되고 수당만 됩니다"</span>
+    라는 말을 들은 분이 많습니다. 이름이 비슷해 같은 제도의 등급 차이로 오해하기 쉽지만,
+    장애인연금과 장애수당은 <span class="highlight">근거 법률부터 다른 별개의 제도</span>이고
+    한 사람이 동시에 받을 수 없습니다. 어느 쪽에 해당하는지는 장애 정도와 소득으로 갈립니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li><b>갈림길은 장애 정도</b> — 장애의 정도가 심한 장애인(종전 1·2급, 3급 중복)은 <b>장애인연금</b>, 그 밖의 등록장애인은 <b>장애수당</b> 대상입니다.</li>
+      <li><b>금액 차이가 큽니다</b> — 장애인연금은 2026년 기준 월 최대 <b>439,700원</b>, 장애수당은 재가 기준 월 <b>60,000원</b>입니다.</li>
+      <li><b>동시 수급은 안 됩니다</b> — 장애인연금을 받으면 장애수당·장애아동수당 대상에서 제외됩니다. 다만 기초생활보장 급여와는 별개입니다.</li>
+    </ul>
+  </div>
+
+  <h2>두 제도는 왜 나뉘어 있나</h2>
+  <p>
+    장애인연금은 <b>「장애인연금법」</b>에 근거합니다. 장애 때문에 근로 능력이 크게 줄어
+    소득 활동이 어려운 중증장애인의 <b>상실된 소득을 보전</b>하는 것이 목적이라, 급여 수준이
+    기초연금과 비슷한 구조로 설계돼 있습니다.
+  </p>
+  <p>
+    장애수당은 <b>「장애인복지법」</b>에 근거합니다. 근로 능력이 일부 남아 있는 장애인이
+    장애 때문에 추가로 부담하는 <b>비용을 보조</b>하는 성격이라 금액이 훨씬 작습니다.
+    즉 "덜 준다"기보다 <b>목적 자체가 소득 보전이 아니라 비용 보조</b>인 제도입니다.
+  </p>
+  <p>
+    두 제도가 겹치지 않도록 장애수당은 지급 대상을 <b>"장애인연금법상 중증장애인에 해당하지
+    않는 등록장애인"</b>으로 못 박아 두었습니다. 이 문장 하나 때문에 중증장애인은 처음부터
+    장애수당 대상에서 빠집니다.
+  </p>
+
+  <h2>한눈에 보는 비교표 (2026년 기준)</h2>
+  <table class="info-table">
+    <tr><th>구분</th><th>장애인연금</th><th>장애수당</th></tr>
+    <tr>
+      <td><b>근거 법률</b></td>
+      <td>장애인연금법</td>
+      <td>장애인복지법</td>
+    </tr>
+    <tr>
+      <td><b>장애 정도</b></td>
+      <td>장애의 정도가 심한 장애인<br>(종전 1급·2급, 3급 중복)</td>
+      <td>위에 해당하지 않는 등록장애인<br>(종전 3~6급)</td>
+    </tr>
+    <tr>
+      <td><b>연령</b></td>
+      <td>만 18세 이상</td>
+      <td>만 18세 이상</td>
+    </tr>
+    <tr>
+      <td><b>소득 기준</b></td>
+      <td>소득인정액이 선정기준액 이하<br>(중증장애인 소득 하위 70% 수준)</td>
+      <td>기초생활수급자 또는 차상위계층</td>
+    </tr>
+    <tr>
+      <td><b>월 지급액</b></td>
+      <td><span class="big-number">최대 439,700원</span><br>기초급여 349,700원 + 부가급여</td>
+      <td><span class="big-number">60,000원</span><br>보장시설 거주자 30,000원</td>
+    </tr>
+    <tr>
+      <td><b>65세 이후</b></td>
+      <td>기초급여가 기초연금으로 전환<br>(부가급여는 계속)</td>
+      <td>연령 상한 없이 계속 지급</td>
+    </tr>
+  </table>
+
+  <div class="svg-wrap">
+    <div class="svg-title">내가 어느 쪽인지 가르는 두 개의 질문</div>
+    <svg viewBox="0 0 660 300" width="100%" role="img" aria-label="장애 정도와 소득 기준에 따라 장애인연금과 장애수당으로 나뉘는 흐름도">
+      <rect x="230" y="10" width="200" height="44" rx="10" fill="#1565c0"/>
+      <text x="330" y="38" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">등록장애인</text>
+
+      <line x1="330" y1="54" x2="330" y2="82" stroke="#90a4ae" stroke-width="2"/>
+      <rect x="205" y="82" width="250" height="40" rx="8" fill="#eceff1" stroke="#b0bec5"/>
+      <text x="330" y="107" font-size="13.5" fill="#37474f" text-anchor="middle">장애의 정도가 심한 장애인인가?</text>
+
+      <line x1="205" y1="102" x2="120" y2="102" stroke="#90a4ae" stroke-width="2"/>
+      <line x1="120" y1="102" x2="120" y2="150" stroke="#90a4ae" stroke-width="2"/>
+      <text x="150" y="96" font-size="12.5" font-weight="700" fill="#1565c0">예</text>
+
+      <line x1="455" y1="102" x2="540" y2="102" stroke="#90a4ae" stroke-width="2"/>
+      <line x1="540" y1="102" x2="540" y2="150" stroke="#90a4ae" stroke-width="2"/>
+      <text x="490" y="96" font-size="12.5" font-weight="700" fill="#c62828">아니오</text>
+
+      <rect x="20" y="150" width="200" height="42" rx="8" fill="#e3f2fd" stroke="#1565c0"/>
+      <text x="120" y="176" font-size="13" fill="#0d47a1" text-anchor="middle">소득인정액 ≤ 선정기준액</text>
+      <rect x="440" y="150" width="200" height="42" rx="8" fill="#fff3e0" stroke="#f57c00"/>
+      <text x="540" y="176" font-size="13" fill="#e65100" text-anchor="middle">수급자 또는 차상위</text>
+
+      <line x1="120" y1="192" x2="120" y2="222" stroke="#90a4ae" stroke-width="2"/>
+      <line x1="540" y1="192" x2="540" y2="222" stroke="#90a4ae" stroke-width="2"/>
+
+      <rect x="20" y="222" width="200" height="58" rx="10" fill="#1565c0"/>
+      <text x="120" y="246" font-size="14.5" font-weight="700" fill="#fff" text-anchor="middle">장애인연금</text>
+      <text x="120" y="267" font-size="13" fill="#bbdefb" text-anchor="middle">월 최대 439,700원</text>
+
+      <rect x="440" y="222" width="200" height="58" rx="10" fill="#f57c00"/>
+      <text x="540" y="246" font-size="14.5" font-weight="700" fill="#fff" text-anchor="middle">장애수당</text>
+      <text x="540" y="267" font-size="13" fill="#fff3e0" text-anchor="middle">월 60,000원 (재가)</text>
+
+      <rect x="245" y="222" width="170" height="58" rx="10" fill="#f5f5f5" stroke="#bdbdbd" stroke-dasharray="4 3"/>
+      <text x="330" y="245" font-size="12.5" fill="#616161" text-anchor="middle">둘을 동시에</text>
+      <text x="330" y="264" font-size="12.5" font-weight="700" fill="#616161" text-anchor="middle">받을 수는 없습니다</text>
+    </svg>
+  </div>
+
+  <h2>장애인연금은 얼마를, 어떤 기준으로 주나</h2>
+  <p>
+    장애인연금은 <b>기초급여</b>와 <b>부가급여</b> 두 칸으로 나뉩니다. 기초급여는 근로 능력
+    감소로 줄어든 소득을 메우는 몫이고, 부가급여는 장애로 추가 지출되는 비용을 보전하는 몫입니다.
+  </p>
+  <div class="formula">
+    <b>장애인연금 = 기초급여 + 부가급여</b><br>
+    · 기초급여(2026년) — 월 <b>349,700원</b><br>
+    · 부가급여 — 소득 계층에 따라 월 <b>3만 원 ~ 9만 원</b><br>
+    · 합계 최대 월 <b>439,700원</b>
+  </div>
+  <table class="info-table">
+    <tr><th>소득 계층</th><th>부가급여(18~64세)</th><th>합계(기초급여 포함)</th></tr>
+    <tr><td>생계급여·의료급여 수급자</td><td>90,000원</td><td><b>439,700원</b></td></tr>
+    <tr><td>주거급여·교육급여 수급자, 차상위계층</td><td>80,000원</td><td>429,700원</td></tr>
+    <tr><td>차상위 초과 ~ 선정기준액 이하</td><td>30,000원 수준</td><td>379,700원 수준</td></tr>
+  </table>
+  <p>
+    소득 문턱인 <b>선정기준액</b>은 2026년 기준 <b>단독가구 월 140만 원, 부부가구 월 224만 원</b>입니다.
+    여기서 비교되는 값은 월급이 아니라 <b>소득인정액</b>, 즉 소득평가액과 재산의 소득환산액을
+    더한 금액입니다. 근로소득은 일정액을 공제한 뒤 나머지의 30%를 다시 빼고 계산하므로,
+    월급이 선정기준액을 조금 넘어도 통과하는 경우가 적지 않습니다.
+  </p>
+  <p>
+    부부가 모두 장애인연금을 받으면 각자의 기초급여에서 <b>20%가 감액</b>됩니다.
+    두 사람이 함께 살면서 줄어드는 생활비를 반영한 조정으로, 기초연금의 부부 감액과 같은 방식입니다.
+  </p>
+
+  <h2>장애수당·장애아동수당은 얼마인가</h2>
+  <p>
+    장애수당은 만 18세 이상 등록장애인 중 <b>장애의 정도가 심하지 않은 사람</b>이 대상이며,
+    소득이 기초생활수급자나 차상위계층 수준이어야 합니다. 금액은 재가 <b>월 6만 원</b>,
+    보장시설 거주자는 <b>월 3만 원</b>입니다.
+  </p>
+  <p>
+    만 18세 미만이라면 장애수당이 아니라 <b>장애아동수당</b>이 적용됩니다. 소득인정액이
+    기준 중위소득 50% 이하여야 하고, 장애 정도와 급여 유형에 따라 금액이 나뉩니다.
+  </p>
+  <table class="info-table">
+    <tr><th>구분</th><th>생계·의료급여</th><th>주거·교육급여 / 차상위</th><th>보장시설</th></tr>
+    <tr><td><b>중증 장애아동수당</b></td><td>200,000원</td><td>150,000원</td><td>70,000원</td></tr>
+    <tr><td><b>경증 장애아동수당</b></td><td>100,000원</td><td>100,000원</td><td>20,000원</td></tr>
+  </table>
+  <p>
+    장애아동수당 역시 <b>장애인연금 수급자는 대상에서 제외</b>됩니다.
+    만 18세가 되어 장애인연금 대상이 되면 장애아동수당은 종료되고 연금으로 넘어가는 구조입니다.
+  </p>
+
+  <h2>중복 수급 — 되는 것과 안 되는 것</h2>
+  <table class="info-table">
+    <tr><th>조합</th><th>가능 여부</th><th>이유</th></tr>
+    <tr>
+      <td>장애인연금 + 장애수당</td>
+      <td><b style="color:#c62828">불가</b></td>
+      <td>장애수당 대상 자체가 "중증장애인이 아닌 등록장애인"으로 한정</td>
+    </tr>
+    <tr>
+      <td>장애인연금 + 장애아동수당</td>
+      <td><b style="color:#c62828">불가</b></td>
+      <td>장애아동수당 선정 기준에 장애인연금 수급자 제외가 명시</td>
+    </tr>
+    <tr>
+      <td>장애인연금 + 기초연금</td>
+      <td><b style="color:#c62828">불가</b></td>
+      <td>만 65세가 되면 기초급여가 기초연금으로 전환되어 이어짐</td>
+    </tr>
+    <tr>
+      <td>장애인연금 + 생계급여 등 기초생활보장</td>
+      <td><b style="color:#2e7d32">가능</b></td>
+      <td>서로 다른 제도. 다만 생계급여 산정 시 소득으로 반영될 수 있음</td>
+    </tr>
+    <tr>
+      <td>장애인연금 + 장애인 활동지원</td>
+      <td><b style="color:#2e7d32">가능</b></td>
+      <td>활동지원은 현금 급여가 아니라 서비스 바우처</td>
+    </tr>
+  </table>
+  <p>
+    많이 헷갈리는 지점이 <b>만 65세</b>입니다. 65세가 되면 장애인연금의 기초급여는 멈추고
+    기초연금으로 자리를 옮깁니다. 제도가 바뀌는 것이지 지급이 끊기는 것이 아니지만,
+    <b>기초연금은 별도 신청이 필요</b>합니다. 생일이 지나도록 신청하지 않으면 그 기간만큼 공백이 생깁니다.
+  </p>
+
+  <h2>어디서 어떻게 접수하나</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text"><b>장애 정도 확인</b> — 장애인등록증이나 복지로에서 본인의 장애 정도(심한/심하지 않은)를 먼저 확인합니다. 이 한 가지로 제도가 갈립니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text"><b>소득인정액 모의계산</b> — 복지로(bokjiro.go.kr) 모의계산으로 선정기준액 이하인지 대략 가늠합니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text"><b>주소지 읍·면·동 행정복지센터 접수</b> — 장애인연금은 복지로 온라인 접수도 됩니다. 장애아동수당은 방문 접수만 가능합니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text"><b>서류 제출</b> — 신분증, 통장 사본, 소득·재산 신고서, 금융정보 제공 동의서. 장애인연금은 장애 정도 심사가 추가될 수 있습니다.</div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-text"><b>결정 통지</b> — 조사·심사를 거쳐 결과가 통지됩니다. 결과에 이의가 있으면 통지받은 날부터 90일 이내에 이의신청할 수 있습니다.</div></div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>⏰ 접수 시기 — 상시, 다만 소급은 되지 않습니다</h3>
+    <p>
+      장애인연금과 장애수당 모두 정해진 접수 기간 없이 연중 언제든 접수할 수 있습니다.
+      대신 <b>접수한 달부터 지급</b>되고 과거분은 소급되지 않습니다. 자격이 되는데 미뤄 둔 기간은
+      그대로 사라지므로, 해당될 것 같으면 판단을 미루기보다 먼저 접수하고 조사 결과를 기다리는 편이 낫습니다.
+    </p>
+  </div>
+
+  <div class="checklist">
+    <h2>✅ 내가 어느 쪽인지 자가 확인</h2>
+    <div class="check-item"><span class="chk">✓</span><span>장애인등록증에 "장애의 정도가 심한 장애인"으로 적혀 있다 → 장애인연금 검토</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>만 18세 이상이고 기초생활수급자 또는 차상위계층이며 심하지 않은 장애다 → 장애수당 검토</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>만 18세 미만 자녀의 장애로 문의 중이다 → 장애아동수당 검토</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>단독가구 월 소득인정액이 140만 원(부부 224만 원) 이하다 → 장애인연금 소득 요건 충족 가능</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>만 65세 생일이 다가온다 → 기초연금 전환 접수를 미리 준비</span></div>
+  </div>
+
+  <h2>놓치기 쉬운 부분</h2>
+  <div class="caution">
+    <div class="caution-item">① <b>장애 등급은 2019년에 폐지됐습니다.</b> 현재는 "심한 장애 / 심하지 않은 장애" 두 구분만 남았고, 종전 1~3급이 대체로 전자에 해당합니다. 오래된 안내문의 급수 표현에 그대로 맞추면 판단이 어긋납니다.</div>
+    <div class="caution-item">② <b>3급이라도 중복장애면 장애인연금 대상일 수 있습니다.</b> 종전 3급 중복장애는 심한 장애로 분류됩니다. 3급이라는 이유로 스스로 포기하지 마십시오.</div>
+    <div class="caution-item">③ <b>금액은 매년 1월에 바뀝니다.</b> 본문 수치는 2026년 기준이며 물가상승률에 따라 조정됩니다. 선정기준액도 함께 오르므로 작년에 탈락했더라도 다시 확인할 필요가 있습니다.</div>
+    <div class="caution-item">④ <b>부가급여 구간은 급여 종류에 따라 달라집니다.</b> 같은 수급자라도 생계·의료급여인지 주거·교육급여인지에 따라 금액이 달라지므로, 본인의 급여 종류를 먼저 확인해야 정확한 금액을 알 수 있습니다.</div>
+    <div class="caution-item">⑤ <b>지자체 추가 수당이 따로 있습니다.</b> 서울·경기 등 일부 지자체는 자체 장애수당이나 재활보조금을 별도 운영합니다. 국가 제도와 별개이므로 주소지 행정복지센터에 함께 문의하는 편이 좋습니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <div class="contact-row"><span class="contact-label">접수·상담</span> — 주소지 읍·면·동 행정복지센터</div>
+    <div class="contact-row"><span class="contact-label">복지 상담</span> — 보건복지상담센터 ☎129 (24시간)</div>
+    <div class="contact-row"><span class="contact-label">온라인 접수·모의계산</span> — 복지로(bokjiro.go.kr)</div>
+    <div class="contact-row"><span class="contact-label">제도 안내</span> — 보건복지부 장애인자립기반과</div>
+    <div class="contact-row"><span class="contact-label">기초연금 전환 문의</span> — 국민연금공단 ☎1355</div>
+  </div>
+
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"근로 능력 손실을 보전하는 급여와 추가 비용을 보조하는 급여를 분리한 것은 국제적으로도 표준적인 설계다. 두 목적을 한 급여에 섞으면 어느 쪽도 충분히 달성하지 못한다."</p>
+          <p class="author">— 사회보장 제도 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"기초급여를 매년 물가에 연동해 조정하고 65세 이후 기초연금으로 자연스럽게 이어지도록 한 점은, 생애 전 기간의 소득 공백을 줄이는 방향에서 평가할 만하다."</p>
+          <p class="author">— 노후소득보장 정책 연구자</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"장애수당 월 6만 원은 도입 이후 사실상 제자리다. 장애로 인한 추가 지출을 보전한다는 취지에 비추어 현실과의 간극이 지나치게 크다."</p>
+          <p class="author">— 장애인 자립생활 현장 활동가</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"심한 장애와 심하지 않은 장애라는 이분법이 급여를 가르는 유일한 기준이 되면서, 경계선에 있는 사람들이 제도 밖으로 밀려나는 문제가 반복되고 있다."</p>
+          <p class="author">— 장애인권 연구 활동가</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #장애인연금 #장애수당 #장애아동수당 #중증장애인 #장애정도판정
+    #선정기준액 #부가급여 #기초급여 #기초연금전환 #복지로
+  </div>
+
+  <div class="disclaimer">
+    이 기사는 보건복지부·정부24·복지로 등이 공개한 정보를 바탕으로 작성되었습니다.
+    본문의 금액과 기준은 <b>2026년 기준</b>이며 매년 1월 조정됩니다. 실제 지급액은 가구 구성,
+    급여 종류, 재산 조회 결과에 따라 달라질 수 있으므로 정확한 지원 여부는 주소지 읍·면·동
+    행정복지센터나 보건복지상담센터(☎129) 등 담당 기관에 확인하세요.
+  </div>
+  <div class="written">작성일 2026-08-13</div>
+
+</div>
+</body>
+</html>
