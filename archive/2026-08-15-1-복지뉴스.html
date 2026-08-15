@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>주거급여 기준임대료 — 급지·가구원수별 임차급여 계산과 자가 수선유지급여</title>
+<meta name="description" content="월세 지원의 상한선인 기준임대료는 사는 지역의 급지와 가구원 수로 정해집니다. 2026년 1급지 서울 1인 369,000원부터 4급지 6인 402,000원까지의 급지별 표와, 소득인정액이 생계급여 기준을 넘을 때 30%를 떼는 자기부담분 계산식, 자가 가구 수선유지급여 경보수 590만 원·중보수 1,095만 원·대보수 1,601만 원 기준을 정리했습니다.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    background: #f8f9fa;
+    color: #222;
+    line-height: 1.7;
+  }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge {
+    display: inline-block;
+    background: #c62828;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.35;
+    color: #1a1a1a;
+    margin-bottom: 18px;
+    word-break: keep-all;
+  }
+
+  .hook {
+    border-left: 5px solid #c62828;
+    padding: 14px 18px;
+    background: #ffebee;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 22px;
+    font-size: 15px;
+  }
+  .hook .highlight { color: #c62828; font-weight: 900; }
+
+  .summary-box {
+    background: #e8f5e9;
+    border: 2px solid #2e7d32;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 26px;
+  }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+
+  h2 { font-size: 19px; font-weight: 900; color: #c62828; margin: 28px 0 12px; border-bottom: 2px solid #ffcdd2; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #c62828; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #ffebee; }
+  .big-number { font-size: 20px; font-weight: 900; color: #c62828; }
+
+  .formula {
+    background: #fff5f5;
+    border: 1px solid #ffcdd2;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 20px;
+    font-size: 14.5px;
+    line-height: 1.9;
+    word-break: keep-all;
+  }
+  .formula b { color: #c62828; }
+
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #ffebee; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #c62828; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+
+  .deadline-box {
+    border: 2px dashed #f57c00;
+    background: #fff8e1;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 22px;
+  }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0; }
+
+  .checklist { background: #ffebee; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #ef9a9a; color: #c62828; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #c62828; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+
+  .caution { background: #fff3e0; border-left: 4px solid #f57c00; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+
+  .contact-box { background: #ffebee; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #c62828; border-color: #ef9a9a; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  .hashtags { font-size: 13px; color: #c62828; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-08-15-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="주거급여 기준임대료 — 급지·가구원수별 임차급여 계산과 자가 수선유지급여">
+<meta property="og:description" content="월세 지원의 상한선인 기준임대료는 사는 지역의 급지와 가구원 수로 정해집니다. 2026년 1급지 서울 1인 369,000원부터 4급지 6인 402,000원까지의 급지별 표와, 소득인정액이 생계급여 기준을 넘을 때 30%를 떼는 자기부담분 계산식, 자가 가구 수선유지급여 경보수 590만 원·중보수 1,095만 원·대보수 1,601만 원 기준을 정리했습니다.">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-08-15-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-08-15T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-08-15T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-08-15-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-08-15-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "주거급여 기준임대료 — 급지·가구원수별 임차급여 계산과 자가 수선유지급여", "description": "월세 지원의 상한선인 기준임대료는 사는 지역의 급지와 가구원 수로 정해집니다. 2026년 1급지 서울 1인 369,000원부터 4급지 6인 402,000원까지의 급지별 표와, 소득인정액이 생계급여 기준을 넘을 때 30%를 떼는 자기부담분 계산식, 자가 가구 수선유지급여 경보수 590만 원·중보수 1,095만 원·대보수 1,601만 원 기준을 정리했습니다.", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-08-15", "dateModified": "2026-08-15", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 주거 지원</div>
+  <div class="section-badge">주거급여</div>
+
+  <h1>주거급여 기준임대료 — 급지·가구원수별 임차급여 계산과 자가 수선유지급여</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대개 <span class="highlight">"내가 받을 수 있는 금액이 얼마인지"</span>가 궁금한 분입니다.
+    주거급여를 알아보다 보면 기준임대료라는 말이 계속 나오는데, 이 숫자가 그대로 통장에 들어오는 줄
+    알았다가 실제 입금액이 적어 당황하는 경우가 많습니다. 기준임대료는 받는 금액이 아니라
+    <span class="highlight">지원의 상한선</span>입니다. 사는 지역과 가구원 수로 상한이 정해지고,
+    거기서 실제 내는 월세와 소득에 따라 최종 금액이 깎입니다. 그 구조를 순서대로 정리했습니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li><b>기준임대료는 상한선입니다</b> — 실제 내는 월세(보증금 환산액 포함)와 기준임대료 중 <b>낮은 쪽</b>이 출발점입니다.</li>
+      <li><b>소득이 생계급여 기준을 넘으면 깎입니다</b> — 초과분의 <b>30%</b>를 자기부담분으로 떼고 나머지를 받습니다.</li>
+      <li><b>집이 내 소유면 현금이 아니라 수리입니다</b> — 자가 가구는 임차급여 대신 수선유지급여로 <b>경보수 590만 원 · 중보수 1,095만 원 · 대보수 1,601만 원</b> 한도의 집수리를 받습니다.</li>
+    </ul>
+  </div>
+
+  <p style="font-size:13px;color:#888;margin-bottom:22px;">
+    ※ 이 글의 금액은 모두 <b>2026년 기준</b>입니다. 기준 중위소득과 기준임대료는 해마다 바뀌므로,
+    다른 해의 자료와 섞어 계산하지 마세요.
+  </p>
+
+  <h2>먼저, 소득이 문턱을 넘는지 본다</h2>
+  <p>
+    주거급여는 소득인정액이 <b>기준 중위소득 48% 이하</b>인 가구가 대상입니다. 소득인정액은 실제
+    월급만이 아니라 재산을 소득으로 환산한 금액까지 더한 값입니다. 2026년 기준 문턱은 아래와 같습니다.
+  </p>
+
+  <table class="info-table">
+    <tr><th>가구원 수</th><th>소득인정액 기준(월)</th><th>참고 · 생계급여 기준(중위 32%)</th></tr>
+    <tr><td>1인</td><td class="big-number">1,230,834원</td><td>820,556원</td></tr>
+    <tr><td>2인</td><td class="big-number">2,015,660원</td><td>1,343,773원</td></tr>
+    <tr><td>3인</td><td class="big-number">2,572,337원</td><td>1,714,891원</td></tr>
+    <tr><td>4인</td><td class="big-number">3,117,474원</td><td>2,078,316원</td></tr>
+    <tr><td>5인</td><td class="big-number">3,627,225원</td><td>2,418,150원</td></tr>
+    <tr><td>6인</td><td class="big-number">4,106,857원</td><td>2,737,905원</td></tr>
+  </table>
+
+  <p>
+    오른쪽 칸의 생계급여 기준을 함께 적어 둔 이유가 있습니다. 뒤에 나오는 자기부담분 계산에서
+    <b>이 숫자가 기준점</b>이 되기 때문입니다. 소득인정액이 이 선 아래면 자기부담분이 없고,
+    넘어선 만큼만 부담이 생깁니다.
+  </p>
+  <p>
+    한 가지 더. 주거급여는 <b>부양의무자 기준이 2018년에 폐지</b>됐습니다. 따로 사는 자녀의 소득이
+    아무리 높아도 그 이유만으로 탈락하지 않습니다. 다른 급여와 헷갈리기 쉬운 부분입니다.
+  </p>
+
+  <h2>급지·가구원수별 기준임대료 (2026년)</h2>
+  <p>
+    기준임대료는 사는 지역을 네 개 급지로 나누고, 가구원 수를 곱해 정해집니다. 같은 4인 가구라도
+    서울에 살면 571,000원, 그 밖의 지역이면 329,000원이 상한이 됩니다.
+  </p>
+
+  <table class="info-table">
+    <tr>
+      <th>가구원 수</th>
+      <th>1급지<br>서울</th>
+      <th>2급지<br>경기·인천</th>
+      <th>3급지<br>광역시·세종·수도권 외 특례시</th>
+      <th>4급지<br>그 외 지역</th>
+    </tr>
+    <tr><td>1인</td><td>369,000원</td><td>300,000원</td><td>247,000원</td><td>212,000원</td></tr>
+    <tr><td>2인</td><td>414,000원</td><td>335,000원</td><td>275,000원</td><td>238,000원</td></tr>
+    <tr><td>3인</td><td>492,000원</td><td>401,000원</td><td>327,000원</td><td>283,000원</td></tr>
+    <tr><td>4인</td><td>571,000원</td><td>463,000원</td><td>381,000원</td><td>329,000원</td></tr>
+    <tr><td>5인</td><td>591,000원</td><td>479,000원</td><td>394,000원</td><td>340,000원</td></tr>
+    <tr><td>6인</td><td>699,000원</td><td>568,000원</td><td>463,000원</td><td>402,000원</td></tr>
+  </table>
+  <p style="font-size:13px;color:#888;">
+    가구원이 7인 이상이면 6인 기준임대료에서 2명 늘어날 때마다 10%씩 더해 계산합니다.
+  </p>
+
+  <div class="svg-wrap">
+    <div class="svg-title">4인 가구 기준임대료 — 급지별 상한 비교 (2026년, 원/월)</div>
+    <svg viewBox="0 0 640 240" width="100%" role="img" aria-label="4인 가구 급지별 기준임대료 막대 그래프">
+      <line x1="120" y1="20" x2="120" y2="200" stroke="#ddd" stroke-width="1"/>
+      <rect x="120" y="30" width="440" height="30" fill="#c62828" rx="4"/>
+      <text x="10" y="50" font-size="13" fill="#444">1급지 서울</text>
+      <text x="570" y="50" font-size="13" font-weight="700" fill="#c62828">571,000</text>
+      <rect x="120" y="75" width="357" height="30" fill="#e57373" rx="4"/>
+      <text x="10" y="95" font-size="13" fill="#444">2급지 경기·인천</text>
+      <text x="487" y="95" font-size="13" font-weight="700" fill="#c62828">463,000</text>
+      <rect x="120" y="120" width="294" height="30" fill="#ef9a9a" rx="4"/>
+      <text x="10" y="140" font-size="13" fill="#444">3급지 광역시</text>
+      <text x="424" y="140" font-size="13" font-weight="700" fill="#c62828">381,000</text>
+      <rect x="120" y="165" width="254" height="30" fill="#ffcdd2" rx="4"/>
+      <text x="10" y="185" font-size="13" fill="#444">4급지 그 외</text>
+      <text x="384" y="185" font-size="13" font-weight="700" fill="#c62828">329,000</text>
+      <text x="120" y="225" font-size="11" fill="#999">같은 가구원 수라도 급지에 따라 상한이 24만 원 넘게 벌어집니다</text>
+    </svg>
+  </div>
+
+  <h2>임차급여는 이렇게 계산된다</h2>
+  <p>
+    세를 살고 있는 가구가 받는 몫을 임차급여라고 합니다. 계산은 두 단계로 끝납니다.
+  </p>
+
+  <div class="formula">
+    <b>1단계 · 출발점 정하기</b><br>
+    실제임차료(월세 + 보증금 환산액)와 기준임대료 중 <b>낮은 금액</b>을 고릅니다.<br>
+    · 보증금 환산액 = 보증금 × 4% ÷ 12개월<br><br>
+    <b>2단계 · 자기부담분 빼기</b><br>
+    소득인정액이 생계급여 기준 <b>이하</b>이면 → 1단계 금액 <b>전액</b> 지원<br>
+    소득인정액이 생계급여 기준 <b>초과</b>이면 → 1단계 금액 − 자기부담분<br>
+    · 자기부담분 = (소득인정액 − 생계급여 기준) × <b>30%</b>
+  </div>
+
+  <h3>예시로 확인하기</h3>
+  <p>
+    서울에 사는 4인 가구, 보증금 1,000만 원에 월세 50만 원, 소득인정액이 250만 원인 경우를 봅니다.
+  </p>
+  <div class="formula">
+    · 보증금 환산액 = 1,000만 원 × 4% ÷ 12 = <b>33,333원</b><br>
+    · 실제임차료 = 500,000 + 33,333 = <b>533,333원</b><br>
+    · 서울 4인 기준임대료 <b>571,000원</b> → 둘 중 낮은 <b>533,333원</b>이 출발점<br>
+    · 소득인정액 2,500,000원 − 생계급여 기준 2,078,316원 = 421,684원<br>
+    · 자기부담분 = 421,684 × 30% = <b>126,505원</b><br>
+    → 실제 임차급여 = 533,333 − 126,505 = <b>약 406,800원</b>
+  </div>
+  <p>
+    기준임대료 571,000원을 보고 그만큼 나올 것으로 기대했다면 실제 입금액은 그보다 16만 원가량
+    적습니다. <b>상한선과 지급액은 다른 숫자</b>라는 점이 여기서 갈립니다.
+  </p>
+
+  <h2>집이 내 소유라면 — 수선유지급여</h2>
+  <p>
+    소득 기준을 충족하더라도 본인 소유 주택에 살고 있으면 임차급여 대신 <b>수선유지급여</b>가
+    적용됩니다. 현금이 아니라 <b>집을 고쳐 주는 방식</b>입니다. 노후도 조사 결과에 따라 세 등급으로
+    나뉘고, 등급마다 한도와 주기가 다릅니다.
+  </p>
+
+  <table class="info-table">
+    <tr><th>구분</th><th>수선 한도</th><th>주기</th><th>수선 범위(예시)</th></tr>
+    <tr><td>경보수</td><td class="big-number">590만 원</td><td>3년</td><td>도배·장판·창호 등 마감재 교체</td></tr>
+    <tr><td>중보수</td><td class="big-number">1,095만 원</td><td>5년</td><td>수도·난방·창호 등 기능 부위 교체</td></tr>
+    <tr><td>대보수</td><td class="big-number">1,601만 원</td><td>7년</td><td>지붕·기둥 등 구조 부위 보수</td></tr>
+  </table>
+
+  <p>
+    한도 전액을 다 받는 것은 아닙니다. 소득 수준에 따라 <b>지원 비율</b>이 달라집니다.
+    생계급여 기준 이하이면 <b>100%</b>, 그보다 높고 기준 중위소득 35% 이하이면 <b>90%</b>,
+    그 위 구간이면 <b>80%</b>가 적용되고 나머지는 본인이 부담합니다.
+    침수가 우려되는 주택에는 침수방지시설 설치비가 <b>최대 350만 원</b>까지 별도로 붙습니다.
+  </p>
+  <p style="font-size:13px;color:#888;">
+    ※ 지원 비율의 구간 경계는 해마다 조정될 수 있습니다. 신청 시점의 정확한 구간은 담당 기관에 확인하세요.
+  </p>
+
+  <h2>진행 순서</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text">주소지 읍·면·동 행정복지센터를 방문하거나 복지로(bokjiro.go.kr)에서 온라인으로 접수합니다. <b>가구 단위</b>로 접수하며, 세대주가 아니어도 가구원이 대리로 할 수 있습니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text">시·군·구가 소득과 재산을 조사해 <b>소득인정액</b>을 산출합니다. 금융정보 제공동의서가 필요한 단계입니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text">LH(또는 지방 주택공사)가 <b>주택조사</b>를 나옵니다. 임차 가구는 임대차계약과 실제 거주 여부를, 자가 가구는 주택 노후도를 확인합니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text">보장 결정 통지서를 받습니다. 임차급여는 통상 <b>매월 20일</b>에 입금되며, 20일이 휴일이면 앞선 영업일에 들어옵니다.</div></div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>⏰ 신청 시기 — 상시입니다</h3>
+    <p>
+      주거급여는 모집 기간이 따로 없어 <b>연중 아무 때나</b> 접수할 수 있습니다. 다만 소급 지급이
+      되지 않으므로, 조건에 해당한다고 판단되면 미루지 않는 편이 유리합니다.
+      기준임대료와 소득 기준은 <b>매년 1월</b>에 새로 고시되므로, 지난해에 소득 초과로 탈락했다면
+      해가 바뀐 뒤 다시 확인해 볼 가치가 있습니다.
+    </p>
+  </div>
+
+  <h2>준비할 서류</h2>
+  <table class="info-table">
+    <tr><th>구분</th><th>서류</th></tr>
+    <tr><td>공통</td><td>사회보장급여 제공 신청서, 소득·재산 신고서, 금융정보 등 제공 동의서, 신분증, 통장 사본</td></tr>
+    <tr><td>임차 가구</td><td>임대차계약서(또는 사용대차 확인서), 최근 3개월 임차료 납부 증빙</td></tr>
+    <tr><td>해당 시</td><td>가족관계증명서, 위임장 및 대리인 신분증, 장애인등록증 등</td></tr>
+  </table>
+
+  <div class="checklist">
+    <h2>✅ 자가 진단 체크리스트</h2>
+    <div class="check-item"><span class="chk">✓</span><span>가구 전체의 소득인정액이 기준 중위소득 48% 이하인가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>내가 사는 지역이 몇 급지인지 확인했는가 (서울·경기인천·광역시·그 외)</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>실제임차료를 보증금 환산액까지 더해 계산해 봤는가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>임대차계약서상 임차인과 실제 거주자가 일치하는가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>자가라면 마지막 집수리 이후 수선 주기(3·5·7년)가 지났는가</span></div>
+  </div>
+
+  <h2>놓치기 쉬운 부분</h2>
+  <div class="caution">
+    <div class="caution-item">① <b>기준임대료는 받는 돈이 아닙니다.</b> 실제임차료가 더 적으면 그 적은 금액이 상한이 됩니다. 월세 20만 원짜리 집에 산다면 서울이라도 20만 원 선에서 정해집니다.</div>
+    <div class="caution-item">② <b>가족·친척 집에 무상으로 살면 원칙적으로 대상이 아닙니다.</b> 사용대차 관계로 확인되면 임차급여가 나오지 않거나 별도 기준이 적용됩니다.</div>
+    <div class="caution-item">③ <b>계약서와 실제가 다르면 조사에서 걸립니다.</b> 임차료를 실제보다 높여 적으면 급여 환수 대상이 됩니다.</div>
+    <div class="caution-item">④ <b>청년 분리지급을 따로 확인하세요.</b> 수급 가구의 만 19~30세 미혼 자녀가 취학·구직 등으로 부모와 다른 시·군에 살면 자녀 몫이 별도로 산정됩니다.</div>
+    <div class="caution-item">⑤ <b>이사하면 반드시 알려야 합니다.</b> 급지가 바뀌면 금액이 달라지고, 신고를 늦추면 차액을 돌려내야 할 수 있습니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <div class="contact-row"><span class="contact-label">접수·상담</span> — 주소지 읍·면·동 행정복지센터</div>
+    <div class="contact-row"><span class="contact-label">주거급여 콜센터</span> — 1600-0777</div>
+    <div class="contact-row"><span class="contact-label">보건복지상담센터</span> — 129</div>
+    <div class="contact-row"><span class="contact-label">LH 마이홈 상담</span> — 1600-1004</div>
+    <div class="contact-row"><span class="contact-label">온라인 접수</span> — 복지로 bokjiro.go.kr / 마이홈 myhome.go.kr</div>
+  </div>
+
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"부양의무자 기준을 걷어낸 뒤 주거급여는 실제로 사각지대를 크게 줄였다. 소득만 보고 판단하는 구조가 제도의 접근성을 결정적으로 바꿨다."</p>
+          <p class="author">— 주거복지 정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"자가 가구에 현금 대신 수선을 지원하는 방식은 노후 주택의 최저주거기준 미달 문제를 직접 건드린다는 점에서 설계가 합리적이다."</p>
+          <p class="author">— 건축·주거환경 연구자</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"기준임대료가 실제 시세를 따라가지 못한다. 서울 1인 가구 상한이 37만 원 선인데, 그 금액으로 구할 수 있는 주택이 얼마나 남아 있는지 물어야 한다."</p>
+          <p class="author">— 주거시민단체 활동가</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"급지 구분이 광역 단위라 같은 급지 안의 임대료 격차를 담지 못한다. 지역 내 편차를 반영할 세분화가 필요하다."</p>
+          <p class="author">— 사회복지 현장 활동가</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #주거급여 #기준임대료 #임차급여 #수선유지급여 #소득인정액 #기준중위소득 #복지로 #마이홈 #국토교통부 #읍면동행정복지센터
+  </div>
+
+  <div class="disclaimer">
+    이 기사는 공개된 정보를 바탕으로 작성되었습니다. 본문의 금액과 기준은 2026년 기준이며 해마다 변경됩니다.
+    정확한 지원 여부와 금액은 담당 기관에 확인하세요.
+  </div>
+
+  <div class="written">작성일 2026-08-15 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
