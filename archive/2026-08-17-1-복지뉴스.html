@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>국민취업지원제도 1유형 2유형 차이 — 구직촉진수당 지급액과 재산 요건 정리</title>
+<meta name="description" content="실업급여를 못 받는 구직자를 위한 제도입니다. 1유형은 가구 중위소득 60% 이하·재산 4억 원 이하에 최근 2년 내 취업경험 100일 이상이면 구직촉진수당을 2026년 기준 월 60만 원씩 6개월 받고, 부양가족이 있으면 1인당 10만 원씩 최대 40만 원이 더해져 월 100만 원까지 늘어납니다. 청년은 재산 5억 원까지 완화됩니다. 2유형은 수당 대신 훈련비와 취업성공수당 중심입니다. 두 유형의 요건과 지급액 차이를 정리했습니다.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    background: #f8f9fa;
+    color: #222;
+    line-height: 1.7;
+  }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge {
+    display: inline-block;
+    background: #1565c0;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.35;
+    color: #1a1a1a;
+    margin-bottom: 18px;
+    word-break: keep-all;
+  }
+
+  .hook {
+    border-left: 5px solid #1565c0;
+    padding: 14px 18px;
+    background: #e3f2fd;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 22px;
+    font-size: 15px;
+  }
+  .hook .highlight { color: #1565c0; font-weight: 900; }
+
+  .summary-box {
+    background: #e8f5e9;
+    border: 2px solid #2e7d32;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 26px;
+  }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+
+  h2 { font-size: 19px; font-weight: 900; color: #1565c0; margin: 28px 0 12px; border-bottom: 2px solid #90caf9; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #1565c0; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #e3f2fd; }
+  .big-number { font-size: 20px; font-weight: 900; color: #1565c0; }
+
+  .formula {
+    background: #f5faff;
+    border: 1px solid #90caf9;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 20px;
+    font-size: 14.5px;
+    line-height: 1.9;
+    word-break: keep-all;
+  }
+  .formula b { color: #1565c0; }
+
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #e3f2fd; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #1565c0; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+
+  .deadline-box {
+    border: 2px dashed #f57c00;
+    background: #fff8e1;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 22px;
+  }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0; }
+
+  .checklist { background: #e3f2fd; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #90caf9; color: #1565c0; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #1565c0; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+
+  .caution { background: #fff3e0; border-left: 4px solid #f57c00; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+
+  .contact-box { background: #e3f2fd; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #1565c0; border-color: #90caf9; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  .hashtags { font-size: 13px; color: #1565c0; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-08-17-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="국민취업지원제도 1유형 2유형 차이 — 구직촉진수당 지급액과 재산 요건 정리">
+<meta property="og:description" content="실업급여를 못 받는 구직자를 위한 제도입니다. 1유형은 가구 중위소득 60% 이하·재산 4억 원 이하에 최근 2년 내 취업경험 100일 이상이면 구직촉진수당을 2026년 기준 월 60만 원씩 6개월 받고, 부양가족이 있으면 1인당 10만 원씩 최대 40만 원이 더해져 월 100만 원까지 늘어납니다. 청년은 재산 5억 원까지 완화됩니다. 2유형은 수당 대신 훈련비와 취업성공수당 중심입니다. 두 유형의 요건과 지급액 차이를 정리했습니다.">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-08-17-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-08-17T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-08-17T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-08-17-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-08-17-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "국민취업지원제도 1유형 2유형 차이 — 구직촉진수당 지급액과 재산 요건 정리", "description": "실업급여를 못 받는 구직자를 위한 제도입니다. 1유형은 가구 중위소득 60% 이하·재산 4억 원 이하에 최근 2년 내 취업경험 100일 이상이면 구직촉진수당을 2026년 기준 월 60만 원씩 6개월 받고, 부양가족이 있으면 1인당 10만 원씩 최대 40만 원이 더해져 월 100만 원까지 늘어납니다. 청년은 재산 5억 원까지 완화됩니다. 2유형은 수당 대신 훈련비와 취업성공수당 중심입니다. 두 유형의 요건과 지급액 차이를 정리했습니다.", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-08-17", "dateModified": "2026-08-17", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 고용 안전망</div>
+  <div class="section-badge">취업지원</div>
+
+  <h1>국민취업지원제도 1유형 2유형 차이 — 구직촉진수당 지급액과 재산 요건 정리</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대개 <span class="highlight">"실업급여 대상은 아닌데, 그럼 받을 수 있는 게 정말 없나"</span>를
+    확인하려는 분입니다. 고용보험에 가입한 적이 없거나, 가입 기간이 모자라거나, 실업급여가 이미 끝난 사람은
+    고용보험 바깥에 놓입니다. 국민취업지원제도는 그 바깥을 메우려고 만든 <span class="highlight">두 번째 고용 안전망</span>입니다.
+    다만 같은 제도 안에 성격이 전혀 다른 두 갈래가 있어서, 어느 쪽에 해당하는지에 따라
+    손에 쥐는 금액이 <span class="highlight">월 60만 원부터 0원까지</span> 갈립니다. 그 갈림길을 먼저 정리했습니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li><b>1유형만 매달 현금을 줍니다</b> — 구직촉진수당은 2026년 기준 <b>월 60만 원씩 6개월(총 360만 원)</b>입니다. 2025년까지의 월 50만 원에서 올랐습니다.</li>
+      <li><b>재산 기준이 소득 기준만큼 중요합니다</b> — 1유형은 가구 재산 <b>4억 원 이하</b>, 청년은 <b>5억 원 이하</b>입니다. 소득이 낮아도 재산이 넘으면 2유형으로 밀립니다.</li>
+      <li><b>2유형은 수당이 아니라 훈련·취업 지원 중심입니다</b> — 매달 들어오는 돈은 없고, 직업훈련 참여에 따르는 비용과 취업 후 <b>취업성공수당 최대 150만 원</b>이 중심입니다.</li>
+    </ul>
+  </div>
+
+  <p style="font-size:13px;color:#888;margin-bottom:22px;">
+    ※ 이 글의 금액과 기준은 <b>2026년 기준</b>입니다. 구직촉진수당 액수와 중위소득 기준선은 해마다 바뀌고,
+    재산 기준도 개정 이력이 있으므로 다른 해의 표와 섞어 계산하지 마세요.
+  </p>
+
+  <h2>두 유형은 어디서 갈리나</h2>
+  <p>
+    이름은 하나지만 내용은 둘입니다. <b>1유형</b>은 소득·재산이 낮은 사람에게 생활을 버틸 현금을 주면서
+    구직활동을 시키는 쪽이고, <b>2유형</b>은 현금 지급 없이 훈련과 상담으로 취업을 밀어주는 쪽입니다.
+    그래서 신청서를 넣을 때 본인이 유형을 고르는 것이 아니라, 심사 결과 소득·재산·취업경험을 따져
+    <b>1유형에 해당하지 않으면 자동으로 2유형으로 배정</b>되는 구조에 가깝습니다.
+  </p>
+  <p>
+    갈림길에 놓인 조건은 세 가지입니다. 가구 단위 <b>중위소득</b>, 가구 <b>재산 합계</b>, 그리고
+    최근 2년 안의 <b>취업경험 일수</b>입니다. 이 셋을 모두 충족하면 1유형 요건심사형,
+    취업경험만 모자라면 1유형 선발형, 소득·재산이 넘으면 2유형입니다.
+  </p>
+
+  <table class="info-table">
+    <tr><th style="width:22%">구분</th><th>요건</th><th style="width:30%">받는 것</th></tr>
+    <tr>
+      <td><b>1유형<br>요건심사형</b></td>
+      <td>15~69세 · 가구 중위소득 <b>60% 이하</b> · 가구 재산 <b>4억 원 이하</b> ·
+          최근 2년 내 취업경험 <b>100일(또는 800시간) 이상</b></td>
+      <td>구직촉진수당 <b>월 60만 원 × 6개월</b> + 부양가족 부가급여 + 취업성공수당</td>
+    </tr>
+    <tr>
+      <td><b>1유형<br>선발형(청년)</b></td>
+      <td>15~34세(병역 이행 시 상향) · 가구 중위소득 <b>120% 이하</b> · 가구 재산 <b>5억 원 이하</b> ·
+          취업경험 요건 <b>없음</b></td>
+      <td>예산 범위 안에서 선발 → 1유형과 동일</td>
+    </tr>
+    <tr>
+      <td><b>1유형<br>선발형(비경활)</b></td>
+      <td>중위소득 60% 이하 · 재산 4억 원 이하이나 <b>취업경험 100일에 못 미치는</b> 경우</td>
+      <td>예산 범위 안에서 선발 → 1유형과 동일</td>
+    </tr>
+    <tr>
+      <td><b>2유형</b></td>
+      <td>1유형에 해당하지 않는 중장년(중위소득 100% 이하), 청년(소득 무관),
+          특정계층(수급자·북한이탈주민·결혼이민자·경력단절 등)</td>
+      <td>매달 지급되는 수당 <b>없음</b>. 직업훈련 참여 비용 + 취업성공수당 최대 150만 원</td>
+    </tr>
+  </table>
+
+  <h2>구직촉진수당 — 60만 원이 상한이 아니다</h2>
+  <p>
+    많은 분이 놓치는 부분이 <b>부양가족 부가급여</b>입니다. 기본 월 60만 원 외에,
+    부양해야 할 가족이 있으면 <b>1인당 월 10만 원씩 최대 4인분(40만 원)</b>이 더해집니다.
+    여기서 말하는 부양가족은 배우자 전부가 아니라 <b>미성년 자녀·고령의 부모·중증장애인 가족</b>처럼
+    돌봄이 필요한 가구원을 뜻합니다. 이 경우 한 달에 들어오는 금액은 최대 <b>100만 원</b>이 됩니다.
+  </p>
+
+  <div class="formula">
+    <b>월 지급액</b> = 기본 <b>60만 원</b> + (부양가족 수 × <b>10만 원</b>, 최대 40만 원)<br>
+    <b>총 지급 기간</b> = <b>6개월</b> → 부양가족이 없으면 총 360만 원, 4인이면 총 600만 원<br>
+    ※ 매달 자동 입금이 아니라, <b>그달의 구직활동 이행을 보고해야</b> 다음 달 분이 나갑니다.
+  </div>
+
+  <div class="svg-wrap">
+    <div class="svg-title">월 지급액 비교 (2026년 기준, 단위: 만 원)</div>
+    <svg viewBox="0 0 640 240" width="100%" role="img" aria-label="구직촉진수당 월 지급액 비교 막대그래프">
+      <line x1="120" y1="200" x2="620" y2="200" stroke="#ccc" stroke-width="1"/>
+      <text x="112" y="45" font-size="13" fill="#555" text-anchor="end">2025년 기본</text>
+      <rect x="120" y="30" width="200" height="26" fill="#bbdefb" rx="4"/>
+      <text x="330" y="49" font-size="13" fill="#555">50만 원</text>
+
+      <text x="112" y="95" font-size="13" fill="#555" text-anchor="end">2026년 기본</text>
+      <rect x="120" y="80" width="240" height="26" fill="#1565c0" rx="4"/>
+      <text x="370" y="99" font-size="13" font-weight="700" fill="#0d47a1">60만 원</text>
+
+      <text x="112" y="145" font-size="13" fill="#555" text-anchor="end">＋부양가족 2인</text>
+      <rect x="120" y="130" width="240" height="26" fill="#1565c0" rx="4"/>
+      <rect x="362" y="130" width="80" height="26" fill="#f57c00" rx="4"/>
+      <text x="452" y="149" font-size="13" font-weight="700" fill="#e65100">80만 원</text>
+
+      <text x="112" y="195" font-size="13" fill="#555" text-anchor="end">＋부양가족 4인</text>
+      <rect x="120" y="180" width="240" height="26" fill="#1565c0" rx="4"/>
+      <rect x="362" y="180" width="160" height="26" fill="#f57c00" rx="4"/>
+      <text x="532" y="199" font-size="13" font-weight="700" fill="#e65100">100만 원</text>
+
+      <text x="120" y="228" font-size="11" fill="#999">■ 기본 구직촉진수당　■ 부양가족 부가급여(1인 10만 원, 최대 4인)</text>
+    </svg>
+  </div>
+
+  <h2>2유형이 받는 것 — 현금은 없지만 비어 있지도 않다</h2>
+  <p>
+    2유형에는 매달 들어오는 구직촉진수당이 없습니다. 대신 취업활동계획을 세우는 단계의 수당,
+    직업훈련에 참여하는 동안의 훈련 비용 지원, 그리고 취업 이후의 성공수당이 붙습니다.
+    <b>취업성공수당은 1·2유형 공통</b>으로, 취업한 뒤 <b>6개월 근속 시 50만 원</b>,
+    <b>12개월 근속 시 추가 100만 원</b>으로 최대 150만 원입니다. 세부 항목의 금액은 해마다 조정되고
+    지역 고용센터 운영 기준에 따라 달라질 수 있으므로, 정확한 액수는 담당 고용센터에 확인하는 편이 안전합니다.
+  </p>
+
+  <h2>진행 순서</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text"><b>고용24(work24.go.kr)에서 온라인 접수</b> 또는 거주지 관할 고용센터 방문. 워크넷 구직등록이 선행돼야 합니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text"><b>수급자격 심사</b> — 가구원 소득·재산 자료를 조회해 유형을 결정합니다. 통상 <b>1개월가량</b> 걸립니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text"><b>취업활동계획(IAP) 수립</b> — 상담사와 1:1로 직업훈련·일경험·알선 중 무엇을 할지 정합니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text"><b>구직활동 이행 및 월별 보고</b> — 계획대로 활동했음을 매달 증빙해야 그달 분 수당이 지급됩니다.</div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-text"><b>취업 후 근속 확인</b> — 6개월·12개월 시점에 취업성공수당을 별도로 청구합니다.</div></div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>⏰ 기한이 걸린 지점</h3>
+    <p>
+      상시 접수라 마감일은 없지만, <b>심사에 한 달가량 걸린다</b>는 점이 실제 기한처럼 작동합니다.
+      또 1유형 선발형(청년·비경활)은 <b>예산 범위 안에서 선발</b>하는 방식이라 연말로 갈수록 여유가 줄어듭니다.
+      수당을 받는 중이라면 매달의 활동 보고 기한을 넘기지 않는 것이 더 중요합니다. 그달 분이 그대로 지급되지 않습니다.
+    </p>
+  </div>
+
+  <div class="checklist">
+    <h2>✅ 내가 1유형인지 자가 점검</h2>
+    <div class="check-item"><span class="chk">✓</span><span>나이가 15~69세이고, 지금 일하고 있지 않다</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>가구 전체의 월 소득이 중위소득 60%(청년은 120%) 이하다</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>가구 재산 합계가 4억 원(청년 5억 원)을 넘지 않는다</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>최근 2년 안에 100일(또는 800시간) 이상 일한 기록이 있다 — 없으면 선발형 검토</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>지금 실업급여를 받고 있지 않고, 재학 중인 학생이 아니다</span></div>
+  </div>
+
+  <h2>놓치기 쉬운 점</h2>
+  <div class="caution">
+    <div class="caution-item">① <b>실업급여와 동시에 받을 수 없습니다.</b> 구직급여 수급 기간에는 참여가 제한되므로, 실업급여가 끝나는 시점에 맞춰 문을 두드리는 편이 순서상 맞습니다.</div>
+    <div class="caution-item">② <b>재학생은 원칙적으로 제외됩니다.</b> 졸업을 앞둔 마지막 학기 등 예외가 있으나 학적 상태에 따라 판단이 갈리므로 고용센터 확인이 필요합니다.</div>
+    <div class="caution-item">③ <b>재산은 가구 단위입니다.</b> 본인 명의 재산이 없어도 함께 사는 가구원의 주택·토지·자동차가 합산돼 4억 원을 넘기면 1유형에서 밀립니다. 소득만 보고 판단하면 어긋납니다.</div>
+    <div class="caution-item">④ <b>조기취업성공수당은 2025년 1월 폐지됐습니다.</b> 오래된 안내 글에는 아직 남아 있는 경우가 많으니, 지금 남아 있는 것은 6개월·12개월 근속 기준의 취업성공수당이라는 점을 기억하세요.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>📞 문의처</h2>
+    <div class="contact-row"><span class="contact-label">고용노동부 고객상담센터</span> — ☎ 국번없이 1350 (유형 판정·서류 안내)</div>
+    <div class="contact-row"><span class="contact-label">고용24</span> — www.work24.go.kr (온라인 접수·수급자격 조회)</div>
+    <div class="contact-row"><span class="contact-label">방문</span> — 거주지 관할 고용복지플러스센터 / 고용센터</div>
+    <div class="contact-row"><span class="contact-label">복지 상담 전반</span> — 보건복지상담센터 ☎ 129</div>
+  </div>
+
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"고용보험 밖에 있는 특수형태근로자와 영세 자영업 이탈자에게는 이 제도가 사실상 유일한 소득 지지대다. 수당을 60만 원으로 올린 것은 그 기능을 실질화한 조정이다."</p>
+          <p class="author">— 노동시장정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"부양가족 부가급여를 둔 설계가 중요하다. 같은 실업이라도 부양 부담이 있는 가구의 구직 기간은 더 짧게 압박받기 때문이다."</p>
+          <p class="author">— 사회보장 재정 연구자</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"6개월이라는 기간은 중장년 재취업 시장의 실제 소요 기간에 비해 짧다. 기간이 끝난 뒤의 공백을 무엇이 받을지는 여전히 비어 있다."</p>
+          <p class="author">— 중장년 고용지원 현장 활동가</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"재산 기준을 가구 단위로 묶으면 부모와 동거하는 청년이 자기 소득과 무관하게 배제된다. 실제 궁핍과 행정상 자격이 어긋나는 구간이 남아 있다."</p>
+          <p class="author">— 청년정책 시민단체 활동가</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #국민취업지원제도 #구직촉진수당 #1유형2유형차이 #부양가족부가급여 #취업성공수당 #고용24 #고용센터 #중위소득60퍼센트 #재산4억기준 #고용안전망
+  </div>
+
+  <div class="disclaimer">
+    이 기사는 공개된 정보를 바탕으로 작성되었습니다. 본문의 금액과 요건은 2026년 기준이며 해마다 변경됩니다.
+    개인별 수급자격과 유형 판정은 고용센터 심사로 확정되므로, 정확한 지원 여부는 담당 기관에 확인하세요.
+  </div>
+
+  <div class="written">작성일 2026-08-17 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
