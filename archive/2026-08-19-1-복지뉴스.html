@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>근로장려금 자녀장려금 차이 — 요건과 중복 수급 가능 여부 정리</title>
+<meta name="description" content="이름이 붙어 다녀 하나로 오해하기 쉽지만 근로장려금과 자녀장려금은 서로 다른 제도입니다. 근로장려금은 일해서 번 소득이 적을 때 소득을 보태 주고, 자녀장려금은 18세 미만 자녀를 키우는 비용을 보태 줍니다. 총소득 기준선이 2,200만·3,200만·4,400만 원과 7,000만 원으로 다르고 가구 유형 구분도 다릅니다. 두 제도는 중복 수급이 가능하며 신청서 한 장으로 함께 심사됩니다. 2026년 기준 가구유형별 금액, 재산 2억 4천만 원 기준과 50% 감액 구간, 정기·반기·기한 후 방식의 차이를 정리했습니다.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    background: #f8f9fa;
+    color: #222;
+    line-height: 1.7;
+  }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge {
+    display: inline-block;
+    background: #f57c00;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.35;
+    color: #1a1a1a;
+    margin-bottom: 18px;
+    word-break: keep-all;
+  }
+
+  .hook {
+    border-left: 5px solid #f57c00;
+    padding: 14px 18px;
+    background: #fff8e1;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 22px;
+    font-size: 15px;
+  }
+  .hook .highlight { color: #e65100; font-weight: 900; }
+
+  .summary-box {
+    background: #e8f5e9;
+    border: 2px solid #2e7d32;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 26px;
+  }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+
+  h2 { font-size: 19px; font-weight: 900; color: #e65100; margin: 28px 0 12px; border-bottom: 2px solid #ffcc80; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #f57c00; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #fff3e0; }
+  .big-number { font-size: 20px; font-weight: 900; color: #e65100; }
+
+  .formula {
+    background: #fffaf2;
+    border: 1px solid #ffcc80;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 20px;
+    font-size: 14.5px;
+    line-height: 1.9;
+    word-break: keep-all;
+  }
+  .formula b { color: #e65100; }
+
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #fff3e0; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #f57c00; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+
+  .deadline-box {
+    border: 2px dashed #f57c00;
+    background: #fff8e1;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 22px;
+  }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+
+  .checklist { background: #fff3e0; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #ffcc80; color: #e65100; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #e65100; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+
+  .caution { background: #fff3e0; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+
+  .contact-box { background: #fff3e0; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #e65100; border-color: #ffcc80; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  .hashtags { font-size: 13px; color: #e65100; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-08-19-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="근로장려금 자녀장려금 차이 — 요건과 중복 수급 가능 여부 정리">
+<meta property="og:description" content="이름이 붙어 다녀 하나로 오해하기 쉽지만 근로장려금과 자녀장려금은 서로 다른 제도입니다. 근로장려금은 일해서 번 소득이 적을 때 소득을 보태 주고, 자녀장려금은 18세 미만 자녀를 키우는 비용을 보태 줍니다. 총소득 기준선이 2,200만·3,200만·4,400만 원과 7,000만 원으로 다르고 가구 유형 구분도 다릅니다. 두 제도는 중복 수급이 가능하며 신청서 한 장으로 함께 심사됩니다. 2026년 기준 가구유형별 금액, 재산 2억 4천만 원 기준과 50% 감액 구간, 정기·반기·기한 후 방식의 차이를 정리했습니다.">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-08-19-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-08-19T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-08-19T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-08-19-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-08-19-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "근로장려금 자녀장려금 차이 — 요건과 중복 수급 가능 여부 정리", "description": "이름이 붙어 다녀 하나로 오해하기 쉽지만 근로장려금과 자녀장려금은 서로 다른 제도입니다. 근로장려금은 일해서 번 소득이 적을 때 소득을 보태 주고, 자녀장려금은 18세 미만 자녀를 키우는 비용을 보태 줍니다. 총소득 기준선이 2,200만·3,200만·4,400만 원과 7,000만 원으로 다르고 가구 유형 구분도 다릅니다. 두 제도는 중복 수급이 가능하며 신청서 한 장으로 함께 심사됩니다. 2026년 기준 가구유형별 금액, 재산 2억 4천만 원 기준과 50% 감액 구간, 정기·반기·기한 후 방식의 차이를 정리했습니다.", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-08-19", "dateModified": "2026-08-19", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 소득 지원</div>
+  <div class="section-badge">장려금 제도</div>
+
+  <h1>근로장려금 자녀장려금 차이 — 요건과 중복 수급 가능 여부 정리</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대개 <span class="highlight">"둘 다 받을 수 있는 건지, 아니면 하나만 골라야 하는 건지"</span>가
+    궁금해서 오십니다. 두 제도는 국세청이 함께 안내하고 같은 날 같은 계좌로 입금되기 때문에
+    <span class="highlight">한 제도의 두 갈래처럼 보이지만, 사실은 노리는 대상이 전혀 다른 별개의 제도</span>입니다.
+    근로장려금은 <span class="highlight">일해서 번 소득이 적을 때</span> 소득을 보태 주고,
+    자녀장려금은 <span class="highlight">18세 미만 자녀를 키우는 비용</span>을 보태 줍니다.
+    소득 기준선도 2,200만~4,400만 원과 7,000만 원으로 두 배 넘게 벌어져 있어서,
+    근로장려금은 탈락해도 자녀장려금만 받는 가구가 실제로 많습니다.
+    무엇이 어떻게 다르고 어디까지 겹칠 수 있는지 순서대로 정리했습니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li><b>중복 수급이 됩니다</b> — 요건만 각각 맞으면 두 장려금을 <b>모두</b> 받습니다. 둘 중 하나를 고르는 구조가 아니고, <b>신청서 한 장</b>으로 함께 심사돼 합산 입금됩니다.</li>
+      <li><b>소득 문턱이 크게 다릅니다</b> — 근로장려금은 가구 유형에 따라 <b>2,200만·3,200만·4,400만 원</b>, 자녀장려금은 가구 유형과 무관하게 <b>부부합산 7,000만 원</b>이 상한선입니다.</li>
+      <li><b>재산 문턱은 똑같습니다</b> — 두 제도 모두 가구원 전체 재산 합계가 <b>2억 4,000만 원</b> 미만이어야 하고, <b>1억 7,000만 원 이상</b> 구간에서는 산정액의 <b>50%만</b> 나옵니다. 여기서 갈리는 경우가 가장 흔합니다.</li>
+    </ul>
+  </div>
+
+  <p style="font-size:13px;color:#888;margin-bottom:22px;">
+    ※ 이 글의 금액과 기준선은 <b>2026년에 신청하는 2025년 귀속분</b>을 기준으로 정리한 것입니다.
+    장려금은 소득 기준선과 최대 지급액이 몇 해에 한 번씩 상향돼 왔고, 특히 자녀장려금은
+    2024년에 소득 요건이 4,000만 원에서 7,000만 원으로, 자녀 1인당 금액이 80만 원에서 100만 원으로 한 번에 올랐습니다.
+    오래된 블로그 글에는 옛 기준표가 그대로 남아 있는 경우가 많으니, 다른 해의 표와 섞어서 계산하지 마세요.
+  </p>
+
+  <h2>두 제도는 어디를 겨냥하는가</h2>
+  <p>
+    근로장려금은 <b>일은 하는데 버는 돈이 적은 가구</b>를 위한 제도입니다.
+    소득이 아예 없으면 못 받고, 소득이 늘어나는 초반 구간에서는 장려금도 같이 늘어나도록 설계돼 있습니다.
+    "일할수록 손해"가 되지 않게 근로 유인을 남겨 두려는 구조입니다.
+    그래서 근로소득뿐 아니라 사업소득·종교인소득이 있어도 대상이 됩니다.
+  </p>
+  <p>
+    자녀장려금은 <b>자녀를 키우는 비용</b>을 겨냥합니다.
+    소득이 적어서가 아니라 <b>18세 미만 부양자녀가 있다는 사실</b>이 출발점이기 때문에,
+    소득 문턱이 근로장려금보다 훨씬 높게 잡혀 있습니다.
+    바꿔 말하면 근로장려금 기준선을 넘어 탈락한 가구라도 자녀장려금은 살아 있는 경우가 흔합니다.
+    연 소득 5,000만 원대 맞벌이 부부가 여기에 해당합니다.
+  </p>
+
+  <table class="info-table">
+    <tr><th style="width:24%">구분</th><th>근로장려금</th><th>자녀장려금</th></tr>
+    <tr>
+      <td><b>목적</b></td>
+      <td>저소득 근로가구의 <b>소득 보전</b></td>
+      <td>저·중소득 가구의 <b>자녀 양육비 보조</b></td>
+    </tr>
+    <tr>
+      <td><b>자녀 요건</b></td>
+      <td>없음 (자녀가 없어도 가능)</td>
+      <td><b>18세 미만 부양자녀 필수</b></td>
+    </tr>
+    <tr>
+      <td><b>가구 유형</b></td>
+      <td>단독 · 홑벌이 · 맞벌이 <b>3종</b></td>
+      <td>홑벌이 · 맞벌이 (<b>단독가구는 해당 없음</b>)</td>
+    </tr>
+    <tr>
+      <td><b>총소득 상한</b></td>
+      <td>2,200만 / 3,200만 / 4,400만 원</td>
+      <td>가구 유형 무관 <b>7,000만 원</b></td>
+    </tr>
+    <tr>
+      <td><b>재산 요건</b></td>
+      <td colspan="2" style="text-align:center;background:#fff8e1;"><b>양쪽 동일</b> — 가구원 재산 합계 2억 4,000만 원 미만</td>
+    </tr>
+    <tr>
+      <td><b>최대 금액</b></td>
+      <td>165만 / 285만 / 330만 원</td>
+      <td><b>자녀 1명당 100만 원</b> (자녀 수만큼 곱함)</td>
+    </tr>
+    <tr>
+      <td><b>반기 분할</b></td>
+      <td>근로소득자만 <b>가능</b></td>
+      <td>분할 대상 아님 (정산 때 함께 처리)</td>
+    </tr>
+    <tr>
+      <td><b>다른 제도와 관계</b></td>
+      <td>—</td>
+      <td><b>자녀세액공제</b>를 받았다면 그만큼 차감</td>
+    </tr>
+  </table>
+
+  <h2>가구 유형부터 확정해야 한다</h2>
+  <p>
+    근로장려금 금액은 가구 유형으로 먼저 갈리고, 그다음 소득으로 갈립니다.
+    같은 소득이어도 단독인지 맞벌이인지에 따라 결과가 두 배 차이 납니다.
+    유형은 본인이 고르는 것이 아니라 <b>배우자·자녀·부모의 유무와 배우자 소득</b>으로 자동 결정됩니다.
+  </p>
+
+  <table class="info-table">
+    <tr><th style="width:22%">가구 유형</th><th>판정 기준</th></tr>
+    <tr>
+      <td><b>단독가구</b></td>
+      <td>배우자도, 부양자녀도, 같이 사는 70세 이상 직계존속도 <b>모두 없는</b> 가구입니다. 1인 가구 대부분이 여기에 들어갑니다.</td>
+    </tr>
+    <tr>
+      <td><b>홑벌이가구</b></td>
+      <td>배우자가 있지만 배우자의 총급여가 <b>연 300만 원 미만</b>인 경우, 또는 배우자 없이 부양자녀나 부양 직계존속이 있는 경우입니다. 한부모가구가 여기에 해당합니다.</td>
+    </tr>
+    <tr>
+      <td><b>맞벌이가구</b></td>
+      <td>배우자의 총급여가 <b>연 300만 원 이상</b>인 경우입니다. 부부가 둘 다 일정 수준 이상 벌면 여기로 분류됩니다.</td>
+    </tr>
+  </table>
+
+  <p>
+    자녀장려금에는 이 3분법이 그대로 쓰이지 않습니다. 부양자녀가 있어야만 대상이 되므로
+    <b>정의상 단독가구는 자녀장려금을 받을 수 없고</b>, 홑벌이든 맞벌이든 소득 상한선은 7,000만 원 하나로 같습니다.
+    근로장려금처럼 유형별로 기준선이 갈리지 않는다는 점이 실무에서 자주 놓치는 차이입니다.
+  </p>
+
+  <h2>2026년 소득·금액 기준표</h2>
+  <p>
+    아래 표의 총소득은 <b>부부 합산</b> 금액입니다. 근로소득만이 아니라 사업소득·이자·배당·연금·기타소득까지
+    합쳐서 보되, 소득 종류마다 반영 비율이 달라 실제 계산에서는 <b>총소득금액</b>이라는 별도의 값을 씁니다.
+    급여 명세서 숫자를 그대로 대입하면 어긋날 수 있습니다.
+  </p>
+
+  <table class="info-table">
+    <tr><th style="width:24%">가구 유형</th><th>총소득 상한</th><th>최대 지급액</th></tr>
+    <tr><td><b>단독가구</b></td><td>2,200만 원 미만</td><td><span class="big-number">165만 원</span></td></tr>
+    <tr><td><b>홑벌이가구</b></td><td>3,200만 원 미만</td><td><span class="big-number">285만 원</span></td></tr>
+    <tr><td><b>맞벌이가구</b></td><td>4,400만 원 미만</td><td><span class="big-number">330만 원</span></td></tr>
+    <tr><td><b>자녀장려금</b></td><td>7,000만 원 미만</td><td><span class="big-number">자녀 1명당 100만 원</span></td></tr>
+  </table>
+
+  <div class="formula">
+    <b>근로장려금은 소득에 비례해 계속 늘지 않습니다.</b><br>
+    소득이 낮은 구간에서는 소득이 늘수록 장려금도 <b>같이 늘고(점증)</b>,
+    중간 구간에서는 소득이 늘어도 <b>최대액이 유지되며(평탄)</b>,
+    상한선에 가까워지면 소득이 늘수록 장려금이 <b>줄어듭니다(점감)</b>.<br>
+    그래서 "많이 벌수록 많이 받는다"도, "적게 벌수록 많이 받는다"도 정확한 설명이 아닙니다.
+    <b>가구 유형별 평탄 구간에 들어가 있을 때 최대액</b>을 받습니다.
+    본인 구간의 정확한 금액은 국세청 홈택스·손택스의 <b>장려금 계산해 보기</b>에서 확인하는 것이 가장 빠릅니다.
+  </div>
+
+  <div class="formula">
+    <b>자녀장려금은 계산식이 단순합니다.</b><br>
+    부부합산 총소득이 <b>2,100만 원 이하</b>면 자녀 1명당 <b>100만 원 전액</b>입니다.<br>
+    2,100만 원을 넘으면 다음처럼 줄어듭니다.<br>
+    <span style="display:inline-block;background:#fff;border-radius:6px;padding:8px 12px;margin:6px 0;font-weight:700;">
+      자녀 1명당 금액 = 100만 원 − (총소득 − 2,100만 원) × 50만 원 ÷ 4,900만 원
+    </span><br>
+    상한선인 7,000만 원 직전까지 계산해도 <b>자녀 1명당 50만 원</b>이 남습니다.
+    즉 요건만 통과하면 <b>자녀 1명당 최소 50만 원은 확보</b>되는 구조입니다.
+    자녀가 둘이면 이 금액을 두 배로 곱합니다.
+  </div>
+
+  <div class="svg-wrap">
+    <div class="svg-title">가구 유형별 최대 지급액 비교 (2026년 기준 · 단위 만 원)</div>
+    <svg viewBox="0 0 640 260" width="100%" role="img" aria-label="가구 유형별 근로장려금 최대 지급액과 자녀장려금 비교 막대그래프">
+      <line x1="130" y1="20" x2="130" y2="220" stroke="#ddd" stroke-width="1"/>
+      <rect x="130" y="30" width="150" height="34" rx="4" fill="#ffb74d"/>
+      <text x="120" y="52" font-size="14" font-weight="700" text-anchor="end" fill="#444">단독</text>
+      <text x="292" y="52" font-size="14" font-weight="900" fill="#e65100">165만</text>
+
+      <rect x="130" y="80" width="259" height="34" rx="4" fill="#fb8c00"/>
+      <text x="120" y="102" font-size="14" font-weight="700" text-anchor="end" fill="#444">홑벌이</text>
+      <text x="401" y="102" font-size="14" font-weight="900" fill="#e65100">285만</text>
+
+      <rect x="130" y="130" width="300" height="34" rx="4" fill="#ef6c00"/>
+      <text x="120" y="152" font-size="14" font-weight="700" text-anchor="end" fill="#444">맞벌이</text>
+      <text x="442" y="152" font-size="14" font-weight="900" fill="#e65100">330만</text>
+
+      <rect x="130" y="180" width="91" height="34" rx="4" fill="#2e7d32"/>
+      <text x="120" y="202" font-size="14" font-weight="700" text-anchor="end" fill="#444">자녀 1명</text>
+      <text x="233" y="202" font-size="14" font-weight="900" fill="#1b5e20">100만</text>
+
+      <text x="130" y="243" font-size="12" fill="#888">주황 = 근로장려금 최대액 · 초록 = 자녀장려금(자녀 수만큼 곱함) · 두 색은 합산 가능</text>
+    </svg>
+  </div>
+
+  <h2>중복 수급 — 둘 다 받는 것이 정상이다</h2>
+  <p>
+    가장 많이 오해받는 지점입니다. 결론부터 말하면 <b>두 장려금은 함께 받을 수 있습니다.</b>
+    하나를 받으면 다른 하나가 깎이는 관계가 아니고, 둘 중 유리한 것을 고르는 구조도 아닙니다.
+    각각 따로 산정한 뒤 <b>합산해서 한 계좌로 입금</b>됩니다.
+  </p>
+  <p>
+    신청도 따로 하지 않습니다. 장려금 신청서는 한 장이고, 그 안에서 국세청이
+    <b>근로장려금 요건과 자녀장려금 요건을 각각 판정</b>합니다.
+    자녀장려금만 신청하는 별도의 창구가 있는 것이 아니라, 신청하면 해당되는 것이 자동으로 붙는 방식입니다.
+    그래서 "근로장려금은 어차피 안 될 것 같아서 신청을 안 했다"는 판단이 가장 손해입니다.
+    근로장려금에서 탈락해도 자녀장려금은 남아 있을 수 있기 때문입니다.
+  </p>
+  <p>
+    다만 <b>자녀세액공제와는 관계가 다릅니다.</b> 연말정산이나 종합소득세 신고에서
+    같은 자녀로 이미 자녀세액공제를 받았다면, 그 금액만큼 자녀장려금에서 빼고 지급합니다.
+    같은 자녀에 대해 두 가지 혜택을 온전히 겹쳐 받지는 못한다는 뜻입니다.
+    반면 <b>아동수당·양육수당처럼 지방자치단체나 복지부 계통에서 주는 수당은 성격이 달라 차감 대상이 아닙니다.</b>
+  </p>
+
+  <h2>신청 방식 세 가지</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text"><b>정기신청 — 5월 1일 ~ 6월 1일</b><br>
+      가장 기본이 되는 방식입니다. 근로소득·사업소득·종교인소득 <b>모두</b> 신청할 수 있고,
+      산정액의 <b>100%</b>를 한 번에 받습니다. 자녀장려금도 이때 함께 판정됩니다.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text"><b>반기신청 — 9월 1일~15일(상반기분), 3월 1일~15일(하반기분)</b><br>
+      <b>근로소득만</b> 있는 가구가 선택할 수 있습니다. 1년을 기다리지 않고 반씩 미리 받는 방식으로,
+      상반기분은 그해 12월, 하반기분은 이듬해 6월에 정산해 지급합니다.
+      미리 주는 금액은 연간 산정액의 <b>35%</b> 수준으로 잡고, 정산 때 최종 금액을 확정합니다.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text"><b>기한 후 신청 — 6월 2일 ~ 12월 1일</b><br>
+      정기신청을 놓쳤을 때 쓰는 마지막 통로입니다. 받을 수는 있지만 <b>5%가 깎여 95%만</b> 지급되고,
+      심사가 뒤로 밀려 입금도 늦어집니다.</div>
+    </div>
+  </div>
+
+  <p>
+    반기신청과 정기신청은 <b>동시에 할 수 없습니다.</b> 반기로 신청하면 그 귀속연도의 정기신청 대상에서 빠집니다.
+    사업소득이 섞여 있다면 반기신청 자체가 안 되므로 정기신청으로 가야 합니다.
+    반기신청을 하더라도 자녀장려금을 따로 신청할 필요는 없고, 요건을 충족하면 함께 처리됩니다.
+    다만 반기로 쪼개 지급되는 것은 근로장려금이므로, 자녀장려금이 실제로 언제 입금되는지는 국세청 안내문을 확인하세요.
+  </p>
+
+  <div class="deadline-box">
+    <h3>⏰ 기한을 놓치면 이렇게 됩니다</h3>
+    <p>· <b>정기신청 마감(6월 1일)</b>을 넘기면 그해 100% 수령은 불가능하고, 기한 후 신청으로 <b>95%</b>만 남습니다.</p>
+    <p>· <b>12월 1일</b>까지도 신청하지 않으면 그 귀속연도의 장려금은 <b>소멸</b>합니다. 다음 해에 소급 신청할 수 없습니다.</p>
+    <p>· 안내문을 받지 못했더라도 <b>본인이 요건에 맞으면 직접 신청</b>할 수 있습니다. 안내 대상 통지는 국세청이 미리 파악한 가구에만 나가므로, 통지가 없다고 자격이 없는 것은 아닙니다.</p>
+  </div>
+
+  <h2>깎이거나 못 받는 경우</h2>
+  <p>
+    요건을 통과했는데도 예상보다 적게 들어오는 일이 잦습니다. 원인은 대개 아래 넷 중 하나입니다.
+  </p>
+  <table class="info-table">
+    <tr><th style="width:30%">사유</th><th>결과</th></tr>
+    <tr>
+      <td><b>재산 1억 7,000만 원 이상</b><br>(2억 4,000만 원 미만)</td>
+      <td>산정액의 <b>50%만</b> 지급됩니다. 재산에는 주택·토지·건물·자동차·전세보증금·예금 등이 들어가고, <b>부채는 빼 주지 않습니다.</b> 전세보증금이 그대로 재산으로 잡혀 여기서 걸리는 경우가 가장 많습니다.</td>
+    </tr>
+    <tr>
+      <td><b>재산 2억 4,000만 원 이상</b></td>
+      <td>소득이 아무리 낮아도 <b>지급 제외</b>입니다.</td>
+    </tr>
+    <tr>
+      <td><b>기한 후 신청</b></td>
+      <td><b>5% 감액</b>되어 95%만 지급됩니다.</td>
+    </tr>
+    <tr>
+      <td><b>국세 체납</b></td>
+      <td>장려금의 <b>최대 30%</b>를 한도로 체납액에 먼저 충당하고 나머지를 지급합니다.</td>
+    </tr>
+  </table>
+
+  <div class="checklist">
+    <h2>✅ 내 경우를 5분 만에 확인하는 순서</h2>
+    <div class="check-item"><span class="chk">✓</span><span>배우자·부양자녀·70세 이상 직계존속 유무로 <b>가구 유형</b>부터 확정했다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>부부합산 총소득이 내 가구 유형의 상한선(2,200만·3,200만·4,400만 원) 안에 들어가는지 봤다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>근로장려금이 안 되더라도 <b>자녀장려금 7,000만 원 기준</b>을 별도로 다시 확인했다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span><b>전세보증금과 자동차를 포함해</b> 가구원 전체 재산이 1억 7,000만 원 / 2억 4,000만 원 선의 어디에 있는지 계산했다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>홈택스·손택스에서 <b>장려금 계산해 보기</b>로 예상 금액을 확인하고, 안내 대상이 아니어도 직접 신청할 수 있다는 점을 알고 있다.</span></div>
+  </div>
+
+  <div class="caution">
+    <div class="caution-item">① <b>재산 기준일은 신청일이 아닙니다.</b> 전년도 6월 1일 시점의 재산으로 판정하므로, 그 뒤에 집을 팔았어도 기준일에 갖고 있었다면 반영됩니다.</div>
+    <div class="caution-item">② <b>부채를 빼지 않습니다.</b> 대출을 끼고 산 집도 시가 기준으로 그대로 재산에 잡힙니다. 소득이 낮은데 탈락하는 이유의 대부분이 이것입니다.</div>
+    <div class="caution-item">③ <b>세대가 아니라 가구로 봅니다.</b> 주민등록상 분리돼 있어도 배우자는 항상 같은 가구로 묶이고, 부양자녀의 소득도 함께 봅니다. 부양자녀는 연간 소득금액 100만 원 이하여야 인정됩니다.</div>
+    <div class="caution-item">④ <b>사실과 다르게 신청하면 환수됩니다.</b> 소득·재산을 축소해 받은 경우 가산세와 함께 회수되고, 정도에 따라 이후 2년 또는 5년간 신청이 제한될 수 있습니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <div class="contact-row"><span class="contact-label">주관 기관</span> · 국세청 (근로·자녀장려금 모두 국세청 소관입니다)</div>
+    <div class="contact-row"><span class="contact-label">장려금 상담센터</span> · ☎ 1566-3636</div>
+    <div class="contact-row"><span class="contact-label">국세 상담센터</span> · ☎ 126</div>
+    <div class="contact-row"><span class="contact-label">온라인 신청·조회</span> · 홈택스(hometax.go.kr) · 손택스 앱 · ARS 1544-9944</div>
+    <div class="contact-row"><span class="contact-label">방문 접수</span> · 주소지 관할 세무서</div>
+  </div>
+
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"소득이 늘어도 지원이 끊기지 않고 완만하게 줄어드는 점증·점감 구조는, 복지 급여의 고질적인 문제였던 근로 의욕 저하를 상당 부분 해소한 설계다."</p>
+          <p class="author">— 노동경제 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"자녀장려금의 소득 상한을 7,000만 원까지 올린 것은 양육 부담이 저소득층만의 문제가 아니라는 현실을 반영한 조정이다. 중간 소득층의 사각지대가 눈에 띄게 줄었다."</p>
+          <p class="author">— 가족정책 연구자</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"부채를 차감하지 않는 재산 기준이 가장 큰 맹점이다. 대출로 산 집이나 전세보증금이 그대로 재산으로 잡히면서, 실제 가처분소득이 낮은 가구가 오히려 탈락하는 역전이 생긴다."</p>
+          <p class="author">— 주거복지 시민단체 활동가</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"본인이 기간 안에 신청해야만 받는 구조여서 제도를 아는 사람에게 유리하다. 소득·재산 자료를 이미 국세청이 보유한 이상, 직권 지급 방식으로 옮겨 갈 여지가 있다."</p>
+          <p class="author">— 사회복지 현장 활동가</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #근로장려금 #자녀장려금 #중복수급 #가구유형 #홑벌이맞벌이 #재산기준2억4천만원 #반기정기차이 #기한후신청 #자녀세액공제차감 #국세청장려금
+  </div>
+
+  <div class="disclaimer">
+    이 기사는 공개된 정보를 바탕으로 작성되었습니다. 본문의 금액과 요건은 2026년에 신청하는 2025년 귀속분 기준이며 해마다 변경됩니다.
+    실제 지급 대상 여부와 금액은 국세청 심사로 확정되므로, 정확한 지원 여부는 담당 기관에 확인하세요.
+  </div>
+
+  <div class="written">작성일 2026-08-19 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
