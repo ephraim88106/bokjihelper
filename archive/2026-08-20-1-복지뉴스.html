@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>노인맞춤돌봄서비스 대상 기준 — 서비스 종류와 장기요양 중복 여부</title>
+<meta name="description" content="장기요양 등급을 받지 못한 어르신을 위한 제도가 노인맞춤돌봄서비스입니다. 만 65세 이상이면서 기초생활수급자·차상위계층·기초연금 수급자 중 하나에 해당하고, 독거·조손·고령부부 가구 등 돌봄이 필요한 상태여야 대상이 됩니다. 안전지원·사회참여·생활교육·일상생활지원의 직접서비스와 민간자원 연계서비스, 은둔·우울형 어르신을 위한 특화서비스로 구성되며 본인부담금이 없습니다. 일반돌봄군 월 16시간 미만, 중점돌봄군 월 20~40시간, 퇴원후돌봄군 월 44시간 이하로 제공시간이 갈립니다. 다만 노인장기요양보험 등급자, 가사·간병 방문지원, 장애인 활동지원, 보훈재가복지서비스 이용자는 중복 이용이 불가합니다. 2026년 사업안내 기준으로 대상 요건·서비스 종류·이용 절차·중복 제외 사업을 정리했습니다.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    background: #f8f9fa;
+    color: #222;
+    line-height: 1.7;
+  }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge {
+    display: inline-block;
+    background: #1565c0;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.35;
+    color: #1a1a1a;
+    margin-bottom: 18px;
+    word-break: keep-all;
+  }
+
+  .hook {
+    border-left: 5px solid #1565c0;
+    padding: 14px 18px;
+    background: #e8f2fd;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 22px;
+    font-size: 15px;
+  }
+  .hook .highlight { color: #0d47a1; font-weight: 900; }
+
+  .summary-box {
+    background: #e8f5e9;
+    border: 2px solid #2e7d32;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 26px;
+  }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+
+  h2 { font-size: 19px; font-weight: 900; color: #0d47a1; margin: 28px 0 12px; border-bottom: 2px solid #90caf9; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #1565c0; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #e3f2fd; }
+  .big-number { font-size: 20px; font-weight: 900; color: #0d47a1; }
+
+  .formula {
+    background: #f5faff;
+    border: 1px solid #90caf9;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 20px;
+    font-size: 14.5px;
+    line-height: 1.9;
+    word-break: keep-all;
+  }
+  .formula b { color: #0d47a1; }
+
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #e3f2fd; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #1565c0; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+
+  .deadline-box {
+    border: 2px dashed #1565c0;
+    background: #e8f2fd;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 22px;
+  }
+  .deadline-box h3 { color: #0d47a1; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+
+  .checklist { background: #e3f2fd; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #90caf9; color: #0d47a1; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #0d47a1; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+
+  .caution { background: #e3f2fd; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+
+  .contact-box { background: #e3f2fd; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #0d47a1; border-color: #90caf9; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #e3f2fd; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  .hashtags { font-size: 13px; color: #0d47a1; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-08-20-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="노인맞춤돌봄서비스 대상 기준 — 서비스 종류와 장기요양 중복 여부">
+<meta property="og:description" content="장기요양 등급을 받지 못한 어르신을 위한 제도가 노인맞춤돌봄서비스입니다. 만 65세 이상이면서 기초생활수급자·차상위계층·기초연금 수급자 중 하나에 해당하고, 독거·조손·고령부부 가구 등 돌봄이 필요한 상태여야 대상이 됩니다. 안전지원·사회참여·생활교육·일상생활지원의 직접서비스와 민간자원 연계서비스, 은둔·우울형 어르신을 위한 특화서비스로 구성되며 본인부담금이 없습니다. 일반돌봄군 월 16시간 미만, 중점돌봄군 월 20~40시간, 퇴원후돌봄군 월 44시간 이하로 제공시간이 갈립니다. 다만 노인장기요양보험 등급자, 가사·간병 방문지원,">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-08-20-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-08-20T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-08-20T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-08-20-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-08-20-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "노인맞춤돌봄서비스 대상 기준 — 서비스 종류와 장기요양 중복 여부", "description": "장기요양 등급을 받지 못한 어르신을 위한 제도가 노인맞춤돌봄서비스입니다. 만 65세 이상이면서 기초생활수급자·차상위계층·기초연금 수급자 중 하나에 해당하고, 독거·조손·고령부부 가구 등 돌봄이 필요한 상태여야 대상이 됩니다. 안전지원·사회참여·생활교육·일상생활지원의 직접서비스와 민간자원 연계서비스, 은둔·우울형 어르신을 위한 특화서비스로 구성되며 본인부담금이 없습니다. 일반돌봄군 월 16시간 미만, 중점돌봄군 월 20~40시간, 퇴원후돌봄군 월 44시간 이하로 제공시간이 갈립니다. 다만 노인장기요양보험 등급자, 가사·간병 방문지원,", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-08-20", "dateModified": "2026-08-20", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 노인 돌봄</div>
+  <div class="section-badge">노인 돌봄 제도</div>
+
+  <h1>노인맞춤돌봄서비스 대상 기준 — 서비스 종류와 장기요양 중복 여부</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대개 <span class="highlight">"부모님이 장기요양 등급은 못 받으셨는데, 그럼 아무 도움도 못 받는 건가"</span>
+    하는 물음 앞에 서 있습니다. 등급 판정에서 떨어지면 제도 바깥으로 밀려난 것처럼 느껴지지만,
+    <span class="highlight">노인맞춤돌봄서비스는 정확히 그 구간을 위해 만들어진 제도</span>입니다.
+    거동은 되지만 혼자 지내며 안부를 물어 줄 사람이 없는 어르신, 몸이 조금씩 나빠지고 있으나
+    요양 등급 기준에는 못 미치는 어르신이 대상입니다.
+    다만 <span class="highlight">장기요양 등급을 받은 분은 이 서비스를 함께 이용할 수 없습니다.</span>
+    누가 대상이고 무엇을 받으며 어떤 제도와는 겹칠 수 없는지 순서대로 정리했습니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li><b>세 가지를 모두 충족해야 합니다</b> — ① <b>만 65세 이상</b> ② <b>기초생활수급자·차상위계층·기초연금 수급자</b> 중 하나 ③ 독거·조손·고령부부 가구 등 <b>돌봄이 필요한 상태</b>. 셋 중 하나라도 빠지면 대상이 아닙니다.</li>
+      <li><b>장기요양 등급자는 제외됩니다</b> — 유사한 재가 돌봄을 이미 받고 있는 경우로 보아 중복 이용이 막혀 있습니다. 등급을 새로 받으면 이 서비스는 종료됩니다.</li>
+      <li><b>본인부담금이 없습니다</b> — 직접서비스는 전액 국비·지방비로 운영돼 이용료를 내지 않습니다. 필요도 조사 결과에 따라 <b>월 제공시간이 군별로 다르게</b> 배정됩니다.</li>
+    </ul>
+  </div>
+
+  <p style="font-size:13px;color:#888;margin-bottom:22px;">
+    ※ 이 글의 대상 기준과 제공시간은 <b>2026년 노인맞춤돌봄서비스 사업안내</b>를 기준으로 정리한 것입니다.
+    이 사업의 세부 기준은 해마다 사업안내가 개정되면서 조정돼 왔고, 특히 중점돌봄군의 월 제공시간은
+    과거 16시간에서 20시간 이상으로 한 차례 상향된 이력이 있습니다.
+    오래된 안내문에는 예전 시간표가 그대로 남아 있는 경우가 많으니 연도를 확인하고 보세요.
+  </p>
+
+  <h2>이 제도가 겨냥하는 자리</h2>
+  <p>
+    노인맞춤돌봄서비스는 2020년 1월에 시작됐습니다. 그전까지 노인돌봄기본서비스, 노인돌봄종합서비스,
+    단기가사서비스, 독거노인 사회관계활성화, 초기독거노인 자립지원, 지역사회 자원연계 등
+    <b>여섯 개로 흩어져 있던 노인 돌봄 사업을 하나로 통합</b>한 것이 이 제도입니다.
+    제도마다 신청처와 자격이 달라 어르신이 어디에 해당하는지 알기 어려웠던 문제를 정리한 개편이었습니다.
+  </p>
+  <p>
+    목적은 두 가지로 요약됩니다. 하나는 <b>일상생활을 혼자 꾸리기 어려운 취약노인의 노후 생활을 떠받치는 것</b>,
+    다른 하나는 <b>사례관리를 통해 고독사와 자살 위험을 낮추는 것</b>입니다.
+    그래서 이 서비스는 몸을 씻기고 밥을 짓는 요양 개념보다, <b>안부를 확인하고 관계를 잇는 쪽</b>에 무게가 실려 있습니다.
+    장기요양보험이 신체 기능 저하에 대응한다면, 이 제도는 <b>고립과 기능 저하의 앞 단계</b>를 맡습니다.
+  </p>
+
+  <h2>대상 기준 — 세 관문을 모두 넘어야 합니다</h2>
+  <table class="info-table">
+    <tr><th style="width:22%">관문</th><th>내용</th></tr>
+    <tr>
+      <td><b>① 연령</b></td>
+      <td><b>만 65세 이상</b>. 다만 은둔·우울형을 대상으로 하는 특화서비스는 고독사 위험이 높다고 판단되면 <b>60세 이상</b>까지 포함될 수 있습니다.</td>
+    </tr>
+    <tr>
+      <td><b>② 소득</b></td>
+      <td><b>국민기초생활수급자 · 차상위계층 · 기초연금 수급자</b> 중 하나에 해당해야 합니다. 이 셋 중 어디에도 들지 않으면 소득이 아무리 낮게 느껴져도 대상이 되지 않습니다.</td>
+    </tr>
+    <tr>
+      <td><b>③ 돌봄 필요</b></td>
+      <td>독거·조손·고령부부 가구이거나, 신체 기능 저하·정신적 어려움·사회관계 단절 등으로 돌봄이 필요한 상태여야 합니다. 읍면동 접수 후 <b>신체·정신·사회참여 세 영역의 취약 요인을 조사</b>해 우선순위를 매깁니다.</td>
+    </tr>
+  </table>
+  <p>
+    ②번을 오해하는 경우가 가장 많습니다. <b>기초연금을 받고 계시면 이미 소득 요건은 통과</b>한 것입니다.
+    65세 이상 인구의 다수가 기초연금 수급자이므로, 실제로는 ③번의 돌봄 필요도 조사에서 대상 여부와 서비스 양이 갈립니다.
+    소득이 낮아도 기초연금을 신청하지 않아 받고 있지 않다면 요건을 못 채울 수 있으니, 그 경우 기초연금부터 확인하는 편이 순서입니다.
+  </p>
+
+  <h2>대상자 군과 월 제공시간</h2>
+  <p>
+    조사 결과에 따라 대상자는 군으로 나뉘고, 군에 따라 <b>한 달에 받는 서비스 시간이 달라집니다.</b>
+    같은 제도 안에 있어도 이용 시간이 두 배 이상 벌어질 수 있는 지점입니다.
+  </p>
+  <table class="info-table">
+    <tr><th style="width:28%">대상자 군</th><th>월 제공시간</th><th>어떤 상태인가</th></tr>
+    <tr>
+      <td><b>일반돌봄군</b></td>
+      <td><span class="big-number">월 16시간 미만</span></td>
+      <td>사회적 관계가 끊겨 고립 위험이 있는 경우. 안부 확인과 사회참여 지원이 중심입니다.</td>
+    </tr>
+    <tr>
+      <td><b>중점돌봄군</b></td>
+      <td><span class="big-number">월 20~40시간</span></td>
+      <td>신체 기능 제한이 있어 일상생활에 도움이 필요한 경우. 가사·이동 지원 비중이 커집니다.</td>
+    </tr>
+    <tr>
+      <td><b>퇴원후돌봄군</b></td>
+      <td><span class="big-number">월 44시간 이하</span></td>
+      <td>병원 퇴원 직후 단기간 집중 지원이 필요한 경우. 회복기에 한시적으로 배정됩니다.</td>
+    </tr>
+  </table>
+
+  <div class="svg-wrap">
+    <div class="svg-title">대상자 군별 월 제공시간 비교</div>
+    <svg viewBox="0 0 640 200" width="100%" height="200" role="img" aria-label="일반돌봄군 16시간 미만, 중점돌봄군 20에서 40시간, 퇴원후돌봄군 44시간 이하 막대 비교">
+      <line x1="120" y1="20" x2="120" y2="175" stroke="#cfd8dc" stroke-width="1"/>
+      <text x="112" y="52" text-anchor="end" font-size="13" fill="#37474f" font-weight="700">일반돌봄군</text>
+      <rect x="122" y="36" width="160" height="24" fill="#90caf9" rx="4"/>
+      <text x="292" y="53" font-size="13" fill="#0d47a1" font-weight="700">16시간 미만</text>
+
+      <text x="112" y="102" text-anchor="end" font-size="13" fill="#37474f" font-weight="700">중점돌봄군</text>
+      <rect x="122" y="86" width="400" height="24" fill="#1565c0" rx="4"/>
+      <text x="532" y="103" font-size="13" fill="#0d47a1" font-weight="700">20~40시간</text>
+
+      <text x="112" y="152" text-anchor="end" font-size="13" fill="#37474f" font-weight="700">퇴원후돌봄군</text>
+      <rect x="122" y="136" width="440" height="24" fill="#0d47a1" rx="4"/>
+      <text x="572" y="153" font-size="13" fill="#0d47a1" font-weight="700">44시간 이하</text>
+      <text x="122" y="190" font-size="11" fill="#90a4ae">막대 길이는 월 제공시간 상한을 비례 표시한 것입니다 · 2026년 사업안내 기준</text>
+    </svg>
+  </div>
+
+  <h2>무엇을 받게 되나 — 서비스 종류</h2>
+  <h3>직접서비스 — 생활지원사가 직접 제공</h3>
+  <table class="info-table">
+    <tr><th style="width:26%">구분</th><th>내용</th></tr>
+    <tr><td><b>안전지원</b></td><td>전화·방문으로 안부를 확인하고, 생활 안전을 점검하며, 말벗이 되어 드립니다. 가장 기본이 되는 서비스입니다.</td></tr>
+    <tr><td><b>사회참여</b></td><td>여가·문화·평생교육 프로그램 참여를 돕고, 어르신끼리의 자조모임을 지원합니다.</td></tr>
+    <tr><td><b>생활교육</b></td><td>영양·보건·건강 교육과 우울 예방, 인지 활동 프로그램을 제공합니다.</td></tr>
+    <tr><td><b>일상생활지원</b></td><td>병원·관공서 등 <b>외출 동행</b>과 <b>가사 지원</b>(식사 관리, 청소 관리)입니다. 중점돌봄군에서 비중이 큽니다.</td></tr>
+  </table>
+
+  <h3>연계서비스 — 민간 자원을 이어 주는 몫</h3>
+  <p>
+    수행기관이 지역의 후원처·복지관·의료기관 등을 연결해 <b>생활 지원(후원 물품·식품), 주거 개선, 건강 지원</b> 등을 잇습니다.
+    직접서비스와 달리 정해진 시간이 아니라 필요와 지역 자원 사정에 따라 달라집니다.
+  </p>
+
+  <h3>특화서비스 — 은둔·우울형 어르신 대상</h3>
+  <p>
+    사회 관계가 끊긴 은둔형, 우울 증상이 뚜렷한 우울형 어르신에게는 별도의 <b>특화서비스</b>가 운영됩니다.
+    전문 인력이 <b>개별 상담</b>을 진행하고, 필요하면 <b>정신건강 진료와 투약을 지원</b>하며, 집단활동으로 관계 회복을 돕습니다.
+    일반 대상자와 달리 <b>고독사 위험이 높다고 판단되면 60세 이상</b>도 포함될 수 있는 것이 이 서비스의 특징입니다.
+  </p>
+
+  <h2>★ 장기요양과의 관계 — 함께 받을 수 없습니다</h2>
+  <p>
+    이 제도에서 가장 많이 묻는 질문이 이것입니다. 결론부터 말하면 <b>노인장기요양보험 등급을 받은 분은 노인맞춤돌봄서비스 대상이 아닙니다.</b>
+    두 제도가 모두 집으로 사람이 찾아가 돌보는 재가 서비스라 <b>유사·중복 사업</b>으로 분류되기 때문입니다.
+    이용 중에 장기요양 등급을 새로 받으면 그 시점에 노인맞춤돌봄서비스는 종료되고 장기요양으로 넘어갑니다.
+  </p>
+  <table class="info-table">
+    <tr><th style="width:34%">함께 받을 수 없는 사업</th><th>이유</th></tr>
+    <tr><td><b>노인장기요양보험 등급자</b><br>(1~5등급 · 인지지원등급)</td><td>방문요양·방문목욕 등 재가급여가 같은 성격의 돌봄을 제공합니다.</td></tr>
+    <tr><td><b>가사·간병 방문지원사업</b></td><td>가사·간병 지원 내용이 겹칩니다.</td></tr>
+    <tr><td><b>장애인 활동지원</b></td><td>활동지원사가 유사한 일상생활 지원을 수행합니다.</td></tr>
+    <tr><td><b>국가보훈부 보훈재가복지서비스</b></td><td>보훈 대상 어르신에게 동일 성격의 재가 서비스가 제공됩니다.</td></tr>
+    <tr><td><b>지자체의 유사 재가 서비스</b></td><td>지역별로 운영되는 별도 돌봄 사업과 중복될 수 있어 사전 확인이 필요합니다.</td></tr>
+  </table>
+  <div class="formula">
+    <b>정리하면 이렇게 갈립니다.</b><br>
+    · 신체 기능이 많이 떨어져 <b>요양이 필요한 단계</b> → <b>노인장기요양보험</b> (등급 판정 후 재가·시설급여)<br>
+    · 등급 기준에는 미치지 않지만 <b>혼자 지내며 돌봄이 필요한 단계</b> → <b>노인맞춤돌봄서비스</b><br>
+    · 등급 판정에서 <b>떨어졌다는 사실 자체가 이 서비스의 자격을 막지 않습니다.</b> 오히려 대표적인 대상입니다.
+  </div>
+
+  <h2>이용 절차</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text"><b>주소지 읍·면·동 행정복지센터에 상담·접수</b>합니다. 방문 외에 전화·우편·팩스로도 가능하고, 복지로(bokjiro.go.kr)에서 온라인으로도 접수됩니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text"><b>대상자 선정조사</b>를 받습니다. 신체·정신·사회참여 영역의 취약 요인을 조사해 돌봄 필요도를 점수로 확인합니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text"><b>대상자 군과 월 제공시간이 배정</b>됩니다. 일반돌봄군·중점돌봄군·퇴원후돌봄군 중 하나로 결정됩니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text">지역 <b>수행기관</b>이 배정되고 담당 <b>생활지원사</b>가 정해집니다. 이후 정기적인 안부 확인과 서비스가 시작됩니다.</div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-text">주기적으로 <b>재조사</b>를 거쳐 상태 변화에 따라 군과 제공시간이 조정됩니다. 상태가 나빠졌다면 장기요양 등급 판정으로 옮겨 갈 수 있습니다.</div></div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>⏰ 접수 기한은 따로 없습니다</h3>
+    <p>이 서비스는 정해진 접수 기간이 있는 지원금이 아니라 <b>연중 상시 접수</b>되는 사업입니다. 다만 지역별로 배정된 인원과 예산 범위가 있어 <b>대기가 생길 수 있습니다.</b></p>
+    <p>본인 외에 <b>가족·이웃·통장·사회복지시설 종사자 등 제3자도 의뢰</b>할 수 있습니다. 혼자 지내는 어르신이 스스로 신청하기 어려운 경우가 많아 마련된 통로입니다.</p>
+  </div>
+
+  <div class="checklist">
+    <h2>✅ 우리 부모님은 해당될까 — 자가 확인</h2>
+    <div class="check-item"><span class="chk">✓</span><span>만 65세 이상이신가요? (특화서비스 대상은 60세 이상도 가능)</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>기초생활수급자·차상위계층·기초연금 수급자 중 하나에 해당하시나요?</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>혼자 지내시거나, 조손·고령부부 가구이신가요?</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>장기요양 등급을 받고 계시지 <b>않은가요</b>? (등급자는 대상에서 제외됩니다)</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>가사·간병 방문지원, 장애인 활동지원, 보훈재가복지 중 이용 중인 것이 없나요?</span></div>
+  </div>
+
+  <div class="caution">
+    <div class="caution-item">① <b>기초연금을 받고 계신지부터 확인하세요.</b> 소득 요건은 기초생활수급·차상위·기초연금 중 하나로 충족됩니다. 자격이 되는데 기초연금을 신청하지 않아 요건을 못 채우는 경우가 있습니다.</div>
+    <div class="caution-item">② <b>등급 탈락은 자격 박탈이 아닙니다.</b> 장기요양 등급을 못 받았다는 이유로 포기하는 경우가 많지만, 그 구간이 바로 이 제도가 맡는 자리입니다.</div>
+    <div class="caution-item">③ <b>중복 이용은 나중에 조정됩니다.</b> 이용 중 장기요양 등급을 받거나 활동지원을 시작하면 노인맞춤돌봄서비스는 종료됩니다. 어느 쪽이 더 유리한지 담당자와 상의해 결정하세요.</div>
+    <div class="caution-item">④ <b>제공시간은 고정값이 아닙니다.</b> 군별 시간은 상한 기준이며 실제 배정은 조사 결과와 지역 여건에 따라 달라집니다. 정확한 시간은 배정된 수행기관에서 확인해야 합니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <div class="contact-row"><span class="contact-label">주관 기관</span> · 보건복지부 (지방자치단체·수행기관 위탁 운영)</div>
+    <div class="contact-row"><span class="contact-label">접수처</span> · 주소지 읍·면·동 행정복지센터</div>
+    <div class="contact-row"><span class="contact-label">보건복지상담센터</span> · ☎ 129</div>
+    <div class="contact-row"><span class="contact-label">노인맞춤돌봄서비스 중앙지원기관</span> · ☎ 1661-2129</div>
+    <div class="contact-row"><span class="contact-label">온라인 접수·조회</span> · 복지로 bokjiro.go.kr</div>
+  </div>
+
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"여섯 개로 쪼개져 있던 노인 돌봄 사업을 하나로 묶은 것만으로도 접근성이 크게 나아졌다. 어르신이 어느 창구를 찾아야 하는지 몰라 제도 밖에 머무는 일이 줄었다."</p>
+          <p class="author">— 노인복지 정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"장기요양 등급 판정 이전 단계를 공적 체계가 맡는다는 점이 핵심이다. 고립과 기능 저하는 등급이 나온 뒤에 개입하면 이미 늦은 경우가 많다."</p>
+          <p class="author">— 지역사회 통합돌봄 현장 활동가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"소득 요건을 기초생활·차상위·기초연금으로 한정하면서, 재산은 있으나 현금 흐름과 돌볼 사람이 없는 노인은 구조적으로 배제된다. 고립은 소득만으로 갈리지 않는다."</p>
+          <p class="author">— 사회복지학과 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"생활지원사 한 사람이 담당하는 어르신 수가 많아 안부 확인이 형식에 그치기 쉽다. 제공시간을 늘리는 것과 함께 인력 처우와 배치 기준을 손봐야 실질이 따라온다."</p>
+          <p class="author">— 돌봄노동 현장 활동가</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #노인맞춤돌봄서비스 #취약노인돌봄 #중점돌봄군 #일반돌봄군 #퇴원후돌봄군 #생활지원사 #특화서비스 #장기요양중복불가 #기초연금수급자 #보건복지부
+  </div>
+
+  <div class="disclaimer">
+    이 기사는 공개된 정보를 바탕으로 작성되었습니다. 본문의 대상 기준과 월 제공시간은 2026년 노인맞춤돌봄서비스 사업안내를 기준으로 하며,
+    사업안내 개정과 지역 여건에 따라 달라질 수 있습니다. 실제 대상 여부와 배정 시간은 읍·면·동 상담과 선정조사로 확정되므로,
+    정확한 지원 여부는 담당 기관에 확인하세요.
+  </div>
+
+  <div class="written">작성일 2026-08-20 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
