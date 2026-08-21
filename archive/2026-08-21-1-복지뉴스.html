@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>산모신생아 건강관리 서비스 — 이용 기간과 본인부담금 계산 방법</title>
+<meta name="description" content="출산 후 산후관리사가 집으로 방문하는 산모·신생아 건강관리 서비스는 사회서비스 전자바우처로 운영됩니다. 2026년 기준 기준중위소득 150% 이하 가구가 대상이며, 초과 가구도 지자체 예외지원(라형)으로 이용할 수 있는 경우가 있습니다. 서비스 기간은 단태아 첫째 5·10·15일, 둘째 이상과 쌍태아 10·15·20일, 삼태아 이상은 최대 40일까지 단축형·표준형·연장형으로 갈립니다. 본인부담금은 서비스 가격에서 정부지원금을 뺀 차액이며, 단태아 첫째 표준형 기준으로 수급자·차상위(가형) 29만 9천 원, 중위소득 150% 이하(통합형) 46만 2천 원 수준입니다. 신청은 출산예정일 40일 전부터 출산일로부터 60일까지, 바우처는 출산일로부터 90일 안에 사용해야 합니다.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    background: #f8f9fa;
+    color: #222;
+    line-height: 1.7;
+  }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge {
+    display: inline-block;
+    background: #ad1457;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.35;
+    color: #1a1a1a;
+    margin-bottom: 18px;
+    word-break: keep-all;
+  }
+
+  .hook {
+    border-left: 5px solid #ad1457;
+    padding: 14px 18px;
+    background: #fce4ec;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 22px;
+    font-size: 15px;
+  }
+  .hook .highlight { color: #880e4f; font-weight: 900; }
+
+  .summary-box {
+    background: #e8f5e9;
+    border: 2px solid #2e7d32;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 26px;
+  }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+
+  h2 { font-size: 19px; font-weight: 900; color: #880e4f; margin: 28px 0 12px; border-bottom: 2px solid #f48fb1; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #ad1457; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #fce4ec; }
+  .big-number { font-size: 20px; font-weight: 900; color: #880e4f; }
+
+  .formula {
+    background: #fff5f8;
+    border: 1px solid #f48fb1;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 20px;
+    font-size: 14.5px;
+    line-height: 1.9;
+    word-break: keep-all;
+  }
+  .formula b { color: #880e4f; }
+
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #fce4ec; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #ad1457; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+
+  .deadline-box {
+    border: 2px dashed #f57c00;
+    background: #fff8e1;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 22px;
+  }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+
+  .checklist { background: #fce4ec; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #f48fb1; color: #880e4f; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #880e4f; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+
+  .caution { background: #fce4ec; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+
+  .contact-box { background: #fce4ec; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #880e4f; border-color: #f48fb1; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fce4ec; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  .hashtags { font-size: 13px; color: #880e4f; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-08-21-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="산모신생아 건강관리 서비스 — 이용 기간과 본인부담금 계산 방법">
+<meta property="og:description" content="출산 후 산후관리사가 집으로 방문하는 산모·신생아 건강관리 서비스는 사회서비스 전자바우처로 운영됩니다. 2026년 기준 기준중위소득 150% 이하 가구가 대상이며, 초과 가구도 지자체 예외지원(라형)으로 이용할 수 있는 경우가 있습니다. 서비스 기간은 단태아 첫째 5·10·15일, 둘째 이상과 쌍태아 10·15·20일, 삼태아 이상은 최대 40일까지 단축형·표준형·연장형으로 갈립니다. 본인부담금은 서비스 가격에서 정부지원금을 뺀 차액이며, 단태아 첫째 표준형 기준으로 수급자·차상위(가형) 29만 9천 원, 중위소득 150% 이하(통">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-08-21-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-08-21T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-08-21T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-08-21-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-08-21-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "산모신생아 건강관리 서비스 — 이용 기간과 본인부담금 계산 방법", "description": "출산 후 산후관리사가 집으로 방문하는 산모·신생아 건강관리 서비스는 사회서비스 전자바우처로 운영됩니다. 2026년 기준 기준중위소득 150% 이하 가구가 대상이며, 초과 가구도 지자체 예외지원(라형)으로 이용할 수 있는 경우가 있습니다. 서비스 기간은 단태아 첫째 5·10·15일, 둘째 이상과 쌍태아 10·15·20일, 삼태아 이상은 최대 40일까지 단축형·표준형·연장형으로 갈립니다. 본인부담금은 서비스 가격에서 정부지원금을 뺀 차액이며, 단태아 첫째 표준형 기준으로 수급자·차상위(가형) 29만 9천 원, 중위소득 150% 이하(통", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-08-21", "dateModified": "2026-08-21", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 임신·출산 지원</div>
+  <div class="section-badge">모자보건 제도</div>
+
+  <h1>산모신생아 건강관리 서비스 — 이용 기간과 본인부담금 계산 방법</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대개 출산을 한두 달 앞두고 <span class="highlight">"산후조리원은 비싸고, 집에서 도움받는 건 얼마나 드나"</span>를
+    따져 보는 중입니다. 산후관리사가 집으로 오는 이 서비스는 전액 무료가 아니라
+    <span class="highlight">정부가 대부분을 대고 나머지를 본인이 내는 구조</span>입니다.
+    그래서 실제로 궁금한 건 "받을 수 있느냐"보다 <span class="highlight">"며칠을 받고, 내 돈은 얼마나 나가느냐"</span>입니다.
+    그 두 가지가 소득 구간·태아 유형·출산 순위 세 축으로 갈리는데,
+    안내문에는 표로만 적혀 있어 자기 경우를 짚어 내기가 쉽지 않습니다.
+    아래에서 그 표를 읽는 법과 금액이 만들어지는 계산 구조를 순서대로 풀었습니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li><b>소득 요건은 기준중위소득 150% 이하</b> — 2026년 기준 3인 가구 약 803만 9천 원, 4인 가구 약 974만 3천 원(월). 건강보험료 본인부담금으로 판정합니다. 초과 가구도 <b>지자체 예외지원(라형)</b>으로 이용 가능한 지역이 많습니다.</li>
+      <li><b>기간은 세 갈래</b> — 단축형·표준형·연장형 중에서 고릅니다. 단태아 첫째는 5·10·15일, 둘째 이상과 쌍태아는 10·15·20일이 기본이고 삼태아 이상은 더 늘어납니다.</li>
+      <li><b>본인부담금 = 서비스 가격 − 정부지원금</b> — 단태아 첫째 표준형(10일) 기준으로 수급자·차상위(가형)는 약 29만 9천 원, 중위소득 150% 이하(통합형)는 약 46만 2천 원입니다.</li>
+      <li><b>기한이 두 개입니다</b> — 접수는 <b>출산예정일 40일 전 ~ 출산일로부터 60일 이내</b>, 바우처 사용은 <b>출산일로부터 90일 이내</b>입니다.</li>
+    </ul>
+  </div>
+
+  <p style="font-size:13px;color:#888;margin-bottom:22px;">
+    ※ 이 글의 소득 기준·기간·금액은 <b>2026년 산모·신생아 건강관리 지원사업 안내</b>와
+    각 지자체 보건소가 공개한 2026년 안내문을 기준으로 정리한 것입니다.
+    이 사업의 가격표는 <b>해마다 개정</b>되고, 정부지원금과 서비스 가격이 함께 오르내리기 때문에
+    작년 안내문에 적힌 금액과는 차이가 납니다. 검색으로 찾은 표를 볼 때는 연도부터 확인하세요.
+  </p>
+
+  <h2>이 서비스가 대신해 주는 자리</h2>
+  <p>
+    산모·신생아 건강관리 지원사업은 <b>사회서비스 전자바우처</b>로 운영되는 보건복지부 사업입니다.
+    교육을 이수한 <b>산후관리사가 산모의 집으로 방문</b>해 산모의 건강 관리와 신생아 돌보기,
+    산모 식사 준비와 신생아 세탁물 관리 같은 산후 회복 지원을 맡습니다.
+    산후조리원처럼 시설에 들어가는 방식이 아니라 <b>살던 집에서 도움을 받는 방식</b>입니다.
+  </p>
+  <p>
+    제도의 배경에는 두 가지 현실이 깔려 있습니다. 하나는 산후조리원 비용이 지역에 따라
+    2주에 수백만 원대까지 벌어지면서 <b>비용 때문에 산후 회복 기간을 줄이는 일</b>이 흔해졌다는 점입니다.
+    다른 하나는 둘째 이상을 낳은 가정이나 다태아 가정처럼 <b>집안일과 돌봄이 동시에 몰리는 경우</b>가
+    시설 이용으로는 해결되지 않는다는 점입니다. 그래서 이 사업은 출산 순위와 태아 수에 따라
+    지원 기간을 늘려 주는 구조를 갖고 있습니다.
+  </p>
+
+  <h2>누가 대상인가 — 소득 구간이 A·통합·라 세 갈래</h2>
+  <p>
+    이 사업의 안내문이 어렵게 느껴지는 첫 이유는 <b>대상자를 알파벳과 한글이 섞인 유형 기호로 부르기 때문</b>입니다.
+    기호를 풀어 보면 단순합니다. 소득 구간이 셋이고, 그 구간에 따라 정부가 내주는 몫이 달라질 뿐입니다.
+  </p>
+  <table class="info-table">
+    <tr><th style="width:20%">유형</th><th>해당하는 가구</th><th style="width:24%">정부지원 수준</th></tr>
+    <tr>
+      <td><b>가형</b></td>
+      <td>생계·의료·주거·교육급여 <b>기초생활수급자</b>와 <b>차상위계층</b></td>
+      <td>가장 높습니다. 본인부담금이 가장 적습니다.</td>
+    </tr>
+    <tr>
+      <td><b>통합형</b></td>
+      <td><b>기준중위소득 150% 이하</b> 가구 (건강보험료 본인부담금으로 판정)</td>
+      <td>표준 지원. 대부분의 이용 가구가 여기 속합니다.</td>
+    </tr>
+    <tr>
+      <td><b>라형</b></td>
+      <td>기준중위소득 <b>150%를 넘는</b> 가구 — 지자체가 예외적으로 지원하는 경우</td>
+      <td>지자체 재량. 지역에 따라 지원 여부와 금액이 다릅니다.</td>
+    </tr>
+  </table>
+  <p>
+    <b>150% 초과라고 미리 포기하지 않는 편이 좋습니다.</b> 라형은 지자체가 자체 예산으로 운영하는 예외지원인데,
+    출산 장려 정책을 강하게 펴는 지역은 <b>소득과 무관하게 전 산모를 지원</b>하기도 합니다.
+    같은 광역시 안에서도 구·군마다 다르므로, 소득이 넘는다면 <b>주소지 보건소에 한 번은 확인</b>해 볼 값어치가 있습니다.
+  </p>
+
+  <h3>2026년 기준중위소득 150% — 가구원수별</h3>
+  <table class="info-table">
+    <tr><th style="width:22%">가구원 수</th><th>월 소득 기준(150%)</th><th>건강보험료 본인부담금(직장, 참고)</th></tr>
+    <tr><td>2인</td><td class="big-number">629만 9천 원</td><td>약 229,357원</td></tr>
+    <tr><td>3인</td><td class="big-number">803만 9천 원</td><td>약 290,169원</td></tr>
+    <tr><td>4인</td><td class="big-number">974만 3천 원</td><td>약 360,410원</td></tr>
+    <tr><td>5인</td><td class="big-number">1,133만 6천 원</td><td>약 410,439원</td></tr>
+  </table>
+  <p style="font-size:13px;color:#777;">
+    ※ 가구원 수를 셀 때 <b>태아도 가구원에 포함</b>합니다. 쌍태아면 두 명으로 셉니다.
+    부부와 첫 아이가 있는 가정에서 둘째를 임신했다면 4인 가구로 봅니다. 이 한 칸 차이로 구간이 바뀌는 경우가 적지 않습니다.
+    실제 판정은 소득 금액이 아니라 <b>건강보험료 고지액</b>으로 하며, 맞벌이면 부부 보험료를 합산합니다.
+  </p>
+
+  <h2>며칠을 받는가 — 태아 유형과 출산 순위로 갈립니다</h2>
+  <p>
+    기간은 <b>단축형·표준형·연장형</b> 세 가지 중에서 고릅니다. 기본값은 표준형이고,
+    짧게 쓰고 본인부담을 줄이고 싶으면 단축형, 더 오래 도움받고 싶으면 연장형을 선택합니다.
+    <b>선택은 이용자가 합니다.</b> 다만 태아 유형과 출산 순위에 따라 고를 수 있는 일수 자체가 달라집니다.
+  </p>
+  <table class="info-table">
+    <tr><th style="width:34%">구분</th><th>단축형</th><th>표준형</th><th>연장형</th></tr>
+    <tr><td><b>단태아 · 첫째아</b></td><td>5일</td><td><b>10일</b></td><td>15일</td></tr>
+    <tr><td><b>단태아 · 둘째아 이상</b></td><td>10일</td><td><b>15일</b></td><td>20일</td></tr>
+    <tr><td><b>쌍태아</b></td><td>10일</td><td><b>15일</b></td><td>20일</td></tr>
+    <tr><td><b>삼태아 이상 · 중증 장애 산모</b></td><td colspan="3">더 긴 기간이 적용되며 <b>최대 40일</b> 수준까지 늘어납니다. 바우처 유효기간도 100일로 연장됩니다.</td></tr>
+  </table>
+  <p>
+    표를 볼 때 놓치기 쉬운 대목이 <b>"둘째아 이상"이 첫째보다 기본 일수가 길다</b>는 점입니다.
+    첫째 표준형이 10일인데 둘째 표준형은 15일입니다. 위로 돌볼 아이가 있는 상황을 반영한 설계입니다.
+    쌍태아는 <b>산후관리사 2명이 투입되는 방식</b>을 선택할 수 있는 지역도 있는데,
+    이 경우 같은 일수라도 가격이 달라지므로 계약 전에 제공기관에 확인해야 합니다.
+  </p>
+
+  <h2>본인부담금은 어떻게 계산되는가</h2>
+  <div class="formula">
+    <b>본인부담금 = 서비스 가격 − 정부지원금</b><br>
+    · <b>서비스 가격</b>은 태아 유형과 이용 일수로 정해집니다. 이용자가 깎을 수 없는 고시 가격입니다.<br>
+    · <b>정부지원금</b>은 소득 유형(가형·통합형·라형)과 출산 순위, 이용 일수에 따라 달라집니다.<br>
+    · 따라서 <b>같은 10일을 받아도 소득 구간에 따라 내는 돈이 달라집니다.</b> 서비스 내용이 달라지는 것은 아닙니다.
+  </div>
+  <p>
+    실제 숫자로 보면 구조가 분명해집니다. 아래는 <b>단태아 첫째아</b>를 기준으로 한 2026년 예시입니다.
+  </p>
+  <table class="info-table">
+    <tr><th style="width:26%">구분</th><th>정부지원금</th><th>본인부담금</th></tr>
+    <tr><td><b>가형 · 단축형(5일)</b></td><td>659,000원</td><td class="big-number">70,000원</td></tr>
+    <tr><td><b>가형 · 표준형(10일)</b></td><td>1,165,000원</td><td class="big-number">299,000원</td></tr>
+    <tr><td><b>가형 · 연장형(15일)</b></td><td>1,525,000원</td><td class="big-number">671,000원</td></tr>
+    <tr><td><b>통합형 · 표준형(10일)</b></td><td>—</td><td class="big-number">462,000원</td></tr>
+  </table>
+  <p>
+    표에서 읽어야 할 것은 개별 금액보다 <b>기울기</b>입니다. 5일에서 10일로 늘리면 본인부담이 약 22만 9천 원 늘지만,
+    10일에서 15일로 늘리면 약 37만 2천 원이 더 붙습니다. <b>기간을 늘릴수록 추가 일수당 본인부담이 가팔라집니다.</b>
+    정부지원금에 상한이 있기 때문입니다. 예산이 빠듯하다면 연장형보다 표준형이 비용 대비 효율이 좋고,
+    반대로 도움이 절실하다면 연장형의 추가 비용을 미리 계산해 두는 편이 낫습니다.
+  </p>
+
+  <div class="svg-wrap">
+    <div class="svg-title">단태아 첫째아 · 가형 기준 — 기간을 늘릴수록 본인부담이 가팔라집니다</div>
+    <svg viewBox="0 0 640 220" width="100%" height="220" role="img" aria-label="단축형 5일 본인부담 7만원, 표준형 10일 29만9천원, 연장형 15일 67만1천원 막대 비교">
+      <line x1="90" y1="185" x2="620" y2="185" stroke="#ddd" stroke-width="2"/>
+
+      <text x="80" y="52" text-anchor="end" font-size="13" font-weight="700" fill="#555">단축형 5일</text>
+      <rect x="90" y="36" width="52" height="24" rx="4" fill="#f8bbd0"/>
+      <text x="152" y="53" font-size="13" font-weight="900" fill="#880e4f">70,000원</text>
+
+      <text x="80" y="102" text-anchor="end" font-size="13" font-weight="700" fill="#555">표준형 10일</text>
+      <rect x="90" y="86" width="222" height="24" rx="4" fill="#f06292"/>
+      <text x="322" y="103" font-size="13" font-weight="900" fill="#880e4f">299,000원</text>
+
+      <text x="80" y="152" text-anchor="end" font-size="13" font-weight="700" fill="#555">연장형 15일</text>
+      <rect x="90" y="136" width="498" height="24" rx="4" fill="#ad1457"/>
+      <text x="90" y="153" dx="8" font-size="13" font-weight="900" fill="#fff">671,000원</text>
+
+      <text x="90" y="207" font-size="12" fill="#888">5일 → 10일 : +229,000원</text>
+      <text x="330" y="207" font-size="12" fill="#c62828" font-weight="700">10일 → 15일 : +372,000원</text>
+    </svg>
+  </div>
+
+  <h2>이용 절차</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text"><b>주소지 보건소를 방문</b>하거나 <b>복지로(bokjiro.go.kr)에서 온라인으로 접수</b>합니다. 임신 중이어도 출산예정일 40일 전부터 접수할 수 있습니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text"><b>소득 유형 판정</b>을 받습니다. 건강보험료 고지액으로 가형·통합형·라형 중 어디에 속하는지 결정됩니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text"><b>바우처가 발급</b>됩니다. 국민행복카드에 이용 권한이 실리는 방식이며, 카드가 없으면 카드사에서 먼저 발급받아야 합니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text"><b>제공기관을 골라 계약</b>합니다. 기관은 이용자가 직접 선택합니다. 사회서비스 전자바우처 누리집에서 지역별 등록 기관 목록과 평가 결과를 볼 수 있습니다.</div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-text">출산 후 <b>산후관리사가 가정을 방문</b>해 서비스가 시작됩니다. 이용 시작·종료는 카드 결제로 기록됩니다.</div></div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>⏰ 기한이 두 개입니다 — 접수 기한과 사용 기한</h3>
+    <p><b>① 접수 기한</b> · 출산예정일 <b>40일 전</b>부터 출산일로부터 <b>60일 이내</b>까지입니다. 미숙아·선천성이상아로 입원한 경우에는 <b>신생아 퇴원일로부터 30일 이내</b>, 유산·사산의 경우 <b>확인일로부터 30일 이내</b>입니다.</p>
+    <p><b>② 바우처 사용 기한</b> · 출산일로부터 <b>90일 이내</b>에 서비스를 모두 마쳐야 합니다. 삼태아 이상 연장형은 100일입니다. <b>기한을 넘기면 남은 일수는 소멸</b>합니다.</p>
+    <p>접수만 해 두고 제공기관 계약을 미루다 90일에 쫓기는 사례가 흔합니다. <b>출산 전에 기관을 미리 알아보고 예약</b>해 두는 편이 안전합니다.</p>
+  </div>
+
+  <div class="checklist">
+    <h2>✅ 우리 집은 얼마나 받을까 — 자가 확인</h2>
+    <div class="check-item"><span class="chk">✓</span><span>태아를 포함한 가구원 수로 셌을 때, 건강보험료가 기준중위소득 150% 이하 구간에 들어가나요?</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>기초생활수급자 또는 차상위계층에 해당하나요? (해당하면 가형으로 본인부담이 가장 적습니다)</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>첫째아인가요, 둘째아 이상인가요? 둘째 이상이면 기본 일수가 더 깁니다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>출산예정일이 40일 이내로 다가왔나요? 그렇다면 지금 접수할 수 있습니다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>국민행복카드를 갖고 계신가요? 없다면 카드 발급부터 진행해야 바우처를 받을 수 있습니다.</span></div>
+  </div>
+
+  <div class="caution">
+    <div class="caution-item">① <b>소득이 넘어도 보건소에 물어보세요.</b> 라형 예외지원은 지자체마다 달라, 같은 광역시 안에서도 구·군에 따라 지원 여부가 갈립니다. 전 산모를 지원하는 지역도 있습니다.</div>
+    <div class="caution-item">② <b>가구원 수에 태아를 포함합니다.</b> 임신 중이라는 이유로 태아를 빼고 계산해 "우리는 초과"라고 판단하는 실수가 잦습니다. 쌍태아면 두 명입니다.</div>
+    <div class="caution-item">③ <b>90일 사용 기한이 진짜 마감입니다.</b> 접수 기한과 사용 기한은 다릅니다. 접수를 마쳤어도 출산일로부터 90일 안에 이용을 끝내지 않으면 남은 일수가 사라집니다.</div>
+    <div class="caution-item">④ <b>제공기관은 이용자가 고릅니다.</b> 보건소가 지정해 주지 않습니다. 기관별로 산후관리사 경력과 평가 등급이 다르니, 사회서비스 전자바우처 누리집의 제공기관 평가 결과를 확인하고 계약하세요.</div>
+    <div class="caution-item">⑤ <b>가격표는 매년 바뀝니다.</b> 본문의 금액은 2026년 기준 예시이며, 지역·태아 유형·제공기관 계약 조건에 따라 실제 청구액은 달라질 수 있습니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <div class="contact-row"><span class="contact-label">주관 기관</span> · 보건복지부 (지방자치단체 보건소 시행)</div>
+    <div class="contact-row"><span class="contact-label">접수처</span> · 주소지 관할 보건소 또는 복지로 bokjiro.go.kr</div>
+    <div class="contact-row"><span class="contact-label">보건복지상담센터</span> · ☎ 129</div>
+    <div class="contact-row"><span class="contact-label">사회서비스 전자바우처</span> · socialservice.or.kr (제공기관 검색·평가 결과 조회)</div>
+    <div class="contact-row"><span class="contact-label">국민행복카드</span> · 카드사 콜센터 또는 은행 창구에서 발급</div>
+  </div>
+
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"시설 중심의 산후조리 문화가 만든 비용 장벽을 가정 방문으로 우회한 설계다. 살던 집에서 회복하면서 지원을 받을 수 있다는 점에서 선택지를 실질적으로 넓혔다."</p>
+          <p class="author">— 모자보건 정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"둘째아 이상과 다태아 가정에 기간을 더 주는 구조는 돌봄 부담이 어디에 몰리는지를 정확히 짚은 것이다. 일률 지원보다 이런 차등이 현장에서 체감이 크다."</p>
+          <p class="author">— 지역 보건소 모자보건 담당자</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"기간을 늘릴수록 본인부담이 가팔라지는 구조여서, 정작 도움이 가장 필요한 가정이 짧은 유형을 고르게 된다. 지원 상한이 선택을 왜곡하는 셈이다."</p>
+          <p class="author">— 사회복지학과 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"라형 예외지원을 지자체 재량에 맡기면서 사는 지역에 따라 지원 격차가 벌어졌다. 같은 소득의 산모가 옆 동네로 이사했다고 결과가 달라지는 것은 제도로서 불안정하다."</p>
+          <p class="author">— 여성건강 시민단체 활동가</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #산모신생아건강관리 #산후관리사 #사회서비스전자바우처 #국민행복카드 #기준중위소득150 #본인부담금 #표준형연장형 #다태아지원 #보건소접수 #보건복지부
+  </div>
+
+  <div class="disclaimer">
+    이 기사는 공개된 정보를 바탕으로 작성되었습니다. 본문의 소득 기준·서비스 기간·정부지원금과 본인부담금은
+    2026년 산모·신생아 건강관리 지원사업 안내 및 지자체 보건소 공개 자료를 기준으로 하며,
+    사업안내 개정과 지역별 예외지원 여부에 따라 달라질 수 있습니다.
+    실제 지원 유형과 청구 금액은 주소지 보건소 판정과 제공기관 계약으로 확정되므로,
+    정확한 지원 여부는 담당 기관에 확인하세요.
+  </div>
+
+  <div class="written">작성일 2026-08-21 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
