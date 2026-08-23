@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>차상위계층 자격 조건 — 중위소득 50% 판정과 기초수급자와의 차이</title>
+<meta name="description" content="차상위계층은 소득인정액이 기준 중위소득 50% 이하이면서 기초생활보장 수급자가 아닌 가구를 말합니다. 2026년 기준 중위소득 50%는 1인 가구 1,282,119원, 4인 가구 3,247,369원입니다. 수급자는 생계급여 32%·의료급여 40%·주거급여 48%·교육급여 50% 선을 기준으로 현금 급여를 받지만, 차상위계층은 현금 급여 대신 의료비 경감·문화누리카드·통신비 감면 같은 개별 사업으로 지원됩니다. 판정 기준은 월급이 아니라 재산을 소득으로 환산해 더한 소득인정액이며, 기본재산액은 서울·경기 9,900만 원, 광역시·세종·창원 7,800만 원, 그 외 5,300만 원이 공제됩니다.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    background: #f8f9fa;
+    color: #222;
+    line-height: 1.7;
+  }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge {
+    display: inline-block;
+    background: #00695c;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.35;
+    color: #1a1a1a;
+    margin-bottom: 18px;
+    word-break: keep-all;
+  }
+
+  .hook {
+    border-left: 5px solid #00695c;
+    padding: 14px 18px;
+    background: #e0f2f1;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 22px;
+    font-size: 15px;
+  }
+  .hook .highlight { color: #004d40; font-weight: 900; }
+
+  .summary-box {
+    background: #e8f5e9;
+    border: 2px solid #2e7d32;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 26px;
+  }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+
+  h2 { font-size: 19px; font-weight: 900; color: #004d40; margin: 28px 0 12px; border-bottom: 2px solid #80cbc4; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #00695c; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #e0f2f1; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #004d40; }
+
+  .formula {
+    background: #f1f8f7;
+    border: 1px solid #80cbc4;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 20px;
+    font-size: 14.5px;
+    line-height: 1.9;
+    word-break: keep-all;
+  }
+  .formula b { color: #004d40; }
+
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #e0f2f1; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #00695c; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+
+  .deadline-box {
+    border: 2px dashed #f57c00;
+    background: #fff8e1;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 22px;
+  }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+
+  .checklist { background: #e0f2f1; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #80cbc4; color: #004d40; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #004d40; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+
+  .caution { background: #e0f2f1; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+
+  .contact-box { background: #e0f2f1; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #004d40; border-color: #80cbc4; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  .hashtags { font-size: 13px; color: #004d40; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-08-23-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="차상위계층 자격 조건 — 중위소득 50% 판정과 기초수급자와의 차이">
+<meta property="og:description" content="차상위계층은 소득인정액이 기준 중위소득 50% 이하이면서 기초생활보장 수급자가 아닌 가구를 말합니다. 2026년 기준 중위소득 50%는 1인 가구 1,282,119원, 4인 가구 3,247,369원입니다. 수급자는 생계급여 32%·의료급여 40%·주거급여 48%·교육급여 50% 선을 기준으로 현금 급여를 받지만, 차상위계층은 현금 급여 대신 의료비 경감·문화누리카드·통신비 감면 같은 개별 사업으로 지원됩니다. 판정 기준은 월급이 아니라 재산을 소득으로 환산해 더한 소득인정액이며, 기본재산액은 서울·경기 9,900만 원, 광역시·세종">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-08-23-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-08-23T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-08-23T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-08-23-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-08-23-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "차상위계층 자격 조건 — 중위소득 50% 판정과 기초수급자와의 차이", "description": "차상위계층은 소득인정액이 기준 중위소득 50% 이하이면서 기초생활보장 수급자가 아닌 가구를 말합니다. 2026년 기준 중위소득 50%는 1인 가구 1,282,119원, 4인 가구 3,247,369원입니다. 수급자는 생계급여 32%·의료급여 40%·주거급여 48%·교육급여 50% 선을 기준으로 현금 급여를 받지만, 차상위계층은 현금 급여 대신 의료비 경감·문화누리카드·통신비 감면 같은 개별 사업으로 지원됩니다. 판정 기준은 월급이 아니라 재산을 소득으로 환산해 더한 소득인정액이며, 기본재산액은 서울·경기 9,900만 원, 광역시·세종", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-08-23", "dateModified": "2026-08-23", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 기초생활보장</div>
+  <div class="section-badge">차상위계층</div>
+
+  <h1>차상위계층 자격 조건 — 중위소득 50% 판정과 기초수급자와의 차이</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대개 어떤 지원 사업의 안내문에서
+    <span class="highlight">"기초생활수급자 및 차상위계층"</span>이라는 한 줄을 보고
+    <span class="highlight">"나는 수급자는 아닌데, 그럼 차상위에는 들어가나"</span>를 확인하려는 중입니다.
+    그런데 차상위계층은 따로 신청해서 받는 급여의 이름이 아니라
+    <span class="highlight">소득인정액이 일정 선 아래인 가구를 가리키는 자격 구간</span>이라,
+    안내문마다 설명이 조금씩 다르게 적혀 있어 헷갈립니다.
+    아래에서 판정 기준선이 정확히 얼마인지, 그 숫자가 월급과 어떻게 다른지,
+    기초생활수급자와는 무엇이 갈리는지를 2026년 기준으로 순서대로 정리했습니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li><b>기준선은 기준 중위소득 50%</b> — 2026년 기준으로 <b>1인 가구 1,282,119원</b>, <b>4인 가구 3,247,369원</b>입니다. 소득인정액이 이 아래면서 기초생활보장 수급자가 아닌 가구가 차상위계층입니다.</li>
+      <li><b>비교 대상은 월급이 아니라 소득인정액</b> — 번 돈에서 근로소득공제를 빼고, 집·예금·자동차를 월 소득으로 환산해 더한 값입니다. 소득이 0원이어도 재산 때문에 탈락할 수 있습니다.</li>
+      <li><b>수급자와의 차이는 "현금이냐 감면이냐"</b> — 수급자는 생계·의료·주거·교육급여를 현금과 급여로 받고, 차상위계층은 의료비 경감·요금 감면·바우처 같은 개별 사업으로 지원받습니다.</li>
+      <li><b>차상위는 하나가 아니라 다섯 갈래</b> — 본인부담경감, 자활, 장애수당, 한부모가족, 그리고 그 밖을 묶는 차상위계층 확인 사업으로 나뉘며 창구와 담당 부서가 다릅니다.</li>
+    </ul>
+  </div>
+
+  <p style="font-size:13px;color:#888;margin-bottom:22px;">
+    ※ 이 글의 금액은 <b>2026년 기준 중위소득</b>을 적용한 값입니다. 기준 중위소득은 매년 중앙생활보장위원회가
+    다시 정해 <b>1월 1일부터 새 금액이 적용</b>되므로, 검색으로 찾은 금액표를 볼 때는 연도부터 확인하세요.
+    2027년에 적용될 기준은 이미 확정돼 아래 본문에 함께 적어 두었습니다.
+  </p>
+
+  <h2>차상위계층은 제도 이름이 아니라 소득 구간이다</h2>
+  <p>
+    가장 먼저 풀어야 할 오해가 이것입니다. 차상위계층은 <b>「국민기초생활 보장법」이 정의한 하나의 계층 구간</b>이지,
+    신청해서 매달 돈을 받는 개별 급여의 이름이 아닙니다. 법은 이를
+    <b>"수급권자에 해당하지 않는 계층으로서 소득인정액이 기준 중위소득의 100분의 50 이하인 사람"</b>으로 규정합니다.
+  </p>
+  <p>
+    이 정의에는 조건이 두 개 들어 있습니다. 하나는 <b>소득인정액이 중위소득 50% 이하일 것</b>,
+    다른 하나는 <b>기초생활보장 수급자가 아닐 것</b>입니다. 즉 차상위계층은 이름 그대로
+    <b>수급자 바로 위 칸</b>입니다. 생활은 어렵지만 급여 선정 기준선은 넘어서 수급자로 잡히지 않는,
+    제도의 문턱과 문턱 사이에 놓인 구간을 가리킵니다.
+  </p>
+  <p>
+    그래서 "차상위계층에 신청한다"는 표현은 엄밀히는 성립하지 않습니다.
+    실제로는 <b>차상위 자격을 전제로 하는 개별 사업에 신청</b>하거나,
+    다른 기관에 제출할 목적으로 <b>차상위계층 확인서를 발급</b>받는 것입니다.
+    이 구분을 알아 두면 창구에서 오가는 말이 훨씬 명확해집니다.
+  </p>
+
+  <h2>2026년 기준선 — 가구원 수별 중위소득 50%</h2>
+  <p>
+    판정에 쓰이는 숫자는 매년 8월 무렵 중앙생활보장위원회가 정하는 <b>기준 중위소득</b>입니다.
+    2026년 기준 중위소득은 전년 대비 <b>6.51%</b> 올랐고, 그 절반이 차상위 판정선이 됩니다.
+  </p>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>가구원 수</th><th>기준 중위소득 100%</th><th>차상위 기준(50%)</th></tr>
+    <tr><td>1인</td><td>2,564,238원</td><td><b>1,282,119원</b></td></tr>
+    <tr><td>2인</td><td>4,199,292원</td><td><b>2,099,646원</b></td></tr>
+    <tr><td>3인</td><td>5,359,036원</td><td><b>2,679,518원</b></td></tr>
+    <tr><td>4인</td><td>6,494,738원</td><td><b>3,247,369원</b></td></tr>
+    <tr><td>5인</td><td>7,556,719원</td><td><b>3,778,359원</b></td></tr>
+    <tr><td>6인</td><td>8,555,952원</td><td><b>4,277,976원</b></td></tr>
+  </table>
+  </div>
+  <p>
+    7인 이상 가구는 6인 기준에서 한 사람 늘어날 때마다 정해진 금액이 더해집니다.
+    가구원 수는 <b>주민등록상 세대가 아니라 생계와 주거를 함께하는 가구</b>를 기준으로 판단하므로,
+    같은 집에 살아도 별도 가구로 볼 수 있고 따로 살아도 한 가구로 묶일 수 있습니다.
+    이 판단은 창구에서 실제 생활 형태를 확인해 정합니다.
+  </p>
+
+  <h2>기초생활수급자와 무엇이 갈리나</h2>
+  <p>
+    기초생활보장은 급여마다 별도의 선정 기준을 둡니다.
+    소득인정액이 어느 선 아래로 내려가느냐에 따라 받을 수 있는 급여의 종류가 달라지는 구조입니다.
+  </p>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>구분</th><th>중위소득 대비</th><th>4인 가구 기준</th><th>지원 형태</th></tr>
+    <tr><td>생계급여</td><td>32% 이하</td><td>2,078,316원</td><td>현금 — 기준액에서 소득인정액을 뺀 차액</td></tr>
+    <tr><td>의료급여</td><td>40% 이하</td><td>2,597,895원</td><td>진료비 본인부담 대폭 경감</td></tr>
+    <tr><td>주거급여</td><td>48% 이하</td><td>3,117,474원</td><td>임차급여 또는 자가 수선유지급여</td></tr>
+    <tr><td>교육급여</td><td>50% 이하</td><td>3,247,369원</td><td>교육활동지원비</td></tr>
+    <tr><td><b>차상위계층</b></td><td><b>50% 이하</b></td><td><b>3,247,369원</b></td><td><b>개별 사업별 감면·바우처</b></td></tr>
+  </table>
+  </div>
+  <p>
+    표를 보면 교육급여와 차상위의 기준선이 <b>둘 다 50%</b>로 같습니다.
+    그래서 실제로는 이 구간에 걸친 많은 가구가 <b>교육급여 수급자이면서 동시에 차상위 사업의 대상</b>이 되기도 합니다.
+    다만 급여를 하나라도 받으면 법상 수급자로 분류되므로, 순수한 의미의 차상위계층은
+    <b>급여 선정 기준은 넘었지만 50% 선 안에 있는 가구</b>가 중심이 됩니다.
+  </p>
+  <p>
+    성격의 차이도 분명합니다. 기초생활보장은 <b>모자란 만큼 채워 주는 보충급여</b>가 원리라
+    현금이 직접 지급됩니다. 반면 차상위 지원은 <b>이미 나가고 있는 지출을 줄여 주는 방식</b>이 대부분입니다.
+    병원비를 깎고, 통신요금을 감면하고, 쌀값을 낮추고, 문화·에너지 비용을 바우처로 보전합니다.
+    체감하는 액수는 작아 보여도 항목을 다 모으면 연간 수십만 원 단위가 됩니다.
+  </p>
+
+  <div class="svg-wrap">
+    <div class="svg-title">4인 가구 기준 — 소득인정액에 따라 달라지는 구간 (2026년)</div>
+    <svg viewBox="0 0 660 250" width="100%" role="img" aria-label="4인 가구 소득인정액 구간별 지원 범위 비교">
+      <rect x="30" y="30" width="360" height="26" fill="#00695c" rx="4"/>
+      <text x="36" y="48" font-size="12" fill="#fff" font-weight="700">생계급여 32% — 2,078,316원</text>
+      <text x="400" y="48" font-size="12" fill="#004d40" font-weight="700">현금 급여</text>
+
+      <rect x="30" y="72" width="450" height="26" fill="#00897b" rx="4"/>
+      <text x="36" y="90" font-size="12" fill="#fff" font-weight="700">의료급여 40% — 2,597,895원</text>
+      <text x="490" y="90" font-size="12" fill="#004d40" font-weight="700">진료비 경감</text>
+
+      <rect x="30" y="114" width="540" height="26" fill="#26a69a" rx="4"/>
+      <text x="36" y="132" font-size="12" fill="#fff" font-weight="700">주거급여 48% — 3,117,474원</text>
+      <text x="578" y="132" font-size="12" fill="#004d40" font-weight="700">임차급여</text>
+
+      <rect x="30" y="156" width="565" height="26" fill="#4db6ac" rx="4"/>
+      <text x="36" y="174" font-size="12" fill="#fff" font-weight="700">교육급여 50% — 3,247,369원</text>
+      <text x="602" y="174" font-size="12" fill="#004d40" font-weight="700">교육비</text>
+
+      <rect x="30" y="198" width="565" height="26" fill="#fff8e1" stroke="#f57c00" stroke-width="2" stroke-dasharray="5 3" rx="4"/>
+      <text x="36" y="216" font-size="12" fill="#e65100" font-weight="700">차상위계층 50% — 3,247,369원 (수급자 아닌 가구)</text>
+      <text x="602" y="216" font-size="12" fill="#e65100" font-weight="700">감면</text>
+
+      <line x1="30" y1="18" x2="620" y2="18" stroke="#bbb" stroke-width="1"/>
+      <text x="30" y="14" font-size="11" fill="#888">0원</text>
+      <text x="560" y="14" font-size="11" fill="#888">소득인정액 →</text>
+    </svg>
+  </div>
+
+  <h2>기준선과 비교하는 숫자는 월급이 아니다</h2>
+  <p>
+    가장 많이 틀리는 지점입니다. 위 표의 금액과 비교하는 것은 통장에 찍히는 월급이 아니라
+    <b>소득인정액</b>입니다. 계산은 두 덩어리로 나뉩니다.
+  </p>
+  <div class="formula">
+    <b>소득인정액 = 소득평가액 + 재산의 소득환산액</b><br>
+    ├ 소득평가액 = 실제소득 − 가구특성별 지출비용 − 근로소득공제 등<br>
+    └ 재산의 소득환산액 = (재산가액 − 기본재산액 − 부채) × 재산 종류별 소득환산율
+  </div>
+  <p>
+    근로소득은 전액을 세지 않습니다. 일반적으로 <b>30%를 공제</b>하고 나머지만 반영하며,
+    65세 이상·등록장애인은 20만 원을, 34세 이하 청년은 60만 원을 먼저 뺀 뒤 나머지의 30%를 추가로 공제합니다.
+    월 200만 원을 버는 일반 근로자라면 소득평가액은 140만 원으로 잡힙니다.
+  </p>
+  <p>
+    재산은 가진 금액을 그대로 더하지 않고 <b>매달 얼마의 소득을 만든다고 볼 것인가</b>로 환산합니다.
+    먼저 지역별 <b>기본재산액</b>을 공제한 뒤 남은 금액에 종류별 환산율을 곱합니다.
+  </p>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>구분</th><th>내용</th><th>적용</th></tr>
+    <tr><td>기본재산액 공제</td><td>서울·경기</td><td>9,900만 원</td></tr>
+    <tr><td>기본재산액 공제</td><td>광역시·세종·창원</td><td>7,800만 원</td></tr>
+    <tr><td>기본재산액 공제</td><td>그 밖의 지역</td><td>5,300만 원</td></tr>
+    <tr><td>월 소득환산율</td><td>주거용 재산 (거주 중인 집·전세보증금)</td><td>1.04%</td></tr>
+    <tr><td>월 소득환산율</td><td>일반 재산 (토지·건물·임차보증금 등)</td><td>4.17%</td></tr>
+    <tr><td>월 소득환산율</td><td>금융 재산 (예금·주식·보험)</td><td>6.26%</td></tr>
+    <tr><td>월 소득환산율</td><td>자동차 (일부 예외 차량 제외)</td><td>100%</td></tr>
+  </table>
+  </div>
+  <p>
+    자동차 항목이 결정적인 경우가 많습니다. 환산율이 <b>100%</b>라는 것은
+    차량가액 전액이 곧바로 월 소득으로 잡힌다는 뜻이라, 차 한 대 때문에 기준선을 넘겨 탈락하는 사례가 흔합니다.
+    다만 생업용 차량, 장애인 사용 차량, 일정 배기량 이하의 오래된 차량 등은 완화 규정이 있으므로
+    <b>본인 차가 어느 쪽인지는 반드시 창구에서 확인</b>해야 합니다.
+  </p>
+
+  <h2>차상위는 다섯 갈래로 나뉜다</h2>
+  <p>
+    같은 차상위라도 어느 사업에 해당하느냐에 따라 담당 부서와 필요한 서류가 다릅니다.
+    안내문에 적힌 "차상위계층"이 아래 어느 칸을 뜻하는지 먼저 확인하는 편이 빠릅니다.
+  </p>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>유형</th><th>대상</th><th>핵심 내용</th></tr>
+    <tr><td>차상위 본인부담경감</td><td>희귀·중증난치질환자, 만성질환자, 18세 미만</td><td>건강보험 본인부담을 크게 낮춤. 1종은 입원·외래 0원, 2종은 입원 14% 수준</td></tr>
+    <tr><td>차상위 자활</td><td>근로능력이 있는 차상위 가구원</td><td>자활근로사업 참여와 자활급여</td></tr>
+    <tr><td>차상위 장애(수당)</td><td>차상위 등록장애인</td><td>장애수당·장애아동수당 지급</td></tr>
+    <tr><td>차상위 한부모가족</td><td>중위소득 기준 이하 한부모·조손 가구</td><td>아동양육비 등 한부모가족 지원</td></tr>
+    <tr><td>차상위계층 확인</td><td>위 네 갈래에 해당하지 않는 나머지</td><td>차상위계층 확인서 발급, 각종 감면 사업 연계</td></tr>
+  </table>
+  </div>
+  <p>
+    마지막 칸이 실무에서 가장 많이 쓰입니다. 특정 질환이나 장애, 한부모 사유가 없어도
+    소득인정액 요건만 충족하면 <b>차상위계층 확인 사업</b>으로 자격을 인정받아
+    각종 감면 제도의 대상이 될 수 있습니다.
+  </p>
+
+  <h2>자격이 인정되면 무엇이 달라지나</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>항목</th><th>내용</th></tr>
+    <tr><td>건강보험 본인부담</td><td>본인부담경감 대상이면 입원·외래 부담률이 크게 내려가고 약국 부담도 정액으로 처리</td></tr>
+    <tr><td>문화누리카드</td><td>2026년 1인당 기본 15만 원 + 생애주기별 추가 1만 원. 발급 11월 30일까지, 사용 12월 31일까지</td></tr>
+    <tr><td>정부양곡 할인</td><td>시중가보다 크게 낮은 가격으로 쌀 구입</td></tr>
+    <tr><td>통신요금 감면</td><td>이동전화 기본료·통화료 감면 (통신사 신청 또는 복지로)</td></tr>
+    <tr><td>에너지바우처</td><td>여름·겨울 냉난방 요금 지원 (별도 소득·세대원 요건 있음)</td></tr>
+    <tr><td>교육 지원</td><td>교육급여 대상 시 초·중·고 교육활동지원비, 국가장학금 우선 구간</td></tr>
+    <tr><td>일자리·자산형성</td><td>국민취업지원제도, 자활사업, 청년 대상 자산형성 지원 사업의 우선 대상</td></tr>
+  </table>
+  </div>
+  <p>
+    각 사업은 <b>담당 부처와 신청 창구가 제각각</b>입니다. 차상위 자격이 인정됐다고 해서
+    모든 혜택이 자동으로 따라붙지는 않습니다. 통신요금 감면은 통신사에, 문화누리카드는 주민센터나 온라인에,
+    에너지바우처는 별도 신청 기간에 각각 접수해야 반영됩니다.
+  </p>
+
+  <h2>확인과 발급은 어떤 순서로 진행되나</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text"><b>복지로 모의계산으로 대략을 확인합니다.</b> 소득과 재산을 입력하면 소득인정액이 자동으로 계산돼 기준선과 비교됩니다. 어디까지나 참고용이며 확정 판정은 아닙니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text"><b>주소지 읍·면·동 행정복지센터에 접수합니다.</b> 신분증과 통장 사본, 금융정보 등 제공 동의서가 기본이고 임대차계약서·재직증명서 등은 상황에 따라 추가됩니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text"><b>소득·재산 조사가 진행됩니다.</b> 사회보장정보시스템으로 금융·부동산·자동차 자료를 확인하며 통상 30일 안팎이 걸립니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text"><b>결과를 통보받고 개별 사업에 연계합니다.</b> 자격이 인정되면 해당 유형에 맞는 지원 사업으로 안내됩니다.</div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-text"><b>필요할 때 확인서를 발급받습니다.</b> 정부24나 복지로에서 온라인 발급이 가능하며, 발급 가능한 유형이 정해져 있어 해당하지 않으면 행정복지센터에서 별도 확인이 필요합니다.</div></div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>⏰ 기간에 관해 알아 둘 것</h3>
+    <p>차상위계층 확인은 <b>정해진 접수 기간이 없는 상시 처리</b>입니다. 다만 조사에 한 달가량 걸리므로,
+      자격을 전제로 하는 사업의 신청 마감이 잡혀 있다면 그만큼 앞당겨 접수해야 합니다.</p>
+    <p><b>2027년 1월 1일부터 기준선이 오릅니다.</b> 2027년 기준 중위소득은 6.70% 인상이 확정돼
+      1인 가구 2,736,042원, 4인 가구 6,929,885원이 됩니다. 50% 선으로는 1인 1,368,021원, 4인 3,464,942원입니다.
+      올해 기준선을 근소하게 넘어 탈락했다면 <b>내년에 다시 판정받아 볼 여지</b>가 있습니다.</p>
+    <p>문화누리카드처럼 <b>연 단위로 기간이 끊기는 사업</b>은 별도 마감이 있습니다. 2026년분은 발급 11월 30일, 사용 12월 31일까지입니다.</p>
+  </div>
+
+  <div class="checklist">
+    <h2>✅ 내 가구가 해당하는지 점검하기</h2>
+    <div class="check-item"><span class="chk">✓</span><span>우리 가구원 수를 기준으로 표의 50% 금액을 확인했다</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>월급이 아니라 근로소득공제를 뺀 소득평가액으로 계산했다</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>살고 있는 집·전세보증금·예금·자동차를 환산해 더해 보았다</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>기초생활보장 급여를 받고 있지 않다 (받고 있다면 수급자로 분류)</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>다섯 갈래 중 어느 유형에 해당하는지 짐작이 선다</span></div>
+  </div>
+
+  <div class="caution">
+    <div class="caution-item">① <b>소득이 없어도 탈락할 수 있습니다.</b> 재산의 소득환산액이 기준선을 넘기면 실제 소득이 0원이어도 대상이 되지 않습니다. 특히 자동차는 환산율이 100%라 영향이 큽니다.</div>
+    <div class="caution-item">② <b>부양의무자 기준이 완전히 사라진 것은 아닙니다.</b> 생계급여와 의료급여 등 일부 급여에는 여전히 부양의무자 관련 기준이 남아 있어, 사업마다 적용 여부가 다릅니다.</div>
+    <div class="caution-item">③ <b>확인서가 모든 유형에 발급되지는 않습니다.</b> 온라인 발급은 발급 가능 유형으로 제한돼 있어, 조회되지 않는다고 자격이 없는 것은 아닙니다. 이 경우 행정복지센터에서 확인해야 합니다.</div>
+    <div class="caution-item">④ <b>자격은 매년 다시 확인됩니다.</b> 소득이나 재산이 바뀌면 자격이 조정될 수 있고, 변동 사항을 알리지 않아 과다 지급이 발생하면 환수 대상이 됩니다.</div>
+    <div class="caution-item">⑤ <b>지자체 자체 사업은 기준이 다를 수 있습니다.</b> 시·군·구가 조례로 운영하는 사업은 중위소득 50%가 아닌 별도 기준을 쓰기도 하므로 개별 확인이 필요합니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <div class="contact-row"><span class="contact-label">주관 기관</span> · 보건복지부 (시·군·구 및 읍면동 시행)</div>
+    <div class="contact-row"><span class="contact-label">보건복지상담센터</span> · ☎ 129</div>
+    <div class="contact-row"><span class="contact-label">복지로</span> · bokjiro.go.kr (모의계산·온라인 접수·확인서 발급)</div>
+    <div class="contact-row"><span class="contact-label">정부24</span> · gov.kr (차상위계층 확인서 발급)</div>
+    <div class="contact-row"><span class="contact-label">방문 접수</span> · 주소지 읍·면·동 행정복지센터</div>
+  </div>
+
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"차상위 구간을 별도로 두는 설계는 급여 기준선 바로 위에서 발생하는 절벽 효과를 완화한다. 수급 탈락이 곧 지원의 전면 중단으로 이어지지 않게 하는 완충 장치다."</p>
+          <p class="author">— 사회보장 제도 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"기준 중위소득이 2년 연속 6% 넘게 오르면서 차상위 기준선도 함께 상향됐다. 물가와 임금 상승을 반영해 대상 범위가 실질적으로 넓어진 점은 평가할 만하다."</p>
+          <p class="author">— 복지재정 연구자</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"차상위 지원이 다섯 갈래로 흩어져 있고 창구도 제각각이라, 자격이 있어도 무엇을 받을 수 있는지 당사자가 알기 어렵다. 신청주의의 한계가 가장 뚜렷하게 드러나는 영역이다."</p>
+          <p class="author">— 사회복지 현장 활동가</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"재산의 소득환산 방식이 현실과 괴리돼 있다는 지적이 오래됐다. 거주 목적의 주택이나 생업용 차량까지 소득으로 환산되면서 실제 생활 형편과 판정 결과가 어긋나는 사례가 반복된다."</p>
+          <p class="author">— 빈곤정책 연구자</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #차상위계층 #기준중위소득50퍼센트 #소득인정액 #차상위계층확인서 #차상위본인부담경감 #기초생활보장 #재산소득환산율 #기본재산액공제 #복지로 #보건복지상담센터129
+  </div>
+
+  <div class="disclaimer">
+    이 기사는 공개된 정보를 바탕으로 작성되었습니다. 본문의 기준 중위소득과 급여별 선정 기준액은
+    2026년 기준이며, 기준 중위소득은 매년 중앙생활보장위원회 심의로 다시 정해져 1월 1일부터 새 금액이 적용됩니다.
+    본인부담경감 부담률, 문화누리카드 지원액, 지자체 자체 사업의 기준은 소관 부처와 지방자치단체의 지침에 따라
+    달라질 수 있습니다. 실제 자격 여부와 지원 범위는 소득·재산 조사 결과로 확정되므로,
+    정확한 지원 여부는 담당 기관에 확인하세요.
+  </div>
+
+  <div class="written">작성일 2026-08-23 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
