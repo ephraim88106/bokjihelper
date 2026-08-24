@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>상병수당 조건 — 시범지역 대상자와 대기기간·하루 급여액 계산 방법</title>
+<meta name="description" content="상병수당은 업무와 관계없는 질병·부상으로 일하지 못하는 동안 소득을 보전해 주는 제도로, 2026년 현재 전국 제도가 아니라 14개 지역에서 시범사업으로만 운영됩니다. 대상은 만 15세 이상 65세 미만의 시범지역 거주 취업자 또는 해당 지역 사업장 근로자이며, 3단계 시범사업은 가구 기준 중위소득 120% 이하(소득 하위 50%) 요건을 적용하고 재산 기준은 폐지했습니다. 지역이 속한 모형에 따라 대기기간 3일·7일·14일이 먼저 지나야 지급이 시작되고, 최대 보장일수는 120일 또는 150일입니다. 하루 지급액은 최저임금의 60% 수준으로 정액 지급되며 2024년 시범사업 기준 1일 47,560원이었고 매년 최저임금에 연동해 다시 정해집니다. 산재보험 휴업급여나 실업급여와는 중복되지 않으며 신청은 국민건강보험공단 시범사업 운영지사에서 받습니다.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    background: #f8f9fa;
+    color: #222;
+    line-height: 1.7;
+  }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge {
+    display: inline-block;
+    background: #6a1b9a;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.35;
+    color: #1a1a1a;
+    margin-bottom: 18px;
+    word-break: keep-all;
+  }
+
+  .hook {
+    border-left: 5px solid #6a1b9a;
+    padding: 14px 18px;
+    background: #f3e5f5;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 22px;
+    font-size: 15px;
+  }
+  .hook .highlight { color: #4a148c; font-weight: 900; }
+
+  .summary-box {
+    background: #e8f5e9;
+    border: 2px solid #2e7d32;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 26px;
+  }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+
+  h2 { font-size: 19px; font-weight: 900; color: #4a148c; margin: 28px 0 12px; border-bottom: 2px solid #ce93d8; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #6a1b9a; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #f3e5f5; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #4a148c; }
+
+  .formula {
+    background: #faf4fc;
+    border: 1px solid #ce93d8;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 20px;
+    font-size: 14.5px;
+    line-height: 1.9;
+    word-break: keep-all;
+  }
+  .formula b { color: #4a148c; }
+
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #f3e5f5; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #6a1b9a; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+
+  .deadline-box {
+    border: 2px dashed #f57c00;
+    background: #fff8e1;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 22px;
+  }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+
+  .checklist { background: #f3e5f5; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #ce93d8; color: #4a148c; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #4a148c; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+
+  .caution { background: #f3e5f5; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+
+  .contact-box { background: #f3e5f5; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #4a148c; border-color: #ce93d8; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  .hashtags { font-size: 13px; color: #4a148c; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-08-24-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="상병수당 조건 — 시범지역 대상자와 대기기간·하루 급여액 계산 방법">
+<meta property="og:description" content="상병수당은 업무와 관계없는 질병·부상으로 일하지 못하는 동안 소득을 보전해 주는 제도로, 2026년 현재 전국 제도가 아니라 14개 지역에서 시범사업으로만 운영됩니다. 대상은 만 15세 이상 65세 미만의 시범지역 거주 취업자 또는 해당 지역 사업장 근로자이며, 3단계 시범사업은 가구 기준 중위소득 120% 이하(소득 하위 50%) 요건을 적용하고 재산 기준은 폐지했습니다. 지역이 속한 모형에 따라 대기기간 3일·7일·14일이 먼저 지나야 지급이 시작되고, 최대 보장일수는 120일 또는 150일입니다. 하루 지급액은 최저임금의 60">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-08-24-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-08-24T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-08-24T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-08-24-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-08-24-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "상병수당 조건 — 시범지역 대상자와 대기기간·하루 급여액 계산 방법", "description": "상병수당은 업무와 관계없는 질병·부상으로 일하지 못하는 동안 소득을 보전해 주는 제도로, 2026년 현재 전국 제도가 아니라 14개 지역에서 시범사업으로만 운영됩니다. 대상은 만 15세 이상 65세 미만의 시범지역 거주 취업자 또는 해당 지역 사업장 근로자이며, 3단계 시범사업은 가구 기준 중위소득 120% 이하(소득 하위 50%) 요건을 적용하고 재산 기준은 폐지했습니다. 지역이 속한 모형에 따라 대기기간 3일·7일·14일이 먼저 지나야 지급이 시작되고, 최대 보장일수는 120일 또는 150일입니다. 하루 지급액은 최저임금의 60", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-08-24", "dateModified": "2026-08-24", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 건강보험</div>
+  <div class="section-badge">상병수당</div>
+
+  <h1>상병수당 조건 — 시범지역 대상자와 대기기간·하루 급여액 계산 방법</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대개 <span class="highlight">일하다 아파서 며칠 쉬어야 하는데 그동안 벌이가 끊기는 상황</span>에 놓여 있습니다.
+    회사에 유급 병가가 없거나, 프리랜서·자영업자여서 쉬는 날이 곧 수입이 0원이 되는 경우입니다.
+    검색하다 보면 "아프면 나라가 하루 얼마씩 준다"는 설명이 나오는데,
+    막상 알아보면 <span class="highlight">우리 동네는 대상이 아니라는 말</span>을 듣게 됩니다.
+    상병수당은 2026년 현재 <span class="highlight">전국 제도가 아니라 14개 지역에서만 돌아가는 시범사업</span>이기 때문입니다.
+    아래에서 내가 사는 곳이 대상인지, 조건이 무엇인지, 며칠을 그냥 보내야 지급이 시작되는지,
+    하루에 얼마가 나오는지를 순서대로 정리했습니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li><b>업무와 관계없는 질병·부상일 때만</b> — 일하다 다친 것은 산재보험 휴업급여 몫이고, 상병수당은 그 바깥의 병·부상을 다룹니다.</li>
+      <li><b>아직 전국 제도가 아닙니다</b> — 1~3단계를 합쳐 <b>14개 지역</b>에서만 시범 운영됩니다. 주소지 또는 근무지가 그 안에 있어야 합니다.</li>
+      <li><b>대기기간이 먼저 지나야 지급이 시작됩니다</b> — 지역이 속한 모형에 따라 <b>3일·7일·14일</b>이며, 이 기간은 무급입니다.</li>
+      <li><b>하루 지급액은 정액</b> — 월급이 얼마든 <b>최저임금의 60% 수준</b>으로 같은 금액이 나옵니다. 소득 비례가 아닙니다.</li>
+      <li><b>최대 보장일수는 120일 또는 150일</b> — 모형별로 다르고, 그 한도를 넘기면 더 아파도 지급이 끝납니다.</li>
+    </ul>
+  </div>
+
+  <p style="font-size:13px;color:#888;margin-bottom:22px;">
+    ※ 상병수당은 <b>시범사업</b>이라 단계마다 대상 요건과 지급 설계가 바뀌어 왔습니다. 이 글은
+    <b>3단계 시범사업(2024년 7월 시행)</b>까지 반영한 내용이며, 하루 지급액처럼 <b>최저임금에 연동돼 매년 다시 정해지는 값</b>은
+    기준 연도를 함께 적었습니다. 검색으로 찾은 다른 글의 금액을 볼 때는 <b>몇 년도 기준인지부터</b> 확인하세요.
+  </p>
+
+  <h2>상병수당은 무엇을 메우는 제도인가</h2>
+  <p>
+    한국의 소득보장 제도에는 오래된 빈칸이 하나 있었습니다. <b>일하다 다치면 산재보험</b>이 치료비와 휴업급여를 대고,
+    <b>일자리를 잃으면 고용보험</b>이 실업급여를 냅니다. 그런데 <b>일자리는 그대로인데 업무와 무관한 병으로 일을 못 하는 기간</b>은
+    어느 제도도 받아 주지 않았습니다. 암 진단을 받고 수술한 경우, 계단에서 넘어져 골절된 경우, 큰 시술 후 회복 기간이 필요한 경우가
+    모두 이 빈칸에 들어갑니다.
+  </p>
+  <p>
+    상병수당은 정확히 그 빈칸을 겨냥합니다. <b>업무 외의 질병·부상으로 일할 수 없다고 판정된 기간</b> 동안
+    소득의 일부를 현금으로 보전해, 아픈 사람이 치료를 미루고 출근하는 일을 줄이는 것이 목적입니다.
+    입원했든 통원 치료 중이든 집에서 요양 중이든 <b>요양 방법을 가리지 않는다</b>는 점이 특징입니다.
+  </p>
+  <p>
+    실제로 그 효과는 시범사업 평가에서 수치로 확인됐습니다. 2022년 7월부터 2025년 3월까지 수급자는 <b>1만 3,945명</b>,
+    1인당 평균 <b>30.3일</b> 동안 약 <b>143만 원</b>을 받았습니다. 같은 조사에서
+    <b>아픈 상태로 출근한 경험은 33.0%에서 17.8%로 절반 가까이 줄었고</b>,
+    <b>제때 치료를 받았다는 응답은 59.9%에서 70.2%로</b> 올랐습니다.
+    수급자의 <b>74.3%가 비사무직</b>이었다는 점도 이 제도가 어떤 사람들의 빈칸을 메우고 있는지 보여 줍니다.
+  </p>
+
+  <h2>가장 먼저 확인할 것 — 우리 동네가 시범지역인가</h2>
+  <p>
+    조건을 따지기 전에 걸러지는 항목이 지역입니다. 상병수당은 아직 건강보험 가입자 전체에게 열려 있지 않고,
+    <b>단계별로 지정된 14개 지역</b>에서만 운영됩니다. 주소지가 그 지역이거나, 주소지는 달라도
+    <b>해당 지역 사업장에 다니고 있으면</b> 대상이 될 수 있습니다.
+  </p>
+
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>단계</th><th>시행</th><th>시범지역</th></tr>
+    <tr><td><b>1단계</b></td><td>2022년 7월</td><td>서울 종로구, 경기 부천시, 충남 천안시, 전남 순천시, 경북 포항시, 경남 창원시</td></tr>
+    <tr><td><b>2단계</b></td><td>2023년 7월</td><td>경기 안양시, 경기 용인시, 대구 달서구, 전북 익산시</td></tr>
+    <tr><td><b>3단계</b></td><td>2024년 7월</td><td>충북 충주시, 충남 홍성군, 전북 전주시, 강원 원주시</td></tr>
+  </table>
+  </div>
+  <p>
+    1·2단계 지역도 계속 운영되므로 <b>세 단계를 합쳐 14곳</b>입니다. 다만 <b>지역마다 적용되는 모형이 달라</b>
+    같은 상병수당이라도 대기기간과 최대 보장일수, 지급 방식이 갈립니다. 이것이 인터넷 설명마다 숫자가 다른 이유입니다.
+    본인 지역이 어느 모형인지는 <b>국민건강보험공단 시범사업 운영지사</b>에 확인하는 것이 가장 정확합니다.
+  </p>
+
+  <h2>대상 조건 — 나이·취업 상태·소득</h2>
+  <h3>① 나이와 지역</h3>
+  <p>
+    <b>만 15세 이상 65세 미만</b>의 대한민국 국적자로, 시범지역에 거주하거나 시범지역 사업장에 근무해야 합니다.
+    65세 이상은 대상에서 빠지는데, 시범사업이 <b>근로소득의 중단</b>을 메우는 설계이기 때문입니다.
+  </p>
+  <h3>② 취업자일 것</h3>
+  <p>
+    핵심 요건입니다. 상병수당은 <b>일하던 사람이 일을 못 하게 된 상황</b>을 전제로 하므로, 신청 시점에 취업 상태여야 합니다.
+    건강보험 직장가입자, 고용보험·산재보험 가입자, 그리고 일정 기준을 충족하는 <b>자영업자</b>가 여기 들어갑니다.
+    3단계에서는 이 문턱이 한 차례 낮아져, <b>직전 2개월(60일) 중 30일 이상 근로를 유지했으면</b> 신청할 수 있도록 완화됐습니다.
+    짧은 계약을 이어 붙여 일하는 사람들이 요건에서 밀려나던 문제를 손본 것입니다.
+  </p>
+  <h3>③ 소득 기준</h3>
+  <p>
+    3단계 시범사업은 <b>가구 기준 중위소득 120% 이하(소득 하위 50% 수준)</b>를 적용합니다.
+    같은 3단계 개편에서 <b>재산 기준은 폐지</b>돼, 이제는 재산 때문에 탈락하는 구조가 아닙니다.
+    다만 단계별 모형에 따라 소득 요건의 적용 방식이 조금씩 달라 왔으므로, 본인 지역 기준은 공단 확인이 필요합니다.
+  </p>
+  <h3>④ 근로활동 불가 판정</h3>
+  <p>
+    본인이 아프다고 신고하는 것으로는 되지 않습니다. <b>의료기관이 발급한 상병수당 신청용 진단서</b>로
+    "이 기간에는 일할 수 없다"는 판정을 받아야 하고, 그 판정 기간이 지급 대상 기간이 됩니다.
+    일반 진단서가 아니라 <b>지정된 서식</b>이라는 점을 놓치면 접수 단계에서 되돌아옵니다.
+  </p>
+
+  <h2>대기기간 — 아픈 날 전부가 지급되지는 않는다</h2>
+  <p>
+    가장 오해가 많은 대목입니다. 상병수당은 <b>일을 못 한 첫날부터</b> 나오지 않습니다.
+    모형마다 정해진 <b>대기기간</b>이 먼저 지나야 하고, <b>그 기간은 무급</b>입니다.
+    짧은 감기 같은 일상적 결근까지 제도가 떠안지 않도록 두는 완충 장치입니다.
+  </p>
+
+  <div class="svg-wrap">
+    <div class="svg-title">대기기간과 지급 구간 — 모형별 비교</div>
+    <svg viewBox="0 0 680 260" width="100%" role="img" aria-label="상병수당 모형별 대기기간과 최대 보장일수 비교 도표">
+      <rect x="0" y="0" width="680" height="260" fill="#ffffff"/>
+      <text x="20" y="26" font-size="13" fill="#555" font-weight="700">근로중단일 ▶</text>
+
+      <text x="20" y="66" font-size="13" fill="#4a148c" font-weight="700">대기 3일형</text>
+      <rect x="130" y="50" width="45" height="24" fill="#e0e0e0"/>
+      <rect x="175" y="50" width="440" height="24" fill="#ce93d8"/>
+      <text x="152" y="67" font-size="10" fill="#666" text-anchor="middle">3일</text>
+      <text x="395" y="67" font-size="12" fill="#4a148c" text-anchor="middle" font-weight="700">지급 구간 (최대 120~150일)</text>
+
+      <text x="20" y="116" font-size="13" fill="#4a148c" font-weight="700">대기 7일형</text>
+      <rect x="130" y="100" width="95" height="24" fill="#e0e0e0"/>
+      <rect x="225" y="100" width="390" height="24" fill="#ce93d8"/>
+      <text x="177" y="117" font-size="10" fill="#666" text-anchor="middle">7일</text>
+      <text x="420" y="117" font-size="12" fill="#4a148c" text-anchor="middle" font-weight="700">지급 구간 (최대 120~150일)</text>
+
+      <text x="20" y="166" font-size="13" fill="#4a148c" font-weight="700">대기 14일형</text>
+      <rect x="130" y="150" width="175" height="24" fill="#e0e0e0"/>
+      <rect x="305" y="150" width="310" height="24" fill="#ce93d8"/>
+      <text x="217" y="167" font-size="10" fill="#666" text-anchor="middle">14일</text>
+      <text x="460" y="167" font-size="12" fill="#4a148c" text-anchor="middle" font-weight="700">지급 구간 (최대 150일)</text>
+
+      <rect x="130" y="200" width="20" height="14" fill="#e0e0e0"/>
+      <text x="158" y="212" font-size="12" fill="#666">대기기간 — 지급되지 않음</text>
+      <rect x="330" y="200" width="20" height="14" fill="#ce93d8"/>
+      <text x="358" y="212" font-size="12" fill="#666">상병수당 지급 구간</text>
+
+      <text x="20" y="243" font-size="11.5" fill="#999">※ 대기기간·최대 보장일수는 지역이 속한 모형에 따라 다릅니다. 본인 지역 기준은 국민건강보험공단에 확인하세요.</text>
+    </svg>
+  </div>
+
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>구분</th><th>대기기간</th><th>최대 보장일수</th><th>지급 방식</th></tr>
+    <tr><td>짧은 대기형</td><td><b>3일</b></td><td>120~150일</td><td>입원·외래 <b>진료일수 기준</b> 지급</td></tr>
+    <tr><td>표준형</td><td><b>7일</b></td><td>120~150일</td><td>근로활동 불가 기간 기준 정액</td></tr>
+    <tr><td>긴 대기형</td><td><b>14일</b></td><td>150일</td><td>근로활동 불가 기간 기준 정액</td></tr>
+  </table>
+  </div>
+  <p>
+    표를 읽는 요령은 이렇습니다. <b>대기기간이 짧으면 진료일수만 세는 방식</b>, <b>대기기간이 길면 쉬는 기간 전체를 세는 방식</b>이
+    짝을 이룹니다. 즉 "며칠 만에 받기 시작하느냐"와 "얼마나 넓게 인정해 주느냐"를 맞바꾼 설계입니다.
+    3단계 개편에서는 <b>최대 보장일수가 30일 늘어 150일</b>이 됐습니다.
+  </p>
+
+  <h2>하루 얼마 받나 — 급여액 계산 방법</h2>
+  <p>
+    상병수당의 가장 큰 특징은 <b>소득 비례가 아니라 정액</b>이라는 점입니다. 실업급여처럼 이전 임금의 몇 퍼센트를 계산하지 않고,
+    누구에게나 같은 하루 금액이 나갑니다. 기준은 <b>최저임금의 60% 수준</b>입니다.
+  </p>
+
+  <div class="formula">
+    <b>1일 지급액 = 해당 연도 최저임금(시급) × 8시간 × 60%</b><br>
+    · <b>2024년 시범사업 기준 실제 지급액 = 1일 47,560원</b><br>
+    · 2026년 최저임금 10,320원으로 같은 식을 대입하면 → 10,320 × 8 × 60% = <b>1일 49,536원 수준</b><br>
+    <span style="font-size:13px;color:#777;">※ 위 2026년 값은 공식을 그대로 대입한 <b>계산 예시</b>입니다. 실제 적용 금액은
+    공단이 고시하는 시범사업 기준액이므로, 신청 전 국민건강보험공단에서 <b>그 해의 확정 금액</b>을 확인하세요.</span>
+  </div>
+
+  <p>
+    체감을 위해 계산해 보면 이렇습니다. 대기기간 7일형 지역에서 <b>총 25일</b> 근로활동 불가 판정을 받았다면,
+    앞의 7일은 무급이고 <b>남는 18일</b>이 지급 대상입니다. 2024년 기준액 47,560원을 적용하면
+    <b>47,560원 × 18일 = 856,080원</b>이 됩니다. 같은 25일이라도 대기 14일형 지역이라면 지급 대상은 11일로 줄어
+    <b>약 52만 원</b>이 됩니다. <b>지역이 어느 모형이냐에 따라 30만 원 넘게 차이가 나는 셈</b>입니다.
+  </p>
+  <p>
+    정액 지급이라는 설계에는 그늘도 있습니다. 시범사업 평가에서도
+    <b>"최저임금의 60% 수준을 정액으로 지급해 실제 소득을 충분히 보전하기 어렵다"</b>는 지적이 나왔습니다.
+    월 300만 원을 벌던 사람에게 하루 4만 원대는 소득의 절반에도 미치지 않기 때문입니다.
+  </p>
+
+  <h2>신청 절차</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text"><b>시범지역·대상 여부 확인</b> — 주소지 또는 근무지가 14개 지역에 해당하는지, 우리 지역 모형의 대기기간이 며칠인지 공단에 문의합니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text"><b>진료받은 의료기관에서 상병수당 신청용 진단서 발급</b> — 일반 진단서가 아닌 지정 서식이며, 근로활동이 불가한 기간이 명시돼야 합니다. 발급 비용은 본인 부담입니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text"><b>신청서 접수</b> — 국민건강보험공단 시범사업 운영지사에 방문·우편·팩스 또는 공단 누리집으로 접수합니다. 지급 신청서와 개인정보 동의서를 함께 냅니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text"><b>공단 심사</b> — 취업 요건, 소득 요건, 근로활동 불가 판정을 확인합니다. 승인 후 <b>근로중단확인서</b>를 추가로 요구받을 수 있고, 자영업자는 사업활동·매출 신고서를 냅니다.</div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-text"><b>대기기간 경과 후 지급</b> — 대기기간을 뺀 일수만큼 지정 계좌로 지급됩니다.</div></div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>⏰ 시간을 놓치면 손해가 되는 지점</h3>
+    <p>· <b>진단서는 요양 기간 안에 받아 두어야 합니다.</b> 다 나은 뒤에 소급해서 "그때 일할 수 없었다"는 판정을 받기는 어렵습니다.</p>
+    <p>· <b>대기기간은 되돌릴 수 없습니다.</b> 근로중단일이 늦게 잡히면 그만큼 지급 시작도 밀립니다.</p>
+    <p>· <b>시범사업은 기한이 정해진 사업입니다.</b> 단계별로 요건과 지급 설계가 바뀌어 왔고 앞으로도 개편될 수 있으므로,
+      신청 전에 현재 운영 여부와 최신 기준을 공단에서 반드시 확인하세요.</p>
+  </div>
+
+  <div class="checklist">
+    <h2>✅ 자가 진단 체크리스트</h2>
+    <div class="check-item"><span class="chk">✓</span><span>내 주소지 또는 근무지가 시범지역 <b>14곳</b> 안에 있다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>나이가 <b>만 15세 이상 65세 미만</b>이다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>아픈 원인이 <b>업무와 관계없는</b> 질병·부상이다(업무상 재해면 산재보험 대상).</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>직전 <b>2개월 중 30일 이상</b> 일한 취업자 또는 자영업자다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>일을 못 쉬는 기간이 우리 지역 <b>대기기간(3·7·14일)보다 길다</b>.</span></div>
+  </div>
+
+  <h2>주의사항</h2>
+  <div class="caution">
+    <div class="caution-item">① <b>산재와는 다른 제도입니다.</b> 일하다 다치거나 업무로 인한 질병이면 산재보험 요양·휴업급여 대상이고, 상병수당은 그 바깥의 병·부상만 다룹니다. 어느 쪽인지부터 가려야 합니다.</div>
+    <div class="caution-item">② <b>중복 수급은 되지 않습니다.</b> 산재 휴업급여, 실업급여, 그 밖에 같은 기간의 소득을 보전하는 다른 급여를 받고 있으면 함께 받을 수 없습니다.</div>
+    <div class="caution-item">③ <b>대기기간은 무급입니다.</b> 아팠던 날수 전부가 계산되는 것이 아니라 대기기간을 뺀 나머지만 지급되므로, 예상 금액을 계산할 때 이 부분을 빼고 셈해야 합니다.</div>
+    <div class="caution-item">④ <b>진단서 발급 비용은 본인 부담입니다.</b> 지급 대상 기간이 짧으면 진단서 비용이 수당에서 차지하는 비중이 커질 수 있습니다.</div>
+    <div class="caution-item">⑤ <b>보장 기간이 길지 않습니다.</b> 국제노동기구(ILO) 협약이 권고하는 26~52주에 견주면 국내 시범사업의 120~150일은 짧은 편이라, 장기 투병에는 한계가 있습니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <div class="contact-row"><span class="contact-label">주관 기관</span> · 보건복지부 (국민건강보험공단 시행)</div>
+    <div class="contact-row"><span class="contact-label">국민건강보험공단 고객센터</span> · ☎ 1577-1000</div>
+    <div class="contact-row"><span class="contact-label">공단 누리집</span> · nhis.or.kr (신청 서식 내려받기)</div>
+    <div class="contact-row"><span class="contact-label">보건복지상담센터</span> · ☎ 129</div>
+    <div class="contact-row"><span class="contact-label">방문 접수</span> · 시범사업 운영지사(14개 지역)</div>
+  </div>
+
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"아픈 상태로 출근한 경험이 33%에서 18%로 줄었다는 결과는 이 제도가 겨냥한 지점을 정확히 맞혔다는 뜻이다. 병가 제도가 없는 노동자에게는 사실상 유일한 대안이다."</p>
+          <p class="author">— 보건정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"3단계에서 재산 기준을 없애고 취업 요건을 완화한 것은 의미가 크다. 짧은 계약을 이어 붙여 일하는 사람들이 요건에서 밀려나던 문제를 손봤다."</p>
+          <p class="author">— 노동복지 현장 활동가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"최저임금의 60%를 정액으로 주는 설계로는 소득 보전이라 부르기 어렵다. 생계가 걸린 사람일수록 그 금액으로는 쉬기를 선택하지 못한다."</p>
+          <p class="author">— 사회보장 제도 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"4년 넘게 시범사업에 머물러 있다는 사실 자체가 문제다. 같은 병에 걸려도 사는 동네에 따라 받고 못 받는 상태가 길어지면 제도의 정당성이 흔들린다."</p>
+          <p class="author">— 보건의료 재정 연구자</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #상병수당 #상병수당조건 #상병수당시범지역 #상병수당대기기간 #근로활동불가 #상병수당진단서 #국민건강보험공단 #업무외질병부상 #소득보전제도 #아프면쉴권리
+  </div>
+
+  <div class="disclaimer">
+    이 기사는 공개된 정보를 바탕으로 작성되었습니다. 상병수당은 전국 제도가 아니라 시범사업으로 운영 중이며,
+    단계별로 대상 요건·대기기간·최대 보장일수·지급액이 달라져 왔습니다. 본문의 1일 지급액 47,560원은
+    2024년 시범사업 기준이고, 2026년 계산 예시는 최저임금 10,320원을 공식에 대입한 값으로 실제 고시액과 다를 수 있습니다.
+    본인 지역의 적용 모형과 그 해의 확정 지급액, 시범사업 운영 여부는 국민건강보험공단에 반드시 확인해야 하며,
+    정확한 지원 여부는 담당 기관에 확인하세요.
+  </div>
+
+  <div class="written">작성일 2026-08-24 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
