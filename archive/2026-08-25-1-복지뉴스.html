@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>교육급여 대상과 교육활동지원비 — 초중고 금액과 사용처·잔액 조회 방법</title>
+<meta name="description" content="교육급여는 기초생활보장 네 가지 급여 가운데 하나로 소득인정액이 기준 중위소득 50% 이하인 가구의 초·중·고 학생에게 교육활동지원비를 연 1회 지원합니다. 2026년 지원액은 전년 대비 평균 6% 올라 초등학교 502,000원, 중학교 699,000원, 고등학교 860,000원이며 2026년 기준 중위소득 50%는 1인 1,282,119원, 4인 3,247,369원입니다. 현금이 아니라 바우처 방식이라 본인이 가진 신용·체크카드나 선불카드에 포인트로 들어오고, 바우처 신청 기간은 2026년 4월 1일부터 2027년 2월 28일까지, 사용기한은 2027년 3월 31일까지입니다. 유흥·사행업종과 청소년 출입불가 업종, 상품권·성인용품 판매점에서는 쓸 수 없고 할부·정기결제·교통카드 충전도 제한됩니다. 수급자격 신청과 바우처 신청은 서로 다른 두 단계라는 점이 가장 많이 놓치는 부분입니다.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    background: #f8f9fa;
+    color: #222;
+    line-height: 1.7;
+  }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge {
+    display: inline-block;
+    background: #1565c0;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.35;
+    color: #1a1a1a;
+    margin-bottom: 18px;
+    word-break: keep-all;
+  }
+
+  .hook {
+    border-left: 5px solid #1565c0;
+    padding: 14px 18px;
+    background: #e3f2fd;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 22px;
+    font-size: 15px;
+  }
+  .hook .highlight { color: #0d47a1; font-weight: 900; }
+
+  .summary-box {
+    background: #e8f5e9;
+    border: 2px solid #2e7d32;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 26px;
+  }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+
+  h2 { font-size: 19px; font-weight: 900; color: #0d47a1; margin: 28px 0 12px; border-bottom: 2px solid #90caf9; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #1565c0; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #e3f2fd; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #0d47a1; }
+
+  .formula {
+    background: #f2f8fd;
+    border: 1px solid #90caf9;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 20px;
+    font-size: 14.5px;
+    line-height: 1.9;
+    word-break: keep-all;
+  }
+  .formula b { color: #0d47a1; }
+
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #e3f2fd; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #1565c0; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+
+  .deadline-box {
+    border: 2px dashed #f57c00;
+    background: #fff8e1;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 22px;
+  }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+
+  .checklist { background: #e3f2fd; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #90caf9; color: #0d47a1; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #0d47a1; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+
+  .caution { background: #e3f2fd; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+
+  .contact-box { background: #e3f2fd; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #0d47a1; border-color: #90caf9; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  .hashtags { font-size: 13px; color: #0d47a1; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-08-25-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="교육급여 대상과 교육활동지원비 — 초중고 금액과 사용처·잔액 조회 방법">
+<meta property="og:description" content="교육급여는 기초생활보장 네 가지 급여 가운데 하나로 소득인정액이 기준 중위소득 50% 이하인 가구의 초·중·고 학생에게 교육활동지원비를 연 1회 지원합니다. 2026년 지원액은 전년 대비 평균 6% 올라 초등학교 502,000원, 중학교 699,000원, 고등학교 860,000원이며 2026년 기준 중위소득 50%는 1인 1,282,119원, 4인 3,247,369원입니다. 현금이 아니라 바우처 방식이라 본인이 가진 신용·체크카드나 선불카드에 포인트로 들어오고, 바우처 신청 기간은 2026년 4월 1일부터 2027년 2월 28일까지">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-08-25-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-08-25T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-08-25T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-08-25-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-08-25-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "교육급여 대상과 교육활동지원비 — 초중고 금액과 사용처·잔액 조회 방법", "description": "교육급여는 기초생활보장 네 가지 급여 가운데 하나로 소득인정액이 기준 중위소득 50% 이하인 가구의 초·중·고 학생에게 교육활동지원비를 연 1회 지원합니다. 2026년 지원액은 전년 대비 평균 6% 올라 초등학교 502,000원, 중학교 699,000원, 고등학교 860,000원이며 2026년 기준 중위소득 50%는 1인 1,282,119원, 4인 3,247,369원입니다. 현금이 아니라 바우처 방식이라 본인이 가진 신용·체크카드나 선불카드에 포인트로 들어오고, 바우처 신청 기간은 2026년 4월 1일부터 2027년 2월 28일까지", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-08-25", "dateModified": "2026-08-25", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 교육</div>
+  <div class="section-badge">교육급여</div>
+
+  <h1>교육급여 대상과 교육활동지원비 — 초중고 금액과 사용처·잔액 조회 방법</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대개 둘 중 하나입니다. <span class="highlight">우리 집이 교육급여를 받을 수 있는 소득인지 알고 싶은 경우</span>,
+    그리고 <span class="highlight">이미 대상자로 정해졌는데 돈이 어디로 들어왔는지 모르겠는 경우</span>입니다.
+    두 번째가 특히 많습니다. 교육활동지원비는 통장에 현금으로 꽂히지 않고
+    <span class="highlight">본인이 이미 쓰던 카드에 포인트 형태로 얹히는 바우처</span>라서,
+    입금 내역을 아무리 찾아도 보이지 않습니다.
+    게다가 <span class="highlight">수급자격 신청과 바우처 신청은 서로 다른 두 단계</span>여서
+    앞 단계만 하고 뒤 단계를 안 하면 돈이 그대로 남아 있다가 기한이 지나 사라집니다.
+    아래에서 소득 기준, 학교급별 금액, 어디에 쓸 수 있는지, 잔액은 어떻게 확인하는지를 순서대로 정리했습니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li><b>소득 기준은 기준 중위소득 50% 이하</b> — 2026년 기준 4인 가구 월 <b>3,247,369원</b>, 1인 가구 <b>1,282,119원</b>입니다. 월급이 아니라 소득인정액으로 봅니다.</li>
+      <li><b>2026년 교육활동지원비는 초 502,000원 · 중 699,000원 · 고 860,000원</b> — 연 1회, 전년보다 평균 6% 올랐습니다.</li>
+      <li><b>현금이 아니라 바우처(포인트)</b> — 본인이 가진 신용·체크카드나 선불카드에 포인트로 들어옵니다. 전용 카드를 새로 만들 필요가 없습니다.</li>
+      <li><b>두 단계입니다</b> — ① 행정복지센터·복지로에서 <b>수급자격</b>을 받고, ② 교육급여 바우처 누리집에서 <b>바우처</b>를 따로 받습니다.</li>
+      <li><b>사용기한이 있습니다</b> — 2026학년도 바우처는 <b>2027년 3월 31일</b>까지 써야 하고, 남으면 그대로 사라집니다.</li>
+    </ul>
+  </div>
+
+  <p style="font-size:13px;color:#888;margin-bottom:22px;">
+    ※ 아래 금액은 모두 <b>2026년(2026학년도) 기준</b>입니다. 기준 중위소득은 해마다 다시 고시되고
+    교육활동지원비도 매년 인상되므로, 검색으로 찾은 다른 글의 숫자를 볼 때는 <b>몇 년도 기준인지부터</b> 확인하세요.
+  </p>
+
+  <h2>교육급여는 어떤 제도인가 — 교육비 지원과 헷갈리는 이유</h2>
+  <p>
+    교육급여는 「국민기초생활 보장법」이 정한 <b>기초생활보장 네 가지 급여</b> 가운데 하나입니다.
+    생계급여·의료급여·주거급여와 나란히 있는 제도이고, 각각 선정 기준선이 다릅니다.
+    생계급여는 기준 중위소득의 32%, 의료급여는 40%, 주거급여는 48%, 그리고
+    <b>교육급여는 50%</b> 선을 씁니다. 네 급여 가운데 문턱이 가장 낮은 쪽이라,
+    다른 급여에서는 탈락했는데 교육급여만 되는 가구가 꽤 있습니다.
+  </p>
+  <p>
+    많이 헷갈리는 것이 <b>교육급여와 교육비 지원</b>입니다. 이름이 비슷하고 같은 창구에서 함께 접수하지만
+    별개의 사업입니다. 교육급여는 <b>중위소득 50% 이하</b>가 대상이고 교육활동지원비를 줍니다.
+    교육비 지원은 <b>중위소득 50~80% 구간</b>을 주로 대상으로 하며
+    고교 학비, 급식비, 방과후학교 자유수강권, 교육정보화(인터넷 통신비) 같은
+    <b>항목별 지원</b>을 담당합니다. 지자체와 시·도교육청 예산이 들어가므로 지역마다 기준과 항목이 조금씩 다릅니다.
+    그래서 실무에서는 <b>두 가지를 한 장의 신청서로 함께 접수</b>하고, 심사 결과에 따라 해당되는 쪽으로 갈라집니다.
+  </p>
+
+  <h2>1단계 — 소득 기준을 넘는지 본다</h2>
+  <p>
+    교육급여 대상 여부는 <b>가구의 소득인정액이 기준 중위소득 50% 이하</b>인지로 갈립니다.
+    2026년 기준 중위소득은 전년보다 6.51% 올랐고, 그 절반인 교육급여 선은 다음과 같습니다.
+  </p>
+
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>가구원 수</th><th>기준 중위소득 100%</th><th>교육급여 선정기준 (50%)</th></tr>
+    <tr><td><b>1인</b></td><td>2,564,238원</td><td class="big-number">1,282,119원</td></tr>
+    <tr><td><b>2인</b></td><td>4,199,292원</td><td class="big-number">2,099,646원</td></tr>
+    <tr><td><b>3인</b></td><td>5,359,036원</td><td class="big-number">2,679,518원</td></tr>
+    <tr><td><b>4인</b></td><td>6,494,738원</td><td class="big-number">3,247,369원</td></tr>
+    <tr><td><b>5인</b></td><td>7,556,719원</td><td class="big-number">3,778,360원</td></tr>
+    <tr><td><b>6인</b></td><td>8,555,952원</td><td class="big-number">4,277,976원</td></tr>
+  </table>
+  </div>
+
+  <p>
+    여기서 가장 많이 틀리는 대목은 <b>비교 대상이 월급이 아니라는 점</b>입니다.
+    기준선과 견주는 값은 <b>소득인정액</b>이고, 이는 소득평가액과 재산의 소득환산액을 더한 금액입니다.
+    근로소득은 일반적으로 30%를 먼저 공제하므로 명세서상 월급보다 낮게 잡히지만,
+    반대로 <b>재산이 소득으로 환산돼 더해지기</b> 때문에 소득이 적어도 탈락할 수 있습니다.
+    자동차는 환산율이 특히 높아 결과를 크게 바꾸는 항목입니다.
+    대략을 먼저 보고 싶다면 <b>복지로 모의계산</b>으로 확인한 뒤 접수하는 편이 시간을 아낍니다.
+  </p>
+  <p>
+    한 가지 반가운 특징이 있습니다. 교육급여에는 <b>부양의무자 기준이 적용되지 않습니다.</b>
+    따로 사는 부모나 자녀의 소득·재산 때문에 막히는 일이 없다는 뜻입니다.
+    생계·의료급여에서 부양의무자 문제로 걸렸던 가구도 교육급여는 별도로 판단받을 수 있습니다.
+  </p>
+
+  <h2>2단계 — 얼마를 받나</h2>
+  <p>
+    교육급여로 나오는 것은 <b>교육활동지원비</b>입니다. 학교급에 따라 금액이 다르고
+    <b>학년이 아니라 초·중·고 구분</b>으로만 갈립니다. 같은 고등학생이면 1학년이든 3학년이든 금액이 같습니다.
+    2026년 지원액은 전년 대비 평균 6% 인상됐습니다.
+  </p>
+
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>학교급</th><th>2026년 연간 지원액</th><th>지급 방식</th></tr>
+    <tr><td><b>초등학교</b></td><td class="big-number">502,000원</td><td>연 1회 일괄, 바우처(포인트)</td></tr>
+    <tr><td><b>중학교</b></td><td class="big-number">699,000원</td><td>연 1회 일괄, 바우처(포인트)</td></tr>
+    <tr><td><b>고등학교</b></td><td class="big-number">860,000원</td><td>연 1회 일괄, 바우처(포인트)</td></tr>
+  </table>
+  </div>
+
+  <div class="svg-wrap">
+    <div class="svg-title">2026년 학교급별 교육활동지원비 (연 1회)</div>
+    <svg viewBox="0 0 640 250" width="100%" height="250" role="img" aria-label="초등학교 502,000원, 중학교 699,000원, 고등학교 860,000원 막대그래프">
+      <line x1="90" y1="200" x2="620" y2="200" stroke="#ccc" stroke-width="2"/>
+      <rect x="130" y="97" width="90" height="103" fill="#90caf9" rx="4"/>
+      <text x="175" y="88" text-anchor="middle" font-size="16" font-weight="900" fill="#0d47a1">502,000원</text>
+      <text x="175" y="222" text-anchor="middle" font-size="14" fill="#555">초등학교</text>
+      <rect x="275" y="57" width="90" height="143" fill="#42a5f5" rx="4"/>
+      <text x="320" y="48" text-anchor="middle" font-size="16" font-weight="900" fill="#0d47a1">699,000원</text>
+      <text x="320" y="222" text-anchor="middle" font-size="14" fill="#555">중학교</text>
+      <rect x="420" y="24" width="90" height="176" fill="#1565c0" rx="4"/>
+      <text x="465" y="15" text-anchor="middle" font-size="16" font-weight="900" fill="#0d47a1">860,000원</text>
+      <text x="465" y="222" text-anchor="middle" font-size="14" fill="#555">고등학교</text>
+      <text x="88" y="205" text-anchor="end" font-size="12" fill="#999">0원</text>
+      <text x="320" y="243" text-anchor="middle" font-size="12" fill="#999">※ 2026년 기준 · 전년 대비 평균 6% 인상</text>
+    </svg>
+  </div>
+
+  <p>
+    여기에 더해, <b>무상교육에서 제외된 고등학교</b>에 다니는 경우에는 학비가 따로 지원됩니다.
+    <b>입학금은 1회, 수업료는 연 4회, 교과서비는 연 1회</b> 지원하는 방식입니다.
+    현재 고교 무상교육이 넓게 시행되고 있어 해당되는 학교는 일부 사립학교 등으로 한정되지만,
+    그런 학교에 다닌다면 교육활동지원비와 별개로 챙겨야 할 항목입니다.
+  </p>
+
+  <h2>3단계 — 바우처를 따로 받아야 한다</h2>
+  <p>
+    수급자격이 정해졌다고 해서 돈이 저절로 들어오지 않는다는 점이 이 제도에서 가장 자주 놓치는 부분입니다.
+    교육활동지원비는 <b>바우처(이용권) 방식</b>이라, 지급 수단을 등록하는 절차가 한 번 더 필요합니다.
+  </p>
+  <div class="formula">
+    <b>돈이 들어오는 경로</b><br>
+    · ① 행정복지센터·복지로·교육비 원클릭에서 <b>교육급여 수급자격</b> 결정<br>
+    · ② 교육급여 바우처 누리집(e-voucher.kosaf.go.kr)에서 <b>지급 수단 등록</b><br>
+    · ③ 등록한 카드에 <b>포인트로 지급</b> → 평소처럼 결제하면 포인트부터 차감<br>
+    <span style="font-size:13px;color:#777;">※ 전년도에 이미 바우처를 받았고 올해도 수급 대상으로 정해졌다면,
+    <b>같은 카드사</b>로 자동 신청되는 경우가 있습니다. 다만 카드를 바꿨거나 해지했다면 자동 처리가 되지 않으므로 직접 확인해야 합니다.</span>
+  </div>
+  <p>
+    지급 수단으로 고를 수 있는 것은 <b>본인 명의 신용·체크카드, 선불카드, 간편결제</b>입니다.
+    <b>전용 카드를 새로 발급받을 필요는 없고</b>, 이미 쓰던 카드를 등록하면 됩니다.
+    다만 종류에 따라 쓸 수 있는 범위가 갈립니다.
+    <b>신용·체크카드는 온라인과 오프라인 모두</b> 쓸 수 있는 반면,
+    <b>선불카드는 오프라인 결제만</b> 됩니다. 문제집이나 온라인 강의를 인터넷으로 결제할 계획이라면
+    처음부터 신용·체크카드를 등록하는 편이 낫습니다.
+  </p>
+
+  <h2>어디에 쓸 수 있나 — 사용처와 제한 업종</h2>
+  <p>
+    교육활동지원비의 사용처는 흔히 생각하는 것보다 넓습니다.
+    "교육 관련 가맹점에서만 된다"고 알려진 경우가 많은데, 실제 설계는 반대에 가깝습니다.
+    <b>쓸 수 있는 곳을 열거하는 방식이 아니라, 쓸 수 없는 업종을 지정해 막는 방식</b>입니다.
+    따라서 아래에 해당하지 않는 곳이라면 대체로 결제가 됩니다.
+  </p>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>구분</th><th>내용</th></tr>
+    <tr><td><b>사용 제한 업종</b></td><td>유흥·사행 업종, 청소년 출입불가 장소, 상품권·성인용품 판매점 등 교육활동과 관련 없는 업종</td></tr>
+    <tr><td><b>제한되는 결제 유형</b></td><td>할부 결제, 정기(자동) 결제, 교통카드 충전, 후불 교통요금 결제</td></tr>
+    <tr><td><b>일반적인 사용 예</b></td><td>교재·문제집·도서, 학용품과 필기구, 온라인 강의 수강료, 가방·신발 등 학용 물품, 그 밖의 학습 관련 지출</td></tr>
+    <tr><td><b>소득공제</b></td><td>카드 사용액으로 <b>소득공제 적용이 가능</b>합니다</td></tr>
+  </table>
+  </div>
+  <p>
+    <b>잔액 조회</b>는 두 갈래입니다. 등록한 <b>카드사 홈페이지나 카드사 앱</b>에서 포인트 잔액으로 확인하는 방법이 하나이고,
+    <b>교육급여 바우처 누리집의 '사용현황 및 잔액조회' 메뉴</b>에서 사용 내역과 남은 금액을 함께 보는 방법이 다른 하나입니다.
+    포인트가 자동으로 먼저 차감되는 구조라 결제할 때 따로 고를 것이 없고,
+    그만큼 <b>본인이 얼마를 썼는지 모르고 지나가기 쉬우니</b> 학기 중 한 번쯤 잔액을 확인해 두는 편이 좋습니다.
+  </p>
+
+  <h2>신청 절차</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text"><b>소득 기준 확인</b> — 복지로 모의계산으로 소득인정액이 기준 중위소득 50% 안에 들어오는지 대략을 봅니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text"><b>수급자격 신청</b> — 주소지 읍·면·동 행정복지센터 방문, 또는 복지로(bokjiro.go.kr)·교육비 원클릭(oneclick.neis.go.kr) 온라인 접수. 교육급여와 교육비를 한 장으로 함께 접수합니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text"><b>소득·재산 조사와 결정 통보</b> — 사회보장정보시스템으로 조사가 이뤄지며 결과를 통보받습니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text"><b>바우처 신청</b> — 교육급여 바우처 누리집(e-voucher.kosaf.go.kr)에서 지급받을 카드를 등록합니다. 2026학년도 신청은 <b>2026년 4월 1일부터 2027년 2월 28일까지</b>입니다.</div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-text"><b>포인트 지급 후 사용</b> — 등록한 카드에 포인트가 들어오면 평소처럼 결제하면 됩니다. 사용기한은 <b>2027년 3월 31일</b>까지입니다.</div></div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>⏰ 기한을 놓치면 손해가 되는 지점</h3>
+    <p>· <b>수급자격 신청은 연중 가능하지만, 매년 3월에 집중 신청기간이 있습니다.</b> 2026년의 경우 3월 3일부터 3월 20일까지였습니다. 학기 초에 맞춰 처리하려면 이 기간에 접수하는 것이 가장 빠릅니다.</p>
+    <p>· <b>바우처 신청 마감은 2027년 2월 28일입니다.</b> 수급자격만 받아 두고 이 절차를 하지 않으면 금액이 지급되지 않습니다.</p>
+    <p>· <b>사용기한은 2027년 3월 31일입니다.</b> 남은 포인트는 이월되지 않으므로, 학년말에 잔액을 한 번 확인해 두는 편이 안전합니다.</p>
+  </div>
+
+  <div class="checklist">
+    <h2>✅ 자가 진단 체크리스트</h2>
+    <div class="check-item"><span class="chk">✓</span><span>우리 가구 소득인정액이 <b>기준 중위소득 50%</b>(4인 3,247,369원) 이하다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>초·중·고에 재학 중인 자녀가 있다(학교급에 따라 금액이 달라진다).</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>행정복지센터나 복지로에서 <b>수급자격 신청</b>을 이미 마쳤다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>교육급여 바우처 누리집에서 <b>지급받을 카드를 등록</b>했다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>등록한 카드가 <b>지금도 유효</b>하다(해지·교체 시 자동신청이 되지 않는다).</span></div>
+  </div>
+
+  <h2>주의사항</h2>
+  <div class="caution">
+    <div class="caution-item">① <b>수급자격과 바우처는 다른 절차입니다.</b> "대상자로 정해졌는데 돈이 안 들어온다"는 사례의 상당수가 바우처 등록을 안 한 경우입니다. 두 단계를 모두 마쳐야 지급됩니다.</div>
+    <div class="caution-item">② <b>통장에 현금이 들어오지 않습니다.</b> 등록한 카드의 포인트로 지급되므로 입금 내역에서는 보이지 않습니다. 카드사 앱이나 바우처 누리집에서 확인해야 합니다.</div>
+    <div class="caution-item">③ <b>선불카드는 온라인 결제가 되지 않습니다.</b> 온라인 강의나 인터넷 서점을 이용할 계획이면 신용·체크카드로 등록하세요.</div>
+    <div class="caution-item">④ <b>비교 대상은 월급이 아니라 소득인정액입니다.</b> 재산이 소득으로 환산돼 더해지므로, 소득만 보고 미리 포기하거나 반대로 확신하지 않는 편이 좋습니다.</div>
+    <div class="caution-item">⑤ <b>금액과 기준선은 해마다 바뀝니다.</b> 기준 중위소득은 매년 새로 고시되고 교육활동지원비도 매년 인상돼 왔습니다. 다른 글의 숫자를 볼 때는 기준 연도를 먼저 확인하세요.</div>
+    <div class="caution-item">⑥ <b>교육비 지원은 지역마다 다릅니다.</b> 급식비·방과후자유수강권·교육정보화 지원은 시·도교육청 사업이라 항목과 기준이 지역별로 차이가 있으니 관할 교육청이나 학교에 확인해야 합니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <div class="contact-row"><span class="contact-label">주관 기관</span> · 교육부 · 시·도교육청 (기초생활보장 교육급여)</div>
+    <div class="contact-row"><span class="contact-label">교육급여 바우처</span> · e-voucher.kosaf.go.kr (한국장학재단 운영)</div>
+    <div class="contact-row"><span class="contact-label">바우처 상담센터</span> · ☎ 1599-2000 (09~18시)</div>
+    <div class="contact-row"><span class="contact-label">수급자격 신청</span> · 복지로 bokjiro.go.kr · 교육비 원클릭 oneclick.neis.go.kr</div>
+    <div class="contact-row"><span class="contact-label">방문 접수</span> · 주소지 읍·면·동 행정복지센터</div>
+    <div class="contact-row"><span class="contact-label">보건복지상담센터</span> · ☎ 129</div>
+  </div>
+
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"교육급여에 부양의무자 기준이 없다는 점은 과소평가돼 있다. 다른 급여에서 가족 관계 때문에 밀려난 가구도 자녀 교육 지원만큼은 별도로 판단받을 수 있다."</p>
+          <p class="author">— 교육복지 정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"사용처를 열거하지 않고 제한 업종만 지정한 설계는 현실적이다. 학습에 드는 돈의 형태는 가정마다 달라, 목록을 정해 두면 오히려 필요한 지출이 빠진다."</p>
+          <p class="author">— 아동청소년 현장 활동가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"수급자격과 바우처 신청이 분리된 구조는 행정 편의에 가깝다. 두 단계를 모두 통과해야 실제 지원이 이뤄진다면, 정보에 밝은 가구에 유리하게 작동한다."</p>
+          <p class="author">— 사회정책 행정 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"연 50만~86만 원은 사교육비 격차 앞에서 상징적인 수준이다. 인상률이 물가를 겨우 따라가는 동안 실제 교육비 부담은 더 빠르게 벌어졌다."</p>
+          <p class="author">— 교육재정 연구자</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #교육급여 #교육활동지원비 #교육급여바우처 #기준중위소득50 #소득인정액 #교육비원클릭 #복지로 #한국장학재단 #초중고학습지원 #기초생활보장
+  </div>
+
+  <div class="disclaimer">
+    이 기사는 공개된 정보를 바탕으로 작성되었습니다. 본문의 기준 중위소득과 교육활동지원비 금액은 <b>2026년(2026학년도) 기준</b>이며,
+    기준선과 지원액은 매년 새로 고시됩니다. 바우처 신청 기간(2026.4.1.~2027.2.28.)과 사용기한(~2027.3.31.)은
+    2026학년도 기준이고 학년도마다 달라집니다. 교육비 지원 항목과 소득 기준은 시·도교육청에 따라 차이가 있으므로
+    관할 교육청·학교에 확인이 필요하며, 정확한 지원 여부는 담당 기관에 확인하세요.
+  </div>
+
+  <div class="written">작성일 2026-08-25 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
