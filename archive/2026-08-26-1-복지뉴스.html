@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>부모급여 첫만남이용권 차이 — 금액과 사용처·중복 수급 여부</title>
+<meta name="description" content="부모급여와 첫만남이용권은 이름이 나란히 붙어 다니지만 성격이 다른 제도입니다. 부모급여는 생후 0~11개월 월 100만 원, 12~23개월 월 50만 원을 24개월간 계좌로 주는 매달 현금이고, 첫만남이용권은 첫째 200만 원·둘째 이상 300만 원을 국민행복카드 포인트로 한 번에 주는 바우처입니다. 둘 다 소득·재산 기준이 없고 서로 중복해서 받을 수 있으며 아동수당까지 함께 받습니다. 어린이집에 보내면 부모급여가 통장에 그대로 들어오지 않고 2026년 정부지원 보육료 0세반 584,000원·1세반 515,000원이 먼저 빠진 뒤 차액만 현금으로 나옵니다. 놓치는 방식도 서로 달라 부모급여는 출생일 포함 60일을 넘기면 소급되지 않고, 첫만남이용권은 출생일로부터 2년이 지나면 남은 포인트가 사라집니다.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    background: #f8f9fa;
+    color: #222;
+    line-height: 1.7;
+  }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge {
+    display: inline-block;
+    background: #ad1457;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.35;
+    color: #1a1a1a;
+    margin-bottom: 18px;
+    word-break: keep-all;
+  }
+
+  .hook {
+    border-left: 5px solid #ad1457;
+    padding: 14px 18px;
+    background: #fce4ec;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 22px;
+    font-size: 15px;
+  }
+  .hook .highlight { color: #880e4f; font-weight: 900; }
+
+  .summary-box {
+    background: #e8f5e9;
+    border: 2px solid #2e7d32;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 26px;
+  }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+
+  h2 { font-size: 19px; font-weight: 900; color: #880e4f; margin: 28px 0 12px; border-bottom: 2px solid #f48fb1; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #ad1457; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #fce4ec; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #880e4f; }
+
+  .formula {
+    background: #fdf2f6;
+    border: 1px solid #f48fb1;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 20px;
+    font-size: 14.5px;
+    line-height: 1.9;
+    word-break: keep-all;
+  }
+  .formula b { color: #880e4f; }
+
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #fce4ec; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #ad1457; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+
+  .deadline-box {
+    border: 2px dashed #f57c00;
+    background: #fff8e1;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 22px;
+  }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+
+  .checklist { background: #fce4ec; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #f48fb1; color: #880e4f; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #880e4f; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+
+  .caution { background: #fce4ec; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+
+  .contact-box { background: #fce4ec; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #880e4f; border-color: #f48fb1; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  .hashtags { font-size: 13px; color: #880e4f; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-08-26-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="부모급여 첫만남이용권 차이 — 금액과 사용처·중복 수급 여부">
+<meta property="og:description" content="부모급여와 첫만남이용권은 이름이 나란히 붙어 다니지만 성격이 다른 제도입니다. 부모급여는 생후 0~11개월 월 100만 원, 12~23개월 월 50만 원을 24개월간 계좌로 주는 매달 현금이고, 첫만남이용권은 첫째 200만 원·둘째 이상 300만 원을 국민행복카드 포인트로 한 번에 주는 바우처입니다. 둘 다 소득·재산 기준이 없고 서로 중복해서 받을 수 있으며 아동수당까지 함께 받습니다. 어린이집에 보내면 부모급여가 통장에 그대로 들어오지 않고 2026년 정부지원 보육료 0세반 584,000원·1세반 515,000원이 먼저 빠진 뒤">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-08-26-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-08-26T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-08-26T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-08-26-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-08-26-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "부모급여 첫만남이용권 차이 — 금액과 사용처·중복 수급 여부", "description": "부모급여와 첫만남이용권은 이름이 나란히 붙어 다니지만 성격이 다른 제도입니다. 부모급여는 생후 0~11개월 월 100만 원, 12~23개월 월 50만 원을 24개월간 계좌로 주는 매달 현금이고, 첫만남이용권은 첫째 200만 원·둘째 이상 300만 원을 국민행복카드 포인트로 한 번에 주는 바우처입니다. 둘 다 소득·재산 기준이 없고 서로 중복해서 받을 수 있으며 아동수당까지 함께 받습니다. 어린이집에 보내면 부모급여가 통장에 그대로 들어오지 않고 2026년 정부지원 보육료 0세반 584,000원·1세반 515,000원이 먼저 빠진 뒤", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-08-26", "dateModified": "2026-08-26", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 출산 · 영아 양육</div>
+  <div class="section-badge">부모급여 · 첫만남이용권</div>
+
+  <h1>부모급여 첫만남이용권 차이 — 금액과 사용처·중복 수급 여부</h1>
+
+  <div class="hook">
+    출생신고를 하러 가면 창구에서 여러 제도를 한꺼번에 안내받습니다. 이름이 비슷하게 들려서
+    <span class="highlight">둘 중 하나만 고르는 것으로 오해하는 분이 많습니다.</span>
+    두 제도는 고르는 것이 아니라 <span class="highlight">둘 다 받는 것</span>이고, 성격이 아예 다릅니다.
+    하나는 <span class="highlight">24개월 동안 매달 통장에 들어오는 현금</span>이고,
+    다른 하나는 <span class="highlight">태어날 때 한 번 카드에 얹히는 포인트</span>입니다.
+    돈을 놓치는 방식도 서로 다릅니다. 앞의 것은 기한을 넘기면 지난 달치가 없어지고,
+    뒤의 것은 기한을 넘기면 남은 잔액이 통째로 사라집니다.
+    아래에서 금액, 지급 형태, 어린이집에 보낼 때 달라지는 계산, 중복 수급 범위를 순서대로 정리했습니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li><b>부모급여는 매달 현금</b> — 생후 0~11개월 월 <b>100만 원</b>, 12~23개월 월 <b>50만 원</b>. 24개월 동안 매월 25일에 계좌로 들어옵니다.</li>
+      <li><b>첫만남이용권은 출생 1회 바우처</b> — 첫째 <b>200만 원</b>, 둘째 이상 <b>300만 원</b>. 국민행복카드에 포인트로 얹힙니다.</li>
+      <li><b>둘 다 소득·재산을 보지 않습니다</b> — 국내 출생 아동이면 가구 소득과 무관하게 대상입니다.</li>
+      <li><b>중복해서 받습니다</b> — 부모급여 + 첫만남이용권 + 아동수당은 서로 다른 제도라 함께 받습니다.</li>
+      <li><b>어린이집에 보내면 계산이 달라집니다</b> — 2026년 정부지원 보육료 0세반 <b>584,000원</b>·1세반 <b>515,000원</b>이 먼저 빠지고 <b>차액만 현금</b>으로 나옵니다.</li>
+    </ul>
+  </div>
+
+  <p style="font-size:13px;color:#888;margin-bottom:22px;">
+    ※ 아래 금액은 모두 <b>2026년 기준</b>입니다. 보육료 지원단가는 해마다 다시 고시되고 그에 따라
+    현금 차액도 함께 달라지므로, 검색으로 찾은 다른 글의 숫자를 볼 때는 <b>몇 년도 기준인지부터</b> 확인하세요.
+  </p>
+
+  <h2>한 장으로 보는 차이</h2>
+  <p>
+    두 제도를 나란히 놓으면 성격이 분명해집니다. 부모급여는 아이를 키우는 <b>기간</b>에 대응하는 소득 보전이고,
+    첫만남이용권은 아이가 태어나는 <b>사건</b>에 대응하는 초기 비용 지원입니다.
+    그래서 하나는 달마다 나뉘어 나오고, 다른 하나는 한 번에 큰 금액이 들어옵니다.
+  </p>
+
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>비교 항목</th><th>부모급여</th><th>첫만남이용권</th></tr>
+    <tr><td><b>성격</b></td><td>영아기 양육비 보전(매월)</td><td>출생 초기 비용 지원(1회)</td></tr>
+    <tr><td><b>금액</b></td><td class="big-number">월 100만 원 / 50만 원</td><td class="big-number">200만 원 / 300만 원</td></tr>
+    <tr><td><b>금액이 갈리는 기준</b></td><td>아이 개월 수<br>(0~11개월 / 12~23개월)</td><td>출생 순위<br>(첫째 / 둘째 이상)</td></tr>
+    <tr><td><b>받는 형태</b></td><td>계좌 입금(현금)<br>어린이집 이용 시 보육료 + 차액</td><td>국민행복카드 포인트</td></tr>
+    <tr><td><b>받는 기간</b></td><td>생후 24개월까지</td><td>출생일로부터 2년 안에 사용</td></tr>
+    <tr><td><b>소득·재산 기준</b></td><td>없음</td><td>없음</td></tr>
+    <tr><td><b>가장 많이 놓치는 지점</b></td><td>출생일 포함 60일을 넘기면 지난 달치가 소급되지 않음</td><td>2년이 지나면 남은 포인트가 소멸</td></tr>
+  </table>
+  </div>
+
+  <div class="svg-wrap">
+    <div class="svg-title">첫째 아이 기준 — 2년 동안 받는 금액의 구성</div>
+    <svg viewBox="0 0 640 260" width="100%" height="260" role="img" aria-label="첫만남이용권 200만 원, 부모급여 0세 1200만 원, 부모급여 1세 600만 원, 아동수당 2년분 240만 원 막대그래프">
+      <line x1="150" y1="30" x2="150" y2="235" stroke="#ccc" stroke-width="2"/>
+
+      <text x="140" y="55" text-anchor="end" font-size="13" fill="#555">첫만남이용권</text>
+      <rect x="152" y="40" width="70" height="22" fill="#ad1457"/>
+      <text x="232" y="56" font-size="13" font-weight="700" fill="#880e4f">200만 원 (1회)</text>
+
+      <text x="140" y="105" text-anchor="end" font-size="13" fill="#555">부모급여 0세</text>
+      <rect x="152" y="90" width="420" height="22" fill="#c2185b"/>
+      <text x="160" y="106" font-size="13" font-weight="700" fill="#fff">월 100만 원 × 12개월 = 1,200만 원</text>
+
+      <text x="140" y="155" text-anchor="end" font-size="13" fill="#555">부모급여 1세</text>
+      <rect x="152" y="140" width="210" height="22" fill="#e91e63"/>
+      <text x="372" y="156" font-size="13" font-weight="700" fill="#880e4f">월 50만 원 × 12개월 = 600만 원</text>
+
+      <text x="140" y="205" text-anchor="end" font-size="13" fill="#555">아동수당 2년분</text>
+      <rect x="152" y="190" width="84" height="22" fill="#f06292"/>
+      <text x="246" y="206" font-size="13" font-weight="700" fill="#880e4f">월 10만 원 × 24개월 = 240만 원</text>
+
+      <text x="152" y="240" font-size="13" font-weight="900" fill="#333">합계 약 2,240만 원 — 어린이집을 이용하면 이 가운데 일부가 보육료 바우처로 대체됩니다</text>
+    </svg>
+  </div>
+
+  <h2>부모급여 — 개월 수로 금액이 갈린다</h2>
+  <p>
+    부모급여는 태어나서 만 두 돌이 되기 전까지의 양육 부담을 현금으로 보전하는 제도입니다.
+    소득이나 재산을 따지지 않고, 국내에 출생신고가 된 아동이면 대상이 됩니다.
+    금액은 <b>생후 0~11개월 월 100만 원</b>, <b>생후 12~23개월 월 50만 원</b>으로,
+    개월 수가 바뀌는 달부터 자동으로 조정됩니다.
+    정기 지급일은 <b>매월 25일</b>이며, 25일이 토요일이나 공휴일이면 앞당겨 지급되는 경우가 있습니다.
+  </p>
+
+  <div class="formula">
+    <b>2년 동안 받는 총액(가정양육 기준)</b><br>
+    100만 원 × 12개월 = <b>1,200만 원</b><br>
+    50만 원 × 12개월 = <b>600만 원</b><br>
+    → 부모급여만 <b>1,800만 원</b>, 여기에 첫만남이용권 200만 원과 아동수당 240만 원을 더하면 약 <b>2,240만 원</b>
+  </div>
+
+  <h2>어린이집에 보내면 통장 금액이 줄어드는 이유</h2>
+  <p>
+    가장 문의가 많은 대목입니다. 어린이집에 보내는 순간 <b>부모급여 100만 원이 통장에 그대로 들어오지 않습니다.</b>
+    깎인 것이 아니라 <b>지급 경로가 바뀐 것</b>입니다. 정부지원 보육료가 어린이집으로 먼저 결제되고,
+    부모급여 금액이 그보다 크면 남는 부분만 현금으로 계좌에 들어옵니다.
+  </p>
+  <p>
+    2026년 정부지원 보육료(기본보육) 단가는 <b>0세반 584,000원, 1세반 515,000원, 2세반 426,000원</b>입니다.
+    아이가 몇 개월인지와 어느 반에 배정되는지에 따라 현금 차액이 달라집니다.
+  </p>
+
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>상황</th><th>보육료로 나가는 금액</th><th>계좌로 들어오는 현금</th></tr>
+    <tr><td>0~11개월 · <b>0세반</b> 이용</td><td>584,000원</td><td class="big-number">416,000원</td></tr>
+    <tr><td>0~11개월 · <b>1세반</b> 이용</td><td>515,000원</td><td class="big-number">485,000원</td></tr>
+    <tr><td>12~23개월 · <b>1세반</b> 이용</td><td>515,000원</td><td>없음(보육료가 더 큼)</td></tr>
+    <tr><td>가정에서 양육</td><td>—</td><td class="big-number">전액 현금</td></tr>
+  </table>
+  </div>
+
+  <p>
+    12~23개월 구간에서 현금이 0원이 되는 것도 같은 계산입니다. 이 구간의 부모급여는 50만 원인데
+    1세반 보육료 단가가 515,000원이라 이미 더 큽니다. 부족분을 부모가 더 내는 것이 아니라
+    보육료 범위 안에서 전액 지원되고, 남는 차액이 없어 현금이 나오지 않는 구조입니다.
+    <b>통장에 안 들어왔다고 탈락한 것이 아닙니다.</b>
+  </p>
+
+  <h2>첫만남이용권 — 출생 순위로 금액이 갈린다</h2>
+  <p>
+    첫만남이용권은 출생아 1명당 한 번 주어지는 바우처입니다. 금액은 <b>첫째 200만 원, 둘째 이상 300만 원</b>이며,
+    현금이 아니라 <b>국민행복카드에 포인트로 충전</b>되는 방식입니다.
+    쌍둥이·다둥이는 한 묶음으로 보지 않고 아동마다 출생 순위를 매겨 각각 계산합니다.
+    첫아이가 쌍둥이라면 첫째 200만 원 + 둘째 300만 원 = <b>500만 원</b>,
+    세쌍둥이라면 200 + 300 + 300 = <b>800만 원</b>이 됩니다.
+  </p>
+  <p>
+    사용처는 쓸 수 있는 곳을 나열하는 방식이 아니라 <b>쓸 수 없는 업종을 지정해 막는 방식</b>입니다.
+    그래서 육아용품점, 대형마트, 온라인 쇼핑몰, 병원·약국, 산후조리원, 식료품·외식 등
+    일상적인 곳에서는 대체로 결제가 됩니다. 반대로 유흥업종, 카지노·복권 등 사행업종,
+    성인용품·상품권 판매점, 면세점, 일부 위생·레저 업종에서는 결제가 막힙니다.
+    잔액은 카드사 앱과 사회서비스 전자바우처 누리집에서 확인할 수 있습니다.
+  </p>
+
+  <div class="deadline-box">
+    <h3>⏰ 기한 두 개를 서로 헷갈리면 안 됩니다</h3>
+    <p><b>부모급여</b> — 출생일을 포함해 <b>60일 이내</b>에 접수하면 출생월분부터 받습니다. 60일이 지나면 접수한 달부터만 나오고 그 이전 달은 소급되지 않습니다. 100만 원 구간에서 한 달을 놓치면 그대로 100만 원 손실입니다.</p>
+    <p><b>첫만남이용권</b> — 2024년 1월 1일 이후 출생아는 <b>출생일로부터 2년</b>이 사용 기한입니다. 기한이 지나면 남은 포인트는 이월되지 않고 사라집니다. 큰 금액이라 천천히 쓰다가 잔액을 남기는 사례가 적지 않습니다.</p>
+  </div>
+
+  <h2>절차 — 한 번에 함께 접수하는 것이 원칙</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text"><b>출생신고와 함께 접수</b> — 주민센터(행정복지센터) 방문 시 '행복출산 원스톱서비스'로 부모급여·첫만남이용권·아동수당을 한 번에 접수합니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text"><b>온라인이면 정부24 또는 복지로</b> — 부모(친권자)가 직접 접수하는 경우 온라인으로도 가능합니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text"><b>국민행복카드를 준비</b> — 첫만남이용권 포인트가 얹힐 카드입니다. 없으면 카드사에서 먼저 발급받습니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text"><b>부모급여 입금 계좌를 지정</b> — 아동 명의 또는 보호자 명의 계좌를 등록합니다. 계좌를 바꾸면 별도로 변경해야 합니다.</div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-text"><b>어린이집 입소가 정해지면 알린다</b> — 보육료 지원으로 전환되며 차액만 현금으로 나오도록 조정됩니다.</div></div>
+  </div>
+
+  <div class="checklist">
+    <h2>✅ 자가 점검</h2>
+    <div class="check-item"><span class="chk">✓</span><span>아이 출생일로부터 오늘까지 <b>60일이 지나지 않았는지</b> 확인했다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>부모급여·첫만남이용권·아동수당 <b>세 가지를 모두</b> 접수했는지 확인했다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>국민행복카드 포인트 <b>잔액과 소멸 예정일</b>을 확인했다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>어린이집을 보낸 뒤 통장 금액이 줄었다면 <b>보육료로 전환된 것</b>임을 확인했다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>계좌를 바꾼 적이 있다면 <b>지급 계좌 변경</b>이 반영됐는지 확인했다.</span></div>
+  </div>
+
+  <div class="caution">
+    <div class="caution-item">① <b>둘 중 하나를 고르는 제도가 아닙니다.</b> 부모급여와 첫만남이용권은 근거와 목적이 달라 함께 받습니다. 아동수당도 별개로 겹칩니다.</div>
+    <div class="caution-item">② <b>어린이집·종일제 아이돌봄 등 정부가 이용료를 지원하는 서비스를 함께 이용하면</b> 부모급여는 현금이 아니라 그 지원금과 차액 형태로 조정됩니다. 이용 형태를 바꿀 때는 담당 기관에 알려야 합니다.</div>
+    <div class="caution-item">③ <b>포인트는 현금으로 바꿀 수 없습니다.</b> 첫만남이용권은 카드 결제로만 쓰이며, 사용 제한 업종에서는 결제가 거절됩니다.</div>
+    <div class="caution-item">④ <b>아동복지시설 보호아동 등 특수한 경우</b>에는 지급 방식이 달라질 수 있으므로 관할 지자체에 확인이 필요합니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>📞 문의처</h2>
+    <div class="contact-row"><span class="contact-label">보건복지상담센터</span> ☎129</div>
+    <div class="contact-row"><span class="contact-label">복지로</span> bokjiro.go.kr — 대상 확인 및 온라인 접수</div>
+    <div class="contact-row"><span class="contact-label">정부24</span> gov.kr — 행복출산 원스톱서비스</div>
+    <div class="contact-row"><span class="contact-label">사회서비스 전자바우처</span> socialservice.or.kr — 첫만남이용권 잔액 확인</div>
+    <div class="contact-row"><span class="contact-label">아이사랑</span> childcare.go.kr — 어린이집 보육료 단가 및 차액 안내</div>
+    <div class="contact-row"><span class="contact-label">주소지 행정복지센터</span> — 계좌 변경, 이용 형태 변경</div>
+  </div>
+
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"소득 기준을 두지 않은 설계는 행정 비용을 크게 줄인다. 자격 심사가 없으니 출생신고 한 번으로 절차가 끝나고, 심사 과정에서 탈락하는 사각지대도 생기지 않는다."</p>
+          <p class="author">— 아동복지 정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"현금과 바우처를 나눈 조합은 나쁘지 않다. 출산 직후에는 목돈이 필요하고 이후에는 매달 나가는 돈이 문제인데, 두 제도가 그 시차를 각각 맡고 있다."</p>
+          <p class="author">— 가족정책 현장 활동가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"보육료 전환 구조는 이용자 입장에서 지나치게 불투명하다. 어린이집에 보냈다는 이유로 통장 금액이 절반 아래로 떨어지면 대다수는 감액으로 받아들인다."</p>
+          <p class="author">— 사회정책 행정 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"만 두 돌에서 지원이 끊긴다는 점이 문제다. 양육비 부담은 오히려 그 이후에 늘어나는데, 제도는 가장 짧은 구간에만 집중돼 있다."</p>
+          <p class="author">— 재정경제 연구자</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #부모급여 #첫만남이용권 #국민행복카드 #행복출산원스톱서비스 #보육료지원 #영아양육 #복지로 #정부24 #사회서비스전자바우처 #아이사랑
+  </div>
+
+  <div class="disclaimer">
+    이 기사는 공개된 정보를 바탕으로 작성되었습니다. 본문의 부모급여 금액, 정부지원 보육료 단가(0세반 584,000원·1세반 515,000원·2세반 426,000원)와
+    그에 따른 현금 차액은 <b>2026년 기준</b>이며 매년 새로 고시됩니다. 첫만남이용권 금액과 사용 기한은 2024년 1월 1일 이후 출생아 기준이고,
+    사용 가능·제한 업종은 카드사와 가맹점 등록 상태에 따라 개별 결제에서 달라질 수 있습니다. 어린이집 반 배정과 지역별 추가 지원은 지자체마다 차이가 있으므로
+    정확한 지원 여부와 금액은 담당 기관에 확인하세요.
+  </div>
+
+  <div class="written">작성일 2026-08-26 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
