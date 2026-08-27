@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>문화누리카드 사용처와 잔액 조회 — 발급 대상과 연간 충전액 확인 방법</title>
+<meta name="description" content="문화누리카드(통합문화이용권)는 6세 이상 기초생활수급자와 차상위계층에게 1인당 연 15만 원을 충전해 주는 문화·여행·체육 전용 카드입니다. 2026년 발급 기간은 2월 2일부터 11월 30일 18시까지, 사용 기간은 12월 31일까지이며 남은 국가지원금은 해를 넘기지 못하고 소멸합니다. 2025년 카드로 3만 원 이상 쓰고 수급자격을 유지하고 있으면 별도 절차 없이 자동 재충전됩니다. 잔액은 누리집·앱, 고객지원센터 1544-3412 ARS 2번, NH농협카드 1644-4000으로 확인할 수 있고, 영화·공연·도서·전시와 등록 여행사를 통한 교통편, 4대 프로스포츠 관람권에는 쓰이지만 마트·편의점·카페·배달·대중교통·상품권에는 결제되지 않습니다.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    background: #f8f9fa;
+    color: #222;
+    line-height: 1.7;
+  }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge {
+    display: inline-block;
+    background: #6a1b9a;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.35;
+    color: #1a1a1a;
+    margin-bottom: 18px;
+    word-break: keep-all;
+  }
+
+  .hook {
+    border-left: 5px solid #6a1b9a;
+    padding: 14px 18px;
+    background: #f3e5f5;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 22px;
+    font-size: 15px;
+  }
+  .hook .highlight { color: #4a148c; font-weight: 900; }
+
+  .summary-box {
+    background: #e8f5e9;
+    border: 2px solid #2e7d32;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 26px;
+  }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+
+  h2 { font-size: 19px; font-weight: 900; color: #4a148c; margin: 28px 0 12px; border-bottom: 2px solid #ce93d8; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #6a1b9a; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #f3e5f5; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #4a148c; }
+
+  .formula {
+    background: #faf4fd;
+    border: 1px solid #ce93d8;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 20px;
+    font-size: 14.5px;
+    line-height: 1.9;
+    word-break: keep-all;
+  }
+  .formula b { color: #4a148c; }
+
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #f3e5f5; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #6a1b9a; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+
+  .deadline-box {
+    border: 2px dashed #f57c00;
+    background: #fff8e1;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 22px;
+  }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+
+  .checklist { background: #f3e5f5; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #ce93d8; color: #4a148c; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #4a148c; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+
+  .caution { background: #f3e5f5; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+
+  .contact-box { background: #f3e5f5; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #4a148c; border-color: #ce93d8; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  .hashtags { font-size: 13px; color: #4a148c; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-08-27-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="문화누리카드 사용처와 잔액 조회 — 발급 대상과 연간 충전액 확인 방법">
+<meta property="og:description" content="문화누리카드(통합문화이용권)는 6세 이상 기초생활수급자와 차상위계층에게 1인당 연 15만 원을 충전해 주는 문화·여행·체육 전용 카드입니다. 2026년 발급 기간은 2월 2일부터 11월 30일 18시까지, 사용 기간은 12월 31일까지이며 남은 국가지원금은 해를 넘기지 못하고 소멸합니다. 2025년 카드로 3만 원 이상 쓰고 수급자격을 유지하고 있으면 별도 절차 없이 자동 재충전됩니다. 잔액은 누리집·앱, 고객지원센터 1544-3412 ARS 2번, NH농협카드 1644-4000으로 확인할 수 있고, 영화·공연·도서·전시와 등록 여">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-08-27-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-08-27T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-08-27T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-08-27-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-08-27-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "문화누리카드 사용처와 잔액 조회 — 발급 대상과 연간 충전액 확인 방법", "description": "문화누리카드(통합문화이용권)는 6세 이상 기초생활수급자와 차상위계층에게 1인당 연 15만 원을 충전해 주는 문화·여행·체육 전용 카드입니다. 2026년 발급 기간은 2월 2일부터 11월 30일 18시까지, 사용 기간은 12월 31일까지이며 남은 국가지원금은 해를 넘기지 못하고 소멸합니다. 2025년 카드로 3만 원 이상 쓰고 수급자격을 유지하고 있으면 별도 절차 없이 자동 재충전됩니다. 잔액은 누리집·앱, 고객지원센터 1544-3412 ARS 2번, NH농협카드 1644-4000으로 확인할 수 있고, 영화·공연·도서·전시와 등록 여", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-08-27", "dateModified": "2026-08-27", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 문화·여가 · 저소득 가구</div>
+  <div class="section-badge">문화누리카드 · 통합문화이용권</div>
+
+  <h1>문화누리카드 사용처와 잔액 조회 — 발급 대상과 연간 충전액 확인 방법</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대체로 두 부류입니다. 하나는 <span class="highlight">카드는 이미 있는데 어디서 쓸 수 있는지 몰라 서랍에 넣어 둔 경우</span>,
+    다른 하나는 <span class="highlight">올해 돈이 들어왔는지, 얼마가 남았는지 확인할 방법을 못 찾은 경우</span>입니다.
+    두 가지 다 아깝습니다. 이 카드에 들어오는 국가지원금은
+    <span class="highlight">해를 넘기지 못하고 12월 31일에 그냥 사라지기 때문</span>입니다.
+    쓰지 않은 돈은 다음 해로 넘어가지 않고, 현금으로 돌려받을 수도 없습니다.
+    아래에서 누가 받는지, 올해 얼마가 들어오는지, 잔액을 어떻게 확인하는지,
+    그리고 결제가 되는 곳과 안 되는 곳을 순서대로 짚었습니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li><b>1인당 연 15만 원</b> — 세대주가 아니라 <b>세대원 각자에게 1장씩</b> 나옵니다. 4인 가구면 4장, 합계 60만 원입니다.</li>
+      <li><b>대상은 6세 이상 기초생활수급자·차상위계층</b> — 2026년 기준 <b>2020년 12월 31일 이전 출생자</b>입니다.</li>
+      <li><b>작년에 3만 원 이상 썼다면 자동으로 충전</b>됩니다 — 다시 접수할 필요가 없습니다. 잔액부터 확인하세요.</li>
+      <li><b>잔액 조회는 전화로도 됩니다</b> — 고객지원센터 <b>1544-3412</b> ARS <b>2번</b>. 본인인증 수단이 없어도 카드번호와 생년월일로 확인됩니다.</li>
+      <li><b>12월 31일에 잔액이 소멸</b>합니다 — 이월도, 환급도 되지 않습니다.</li>
+    </ul>
+  </div>
+
+  <p style="font-size:13px;color:#888;margin-bottom:22px;">
+    ※ 본문의 금액과 날짜는 모두 <b>2026년 기준</b>입니다. 이 카드는 지원금이 해마다 올라왔고
+    (2024년 13만 원 → 2025년 14만 원 → 2026년 15만 원), 발급·사용 기간도 매년 새로 공고됩니다.
+    검색으로 다른 글을 볼 때는 <b>몇 년도 기준인지부터</b> 확인하세요.
+  </p>
+
+  <h2>문화누리카드가 어떤 카드인가</h2>
+  <p>
+    정식 명칭은 <b>통합문화이용권</b>입니다. 문화체육관광부와 한국문화예술위원회가 운영하고,
+    카드는 NH농협카드로 발급됩니다. 생계비가 빠듯한 가구일수록 가장 먼저 줄이는 것이
+    영화 한 편, 책 한 권, 1박 여행 같은 지출이라는 문제의식에서 출발한 제도입니다.
+    그래서 이 카드는 <b>현금이 아니라 용도가 묶인 충전금</b>으로 나옵니다.
+    마트에서 장을 보라고 준 돈이 아니라, 문화·여행·체육에만 쓰라고 준 돈입니다.
+  </p>
+  <p>
+    다른 복지 급여와 성격이 다른 점이 하나 더 있습니다. 생계급여나 주거급여는 가구 단위로 계산되지만,
+    이 카드는 <b>자격을 갖춘 세대원 각자에게 한 장씩</b> 나옵니다.
+    부모와 자녀 셋으로 이뤄진 다섯 식구가 모두 수급 가구라면 카드도 다섯 장,
+    충전액도 15만 원씩 다섯 몫입니다. 이 사실을 모르고 세대주 한 명만 받아 가는 경우가 적지 않습니다.
+  </p>
+
+  <h2>누가 받을 수 있나</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>구분</th><th>2026년 내용</th></tr>
+    <tr><td><b>연령</b></td><td>만 6세 이상 — <b>2020년 12월 31일 이전 출생자</b></td></tr>
+    <tr><td><b>자격</b></td><td>기초생활수급자(생계·의료·주거·교육급여) 및 <b>차상위계층</b></td></tr>
+    <tr><td><b>차상위 범위</b></td><td>자활근로자, 장애수당·장애인연금 수급자, 저소득 한부모가족 등 차상위 확인을 받은 가구</td></tr>
+    <tr><td><b>발급 단위</b></td><td>가구가 아니라 <b>자격을 갖춘 세대원 1인당 1장</b></td></tr>
+    <tr><td><b>충전액</b></td><td>1인당 연 <b class="big-number">15만 원</b> (2025년 14만 원에서 1만 원 인상)</td></tr>
+    <tr><td><b>추가 충전</b></td><td>생애주기별 추가지원금 <b>1만 원</b>이 별도로 운영됩니다. 대상 여부는 자격에 따라 갈리므로 누리집이나 주민센터에서 본인 해당 여부를 확인하세요.</td></tr>
+    <tr><td><b>미성년자</b></td><td>14세 미만은 보호자 동의와 휴대전화 인증이 필요합니다.</td></tr>
+  </table>
+  </div>
+
+  <h2>올해 일정 — 두 날짜가 다릅니다</h2>
+  <p>
+    가장 많이 헷갈리는 대목입니다. <b>돈을 받는 기한</b>과 <b>돈을 쓰는 기한</b>이 한 달 차이로 다릅니다.
+    11월 30일까지 카드를 만들지 않으면 그해 몫은 아예 받지 못하고,
+    카드를 만들었더라도 12월 31일까지 쓰지 않으면 남은 금액이 사라집니다.
+  </p>
+
+  <div class="svg-wrap">
+    <div class="svg-title">2026년 발급·사용 기간 (두 마감일이 다릅니다)</div>
+    <svg viewBox="0 0 660 210" width="100%" role="img" aria-label="2026년 문화누리카드 발급 기간과 사용 기간 비교 막대">
+      <text x="10" y="24" font-size="13" fill="#555" font-weight="700">2월 2일</text>
+      <text x="380" y="24" font-size="13" fill="#555" font-weight="700">11월 30일</text>
+      <text x="560" y="24" font-size="13" fill="#555" font-weight="700">12월 31일</text>
+
+      <text x="10" y="60" font-size="13" fill="#4a148c" font-weight="900">발급 기간</text>
+      <rect x="10" y="70" width="420" height="34" rx="8" fill="#6a1b9a"></rect>
+      <text x="120" y="92" font-size="13" fill="#fff" font-weight="700">2. 2. ~ 11. 30. 18시까지 카드 발급</text>
+
+      <text x="10" y="136" font-size="13" fill="#e65100" font-weight="900">사용 기간</text>
+      <rect x="10" y="146" width="600" height="34" rx="8" fill="#f57c00"></rect>
+      <text x="140" y="168" font-size="13" fill="#fff" font-weight="700">2. 2. ~ 12. 31. 이후 잔액 소멸</text>
+
+      <line x1="430" y1="66" x2="430" y2="190" stroke="#6a1b9a" stroke-width="2" stroke-dasharray="4 4"></line>
+      <line x1="610" y1="142" x2="610" y2="190" stroke="#c62828" stroke-width="2" stroke-dasharray="4 4"></line>
+      <text x="436" y="204" font-size="11" fill="#6a1b9a">발급 마감</text>
+      <text x="556" y="204" font-size="11" fill="#c62828">잔액 소멸</text>
+    </svg>
+  </div>
+
+  <h2>작년에 카드를 썼다면 올해는 자동입니다</h2>
+  <p>
+    해마다 주민센터에 다시 가야 한다고 알고 계신 분이 많은데, 조건을 채우면 그럴 필요가 없습니다.
+    아래 세 가지를 모두 만족하면 <b>별도 절차 없이 기존 카드에 올해 금액이 얹힙니다.</b>
+  </p>
+  <div class="formula">
+    <b>자동 재충전 조건 (세 가지 모두 해당)</b><br>
+    ① 2025년 카드로 <b>3만 원 이상</b> 사용한 이력이 있을 것<br>
+    ② 2026년 1월 자격 검증 시점에 <b>수급 자격을 유지</b>하고 있을 것<br>
+    ③ 카드 <b>유효기간이 2026년 1월 이후</b>일 것
+  </div>
+  <p>
+    거꾸로 말하면, 작년에 카드를 받아 두고 <b>3만 원도 쓰지 않은 경우에는 자동 충전이 되지 않습니다.</b>
+    이 경우 올해 몫을 받으려면 직접 처리해야 합니다. 그래서 <b>연초에 잔액부터 확인하는 습관</b>이
+    실질적으로 가장 중요합니다. 자동으로 들어왔는지, 안 들어왔는지가 그 자리에서 갈립니다.
+  </p>
+
+  <h2>잔액 확인하는 세 가지 방법</h2>
+  <p>
+    스마트폰 인증이 어려운 어르신이라면 <b>전화 두 통</b>만 기억해도 충분합니다.
+    본인인증 수단 없이 카드번호와 생년월일만으로 조회됩니다.
+  </p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text"><b>누리집·앱</b> — 문화누리카드 누리집(mnuri.kr) 또는 공식 앱의 <b>[카드발급/잔액확인]</b> 메뉴에서 실명 인증 후 사용 내역과 잔액을 함께 봅니다.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text"><b>고객지원센터 ☎ 1544-3412</b> — ARS <b>2번(잔액조회)</b>을 누르고 카드번호와 생년월일을 입력합니다. 상담원 연결은 <b>4번</b>입니다.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text"><b>NH농협카드 ☎ 1644-4000</b> — <b>기프트카드(7번) → 문화누리카드(5번) → 잔액조회(1번)</b> 순서로 누릅니다.</div>
+    </div>
+  </div>
+
+  <h2>카드 받는 네 가지 경로</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>경로</th><th>내용</th><th>유의할 점</th></tr>
+    <tr><td><b>주민센터 방문</b></td><td>주소지 행정복지센터에서 그 자리에서 처리</td><td>인증 수단이 없거나 서류 확인이 필요할 때 가장 확실합니다</td></tr>
+    <tr><td><b>누리집·앱 → 우편 수령</b></td><td>온라인으로 접수한 뒤 카드를 우편으로 받음</td><td>받은 뒤 <b>인터넷 수령 등록</b>을 마쳐야 사용이 개시됩니다</td></tr>
+    <tr><td><b>누리집·앱 → 농협 수령</b></td><td>온라인 접수 후 농협 영업점에서 카드 수령</td><td><b>신규 발급만 가능</b>합니다. 재발급은 영업점 수령이 안 됩니다</td></tr>
+    <tr><td><b>전화 ARS 재충전</b></td><td>기존 카드에 올해 금액을 얹는 방식</td><td>카드가 이미 있고 유효기간이 남아 있는 경우에 해당합니다</td></tr>
+  </table>
+  </div>
+
+  <h2>어디서 결제되나 — 세 갈래</h2>
+  <p>
+    쓸 수 있는 곳은 크게 <b>문화예술 · 국내여행 · 체육</b> 세 갈래입니다.
+    개별 가맹점 등록 여부에 따라 같은 업종이라도 결제가 갈리므로,
+    큰 금액을 쓰기 전에는 누리집의 가맹점 검색으로 해당 점포가 등록돼 있는지 미리 보는 편이 안전합니다.
+  </p>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>분야</th><th>대표적인 사용처</th></tr>
+    <tr><td><b>문화예술</b></td><td>영화 관람, 공연·뮤지컬·연극, 서점의 도서 구입, 전시·박물관·미술관 관람</td></tr>
+    <tr><td><b>국내여행</b></td><td>등록된 여행사를 통한 기차·고속버스·항공·선박 승차권, 렌터카, 숙박</td></tr>
+    <tr><td><b>체육</b></td><td>야구·축구·농구·배구 4대 프로스포츠 관람권, 등록된 체육시설 이용</td></tr>
+  </table>
+  </div>
+
+  <h2>결제가 막히는 곳</h2>
+  <p>
+    문화 활동과 무관한 생활 소비를 막기 위해 업종 자체가 차단돼 있습니다.
+    카드 오류가 아니라 설계된 제한이라 매장에서 다시 시도해도 되지 않습니다.
+  </p>
+  <div class="caution">
+    <div class="caution-item">① <b>생활 소비</b> — 대형마트·편의점·카페·배달 애플리케이션, 식료품, 담배</div>
+    <div class="caution-item">② <b>대중교통</b> — 시내버스·지하철 등 일상 교통. 여행 목적의 기차·고속버스와는 구분됩니다</div>
+    <div class="caution-item">③ <b>현금성 물품</b> — 상품권, 기프트카드 등 되팔 수 있는 품목</div>
+    <div class="caution-item">④ <b>기타</b> — 미용실, 패션잡화·액세서리, 생활 소모품, 보드게임카페 등</div>
+    <div class="caution-item">⑤ 다만 <b>영화관·놀이공원 현장에서 사는 식음료</b>는 예외로 결제되는 경우가 있습니다</div>
+  </div>
+
+  <h2>가족끼리 합쳐 쓸 수 있나</h2>
+  <p>
+    가능합니다. <b>같은 세대 안에서는</b> 각자 카드에 충전된 잔액을 세대원 한 명의 카드로 모을 수 있습니다.
+    4인 가구가 15만 원씩 나눠 가진 60만 원을 한 장에 합쳐 가족 여행 경비로 한 번에 결제하는 식입니다.
+    다만 <b>다른 세대와는 합산되지 않고</b>, 카드를 타인에게 빌려주거나 양도하는 것도 안 됩니다.
+  </p>
+  <p>
+    잔액 성격도 두 가지로 나뉩니다. 국가가 넣어 준 <b>지원금은 그해 12월 31일에 소멸</b>하지만,
+    본인이 따로 충전해 넣은 금액은 카드 유효기간까지 남습니다.
+    연말에 잔액이 조금 남았을 때 어느 쪽이 남은 것인지 확인해 두면 판단이 쉬워집니다.
+  </p>
+
+  <div class="deadline-box">
+    <h3>⏰ 놓치면 되돌릴 수 없는 두 날짜</h3>
+    <p><b>2026년 11월 30일 18시</b> — 이 시각을 넘기면 올해 카드를 만들 수 없습니다. 다음 해로 이월되지 않습니다.</p>
+    <p><b>2026년 12월 31일</b> — 남은 국가지원금이 소멸합니다. 환급도, 이월도 되지 않습니다.</p>
+    <p>연말에 몰리면 인기 공연·여행 상품은 이미 마감돼 선택지가 좁아집니다. 상반기에 계획을 세워 두는 편이 낫습니다.</p>
+  </div>
+
+  <div class="checklist">
+    <h2>✅ 내 경우엔 어떤가 — 자가 점검</h2>
+    <div class="check-item"><span class="chk">✓</span><span>우리 집이 기초생활수급 또는 차상위 확인을 받은 가구인가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>2020년 12월 31일 이전에 태어난 <b>세대원 전원</b>이 각자 카드를 갖고 있는가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>작년 카드로 3만 원 이상 썼는가 — 아니라면 자동 충전이 안 됐을 수 있다</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>올해 잔액을 한 번이라도 조회해 봤는가 (☎ 1544-3412 → 2번)</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>12월 31일까지 쓸 계획이 잡혀 있는가 — 남으면 그대로 사라진다</span></div>
+  </div>
+
+  <div class="contact-box">
+    <h2>📞 문의처</h2>
+    <div class="contact-row"><span class="contact-label">문화누리카드 고객지원센터</span> ☎ 1544-3412 (잔액조회 ARS 2번 · 상담원 4번)</div>
+    <div class="contact-row"><span class="contact-label">NH농협카드 고객센터</span> ☎ 1644-4000 (기프트카드 7 → 문화누리카드 5 → 잔액조회 1)</div>
+    <div class="contact-row"><span class="contact-label">문화누리카드 누리집</span> www.mnuri.kr — 카드발급·잔액확인·가맹점 검색</div>
+    <div class="contact-row"><span class="contact-label">주소지 행정복지센터</span> 자격 확인과 대면 발급</div>
+    <div class="contact-row"><span class="contact-label">보건복지상담센터</span> ☎ 129 — 수급·차상위 자격 전반</div>
+  </div>
+
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"가구가 아니라 개인 단위로 배분한 설계가 이 제도의 핵심이다. 문화 활동은 가구주가 대표해서 소비할 수 있는 성격이 아니고, 아동과 청소년의 몫이 별도로 확보된다는 점에서 다른 급여와 구분된다."</p>
+          <p class="author">— 문화정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"자동 재충전 도입은 실효성 있는 개선이었다. 해마다 창구를 다시 찾아야 하는 절차 자체가 고령 수급자에게는 가장 큰 장벽이었기 때문이다."</p>
+          <p class="author">— 지역복지관 현장 활동가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"연말 소멸 구조는 이용자에게 불리하게 작동한다. 잔액을 확인할 방법조차 모르는 계층이 상당수인데, 사용하지 못한 금액이 그대로 국고로 돌아가는 것은 전달 체계의 실패로 봐야 한다."</p>
+          <p class="author">— 사회정책 행정 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"가맹점 분포가 수도권과 대도시에 치우쳐 있다는 문제가 남아 있다. 공연장도 서점도 멀리 있는 지역에서는 금액이 같아도 실제로 누릴 수 있는 폭이 전혀 다르다."</p>
+          <p class="author">— 지역격차 연구자</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #문화누리카드 #통합문화이용권 #문화체육관광부 #한국문화예술위원회 #기초생활수급자 #차상위계층 #NH농협카드 #복지로 #행정복지센터 #보건복지상담센터129
+  </div>
+
+  <div class="disclaimer">
+    이 기사는 공개된 정보를 바탕으로 작성되었습니다. 본문의 충전액(1인당 연 15만 원), 생애주기별 추가지원금(1만 원),
+    발급 기간(2026. 2. 2. ~ 11. 30. 18시)과 사용 기간(2026. 2. 2. ~ 12. 31.)은 모두 <b>2026년 기준</b>이며 매년 새로 공고됩니다.
+    사용 가능·제한 업종은 개별 가맹점의 등록 상태에 따라 같은 업종 안에서도 결제 결과가 달라질 수 있고,
+    지역별 추가 지원과 자격 판정은 지자체마다 차이가 있습니다.
+    생애주기별 추가지원금의 본인 해당 여부를 포함해 정확한 지원 여부는 담당 기관에 확인하세요.
+  </div>
+
+  <div class="written">작성일 2026-08-27 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
