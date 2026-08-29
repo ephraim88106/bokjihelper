@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>희망저축계좌 1 2 차이 — 가입 조건과 만기 수령액 계산 방법</title>
+<meta name="description" content="희망저축계좌는 받고 있는 급여의 종류로 Ⅰ과 Ⅱ가 갈립니다. Ⅰ은 생계·의료급여 수급 가구가 대상이고 정부지원금이 월 30만원 정액이며 3년 뒤 탈수급해야 받습니다. Ⅱ는 주거·교육급여 수급 가구와 차상위계층이 대상이고 2026년부터 1년차 10만원·2년차 20만원·3년차 30만원으로 연차마다 올라갑니다. 본인이 월 10만원씩 3년을 넣으면 Ⅰ은 최대 1,440만원, Ⅱ는 최대 1,080만원을 이자와 함께 받습니다. 2026년 기준 중위소득 40%는 1인 1,025,695원·4인 2,597,895원, 50%는 1인 1,282,119원·4인 3,247,369원입니다.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    background: #f8f9fa;
+    color: #222;
+    line-height: 1.7;
+  }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge {
+    display: inline-block;
+    background: #1565c0;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.35;
+    color: #1a1a1a;
+    margin-bottom: 18px;
+    word-break: keep-all;
+  }
+
+  .hook {
+    border-left: 5px solid #1565c0;
+    padding: 14px 18px;
+    background: #e3f2fd;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 22px;
+    font-size: 15px;
+  }
+  .hook .highlight { color: #0d47a1; font-weight: 900; }
+
+  .summary-box {
+    background: #e8f5e9;
+    border: 2px solid #2e7d32;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 26px;
+  }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+
+  h2 { font-size: 19px; font-weight: 900; color: #0d47a1; margin: 28px 0 12px; border-bottom: 2px solid #90caf9; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #1565c0; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #e3f2fd; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #0d47a1; }
+
+  .formula {
+    background: #f3f8fe;
+    border: 1px solid #90caf9;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 20px;
+    font-size: 14.5px;
+    line-height: 1.9;
+    word-break: keep-all;
+  }
+  .formula b { color: #0d47a1; }
+
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #e3f2fd; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #1565c0; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+
+  .deadline-box {
+    border: 2px dashed #f57c00;
+    background: #fff8e1;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 22px;
+  }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+
+  .checklist { background: #e3f2fd; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #90caf9; color: #0d47a1; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #0d47a1; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+
+  .caution { background: #e3f2fd; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+
+  .contact-box { background: #e3f2fd; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #0d47a1; border-color: #90caf9; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  .hashtags { font-size: 13px; color: #0d47a1; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-08-29-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="희망저축계좌 1 2 차이 — 가입 조건과 만기 수령액 계산 방법">
+<meta property="og:description" content="희망저축계좌는 받고 있는 급여의 종류로 Ⅰ과 Ⅱ가 갈립니다. Ⅰ은 생계·의료급여 수급 가구가 대상이고 정부지원금이 월 30만원 정액이며 3년 뒤 탈수급해야 받습니다. Ⅱ는 주거·교육급여 수급 가구와 차상위계층이 대상이고 2026년부터 1년차 10만원·2년차 20만원·3년차 30만원으로 연차마다 올라갑니다. 본인이 월 10만원씩 3년을 넣으면 Ⅰ은 최대 1,440만원, Ⅱ는 최대 1,080만원을 이자와 함께 받습니다. 2026년 기준 중위소득 40%는 1인 1,025,695원·4인 2,597,895원, 50%는 1인 1,282,119">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-08-29-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-08-29T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-08-29T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-08-29-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-08-29-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "희망저축계좌 1 2 차이 — 가입 조건과 만기 수령액 계산 방법", "description": "희망저축계좌는 받고 있는 급여의 종류로 Ⅰ과 Ⅱ가 갈립니다. Ⅰ은 생계·의료급여 수급 가구가 대상이고 정부지원금이 월 30만원 정액이며 3년 뒤 탈수급해야 받습니다. Ⅱ는 주거·교육급여 수급 가구와 차상위계층이 대상이고 2026년부터 1년차 10만원·2년차 20만원·3년차 30만원으로 연차마다 올라갑니다. 본인이 월 10만원씩 3년을 넣으면 Ⅰ은 최대 1,440만원, Ⅱ는 최대 1,080만원을 이자와 함께 받습니다. 2026년 기준 중위소득 40%는 1인 1,025,695원·4인 2,597,895원, 50%는 1인 1,282,119", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-08-29", "dateModified": "2026-08-29", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 자산형성 · 저소득 근로가구</div>
+  <div class="section-badge">희망저축계좌 Ⅰ · Ⅱ</div>
+
+  <h1>희망저축계좌 1 2 차이 — 가입 조건과 만기 수령액 계산 방법</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대체로 이런 상황입니다. 주민센터에서
+    <span class="highlight">"희망저축계좌 한번 해 보시라"는 말을 듣고 나왔는데 1인지 2인지 헷갈리는 경우</span>,
+    검색해 보니 <span class="highlight">누구는 월 30만원을 받고 누구는 10만원을 받는다고 나와 혼란스러운 경우</span>,
+    그리고 <span class="highlight">3년 뒤에 정확히 얼마가 나오는지 계산해 보고 싶은 경우</span>입니다.
+    이 제도에서 가장 먼저 잡아야 할 것은 딱 하나입니다.
+    <span class="highlight">Ⅰ과 Ⅱ를 가르는 기준은 소득 액수가 아니라 지금 받고 있는 급여의 종류</span>라는 점입니다.
+    내가 어느 쪽인지는 이미 정해져 있고, 고를 수 있는 것이 아닙니다.
+    아래에서 그 갈림길, 2026년 기준 금액표, 만기에 손에 쥐는 금액을 계산하는 방법,
+    그리고 만기 지급이 취소되는 조건까지 차례로 짚었습니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li><b>급여 종류로 갈립니다</b> — 생계·의료급여를 받고 있으면 <b>Ⅰ</b>, 주거·교육급여를 받거나 차상위계층이면 <b>Ⅱ</b>입니다. 소득이 비슷해도 급여 종류가 다르면 다른 계좌로 갑니다.</li>
+      <li><b>본인 저축은 양쪽 다 월 10만원 이상</b> — 최대 50만원까지 넣을 수 있지만, 정부 매칭은 <b>10만원분에만</b> 붙습니다. 더 넣어도 지원금은 늘지 않습니다.</li>
+      <li><b>정부지원금이 다릅니다</b> — Ⅰ은 <b>월 30만원 정액</b>, Ⅱ는 2026년 기준 <b>1년차 10만원 → 2년차 20만원 → 3년차 30만원</b>으로 올라갑니다.</li>
+      <li><b>3년 만기 수령액</b> — Ⅰ은 최대 <b>1,440만원</b>, Ⅱ는 최대 <b>1,080만원</b>(각각 본인 저축 360만원 포함, 이자 별도).</li>
+      <li><b>만기에 돈을 받는 조건이 다릅니다</b> — Ⅰ은 <b>탈수급</b>이 핵심이고, Ⅱ는 <b>근로 지속 + 자립역량교육 10시간 + 자금사용계획서</b>입니다.</li>
+      <li><b>다른 자산형성 통장과 중복 가입은 안 됩니다</b> — 청년내일저축계좌와 동시에 들 수 없습니다.</li>
+    </ul>
+  </div>
+
+  <p style="font-size:13px;color:#888;margin-bottom:22px;">
+    ※ 본문의 소득 기준선과 지원금액은 모두 <b>2026년 기준</b>입니다.
+    기준 중위소득은 해마다 다시 정해져 1월 1일부터 새 금액이 적용되고,
+    정부지원금 단가와 모집 차수도 매년 자활사업안내로 새로 공고됩니다.
+    검색으로 다른 글을 볼 때는 <b>몇 년도 기준인지부터</b> 확인하세요.
+  </p>
+
+  <h2>희망저축계좌가 어떤 제도인가</h2>
+  <p>
+    보건복지부가 운영하는 <b>자산형성지원사업</b>의 하나입니다.
+    저소득 근로 가구가 스스로 돈을 모으면 정부가 같은 통장에 <b>근로소득장려금</b>을 얹어 주는 구조입니다.
+    현금을 주는 급여가 아니라 <b>3년을 채워야 완성되는 적금</b>에 가깝습니다.
+  </p>
+  <p>
+    설계 의도가 분명합니다. 매달 생계비를 보태는 것이 아니라,
+    <b>일해서 버는 사람이 목돈을 만들어 수급 상태에서 빠져나오도록</b> 돕는 것이 목적입니다.
+    그래서 <b>근로·사업소득이 없으면 가입 자체가 되지 않고</b>,
+    중간에 일을 그만두면 계좌가 해지될 수 있습니다.
+    "소득이 적을수록 유리한 제도"가 아니라 <b>"적더라도 일하고 있어야 하는 제도"</b>라는 점이 다른 복지 급여와 가장 크게 다른 대목입니다.
+  </p>
+
+  <h2>Ⅰ과 Ⅱ를 가르는 기준 — 지금 받는 급여가 무엇인가</h2>
+  <p>
+    가장 많이 오해하는 부분입니다. 두 계좌는 <b>내가 고르는 것이 아닙니다.</b>
+    현재 어떤 급여를 받고 있느냐에 따라 자동으로 갈립니다.
+  </p>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>구분</th><th>희망저축계좌 Ⅰ</th><th>희망저축계좌 Ⅱ</th></tr>
+    <tr><td><b>가입 대상</b></td><td>일하고 있는 <b>생계·의료급여</b> 수급 가구</td><td>일하고 있는 <b>주거·교육급여</b> 수급 가구 및 차상위계층</td></tr>
+    <tr><td><b>소득 기준</b></td><td>기준 중위소득 <b>40% 이하</b></td><td>기준 중위소득 <b>50% 이하</b></td></tr>
+    <tr><td><b>본인 저축</b></td><td colspan="2">월 10만원 이상 ~ 50만원 이하 (정부 매칭은 10만원분에만 적용)</td></tr>
+    <tr><td><b>정부지원금</b></td><td><b>월 30만원 정액</b></td><td><b>1년차 10만원 · 2년차 20만원 · 3년차 30만원</b></td></tr>
+    <tr><td><b>적립 기간</b></td><td colspan="2">3년 (36개월)</td></tr>
+    <tr><td><b>자립역량교육</b></td><td>별도 의무 없음</td><td><b>10시간 이상 이수</b></td></tr>
+    <tr><td><b>자금사용계획서</b></td><td>불필요</td><td><b>제출 필수</b></td></tr>
+    <tr><td><b>만기 지급 요건</b></td><td><b>탈수급</b> 달성</td><td>근로 지속 + 교육 이수 + 계획서 제출</td></tr>
+    <tr><td><b>3년 만기 수령액</b></td><td class="big-number">최대 1,440만원</td><td class="big-number">최대 1,080만원</td></tr>
+  </table>
+  </div>
+  <p>
+    표에서 보듯 Ⅰ의 지원금이 더 큽니다. 대신 요구하는 것도 큽니다.
+    Ⅰ은 만기 시점에 <b>생계·의료급여 수급자에서 벗어나 있어야</b> 정부지원금을 받습니다.
+    Ⅱ는 탈수급까지 요구하지 않는 대신 지원금이 첫해에 낮게 시작합니다.
+    <b>지원금의 크기와 요구 조건의 무게가 맞물려 있는 구조</b>라고 보면 이해가 빠릅니다.
+  </p>
+
+  <h2>2026년 소득 기준선 — 가구원 수별 금액</h2>
+  <p>
+    비교 대상은 월급이 아니라 <b>소득인정액</b>입니다.
+    번 돈에서 근로소득공제를 빼고, 집·전세보증금·예금·자동차를 월 소득으로 환산해 더한 값입니다.
+  </p>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>가구원 수</th><th>기준 중위소득 100%</th><th>Ⅰ 기준 (40%)</th><th>Ⅱ 기준 (50%)</th></tr>
+    <tr><td>1인</td><td>2,564,238원</td><td>1,025,695원</td><td>1,282,119원</td></tr>
+    <tr><td>2인</td><td>4,199,292원</td><td>1,679,717원</td><td>2,099,646원</td></tr>
+    <tr><td>3인</td><td>5,359,036원</td><td>2,143,614원</td><td>2,679,518원</td></tr>
+    <tr><td>4인</td><td>6,494,738원</td><td>2,597,895원</td><td>3,247,369원</td></tr>
+    <tr><td>5인</td><td>7,556,719원</td><td>3,022,688원</td><td>3,778,359원</td></tr>
+    <tr><td>6인</td><td>8,555,952원</td><td>3,422,381원</td><td>4,277,976원</td></tr>
+  </table>
+  </div>
+  <p>
+    가구원 수는 주민등록상 세대가 아니라 <b>생계와 주거를 함께하는 가구</b>를 기준으로 판단합니다.
+    같은 집에 살아도 별도 가구로 볼 수 있고, 따로 살아도 한 가구로 묶일 수 있습니다.
+    이 판단은 창구에서 실제 생활 형태를 확인해 정합니다.
+  </p>
+
+  <h2>근로 요건 — 얼마를 벌고 있어야 하는가</h2>
+  <p>
+    두 계좌 모두 <b>신청 시점에 근로·사업소득이 있어야</b> 합니다. 여기에 Ⅰ은 하한선이 하나 더 붙습니다.
+  </p>
+  <div class="formula">
+    <b>희망저축계좌 Ⅰ</b> — 가구 전체의 근로·사업소득이
+    <b>기준 중위소득 40%의 60% 이상</b>이어야 합니다.<br>
+    2026년 1인 가구를 기준으로 계산하면 1,025,695원 × 60% = <b>약 615,000원</b> 선입니다.<br><br>
+    <b>희망저축계좌 Ⅱ</b> — 별도의 소득 하한선 없이
+    <b>현재 근로 활동 중이고 소득이 발생하고 있으면</b> 됩니다.
+  </div>
+  <p>
+    다만 이 하한선은 <b>가구원 수와 연도에 따라 적용 방식이 달라질 수 있어</b>
+    안내문마다 조금씩 다르게 적혀 있습니다. 근소하게 걸치는 경우라면
+    숫자를 혼자 판단하지 말고 주민센터에서 직접 확인하는 편이 확실합니다.
+    또한 <b>정부·지자체가 재정을 대는 일자리(자활근로·노인일자리·공공근로 등)의 소득은
+    근로소득으로 인정되지 않는 경우가 많습니다.</b> 이 부분이 탈락 사유로 가장 자주 걸립니다.
+  </p>
+
+  <h2>만기 수령액 계산 — 3년 뒤에 얼마가 나오나</h2>
+  <p>본인이 매달 10만원씩 36개월을 넣었다고 가정한 계산입니다. 이자는 별도로 붙습니다.</p>
+  <div class="formula">
+    <b>Ⅰ</b> — 본인 10만원 × 36개월 = <b>360만원</b><br>
+    　＋ 정부 30만원 × 36개월 = <b>1,080만원</b><br>
+    　＝ 합계 <b class="big-number">1,440만원</b><br><br>
+    <b>Ⅱ</b> — 본인 10만원 × 36개월 = <b>360만원</b><br>
+    　＋ 1년차 10만원 × 12 = 120만원<br>
+    　＋ 2년차 20만원 × 12 = 240만원<br>
+    　＋ 3년차 30만원 × 12 = 360만원 (정부 합계 <b>720만원</b>)<br>
+    　＝ 합계 <b class="big-number">1,080만원</b>
+  </div>
+
+  <div class="svg-wrap">
+    <div class="svg-title">3년 만기 수령액 구성 비교 (본인 저축 월 10만원 기준)</div>
+    <svg viewBox="0 0 640 250" width="100%" height="250" role="img" aria-label="희망저축계좌 Ⅰ과 Ⅱ의 만기 수령액 구성 비교 막대그래프">
+      <line x1="120" y1="30" x2="120" y2="200" stroke="#ccc" stroke-width="1"/>
+      <text x="60" y="75" font-size="15" font-weight="700" fill="#0d47a1">계좌 Ⅰ</text>
+      <rect x="120" y="50" width="100" height="42" fill="#90caf9"/>
+      <rect x="220" y="50" width="300" height="42" fill="#1565c0"/>
+      <text x="170" y="76" font-size="12" fill="#0d47a1" text-anchor="middle" font-weight="700">360만</text>
+      <text x="370" y="76" font-size="13" fill="#fff" text-anchor="middle" font-weight="700">정부 1,080만원</text>
+      <text x="536" y="76" font-size="14" font-weight="900" fill="#0d47a1">1,440만</text>
+
+      <text x="60" y="150" font-size="15" font-weight="700" fill="#0d47a1">계좌 Ⅱ</text>
+      <rect x="120" y="125" width="100" height="42" fill="#90caf9"/>
+      <rect x="220" y="125" width="200" height="42" fill="#42a5f5"/>
+      <text x="170" y="151" font-size="12" fill="#0d47a1" text-anchor="middle" font-weight="700">360만</text>
+      <text x="320" y="151" font-size="13" fill="#fff" text-anchor="middle" font-weight="700">정부 720만원</text>
+      <text x="436" y="151" font-size="14" font-weight="900" fill="#0d47a1">1,080만</text>
+
+      <rect x="120" y="215" width="16" height="14" fill="#90caf9"/>
+      <text x="144" y="227" font-size="12" fill="#555">본인 저축 360만원 (월 10만원 × 36개월)</text>
+      <rect x="380" y="215" width="16" height="14" fill="#1565c0"/>
+      <text x="404" y="227" font-size="12" fill="#555">정부 근로소득장려금</text>
+    </svg>
+  </div>
+  <p>
+    본인 저축액을 월 20만원, 30만원으로 올려도 <b>정부지원금은 그대로</b>입니다.
+    매칭은 10만원분에만 붙기 때문입니다. 다만 본인이 더 넣은 만큼은 이자와 함께 그대로 돌려받으므로,
+    여유가 있다면 <b>강제 저축 수단으로 활용하는 것 자체는 손해가 아닙니다.</b>
+  </p>
+
+  <h2>만기에 돈을 받는 조건 — 여기서 갈립니다</h2>
+  <p>
+    3년을 채우는 것만으로는 정부지원금이 나오지 않습니다. 계좌별 지급 요건이 따로 있습니다.
+  </p>
+  <h3>희망저축계좌 Ⅰ</h3>
+  <p>
+    핵심은 <b>탈수급</b>입니다. 적립 기간을 마친 뒤 정해진 기간 안에
+    생계·의료급여 수급자에서 벗어나야 정부지원금 전액이 지급됩니다.
+    탈수급을 이루면 <b>추가지원금</b>이 더 붙는 구조도 함께 운영됩니다.
+    반대로 계속 수급 상태에 머무르면 정부지원금 지급이 미뤄지거나 환수될 수 있습니다.
+  </p>
+  <h3>희망저축계좌 Ⅱ</h3>
+  <p>
+    탈수급은 요구하지 않습니다. 대신 세 가지를 모두 채워야 합니다.
+    <b>3년간 근로 활동을 이어 갈 것</b>, <b>자립역량교육을 10시간 이상 이수할 것</b>,
+    그리고 <b>자금사용계획서를 제출할 것</b>입니다.
+    교육은 온라인으로 이수할 수 있고, 계획서는 만기 전에 담당자가 안내합니다.
+    세 가지 중 하나라도 빠지면 본인 저축액과 이자만 돌려받습니다.
+  </p>
+
+  <h2>가입은 어떤 순서로 진행되나</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text">내가 받는 급여의 종류를 확인합니다. 생계·의료급여면 Ⅰ, 주거·교육급여이거나 차상위계층이면 Ⅱ입니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text">모집 차수를 확인합니다. 상시 접수가 아니라 <b>연중 정해진 차수에만</b> 받습니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text">주소지 <b>행정복지센터(동주민센터)를 방문</b>해 접수합니다. 사업·차수에 따라 온라인 접수를 받지 않는 경우가 있어 방문이 확실합니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text">서류를 냅니다 — 가입신청서·저축동의서, 자가진단표, 개인정보 및 금융정보 제공 동의서, 신분증 사본, 근로를 증명할 자료(재직증명서·사업자등록증 등).</div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-text">소득·재산 조사를 거쳐 대상자가 결정됩니다. 접수 마감 뒤 결과 통지까지 <b>보통 한 달 이상</b> 걸립니다.</div></div>
+    <div class="step"><div class="step-num">6</div><div class="step-text">선정되면 지정 은행에서 통장을 만들고 자동이체를 걸어 매달 적립을 시작합니다.</div></div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>⏰ 모집 차수 — 아무 때나 받지 않습니다</h3>
+    <p><b>희망저축계좌 Ⅰ</b> — 2026년에는 3월·6월·9월·11월 네 차례로 안내되고 있습니다.</p>
+    <p><b>희망저축계좌 Ⅱ</b> — 2026년에는 2월·7월·10월 세 차례입니다. 1차는 2월 2일부터 2월 24일까지 접수하고 결정은 4월 14일이었습니다.</p>
+    <p><b>차수별 정확한 날짜는 지자체 공고로 확정됩니다.</b> 며칠 단위로 다르게 잡히는 경우가 있으므로, 다음 차수를 노린다면 <b>해당 월이 시작되기 전에</b> 주민센터에 접수 일정을 미리 물어 두는 편이 안전합니다.</p>
+  </div>
+
+  <div class="checklist">
+    <h2>✅ 내 경우엔 어떤가 — 자가 점검</h2>
+    <div class="check-item"><span class="chk">✓</span><span>지금 받는 급여가 생계·의료급여인지, 주거·교육급여이거나 차상위인지 확인했다</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>우리 가구원 수 기준으로 40% 또는 50% 금액을 표에서 확인했다</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>월급이 아니라 재산까지 환산한 소득인정액으로 비교했다</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>지금 근로·사업소득이 발생하고 있고, 자활·공공일자리 소득만은 아니다</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>3년간 월 10만원을 계속 넣을 수 있는지 가계 사정을 따져 보았다</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>청년내일저축계좌 등 다른 자산형성 통장에 가입돼 있지 않다</span></div>
+  </div>
+
+  <h2>⚠️ 놓치기 쉬운 것들</h2>
+  <div class="caution">
+    <div class="caution-item"><b>① 중복 가입은 되지 않습니다.</b> 청년내일저축계좌를 비롯한 다른 자산형성 통장과 동시에 유지할 수 없습니다. 만 15~39세이면서 조건이 겹친다면 <b>어느 쪽 조건이 나에게 유리한지 먼저 비교</b>해야 합니다.</div>
+    <div class="caution-item"><b>② 적립을 잠시 멈출 수는 있습니다.</b> 사정이 생기면 적립 중지 제도를 쓸 수 있고, 본인 적립금은 정해진 범위 안에서 한 차례 중도 인출할 수 있습니다. 다만 조건과 횟수가 정해져 있으니 임의로 이체를 끊지 말고 담당자에게 먼저 알려야 합니다.</div>
+    <div class="caution-item"><b>③ 중도 해지 사유가 있습니다.</b> Ⅰ은 일정 기간 연속으로 근로·사업소득이 발생하지 않으면, Ⅱ는 소득인정액이 기준 중위소득 100%를 넘기면 해지될 수 있습니다. 해지되면 정부지원금은 받지 못하고 본인 저축분만 돌려받습니다.</div>
+    <div class="caution-item"><b>④ 통장은 반드시 본인 명의여야 합니다.</b> 가족 명의 계좌로는 적립이 인정되지 않고, 자동이체가 며칠이라도 밀리면 그달 적립이 빠질 수 있습니다. 급여일 직후로 이체일을 잡아 두는 편이 안전합니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>📞 문의처</h2>
+    <div class="contact-row"><span class="contact-label">주소지 행정복지센터</span> 접수·자격 확인·차수 일정 안내 (방문 접수가 원칙)</div>
+    <div class="contact-row"><span class="contact-label">자산형성포털 자산e룸터</span> hope.welfareinfo.or.kr — 사업 안내·적립 현황 조회</div>
+    <div class="contact-row"><span class="contact-label">복지로</span> www.bokjiro.go.kr — 제도 안내·소득인정액 모의계산</div>
+    <div class="contact-row"><span class="contact-label">보건복지상담센터</span> ☎ 129 — 수급 자격 전반</div>
+    <div class="contact-row"><span class="contact-label">보건복지부 자활정책과</span> 자산형성지원사업 총괄</div>
+  </div>
+
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"현금 급여만으로는 저소득 가구가 자산을 형성하지 못한다. 매칭 방식은 근로를 전제로 목돈을 만들어 주기 때문에, 수급 상태를 벗어난 뒤의 완충 자금을 마련해 주는 드문 제도다."</p>
+          <p class="author">— 사회복지 정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"연차별로 지원금을 올리는 방식은 중도 이탈을 줄이는 데 효과가 있다. 3년이라는 기간을 버티게 만드는 유인이 후반부에 몰려 있는 설계이기 때문이다."</p>
+          <p class="author">— 자활사업 현장 실무자</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"3년간 매달 10만원을 흔들림 없이 넣을 수 있는 가구는 저소득층 안에서도 상대적으로 여건이 나은 편이다. 가장 불안정한 가구가 오히려 참여하기 어렵다는 역설이 남아 있다."</p>
+          <p class="author">— 빈곤 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"탈수급을 지급 요건으로 거는 방식은 신중해야 한다. 만기 시점의 고용 상황은 개인의 노력만으로 결정되지 않는데, 결과에 따라 지원금을 회수하면 위험을 개인에게 떠넘기는 셈이 된다."</p>
+          <p class="author">— 노동시장 정책 연구자</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #희망저축계좌 #희망저축계좌1 #희망저축계좌2 #자산형성지원사업 #근로소득장려금 #보건복지부 #자산e룸터 #차상위계층 #기초생활수급자 #행정복지센터
+  </div>
+
+  <div class="disclaimer">
+    이 기사는 보건복지부 자산형성지원사업 안내와 자산형성포털(자산e룸터), 지방자치단체 모집 공고 등
+    공개된 정보를 바탕으로 작성되었습니다.
+    본문의 소득 기준선(2026년 기준 중위소득 40%·50%), 정부지원금 단가(Ⅰ 월 30만원, Ⅱ 1년차 10만원·2년차 20만원·3년차 30만원),
+    모집 차수는 모두 <b>2026년 기준</b>이며 해마다 새로 정해집니다.
+    근로소득 하한 기준과 인정되는 소득의 범위, 차수별 접수 일정은 지자체 공고에 따라 달라질 수 있습니다.
+    정확한 가입 가능 여부와 금액은 주소지 행정복지센터 또는 보건복지상담센터(☎ 129)에 확인하세요.
+  </div>
+
+  <div class="written">작성일 2026-08-29 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
