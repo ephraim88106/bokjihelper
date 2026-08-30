@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>가사간병방문지원사업 대상자 자격 — 서비스 시간과 본인부담금 계산</title>
+<meta name="description" content="가사간병방문지원사업은 만 65세 미만이면서 소득인정액이 기준 중위소득 70% 이하인 가구가 대상입니다. 장애정도가 심한 장애인, 6개월 이상 치료가 필요한 중증질환자, 희귀난치성 질환자, 소년소녀가정·조손가정·한부모가정, 의료급여 장기입원 퇴원자 등 여섯 갈래로 나뉩니다. 2026년 서비스 가격은 시간당 19,000원 기준으로 A형 월 24시간 456,000원, B형 27시간 513,000원, C형 40시간 760,000원이며 본인부담금은 수급자·차상위 면제 또는 3%, 중위 70% 이하 계층 6% 수준입니다. 2026년 기준 중위소득 70%는 1인 1,794,967원·4인 4,546,317원입니다.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    background: #f8f9fa;
+    color: #222;
+    line-height: 1.7;
+  }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge {
+    display: inline-block;
+    background: #1565c0;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.35;
+    color: #1a1a1a;
+    margin-bottom: 18px;
+    word-break: keep-all;
+  }
+
+  .hook {
+    border-left: 5px solid #1565c0;
+    padding: 14px 18px;
+    background: #e3f2fd;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 22px;
+    font-size: 15px;
+  }
+  .hook .highlight { color: #0d47a1; font-weight: 900; }
+
+  .summary-box {
+    background: #e8f5e9;
+    border: 2px solid #2e7d32;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 26px;
+  }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+
+  h2 { font-size: 19px; font-weight: 900; color: #0d47a1; margin: 28px 0 12px; border-bottom: 2px solid #90caf9; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #1565c0; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #e3f2fd; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #0d47a1; }
+
+  .formula {
+    background: #f3f8fe;
+    border: 1px solid #90caf9;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 20px;
+    font-size: 14.5px;
+    line-height: 1.9;
+    word-break: keep-all;
+  }
+  .formula b { color: #0d47a1; }
+
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #e3f2fd; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #1565c0; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+
+  .deadline-box {
+    border: 2px dashed #f57c00;
+    background: #fff8e1;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 22px;
+  }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+
+  .checklist { background: #e3f2fd; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #90caf9; color: #0d47a1; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #0d47a1; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+
+  .caution { background: #e3f2fd; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+
+  .contact-box { background: #e3f2fd; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #0d47a1; border-color: #90caf9; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  .hashtags { font-size: 13px; color: #0d47a1; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-08-30-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="가사간병방문지원사업 대상자 자격 — 서비스 시간과 본인부담금 계산">
+<meta property="og:description" content="가사간병방문지원사업은 만 65세 미만이면서 소득인정액이 기준 중위소득 70% 이하인 가구가 대상입니다. 장애정도가 심한 장애인, 6개월 이상 치료가 필요한 중증질환자, 희귀난치성 질환자, 소년소녀가정·조손가정·한부모가정, 의료급여 장기입원 퇴원자 등 여섯 갈래로 나뉩니다. 2026년 서비스 가격은 시간당 19,000원 기준으로 A형 월 24시간 456,000원, B형 27시간 513,000원, C형 40시간 760,000원이며 본인부담금은 수급자·차상위 면제 또는 3%, 중위 70% 이하 계층 6% 수준입니다. 2026년 기준 중위">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-08-30-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-08-30T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-08-30T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-08-30-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-08-30-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "가사간병방문지원사업 대상자 자격 — 서비스 시간과 본인부담금 계산", "description": "가사간병방문지원사업은 만 65세 미만이면서 소득인정액이 기준 중위소득 70% 이하인 가구가 대상입니다. 장애정도가 심한 장애인, 6개월 이상 치료가 필요한 중증질환자, 희귀난치성 질환자, 소년소녀가정·조손가정·한부모가정, 의료급여 장기입원 퇴원자 등 여섯 갈래로 나뉩니다. 2026년 서비스 가격은 시간당 19,000원 기준으로 A형 월 24시간 456,000원, B형 27시간 513,000원, C형 40시간 760,000원이며 본인부담금은 수급자·차상위 면제 또는 3%, 중위 70% 이하 계층 6% 수준입니다. 2026년 기준 중위", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-08-30", "dateModified": "2026-08-30", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 사회서비스 이용권 · 저소득 돌봄</div>
+  <div class="section-badge">가사·간병 방문지원사업</div>
+
+  <h1>가사간병방문지원사업 대상자 자격 — 서비스 시간과 본인부담금 계산</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대체로 이런 상황입니다.
+    <span class="highlight">가족 중에 거동이 불편한 사람이 있는데 나이가 65세가 안 돼 장기요양등급을 받을 수 없는 경우</span>,
+    <span class="highlight">주민센터에서 "가사간병 한번 알아보시라"는 말만 듣고 나와 무엇을 얼마나 해 주는지 모르는 경우</span>,
+    그리고 <span class="highlight">검색해 보니 41만원·46만원·45만6천원처럼 금액이 제각각이라 어느 것이 맞는지 헷갈리는 경우</span>입니다.
+    이 제도에서 먼저 잡아야 할 것은 두 가지입니다.
+    하나는 <span class="highlight">만 65세 미만만 대상</span>이라는 점,
+    다른 하나는 <span class="highlight">몸 상태만이 아니라 소득까지 함께 봐서 자격이 갈린다</span>는 점입니다.
+    아래에서 대상자 여섯 갈래, 2026년 가구원수별 소득 기준선,
+    유형별 이용 시간과 서비스 가격, 그리고 본인부담금이 어떻게 계산되는지를 차례로 짚었습니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li><b>만 65세 미만이 조건입니다</b> — 65세가 넘으면 이 제도가 아니라 <b>노인장기요양보험</b>으로 갑니다. 나이가 첫 번째 갈림길입니다.</li>
+      <li><b>소득은 기준 중위소득 70% 이하</b> — 2026년 기준으로 1인 가구 약 179만원, 4인 가구 약 455만원 선입니다.</li>
+      <li><b>몸 상태 요건이 따로 있습니다</b> — 장애정도가 심한 장애인, 6개월 이상 치료가 필요한 중증질환자, 희귀난치성 질환자, 소년소녀가정·조손가정·한부모가정 등 여섯 갈래입니다.</li>
+      <li><b>월 24시간 · 27시간 · 40시간 세 유형</b> — 2026년 서비스 가격은 각각 456,000원 · 513,000원 · 760,000원, 시간당 19,000원입니다.</li>
+      <li><b>본인부담금은 대부분 3만원 안팎</b> — 생계·의료·주거·교육급여 수급자와 차상위계층은 면제이거나 3% 수준, 중위 70% 이하 계층은 6% 수준입니다.</li>
+      <li><b>해 주는 일은 간병과 가사 양쪽입니다</b> — 세면·식사 보조 같은 신체수발, 체위 변경 같은 신변활동, 청소·식사 준비 같은 가사, 외출 동행·말벗까지 포함됩니다.</li>
+    </ul>
+  </div>
+
+  <p style="font-size:13px;color:#888;margin-bottom:22px;">
+    ※ 본문의 소득 기준선과 서비스 가격은 모두 <b>2026년 기준</b>입니다.
+    기준 중위소득은 해마다 다시 고시돼 1월 1일부터 새 금액이 적용되고,
+    사회서비스 이용권의 시간당 단가도 매년 운영 지침으로 새로 정해집니다.
+    검색으로 다른 글을 볼 때 41만원·42만원대 금액이 보인다면 이전 연도 자료일 가능성이 큽니다.
+    <b>몇 년도 기준인지부터</b> 확인하세요.
+  </p>
+
+  <h2>어떤 제도인가 — 장기요양과 무엇이 다른가</h2>
+  <p>
+    보건복지부가 운영하는 <b>사회서비스 이용권(전자바우처)</b> 사업의 하나입니다.
+    일상생활과 사회활동이 어려운 저소득 가구에 <b>요양보호사가 집으로 찾아와</b>
+    간병과 가사를 함께 돕도록 하고, 그 비용의 대부분을 정부가 부담하는 구조입니다.
+    현금을 주는 급여가 아니라 <b>정해진 시간만큼 서비스를 살 수 있는 이용권</b>을 주는 방식입니다.
+  </p>
+  <p>
+    가장 많이 헷갈리는 대목이 노인장기요양보험과의 관계입니다. 갈림길은 단순합니다.
+    <b>만 65세가 넘었거나 노인성 질병으로 장기요양등급을 받을 수 있으면 장기요양</b>으로 가고,
+    <b>65세 미만이면서 등급을 받을 길이 없는 사람</b>이 이 제도의 자리입니다.
+    젊은 중증질환자나 희귀난치성 질환자가 돌봄 제도의 사각지대에 놓이는 것을 메우려고 만든 사업이라
+    나이 상한이 제도의 뼈대에 해당합니다.
+  </p>
+  <p>
+    부수적인 목적이 하나 더 있습니다. 서비스를 제공하는 요양보호사의
+    <b>일자리를 만드는 것</b>도 사업 목적에 명시돼 있습니다.
+    그래서 제공인력은 「노인복지법」에 따른 <b>요양보호사 자격</b>을 갖춘 사람으로 한정됩니다.
+    자격 없는 이웃이나 가족이 대신 서비스를 제공하고 비용을 청구하는 방식은 인정되지 않습니다.
+  </p>
+
+  <h2>대상자 자격 ① 나이와 소득</h2>
+  <p>
+    두 가지를 모두 만족해야 합니다. <b>만 65세 미만</b>이면서
+    <b>가구의 소득인정액이 기준 중위소득 70% 이하</b>여야 합니다.
+    여기서 소득인정액은 통장에 찍히는 월급이 아니라
+    <b>소득평가액에 재산을 소득으로 환산한 금액을 더한 값</b>이라는 점을 주의해야 합니다.
+    월급만 놓고 보면 기준 안에 들어오는데 집이나 자동차 때문에 넘어가는 경우가 실제로 흔합니다.
+  </p>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>가구원 수</th><th>2026년 기준 중위소득 100%</th><th>70% (이 제도의 기준선)</th></tr>
+    <tr><td>1인</td><td>2,564,238원</td><td class="big-number">1,794,967원</td></tr>
+    <tr><td>2인</td><td>4,199,292원</td><td class="big-number">2,939,504원</td></tr>
+    <tr><td>3인</td><td>5,359,036원</td><td class="big-number">3,751,325원</td></tr>
+    <tr><td>4인</td><td>6,494,738원</td><td class="big-number">4,546,317원</td></tr>
+    <tr><td>5인</td><td>7,556,719원</td><td>5,289,703원</td></tr>
+    <tr><td>6인</td><td>8,555,952원</td><td>5,989,166원</td></tr>
+  </table>
+  </div>
+  <p style="font-size:13px;color:#888;">
+    ※ 70% 금액은 2026년 고시된 기준 중위소득에 0.7을 곱해 원 단위로 반올림한 값입니다.
+    지자체가 안내하는 표와 원 단위에서 차이가 날 수 있으니 경계선에 가까우면 반드시 주민센터에서 확인하세요.
+  </p>
+
+  <h2>대상자 자격 ② 몸 상태 — 여섯 갈래</h2>
+  <p>
+    나이와 소득을 통과했다면 아래 여섯 갈래 중 하나에 해당해야 합니다.
+    한 갈래만 맞으면 되고, 여러 갈래에 걸쳐 있어도 서비스가 중복해서 늘어나지는 않습니다.
+  </p>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>구분</th><th>내용</th></tr>
+    <tr><td><b>① 중증 장애</b></td><td>장애정도가 심한 장애인 (종전 1~3급에 해당)</td></tr>
+    <tr><td><b>② 중증질환</b></td><td>6개월 이상 치료를 요하는 중증질환자</td></tr>
+    <tr><td><b>③ 희귀난치성 질환</b></td><td>희귀난치성 질환을 앓고 있는 사람</td></tr>
+    <tr><td><b>④ 법정보호세대</b></td><td>소년소녀가정, 조손가정, 한부모가정</td></tr>
+    <tr><td><b>⑤ 장기입원 퇴원자</b></td><td>만 65세 미만 의료급여 수급자 중 장기입원 사례관리를 거쳐 퇴원한 사람</td></tr>
+    <tr><td><b>⑥ 그 밖의 인정</b></td><td>시·군·구청장이 서비스가 필요하다고 인정한 사람</td></tr>
+  </table>
+  </div>
+  <p>
+    ⑤번은 성격이 조금 다릅니다. 병원에서 오래 지내다 집으로 돌아온 직후의 공백을 메우는 갈래라
+    <b>이용 시간이 가장 길고(월 40시간) 본인부담금이 없는 대신, 기간이 12개월로 못 박혀 있고 연장이 되지 않습니다.</b>
+    나머지 갈래는 자격 결정일부터 <b>1년</b>이고 재판정을 거쳐 연장할 수 있습니다.
+  </p>
+
+  <h2>서비스 시간과 가격 — 세 가지 유형</h2>
+  <p>
+    이용 시간에 따라 A형·B형·C형으로 나뉩니다. 본인이 골라 정하는 것이 아니라
+    <b>대상자 갈래와 조사 결과에 따라 배정</b>됩니다.
+    2026년 기준 시간당 단가는 <b>19,000원</b>이고, 월 서비스 가격은 여기에 이용 시간을 곱한 값입니다.
+  </p>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>유형</th><th>월 이용 시간</th><th>월 서비스 가격 (2026년)</th><th>주 대상</th></tr>
+    <tr><td><b>A형</b></td><td>24시간</td><td class="big-number">456,000원</td><td>일반 대상자</td></tr>
+    <tr><td><b>B형</b></td><td>27시간</td><td class="big-number">513,000원</td><td>돌봄 필요가 큰 대상자</td></tr>
+    <tr><td><b>C형</b></td><td>40시간</td><td class="big-number">760,000원</td><td>의료급여 장기입원 퇴원자</td></tr>
+  </table>
+  </div>
+  <p>
+    월 24시간이면 주 6시간, 하루 두 시간씩 주 사흘 정도의 방문에 해당합니다.
+    <b>상주 간병이 아니라 정해진 시간에 찾아오는 방문 서비스</b>라는 점을 미리 알고 계셔야
+    실제 이용할 때 기대와 어긋나지 않습니다.
+  </p>
+
+  <div class="svg-wrap">
+    <div class="svg-title">유형별 월 이용 시간과 서비스 가격 (2026년 · 시간당 19,000원)</div>
+    <svg viewBox="0 0 640 240" width="100%" height="240" role="img" aria-label="유형별 월 이용시간 비교">
+      <line x1="90" y1="30" x2="90" y2="200" stroke="#cfd8dc" stroke-width="2"/>
+      <text x="16" y="66" font-size="15" font-weight="700" fill="#0d47a1">A형</text>
+      <rect x="90" y="46" width="204" height="34" rx="6" fill="#64b5f6"/>
+      <text x="304" y="69" font-size="14" font-weight="700" fill="#0d47a1">24시간 · 456,000원</text>
+      <text x="16" y="126" font-size="15" font-weight="700" fill="#0d47a1">B형</text>
+      <rect x="90" y="106" width="230" height="34" rx="6" fill="#2196f3"/>
+      <text x="330" y="129" font-size="14" font-weight="700" fill="#0d47a1">27시간 · 513,000원</text>
+      <text x="16" y="186" font-size="15" font-weight="700" fill="#0d47a1">C형</text>
+      <rect x="90" y="166" width="340" height="34" rx="6" fill="#1565c0"/>
+      <text x="440" y="189" font-size="14" font-weight="700" fill="#0d47a1">40시간 · 760,000원</text>
+      <text x="90" y="228" font-size="12" fill="#888">막대 길이는 월 이용 시간에 비례합니다. C형은 의료급여 장기입원 퇴원자 전용입니다.</text>
+    </svg>
+  </div>
+
+  <h2>본인부담금은 이렇게 계산됩니다</h2>
+  <p>
+    서비스 가격 전부를 정부가 내 주는 것은 아닙니다.
+    <b>서비스 가격에서 정부지원금을 뺀 차액</b>이 본인부담금이고,
+    그 차액은 <b>소득 계층에 따라 정해진 비율</b>로 결정됩니다.
+    수급자·차상위계층을 <b>가형</b>, 기준 중위소득 70% 이하 계층을 <b>나형</b>으로 부릅니다.
+  </p>
+  <div class="formula">
+    <b>본인부담금 = 월 서비스 가격 × 본인부담률</b><br>
+    · <b>가형</b>(생계·의료·주거·교육급여 수급자 및 차상위계층) — A형은 <b>면제</b>, B형은 <b>3%</b><br>
+    · <b>나형</b>(기준 중위소득 70% 이하) — A형·B형 모두 <b>6%</b><br>
+    · <b>C형</b>(의료급여 장기입원 퇴원자) — <b>면제</b><br>
+    예) 나형이 A형을 이용하면 456,000원 × 6% = <b>27,360원</b>을 매달 내고, 나머지 428,640원을 정부가 부담합니다.
+  </div>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>유형 · 계층</th><th>월 서비스 가격</th><th>본인부담률</th><th>본인부담금(계산값)</th></tr>
+    <tr><td>A형 · 가형</td><td>456,000원</td><td>면제</td><td class="big-number">0원</td></tr>
+    <tr><td>A형 · 나형</td><td>456,000원</td><td>6%</td><td class="big-number">27,360원</td></tr>
+    <tr><td>B형 · 가형</td><td>513,000원</td><td>3%</td><td class="big-number">15,390원</td></tr>
+    <tr><td>B형 · 나형</td><td>513,000원</td><td>6%</td><td class="big-number">30,780원</td></tr>
+    <tr><td>C형</td><td>760,000원</td><td>면제</td><td class="big-number">0원</td></tr>
+  </table>
+  </div>
+  <p style="font-size:13px;color:#888;">
+    ※ 표의 본인부담금은 <b>2026년 공고된 서비스 가격에 종전까지 적용돼 온 본인부담률을 곱한 계산값</b>입니다.
+    비율은 매년 운영 지침에서 다시 정해질 수 있으므로,
+    실제로 통장에서 빠져나갈 금액은 자격 결정 통지서나 읍·면·동 담당자에게 확인하시는 편이 정확합니다.
+  </p>
+  <p>
+    금액을 놓고 보면 이 제도의 성격이 드러납니다.
+    월 45만원어치 방문 돌봄을 <b>3만원 안팎으로 이용</b>하는 셈이라,
+    같은 시간을 민간 간병으로 사면 부담이 열 배 이상 벌어집니다.
+    다만 <b>본인부담금을 내지 않으면 그달 이용권이 생성되지 않습니다.</b>
+    금액이 작다고 미뤄 두었다가 서비스가 끊기는 일이 실제로 자주 일어납니다.
+  </p>
+
+  <h2>무엇을 해 주는가</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>영역</th><th>구체적인 내용</th></tr>
+    <tr><td><b>신체수발 지원</b></td><td>세면·목욕 보조, 식사 보조, 옷 갈아입히기 등</td></tr>
+    <tr><td><b>신변활동 지원</b></td><td>체위 변경, 간단한 재활운동 보조, 이동 도움 등</td></tr>
+    <tr><td><b>가사 지원</b></td><td>청소, 식사 준비, 세탁, 주변 정돈 등</td></tr>
+    <tr><td><b>일상생활 지원</b></td><td>외출 동행, 병원 동행, 말벗, 생활 상담 등</td></tr>
+  </table>
+  </div>
+  <p>
+    간병만 해 주는 제도로 알고 계신 분이 많은데 <b>가사 지원이 함께 들어 있는 것이 이 사업의 특징</b>입니다.
+    다만 가사 지원은 <b>이용자 본인을 위한 범위</b>로 한정됩니다.
+    함께 사는 가족 전체의 빨래나 식사 준비, 대청소, 김장 같은 일은 요청할 수 없습니다.
+  </p>
+
+  <h2>이용 절차</h2>
+  <div class="steps">
+    <div class="step"><span class="step-num">1</span><span class="step-text"><b>읍·면·동 행정복지센터 방문</b> — 주민등록 주소지 관할 센터에서 연중 접수합니다. 대리 접수도 가능하지만 위임 관계를 증명해야 합니다.</span></div>
+    <div class="step"><span class="step-num">2</span><span class="step-text"><b>자격 조사</b> — 소득인정액과 건강 상태를 함께 확인합니다. 진단서·소견서 등 몸 상태를 증명할 서류가 필요합니다.</span></div>
+    <div class="step"><span class="step-num">3</span><span class="step-text"><b>자격 결정 통지</b> — 대상자로 결정되면 유형(A·B·C)과 본인부담금이 함께 통지됩니다.</span></div>
+    <div class="step"><span class="step-num">4</span><span class="step-text"><b>국민행복카드 발급</b> — 이용권이 실리는 카드입니다. 이미 다른 사회서비스로 발급받아 두었다면 그 카드를 그대로 씁니다.</span></div>
+    <div class="step"><span class="step-num">5</span><span class="step-text"><b>제공기관 선택·계약</b> — 지역의 제공기관 목록에서 직접 고릅니다. 사회서비스 전자바우처 누리집에서 검색할 수 있습니다.</span></div>
+    <div class="step"><span class="step-num">6</span><span class="step-text"><b>본인부담금 납부 후 이용 시작</b> — 납부가 확인돼야 그달 이용권이 생성됩니다.</span></div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>⏰ 날짜에서 갈리는 대목</h3>
+    <p><b>· 매월 27일 18시까지</b> 자격 정보가 전송되면 <b>다음 달 1일부터</b> 이용할 수 있습니다. 며칠 늦으면 한 달이 통째로 밀립니다.</p>
+    <p><b>· 유효기간은 1년</b>입니다. 자격 결정일부터 1년이며, 계속 필요하면 재판정을 거쳐 연장합니다. 만료 전에 갱신을 챙기지 않으면 서비스가 중단됩니다.</p>
+    <p><b>· 의료급여 장기입원 퇴원자(C형)는 12개월 고정</b>이고 연장이 되지 않습니다. 12개월이 끝나기 전에 다른 돌봄 제도로 이어 갈 준비를 해 두어야 합니다.</p>
+    <p><b>· 이용하지 않은 시간은 다음 달로 넘어가지 않습니다.</b> 그달에 다 쓰지 못하면 사라집니다.</p>
+  </div>
+
+  <div class="checklist">
+    <h2>✅ 내 경우엔 어떤가 — 자가 점검</h2>
+    <div class="check-item"><span class="chk">✓</span><span>서비스를 받을 사람이 만 65세 미만이다 (65세 이상이면 장기요양 쪽을 알아봐야 한다)</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>우리 가구원 수 기준으로 중위 70% 금액을 위 표에서 확인했다</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>월급이 아니라 재산까지 환산한 소득인정액으로 비교했다</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>여섯 갈래 중 어디에 해당하는지, 그것을 증명할 서류가 있는지 확인했다</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>이미 장기요양급여나 장애인 돌봄 서비스를 받고 있지는 않은지 확인했다</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>월 24~27시간이 우리 상황에 실제로 도움이 되는 분량인지 가늠해 보았다</span></div>
+  </div>
+
+  <h2>⚠️ 놓치기 쉬운 것들</h2>
+  <div class="caution">
+    <div class="caution-item"><b>① 다른 돌봄 급여와 겹쳐 받을 수 없습니다.</b> 노인장기요양급여나 장애인 활동 지원처럼 성격이 같은 돌봄 서비스를 이미 받고 있다면 함께 이용할 수 없습니다. 어느 쪽 시간이 더 넉넉한지 비교한 뒤 정하는 편이 낫습니다.</div>
+    <div class="caution-item"><b>② 가족이 제공인력이 될 수는 없습니다.</b> 서비스는 요양보호사 자격을 갖춘 사람이 제공기관 소속으로 제공해야 합니다. 함께 사는 가족이 대신 하고 비용을 받는 방식은 인정되지 않습니다.</div>
+    <div class="caution-item"><b>③ 제공기관은 바꿀 수 있습니다.</b> 담당 요양보호사와 맞지 않거나 서비스가 부실하면 다른 기관으로 옮길 수 있습니다. 참고 견디다 이용을 포기하는 경우가 많은데, 변경 절차는 읍·면·동이나 제공기관에 알리면 됩니다.</div>
+    <div class="caution-item"><b>④ 소득이나 가구 구성이 바뀌면 알려야 합니다.</b> 자격 유지 여부가 달라질 수 있습니다. 알리지 않고 지원을 계속 받으면 나중에 환수될 수 있으므로, 변동이 생기면 먼저 담당자에게 말하는 편이 안전합니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>📞 문의처</h2>
+    <div class="contact-row"><span class="contact-label">주소지 행정복지센터</span> 접수·자격 조사·유형 결정 (방문 접수가 원칙)</div>
+    <div class="contact-row"><span class="contact-label">사회서비스 전자바우처</span> www.socialservice.or.kr — 사업 안내·제공기관 검색</div>
+    <div class="contact-row"><span class="contact-label">복지로</span> www.bokjiro.go.kr — 제도 안내·소득인정액 모의계산</div>
+    <div class="contact-row"><span class="contact-label">보건복지상담센터</span> ☎ 129 — 자격 전반 상담</div>
+    <div class="contact-row"><span class="contact-label">보건복지부 사회서비스사업과</span> 사업 총괄</div>
+  </div>
+
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"돌봄 제도는 노인을 중심으로 설계돼 왔다. 65세 미만 중증질환자와 희귀난치성 질환자는 제도 사이의 틈에 놓이기 쉬운데, 이 사업은 그 틈을 정면으로 겨냥한 몇 안 되는 장치다."</p>
+          <p class="author">— 사회복지 정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"간병과 가사를 한 사람이 함께 맡는 방식은 현장에서 효율이 높다. 서비스를 쪼개 놓으면 이용자가 여러 기관을 상대해야 하는데, 그 부담이 곧 이용 포기로 이어지기 때문이다."</p>
+          <p class="author">— 재가복지 현장 실무자</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"월 24시간은 주당 여섯 시간에 지나지 않는다. 실제로 돌봄이 필요한 가구의 수요와 견주면 상징적인 수준이고, 나머지 시간의 부담은 여전히 가족이 진다."</p>
+          <p class="author">— 돌봄노동 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"기준 중위소득 70%라는 선 바로 위에 있는 가구가 문제다. 소득이 조금 많다는 이유로 전액을 민간 시장에서 사야 하는데, 그 지점에서 부담이 갑자기 열 배로 뛴다."</p>
+          <p class="author">— 보건의료 재정 연구자</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #가사간병방문지원사업 #사회서비스이용권 #전자바우처 #국민행복카드 #요양보호사 #기준중위소득70퍼센트 #희귀난치성질환 #중증질환자 #보건복지부 #행정복지센터
+  </div>
+
+  <div class="disclaimer">
+    이 기사는 보건복지부 사회서비스 사업 안내와 사회서비스 전자바우처 누리집,
+    지방자치단체 안내 등 공개된 정보를 바탕으로 작성되었습니다.
+    본문의 소득 기준선(2026년 기준 중위소득 70%)과 서비스 가격(시간당 19,000원 · 월 456,000원·513,000원·760,000원)은
+    <b>2026년 기준</b>이며 해마다 새로 정해집니다.
+    본인부담금 표는 2026년 서비스 가격에 종전까지 적용돼 온 본인부담률을 곱한 계산값이므로
+    실제 금액과 다를 수 있습니다.
+    정확한 자격 여부와 금액은 주소지 행정복지센터 또는 보건복지상담센터(☎ 129)에 확인하세요.
+  </div>
+
+  <div class="written">작성일 2026-08-30 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
