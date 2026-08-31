@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>통신요금 감면 대상 — 수급자·차상위 할인 금액과 확인 방법</title>
+<meta name="description" content="통신요금 감면은 전기통신사업법에 따른 보편적 역무 제도로, 생계·의료급여 수급자는 이동전화 기본료·월정액 26,000원 한도 면제와 음성·데이터 통화료 각 50% 감면, 주거·교육급여 수급자와 차상위계층은 11,000원 한도 면제와 초과분 35% 감면을 받습니다. 근거 고시상 월 감면 한도액은 각각 41,000원과 30,000원, 기초연금 수급자는 청구액의 50%입니다. 등록장애인과 국가유공자는 기본료·통화료 35% 감면, 초고속인터넷 30% 감면이 적용되며 생계·의료급여 수급자는 시내·시외전화 225분과 인터넷전화 450분이 무료입니다. 신청은 ARS 1523, 통신사 고객센터 114, 정부24 보조금24, 복지로에서 가능하고 소급 적용은 되지 않습니다. 2026년 기준.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    background: #f8f9fa;
+    color: #222;
+    line-height: 1.7;
+  }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge {
+    display: inline-block;
+    background: #e65100;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.35;
+    color: #1a1a1a;
+    margin-bottom: 18px;
+    word-break: keep-all;
+  }
+
+  .hook {
+    border-left: 5px solid #e65100;
+    padding: 14px 18px;
+    background: #fff3e0;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 22px;
+    font-size: 15px;
+  }
+  .hook .highlight { color: #bf360c; font-weight: 900; }
+
+  .summary-box {
+    background: #e8f5e9;
+    border: 2px solid #2e7d32;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 26px;
+  }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+
+  h2 { font-size: 19px; font-weight: 900; color: #bf360c; margin: 28px 0 12px; border-bottom: 2px solid #ffcc80; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #e65100; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #fff3e0; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #bf360c; }
+
+  .formula {
+    background: #fffaf3;
+    border: 1px solid #ffcc80;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 20px;
+    font-size: 14.5px;
+    line-height: 1.9;
+    word-break: keep-all;
+  }
+  .formula b { color: #bf360c; }
+
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #fff3e0; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #e65100; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+
+  .deadline-box {
+    border: 2px dashed #f57c00;
+    background: #fff8e1;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 22px;
+  }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+
+  .checklist { background: #fff3e0; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #ffcc80; color: #bf360c; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #bf360c; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+
+  .caution { background: #fff3e0; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+
+  .contact-box { background: #fff3e0; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #bf360c; border-color: #ffcc80; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  .hashtags { font-size: 13px; color: #bf360c; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-08-31-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="통신요금 감면 대상 — 수급자·차상위 할인 금액과 확인 방법">
+<meta property="og:description" content="통신요금 감면은 전기통신사업법에 따른 보편적 역무 제도로, 생계·의료급여 수급자는 이동전화 기본료·월정액 26,000원 한도 면제와 음성·데이터 통화료 각 50% 감면, 주거·교육급여 수급자와 차상위계층은 11,000원 한도 면제와 초과분 35% 감면을 받습니다. 근거 고시상 월 감면 한도액은 각각 41,000원과 30,000원, 기초연금 수급자는 청구액의 50%입니다. 등록장애인과 국가유공자는 기본료·통화료 35% 감면, 초고속인터넷 30% 감면이 적용되며 생계·의료급여 수급자는 시내·시외전화 225분과 인터넷전화 450분이 무료">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-08-31-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-08-31T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-08-31T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-08-31-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-08-31-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "통신요금 감면 대상 — 수급자·차상위 할인 금액과 확인 방법", "description": "통신요금 감면은 전기통신사업법에 따른 보편적 역무 제도로, 생계·의료급여 수급자는 이동전화 기본료·월정액 26,000원 한도 면제와 음성·데이터 통화료 각 50% 감면, 주거·교육급여 수급자와 차상위계층은 11,000원 한도 면제와 초과분 35% 감면을 받습니다. 근거 고시상 월 감면 한도액은 각각 41,000원과 30,000원, 기초연금 수급자는 청구액의 50%입니다. 등록장애인과 국가유공자는 기본료·통화료 35% 감면, 초고속인터넷 30% 감면이 적용되며 생계·의료급여 수급자는 시내·시외전화 225분과 인터넷전화 450분이 무료", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-08-31", "dateModified": "2026-08-31", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 보편적 역무 · 저소득층 요금 감면</div>
+  <div class="section-badge">통신요금 감면 제도</div>
+
+  <h1>통신요금 감면 대상 — 수급자·차상위 할인 금액과 확인 방법</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대체로 이런 상황입니다.
+    <span class="highlight">수급자 자격은 받았는데 휴대폰 요금은 그대로 빠져나가고 있는 경우</span>,
+    <span class="highlight">차상위 확인서를 받으면서 "통신비도 깎아 준다"는 말만 듣고 나온 경우</span>,
+    그리고 <span class="highlight">검색해 보니 33,500원·41,000원·21,500원처럼 금액이 제각각이라 어느 것이 맞는지 헷갈리는 경우</span>입니다.
+    이 제도에서 먼저 잡아야 할 것은 두 가지입니다.
+    하나는 <span class="highlight">가만히 있으면 한 푼도 깎이지 않는다</span>는 점,
+    다른 하나는 <span class="highlight">지난달 요금은 돌려받을 수 없다</span>는 점입니다.
+    아래에서 대상 다섯 갈래, 갈래별 감면 내용과 한도액, 금액이 자료마다 다르게 보이는 이유,
+    그리고 자기 자격을 어디서 어떻게 확인하는지를 차례로 짚었습니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li><b>복지 자격이 있어도 자동으로 깎이지 않습니다</b> — 통신사에 따로 알려야 그달부터 적용되고, 이미 낸 요금은 소급되지 않습니다.</li>
+      <li><b>생계·의료급여 수급자</b> — 이동전화 기본료·월정액 <b>26,000원 한도 면제</b> + 음성·데이터 통화료 각 <b>50% 감면</b>.</li>
+      <li><b>주거·교육급여 수급자와 차상위계층</b> — 기본료·월정액 <b>11,000원 한도 면제</b> + 초과분과 통화료 <b>35% 감면</b>.</li>
+      <li><b>기초연금 수급자</b> — 기본료·음성·데이터를 합친 <b>청구 이용료의 50% 감면</b>. 만 65세가 되어 기초연금을 받기 시작하면 따로 챙겨야 합니다.</li>
+      <li><b>등록장애인·국가유공자</b> — 이동전화 기본료·통화료 <b>35% 감면</b>, 초고속인터넷 <b>30% 감면</b>, 번호안내(114) 면제.</li>
+      <li><b>휴대폰만이 아닙니다</b> — 시내·시외전화, 인터넷전화, 초고속인터넷, 그리고 생계·의료급여 수급자는 <b>TV수신료</b>까지 함께 걸려 있습니다.</li>
+    </ul>
+  </div>
+
+  <p style="font-size:13px;color:#888;margin-bottom:22px;">
+    ※ 본문의 감면 내용과 한도액은 <b>2026년 기준</b>이며 「전기통신사업법 시행령」과
+    「보편적역무손실보전금 산정방법 등에 관한 기준」에 따라 정해집니다.
+    검색으로 다른 글을 볼 때 <b>13,000원·10,500원</b> 같은 금액이 보인다면 확대 이전 자료일 가능성이 큽니다.
+    <b>몇 년도 기준인지부터</b> 확인하세요.
+  </p>
+
+  <h2>어떤 제도인가 — 복지 사업이 아니라 통신법 제도다</h2>
+  <p>
+    통신요금 감면은 보건복지부가 돈을 주는 복지 사업이 아닙니다.
+    「전기통신사업법」 제4조가 정한 <b>보편적 역무</b>, 곧
+    "누구나 언제 어디서나 적정한 요금으로 제공받을 수 있어야 하는 기본적인 전기통신역무"에서 나옵니다.
+    통신은 이제 생활의 기반이라 소득 때문에 끊기면 안 된다는 판단이고,
+    그래서 감면액은 세금이 아니라 <b>통신사업자들이 매출 규모에 따라 나눠 부담</b>합니다.
+  </p>
+  <p>
+    이 구조가 이용자에게 미치는 영향이 하나 있습니다.
+    <b>돈을 주는 곳은 통신사이고 자격을 판정하는 곳은 행정기관</b>이라는 점입니다.
+    주민센터에서 수급자 결정을 받았다고 해서 그 정보가 통신사로 저절로 넘어가지 않습니다.
+    이용자가 두 기관을 잇는 신호를 한 번 보내야 하고, 그 신호가 바로 감면 접수입니다.
+    <b>자격이 있는데도 몇 년째 제값을 다 내고 있는 가구가 많은 이유</b>가 여기에 있습니다.
+  </p>
+  <p>
+    감면 대상 서비스도 휴대폰 하나가 아닙니다.
+    시내전화, 시외전화, 인터넷전화, 이동전화(음성·데이터), 초고속인터넷, 휴대인터넷, 번호안내까지
+    법령이 정한 역무 전체가 대상이고, 갈래마다 감면율이 다르게 정해져 있습니다.
+  </p>
+
+  <h2>대상 ① 누가 받을 수 있나 — 다섯 갈래</h2>
+  <p>
+    감면 대상은 크게 다섯 갈래로 나뉩니다.
+    <b>갈래마다 감면 내용이 다르기 때문에 자기가 어디에 속하는지부터 확인해야</b> 금액을 가늠할 수 있습니다.
+    두 갈래에 동시에 해당하더라도 <b>한 회선에 유리한 하나만 적용</b>되는 것이 원칙입니다.
+  </p>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>갈래</th><th>구체적으로 누구인가</th></tr>
+    <tr><td><b>기초생활수급자<br>(생계·의료급여)</b></td><td>국민기초생활보장법에 따른 생계급여 또는 의료급여 수급자. 감면 폭이 가장 큽니다.</td></tr>
+    <tr><td><b>기초생활수급자<br>(주거·교육급여)</b></td><td>주거급여 또는 교육급여만 받는 수급자. 생계·의료급여 수급자와 감면액이 다릅니다.</td></tr>
+    <tr><td><b>차상위계층</b></td><td>자활사업 참가자, 희귀난치성질환자, 장애수당 수령자, 장애인연금 수령자, 한부모가족 지원 대상자 등. 주거·교육급여 수급자와 같은 조건이 적용됩니다.</td></tr>
+    <tr><td><b>기초연금 수급자</b></td><td>기초연금법에 따라 기초연금을 받는 만 65세 이상. 2018년부터 대상에 들어왔고, 이동전화에만 적용됩니다.</td></tr>
+    <tr><td><b>등록장애인·국가유공자</b></td><td>장애인복지법에 따른 등록장애인(장애 정도 무관), 장애인복지시설·단체, 국가유공자. 유선과 무선 모두 대상입니다.</td></tr>
+  </table>
+  </div>
+  <p>
+    여기서 자주 걸리는 대목이 <b>차상위계층</b>입니다.
+    소득이 기준 중위소득 50% 이하라고 해서 저절로 차상위가 되는 것이 아니라
+    <b>주민센터에서 차상위 자격을 확인받아 등록돼 있어야</b> 통신 감면 대상으로 잡힙니다.
+    "우리 집은 형편이 어려우니 해당되겠지"라고 생각해 통신사에 문의했다가
+    대상이 아니라는 답을 듣는 경우가 여기서 나옵니다.
+    그럴 때 순서는 통신사가 아니라 <b>주민센터에서 차상위 확인부터</b> 받는 것입니다.
+  </p>
+
+  <h2>대상 ② 이동전화 감면 금액 — 갈래별로 얼마나 깎이나</h2>
+  <p>
+    이동전화 감면은 <b>두 층으로 계산</b>됩니다.
+    먼저 기본료 또는 요금제 월정액에서 정해진 금액만큼을 <b>통째로 빼고</b>,
+    그러고도 남은 요금과 통화료에 <b>정해진 비율</b>을 다시 적용하는 방식입니다.
+    그래서 요금제가 비쌀수록 감면액도 커지지만, 갈래별 한도액을 넘지는 않습니다.
+  </p>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>갈래</th><th>기본료·월정액</th><th>통화료 등</th><th>월 감면 한도액</th></tr>
+    <tr><td><b>생계·의료급여 수급자</b></td><td>26,000원 한도 면제</td><td>음성·데이터 각 50% 감면</td><td class="big-number">41,000원</td></tr>
+    <tr><td><b>주거·교육급여 수급자</b></td><td>11,000원 한도 면제</td><td>초과분·음성·데이터 35% 감면</td><td class="big-number">30,000원</td></tr>
+    <tr><td><b>차상위계층</b></td><td>11,000원 한도 면제</td><td>초과분·음성·데이터 35% 감면</td><td class="big-number">30,000원</td></tr>
+    <tr><td><b>기초연금 수급자</b></td><td colspan="2">기본료·음성·데이터를 합친 청구 이용료의 50% 감면</td><td class="big-number">22,000원</td></tr>
+    <tr><td><b>등록장애인·국가유공자</b></td><td colspan="2">기본료 및 통화료 35% 감면</td><td>별도 고시</td></tr>
+  </table>
+  </div>
+
+  <div class="svg-wrap">
+    <div class="svg-title">갈래별 이동전화 월 감면 한도액 (2026년 기준, 원)</div>
+    <svg viewBox="0 0 640 260" width="100%" role="img" aria-label="갈래별 이동전화 월 감면 한도액 막대그래프">
+      <line x1="150" y1="20" x2="150" y2="230" stroke="#ddd" stroke-width="1"/>
+      <rect x="150" y="30" width="410" height="30" rx="4" fill="#e65100"/>
+      <text x="20" y="50" font-size="13" fill="#444">생계·의료급여</text>
+      <text x="570" y="50" font-size="14" font-weight="bold" fill="#bf360c">41,000</text>
+      <rect x="150" y="80" width="300" height="30" rx="4" fill="#f57c00"/>
+      <text x="20" y="100" font-size="13" fill="#444">주거·교육급여</text>
+      <text x="460" y="100" font-size="14" font-weight="bold" fill="#bf360c">30,000</text>
+      <rect x="150" y="130" width="300" height="30" rx="4" fill="#f57c00"/>
+      <text x="20" y="150" font-size="13" fill="#444">차상위계층</text>
+      <text x="460" y="150" font-size="14" font-weight="bold" fill="#bf360c">30,000</text>
+      <rect x="150" y="180" width="220" height="30" rx="4" fill="#ffb74d"/>
+      <text x="20" y="200" font-size="13" fill="#444">기초연금 수급자</text>
+      <text x="380" y="200" font-size="14" font-weight="bold" fill="#bf360c">22,000</text>
+      <text x="150" y="248" font-size="11" fill="#999">※ 한도액이며 실제 감면액은 요금제와 사용량에 따라 이보다 적을 수 있습니다.</text>
+    </svg>
+  </div>
+
+  <h2>왜 자료마다 금액이 다르게 나오나</h2>
+  <p>
+    이 제도를 검색하면 <b>33,500원·21,500원·11,000원</b>이라는 숫자와
+    <b>41,000원·30,000원·22,000원</b>이라는 숫자가 뒤섞여 나옵니다.
+    어느 쪽이 틀린 것이 아니라 <b>가리키는 대상이 다릅니다.</b>
+  </p>
+  <div class="formula">
+    <b>한도액</b>(41,000원·30,000원·22,000원) = 근거 고시가 정한 <b>월 감면 상한선</b>. 이보다 많이 깎이지는 않는다는 뜻입니다.<br>
+    <b>월 최대 감면액</b>(33,500원·21,500원·11,000원) = 안내문에서 <b>흔히 쓰는 요금제를 가정해 계산한 예시 금액</b>입니다.<br>
+    <b>실제 내 감면액</b> = 내가 쓰는 요금제의 월정액과 통화료에 위 규칙을 적용한 값.
+    그래서 <b>같은 자격이어도 사람마다 다릅니다.</b>
+  </div>
+  <p>
+    정리하면 이렇습니다. 값싼 요금제를 쓰면 감면액도 작아지고,
+    월정액이 큰 요금제를 쓰면 한도액에 가까워집니다.
+    <b>자기에게 실제로 적용되는 금액은 통신사 고객센터에서 회선 단위로 확인하는 것이 가장 정확합니다.</b>
+    안내문의 예시 금액을 그대로 기대했다가 청구서를 보고 당황하는 경우가 여기서 생깁니다.
+  </p>
+
+  <h2>휴대폰만이 아니다 — 유선·인터넷·TV수신료</h2>
+  <p>
+    이동전화에 가려 잘 알려지지 않았지만
+    <b>집에서 쓰는 통신 서비스에도 같은 자격이 그대로 걸립니다.</b>
+    특히 생계·의료급여 수급자는 유선 쪽 혜택이 상당히 큽니다.
+  </p>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>서비스</th><th>생계·의료급여 수급자</th><th>등록장애인·국가유공자</th></tr>
+    <tr><td><b>시내전화</b></td><td>가입비·기본료 면제, 시내통화 <b>225분 무료</b></td><td>월 통화료 50% 감면</td></tr>
+    <tr><td><b>시외전화</b></td><td>시외통화 <b>225분 무료</b></td><td>월 통화료 50% 감면(월 3만원 한도)</td></tr>
+    <tr><td><b>인터넷전화</b></td><td>가입비·기본료 면제, 통화 <b>450분 무료</b></td><td>월 통화료 50% 감면</td></tr>
+    <tr><td><b>초고속인터넷</b></td><td>월 이용료 30% 감면</td><td>월 이용료 30% 감면</td></tr>
+    <tr><td><b>번호안내(114)</b></td><td>—</td><td>면제</td></tr>
+    <tr><td><b>TV수신료</b></td><td><b>월 수신료 면제</b> (KBS수신료콜센터 1588-1801)</td><td>시각·청각장애인 면제</td></tr>
+  </table>
+  </div>
+  <p>
+    TV수신료는 통신 감면과 창구가 다릅니다.
+    전기요금에 함께 붙어 나오기 때문에 <b>한국전력공사(국번없이 123)</b> 또는
+    <b>KBS수신료콜센터(1588-1801)</b>로 따로 알려야 합니다.
+    통신사에 이동전화 감면을 접수했다고 해서 수신료까지 같이 처리되지는 않습니다.
+    같은 이유로 전기요금 할인(생계·의료급여 수급자 월 16,000원 한도, 여름철 20,000원)도
+    한국전력에 별도로 접수해야 합니다.
+  </p>
+
+  <h2>어떻게 확인하고 접수하나 — 다섯 가지 경로</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text"><b>ARS ☎ 1523</b> — 통신요금 감면 전용 번호입니다. 본인 인증만 하면 대상 여부 조회와 접수를 한 번에 할 수 있어 가장 빠릅니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text"><b>통신사 고객센터 ☎ 114</b> — 자기 휴대폰으로 걸면 해당 통신사로 연결됩니다. 지금 쓰는 요금제에 적용했을 때 실제로 얼마가 깎이는지 물어볼 수 있는 유일한 창구입니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text"><b>정부24 보조금24</b> — www.gov.kr 에서 본인 인증 후 온라인 접수. 다른 미신고 복지 혜택까지 한 화면에서 함께 확인할 수 있습니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text"><b>복지로</b> — www.bokjiro.go.kr 에서 온라인 접수. 제도 안내와 대상 조회를 함께 볼 수 있습니다.</div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-text"><b>통신사 대리점·주민센터 방문</b> — 신분증을 지참합니다. 온라인 인증이 어려운 경우에 가장 확실한 방법이고, 주민센터에서는 차상위 확인 같은 자격 문제도 같이 정리할 수 있습니다.</div></div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>⏰ 지난달 요금은 돌려받지 못합니다</h3>
+    <p>이 제도에서 날짜 때문에 손해를 보는 지점은 하나뿐입니다. <b>감면은 접수한 시점 이후분부터 적용되고 소급되지 않습니다.</b></p>
+    <p>수급자 결정이나 기초연금 결정을 받은 달에 바로 접수하면 그달부터 깎이지만, 1년 뒤에 알게 되어 접수하면 그 1년치는 그대로 낸 돈으로 끝납니다. 생계·의료급여 수급자 기준으로 한 달 3만원 안팎이라면 <b>1년이면 30만원대</b>가 됩니다.</p>
+    <p>기한이 정해진 접수가 아니라 <b>연중 아무 때나</b> 할 수 있으므로, 자격이 생겼다면 미루지 말고 그달에 처리하는 것이 유일한 요령입니다.</p>
+  </div>
+
+  <div class="checklist">
+    <h2>✅ 자가 진단 — 나는 대상일까</h2>
+    <div class="check-item"><span class="chk">✓</span><span>생계·의료·주거·교육급여 중 하나라도 받고 있다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>주민센터에서 <b>차상위계층 확인</b>을 받아 등록돼 있다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>만 65세 이상이고 <b>기초연금</b>을 받고 있다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>본인 또는 가족이 <b>등록장애인·국가유공자</b>이고, 그 사람 명의의 회선이 있다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>위에 해당하는데 <b>최근 청구서에 감면 항목이 찍혀 있지 않다.</b></span></div>
+    <p style="font-size:13px;color:#777;margin-top:10px;margin-bottom:0;">마지막 항목까지 체크됐다면 지금 깎일 돈을 그대로 내고 있는 상태입니다. 청구서나 통신사 앱에서 <b>요금 감면·복지 할인</b> 항목을 먼저 확인해 보세요.</p>
+  </div>
+
+  <h2>⚠️ 주의사항</h2>
+  <div class="caution">
+    <div class="caution-item"><b>① 본인 명의 회선이어야 합니다.</b> 수급자 본인 명의로 개통된 회선에만 적용됩니다. 자녀가 부모 이름으로 요금을 대신 내 주더라도 명의가 자녀로 돼 있으면 대상이 아닙니다. 이럴 때는 명의를 바꾼 뒤 접수해야 합니다.</div>
+    <div class="caution-item"><b>② 한 사람이 여러 회선에 중복으로 받을 수는 없습니다.</b> 감면은 원칙적으로 대상자 1인당 1회선입니다. 세컨드폰이나 태블릿 회선까지 모두 깎이지는 않으므로, 요금이 가장 큰 회선에 적용하는 편이 유리합니다.</div>
+    <div class="caution-item"><b>③ 자격이 없어지면 감면도 끝납니다.</b> 수급 자격이 중지되거나 차상위에서 벗어나면 감면도 함께 종료됩니다. 자격 상실 뒤에도 감면을 계속 받았다면 나중에 <b>환수 대상</b>이 될 수 있으므로, 자격에 변동이 생기면 통신사에도 알리는 편이 안전합니다.</div>
+    <div class="caution-item"><b>④ 알뜰폰은 사업자마다 다릅니다.</b> 알뜰폰(MVNO)에서도 복지 감면을 받을 수 있는 경우가 많지만 모든 사업자가 제공하는 것은 아니고, 요금제에 따라 적용 여부가 갈리기도 합니다. 이미 요금이 낮은 알뜰폰 요금제라면 감면액이 대형 통신사보다 작을 수 있으므로 <b>옮기기 전에 해당 사업자에 먼저 확인</b>해야 합니다.</div>
+    <div class="caution-item"><b>⑤ 인터넷·TV 결합상품은 따로 확인해야 합니다.</b> 초고속인터넷 감면은 이동전화와 별개로 접수해야 하고, 결합 할인이 이미 적용된 상품은 감면 적용 방식이 달라질 수 있습니다. 결합 구성을 그대로 두고 감면만 얹을 수 있는지 고객센터에 물어보세요.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>📞 문의처</h2>
+    <div class="contact-row"><span class="contact-label">통신요금 감면 ARS</span> ☎ 1523 — 대상 조회·접수 (가장 빠른 경로)</div>
+    <div class="contact-row"><span class="contact-label">이동통신사 고객센터</span> ☎ 114 — 내 요금제 기준 실제 감면액 확인</div>
+    <div class="contact-row"><span class="contact-label">정부24 보조금24</span> www.gov.kr — 온라인 접수·미신고 혜택 조회</div>
+    <div class="contact-row"><span class="contact-label">복지로</span> www.bokjiro.go.kr — 제도 안내·온라인 접수</div>
+    <div class="contact-row"><span class="contact-label">주소지 행정복지센터</span> 수급자·차상위 자격 확인</div>
+    <div class="contact-row"><span class="contact-label">보건복지상담센터</span> ☎ 129 — 복지 자격 전반 상담</div>
+    <div class="contact-row"><span class="contact-label">KBS수신료콜센터</span> ☎ 1588-1801 — TV수신료 면제 / 한국전력 ☎ 123 — 전기요금 할인</div>
+  </div>
+
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"통신은 이미 구직과 행정 절차의 기본 조건이 됐다. 요금 때문에 회선이 끊기면 일자리를 찾는 통로까지 함께 끊긴다는 점에서, 이 감면은 통신비 지원이 아니라 사회 참여의 최소 조건을 지키는 장치로 봐야 한다."</p>
+          <p class="author">— 정보통신 정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"재원을 세금이 아니라 사업자 분담으로 마련하는 구조는 재정 논쟁에 휘둘리지 않는다는 장점이 있다. 예산 심의 때마다 규모가 흔들리는 다른 급여와 달리 제도가 안정적으로 유지돼 온 이유다."</p>
+          <p class="author">— 공공요금 제도 연구자</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"자격이 있어도 본인이 알고 접수해야만 받는 신청주의 구조가 가장 큰 문제다. 행정기관은 이미 대상자 명단을 갖고 있는데, 정보에 어두운 고령 가구일수록 못 받는 역진적 결과가 나타난다."</p>
+          <p class="author">— 사회복지 전달체계 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"감면액이 요금제 규모에 비례하는 설계라 값싼 요금제를 쓰는 저소득 가구가 오히려 적게 받는다. 한도액만 놓고 홍보할 것이 아니라 실제 수령액 분포를 공개해야 제도의 효과를 판단할 수 있다."</p>
+          <p class="author">— 통신시장 규제 연구자</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #통신요금감면 #보편적역무 #기초생활수급자 #차상위계층 #기초연금수급자 #전기통신사업법 #보조금24 #복지로 #TV수신료면제 #초고속인터넷감면
+  </div>
+
+  <div class="disclaimer">
+    이 기사는 보건복지부 각종 감면제도 안내, 복지로 제도 안내,
+    법제처 찾기쉬운 생활법령정보(저소득층 요금감면·장애인 통신요금 감면·노인 요금할인) 등
+    공개된 정보를 바탕으로 작성되었습니다.
+    본문의 감면 내용과 한도액은 <b>2026년 기준</b>이며 「전기통신사업법 시행령」과
+    「보편적역무손실보전금 산정방법 등에 관한 기준」에 따라 변경될 수 있습니다.
+    안내 자료에 따라 예시 금액과 고시상 한도액이 함께 쓰이고 있어 숫자가 달라 보일 수 있으며,
+    실제 적용 금액은 이용 중인 요금제와 사용량에 따라 달라집니다.
+    정확한 대상 여부와 감면액은 ☎ 1523 또는 이용 중인 통신사 고객센터(☎ 114)에 확인하세요.
+  </div>
+
+  <div class="written">작성일 2026-08-31 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
