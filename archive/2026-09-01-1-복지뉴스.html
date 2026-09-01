@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>산정특례 대상 질환 — 본인부담률과 등록 절차·적용 기간</title>
+<meta name="description" content="본인일부부담금 산정특례는 중증질환자의 건강보험 본인부담률을 0~10%로 낮추는 제도입니다. 암은 5%로 5년, 희귀질환·중증난치질환·중증치매는 10%로 5년, 중증화상은 5%로 1년, 결핵과 잠복결핵감염은 0%가 적용되고, 심장질환·뇌혈관질환·중증외상은 등록 없이 최대 30~60일 적용됩니다. 등록은 의사가 발행한 건강보험 산정특례 등록 신청서로 하며 확진일부터 30일 이내 신청하면 확진일까지 소급됩니다. 재등록은 적용 종료 3개월 전부터 종료일까지 해야 하고 중증화상은 종료일부터 2년 이내입니다. 2026년 1월 1일부터 대상 희귀질환이 1,314개에서 1,389개로 확대됐습니다. 비급여·전액본인부담·선별급여는 적용 대상이 아닙니다. 2026년 기준.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    background: #f8f9fa;
+    color: #222;
+    line-height: 1.7;
+  }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge {
+    display: inline-block;
+    background: #6a1b9a;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.35;
+    color: #1a1a1a;
+    margin-bottom: 18px;
+    word-break: keep-all;
+  }
+
+  .hook {
+    border-left: 5px solid #6a1b9a;
+    padding: 14px 18px;
+    background: #f3e5f5;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 22px;
+    font-size: 15px;
+  }
+  .hook .highlight { color: #4a148c; font-weight: 900; }
+
+  .summary-box {
+    background: #e8f5e9;
+    border: 2px solid #2e7d32;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 26px;
+  }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+
+  h2 { font-size: 19px; font-weight: 900; color: #4a148c; margin: 28px 0 12px; border-bottom: 2px solid #ce93d8; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #6a1b9a; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #f3e5f5; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #4a148c; }
+
+  .formula {
+    background: #faf5fc;
+    border: 1px solid #ce93d8;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 20px;
+    font-size: 14.5px;
+    line-height: 1.9;
+    word-break: keep-all;
+  }
+  .formula b { color: #4a148c; }
+
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #f3e5f5; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #6a1b9a; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+
+  .deadline-box {
+    border: 2px dashed #f57c00;
+    background: #fff8e1;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 22px;
+  }
+  .deadline-box h3 { color: #6a1b9a; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+
+  .checklist { background: #f3e5f5; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #ce93d8; color: #4a148c; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #4a148c; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+
+  .caution { background: #f3e5f5; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+
+  .contact-box { background: #f3e5f5; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #4a148c; border-color: #ce93d8; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  .hashtags { font-size: 13px; color: #4a148c; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-09-01-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="산정특례 대상 질환 — 본인부담률과 등록 절차·적용 기간">
+<meta property="og:description" content="본인일부부담금 산정특례는 중증질환자의 건강보험 본인부담률을 0~10%로 낮추는 제도입니다. 암은 5%로 5년, 희귀질환·중증난치질환·중증치매는 10%로 5년, 중증화상은 5%로 1년, 결핵과 잠복결핵감염은 0%가 적용되고, 심장질환·뇌혈관질환·중증외상은 등록 없이 최대 30~60일 적용됩니다. 등록은 의사가 발행한 건강보험 산정특례 등록 신청서로 하며 확진일부터 30일 이내 신청하면 확진일까지 소급됩니다. 재등록은 적용 종료 3개월 전부터 종료일까지 해야 하고 중증화상은 종료일부터 2년 이내입니다. 2026년 1월 1일부터 대상 희">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-09-01-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-09-01T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-09-01T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-09-01-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-09-01-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "산정특례 대상 질환 — 본인부담률과 등록 절차·적용 기간", "description": "본인일부부담금 산정특례는 중증질환자의 건강보험 본인부담률을 0~10%로 낮추는 제도입니다. 암은 5%로 5년, 희귀질환·중증난치질환·중증치매는 10%로 5년, 중증화상은 5%로 1년, 결핵과 잠복결핵감염은 0%가 적용되고, 심장질환·뇌혈관질환·중증외상은 등록 없이 최대 30~60일 적용됩니다. 등록은 의사가 발행한 건강보험 산정특례 등록 신청서로 하며 확진일부터 30일 이내 신청하면 확진일까지 소급됩니다. 재등록은 적용 종료 3개월 전부터 종료일까지 해야 하고 중증화상은 종료일부터 2년 이내입니다. 2026년 1월 1일부터 대상 희", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-09-01", "dateModified": "2026-09-01", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 건강보험 의료비 경감 · 중증질환 지원</div>
+  <div class="section-badge">본인일부부담금 산정특례</div>
+
+  <h1>산정특례 대상 질환 — 본인부담률과 등록 절차·적용 기간</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대체로 이런 상황입니다.
+    <span class="highlight">병원에서 "산정특례 되니까 신청서 써 드릴게요"라는 말을 듣고 나왔는데 그게 뭔지 설명은 못 들은 경우</span>,
+    <span class="highlight">가족이 암 진단을 받고 병원비가 얼마나 나올지 가늠이 안 되는 경우</span>,
+    그리고 <span class="highlight">5년 전에 등록해 두었는데 만료가 다가온다는 문자를 받은 경우</span>입니다.
+    이 제도에서 먼저 잡아야 할 것은 두 가지입니다.
+    하나는 <span class="highlight">병원비의 90~95%를 건강보험이 대신 내는 큰 제도인데도 자동으로 적용되지 않고 등록을 해야 한다</span>는 점,
+    다른 하나는 <span class="highlight">확진일로부터 30일이라는 선과 만료 3개월이라는 선을 놓치면 그 기간의 차액은 돌아오지 않는다</span>는 점입니다.
+    아래에서 질환 갈래별 본인부담률과 적용 기간, 등록이 필요한 질환과 필요 없는 질환, 재등록 시기,
+    그리고 산정특례가 적용되지 않는 항목을 차례로 짚었습니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li><b>본인부담률이 0~10%로 내려갑니다</b> — 일반 건강보험은 입원 20%, 외래 30~60%인데 산정특례를 등록하면 암 5%, 희귀질환·중증난치질환 10%, 결핵 0%로 떨어집니다.</li>
+      <li><b>등록해야 적용됩니다</b> — 암·희귀질환·중증난치질환·중증치매·중증화상은 의사가 발행한 등록 신청서를 내야 하고, 심장질환·뇌혈관질환·중증외상은 등록 없이 병원 청구로 처리됩니다.</li>
+      <li><b>확진일로부터 30일</b> — 그 안에 신청하면 확진일까지 소급 적용되고, 넘기면 신청한 날부터입니다.</li>
+      <li><b>적용 기간은 갈래마다 다릅니다</b> — 암·희귀질환·중증난치질환·중증치매는 5년, 중증화상은 1년, 심장·뇌혈관·중증외상은 최대 30~60일입니다.</li>
+      <li><b>재등록은 종료 3개월 전부터</b> — 종료일까지 신청해야 이어지고, 놓치면 신규 등록으로 처리돼 공백이 생깁니다.</li>
+      <li><b>2026년 1월 1일부터 대상 희귀질환이 1,314개에서 1,389개로 늘었습니다</b> — 예전에 탈락한 병명이라도 다시 확인할 값어치가 있습니다.</li>
+    </ul>
+  </div>
+
+  <p style="font-size:13px;color:#888;margin-bottom:22px;">
+    ※ 본문의 본인부담률과 적용 기간은 <b>2026년 기준</b>이며 「국민건강보험법 시행령」 별표2와
+    보건복지부 고시 「본인일부부담금 산정특례에 관한 기준」에 따라 정해집니다.
+    대상 질환 목록은 해마다 고시로 바뀌므로, 병명이 목록에 있는지는 반드시 <b>진료 의사와 국민건강보험공단</b>에 확인하세요.
+  </p>
+
+  <h2>어떤 제도인가 — 감면이 아니라 부담률을 바꾸는 제도다</h2>
+  <p>
+    산정특례의 정확한 이름은 <b>본인일부부담금 산정특례</b>입니다.
+    이름 그대로 지원금을 얹어 주는 제도가 아니라, 병원비를 나눌 때 <b>환자가 부담하는 비율 자체를 다시 계산하는</b> 제도입니다.
+    보통 건강보험이 적용되는 진료비는 입원이면 총액의 20%, 외래면 의료기관 종류에 따라 30~60%를 환자가 냅니다.
+    산정특례로 등록되면 이 비율이 <b>암 5%, 희귀질환·중증난치질환 10%, 결핵 0%</b>처럼 낮은 값으로 바뀝니다.
+  </p>
+  <p>
+    비율을 바꾸는 방식이라 체감이 큽니다. 급여 진료비가 1,000만원 나온 입원 건이라면
+    일반 적용에서는 200만원을 내지만, 암 산정특례가 걸려 있으면 50만원을 냅니다.
+    다만 이 계산은 <b>건강보험이 적용되는 급여 항목</b>에 한정됩니다.
+    비급여로 잡히는 검사·치료·재료비는 처음부터 이 계산에 들어오지 않으므로,
+    "산정특례가 되면 병원비가 5%만 나온다"는 말은 사실과 다릅니다.
+    이 대목은 뒤에서 따로 짚었습니다.
+  </p>
+
+  <h2>질환 갈래별 본인부담률과 적용 기간</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>질환 갈래</th><th>본인부담률</th><th>적용 기간</th><th>등록</th></tr>
+    <tr><td>암</td><td><b>5%</b></td><td>등록일로부터 5년</td><td>필요</td></tr>
+    <tr><td>희귀질환</td><td><b>10%</b></td><td>등록일로부터 5년</td><td>필요</td></tr>
+    <tr><td>중증난치질환</td><td><b>10%</b></td><td>등록일로부터 5년</td><td>필요</td></tr>
+    <tr><td>상세불명 희귀질환</td><td><b>10%</b></td><td>등록일로부터 1년</td><td>필요</td></tr>
+    <tr><td>중증치매(V800)</td><td><b>10%</b></td><td>등록일로부터 5년</td><td>필요</td></tr>
+    <tr><td>중증치매(V810)</td><td><b>10%</b></td><td>연 60일(요건 충족 시 60일 추가)</td><td>필요</td></tr>
+    <tr><td>중증화상</td><td><b>5%</b></td><td>등록일로부터 1년(연장 가능)</td><td>필요</td></tr>
+    <tr><td>결핵(본인부담 면제)</td><td><b>0%</b></td><td>치료 종결 시까지</td><td>필요</td></tr>
+    <tr><td>잠복결핵감염</td><td><b>0%</b></td><td>치료 기간</td><td>필요</td></tr>
+    <tr><td>심장질환</td><td><b>5%</b></td><td>최대 30~60일</td><td>불필요</td></tr>
+    <tr><td>뇌혈관질환(수술)</td><td><b>5%</b></td><td>최대 30일</td><td>불필요</td></tr>
+    <tr><td>뇌출혈(비수술)·뇌경색증</td><td><b>5%</b></td><td>최대 30일</td><td>불필요</td></tr>
+    <tr><td>중증외상</td><td><b>5%</b></td><td>최대 30일</td><td>불필요</td></tr>
+  </table>
+  </div>
+  <p style="font-size:13px;color:#888;">
+    ※ 심장질환·뇌혈관질환·중증외상은 응급 상황에서 시작되는 진료라 별도 등록 절차 없이
+    요양기관이 청구할 때 적용됩니다. 그래서 이 갈래는 "신청을 안 해서 못 받는" 일이 생기지 않는 대신,
+    <b>기간이 30~60일로 짧아</b> 그 뒤 재활·외래 진료에는 일반 부담률이 돌아옵니다.
+  </p>
+
+  <h2>부담률 차이가 실제로 얼마인가</h2>
+  <div class="formula">
+    급여 진료비 총액이 <b>1,000만원</b>인 입원 진료를 가정하면<br>
+    · 일반 적용(입원 20%) → 본인부담 <b>200만원</b><br>
+    · 암 산정특례(5%) → 본인부담 <b class="big-number">50만원</b> (차액 150만원)<br>
+    · 희귀질환·중증난치질환 산정특례(10%) → 본인부담 <b class="big-number">100만원</b> (차액 100만원)<br>
+    · 결핵 본인부담 면제(0%) → 본인부담 <b>0원</b><br>
+    ※ 급여 항목 기준의 예시 계산이며, 실제 청구서에는 비급여와 전액본인부담 항목이 따로 더해집니다.
+  </div>
+
+  <div class="svg-wrap">
+    <div class="svg-title">같은 급여 진료비 1,000만원일 때 본인부담금 비교</div>
+    <svg viewBox="0 0 640 240" width="100%" height="auto" role="img" aria-label="본인부담률별 본인부담금 막대 비교">
+      <line x1="120" y1="20" x2="120" y2="210" stroke="#ddd" stroke-width="1"/>
+      <rect x="120" y="30" width="440" height="34" rx="6" fill="#9e9e9e"/>
+      <text x="14" y="52" font-size="13" fill="#444" font-weight="700">일반 20%</text>
+      <text x="572" y="52" font-size="13" fill="#444" font-weight="700">200만원</text>
+      <rect x="120" y="80" width="220" height="34" rx="6" fill="#7b1fa2"/>
+      <text x="14" y="102" font-size="13" fill="#444" font-weight="700">희귀 10%</text>
+      <text x="352" y="102" font-size="13" fill="#444" font-weight="700">100만원</text>
+      <rect x="120" y="130" width="110" height="34" rx="6" fill="#6a1b9a"/>
+      <text x="14" y="152" font-size="13" fill="#444" font-weight="700">암 5%</text>
+      <text x="242" y="152" font-size="13" fill="#444" font-weight="700">50만원</text>
+      <rect x="120" y="180" width="4" height="34" rx="2" fill="#4a148c"/>
+      <text x="14" y="202" font-size="13" fill="#444" font-weight="700">결핵 0%</text>
+      <text x="136" y="202" font-size="13" fill="#444" font-weight="700">0원</text>
+    </svg>
+  </div>
+
+  <h2>등록 절차 — 어디서 무엇을 내는가</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text">진료 의사가 검사 결과로 <b>확진</b>합니다. 산정특례는 의심 단계가 아니라 확진을 전제로 합니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text">의사가 <b>「건강보험 산정특례 등록 신청서」</b>를 발행합니다. 환자가 직접 작성하는 서류가 아니라 의사 확인이 들어가는 서식입니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text">대부분은 <b>병원 원무과가 전산(EDI)으로 대행</b>합니다. 직접 하려면 국민건강보험공단 지사에 방문·팩스·우편으로 제출합니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text">공단이 확인해 <b>등록을 확정</b>하고 문자나 이메일로 알려 줍니다.</div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-text">등록된 질환과 그 합병증 진료에 <b>낮아진 부담률이 적용</b>됩니다. 진료받을 때 특례 대상임을 병원에 알려 두면 착오가 줄어듭니다.</div></div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>⏰ 날짜에서 갈리는 두 지점</h3>
+    <p><b>① 확진일로부터 30일</b> — 암·희귀질환·중증난치질환은 이 안에 신청하면 확진일까지 소급 적용됩니다. 넘기면 신청한 날부터라, 그 사이 진료비는 일반 부담률로 굳습니다.</p>
+    <p><b>② 종료 3개월 전부터 종료일까지</b> — 암·희귀질환·중증난치질환·중증치매의 재등록 창입니다. 이 창을 놓치면 신규 등록으로 처리돼 혜택에 공백이 생깁니다.</p>
+    <p>중증화상은 예외적으로 <b>적용 종료일로부터 2년 이내</b>에 재등록을 신청할 수 있습니다.</p>
+  </div>
+
+  <h2>재등록 — 5년이 지나면 저절로 이어지지 않는다</h2>
+  <p>
+    가장 흔하게 손해가 나는 지점이 여기입니다.
+    암 산정특례는 5년입니다. 등록할 때는 5년이 길게 느껴지지만 만료 시점에는 대개 정기 추적검사만 받는 상태라
+    병원에 가는 간격이 넓어져 있고, 그러다 만료일이 지나갑니다.
+    <b>재등록은 종료 3개월 전부터 종료일까지</b> 신청해야 하고,
+    이 기간을 넘기면 자동 연장이 아니라 <b>신규 등록</b>으로 처리됩니다.
+  </p>
+  <p>
+    방법은 두 가지입니다. 진료받는 병원 의사에게 연장 의사를 밝히면 원무과가 전산으로 대행해 주는 것이 가장 간단하고,
+    직접 하려면 등록 신청서를 공단에 제출합니다.
+    만료일이 언제인지 모르겠다면 <b>국민건강보험공단 고객센터(☎1577-1000)</b>나
+    공단 홈페이지·모바일 앱의 자격 조회에서 확인할 수 있습니다.
+    다만 재등록이 무조건 되는 것은 아닙니다.
+    암은 재등록 요건을 따로 두고 있어 잔존·전이·재발 여부 등 의학적 판단에 따라 갈리므로,
+    되는지 안 되는지는 <b>진료 의사의 판단</b>이 먼저입니다.
+  </p>
+
+  <h2>산정특례가 적용되지 않는 것</h2>
+  <p>
+    이 제도를 오해하게 만드는 대목입니다. 산정특례는 <b>건강보험 급여 항목의 본인부담률</b>만 건드립니다.
+    다음은 부담률이 낮아져도 그대로 남습니다.
+  </p>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>항목</th><th>산정특례 적용</th><th>설명</th></tr>
+    <tr><td>비급여 진료</td><td>적용 안 됨</td><td>건강보험이 처음부터 부담하지 않는 항목. 전액 본인 부담.</td></tr>
+    <tr><td>100분의 100 전액본인부담</td><td>적용 안 됨</td><td>급여 목록에는 있으나 전액을 환자가 내도록 정해진 항목.</td></tr>
+    <tr><td>선별급여</td><td>적용 안 됨</td><td>본인부담률을 따로 높게 정해 둔 항목.</td></tr>
+    <tr><td>등록 질환과 무관한 진료</td><td>적용 안 됨</td><td>감기·치과 등 다른 병으로 간 진료는 일반 부담률.</td></tr>
+    <tr><td>등록 질환과 그 합병증</td><td>적용</td><td>같은 날 진료라도 해당 상병으로 잡힌 부분에 적용.</td></tr>
+  </table>
+  </div>
+  <p>
+    산정특례를 적용하고도 남은 본인부담금은 <b>본인부담상한제</b>로 한 번 더 걸러집니다.
+    두 제도는 대체 관계가 아니라 순서 관계입니다.
+    산정특례가 먼저 부담률을 낮추고, 그렇게 1년 동안 쌓인 급여 본인부담금이 소득분위별 상한액을 넘으면
+    그 초과분을 공단이 돌려줍니다. 다만 상한제 역시 비급여는 계산에 넣지 않습니다.
+  </p>
+
+  <div class="checklist">
+    <h2>내 경우엔 어떻게 되나 — 자가 점검</h2>
+    <div class="check-item"><span class="chk">✓</span><span>확진을 받은 병명이 산정특례 대상 목록에 있는지 진료 의사에게 물어봤다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>확진일이 언제인지 알고 있고, 그로부터 30일이 지나지 않았다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>등록 신청서를 병원이 대행해 냈는지, 아직 안 냈는지 원무과에 확인했다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>이미 등록돼 있다면 만료일이 며칠인지 공단 조회로 확인했다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>만료가 3개월 안으로 다가왔다면 다음 진료 때 연장 의사를 밝히기로 정해 뒀다.</span></div>
+  </div>
+
+  <div class="caution">
+    <div class="caution-item"><b>① 진단서가 곧 등록은 아닙니다.</b> 진단서를 받았다고 특례가 걸리지 않습니다. 별도의 등록 신청서가 공단에 접수돼야 합니다.</div>
+    <div class="caution-item"><b>② 병원이 대행했다고 믿고 넘기지 마세요.</b> 대행 접수가 흔하지만 누락도 생깁니다. 등록 완료 안내를 받았는지 확인하는 편이 안전합니다.</div>
+    <div class="caution-item"><b>③ 30일을 넘기면 그 사이 진료비는 소급되지 않습니다.</b> 확진과 등록 사이가 벌어질수록 손해가 커집니다.</div>
+    <div class="caution-item"><b>④ 심장·뇌혈관·중증외상은 기간이 짧습니다.</b> 최대 30~60일이 지나면 같은 병으로 계속 다녀도 일반 부담률로 돌아옵니다.</div>
+    <div class="caution-item"><b>⑤ 대상 질환 목록은 해마다 바뀝니다.</b> 2026년 1월 1일자로 희귀질환이 1,314개에서 1,389개로 늘었으므로, 과거에 대상이 아니었던 병명도 다시 물어볼 값어치가 있습니다.</div>
+    <div class="caution-item"><b>⑥ 의료급여 수급자는 창구가 다릅니다.</b> 건강보험이 아니라 의료급여 체계의 중증질환·희귀질환 산정특례가 따로 있어, 등록은 시·군·구청과 의료급여 담당 부서를 거칩니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>담당 기관 및 문의처</h2>
+    <div class="contact-row"><span class="contact-label">국민건강보험공단</span> ☎1577-1000 · www.nhis.or.kr (자격 조회·등록 확인·만료일 조회)</div>
+    <div class="contact-row"><span class="contact-label">건강보험심사평가원</span> ☎1644-2000 · www.hira.or.kr (대상 질환·본인부담 기준)</div>
+    <div class="contact-row"><span class="contact-label">희귀질환 헬프라인</span> helpline.kdca.go.kr (질병관리청 · 희귀질환 등록 안내)</div>
+    <div class="contact-row"><span class="contact-label">보건복지상담센터</span> ☎129 (의료급여 산정특례 포함 복지 전반)</div>
+    <div class="contact-row"><span class="contact-label">진료받는 의료기관 원무과</span> 등록 신청서 발행과 전산 대행 접수</div>
+  </div>
+
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"중증질환의 의료비는 개인 저축으로 감당할 수 있는 성격이 아니다. 부담률 자체를 5%로 낮추는 방식은 지원금을 나눠 주는 방식보다 예측 가능성이 높고, 치료 중단을 막는 효과가 분명하다."</p>
+          <p class="author">— 보건의료정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"대상 질환이 해마다 넓어지고 있다는 점이 중요하다. 진단명조차 붙기 어려운 희귀질환 환자들에게 목록 확대는 제도 안으로 들어오는 유일한 통로다."</p>
+          <p class="author">— 희귀질환 환자단체 활동가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"부담률만 낮추고 비급여를 그대로 두면 실제 부담은 크게 줄지 않는다. 급여 항목에서 5%를 냈는데 전체 청구액은 여전히 수백만원인 사례가 반복된다."</p>
+          <p class="author">— 의료재정 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"등록과 재등록을 환자 쪽 신청에 맡겨 둔 구조가 문제다. 확진 30일, 만료 3개월이라는 기한은 병을 앓는 사람이 챙기기에 결코 쉬운 조건이 아니다."</p>
+          <p class="author">— 사회복지 현장 활동가</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #산정특례 #본인일부부담금산정특례 #중증질환산정특례 #희귀질환산정특례 #국민건강보험공단
+    #본인부담률 #암산정특례 #중증난치질환 #중증치매 #재등록 #건강보험심사평가원 #희귀질환헬프라인
+  </div>
+
+  <div class="disclaimer">
+    이 글은 국민건강보험공단·건강보험심사평가원·질병관리청 희귀질환 헬프라인 등
+    공개된 자료를 바탕으로 작성되었습니다. 본인부담률과 적용 기간, 대상 질환 목록은
+    관계 법령과 보건복지부 고시에 따라 바뀔 수 있으며, 개별 사례의 적용 여부는
+    진료 의사와 국민건강보험공단에 확인하시기 바랍니다.
+  </div>
+
+  <div class="written">작성일 2026-09-01 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
