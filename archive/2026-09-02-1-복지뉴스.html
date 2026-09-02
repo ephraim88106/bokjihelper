@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>발달재활서비스 대상 조건 — 연령·가구 요건과 월 지원금액, 이용 절차</title>
+<meta name="description" content="발달재활서비스는 만 18세 미만 등록장애아동에게 언어·청능, 미술심리, 음악, 놀이심리, 행동발달, 재활심리, 심리운동, 감각·운동발달 재활을 바우처로 지원하는 사업입니다. 소득 갈래는 다형(수급자) 26만원, 가형(차상위) 24만원, 나형(중위 65% 이하) 22만원, 라형(중위 65~120%) 20만원, 마형(중위 120~180%) 18만원이며 본인부담금은 0·2·4·6·8만원으로 총 이용액은 26만원으로 같습니다. 기준 단가는 회당 32,500원 월 8회이고, 실제 시장 단가가 이보다 높아 차액이 생기는 구조와 만 9세 미만 진단서 특례, 언어발달지원사업과의 갈래, 매월 27일 바우처 생성 시한을 정리했습니다. 2026년 기준.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    background: #f8f9fa;
+    color: #222;
+    line-height: 1.7;
+  }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge {
+    display: inline-block;
+    background: #1565c0;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.35;
+    color: #1a1a1a;
+    margin-bottom: 18px;
+    word-break: keep-all;
+  }
+
+  .hook {
+    border-left: 5px solid #1565c0;
+    padding: 14px 18px;
+    background: #e3f2fd;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 22px;
+    font-size: 15px;
+  }
+  .hook .highlight { color: #0d47a1; font-weight: 900; }
+
+  .summary-box {
+    background: #e8f5e9;
+    border: 2px solid #2e7d32;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 26px;
+  }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+
+  h2 { font-size: 19px; font-weight: 900; color: #0d47a1; margin: 28px 0 12px; border-bottom: 2px solid #90caf9; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #1565c0; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #e3f2fd; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #0d47a1; }
+
+  .formula {
+    background: #f5fafe;
+    border: 1px solid #90caf9;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 20px;
+    font-size: 14.5px;
+    line-height: 1.9;
+    word-break: keep-all;
+  }
+  .formula b { color: #0d47a1; }
+
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #e3f2fd; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #1565c0; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+
+  .deadline-box {
+    border: 2px dashed #f57c00;
+    background: #fff8e1;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 22px;
+  }
+  .deadline-box h3 { color: #1565c0; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+
+  .checklist { background: #e3f2fd; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #90caf9; color: #0d47a1; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #0d47a1; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+
+  .caution { background: #e3f2fd; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+
+  .contact-box { background: #e3f2fd; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #0d47a1; border-color: #90caf9; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  .hashtags { font-size: 13px; color: #0d47a1; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-09-02-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="발달재활서비스 대상 조건 — 연령·가구 요건과 월 지원금액, 이용 절차">
+<meta property="og:description" content="발달재활서비스는 만 18세 미만 등록장애아동에게 언어·청능, 미술심리, 음악, 놀이심리, 행동발달, 재활심리, 심리운동, 감각·운동발달 재활을 바우처로 지원하는 사업입니다. 소득 갈래는 다형(수급자) 26만원, 가형(차상위) 24만원, 나형(중위 65% 이하) 22만원, 라형(중위 65~120%) 20만원, 마형(중위 120~180%) 18만원이며 본인부담금은 0·2·4·6·8만원으로 총 이용액은 26만원으로 같습니다. 기준 단가는 회당 32,500원 월 8회이고, 실제 시장 단가가 이보다 높아 차액이 생기는 구조와 만 9세 미만 ">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-09-02-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-09-02T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-09-02T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-09-02-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-09-02-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "발달재활서비스 대상 조건 — 연령·가구 요건과 월 지원금액, 이용 절차", "description": "발달재활서비스는 만 18세 미만 등록장애아동에게 언어·청능, 미술심리, 음악, 놀이심리, 행동발달, 재활심리, 심리운동, 감각·운동발달 재활을 바우처로 지원하는 사업입니다. 소득 갈래는 다형(수급자) 26만원, 가형(차상위) 24만원, 나형(중위 65% 이하) 22만원, 라형(중위 65~120%) 20만원, 마형(중위 120~180%) 18만원이며 본인부담금은 0·2·4·6·8만원으로 총 이용액은 26만원으로 같습니다. 기준 단가는 회당 32,500원 월 8회이고, 실제 시장 단가가 이보다 높아 차액이 생기는 구조와 만 9세 미만 ", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-09-02", "dateModified": "2026-09-02", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 장애아동 재활 · 사회서비스 전자바우처</div>
+  <div class="section-badge">발달재활서비스</div>
+
+  <h1>발달재활서비스 대상 조건 — 연령·가구 요건과 월 지원금액, 이용 절차</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대체로 이런 상황입니다.
+    <span class="highlight">아이가 언어치료를 받아야 한다는 말을 들었는데 회당 5만원대 비용이 부담스러운 경우</span>,
+    <span class="highlight">주민센터에서 "바우처 되실 것 같다"는 말만 듣고 나온 경우</span>,
+    그리고 <span class="highlight">장애 등록은 아직 안 했는데 지금도 받을 수 있는지 궁금한 경우</span>입니다.
+    이 사업에서 먼저 잡아야 할 것은 두 가지입니다.
+    하나는 <span class="highlight">소득 갈래가 달라도 한 달에 쓸 수 있는 총액은 26만원으로 같고, 정부 몫과 내 몫의 비율만 달라진다</span>는 점,
+    다른 하나는 <span class="highlight">기준 단가(회당 32,500원)와 치료실이 실제로 받는 단가 사이의 차액은 바우처가 메워 주지 않는다</span>는 점입니다.
+    아래에서 대상이 되는 아동의 갈래, 소득별 금액표, 금액이 계산되는 방식,
+    장애 등록 전에도 되는 특례, 부모가 장애인인 비장애아동에게 열리는 다른 갈래,
+    그리고 바우처가 언제 생기고 언제 없어지는지를 차례로 짚었습니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li><b>만 18세 미만 등록장애아동</b> — 시각·청각·언어·지적·자폐성·뇌병변 장애로 등록된 아동이 대상입니다.</li>
+      <li><b>가구 소득은 기준 중위소득 180% 이하</b> — 장애아동이 둘 이상이거나 부모 중 한 명 이상이 중증장애인이면 예외가 인정될 수 있습니다.</li>
+      <li><b>월 지원액은 18만~26만원</b> — 수급자 26만원, 차상위 24만원, 중위 65% 이하 22만원, 65~120% 20만원, 120~180% 18만원입니다.</li>
+      <li><b>본인부담금은 0·2·4·6·8만원</b> — 지원액과 더하면 어느 갈래든 총 26만원으로 같습니다.</li>
+      <li><b>기준 단가는 회당 32,500원·월 8회</b> — 치료실 단가가 이보다 높으면 그 차액은 따로 냅니다.</li>
+      <li><b>만 9세 미만은 장애 등록 전에도 가능</b> — 전문의 진단서와 검사 결과로 대신할 수 있습니다.</li>
+      <li><b>매월 27일 18시가 분기점</b> — 그 전에 접수돼야 다음 달 바우처가 생성됩니다.</li>
+    </ul>
+  </div>
+
+  <p style="font-size:13px;color:#888;margin-bottom:22px;">
+    ※ 본문의 금액과 요건은 <b>2026년 기준</b>이며 보건복지부 「발달재활서비스 사업안내」와
+    사회서비스 전자바우처 안내를 따랐습니다. 기준 단가와 실제 서비스 가격은 지방자치단체가
+    지역 시장가격을 반영해 조정할 수 있으므로, 우리 지역 금액은 반드시
+    <b>주소지 읍면동 행정복지센터</b>에 확인하세요.
+  </p>
+
+  <h2>어떤 사업인가 — 치료비를 깎아 주는 게 아니라 한 달 치 이용권을 준다</h2>
+  <p>
+    발달재활서비스는 장애아동의 <b>인지·의사소통·적응행동·감각·운동</b> 기능을 끌어올리기 위한
+    재활치료를 국가가 바우처로 대신 결제해 주는 사업입니다.
+    제공되는 영역은 <b>언어·청능, 미술심리, 음악, 놀이심리, 행동발달, 재활심리, 심리운동,
+    감각발달, 운동발달</b> 등입니다. 물리치료와 작업치료처럼 건강보험이 이미 급여로 다루는 항목,
+    그리고 교과목 학습지도는 이 바우처로 결제할 수 없습니다.
+  </p>
+  <p>
+    작동 방식은 병원비 감면과 다릅니다. 감면은 청구서에서 일정 비율을 빼 주는 방식이지만,
+    이 사업은 <b>매달 한도가 정해진 전자바우처(국민행복카드)를 만들어 주고 그 안에서 결제하게 하는</b> 방식입니다.
+    그래서 한도를 넘긴 금액, 그리고 바우처를 쓰지 않고 지나간 달은 그대로 사라집니다.
+    "얼마를 받는가"보다 <b>"한 달에 몇 회를 어떤 단가로 쓰는가"</b>를 먼저 계산해야 하는 이유입니다.
+  </p>
+
+  <h2>대상이 되는 아동 — 세 가지 문을 모두 통과해야 한다</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>갈래</th><th>내용</th><th>확인할 곳</th></tr>
+    <tr><td><b>연령</b></td><td>만 18세 미만. 신청 시점에 18세 미만이면 되고, 18세가 되는 달까지 이어서 이용할 수 있습니다.</td><td>주민등록</td></tr>
+    <tr><td><b>장애 유형</b></td><td>시각·청각·언어·지적·자폐성·뇌병변 등록장애아동. 지체·안면 등 다른 유형은 이 사업의 대상이 아닙니다.</td><td>장애인 등록증</td></tr>
+    <tr><td><b>가구 소득</b></td><td>기준 중위소득 <b>180% 이하</b>. 건강보험료 납부액으로 먼저 훑고, 필요하면 소득·재산 조사를 거칩니다.</td><td>읍면동 행정복지센터</td></tr>
+  </table>
+  </div>
+  <p>
+    세 갈래 가운데 실제로 문턱이 되는 것은 대체로 <b>소득</b>입니다.
+    다만 예외가 있습니다. <b>장애아동이 둘 이상인 가구</b>, 그리고
+    <b>부모 가운데 한 명 이상이 중증장애인인 가구</b>는 소득이 180%를 넘더라도
+    지원 대상으로 인정될 수 있습니다. 소득 때문에 안 될 것이라고 미리 접기보다
+    이 두 조건에 해당하는지를 먼저 확인해 보는 편이 낫습니다.
+  </p>
+
+  <h2>장애 등록 전이라도 되는 특례 — 만 9세 미만</h2>
+  <div class="formula">
+    <b>만 9세 미만</b>이면서 아직 장애인 등록을 하지 않은 아동은,
+    위 여섯 가지 장애 유형에 준하는 <b>전문의 진단서</b>와 <b>검사 자료</b>를 내면
+    등록증 없이도 신청할 수 있습니다.<br>
+    → 발달 지연이 확인됐지만 나이가 어려 장애 판정을 미루고 있는 경우를 위한 통로입니다.
+    다만 지자체에 따라 요구하는 검사 자료의 종류와 유효 기간이 다르므로,
+    <b>진단서를 떼기 전에</b> 읍면동에 어떤 서류가 필요한지 먼저 물어보는 편이 헛걸음을 줄입니다.
+  </div>
+
+  <h2>소득 갈래별 월 지원금액과 본인부담금</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>갈래</th><th>소득 구간</th><th>정부 지원액</th><th>본인부담금</th><th>월 총 이용액</th></tr>
+    <tr><td>다형</td><td>기초생활수급자</td><td><b>26만원</b></td><td>면제</td><td>26만원</td></tr>
+    <tr><td>가형</td><td>차상위계층</td><td><b>24만원</b></td><td>2만원</td><td>26만원</td></tr>
+    <tr><td>나형</td><td>차상위 초과 ~ 중위소득 65% 이하</td><td><b>22만원</b></td><td>4만원</td><td>26만원</td></tr>
+    <tr><td>라형</td><td>중위소득 65% 초과 ~ 120% 이하</td><td><b>20만원</b></td><td>6만원</td><td>26만원</td></tr>
+    <tr><td>마형</td><td>중위소득 120% 초과 ~ 180% 이하</td><td><b>18만원</b></td><td>8만원</td><td>26만원</td></tr>
+  </table>
+  </div>
+  <p>
+    표의 맨 오른쪽 칸을 보면 이 제도의 설계가 한눈에 들어옵니다.
+    <b>어느 갈래에 속하든 한 달에 쓸 수 있는 총액은 26만원으로 같습니다.</b>
+    달라지는 것은 그 26만원을 정부와 가구가 어떻게 나눠 내느냐입니다.
+    수급자 가구는 26만원을 전부 정부가 대고, 중위소득 120~180% 가구는 18만원을 정부가 대고 8만원을 냅니다.
+    <span class="big-number">26만원</span>이라는 숫자는 <b>기준 단가 32,500원 × 월 8회</b>에서 나옵니다.
+    주 2회, 한 달 여덟 번의 치료를 상정한 금액입니다.
+  </p>
+
+  <div class="svg-wrap">
+    <div class="svg-title">소득 갈래별 정부 지원액과 본인부담금 (월, 만원)</div>
+    <svg viewBox="0 0 640 260" width="100%" role="img" aria-label="소득 갈래별 정부 지원액과 본인부담금 막대 그래프">
+      <text x="10" y="18" font-size="12" fill="#666">총 이용액은 모두 26만원 — 파랑이 정부 몫, 주황이 본인 몫</text>
+      <g font-size="12" fill="#333">
+        <text x="10" y="52">다형 수급자</text>
+        <rect x="150" y="38" width="390" height="20" fill="#1565c0"/>
+        <text x="548" y="53" font-size="11" fill="#0d47a1">26 / 0</text>
+
+        <text x="10" y="92">가형 차상위</text>
+        <rect x="150" y="78" width="360" height="20" fill="#1565c0"/>
+        <rect x="510" y="78" width="30" height="20" fill="#f57c00"/>
+        <text x="548" y="93" font-size="11" fill="#0d47a1">24 / 2</text>
+
+        <text x="10" y="132">나형 65% 이하</text>
+        <rect x="150" y="118" width="330" height="20" fill="#1565c0"/>
+        <rect x="480" y="118" width="60" height="20" fill="#f57c00"/>
+        <text x="548" y="133" font-size="11" fill="#0d47a1">22 / 4</text>
+
+        <text x="10" y="172">라형 65~120%</text>
+        <rect x="150" y="158" width="300" height="20" fill="#1565c0"/>
+        <rect x="450" y="158" width="90" height="20" fill="#f57c00"/>
+        <text x="548" y="173" font-size="11" fill="#0d47a1">20 / 6</text>
+
+        <text x="10" y="212">마형 120~180%</text>
+        <rect x="150" y="198" width="270" height="20" fill="#1565c0"/>
+        <rect x="420" y="198" width="120" height="20" fill="#f57c00"/>
+        <text x="548" y="213" font-size="11" fill="#0d47a1">18 / 8</text>
+      </g>
+      <line x1="150" y1="232" x2="540" y2="232" stroke="#ccc"/>
+      <text x="150" y="248" font-size="11" fill="#888">0</text>
+      <text x="520" y="248" font-size="11" fill="#888">26만원</text>
+    </svg>
+  </div>
+
+  <h2>실제로 얼마를 더 내게 되는가 — 기준 단가와 치료실 단가의 차이</h2>
+  <p>
+    금액표만 보면 마형 가구도 한 달에 8만원이면 여덟 번의 치료를 받는 것처럼 읽힙니다.
+    실제 부담이 그보다 커지는 지점이 여기입니다.
+    <b>26만원이라는 한도는 회당 32,500원이라는 기준 단가를 전제로 짜여 있는데,
+    치료실이 실제로 받는 가격은 그보다 높은 경우가 많습니다.</b>
+    국회 국정감사 자료에서 확인된 전국 평균 실제 단가는 2022년 45,954원, 2024년 54,472원이었습니다.
+    같은 기간 기준 단가는 27,500원에서 30,000원으로 올랐으니, 격차는 오히려 벌어졌습니다.
+  </p>
+  <div class="formula">
+    <b>계산 예시</b> — 마형(중위 120~180%) 가구가 회당 50,000원짜리 언어치료를 월 8회 받는 경우<br>
+    · 총 치료비: 50,000원 × 8회 = <b>400,000원</b><br>
+    · 바우처로 결제되는 금액: <b>260,000원</b> (정부 18만 + 본인부담 8만)<br>
+    · 카드로 따로 내는 차액: <b>140,000원</b><br>
+    → 실제 월 부담은 8만원이 아니라 <b>22만원</b>이 됩니다.<br>
+    <span style="color:#c62828;">※ 회당 단가는 지역과 기관마다 다릅니다. 계약 전에 반드시 회당 가격을 확인하세요.</span>
+  </div>
+  <p>
+    그래서 기관을 고를 때는 "바우처가 되는 곳인가"만이 아니라 <b>"회당 얼마인가"</b>를 같이 물어야 합니다.
+    같은 지역 안에서도 기관별로 수천 원씩 차이가 나고, 월 8회로 곱하면 수만 원의 차이가 됩니다.
+    회차를 월 8회보다 줄여 차액을 맞추는 방법도 있지만,
+    치료 효과는 연속성에 크게 기대므로 회차를 줄이기 전에 기관 상담을 먼저 받는 편이 좋습니다.
+  </p>
+
+  <h2>부모가 장애인인 비장애아동 — 언어발달지원사업이라는 다른 문</h2>
+  <p>
+    아이 본인은 장애가 없지만 <b>부모(또는 조손가정의 조부모) 가운데 한쪽이 등록장애인</b>인 경우에는
+    발달재활서비스가 아니라 <b>언어발달지원사업</b>이라는 별도 갈래가 열립니다.
+    두 사업은 대상도 금액도 다르므로 헷갈리지 않는 편이 좋습니다.
+  </p>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>구분</th><th>발달재활서비스</th><th>언어발달지원사업</th></tr>
+    <tr><td>누가 장애인인가</td><td>아동 본인</td><td>부모 또는 조부모</td></tr>
+    <tr><td>아동 연령</td><td>만 18세 미만</td><td>만 12세 미만 비장애아동</td></tr>
+    <tr><td>소득 요건</td><td>기준 중위소득 180% 이하</td><td>기준 중위소득 120% 이하</td></tr>
+    <tr><td>월 정부 지원액</td><td>18만~26만원</td><td>18만~24만원</td></tr>
+    <tr><td>월 총 이용액</td><td>26만원</td><td>24만원</td></tr>
+    <tr><td>서비스 내용</td><td>언어·청능, 미술심리, 음악, 놀이심리, 행동발달, 재활심리, 심리운동, 감각·운동발달</td><td>언어발달진단, 언어·청능 재활, 독서지도, 수어지도</td></tr>
+  </table>
+  </div>
+  <p>
+    언어발달지원사업의 소득 갈래별 금액은 수급자 24만원(본인부담 면제), 차상위 22만원(2만원),
+    중위소득 65% 이하 20만원(4만원), 중위소득 65~120% 18만원(6만원)입니다.
+    이쪽도 지원액과 본인부담금을 더하면 <b>24만원으로 같습니다.</b>
+    다만 <b>논술지도나 학습지도 같은 교과 수업은 결제할 수 없습니다.</b>
+  </p>
+
+  <h2>이용 절차</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text"><b>서류를 갖춰 읍면동에 접수합니다.</b> 주소지 읍면동 행정복지센터를 방문하거나 복지로(bokjiro.go.kr)에서 온라인으로 넣습니다. 사회보장급여 신청서, 바우처카드 발급 동의서, 장애인 등록증(또는 만 9세 미만은 전문의 진단서와 검사 자료), 건강보험증과 보험료 납부확인서가 기본입니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text"><b>소득 조사를 거쳐 갈래가 정해집니다.</b> 시군구가 가구 소득·재산을 확인해 다·가·나·라·마형 가운데 하나로 결정하고 결과를 통지합니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text"><b>국민행복카드로 바우처가 들어옵니다.</b> 이미 가지고 있는 국민행복카드에 얹히고, 없으면 카드사에서 새로 발급받습니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text"><b>제공기관을 고르고 계약합니다.</b> 사회서비스 전자바우처 누리집(socialservice.or.kr)에서 지역별 등록 기관을 찾을 수 있습니다. 회당 가격과 주당 회차를 계약서에 적어 확인하세요.</div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-text"><b>이용할 때마다 카드로 결제합니다.</b> 바우처 한도가 먼저 빠지고, 기준 단가를 넘는 차액은 별도로 냅니다.</div></div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>⏰ 매월 27일 18시가 분기점입니다</h3>
+    <p>그달 <b>27일 18시 이전</b>에 접수돼 결정이 나야 <b>다음 달</b> 바우처가 생성됩니다. 27일을 넘기면 한 달이 통째로 밀립니다.</p>
+    <p>바우처는 <b>달 단위</b>로 들어오며, 그달에 쓰지 않은 금액이 다음 달로 넘어가는지는 지자체 운영 지침에 따라 다르므로 결정 통지를 받을 때 함께 확인하는 편이 안전합니다.</p>
+    <p>소득이 바뀌면 갈래도 바뀝니다. 가구 소득이 180%를 넘어서면 그다음 달부터 지원이 끊기므로, 이직·승진 등으로 소득이 오를 때는 미리 문의해 두세요.</p>
+  </div>
+
+  <div class="checklist">
+    <h2>✅ 우리 아이가 해당되는지 자가 점검</h2>
+    <div class="check-item"><span class="chk">✓</span><span>아이가 <b>만 18세 미만</b>이다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>시각·청각·언어·지적·자폐성·뇌병변 가운데 하나로 <b>장애 등록</b>이 되어 있다. (또는 만 9세 미만이고 전문의 진단서와 검사 자료가 있다.)</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>가구 소득이 <b>기준 중위소득 180% 이하</b>이다. (또는 장애아동이 둘 이상이거나 부모 중 한 명이 중증장애인이다.)</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>받으려는 치료가 <b>물리치료·작업치료가 아닌</b> 언어·심리·행동·감각 영역이다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>이용하려는 기관의 <b>회당 가격</b>을 확인했고, 26만원 한도를 넘는 차액을 감당할 수 있다.</span></div>
+  </div>
+
+  <h2>놓치기 쉬운 대목</h2>
+  <div class="caution">
+    <div class="caution-item">① <b>물리치료·작업치료는 이 바우처로 결제되지 않습니다.</b> 건강보험 급여로 다루는 영역이라 중복 지원을 막기 위해 제외돼 있습니다.</div>
+    <div class="caution-item">② <b>26만원은 "받는 돈"이 아니라 "쓸 수 있는 한도"입니다.</b> 마형 가구라면 그중 8만원은 본인이 채워 넣어야 바우처가 26만원어치로 작동합니다.</div>
+    <div class="caution-item">③ <b>기준 단가와 실제 단가의 차액은 지원되지 않습니다.</b> 지역·기관별로 회당 수천 원씩 차이가 나므로 계약 전에 가격을 문서로 확인하세요.</div>
+    <div class="caution-item">④ <b>지체장애·안면장애 등은 대상 유형이 아닙니다.</b> 여섯 가지 유형에 해당하는지부터 확인해야 헛걸음을 피합니다.</div>
+    <div class="caution-item">⑤ <b>장애인 활동지원, 아동수당 등 다른 제도와는 성격이 다릅니다.</b> 함께 받을 수 있는지는 각 제도의 중복 규정을 따로 확인해야 합니다.</div>
+    <div class="caution-item">⑥ <b>부모가 장애인인 비장애아동이라면 이 사업이 아니라 언어발달지원사업입니다.</b> 잘못된 창구로 신청하면 반려됩니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <div class="contact-row"><span class="contact-label">접수·상담</span> — 주소지 읍면동 행정복지센터 (사회복지 담당)</div>
+    <div class="contact-row"><span class="contact-label">온라인 접수</span> — 복지로 bokjiro.go.kr</div>
+    <div class="contact-row"><span class="contact-label">제공기관 검색</span> — 사회서비스 전자바우처 socialservice.or.kr</div>
+    <div class="contact-row"><span class="contact-label">바우처 카드·결제 문의</span> — 사회서비스 전자바우처 콜센터 1566-0133</div>
+    <div class="contact-row"><span class="contact-label">복지 제도 전반</span> — 보건복지상담센터 129</div>
+    <div class="contact-row"><span class="contact-label">소관 부처</span> — 보건복지부 장애인서비스과</div>
+  </div>
+
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"발달기의 재활은 시기를 놓치면 되돌리기 어렵다. 소득 갈래와 무관하게 월 이용 총액을 26만원으로 맞춰 둔 설계는 최소한의 치료 밀도를 보장하려는 장치로 볼 수 있다."</p>
+          <p class="author">— 아동재활 분야 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"만 9세 미만에 대해 장애 등록 없이 진단서로 신청을 받는 특례가 중요하다. 판정을 기다리며 치료를 미루는 기간이 사실상 사라지기 때문이다."</p>
+          <p class="author">— 장애아동 부모단체 활동가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"기준 단가가 현장 가격을 따라가지 못하면 지원 한도는 명목에 그친다. 실제 단가와의 격차가 해마다 벌어지는 구조에서는 저소득 가구일수록 회차를 줄이는 선택을 하게 된다."</p>
+          <p class="author">— 사회서비스 재정 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"지역별 단가 편차와 기관 밀집도 차이가 결국 거주지에 따른 격차로 이어진다. 농어촌에서는 바우처가 있어도 갈 곳이 없다는 상담이 반복된다."</p>
+          <p class="author">— 장애인복지 현장 활동가</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #발달재활서비스 #언어발달지원사업 #장애아동가족지원 #사회서비스전자바우처 #국민행복카드
+    #언어치료 #놀이치료 #감각통합 #보건복지부 #복지로 #장애아동재활 #기준중위소득180
+  </div>
+
+  <div class="disclaimer">
+    이 글은 보건복지부, 사회서비스 전자바우처, 복지로 등 공개된 자료를 바탕으로 작성되었습니다.
+    지원 금액과 기준 단가, 소득 요건은 관계 지침과 지방자치단체 결정에 따라 바뀔 수 있으며,
+    실제 지원 여부와 우리 지역 서비스 가격은 주소지 읍면동 행정복지센터에 확인하시기 바랍니다.
+  </div>
+
+  <div class="written">작성일 2026-09-02 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
