@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>디딤씨앗통장 가입 조건 — 정부 매칭 적립 한도와 만기 인출 방법</title>
+<meta name="description" content="디딤씨앗통장(아동발달지원계좌)은 0~17세 보호대상아동·기초생활수급가구 아동·차상위계층 아동이 대상입니다. 적립은 월 1천원부터 50만원까지 가능하지만 정부 매칭은 월 5만원까지의 적립분에만 1:2로 붙어 월 최대 10만원이며, 매칭금은 전월 적립분에 대해 익월 20~25일경 들어옵니다. 정기출금일 5·15·25일, 소급적립 불가, 만 18세 이후 학자금·기술훈련·창업·주거·의료·결혼 용도 인출, 만 24세에 용도 제한 해제, 조기인출은 아동 적립금만 가능한 구조를 정리했습니다. 2026년 기준.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    background: #f8f9fa;
+    color: #222;
+    line-height: 1.7;
+  }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge {
+    display: inline-block;
+    background: #2e7d32;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.35;
+    color: #1a1a1a;
+    margin-bottom: 18px;
+    word-break: keep-all;
+  }
+
+  .hook {
+    border-left: 5px solid #2e7d32;
+    padding: 14px 18px;
+    background: #e8f5e9;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 22px;
+    font-size: 15px;
+  }
+  .hook .highlight { color: #1b5e20; font-weight: 900; }
+
+  .summary-box {
+    background: #e8f5e9;
+    border: 2px solid #2e7d32;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 26px;
+  }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+
+  h2 { font-size: 19px; font-weight: 900; color: #1b5e20; margin: 28px 0 12px; border-bottom: 2px solid #a5d6a7; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #2e7d32; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #e8f5e9; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #1b5e20; }
+
+  .formula {
+    background: #f4faf5;
+    border: 1px solid #a5d6a7;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 20px;
+    font-size: 14.5px;
+    line-height: 1.9;
+    word-break: keep-all;
+  }
+  .formula b { color: #1b5e20; }
+
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #e8f5e9; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #2e7d32; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+
+  .deadline-box {
+    border: 2px dashed #f57c00;
+    background: #fff8e1;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 22px;
+  }
+  .deadline-box h3 { color: #1b5e20; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+
+  .checklist { background: #e8f5e9; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #a5d6a7; color: #1b5e20; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #1b5e20; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+
+  .caution { background: #e8f5e9; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+
+  .contact-box { background: #e8f5e9; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #1b5e20; border-color: #a5d6a7; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  .hashtags { font-size: 13px; color: #1b5e20; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-09-03-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="디딤씨앗통장 가입 조건 — 정부 매칭 적립 한도와 만기 인출 방법">
+<meta property="og:description" content="디딤씨앗통장(아동발달지원계좌)은 0~17세 보호대상아동·기초생활수급가구 아동·차상위계층 아동이 대상입니다. 적립은 월 1천원부터 50만원까지 가능하지만 정부 매칭은 월 5만원까지의 적립분에만 1:2로 붙어 월 최대 10만원이며, 매칭금은 전월 적립분에 대해 익월 20~25일경 들어옵니다. 정기출금일 5·15·25일, 소급적립 불가, 만 18세 이후 학자금·기술훈련·창업·주거·의료·결혼 용도 인출, 만 24세에 용도 제한 해제, 조기인출은 아동 적립금만 가능한 구조를 정리했습니다. 2026년 기준.">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-09-03-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-09-03T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-09-03T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-09-03-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-09-03-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "디딤씨앗통장 가입 조건 — 정부 매칭 적립 한도와 만기 인출 방법", "description": "디딤씨앗통장(아동발달지원계좌)은 0~17세 보호대상아동·기초생활수급가구 아동·차상위계층 아동이 대상입니다. 적립은 월 1천원부터 50만원까지 가능하지만 정부 매칭은 월 5만원까지의 적립분에만 1:2로 붙어 월 최대 10만원이며, 매칭금은 전월 적립분에 대해 익월 20~25일경 들어옵니다. 정기출금일 5·15·25일, 소급적립 불가, 만 18세 이후 학자금·기술훈련·창업·주거·의료·결혼 용도 인출, 만 24세에 용도 제한 해제, 조기인출은 아동 적립금만 가능한 구조를 정리했습니다. 2026년 기준.", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-09-03", "dateModified": "2026-09-03", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 아동 자산형성 · 아동발달지원계좌</div>
+  <div class="section-badge">디딤씨앗통장</div>
+
+  <h1>디딤씨앗통장 가입 조건 — 정부 매칭 적립 한도와 만기 인출 방법</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대체로 이런 상황입니다.
+    <span class="highlight">주민센터에서 "아이 앞으로 통장 하나 만들 수 있다"는 말만 듣고 나온 경우</span>,
+    <span class="highlight">이미 통장은 만들었는데 매달 얼마를 넣어야 손해가 없는지 모르는 경우</span>,
+    그리고 <span class="highlight">아이가 곧 성인이 되는데 그 돈을 언제 어떻게 찾는지 궁금한 경우</span>입니다.
+    이 제도에서 먼저 잡아야 할 숫자는 두 개입니다.
+    하나는 <span class="highlight">넣을 수 있는 돈은 월 50만원까지지만 정부가 얹어 주는 몫은 월 5만원까지의 적립분에만 붙는다</span>는 점,
+    다른 하나는 <span class="highlight">만 18세와 만 24세라는 두 시점에 따라 그 돈을 쓸 수 있는 용도가 완전히 달라진다</span>는 점입니다.
+    아래에서 가입할 수 있는 아동의 갈래, 매칭이 계산되는 구조와 월 적립액별 실제 이득,
+    돈이 언제 빠져나가고 언제 들어오는지, 만기 이후 인출 절차와 조기 인출의 한계,
+    그리고 중도 해지 때 어떤 돈이 사라지는지를 차례로 짚었습니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li><b>0~17세 아동이 대상</b> — 보호대상아동, 기초생활수급가구 아동, 차상위계층 아동입니다.</li>
+      <li><b>정부 매칭은 1:2, 월 최대 10만원</b> — 아동이 월 5만원을 넣으면 정부가 10만원을 얹습니다.</li>
+      <li><b>월 5만원이 매칭의 천장</b> — 그 이상 넣어도 정부 몫은 10만원에서 더 늘지 않습니다.</li>
+      <li><b>적립은 월 1천원 이상 50만원 이하</b> — 정기출금일은 매월 5일·15일·25일이고 소급 적립은 안 됩니다.</li>
+      <li><b>매칭금은 익월 20~25일경 입금</b> — 전월에 실제로 들어간 적립분을 기준으로 계산됩니다.</li>
+      <li><b>만 18세부터 용도를 정해 인출</b> — 학자금·기술훈련·창업·주거·의료·결혼 등이며 증빙이 필요합니다.</li>
+      <li><b>만 24세가 되면 용도 제한이 풀립니다</b> — 그때는 사유를 대지 않고 전액 찾을 수 있습니다.</li>
+    </ul>
+  </div>
+
+  <p style="font-size:13px;color:#888;margin-bottom:22px;">
+    ※ 본문의 금액과 요건은 <b>2026년 기준</b>이며 보건복지부와 국가아동권리보장원이 안내하는
+    아동발달지원계좌 사업 내용을 따랐습니다. 세부 운영과 인출 심사는 시·군·구가 맡고 있어
+    지역에 따라 서류나 처리 기간이 다를 수 있으므로, 실제 처리는
+    <b>주소지 시·군·구청 아동복지 담당 부서</b>에 확인하세요.
+  </p>
+
+  <h2>어떤 제도인가 — 지원금을 주는 게 아니라 저축에 정부가 따라 붙는다</h2>
+  <p>
+    디딤씨앗통장의 정식 이름은 <b>아동발달지원계좌</b>입니다.
+    생계급여나 아동수당처럼 나라가 돈을 내려 주는 제도가 아니라,
+    <b>아동 앞으로 누군가 저축을 하면 그 금액에 비례해 정부가 같은 계좌에 돈을 얹어 주는</b> 구조입니다.
+    그래서 아무도 넣지 않으면 정부 몫도 0원이고, 통장만 개설해 둔 채 몇 년이 지나면
+    그 몇 년치 매칭은 되돌릴 방법이 없습니다. <b>소급 적립이 되지 않기 때문</b>입니다.
+  </p>
+  <p>
+    돈을 넣는 사람은 아동 본인일 수도 있고 보호자일 수도 있으며,
+    아동을 지정해 후원하는 개인이나 기업 후원자일 수도 있습니다.
+    시설에서 지내는 아동처럼 보호자가 적립을 이어 가기 어려운 경우에는
+    <b>후원자관리센터</b>를 통해 후원자와 아동을 연결하는 통로가 따로 있습니다.
+    누가 넣든 정부 매칭은 <b>그 계좌에 실제로 들어온 금액</b>을 기준으로 계산됩니다.
+  </p>
+
+  <h2>가입할 수 있는 아동 — 세 갈래</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>갈래</th><th>해당하는 아동</th><th>가입 연령</th></tr>
+    <tr><td><b>보호대상아동</b></td><td>아동양육시설·공동생활가정에서 보호받는 아동, 가정위탁 보호아동, 장애인거주시설 아동</td><td>0~17세</td></tr>
+    <tr><td><b>기초생활수급가구 아동</b></td><td>생계·의료·주거·교육급여 가운데 하나 이상을 받는 가구의 아동</td><td>0~17세</td></tr>
+    <tr><td><b>차상위계층 아동</b></td><td>차상위 장애인, 차상위 자활, 한부모가족 등 차상위 확인을 받은 가구의 아동</td><td>0~17세</td></tr>
+  </table>
+  </div>
+  <p>
+    과거에는 수급가구·차상위 아동의 가입 연령이 <b>만 12세 이상</b>으로 좁았습니다.
+    그래서 "우리 아이는 아직 어려서 안 된다"고 들었던 기억으로 지금도 신청을 미루는 가구가 있습니다.
+    지금은 <b>기초생활수급가구 아동과 차상위계층 아동 모두 0세부터</b> 가입할 수 있게 넓어졌으므로,
+    예전에 안내받은 내용은 다시 확인해 볼 값어치가 있습니다.
+    가입 시점이 빠를수록 매칭을 받을 수 있는 달 수가 늘어나기 때문에,
+    이 제도에서 <b>나이는 곧 금액</b>입니다.
+  </p>
+  <p>
+    가입한 뒤 가구 사정이 나아져 수급 자격에서 벗어나거나,
+    시설·위탁 보호가 끝나 가정으로 돌아가는 경우에도
+    이미 만들어진 계좌는 요건을 충족하는 범위에서 계속 유지될 수 있습니다.
+    형편이 나아졌다는 이유로 통장을 먼저 닫아 버리기 전에
+    시·군·구청에 유지 가능 여부를 물어보는 편이 안전합니다.
+  </p>
+
+  <h2>매칭이 계산되는 방식 — 월 5만원이 분기점이다</h2>
+  <div class="formula">
+    <b>정부 매칭 = (그달 실제 적립액 중 5만원까지) × 2</b>, 월 상한 <b>10만원</b><br>
+    · 월 3만원 적립 → 정부 6만원 → 그달 계좌 증가액 <b>9만원</b><br>
+    · 월 5만원 적립 → 정부 10만원 → 그달 계좌 증가액 <b>15만원</b><br>
+    · 월 10만원 적립 → 정부 10만원(상한) → 그달 계좌 증가액 <b>20만원</b><br>
+    · 월 30만원 적립 → 정부 10만원(상한) → 그달 계좌 증가액 <b>40만원</b>
+  </div>
+  <p>
+    여기서 눈여겨볼 대목은 <b>5만원을 넘긴 적립분에는 정부 몫이 전혀 붙지 않는다</b>는 점입니다.
+    월 5만원을 넣는 가구는 자기 돈 1원당 정부 돈 2원을 받지만,
+    월 10만원을 넣는 가구는 자기 돈 1원당 정부 돈 1원을 받고,
+    월 30만원을 넣으면 자기 돈 1원당 정부 돈은 33원 남짓으로 떨어집니다.
+    <b>같은 통장이라도 월 5만원까지가 가장 효율이 높은 구간</b>이라는 뜻입니다.
+  </p>
+  <p>
+    그래서 여윳돈이 월 5만원을 넘는다면, 초과분을 이 통장에 몰아넣기보다
+    <b>5만원은 이 통장에 채워 매칭을 온전히 받고 나머지는 다른 저축으로 나누는</b> 편이
+    수익 구조상 유리합니다. 반대로 월 5만원을 채우기 버거운 달이 있다면
+    <b>액수를 줄여서라도 거르지 않고 넣는 쪽</b>이 낫습니다.
+    적립하지 않은 달의 매칭은 나중에 몰아서 받을 수 없기 때문입니다.
+  </p>
+
+  <div class="svg-wrap">
+    <div class="svg-title">월 적립액에 따른 그달 계좌 증가액 (내 적립 + 정부 매칭)</div>
+    <svg viewBox="0 0 640 300" width="100%" height="auto" role="img" aria-label="월 적립액별 정부 매칭 비교 막대그래프">
+      <line x1="120" y1="20" x2="120" y2="250" stroke="#ccc" stroke-width="1"/>
+      <line x1="120" y1="250" x2="620" y2="250" stroke="#ccc" stroke-width="1"/>
+
+      <text x="112" y="52" text-anchor="end" font-size="13" fill="#555">월 3만원</text>
+      <rect x="120" y="36" width="60" height="24" fill="#66bb6a"/>
+      <rect x="180" y="36" width="120" height="24" fill="#1b5e20"/>
+      <text x="310" y="53" font-size="13" fill="#1b5e20" font-weight="bold">9만원</text>
+
+      <text x="112" y="107" text-anchor="end" font-size="13" fill="#555">월 5만원</text>
+      <rect x="120" y="91" width="100" height="24" fill="#66bb6a"/>
+      <rect x="220" y="91" width="200" height="24" fill="#1b5e20"/>
+      <text x="430" y="108" font-size="13" fill="#1b5e20" font-weight="bold">15만원 · 매칭 최대</text>
+
+      <text x="112" y="162" text-anchor="end" font-size="13" fill="#555">월 10만원</text>
+      <rect x="120" y="146" width="200" height="24" fill="#66bb6a"/>
+      <rect x="320" y="146" width="200" height="24" fill="#1b5e20"/>
+      <text x="530" y="163" font-size="13" fill="#777" font-weight="bold">20만원</text>
+
+      <text x="112" y="217" text-anchor="end" font-size="13" fill="#555">월 30만원</text>
+      <rect x="120" y="201" width="290" height="24" fill="#66bb6a"/>
+      <rect x="410" y="201" width="200" height="24" fill="#1b5e20"/>
+      <text x="410" y="245" font-size="12" fill="#c62828">※ 5만원 초과분에는 매칭이 붙지 않습니다</text>
+
+      <rect x="130" y="270" width="14" height="14" fill="#66bb6a"/>
+      <text x="150" y="282" font-size="12" fill="#555">내 적립금</text>
+      <rect x="240" y="270" width="14" height="14" fill="#1b5e20"/>
+      <text x="260" y="282" font-size="12" fill="#555">정부 매칭금 (월 최대 10만원)</text>
+    </svg>
+  </div>
+
+  <h2>길게 넣으면 얼마가 되는가</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>적립 조건</th><th>내가 넣은 돈</th><th>정부 매칭금</th><th>원금 합계</th></tr>
+    <tr><td>월 5만원 × 10년</td><td>600만원</td><td>1,200만원</td><td class="big-number">1,800만원</td></tr>
+    <tr><td>월 5만원 × 15년</td><td>900만원</td><td>1,800만원</td><td class="big-number">2,700만원</td></tr>
+    <tr><td>월 10만원 × 10년</td><td>1,200만원</td><td>1,200만원</td><td class="big-number">2,400만원</td></tr>
+    <tr><td>월 3만원 × 10년</td><td>360만원</td><td>720만원</td><td class="big-number">1,080만원</td></tr>
+  </table>
+  </div>
+  <p>
+    표의 금액은 <b>원금만 더한 값</b>이며 이자는 따로 붙습니다.
+    두 번째 줄과 세 번째 줄을 나란히 보면 이 제도의 성격이 분명해집니다.
+    <b>월 10만원을 10년 넣은 가구(2,400만원)보다 월 5만원을 15년 넣은 가구(2,700만원)가 더 많이 모읍니다.</b>
+    자기 돈은 300만원 덜 넣고도 그렇습니다.
+    이 통장에서 결과를 가르는 것은 <b>매달 얼마를 넣느냐보다 몇 년을 넣느냐</b>라는 뜻입니다.
+    그래서 아이가 어릴수록 서둘러 가입하라는 안내가 반복되는 것입니다.
+  </p>
+
+  <h2>돈이 오가는 날짜</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text"><b>정기출금일 — 매월 5일·15일·25일</b> 가운데 지정한 날에 적립금이 빠져나갑니다. 그날이 주말이나 공휴일이면 다음 평일로 밀립니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text"><b>잔액 부족으로 출금이 안 되면 그달은 적립되지 않은 것으로 처리</b>됩니다. 출금일 전날까지 잔액을 채워 두어야 합니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text"><b>정부 매칭금은 익월 20~25일경</b> 전월 적립분을 기준으로 계좌에 들어옵니다. 넣은 달에 바로 보이지 않는다고 누락된 것이 아닙니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text"><b>지나간 달의 적립은 나중에 채울 수 없습니다.</b> 소급 적립이 인정되지 않으므로 거른 달의 매칭은 그대로 사라집니다.</div></div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>⏰ 날짜에서 갈리는 두 지점</h3>
+    <p><b>① 매달 출금일</b> — 5일·15일·25일 가운데 지정한 날에 잔액이 없으면 그달 매칭은 없습니다. 자동이체 계좌의 잔액을 출금일 전날 확인하는 습관이 이 제도에서는 곧 금액 차이가 됩니다.</p>
+    <p><b>② 만 18세가 되는 시점</b> — 이때부터 인출이 열리지만 동시에 적립과 매칭은 끝납니다. 만 17세에 뒤늦게 가입하면 매칭을 받을 수 있는 달 수가 그만큼 짧습니다.</p>
+  </div>
+
+  <h2>만기 이후 — 만 18세와 만 24세는 규칙이 다르다</h2>
+  <p>
+    적립이 끝나도 돈이 자동으로 통장에 입금되지는 않습니다.
+    <b>만 18세부터는 정해진 용도에 한해</b>, 증빙을 내고 심사를 거쳐 인출합니다.
+  </p>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>용도</th><th>인정되는 항목</th></tr>
+    <tr><td><b>학자금</b></td><td>입학금, 등록금, 기숙사비 등 학업에 드는 비용</td></tr>
+    <tr><td><b>기술자격·취업훈련</b></td><td>국가자격증·국제자격증 취득 비용, 학원 등록금</td></tr>
+    <tr><td><b>창업</b></td><td>사무실 보증금, 장비 구입비, 시설 설치비</td></tr>
+    <tr><td><b>주거 마련</b></td><td>임대보증금, 전세금, 주택 구입자금, 일정 기간 이상의 월세</td></tr>
+    <tr><td><b>의료비</b></td><td>진료비, 입원비, 재활치료비</td></tr>
+    <tr><td><b>결혼</b></td><td>결혼 및 생활 준비 비용(혼인 관련 서류 제출)</td></tr>
+    <tr><td><b>그 밖의 자립 용도</b></td><td>시·군·구청장이 자립에 필요하다고 인정하는 경우</td></tr>
+  </table>
+  </div>
+  <p>
+    <b>만 24세가 되면 이 목록 자체가 사라집니다.</b>
+    그때까지 위 용도가 생기지 않았다면 사유를 대지 않고 전액을 찾을 수 있습니다.
+    그래서 만 18세에 급히 쓸 곳을 만들어 인출할 이유는 없습니다.
+    당장 쓸 데가 없다면 계좌에 두었다가 만 24세 이후 자유롭게 찾는 선택지가 열려 있습니다.
+  </p>
+
+  <h2>인출 절차</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text"><b>주소지 시·군·구청 아동복지 담당 부서에 방문</b>해 사용 신청서를 냅니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text"><b>용도를 증명하는 서류를 함께 제출</b>합니다. 등록금 고지서, 임대차계약서, 진료비 영수증, 자격증 학원 등록증 등 용도에 맞는 자료입니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text">심사를 통과하면 <b>「디딤씨앗통장 적립금 지급 요청서」</b>를 받습니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text">그 요청서를 들고 <b>협력은행 지점을 방문해 지급을 신청</b>하면 계좌로 돈이 나옵니다.</div></div>
+  </div>
+  <p>
+    학기 시작이나 계약일에 맞춰 돈이 필요하다면
+    <b>심사와 은행 처리 기간을 앞뒤로 두고 미리 움직여야</b> 합니다.
+    서류를 낸 날 바로 나오는 구조가 아니기 때문입니다.
+  </p>
+
+  <h2>조기 인출과 중도 해지 — 사라지는 돈이 다르다</h2>
+  <div class="formula">
+    <b>조기 인출</b> — 만 18세 이전이라도 <b>학자금·기술자격 훈련비·질병이나 부상에 따른 의료비</b>에 한해 인출할 수 있습니다.
+    다만 이때 찾을 수 있는 것은 <b>아동이 적립한 돈뿐</b>이고 정부 매칭금은 대상이 아닙니다.<br><br>
+    <b>중도 해지</b> — 아동의 사망이나 이민처럼 제한된 사유에만 인정되며,
+    해지하면 <b>정부 매칭금은 환수</b>됩니다.
+  </div>
+  <p>
+    이 둘의 차이가 중요한 이유는, 목돈이 급할 때 통장을 아예 닫아 버리는 선택이
+    <b>정부가 몇 년에 걸쳐 쌓아 준 금액을 통째로 되돌려주는 결과</b>가 되기 때문입니다.
+    급한 사정이 학자금·훈련비·의료비에 해당한다면
+    해지가 아니라 조기 인출 쪽을 먼저 상담하는 것이 손실을 줄이는 길입니다.
+  </p>
+
+  <h2>가입하는 방법</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text"><b>시설 보호아동</b>은 보호 중인 시설이 대신 신청합니다. <b>가정위탁 아동, 기초생활수급가구·차상위계층 아동</b>은 주소지 읍면동 행정복지센터에 신청서를 냅니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text"><b>시·군·구가 자격을 심사</b>합니다. 수급 자격이나 차상위 확인 여부, 보호 상태를 확인하는 절차입니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text">승인되면 <b>협력은행에서 아동 명의 통장이 개설</b>됩니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text"><b>자동이체를 걸고 출금일을 지정</b>하면 그달부터 적립과 매칭이 시작됩니다.</div></div>
+  </div>
+
+  <div class="checklist">
+    <h2>✅ 우리 아이가 해당되는지 자가 점검</h2>
+    <div class="check-item"><span class="chk">✓</span><span>아이가 <b>만 18세 미만</b>이다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>시설·가정위탁 보호아동이거나, 가구가 <b>기초생활수급 또는 차상위계층</b>에 해당한다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>매달 꾸준히 넣을 수 있는 금액을 정했고, 가능하면 <b>월 5만원</b>에 맞췄다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>자동이체 계좌와 <b>출금일(5·15·25일)</b>을 정해 두었고 출금일 잔액을 확인할 방법이 있다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>아이가 성인이 된 뒤 <b>만 18세 용도 인출과 만 24세 자유 인출</b>의 차이를 알고 있다.</span></div>
+  </div>
+
+  <h2>놓치기 쉬운 대목</h2>
+  <div class="caution">
+    <div class="caution-item">① <b>통장만 만들어 두면 아무 일도 일어나지 않습니다.</b> 적립이 있어야 매칭이 생기고, 넣지 않은 달은 정부 몫도 0원입니다.</div>
+    <div class="caution-item">② <b>월 5만원을 넘겨 넣어도 정부 지원금은 늘지 않습니다.</b> 초과분은 일반 저축과 다를 바 없으므로 배분을 다시 볼 값어치가 있습니다.</div>
+    <div class="caution-item">③ <b>거른 달은 나중에 채울 수 없습니다.</b> 소급 적립이 인정되지 않아 그달 매칭은 되돌릴 방법이 없습니다.</div>
+    <div class="caution-item">④ <b>중도 해지하면 정부 매칭금은 환수됩니다.</b> 급전이 필요하더라도 해지보다 조기 인출 가능 여부를 먼저 확인하세요.</div>
+    <div class="caution-item">⑤ <b>조기 인출로 찾을 수 있는 것은 아동 적립금뿐입니다.</b> 정부 매칭금까지 당겨 쓸 수 있다고 오해하는 경우가 많습니다.</div>
+    <div class="caution-item">⑥ <b>연령 요건이 예전과 다릅니다.</b> 수급·차상위 아동도 0세부터 가입할 수 있으니 과거에 거절당한 기억이 있어도 다시 확인해 보세요.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <div class="contact-row"><span class="contact-label">가입 접수</span> — 주소지 읍면동 행정복지센터 (시설 아동은 보호 중인 시설)</div>
+    <div class="contact-row"><span class="contact-label">자격 심사·인출 심사</span> — 주소지 시·군·구청 아동복지 담당 부서</div>
+    <div class="contact-row"><span class="contact-label">후원자 연결·계좌 문의</span> — 국가아동권리보장원 후원자관리센터 1670-1834 (평일 09:00~18:00)</div>
+    <div class="contact-row"><span class="contact-label">제도 안내</span> — 국가아동권리보장원 ncrc.or.kr</div>
+    <div class="contact-row"><span class="contact-label">복지 제도 전반</span> — 보건복지상담센터 129</div>
+    <div class="contact-row"><span class="contact-label">소관 부처</span> — 보건복지부 아동복지정책과</div>
+  </div>
+
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"현금을 나눠 주는 방식과 달리 자산을 형성하는 경험 자체를 남긴다는 점이 이 제도의 핵심이다. 보호 종료 시점에 목돈이 있는지 여부가 이후 몇 년의 궤적을 바꾼다."</p>
+          <p class="author">— 아동복지 정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"1:2 매칭은 저축 여력이 적은 가구에도 참여 유인을 만든다. 월 5만원이라는 문턱을 낮게 잡은 설계가 실제 가입률을 지탱해 왔다."</p>
+          <p class="author">— 사회복지학과 교수</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"저축할 여력이 없는 가구일수록 매칭을 덜 받는 역진적 구조가 남는다. 가장 어려운 아동의 계좌가 가장 비어 있다는 점을 제도가 스스로 해결하지 못한다."</p>
+          <p class="author">— 사회정책 재정 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"만 18세 인출 심사가 시·군·구별로 달라 같은 용도에도 결과가 갈린다는 상담이 반복된다. 자립 시점의 청년에게 서류 부담을 지우는 구조는 손볼 여지가 있다."</p>
+          <p class="author">— 아동·청소년 현장 활동가</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #디딤씨앗통장 #아동발달지원계좌 #아동자산형성 #보호대상아동 #가정위탁 #기초생활수급 #차상위계층
+    #자립준비 #국가아동권리보장원 #보건복지부 #매칭적립 #아동복지
+  </div>
+
+  <div class="disclaimer">
+    이 글은 보건복지부와 국가아동권리보장원 등 공개된 자료를 바탕으로 작성되었습니다.
+    적립 한도와 매칭 비율, 인출 요건은 관계 지침과 지방자치단체 결정에 따라 바뀔 수 있으며,
+    실제 가입 가능 여부와 인출 절차는 주소지 시·군·구청 아동복지 담당 부서에 확인하시기 바랍니다.
+  </div>
+
+  <div class="written">작성일 2026-09-03 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
