@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>자활근로 종류와 월급 — 사업 유형별 하루 인건비와 참여 조건</title>
+<meta name="description" content="자활근로는 시장진입형·인턴도우미형·사회서비스형·근로유지형 네 갈래로 나뉘고 갈래마다 하루 인건비가 다릅니다. 2026년 기준 시장진입형과 인턴도우미형은 하루 62,080원에 실비 4,000원을 더해 66,080원, 사회서비스형은 53,840원에 실비를 더해 57,840원, 근로유지형은 29,940원에 실비를 더해 33,940원입니다. 흔히 말하는 월 161만원은 26일로 환산한 표준소득액이라 실제 받는 돈과 다릅니다. 참여 우선순위, 게이트웨이 과정, 누적 60개월 상한, 자활소득 30% 공제로 계산하는 자활장려금까지 정리했습니다. 2026년 기준.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    background: #f8f9fa;
+    color: #222;
+    line-height: 1.7;
+  }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge {
+    display: inline-block;
+    background: #f57c00;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.35;
+    color: #1a1a1a;
+    margin-bottom: 18px;
+    word-break: keep-all;
+  }
+
+  .hook {
+    border-left: 5px solid #f57c00;
+    padding: 14px 18px;
+    background: #fff3e0;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 22px;
+    font-size: 15px;
+  }
+  .hook .highlight { color: #e65100; font-weight: 900; }
+
+  .summary-box {
+    background: #e8f5e9;
+    border: 2px solid #2e7d32;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 26px;
+  }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+
+  h2 { font-size: 19px; font-weight: 900; color: #e65100; margin: 28px 0 12px; border-bottom: 2px solid #ffcc80; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #f57c00; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #fff3e0; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #e65100; }
+
+  .formula {
+    background: #fffaf3;
+    border: 1px solid #ffcc80;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 20px;
+    font-size: 14.5px;
+    line-height: 1.9;
+    word-break: keep-all;
+  }
+  .formula b { color: #e65100; }
+
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #fff3e0; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #f57c00; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+
+  .deadline-box {
+    border: 2px dashed #f57c00;
+    background: #fff8e1;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 22px;
+  }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+
+  .checklist { background: #fff3e0; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #ffcc80; color: #e65100; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #e65100; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+
+  .caution { background: #fff3e0; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+
+  .contact-box { background: #fff3e0; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #e65100; border-color: #ffcc80; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+
+  .hashtags { font-size: 13px; color: #e65100; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-09-05-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="자활근로 종류와 월급 — 사업 유형별 하루 인건비와 참여 조건">
+<meta property="og:description" content="자활근로는 시장진입형·인턴도우미형·사회서비스형·근로유지형 네 갈래로 나뉘고 갈래마다 하루 인건비가 다릅니다. 2026년 기준 시장진입형과 인턴도우미형은 하루 62,080원에 실비 4,000원을 더해 66,080원, 사회서비스형은 53,840원에 실비를 더해 57,840원, 근로유지형은 29,940원에 실비를 더해 33,940원입니다. 흔히 말하는 월 161만원은 26일로 환산한 표준소득액이라 실제 받는 돈과 다릅니다. 참여 우선순위, 게이트웨이 과정, 누적 60개월 상한, 자활소득 30% 공제로 계산하는 자활장려금까지 정리했습니다.">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-09-05-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-09-05T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-09-05T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-09-05-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-09-05-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "자활근로 종류와 월급 — 사업 유형별 하루 인건비와 참여 조건", "description": "자활근로는 시장진입형·인턴도우미형·사회서비스형·근로유지형 네 갈래로 나뉘고 갈래마다 하루 인건비가 다릅니다. 2026년 기준 시장진입형과 인턴도우미형은 하루 62,080원에 실비 4,000원을 더해 66,080원, 사회서비스형은 53,840원에 실비를 더해 57,840원, 근로유지형은 29,940원에 실비를 더해 33,940원입니다. 흔히 말하는 월 161만원은 26일로 환산한 표준소득액이라 실제 받는 돈과 다릅니다. 참여 우선순위, 게이트웨이 과정, 누적 60개월 상한, 자활소득 30% 공제로 계산하는 자활장려금까지 정리했습니다.", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-09-05", "dateModified": "2026-09-05", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 저소득층 일자리 · 자활사업</div>
+  <div class="section-badge">자활근로</div>
+
+  <h1>자활근로 종류와 월급 — 사업 유형별 하루 인건비와 참여 조건</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대체로 이런 상황입니다.
+    <span class="highlight">주민센터에서 자활근로를 권유받았는데 한 달에 얼마를 받는지 모르는 경우</span>,
+    <span class="highlight">월 161만원이라는 숫자를 봤는데 그 돈이 통장에 그대로 들어오는지 확신이 안 서는 경우</span>,
+    그리고 <span class="highlight">일을 시작하면 생계급여가 그만큼 깎이는 것 아닌지 걱정되는 경우</span>입니다.
+    이 제도에서 먼저 잡아야 할 것은 세 가지입니다.
+    하나는 <span class="highlight">자활근로가 하나가 아니라 네 갈래이고 갈래마다 하루 인건비가 두 배 넘게 벌어진다</span>는 점,
+    둘째는 <span class="highlight">흔히 도는 월 금액이 실제 지급액이 아니라 26일로 환산한 표준소득액</span>이라는 점,
+    셋째는 <span class="highlight">번 돈의 30%를 소득에서 빼 주는 자활장려금이 따로 있다</span>는 점입니다.
+    아래에서 유형별 금액과 하는 일, 월급이 계산되는 방식, 참여 순위와 절차,
+    참여할 수 있는 기간의 상한을 차례로 짚었습니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li><b>네 갈래입니다</b> — 시장진입형·인턴도우미형·사회서비스형·근로유지형으로 나뉩니다.</li>
+      <li><b>하루 66,080원이 가장 높습니다</b> — 시장진입형과 인턴도우미형이며 실비 4,000원이 포함된 금액입니다.</li>
+      <li><b>근로유지형은 하루 33,940원</b> — 노동강도가 낮은 대신 절반 수준입니다.</li>
+      <li><b>월 161만원은 실수령액이 아닙니다</b> — 26일로 환산한 표준소득액이며 실제 참여일수만큼 받습니다.</li>
+      <li><b>먼저 근로능력이 있다는 판정을 받아야 합니다</b> — 조건부수급자가 1순위입니다.</li>
+      <li><b>게이트웨이를 먼저 거칩니다</b> — 바로 사업단에 들어가는 것이 아닙니다.</li>
+      <li><b>누적 60개월이 상한입니다</b> — 다만 근로유지형은 기간을 따로 두지 않는다고 안내됩니다.</li>
+      <li><b>자활장려금이 따로 있습니다</b> — 자활소득의 30%를 소득에서 빼 주어 생계급여가 덜 깎입니다.</li>
+    </ul>
+  </div>
+
+  <p style="font-size:13px;color:#888;margin-bottom:22px;">
+    ※ 본문의 금액과 요건은 <b>2026년 기준</b>이며 보건복지부 자활사업 지침과
+    지방자치단체 안내를 따랐습니다. 인건비 단가는 <b>해마다 바뀌고</b> 사업단 운영 방식과
+    근로시간은 지역자활센터마다 차이가 있습니다. 실제 참여 여부와 금액은
+    주소지 읍·면·동 행정복지센터와 지역자활센터에서 확인하세요.
+  </p>
+
+  <h2>어떤 제도인가 — 일자리이면서 자립 훈련인 사업</h2>
+  <p>
+    자활근로는 보건복지부가 <b>근로능력이 있는 저소득층에게 일할 기회를 주어 자립 기반을 만들도록 하는 사업</b>입니다.
+    일반 취업과 다른 점은 두 가지입니다. 하나는 임금을 시장이 아니라 <b>국가 예산으로 정한 단가</b>로 지급한다는 것이고,
+    다른 하나는 일을 시키는 것 자체가 목적이 아니라 <b>민간 노동시장으로 옮겨 가는 과정</b>으로 설계돼 있다는 것입니다.
+  </p>
+  <p>
+    그래서 참여자는 능력과 상황에 따라 서로 다른 사업단에 배치됩니다.
+    바로 취업하기는 어렵지만 곧 시장으로 갈 수 있는 사람과,
+    건강이나 나이 때문에 긴 시간 일하기 어려운 사람을 같은 자리에 두지 않는다는 뜻입니다.
+    이 구분이 곧 <b>유형</b>이고, 받는 돈이 갈리는 지점도 여기입니다.
+  </p>
+
+  <h2>유형별 하는 일과 하루 인건비 — 두 배 넘게 벌어진다</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>유형</th><th>하는 일</th><th>1일 인건비</th><th>실비</th><th>1일 합계</th></tr>
+    <tr>
+      <td><b>시장진입형</b></td>
+      <td>카페·매점·편의점 등<br>매출이 생기는 사업단</td>
+      <td>62,080원</td>
+      <td>4,000원</td>
+      <td><b>66,080원</b></td>
+    </tr>
+    <tr>
+      <td><b>인턴·도우미형</b></td>
+      <td>복지시설·기관·일반기업체에서<br>인턴으로 일하며 기술을 익힘</td>
+      <td>62,080원</td>
+      <td>4,000원</td>
+      <td><b>66,080원</b></td>
+    </tr>
+    <tr>
+      <td><b>사회서비스형</b></td>
+      <td>세탁·택배·집수리 등<br>지역에 필요한 서비스 제공</td>
+      <td>53,840원</td>
+      <td>4,000원</td>
+      <td><b>57,840원</b></td>
+    </tr>
+    <tr>
+      <td><b>근로유지형</b></td>
+      <td>공공시설 청소 등<br>노동강도가 낮은 일</td>
+      <td>29,940원</td>
+      <td>4,000원</td>
+      <td><b>33,940원</b></td>
+    </tr>
+  </table>
+  </div>
+  <p>
+    표에서 눈여겨볼 것은 <b>실비가 유형과 상관없이 하루 4,000원으로 같다</b>는 점입니다.
+    교통비와 식비 성격의 돈이라 일하는 시간이 짧아도 줄지 않습니다.
+    그래서 근로유지형은 하루에 받는 33,940원 가운데 4,000원, 곧 12%가량이 실비입니다.
+  </p>
+
+  <div class="svg-wrap">
+    <div class="svg-title">2026년 자활근로 유형별 1일 지급액 (실비 4,000원 포함)</div>
+    <svg viewBox="0 0 660 250" width="100%" role="img" aria-label="유형별 1일 지급액 막대 그래프">
+      <line x1="150" y1="20" x2="150" y2="215" stroke="#ccc" stroke-width="1"/>
+      <rect x="150" y="30" width="380" height="30" rx="5" fill="#e65100"/>
+      <text x="142" y="50" font-size="13" text-anchor="end" fill="#333" font-weight="700">시장진입형</text>
+      <text x="540" y="50" font-size="14" fill="#e65100" font-weight="700">66,080원</text>
+      <rect x="150" y="80" width="380" height="30" rx="5" fill="#f57c00"/>
+      <text x="142" y="100" font-size="13" text-anchor="end" fill="#333" font-weight="700">인턴·도우미형</text>
+      <text x="540" y="100" font-size="14" fill="#e65100" font-weight="700">66,080원</text>
+      <rect x="150" y="130" width="333" height="30" rx="5" fill="#ffa726"/>
+      <text x="142" y="150" font-size="13" text-anchor="end" fill="#333" font-weight="700">사회서비스형</text>
+      <text x="493" y="150" font-size="14" fill="#e65100" font-weight="700">57,840원</text>
+      <rect x="150" y="180" width="195" height="30" rx="5" fill="#ffcc80"/>
+      <text x="142" y="200" font-size="13" text-anchor="end" fill="#333" font-weight="700">근로유지형</text>
+      <text x="355" y="200" font-size="14" fill="#e65100" font-weight="700">33,940원</text>
+      <text x="150" y="238" font-size="12" fill="#888">※ 실비 4,000원은 네 유형 모두 같습니다 · 2026년 기준</text>
+    </svg>
+  </div>
+
+  <h2>월급은 얼마인가 — 표준소득액과 실제 받는 돈은 다르다</h2>
+  <p>
+    인터넷에서 자활근로 월급을 찾으면 <b>161만원</b>이라는 숫자가 가장 많이 보입니다.
+    이 값이 어디서 나오는지 알아야 오해가 없습니다.
+  </p>
+  <div class="formula">
+    <b>월 표준소득액 = 1일 인건비 × 26일</b><br>
+    · 시장진입형·인턴도우미형 62,080원 × 26일 = <b>1,614,080원</b><br>
+    · 사회서비스형 53,840원 × 26일 = <b>1,399,840원</b><br>
+    · 근로유지형 29,940원 × 26일 = <b>778,440원</b>
+  </div>
+  <p>
+    여기서 놓치면 안 되는 대목이 있습니다. 이 금액은 <b>26일을 곱해 만든 기준값</b>이고,
+    소득인정액을 따질 때 쓰는 <b>표준소득액</b>입니다.
+    실제 사업단은 보통 주 5일로 운영되므로 한 달 참여일수는 <b>21~22일</b> 선이고,
+    통장에 들어오는 돈은 <b>그날 나온 만큼 곱한 값에 실비를 더한 금액</b>입니다.
+    빠진 날이 있으면 그만큼 줄어듭니다.
+  </p>
+  <p>
+    또 하나, 근로시간도 유형마다 다릅니다.
+    시장진입형과 인턴도우미형이 가장 길고 근로유지형이 가장 짧은데,
+    <b>구체적인 시간은 사업단마다 달라</b> 같은 유형이라도 지역이 다르면 어긋납니다.
+    금액과 시간을 함께 확인해야 시급으로 따졌을 때의 실제 조건이 보입니다.
+  </p>
+
+  <h2>참여 조건 — 누가 먼저인가</h2>
+  <p>
+    자활근로는 신청한다고 모두 들어갈 수 있는 사업이 아닙니다.
+    예산과 자리 수가 정해져 있어 <b>참여 순위</b>가 매겨져 있고, 앞 순위부터 배치됩니다.
+  </p>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>순위</th><th>구분</th><th>어떤 사람인가</th></tr>
+    <tr><td>1</td><td><b>조건부수급자</b></td><td>생계급여를 받으면서 자활사업 참여가 조건으로 붙은 사람</td></tr>
+    <tr><td>2</td><td><b>자활급여특례자</b></td><td>자활사업으로 번 소득 때문에 선정 요건을 넘었지만 특례로 자격을 유지하는 사람</td></tr>
+    <tr><td>3</td><td><b>일반수급자</b></td><td>참여 의무는 없지만 본인이 희망하는 수급자</td></tr>
+    <tr><td>4</td><td><b>특례수급가구의 가구원</b></td><td>의료·교육급여 특례가구에 속한 사람</td></tr>
+    <tr><td>5</td><td><b>차상위계층</b></td><td>수급자는 아니지만 소득인정액이 낮은 사람</td></tr>
+    <tr><td>6</td><td><b>시설수급자</b></td><td>보장시설에서 생활하는 수급자</td></tr>
+  </table>
+  </div>
+  <p>
+    순위와 별개로 앞에 놓인 관문이 하나 더 있습니다.
+    <b>근로능력이 있다는 판정</b>입니다. 건강 상태 때문에 일하기 어렵다고 판정되면
+    자활근로가 아니라 다른 지원으로 연결됩니다.
+    반대로 근로능력이 있다고 판정된 생계급여 수급자는
+    자활사업 참여가 급여를 받는 <b>조건</b>이 되어 1순위에 놓입니다.
+  </p>
+
+  <h2>참여 절차 — 사업단에 바로 들어가지 않는다</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text"><b>읍·면·동 행정복지센터에 상담·신청</b> — 주소지 기준입니다. 지역자활센터에 먼저 물어봐도 되지만 접수 창구는 행정복지센터입니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text"><b>근로능력 평가</b> — 일할 수 있는 상태인지 확인합니다. 필요하면 진단서 등 의학적 자료를 냅니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text"><b>자활역량 평가와 자립 계획 수립</b> — 나이·건강·직업 이력 등을 따져 어느 경로가 맞는지 정합니다. 여기서 자활근로 참여자로 의뢰됩니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text"><b>게이트웨이 과정</b> — 지역자활센터에서 개인 역량을 살피고 기본 소양 교육을 받으며 개인별 자립 계획을 짭니다. 이 과정도 자활근로에 포함돼 급여가 나옵니다.</div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-text"><b>사업단 배치</b> — 계획에 맞춰 시장진입형·사회서비스형·인턴도우미형·근로유지형 가운데 한 곳에 들어갑니다.</div></div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>⏳ 얼마나 오래 할 수 있나 — 기간 상한</h3>
+    <p>· <b>자활근로 사업단은 누적 60개월</b>이 상한으로 안내됩니다. 중간에 쉬었다 돌아와도 합산됩니다.</p>
+    <p>· <b>게이트웨이는 2개월이 원칙</b>이며 연 1회, 5년 동안 모두 3회까지 부여되는 것으로 안내됩니다.</p>
+    <p>· <b>근로유지형은 기간 제한을 따로 두지 않는 것</b>으로 안내됩니다. 시장으로 나가기 어려운 사람을 위한 자리이기 때문입니다.</p>
+    <p style="margin-top:8px;">기간 규정은 해마다 지침으로 조정되므로 남은 기간은 담당 지역자활센터에서 직접 확인하는 편이 정확합니다.</p>
+  </div>
+
+  <h2>자활장려금 — 번 만큼 생계급여가 깎이지 않게 하는 장치</h2>
+  <p>
+    자활근로를 망설이게 하는 가장 큰 걱정이 <b>일해서 번 돈만큼 생계급여가 줄어드는 것 아니냐</b>는 것입니다.
+    이 문제를 덜기 위한 제도가 자활장려금입니다.
+  </p>
+  <div class="formula">
+    생계급여를 계산할 때 <b>자활근로로 번 소득의 30%를 소득인정액에서 빼 줍니다.</b><br>
+    그렇게 해서 <b>더 나오게 된 생계급여</b>가 곧 자활장려금입니다.<br>
+    다만 자활소득의 30%가 생계급여 지급액보다 크면
+    <b>생계급여 지급액과 같은 금액까지만</b> 지급됩니다.
+  </div>
+  <p>
+    대상은 <b>전달에 자활근로에 참여한 이력이 있고, 소득인정액이 반영되는 시점에 생계급여 자격이 살아 있는 사람</b>입니다.
+    시장진입형·인턴도우미형·사회서비스형 사업단과 시간제 자활근로, 예비자활기업,
+    청년 자립도전 사업단, 자활기업 참여자가 해당하는 것으로 안내되며
+    <b>차상위계층과 보장시설 수급자는 제외</b>됩니다.
+    지급은 관할 시·군·구에서 이루어집니다.
+  </p>
+
+  <h2>2026년에 달라진 점</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>항목</th><th>바뀐 내용</th></tr>
+    <tr><td><b>인건비 단가</b></td><td>유형별로 3% 남짓 올랐습니다. 시장진입형 기준 하루 62,080원</td></tr>
+    <tr><td><b>배우자 출산휴가</b></td><td>10일에서 <b>20일</b>로 늘었습니다</td></tr>
+    <tr><td><b>경조사 휴가</b></td><td>형제자매 사망 시 1일에서 <b>3일</b>로 늘었습니다</td></tr>
+    <tr><td><b>배치 거부 관리</b></td><td>사업단 배치 의뢰를 <b>연 3회 이상 취소·거부하면 조건불이행</b>으로 처리됩니다</td></tr>
+    <tr><td><b>재참여 제한</b></td><td>조건불이행 결정을 받으면 이후 <b>12개월</b> 동안 다시 들어가기 어렵습니다</td></tr>
+    <tr><td><b>자활기업 인건비</b></td><td>전문가 월 급여 한도가 <b>277만원</b>으로 올랐습니다</td></tr>
+  </table>
+  </div>
+  <p>
+    참여자 입장에서 특히 눈여겨볼 것은 아래 두 줄입니다.
+    배치 의뢰를 거듭 거절하면 <b>조건불이행으로 처리돼 생계급여에 영향을 줄 수 있고</b>,
+    그 뒤 1년 동안은 다시 참여하기 어렵습니다.
+    맞지 않는 사업단이라면 무작정 거절하기보다 담당자와 <b>다른 유형으로 조정이 가능한지</b> 먼저 상의하는 편이 낫습니다.
+  </p>
+
+  <div class="checklist">
+    <h2>✅ 내가 해당하는지 체크리스트</h2>
+    <div class="check-item"><span class="chk">✓</span><span>생계급여를 받고 있거나 차상위계층이며, 근로능력이 있다는 판정을 받을 수 있는 상태다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>내가 원하는 유형이 시장진입형인지 근로유지형인지, 하루에 받는 금액 차이를 알고 있다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>월 161만원이 실수령액이 아니라 26일로 환산한 표준소득액이라는 점을 알고 있다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>일을 시작해도 자활소득의 30%가 공제돼 생계급여가 그만큼 줄지 않는다는 점을 확인했다.</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>이미 참여한 적이 있다면 누적 기간이 60개월에 얼마나 가까운지 센터에 물어봤다.</span></div>
+  </div>
+
+  <div class="caution">
+    <div class="caution-item">① <b>단가는 해마다 바뀝니다.</b> 지난해 안내문이나 오래된 후기의 금액을 그대로 믿으면 어긋납니다.</div>
+    <div class="caution-item">② <b>월 금액은 참여일수에 따라 달라집니다.</b> 결근한 날은 그날 인건비와 실비가 함께 빠집니다.</div>
+    <div class="caution-item">③ <b>유형은 본인이 고르는 것이 아닙니다.</b> 자활역량 평가와 자립 계획에 따라 배치되므로 원하는 유형이 있으면 상담 단계에서 미리 말해 두어야 합니다.</div>
+    <div class="caution-item">④ <b>배치 거부가 쌓이면 불이익이 있습니다.</b> 연 3회 이상 취소·거부는 조건불이행으로 처리되고 12개월 재참여 제한이 따릅니다.</div>
+    <div class="caution-item">⑤ <b>자활장려금은 차상위계층에게는 나오지 않습니다.</b> 생계급여를 받는 사람을 전제로 계산되는 구조이기 때문입니다.</div>
+    <div class="caution-item">⑥ <b>사업단 종류는 지역마다 다릅니다.</b> 같은 시장진입형이라도 카페가 있는 지역이 있고 없는 지역이 있으므로 실제 목록은 지역자활센터에서 확인해야 합니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <div class="contact-row"><span class="contact-label">접수 창구</span> — 주소지 읍·면·동 행정복지센터 (상담·신청)</div>
+    <div class="contact-row"><span class="contact-label">운영 기관</span> — 전국 지역자활센터 (게이트웨이·사업단 배치)</div>
+    <div class="contact-row"><span class="contact-label">중앙 기관</span> — 한국자활복지개발원</div>
+    <div class="contact-row"><span class="contact-label">소관 부처</span> — 보건복지부 자활정책과 044-202-3081</div>
+    <div class="contact-row"><span class="contact-label">복지 상담</span> — 보건복지상담센터 129</div>
+    <div class="contact-row"><span class="contact-label">제도 안내</span> — 복지로 bokjiro.go.kr</div>
+  </div>
+
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"근로능력에 따라 자리를 나눈 설계가 이 제도의 핵심이다. 건강이 약한 사람에게 시장 속도를 요구하지 않으면서도 일에서 완전히 떼어 놓지 않는다."</p>
+          <p class="author">— 자활정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"자활소득의 30%를 공제하는 장치가 없었다면 일할수록 손해라는 계산이 성립한다. 장려금은 근로 유인을 지키는 최소한의 장치다."</p>
+          <p class="author">— 사회보장 재정 연구자</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"근로유지형 하루 33,940원은 최저임금 구조와 견주기 어려운 수준이다. 시장으로 나가기 힘든 사람일수록 낮은 단가에 오래 머무는 결과가 된다."</p>
+          <p class="author">— 빈곤운동 현장 활동가</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"누적 60개월 상한은 취지는 분명하나, 그 기간 안에 시장 진입이 어려운 사람에게는 예고된 단절이다. 이후 경로를 함께 설계하지 않으면 제도가 끝나는 자리에서 다시 빈곤이 시작된다."</p>
+          <p class="author">— 사회복지학과 교수</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #자활근로 #자활사업 #지역자활센터 #시장진입형 #사회서비스형 #근로유지형 #인턴도우미형
+    #게이트웨이 #자활장려금 #조건부수급자 #자활급여특례자 #한국자활복지개발원 #보건복지부
+  </div>
+
+  <div class="disclaimer">
+    이 글은 보건복지부와 한국자활복지개발원, 지방자치단체가 공개한 자활사업 안내 자료를 바탕으로 작성되었습니다.
+    인건비 단가와 참여 기간, 자활장려금 산정 방식은 해마다 지침에 따라 바뀔 수 있으며
+    사업단 운영 방식과 근로시간은 지역자활센터마다 다릅니다.
+    실제 참여 여부와 지급 금액은 주소지 읍·면·동 행정복지센터와 지역자활센터에 확인하시기 바랍니다.
+  </div>
+
+  <div class="written">작성일 2026-09-05 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
