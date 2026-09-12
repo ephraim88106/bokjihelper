@@ -31,6 +31,11 @@
     ],
     "redirects": [
       {
+        "source": "/%EC%95%84%EB%8F%99%EC%88%98%EB%8B%B9_%EB%A7%8C13%EC%84%B8%EA%B9%8C%EC%A7%80_%EB%8B%A8%EA%B3%84%EC%A0%81_%ED%99%95%EB%8C%80.html",
+        "destination": "/archive/아동수당_만13세까지_단계적_확대.html",
+        "type": 301
+      },
+      {
         "source": "/아동수당_만13세까지_단계적_확대.html",
         "destination": "/archive/아동수당_만13세까지_단계적_확대.html",
         "type": 301
@@ -41,8 +46,18 @@
         "type": 301
       },
       {
+        "source": "/2026-04-06-%EA%B8%B0%EC%B4%88%EC%97%B0%EA%B8%88-%EC%9D%B8%EC%83%81.html",
+        "destination": "/archive/2026-04-06-기초연금-인상.html",
+        "type": 301
+      },
+      {
         "source": "/2026-04-06-기초연금-인상.html",
         "destination": "/archive/2026-04-06-기초연금-인상.html",
+        "type": 301
+      },
+      {
+        "source": "/2026-04-08-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4.html",
+        "destination": "/archive/2026-04-08-복지뉴스.html",
         "type": 301
       },
       {
@@ -51,8 +66,18 @@
         "type": 301
       },
       {
+        "source": "/2026-04-09-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4.html",
+        "destination": "/archive/2026-04-09-복지뉴스.html",
+        "type": 301
+      },
+      {
         "source": "/2026-04-09-복지뉴스.html",
         "destination": "/archive/2026-04-09-복지뉴스.html",
+        "type": 301
+      },
+      {
+        "source": "/2026-04-10-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4.html",
+        "destination": "/archive/2026-04-10-복지뉴스.html",
         "type": 301
       },
       {
@@ -61,8 +86,18 @@
         "type": 301
       },
       {
+        "source": "/2026-04-11-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4.html",
+        "destination": "/archive/2026-04-11-복지뉴스.html",
+        "type": 301
+      },
+      {
         "source": "/2026-04-11-복지뉴스.html",
         "destination": "/archive/2026-04-11-복지뉴스.html",
+        "type": 301
+      },
+      {
+        "source": "/2026-04-12-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4.html",
+        "destination": "/archive/2026-04-12-복지뉴스.html",
         "type": 301
       },
       {
@@ -71,8 +106,18 @@
         "type": 301
       },
       {
+        "source": "/2026-04-13-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4.html",
+        "destination": "/archive/2026-04-13-복지뉴스.html",
+        "type": 301
+      },
+      {
         "source": "/2026-04-13-복지뉴스.html",
         "destination": "/archive/2026-04-13-복지뉴스.html",
+        "type": 301
+      },
+      {
+        "source": "/2026-04-19-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4.html",
+        "destination": "/archive/2026-04-19-1-복지뉴스.html",
         "type": 301
       },
       {
@@ -81,8 +126,18 @@
         "type": 301
       },
       {
+        "source": "/2026-04-19-2-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4.html",
+        "destination": "/archive/2026-04-19-2-복지뉴스.html",
+        "type": 301
+      },
+      {
         "source": "/2026-04-19-2-복지뉴스.html",
         "destination": "/archive/2026-04-19-2-복지뉴스.html",
+        "type": 301
+      },
+      {
+        "source": "/%EC%95%84%EC%9D%B4%EB%8F%8C%EB%B4%84%EC%84%9C%EB%B9%84%EC%8A%A4_2026%EB%85%84_%EB%8C%80%ED%8F%AD_%ED%99%95%EB%8C%80.html",
+        "destination": "/archive/아이돌봄서비스_2026년_대폭_확대.html",
         "type": 301
       },
       {
@@ -91,13 +146,28 @@
         "type": 301
       },
       {
+        "source": "/2026_%EC%B2%AD%EB%85%84%EC%9B%94%EC%84%B8%EC%A7%80%EC%9B%90.html",
+        "destination": "/archive/2026_청년월세지원.html",
+        "type": 301
+      },
+      {
         "source": "/2026_청년월세지원.html",
         "destination": "/archive/2026_청년월세지원.html",
         "type": 301
       },
       {
+        "source": "/2026_%EC%9C%A1%EC%95%84%ED%9C%B4%EC%A7%81_%EA%B0%9C%ED%8E%B8.html",
+        "destination": "/archive/2026_육아휴직_개편.html",
+        "type": 301
+      },
+      {
         "source": "/2026_육아휴직_개편.html",
         "destination": "/archive/2026_육아휴직_개편.html",
+        "type": 301
+      },
+      {
+        "source": "/2026_%EA%B3%A0%EC%9C%A0%EA%B0%80_%ED%94%BC%ED%95%B4%EC%A7%80%EC%9B%90%EA%B8%88.html",
+        "destination": "/archive/2026_고유가_피해지원금.html",
         "type": 301
       },
       {
@@ -116,7 +186,17 @@
         "type": 301
       },
       {
+        "source": "/archive/2026-08-10-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4",
+        "destination": "/archive/2026-09-06-1-복지뉴스",
+        "type": 301
+      },
+      {
         "source": "/archive/2026-08-10-1-복지뉴스",
+        "destination": "/archive/2026-09-06-1-복지뉴스",
+        "type": 301
+      },
+      {
+        "source": "/archive/2026-08-10-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4.html",
         "destination": "/archive/2026-09-06-1-복지뉴스",
         "type": 301
       },
@@ -128,7 +208,7 @@
     ],
     "rewrites": [
       {
-        "source": "!/@(ads.txt|*.html|*.js|*.css|*.json|*.png|*.jpg|*.ico)",
+        "source": "!/@(ads.txt|*.html|*.js|*.css|*.json|*.png|*.jpg|*.ico|*.svg|*.xml|*.txt|*.webp)",
         "destination": "/index.html"
       }
     ]
