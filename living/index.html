@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <!-- HUB:PAGE — 분야 탐색 페이지. ads_fix.py 는 이 표시가 있는 파일에 광고를 넣지 않는다 -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="문화누리카드, 통신요금 감면, 평생교육바우처 — 일상에서 챙길 수 있는 감면과 바우처입니다." />
+  <title>생활지원 — WelfareFinder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--hub-line:#e3e8ee;--hub-dim:#5b6672;--hub-ink:#12202e;--hub-accent:#1a5f8a}
+    .hub-wrap{max-width:820px;margin:0 auto;padding:28px 18px 56px;
+      font-family:'Noto Sans KR',-apple-system,BlinkMacSystemFont,'Malgun Gothic',sans-serif;
+      color:var(--hub-ink);line-height:1.7}
+    .hub-crumb{font-size:13px;color:var(--hub-dim);margin-bottom:18px}
+    .hub-crumb a{color:var(--hub-dim);text-decoration:none}
+    .hub-crumb a:hover{text-decoration:underline}
+    .hub-wrap h1{font-family:'Noto Serif KR',serif;font-size:29px;line-height:1.35;
+      margin:0 0 12px;letter-spacing:-.01em}
+    .hub-lede{font-size:15px;color:var(--hub-dim);margin:0 0 8px}
+    .hub-count{font-size:13px;color:var(--hub-dim);border-top:1px solid var(--hub-line);
+      padding-top:14px;margin-top:22px}
+    .hub-list{list-style:none;padding:0;margin:10px 0 0}
+    .hub-list li{border-bottom:1px solid var(--hub-line);padding:17px 0}
+    .hub-list a{text-decoration:none;color:inherit;display:block}
+    .hub-list a:hover .hub-t{color:var(--hub-accent);text-decoration:underline}
+    .hub-t{font-size:17px;font-weight:700;line-height:1.45;margin:0 0 5px;
+      font-family:'Noto Serif KR',serif}
+    .hub-d{font-size:14px;color:var(--hub-dim);margin:0}
+    .hub-other{margin-top:40px;border-top:1px solid var(--hub-line);padding-top:20px}
+    .hub-other h2{font-size:15px;margin:0 0 12px;font-weight:700}
+    .hub-chips{display:flex;flex-wrap:wrap;gap:8px}
+    .hub-chips a{font-size:13.5px;text-decoration:none;color:var(--hub-ink);
+      border:1px solid var(--hub-line);border-radius:999px;padding:7px 14px;background:#fff}
+    .hub-chips a:hover{border-color:var(--hub-accent);color:var(--hub-accent)}
+    @media(max-width:520px){.hub-wrap{padding:20px 15px 44px}.hub-wrap h1{font-size:24px}}
+</style>
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://welfare.ephseed.com/living/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="생활지원 — WelfareFinder">
+<meta property="og:description" content="문화누리카드, 통신요금 감면, 평생교육바우처 — 일상에서 챙길 수 있는 감면과 바우처입니다.">
+<meta property="og:url" content="https://welfare.ephseed.com/living/">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "WebPage", "@id": "https://welfare.ephseed.com/living/#page", "url": "https://welfare.ephseed.com/living/", "name": "생활지원 — WelfareFinder", "description": "문화누리카드, 통신요금 감면, 평생교육바우처 — 일상에서 챙길 수 있는 감면과 바우처입니다.", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<div class="hub-wrap">
+  <nav class="hub-crumb"><a href="/">WelfareFinder</a> &rsaquo; <span>생활지원</span></nav>
+  <h1>생활지원</h1>
+  <p class="hub-lede">문화누리카드, 통신요금 감면, 평생교육바우처 — 일상에서 챙길 수 있는 감면과 바우처입니다.</p>
+  <p class="hub-count">글 3편</p>
+  <ul class="hub-list">
+    <li><a href="/archive/2026-08-27-1-복지뉴스">
+      <p class="hub-t">문화누리카드 사용처와 잔액 조회 — 발급 대상과 연간 충전액 확인 방법</p>
+      <p class="hub-d">문화누리카드(통합문화이용권)는 6세 이상 기초생활수급자와 차상위계층에게 1인당 연 15만 원을 충전해 주는 문화·여행·체육 전용 카드입니다. 2026년 발급 기간은 2월 2일부터 11월 30일 18시까지, 사용 기간은 12월 31일까지이며 남은 국가지원금은 해를 넘기지</p>
+    </a></li>
+    <li><a href="/archive/2026-08-31-1-복지뉴스">
+      <p class="hub-t">통신요금 감면 대상 — 수급자·차상위 할인 금액과 확인방법</p>
+      <p class="hub-d">통신요금 감면은 전기통신사업법에 따른 보편적 역무 제도로, 생계·의료급여 수급자는 이동전화 기본료·월정액 26,000원 한도 면제와 음성·데이터 통화료 각 50% 감면, 주거·교육급여 수급자와 차상위계층은 11,000원 한도 면제와 초과분 35% 감면을 받습니다. 근거</p>
+    </a></li>
+    <li><a href="/archive/2026-09-04-1-복지뉴스">
+      <p class="hub-t">평생교육바우처 사용처와 발급대상 — 지원금액과 수강 가능 강좌 종류</p>
+      <p class="hub-d">평생교육바우처(평생교육이용권)는 2026년 11만 5천 명에게 1인당 35만원을 NH농협카드 포인트로 지급합니다. 일반·장애인·노인·AI디지털 네 유형으로 갈리고 대상 연령과 신청 창구가 각각 다르며, 유형 간 중복 신청은 안 됩니다. 사용기관은 평생교육법상 등록기관과</p>
+    </a></li>
+  </ul>
+  <div class="hub-other">
+    <h2>다른 분야</h2>
+    <div class="hub-chips">
+      <a href="/health/">의료비·건강</a>
+      <a href="/jobs/">일자리·소득지원</a>
+      <a href="/care/">노인·돌봄</a>
+      <a href="/child/">아동·교육</a>
+      <a href="/housing/">주거·긴급지원</a>
+      <a href="/disability/">장애인 지원</a>
+      <a href="/basics/">자격·기준</a>
+      <a href="/">홈</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

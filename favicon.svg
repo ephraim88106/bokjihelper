@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="WelfareFinder">
+  <rect width="64" height="64" rx="14" fill="#1F6F5C"/>
+  <!-- 받치는 두 손 -->
+  <path d="M14 40c0-2.2 1.8-4 4-4h4l6 6h8l6-6h4c2.2 0 4 1.8 4 4v2c0 5.5-4.5 10-10 10H24c-5.5 0-10-4.5-10-10z" fill="#FFFFFF" opacity=".95"/>
+  <!-- 하트 -->
+  <path d="M32 32.5l-7.4-7.1a5.2 5.2 0 0 1 7.4-7.3 5.2 5.2 0 0 1 7.4 7.3z" fill="#FFD166"/>
+</svg>
