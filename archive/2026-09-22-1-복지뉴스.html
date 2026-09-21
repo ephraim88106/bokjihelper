@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>장애인활동지원 등급 판정기준 — 인정점수 산정과 급여량 차이</title>
+<meta name="description" content="장애인활동지원은 만 6세 이상 65세 미만 등록장애인 중 혼자 일상생활과 사회활동이 어려운 사람에게 활동보조·방문목욕·방문간호를 지원하는 제도입니다. 예전의 1~3급 장애등급 대신 국민연금공단의 서비스 지원 종합조사 점수로 15개 구간을 나누고, 42점 이상이면 수급자격이 인정됩니다. 1구간(460점 이상)은 월 480시간·약 622만 원까지, 15구간(42~75점)은 월 60시간·약 104만 원까지 지원되고, 2026년 활동지원 시간당 단가는 17,270원으로 오릅니다. 본인부담금은 기초생활수급자 면제, 차상위 월 2만 원, 일반은 소득별 차등입니다. 종합조사 절차와 구간표, 본인부담금 계산법을 정리했습니다.">
+<style>
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: #f8f9fa; color: #222; line-height: 1.7; }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge { display: inline-block; background: #f57c00; color: #fff; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+  h1 { font-size: 26px; font-weight: 900; line-height: 1.35; color: #1a1a1a; margin-bottom: 18px; word-break: keep-all; }
+  .hook { border-left: 5px solid #f57c00; padding: 14px 18px; background: #fff3e0; border-radius: 0 8px 8px 0; margin-bottom: 22px; font-size: 15px; }
+  .hook .highlight { color: #e65100; font-weight: 900; }
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 18px 20px; margin-bottom: 26px; }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+  h2 { font-size: 19px; font-weight: 900; color: #e65100; margin: 28px 0 12px; border-bottom: 2px solid #ffcc80; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #f57c00; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #fff3e0; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #e65100; }
+  .formula { background: #fffaf3; border: 1px solid #ffcc80; border-radius: 10px; padding: 16px 18px; margin-bottom: 20px; font-size: 14.5px; line-height: 1.9; word-break: keep-all; }
+  .formula b { color: #e65100; }
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #fff3e0; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #f57c00; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+  .deadline-box { border: 2px dashed #f57c00; background: #fff8ef; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+  .checklist { background: #fff3e0; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #ffcc80; color: #e65100; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #e65100; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+  .caution { background: #fff3e0; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+  .contact-box { background: #fff3e0; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #e65100; border-color: #ffcc80; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  .hashtags { font-size: 13px; color: #e65100; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-09-22-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="장애인활동지원 등급 판정기준 — 인정점수 산정과 급여량 차이">
+<meta property="og:description" content="장애인활동지원은 만 6세 이상 65세 미만 등록장애인 중 혼자 일상생활과 사회활동이 어려운 사람에게 활동보조·방문목욕·방문간호를 지원하는 제도입니다. 예전의 1~3급 장애등급 대신 국민연금공단의 서비스 지원 종합조사 점수로 15개 구간을 나누고, 42점 이상이면 수급자격이 인정됩니다. 1구간(460점 이상)은 월 480시간·약 622만 원까지, 15구간(42~75점)은 월 60시간·약 104만 원까지 지원되고, 2026년 활동지원 시간당 단가는 17,270원으로 오릅니다. 본인부담금은 기초생활수급자 면제, 차상위 월 2만 원, 일반">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-09-22-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-09-22T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-09-22T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-09-22-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-09-22-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "장애인활동지원 등급 판정기준 — 인정점수 산정과 급여량 차이", "description": "장애인활동지원은 만 6세 이상 65세 미만 등록장애인 중 혼자 일상생활과 사회활동이 어려운 사람에게 활동보조·방문목욕·방문간호를 지원하는 제도입니다. 예전의 1~3급 장애등급 대신 국민연금공단의 서비스 지원 종합조사 점수로 15개 구간을 나누고, 42점 이상이면 수급자격이 인정됩니다. 1구간(460점 이상)은 월 480시간·약 622만 원까지, 15구간(42~75점)은 월 60시간·약 104만 원까지 지원되고, 2026년 활동지원 시간당 단가는 17,270원으로 오릅니다. 본인부담금은 기초생활수급자 면제, 차상위 월 2만 원, 일반", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-09-22", "dateModified": "2026-09-22", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-GyFXAvGw6TskYQ5x"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-ZL2KaRsLAk3Ly1Ik"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-WjaoW3Jzgq4B6IUW"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 장애인 서비스 · 장애인활동지원</div>
+  <div class="section-badge">장애인 활동지원</div>
+
+  <h1>장애인활동지원 등급 판정기준 — 인정점수 산정과 급여량 차이</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대체로 이런 상황입니다.
+    <span class="highlight">혼자 씻고 밥을 챙기기 힘든 가족을 둔 보호자가 활동지원사를 붙여줄 수 있는지 알아보는 경우</span>,
+    <span class="highlight">예전에 있던 1급·2급 장애등급이 없어졌다는 말을 듣고 그럼 이제 뭘로 판정받는지 헷갈리는 경우</span>,
+    그리고 <span class="highlight">국민연금공단에서 조사를 받고 나온 점수가 몇 구간인지, 시간이 왜 이렇게 적게 나왔는지 궁금한 경우</span>입니다.
+    이 제도에서 먼저 잡아야 할 것은 세 가지입니다.
+    하나는 <span class="highlight">등급이 아니라 점수로 판정한다</span>는 점,
+    둘째는 <span class="highlight">점수 구간에 따라 15단계로 나뉘어 이용 시간과 급여량이 정해진다</span>는 점,
+    셋째는 <span class="highlight">소득 수준과 무관하게 신청할 수 있지만 본인부담금은 소득에 따라 달라진다</span>는 점입니다.
+    아래에서 신청 자격과 종합조사 절차, 구간별 인정점수와 이용 시간, 본인부담금 계산 방법을 차례로 짚었습니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li><b>만 6세 이상 65세 미만 등록장애인이면 소득과 무관하게 신청할 수 있습니다</b> — 장애 유형도 가리지 않습니다.</li>
+      <li><b>2019년부터 장애등급이 아니라 종합조사 점수로 판정합니다</b> — 옛 1~3급 기준은 더 이상 쓰이지 않습니다.</li>
+      <li><b>종합점수 42점 이상이면 수급자격이 인정됩니다</b> — 이 선을 넘지 못하면 활동지원 대신 다른 서비스로 연계됩니다.</li>
+      <li><b>점수는 15개 구간으로 나뉘어 이용 시간이 정해집니다</b> — 1구간(460점 이상)이 가장 많고 15구간(42~75점)이 가장 적습니다.</li>
+      <li><b>2026년 활동지원 시간당 단가는 17,270원입니다</b> — 전년 대비 3.9퍼센트 올랐습니다.</li>
+      <li><b>최중증 독거가구는 가산급여가 늘었습니다</b> — 월 205시간에서 258시간으로 53시간 확대됐습니다.</li>
+      <li><b>본인부담금은 소득에 따라 다릅니다</b> — 생계·의료급여 수급자는 면제, 차상위는 월 2만 원, 일반은 소득 구간별 차등입니다.</li>
+      <li><b>수급자격 유효기간은 3년입니다</b> — 기간이 끝나기 전에 재판정을 받아야 서비스가 끊기지 않습니다.</li>
+    </ul>
+  </div>
+
+  <p style="font-size:13px;color:#888;margin-bottom:22px;">
+    ※ 본문의 선정 기준과 구간별 급여량은 <b>장애인복지법과 서비스 지원 종합조사 관련 고시</b>를 바탕으로 했고,
+    금액은 <b>2026년 기준</b> 활동지원 단가로 계산한 예시입니다. 구간별 정확한 점수 경계와 금액, 가산급여 산정 방식은
+    <b>매년 고시가 갱신</b>되므로 실제 지원 여부와 금액은 국민연금공단 조사 결과에 따라 달라집니다.
+  </p>
+
+  <h2>어떤 제도인가 — 혼자 일상을 꾸리기 어려운 장애인에게 사람의 손을 붙여주는 장치</h2>
+  <p>
+    장애인활동지원은 <b>혼자서 일상생활과 사회생활을 하기 어려운 장애인에게 활동지원사를 통해 신체활동·가사활동·사회활동을 지원하는 제도</b>입니다.
+    보건복지부가 주관하고 국민연금공단이 조사와 관리를 맡습니다.
+  </p>
+  <p>
+    급여는 크게 세 가지입니다. <b>활동보조</b>는 목욕·세면·식사 같은 신체활동 지원과 청소·세탁·취사 같은 가사활동 지원,
+    등하교·출퇴근 동행 같은 사회활동 지원을 포함합니다. 여기에 <b>방문목욕</b>과 <b>방문간호</b>가 별도 급여로 더해집니다.
+    이용자는 이 급여를 바우처 형태로 받아 지정된 제공기관의 활동지원사를 이용합니다.
+  </p>
+  <p>
+    2019년 이전에는 장애등급 1~3급에게만 서비스를 열어주는 방식이었지만,
+    지금은 <b>등급을 없애고 개인의 실제 필요도를 조사해 점수로 매기는 종합조사 방식</b>으로 바뀌었습니다.
+    같은 진단명이라도 실제로 혼자 할 수 있는 것과 도움이 필요한 정도가 다르다는 점을 반영한 것입니다.
+  </p>
+
+  <h2>누가 받을 수 있나 — 나이와 등록장애, 그리고 실제 필요도</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>구분</th><th>내용</th></tr>
+    <tr>
+      <td><b>연령</b></td>
+      <td><b>만 6세 이상 65세 미만</b>이어야 합니다. 65세가 되면 노인장기요양보험으로 넘어가는 것이 원칙이지만, 일정 요건을 갖추면 활동지원이 계속되는 특례도 있습니다.</td>
+    </tr>
+    <tr>
+      <td><b>장애 등록</b></td>
+      <td><b>장애인복지법상 등록장애인</b>이면 되고, 특정 장애 유형으로 제한하지 않습니다.</td>
+    </tr>
+    <tr>
+      <td><b>소득 요건</b></td>
+      <td><b>소득수준과 무관하게 신청 가능</b>합니다. 다만 소득 수준은 이후 본인부담금 산정에 반영됩니다.</td>
+    </tr>
+    <tr>
+      <td><b>필요도 판정</b></td>
+      <td>국민연금공단의 <b>서비스 지원 종합조사</b>를 받아 산출된 <b>종합점수가 42점 이상</b>이어야 수급자격이 인정됩니다.</td>
+    </tr>
+    <tr>
+      <td><b>수급자격 유효기간</b></td>
+      <td>원칙적으로 <b>3년</b>이며, 만료 전 재판정을 신청해야 서비스가 이어집니다.</td>
+    </tr>
+  </table>
+  </div>
+  <p>
+    종합조사는 인지·행동 특성, 사회활동, 가구환경 같은 여러 영역을 방문조사원이 직접 확인해 점수를 매기는 방식입니다.
+    단순히 장애 정도만 보는 것이 아니라 <b>혼자 사는지, 주변에 도움을 줄 가족이 있는지</b> 같은 생활 환경도 함께 반영되기 때문에,
+    같은 장애 유형이라도 사람마다 구간이 다르게 나올 수 있습니다.
+  </p>
+
+  <h2>구간별 인정점수와 이용 시간 — 15단계로 나뉜다</h2>
+  <p>
+    종합점수가 높을수록 낮은 번호의 구간에 속하고, 그만큼 <b>월 이용 시간(기본급여)과 급여량이 많아집니다</b>.
+    아래는 확인된 상위·하위 구간의 점수 경계와 시간, 예시 금액입니다. 가운데 구간(2~8구간)은 이 사이를 점수순으로 채우며,
+    정확한 경계값은 국민연금공단 또는 읍·면·동 주민센터에서 최신 고시로 확인하는 것이 정확합니다.
+  </p>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>구간</th><th>종합점수</th><th>월 기본급여 시간</th><th>예시 금액(2026년 단가 기준)</th></tr>
+    <tr><td><b>1구간</b></td><td>460점 이상</td><td>480시간</td><td>약 622만 원</td></tr>
+    <tr><td>2~8구간</td><td>255점~460점 미만 사이 순차 배정</td><td>240시간~480시간 사이</td><td>공단 확인 필요</td></tr>
+    <tr><td><b>9구간</b></td><td>225점 이상~255점 미만</td><td>240시간</td><td>약 311만 원</td></tr>
+    <tr><td><b>10구간</b></td><td>195점 이상~225점 미만</td><td>210시간</td><td>약 272만 원</td></tr>
+    <tr><td><b>11구간</b></td><td>165점 이상~195점 미만</td><td>180시간</td><td>약 233만 원</td></tr>
+    <tr><td><b>12구간</b></td><td>135점 이상~165점 미만</td><td>150시간</td><td>약 194만 원</td></tr>
+    <tr><td><b>13구간</b></td><td>105점 이상~135점 미만</td><td>120시간</td><td>약 156만 원</td></tr>
+    <tr><td><b>14구간</b></td><td>75점 이상~105점 미만</td><td>90시간</td><td>약 117만 원</td></tr>
+    <tr><td><b>15구간</b></td><td>42점 이상~75점 미만</td><td>60시간</td><td>약 104만 원</td></tr>
+  </table>
+  </div>
+  <div class="formula">
+    <b>월 기본급여 금액 ≈ 구간별 이용 시간 × 시간당 단가(2026년 17,270원)</b><br>
+    예) 15구간 60시간 × 17,270원 ≈ <b>103만 6,200원</b><br>
+    여기에 최중증 독거가구 등 요건을 갖추면 <b>가산급여(최대 월 258시간)</b>가 별도로 더해질 수 있습니다.
+  </div>
+
+  <div class="svg-wrap">
+    <div class="svg-title">구간별 월 기본급여 시간 비교 (1·9·12·15구간)</div>
+    <svg viewBox="0 0 660 230" width="100%" role="img" aria-label="구간별 월 기본급여 시간 비교 막대 그래프">
+      <text x="10" y="22" font-size="13" font-weight="700" fill="#555">1구간 (460점 이상) — 480시간</text>
+      <rect x="10" y="30" width="600" height="26" rx="6" fill="#e65100"/>
+      <text x="590" y="48" font-size="13" font-weight="900" fill="#fff" text-anchor="end">480h</text>
+
+      <text x="10" y="80" font-size="13" font-weight="700" fill="#555">9구간 (225~255점) — 240시간</text>
+      <rect x="10" y="88" width="300" height="26" rx="6" fill="#f57c00"/>
+      <text x="290" y="106" font-size="13" font-weight="900" fill="#fff" text-anchor="end">240h</text>
+
+      <text x="10" y="138" font-size="13" font-weight="700" fill="#555">12구간 (135~165점) — 150시간</text>
+      <rect x="10" y="146" width="188" height="26" rx="6" fill="#ffa726"/>
+      <text x="178" y="164" font-size="13" font-weight="900" fill="#7f3c00" text-anchor="end">150h</text>
+
+      <text x="10" y="196" font-size="13" font-weight="700" fill="#555">15구간 (42~75점) — 60시간</text>
+      <rect x="10" y="204" width="75" height="20" rx="5" fill="#ffcc80"/>
+      <text x="95" y="220" font-size="12" fill="#555">60h ← 최소 구간</text>
+    </svg>
+  </div>
+
+  <h2>본인부담금 — 소득에 따라 면제부터 차등부과까지</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>가구 유형</th><th>본인부담금</th></tr>
+    <tr><td><b>생계·의료급여 수급자</b></td><td>면제 (본인부담 없음)</td></tr>
+    <tr><td><b>차상위계층</b></td><td>월 정액 2만 원</td></tr>
+    <tr><td><b>일반 가구</b></td><td>소득 수준에 따라 기본급여의 6~15% + 추가급여의 2~5%를 차등 부담</td></tr>
+  </table>
+  </div>
+  <p>
+    최중증 독거가구 등에 지급되는 <b>가산급여는 별도 산정 기준을 따로 두는 경우가 많아</b>,
+    본인부담금이 발생하는지 여부는 신청 시 국민연금공단 담당자에게 확인하는 것이 정확합니다.
+  </p>
+
+  <h2>신청 절차 — 방문 신청부터 결과 통보까지</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text"><b>신청서 제출</b> — 읍·면·동 주민센터 또는 국민연금공단 지사에 장애인활동지원 급여 신청서를 냅니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text"><b>서비스 지원 종합조사</b> — 국민연금공단 조사원이 방문해 인지·행동 특성, 사회활동, 가구환경 등을 확인합니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text"><b>종합점수 산출</b> — 조사 결과를 바탕으로 종합점수가 계산되고, 이 점수로 구간이 정해집니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text"><b>수급자격심의위원회 심의</b> — 시·군·구 심의위원회가 수급자격 인정 여부와 구간을 최종 결정합니다.</div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-text"><b>결과 통보 및 바우처 발급</b> — 인정되면 월 이용 시간과 본인부담금이 안내되고, 이용자는 제공기관을 선택해 서비스를 시작합니다.</div></div>
+    <div class="step"><div class="step-num">6</div><div class="step-text"><b>재판정</b> — 유효기간(원칙 3년) 만료 전에 다시 신청해 종합조사를 받아야 서비스가 끊기지 않습니다.</div></div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>⏰ 시점에 관한 주의</h3>
+    <p>급여는 원칙적으로 <b>수급자격이 인정된 시점부터 적용</b>되며, 조사에 걸리는 기간 동안은 서비스를 받을 수 없습니다.</p>
+    <p>재판정 신청이 늦어져 유효기간이 지나면 <b>서비스가 일시 중단</b>될 수 있으므로, 만료 두세 달 전에 미리 신청하는 편이 안전합니다.</p>
+    <p>구간별 정확한 점수 경계와 금액은 해마다 바뀔 수 있으니 <b>국민연금공단 1355</b>로 확인하시기 바랍니다.</p>
+  </div>
+
+  <div class="checklist">
+    <h2>✅ 내가 해당되는지 스스로 확인하기</h2>
+    <div class="check-item"><span class="chk">✓</span><span>나이가 만 6세 이상 65세 미만인가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>장애인복지법상 등록장애인인가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>혼자서 일상생활이나 사회활동을 하기 어려운 상태인가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>이전에 종합조사를 받은 적이 있다면 유효기간이 얼마나 남았는가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>가구 소득 유형이 생계·의료급여 수급자, 차상위, 일반 중 어디에 해당하는가</span></div>
+  </div>
+
+  <div class="caution">
+    <div class="caution-item">① <b>등급이 아니라 점수입니다.</b> "몇 급이냐"가 아니라 "종합점수 몇 점, 몇 구간이냐"로 물어야 정확합니다.</div>
+    <div class="caution-item">② <b>65세가 넘으면 원칙적으로 노인장기요양으로 전환됩니다.</b> 다만 일부 요건을 갖추면 활동지원이 계속되는 특례가 있으니 개별 확인이 필요합니다.</div>
+    <div class="caution-item">③ <b>소득이 많아도 신청 자체는 가능합니다.</b> 다만 본인부담금이 늘어날 수 있습니다.</div>
+    <div class="caution-item">④ <b>2~8구간의 정확한 점수 경계와 금액은 매년 고시로 갱신됩니다.</b> 이 글의 표는 확인된 상위·하위 구간을 기준으로 한 예시입니다.</div>
+    <div class="caution-item">⑤ <b>재판정을 놓치면 서비스가 끊길 수 있습니다.</b> 유효기간 만료 전 미리 신청하시기 바랍니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <div class="contact-row"><span class="contact-label">활동지원 문의</span> — 국민연금공단 1355</div>
+    <div class="contact-row"><span class="contact-label">신청 접수</span> — 읍·면·동 주민센터</div>
+    <div class="contact-row"><span class="contact-label">제도 안내</span> — 보건복지부 장애인서비스과</div>
+    <div class="contact-row"><span class="contact-label">복지 상담</span> — 보건복지상담센터 129</div>
+    <div class="contact-row"><span class="contact-label">복지 제도 검색</span> — 복지로 bokjiro.go.kr</div>
+  </div>
+
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"등급제는 같은 진단명이면 필요한 도움도 같다고 전제했다. 종합조사로 바뀌면서 혼자 사는지, 주변 지원이 있는지 같은 실제 생활 조건이 반영된 것은 진일보다."</p>
+          <p class="author">— 장애인복지 정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"최중증 독거가구 가산급여가 늘어난 것은 방향이 맞다. 24시간 돌봄이 필요한 사람에게 시간 총량을 늘리는 것이 가장 직접적인 지원이다."</p>
+          <p class="author">— 중증장애인 자립생활센터 활동가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"42점이라는 문턱과 15개 구간 경계는 여전히 촘촘한 절벽 구조다. 조사 당일 컨디션이나 조사원의 판단에 따라 구간이 갈리는 사례가 반복해서 보고된다."</p>
+          <p class="author">— 장애인 인권단체 정책 담당자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"65세가 되는 순간 노인장기요양으로 넘어가면서 이용 시간이 오히려 줄어드는 사례가 있다. 나이를 기준으로 제도를 갈아타게 하는 방식은 근본적으로 재검토가 필요하다."</p>
+          <p class="author">— 노인·장애인 돌봄 연구자</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #장애인활동지원 #종합조사 #인정점수 #판정기준 #활동보조 #방문목욕 #방문간호
+    #등록장애인 #국민연금공단 #본인부담금 #최중증가산급여 #활동지원단가 #수급자격심의위원회
+  </div>
+
+  <div class="disclaimer">
+    이 글은 보건복지부·국민연금공단이 공개한 장애인활동지원 제도 안내 자료와
+    서비스 지원 종합조사 관련 고시 내용을 바탕으로 작성되었습니다.
+    구간별 점수 경계, 이용 시간, 금액, 본인부담금 기준은 해마다 바뀔 수 있으며,
+    실제 지원 여부와 구간은 국민연금공단의 방문조사 결과에 따라 달라집니다.
+    정확한 내용은 국민연금공단 또는 읍·면·동 주민센터에 확인하시기 바랍니다.
+  </div>
+
+  <div class="written">작성일 2026-09-22 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
