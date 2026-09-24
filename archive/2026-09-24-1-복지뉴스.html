@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>청년도약계좌 정부기여금 계산법 — 소득구간별 매칭 비율과 만기 수령액</title>
+<meta name="description" content="청년도약계좌는 만 19~34세, 개인소득 7,500만 원 이하 청년이 매월 최대 70만 원을 5년간 자유적립하면 이자소득 비과세에 더해 정부기여금까지 받는 적금입니다. 정부기여금은 개인소득 구간에 따라 매칭한도와 매칭비율이 달라, 소득이 2,400만 원 이하면 월 최대 24,000원, 6,000만~7,500만 원 구간은 기여금 없이 비과세만 적용됩니다. 소득구간별 매칭 계산법과 만기수령액 구조, 3년 이상 유지 후 중도해지와 특별중도해지 조건을 정리했습니다.">
+<style>
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: #f8f9fa; color: #222; line-height: 1.7; }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge { display: inline-block; background: #f57c00; color: #fff; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+  h1 { font-size: 26px; font-weight: 900; line-height: 1.35; color: #1a1a1a; margin-bottom: 18px; word-break: keep-all; }
+  .hook { border-left: 5px solid #f57c00; padding: 14px 18px; background: #fff3e0; border-radius: 0 8px 8px 0; margin-bottom: 22px; font-size: 15px; }
+  .hook .highlight { color: #e65100; font-weight: 900; }
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 18px 20px; margin-bottom: 26px; }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+  h2 { font-size: 19px; font-weight: 900; color: #e65100; margin: 28px 0 12px; border-bottom: 2px solid #ffcc80; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #f57c00; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #fff3e0; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #e65100; }
+  .formula { background: #fffaf3; border: 1px solid #ffcc80; border-radius: 10px; padding: 16px 18px; margin-bottom: 20px; font-size: 14.5px; line-height: 1.9; word-break: keep-all; }
+  .formula b { color: #e65100; }
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #fff3e0; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #f57c00; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+  .deadline-box { border: 2px dashed #f57c00; background: #fff8ef; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+  .checklist { background: #fff3e0; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #ffcc80; color: #e65100; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #e65100; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+  .caution { background: #fff3e0; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+  .contact-box { background: #fff3e0; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #e65100; border-color: #ffcc80; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  .hashtags { font-size: 13px; color: #e65100; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-09-24-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="청년도약계좌 정부기여금 계산법 — 소득구간별 매칭 비율과 만기 수령액">
+<meta property="og:description" content="청년도약계좌는 만 19~34세, 개인소득 7,500만 원 이하 청년이 매월 최대 70만 원을 5년간 자유적립하면 이자소득 비과세에 더해 정부기여금까지 받는 적금입니다. 정부기여금은 개인소득 구간에 따라 매칭한도와 매칭비율이 달라, 소득이 2,400만 원 이하면 월 최대 24,000원, 6,000만~7,500만 원 구간은 기여금 없이 비과세만 적용됩니다. 소득구간별 매칭 계산법과 만기수령액 구조, 3년 이상 유지 후 중도해지와 특별중도해지 조건을 정리했습니다.">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-09-24-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-09-24T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-09-24T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-09-24-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-09-24-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "청년도약계좌 정부기여금 계산법 — 소득구간별 매칭 비율과 만기 수령액", "description": "청년도약계좌는 만 19~34세, 개인소득 7,500만 원 이하 청년이 매월 최대 70만 원을 5년간 자유적립하면 이자소득 비과세에 더해 정부기여금까지 받는 적금입니다. 정부기여금은 개인소득 구간에 따라 매칭한도와 매칭비율이 달라, 소득이 2,400만 원 이하면 월 최대 24,000원, 6,000만~7,500만 원 구간은 기여금 없이 비과세만 적용됩니다. 소득구간별 매칭 계산법과 만기수령액 구조, 3년 이상 유지 후 중도해지와 특별중도해지 조건을 정리했습니다.", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-09-24", "dateModified": "2026-09-24", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-GyFXAvGw6TskYQ5x"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-ZL2KaRsLAk3Ly1Ik"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-WjaoW3Jzgq4B6IUW"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 청년 자산형성 · 청년도약계좌</div>
+  <div class="section-badge">청년 자산형성</div>
+
+  <h1>청년도약계좌 정부기여금 계산법 — 소득구간별 매칭 비율과 만기 수령액</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대체로 이런 상황입니다.
+    <span class="highlight">청년도약계좌 얘기는 들었는데 내 소득으로 정부기여금을 얼마나 받는지 계산이 안 되는 경우</span>,
+    <span class="highlight">매달 70만 원을 넣어야 이득인지, 적게 넣어도 되는지 헷갈리는 경우</span>,
+    그리고 <span class="highlight">중간에 목돈이 필요해질 것 같아 중도해지하면 손해를 얼마나 보는지 미리 알고 싶은 경우</span>입니다.
+    이 제도에서 먼저 잡아야 할 것은 세 가지입니다.
+    하나는 <span class="highlight">정부기여금이 소득이 낮을수록 매칭비율은 높지만 매칭한도는 낮다</span>는 점,
+    둘째는 <span class="highlight">매칭한도를 넘는 납입분에는 기여금이 붙지 않는다</span>는 점,
+    셋째는 <span class="highlight">3년을 채우지 못하고 해지하면 정부기여금을 전혀 받지 못한다</span>는 점입니다.
+    아래에서 가입 대상과 소득구간별 매칭 계산법, 만기수령액 구조, 중도해지 조건을 차례로 짚었습니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li><b>만 19~34세, 개인소득 7,500만 원 이하면 가입할 수 있습니다</b> — 가구소득도 기준 중위소득 250% 이하여야 합니다.</li>
+      <li><b>매월 1천 원부터 70만 원까지 자유적립식으로 납입합니다.</b> 일부 달을 거르거나 금액을 바꿔도 계좌는 유지됩니다.</li>
+      <li><b>정부기여금은 소득구간마다 매칭한도와 매칭비율이 다릅니다</b> — 개인소득 2,400만 원 이하는 월 최대 24,000원, 6,000만~7,500만 원 구간은 기여금이 없습니다.</li>
+      <li><b>매칭한도를 넘겨 납입해도 초과분에는 기여금이 붙지 않고 비과세 혜택만 적용됩니다.</b></li>
+      <li><b>이자소득은 전액 비과세입니다</b> — 일반 적금이라면 15.4%를 떼는 이자소득세가 붙지 않습니다.</li>
+      <li><b>3년 이상 유지하고 중도해지하면 비과세는 유지되고 정부기여금의 60%를 받습니다.</b></li>
+      <li><b>퇴직·혼인·출산·생애최초 주택구입 등 특별중도해지 사유에 해당하면 가입기간과 무관하게 기여금 100%와 비과세가 모두 유지됩니다</b> — 사유 발생일로부터 6개월 안에 신청해야 합니다.</li>
+    </ul>
+  </div>
+
+  <p style="font-size:13px;color:#888;margin-bottom:22px;">
+    ※ 본문의 가입 대상, 소득구간별 매칭 기준, 중도해지 조건은 <b>서민금융진흥원 청년도약계좌 누리집(ylaccount.kinfa.or.kr)에 공개된 제도 안내</b>를 바탕으로 했고,
+    <b>2026년 기준</b>으로 정리했습니다. 정확한 소득 심사 기준과 은행별 적용금리, 우대조건은 <b>매년 고시와 취급은행 공지에 따라 달라질 수 있으므로</b>,
+    실제 가입 가능 여부와 예상 수령액은 서민금융진흥원 또는 가입을 원하는 취급은행에서 확인하시기 바랍니다.
+  </p>
+
+  <h2>어떤 제도인가 — 납입액에 정부가 돈을 얹어주는 청년 적금</h2>
+  <p>
+    청년도약계좌는 <b>청년이 5년 동안 자유적립식으로 저축하면 정부가 매달 일정 금액을 얹어주고, 만기까지 유지하면 이자소득에 세금을 매기지 않는 제도</b>입니다.
+    금융위원회가 주관하고, <b>서민금융진흥원</b>이 소득 심사와 계좌 관리를 맡으며, 실제 계좌 개설과 납입은 <b>취급은행 앱</b>을 통해 이뤄집니다.
+  </p>
+  <p>
+    일반 적금과 다른 점은 두 가지입니다. <b>내가 넣은 돈에 은행 이자만 붙는 것이 아니라 정부기여금이 별도로 더해진다는 점</b>,
+    그리고 <b>이자소득세 15.4%가 면제돼 세금을 뗀 뒤 금액이 아니라 이자 전액을 그대로 받는다는 점</b>입니다.
+    다만 두 혜택 모두 <b>가입기간과 유지 여부에 따라 크게 달라지므로</b>, 계산 방식을 미리 알아두는 편이 좋습니다.
+  </p>
+
+  <h2>누가 가입할 수 있나 — 나이·소득 요건</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>구분</th><th>내용</th></tr>
+    <tr>
+      <td><b>연령 요건</b></td>
+      <td>가입일 기준 <b>만 19~34세.</b> 병역을 이행한 경우 최대 6년까지 병역이행기간을 빼고 연령을 계산해, 병역이행자는 만 40세까지도 가입할 수 있습니다.</td>
+    </tr>
+    <tr>
+      <td><b>개인소득 요건</b></td>
+      <td>직전 과세기간 <b>총급여 7,500만 원 이하</b>(종합소득금액이 있다면 6,300만 원 이하). 이 요건을 넘으면 가입 자체가 불가능합니다.</td>
+    </tr>
+    <tr>
+      <td><b>가구소득 요건</b></td>
+      <td>가구원 전체 소득 합산이 <b>기준 중위소득 250% 이하.</b> 개인소득 요건을 채워도 가구소득이 넘으면 가입할 수 없습니다.</td>
+    </tr>
+    <tr>
+      <td><b>기타 제한</b></td>
+      <td>직전 3개 과세기간 중 <b>1회 이상 금융소득종합과세 대상자였던 경우</b>는 가입이 제한됩니다.</td>
+    </tr>
+  </table>
+  </div>
+  <p>
+    개인소득과 가구소득 두 요건을 <b>동시에</b> 채워야 하므로, 본인 소득만 낮다고 무조건 가입되는 것은 아닙니다.
+    소득 심사는 국세청·건강보험공단 자료로 이뤄지며, 신청 시점에 소득이 확정되지 않았다면 <b>직전 확정 소득</b>을 기준으로 심사합니다.
+  </p>
+
+  <h2>정부기여금 계산법 — 소득구간별 매칭한도와 매칭비율</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>개인소득(총급여)</th><th>매칭한도</th><th>매칭비율</th><th>월 최대 기여금</th></tr>
+    <tr><td>2,400만 원 이하</td><td>40만 원</td><td>6.0%</td><td><b>24,000원</b></td></tr>
+    <tr><td>2,400만~3,600만 원 이하</td><td>50만 원</td><td>4.6%</td><td><b>23,000원</b></td></tr>
+    <tr><td>3,600만~4,800만 원 이하</td><td>60만 원</td><td>3.7%</td><td><b>22,000원</b></td></tr>
+    <tr><td>4,800만~6,000만 원 이하</td><td>70만 원</td><td>3.0%</td><td><b>21,000원</b></td></tr>
+    <tr><td>6,000만~7,500만 원 이하</td><td>—</td><td>—</td><td>없음(비과세만 적용)</td></tr>
+  </table>
+  </div>
+  <div class="formula">
+    <b>월 정부기여금 ≈ min(그달 납입액, 매칭한도) × 매칭비율</b><br>
+    예) 개인소득 2,400만 원 이하인 청년이 매달 <b>70만 원</b>을 넣어도, 매칭한도는 40만 원이라 정부기여금은
+    <b>40만 원 × 6.0% = 24,000원</b>으로 그대로입니다. 매칭한도를 넘는 30만 원에는 기여금이 붙지 않고 비과세 혜택만 적용됩니다.
+    반대로 매칭한도보다 적게 넣으면 그달 <b>실제 납입액 기준</b>으로 기여금이 줄어듭니다.
+  </div>
+
+  <div class="svg-wrap">
+    <div class="svg-title">소득구간별 월 최대 정부기여금 비교</div>
+    <svg viewBox="0 0 660 190" width="100%" role="img" aria-label="청년도약계좌 소득구간별 월 최대 정부기여금 막대 그래프">
+      <text x="10" y="20" font-size="12" font-weight="700" fill="#555">2,400만 원 이하 — 24,000원</text>
+      <rect x="10" y="26" width="600" height="20" rx="6" fill="#e65100"/>
+      <text x="580" y="41" font-size="12" font-weight="900" fill="#fff" text-anchor="end">24,000원</text>
+
+      <text x="10" y="62" font-size="12" font-weight="700" fill="#555">2,400만~3,600만 원 — 23,000원</text>
+      <rect x="10" y="68" width="575" height="20" rx="6" fill="#f57c00"/>
+      <text x="555" y="83" font-size="12" font-weight="900" fill="#fff" text-anchor="end">23,000원</text>
+
+      <text x="10" y="104" font-size="12" font-weight="700" fill="#555">3,600만~4,800만 원 — 22,000원</text>
+      <rect x="10" y="110" width="550" height="20" rx="6" fill="#fb8c00"/>
+      <text x="530" y="125" font-size="12" font-weight="900" fill="#fff" text-anchor="end">22,000원</text>
+
+      <text x="10" y="146" font-size="12" font-weight="700" fill="#555">4,800만~6,000만 원 — 21,000원</text>
+      <rect x="10" y="152" width="525" height="20" rx="6" fill="#ffa726"/>
+      <text x="505" y="167" font-size="12" font-weight="900" fill="#333" text-anchor="end">21,000원</text>
+
+      <text x="10" y="185" font-size="12" font-weight="700" fill="#999">6,000만~7,500만 원 — 기여금 없음(비과세만)</text>
+    </svg>
+  </div>
+
+  <h2>만기수령액은 어떻게 구성되나 — 원금 + 기여금 + 비과세 이자</h2>
+  <p>
+    5년(60개월) 만기까지 유지하면 <b>① 본인이 납입한 원금, ② 60개월간 쌓인 정부기여금, ③ 은행 이자(비과세)</b> 세 가지를 한꺼번에 받습니다.
+    예를 들어 개인소득 2,400만 원 이하인 청년이 매달 70만 원씩 60개월을 채우면,
+    원금은 <b>4,200만 원</b>(70만 원×60개월), 정부기여금은 <b>최대 144만 원</b>(24,000원×60개월)이 더해집니다.
+    여기에 <b>가입 은행의 기본금리와 우대금리를 적용한 이자가 비과세로</b> 추가되는데,
+    이자액은 <b>가입 시점과 은행별 금리, 우대조건 충족 여부에 따라 달라지므로</b> 특정 금액으로 단정하기 어렵습니다.
+    정확한 예상 수령액은 서민금융진흥원 누리집이나 가입 은행 앱의 <b>계좌 계산기</b>로 본인 소득구간과 납입액을 넣어 확인하는 것이 가장 정확합니다.
+  </p>
+
+  <h2>이자소득 비과세 — 일반 적금과 다른 부분</h2>
+  <p>
+    일반 적금은 만기 이자에 <b>이자소득세 15.4%</b>(소득세 14% + 지방소득세 1.4%)가 원천징수됩니다.
+    청년도약계좌는 <b>만기까지 유지하면 이 세금이 전액 면제</b>돼, 표에 적힌 은행 금리를 그대로 다 받습니다.
+    비과세 혜택은 <b>정부기여금과 별도</b>로 적용되므로, 소득이 높아 기여금을 받지 못하는 6,000만~7,500만 원 구간도
+    <b>비과세 혜택만큼은 동일하게 적용</b>받습니다.
+  </p>
+
+  <h2>중도해지하면 어떻게 되나 — 3년 기준과 특별중도해지</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>구분</th><th>내용</th></tr>
+    <tr>
+      <td><b>가입 3년 미만 일반 중도해지</b></td>
+      <td>정부기여금을 <b>받지 못하고</b>, 이자에도 일반 과세(15.4%)가 적용됩니다. 사실상 혜택 없이 원금과 세후 이자만 받는 구조입니다.</td>
+    </tr>
+    <tr>
+      <td><b>가입 3년 이상 유지 후 중도해지</b></td>
+      <td><b>비과세는 유지</b>되고, 그때까지 쌓인 정부기여금의 <b>60%</b>를 받습니다.</td>
+    </tr>
+    <tr>
+      <td><b>특별중도해지</b></td>
+      <td>가입기간과 무관하게 <b>정부기여금 100% + 비과세 100%</b>가 만기해지와 동일하게 적용됩니다.
+      사유는 퇴직, 폐업, <b>3개월 이상 치료가 필요한 상해·질병</b>, 생애최초 주택구입, 혼인, 출산, 해외이주, 천재지변 등이며,
+      <b>사유 발생일로부터 6개월 이내</b>에 신청해야 인정됩니다.</td>
+    </tr>
+  </table>
+  </div>
+
+  <h2>가입 절차</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text"><b>가입신청</b> — 취급은행 앱에서 매월 정해진 가입신청 기간에 비대면으로 신청합니다. 신청 기간은 보통 매월 초 2주 안팎으로, 은행 공지에서 확인해야 합니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text"><b>가입요건 심사</b> — 서민금융진흥원이 국세청·건강보험공단 자료로 개인소득과 가구소득 요건을 심사합니다. 통상 2~3주가 걸립니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text"><b>계좌 개설</b> — 심사를 통과하면 결과를 안내받고, 신청했던 취급은행 앱에서 계좌를 개설합니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text"><b>매월 자유적립</b> — 월 1천 원부터 70만 원까지 원하는 금액을 자유롭게 납입합니다. 매칭한도까지는 정부기여금이 함께 쌓입니다.</div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-text"><b>만기 또는 중도해지</b> — 5년을 채우면 원금·기여금·비과세 이자를 한 번에 수령합니다. 중도해지 시 위 표의 기준에 따라 지급액이 달라집니다.</div></div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>⏰ 시점에 관한 주의</h3>
+    <p><b>가입신청은 상시가 아니라 매월 정해진 기간에만</b> 받습니다. 놓치면 다음 달 신청 기간까지 기다려야 합니다.</p>
+    <p>특별중도해지는 <b>사유 발생일로부터 6개월이 지나면 인정되지 않으므로</b>, 해당 사유가 생겼다면 서둘러 신청해야 합니다.</p>
+    <p>본인의 정확한 소득구간과 예상 정부기여금, 이자율은 <b>서민금융진흥원 또는 가입 은행</b>에서 최신 기준으로 확인하시기 바랍니다.</p>
+  </div>
+
+  <div class="checklist">
+    <h2>✅ 내가 해당되는지 스스로 확인하기</h2>
+    <div class="check-item"><span class="chk">✓</span><span>나이가 만 19~34세인가(병역이행기간은 최대 6년 제외하고 계산)</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>직전 과세기간 총급여가 7,500만 원 이하인가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>가구소득이 기준 중위소득 250% 이하인가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>최근 3개 과세기간 중 금융소득종합과세 대상자였던 적은 없는가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>내 소득구간에서 매칭한도와 매칭비율이 얼마인지 확인했는가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>5년을 채우기 어렵다면 3년 이상 유지 가능한지, 특별중도해지 사유에 해당하는지 확인했는가</span></div>
+  </div>
+
+  <div class="caution">
+    <div class="caution-item">① <b>매칭한도를 넘겨 납입해도 초과분에는 기여금이 붙지 않습니다.</b> 무조건 70만 원을 채우는 것이 항상 유리한 것은 아닙니다.</div>
+    <div class="caution-item">② <b>3년을 채우지 못하고 해지하면 정부기여금을 전혀 받지 못합니다.</b> 목돈이 필요할 상황을 미리 가늠해보는 편이 좋습니다.</div>
+    <div class="caution-item">③ <b>가입 후에도 개인소득·가구소득 변동에 따라 매칭 조건이 매년 재심사될 수 있습니다.</b> 소득이 늘면 다음 해 매칭비율이 낮아질 수 있습니다.</div>
+    <div class="caution-item">④ <b>가입신청 기간과 심사 기간이 있어 즉시 가입되지 않습니다.</b> 계획보다 여유를 두고 신청해야 합니다.</div>
+    <div class="caution-item">⑤ <b>정확한 은행별 금리와 우대조건, 매칭 기준은 고시와 은행 공지에 따라 바뀔 수 있습니다.</b> 이 글의 수치는 2026년 기준 확인된 내용입니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <div class="contact-row"><span class="contact-label">제도 문의</span> — 서민금융진흥원 청년도약계좌 콜센터 ☎1397</div>
+    <div class="contact-row"><span class="contact-label">가입·계산기</span> — 청년도약계좌 누리집 ylaccount.kinfa.or.kr</div>
+    <div class="contact-row"><span class="contact-label">계좌 개설</span> — 농협·기업·신한·우리·하나·국민·부산·경남·대구·광주·전북은행 등 취급은행 앱</div>
+    <div class="contact-row"><span class="contact-label">복지 상담</span> — 보건복지상담센터 ☎129</div>
+    <div class="contact-row"><span class="contact-label">복지 제도 검색</span> — 복지로 bokjiro.go.kr</div>
+  </div>
+
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"소득이 낮을수록 매칭비율을 높게 설계한 것은 저소득 청년에게 실질적으로 유리한 구조다. 자산형성 격차를 좁히려는 정책 취지에 맞다."</p>
+          <p class="author">— 청년정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"정부기여금과 이자 비과세를 동시에 주는 상품은 시중에 없다. 5년을 채울 수 있는 청년이라면 다른 적금보다 확실히 유리하다."</p>
+          <p class="author">— 금융권 관계자</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"5년은 소득이 불안정한 청년에게 긴 기간이다. 3년을 채우지 못하면 기여금을 전혀 받지 못하는 구조는 중도이탈을 부추길 수 있다."</p>
+          <p class="author">— 청년정책 평론가</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"소득 상위 구간은 정부기여금이 아예 없어 비과세 혜택만으로는 매력이 크지 않다는 지적이 있다. 중간소득 청년을 위한 보완이 필요하다."</p>
+          <p class="author">— 재무설계사</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #청년도약계좌 #정부기여금 #소득구간별매칭 #만기수령액 #이자소득비과세 #청년적금
+    #중도해지 #특별중도해지 #서민금융진흥원 #청년자산형성 #목돈마련
+  </div>
+
+  <div class="disclaimer">
+    이 글은 서민금융진흥원 청년도약계좌 누리집(ylaccount.kinfa.or.kr)이 공개한 제도 안내 자료를 바탕으로 작성되었습니다.
+    가입 대상의 소득 기준, 정부기여금 매칭한도·매칭비율, 은행별 금리와 우대조건은 고시 개정과 취급은행 공지에 따라 달라질 수 있으며,
+    실제 가입 가능 여부와 예상 수령액은 서민금융진흥원 또는 취급은행의 확인 결과에 따라 달라집니다.
+    정확한 내용은 서민금융진흥원 콜센터(1397) 또는 가입을 원하는 취급은행에 문의하시기 바랍니다.
+  </div>
+
+  <div class="written">작성일 2026-09-24 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
