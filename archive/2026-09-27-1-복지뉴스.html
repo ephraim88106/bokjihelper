@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>장애인연금 수급자격 — 중증장애 판정기준과 기초급여 부가급여 금액</title>
+<meta name="description" content="장애인연금은 만 18세 이상 중증장애인(구 장애등급 1·2급 및 3급 중복장애) 중 소득 하위 70%에게 매달 기초급여와 부가급여를 함께 지급하는 제도입니다. 2026년 기준 기초급여는 월 34만 9,700원이며 부가급여(월 3만~9만 원)를 더하면 최대 월 43만 9,700원까지 받을 수 있습니다. 수급자격과 선정기준액, 지급액 구성, 65세 이후 기초연금 전환, 신청 절차를 정리했습니다.">
+<style>
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: #f8f9fa; color: #222; line-height: 1.7; }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge { display: inline-block; background: #f57c00; color: #fff; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+  h1 { font-size: 26px; font-weight: 900; line-height: 1.35; color: #1a1a1a; margin-bottom: 18px; word-break: keep-all; }
+  .hook { border-left: 5px solid #f57c00; padding: 14px 18px; background: #fff3e0; border-radius: 0 8px 8px 0; margin-bottom: 22px; font-size: 15px; }
+  .hook .highlight { color: #e65100; font-weight: 900; }
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 18px 20px; margin-bottom: 26px; }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+  h2 { font-size: 19px; font-weight: 900; color: #e65100; margin: 28px 0 12px; border-bottom: 2px solid #ffcc80; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #f57c00; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #fff3e0; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #e65100; }
+  .formula { background: #fffaf3; border: 1px solid #ffcc80; border-radius: 10px; padding: 16px 18px; margin-bottom: 20px; font-size: 14.5px; line-height: 1.9; word-break: keep-all; }
+  .formula b { color: #e65100; }
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #fff3e0; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #f57c00; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+  .deadline-box { border: 2px dashed #f57c00; background: #fff8ef; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+  .checklist { background: #fff3e0; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #ffcc80; color: #e65100; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #e65100; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+  .caution { background: #fff3e0; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+  .contact-box { background: #fff3e0; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #e65100; border-color: #ffcc80; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  .hashtags { font-size: 13px; color: #e65100; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-09-27-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="장애인연금 수급자격 — 중증장애 판정기준과 기초급여 부가급여 금액">
+<meta property="og:description" content="장애인연금은 만 18세 이상 중증장애인(구 장애등급 1·2급 및 3급 중복장애) 중 소득 하위 70%에게 매달 기초급여와 부가급여를 함께 지급하는 제도입니다. 2026년 기준 기초급여는 월 34만 9,700원이며 부가급여(월 3만~9만 원)를 더하면 최대 월 43만 9,700원까지 받을 수 있습니다. 수급자격과 선정기준액, 지급액 구성, 65세 이후 기초연금 전환, 신청 절차를 정리했습니다.">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-09-27-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-09-27T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-09-27T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-09-27-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-09-27-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "장애인연금 수급자격 — 중증장애 판정기준과 기초급여 부가급여 금액", "description": "장애인연금은 만 18세 이상 중증장애인(구 장애등급 1·2급 및 3급 중복장애) 중 소득 하위 70%에게 매달 기초급여와 부가급여를 함께 지급하는 제도입니다. 2026년 기준 기초급여는 월 34만 9,700원이며 부가급여(월 3만~9만 원)를 더하면 최대 월 43만 9,700원까지 받을 수 있습니다. 수급자격과 선정기준액, 지급액 구성, 65세 이후 기초연금 전환, 신청 절차를 정리했습니다.", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-09-27", "dateModified": "2026-09-27", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-GyFXAvGw6TskYQ5x"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-ZL2KaRsLAk3Ly1Ik"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-WjaoW3Jzgq4B6IUW"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 장애인 소득보장 · 장애인연금</div>
+  <div class="section-badge">장애인 지원</div>
+
+  <h1>장애인연금 수급자격 — 중증장애 판정기준과 기초급여 부가급여 금액</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대체로 이런 상황입니다.
+    <span class="highlight">중증장애인 판정을 받았는데 장애인연금을 받을 수 있는지 소득 기준부터 헷갈리는 경우</span>,
+    <span class="highlight">부모님이나 배우자가 만 65세를 앞두고 있어 장애인연금이 기초연금으로 바뀐다는 말을 듣고 실제로 뭐가 달라지는지 궁금한 경우</span>,
+    그리고 <span class="highlight">기초급여와 부가급여를 합쳐 실제로 매달 얼마를 받는지 계산이 안 되는 경우</span>입니다.
+    이 제도에서 먼저 잡아야 할 것은 세 가지입니다.
+    하나는 <span class="highlight">장애인연금은 장애 정도가 중증인 사람만 대상이라는 점</span>,
+    둘째는 <span class="highlight">소득인정액이 선정기준액 이하여야 한다는 점</span>,
+    셋째는 <span class="highlight">지급액이 기초급여와 부가급여 두 부분으로 나뉜다는 점</span>입니다.
+    아래에서 수급자격과 선정기준액, 지급액 구성, 65세 이후 달라지는 점, 신청 절차를 차례로 짚었습니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li><b>만 18세 이상 중증장애인</b>(구 장애등급 1·2급 및 3급 중복장애)이 대상입니다.</li>
+      <li><b>본인과 배우자의 소득인정액이 선정기준액 이하</b>여야 하며, <b>2026년 선정기준액은 단독가구 140만 원, 부부가구 224만 원</b>입니다.</li>
+      <li><b>자녀 등 다른 부양가족의 소득·재산은 심사에 반영되지 않습니다.</b></li>
+      <li><b>2026년 기초급여는 월 34만 9,700원</b>으로, 전년도 소비자물가변동률(2.1%)을 반영해 인상됐습니다.</li>
+      <li><b>부가급여는 소득 수준과 생활 형태에 따라 월 3만~9만 원</b>이 차등 지급됩니다.</li>
+      <li><b>기초급여와 부가급여를 합쳐 최대 월 43만 9,700원</b>까지 받을 수 있습니다.</li>
+      <li><b>만 65세가 되는 달부터 기초급여는 기초연금으로 전환 지급</b>되고, <b>부가급여는 그대로 유지</b>됩니다.</li>
+      <li><b>신청 기간은 따로 없이 연중 상시</b>이며, <b>주소지 읍·면·동 주민센터 또는 복지로(bokjiro.go.kr) 온라인</b>으로 신청합니다.</li>
+    </ul>
+  </div>
+
+  <p style="font-size:13px;color:#888;margin-bottom:22px;">
+    ※ 본문의 수급자격·선정기준액·지급액은 <b>보건복지부와 정부24(gov.kr)가 공개한 장애인연금 제도 안내</b>를 바탕으로 했고,
+    <b>2026년 기준</b>으로 정리했습니다. 선정기준액과 부가급여 세부 구간은 <b>매년 고시로 바뀌므로</b>,
+    실제 수급 가능 여부와 정확한 금액은 국민연금공단 또는 주소지 읍·면·동 주민센터, 복지로 모의계산으로 확인하시기 바랍니다.
+  </p>
+
+  <h2>어떤 제도인가 — 중증장애인 소득보장을 위한 연금</h2>
+  <p>
+    장애인연금은 <b>일하기 어려운 중증장애인의 생활 안정을 돕기 위해 매달 현금을 지급하는 소득보장 제도</b>입니다.
+    장애로 인해 근로 능력이 제한되고 소득이 낮은 경우가 많다는 점을 고려해, 소득 하위 70% 수준의 중증장애인에게 <b>기초급여와 부가급여</b>를 함께 지급합니다.
+  </p>
+  <p>
+    제도 운영은 <b>보건복지부</b>가 맡고, 실제 신청 접수와 지급 업무는 <b>국민연금공단</b>이 위탁받아 처리합니다.
+    장애 정도가 상대적으로 가벼운 <b>경증장애인은 장애수당 대상</b>이 되어 장애인연금과는 별도 제도로 운영된다는 점도 함께 알아두면 좋습니다.
+  </p>
+
+  <h2>누가 받을 수 있나 — 나이·장애 정도·소득기준</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>구분</th><th>내용</th></tr>
+    <tr>
+      <td><b>연령</b></td>
+      <td>신청일 기준 <b>만 18세 이상</b>.</td>
+    </tr>
+    <tr>
+      <td><b>장애 정도</b></td>
+      <td><b>중증장애인</b>(장애인연금법상 기준으로, 종전 장애등급 <b>1급·2급 및 3급 중복장애</b>에 해당하는 정도)만 대상입니다. 경증장애인은 장애인연금이 아니라 장애수당 대상입니다.</td>
+    </tr>
+    <tr>
+      <td><b>소득기준</b></td>
+      <td>본인과 배우자의 <b>소득인정액이 선정기준액 이하</b>여야 하며, 전체 중증장애인 중 <b>소득 하위 약 70%</b> 수준을 대상으로 매년 선정기준액이 정해집니다.</td>
+    </tr>
+    <tr>
+      <td><b>2026년 선정기준액</b></td>
+      <td><b>배우자가 없는 중증장애인 140만 원, 배우자가 있는 중증장애인 224만 원</b>(부부가구 합산 소득인정액 기준).</td>
+    </tr>
+    <tr>
+      <td><b>반영되지 않는 소득</b></td>
+      <td>자녀 등 본인·배우자 외 부양가족의 <b>소득과 재산은 심사에 반영되지 않습니다.</b></td>
+    </tr>
+  </table>
+  </div>
+  <p>
+    <b>장애인연금의 핵심 자격 요건은 장애 정도(중증)와 소득인정액(선정기준액 이하) 두 가지입니다.</b>
+    두 요건을 모두 충족해야 하며, 정확한 소득인정액은 소득평가액과 재산의 소득환산액을 더해 계산하므로 재산이 많으면 소득이 없어도 기준을 넘을 수 있습니다.
+  </p>
+
+  <h2>지급액은 얼마인가 — 기초급여와 부가급여 구성</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>구분</th><th>내용</th></tr>
+    <tr><td><b>기초급여(2026년)</b></td><td>월 <b>34만 9,700원</b>. 전년도 소비자물가변동률(2.1%)을 반영해 매년 인상됩니다.</td></tr>
+    <tr><td><b>부가급여</b></td><td>수급자의 <b>연령과 소득 계층(기초생활수급자·차상위계층·차상위 초과 등)에 따라 월 3만~9만 원</b>으로 차등 지급됩니다.</td></tr>
+    <tr><td><b>월 최대 합산 지급액</b></td><td>기초급여 34만 9,700원 + 부가급여 최대 9만 원 = <b>최대 월 43만 9,700원</b>.</td></tr>
+    <tr><td><b>65세 이후</b></td><td>만 65세가 되는 달부터 <b>기초급여는 기초연금으로 전환</b>되어 지급되고, <b>부가급여는 장애인연금 명목으로 계속 지급</b>됩니다.</td></tr>
+  </table>
+  </div>
+  <div class="formula">
+    <b>월 지급액 = 기초급여(2026년 34만 9,700원, 65세 이후 기초연금으로 전환) + 부가급여(월 3만~9만 원, 소득·연령별 차등)</b><br>
+    예) 만 65세 미만 기초생활수급자인 중증장애인은 기초급여와 부가급여를 합쳐 <b>최대 약 43만 9,700원</b>까지 받을 수 있습니다.
+  </div>
+
+  <div class="svg-wrap">
+    <div class="svg-title">2026년 장애인연금 월 지급액 구성 (기초급여 + 부가급여, 최대 기준)</div>
+    <svg viewBox="0 0 660 160" width="100%" role="img" aria-label="2026년 장애인연금 기초급여와 부가급여 구성 막대 그래프">
+      <text x="10" y="22" font-size="13" font-weight="700" fill="#555">기초급여 — 월 349,700원</text>
+      <rect x="10" y="30" width="280" height="26" rx="6" fill="#f57c00"/>
+      <text x="280" y="48" font-size="13" font-weight="900" fill="#fff" text-anchor="end">349,700원</text>
+
+      <text x="10" y="90" font-size="13" font-weight="700" fill="#555">부가급여(최대) — 월 90,000원</text>
+      <rect x="10" y="98" width="90" height="26" rx="6" fill="#e65100"/>
+      <text x="95" y="116" font-size="12" font-weight="900" fill="#fff" text-anchor="end">9만</text>
+
+      <text x="10" y="150" font-size="13" font-weight="900" fill="#c62828">합산 최대 — 월 439,700원</text>
+    </svg>
+  </div>
+
+  <h2>신청 절차 — 주민센터 방문부터 지급 결정까지</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text"><b>신청</b> — 주소지 읍·면·동 주민센터에 방문하거나 복지로(bokjiro.go.kr)에서 온라인으로 신청합니다. 대리인 신청 시 위임장과 대리인 신분증이 필요합니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text"><b>서류 제출</b> — 사회보장급여 신청(변경)서, 소득·재산신고서, 금융정보 등 제공동의서(본인 및 배우자), 신분증, 통장사본을 제출합니다. 장애 정도 확인이 필요하면 관련 서류도 함께 냅니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text"><b>소득·재산 조사</b> — 국민연금공단이 소득인정액을 조사해 선정기준액 충족 여부를 확인합니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text"><b>장애 정도 확인</b> — 등록된 장애 정도가 중증에 해당하는지 확인합니다.</div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-text"><b>결과 통보 및 지급</b> — 심사 결과를 통보받은 뒤 수급이 확정되면 매달 정해진 날짜에 계좌로 지급됩니다.</div></div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>⏰ 시점에 관한 주의</h3>
+    <p>장애인연금은 <b>정해진 신청 기간 없이 연중 상시 신청</b>할 수 있습니다. 다만 신청일이 속한 달의 다음 달분부터 지급되는 것이 원칙이므로, 자격이 된다고 판단되면 <b>가급적 빨리 신청하는 것</b>이 유리합니다.</p>
+    <p>소득·재산 조사에는 <b>일정 기간이 걸릴 수 있으므로</b>, 신청 후 결과 통보까지 여유를 두고 기다려야 합니다.</p>
+    <p>정확한 선정기준액과 부가급여 구간은 <b>국민연금공단(1355) 또는 복지로 모의계산</b>으로 최신 공고를 확인하시기 바랍니다.</p>
+  </div>
+
+  <div class="checklist">
+    <h2>✅ 내가 해당되는지 스스로 확인하기</h2>
+    <div class="check-item"><span class="chk">✓</span><span>만 18세 이상이고 등록 장애 정도가 중증(구 1·2급, 3급 중복장애)인가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>본인(배우자 있으면 배우자 포함) 소득인정액이 선정기준액 이하인가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>배우자 유무에 따라 140만 원(단독) 또는 224만 원(부부) 기준을 확인했는가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>기초생활수급자·차상위계층 등 소득 계층을 파악해 부가급여 규모를 가늠했는가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>만 65세가 가까워 기초급여의 기초연금 전환 시점을 알아둘 필요가 있는가</span></div>
+  </div>
+
+  <div class="caution">
+    <div class="caution-item">① <b>경증장애인은 대상이 아닙니다.</b> 장애인연금은 중증장애인만 대상이며, 경증장애인은 장애수당 등 다른 제도를 확인해야 합니다.</div>
+    <div class="caution-item">② <b>선정기준액은 단독가구와 부부가구가 다릅니다.</b> 배우자가 있으면 부부가구 합산 소득인정액(224만 원)을 기준으로 심사합니다.</div>
+    <div class="caution-item">③ <b>부가급여는 일괄 금액이 아니라 소득 계층·연령에 따라 차등 지급됩니다.</b> 정확한 본인 부가급여액은 국민연금공단 확인이 필요합니다.</div>
+    <div class="caution-item">④ <b>만 65세가 되면 기초급여가 기초연금으로 전환됩니다.</b> 명칭과 재원이 바뀔 뿐 부가급여는 계속 지급되지만, 전환 시점에 혼동하는 경우가 많습니다.</div>
+    <div class="caution-item">⑤ <b>기초급여액과 선정기준액은 매년 고시로 바뀝니다.</b> 이 글의 수치는 2026년 기준 확인된 내용입니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <div class="contact-row"><span class="contact-label">제도 안내</span> — 보건복지부 (mohw.go.kr)</div>
+    <div class="contact-row"><span class="contact-label">신청·지급 업무</span> — 국민연금공단 지사, 국번없이 1355</div>
+    <div class="contact-row"><span class="contact-label">온라인 신청</span> — 복지로 (bokjiro.go.kr), 정부24 (gov.kr)</div>
+    <div class="contact-row"><span class="contact-label">복지 상담</span> — 보건복지상담센터 국번없이 129</div>
+  </div>
+
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"근로 능력이 제한된 중증장애인에게 매달 안정적인 현금을 지급하는 것은 소득보장 제도의 기본이다. 자녀 소득을 심사에서 제외한 것도 부양의무자 기준의 부작용을 줄인 개선이다."</p>
+          <p class="author">— 장애인 복지정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"65세 이후에도 부가급여를 계속 지급해 소득 공백을 최소화한 구조는 긍정적이다. 물가에 연동해 기초급여를 매년 인상하는 방식도 실질 가치를 지키는 데 도움이 된다."</p>
+          <p class="author">— 사회보장 제도 평론가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"경증장애인은 제외되고 장애수당으로만 지원받다 보니, 중증과 경증의 경계에 있는 장애인일수록 지원 격차를 크게 체감한다. 등급 기준의 경직성을 보완할 필요가 있다."</p>
+          <p class="author">— 장애인 단체 활동가</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"기초급여와 부가급여, 65세 전환 규정까지 겹쳐 있어 당사자가 본인 수급액을 스스로 계산하기 어렵다. 안내 자료를 더 쉽게 풀어써야 한다."</p>
+          <p class="author">— 사회복지사</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #장애인연금 #기초급여 #부가급여 #중증장애인 #소득인정액 #선정기준액
+    #장애인수당 #국민연금공단 #복지로 #장애인소득보장 #보건복지부
+  </div>
+
+  <div class="disclaimer">
+    이 글은 보건복지부와 정부24(gov.kr)가 공개한 장애인연금 제도 안내 자료를 바탕으로 작성되었습니다.
+    선정기준액, 기초급여·부가급여 금액, 소득인정액 산정 방식은 매년 고시와 물가변동률에 따라 달라질 수 있으며,
+    실제 수급 가능 여부와 정확한 지급액은 국민연금공단 또는 주소지 읍·면·동 주민센터, 복지로 모의계산 결과에 따라 달라집니다.
+    정확한 내용은 국민연금공단(1355) 또는 보건복지상담센터(129)에 문의하시기 바랍니다.
+  </div>
+
+  <div class="written">작성일 2026-09-27 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
