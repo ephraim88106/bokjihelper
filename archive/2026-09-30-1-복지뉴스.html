@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>가정양육수당 금액과 대상 조건 — 아동 유형별 차이와 어린이집 이용 시 중복 여부</title>
+<meta name="description" content="가정양육수당은 어린이집·유치원·종일제 아이돌봄서비스를 이용하지 않고 가정에서 키우는 만 24개월 이상 86개월 미만 아동에게 소득과 무관하게 지급하는 현금 지원입니다. 일반 월 10만 원, 장애아동 최대 월 20만 원, 농어촌 최대 월 15만 6천 원이며 2026년 9월 기준 지급 대상, 중복 여부, 지급 정지 사유를 정리했습니다.">
+<style>
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: #f8f9fa; color: #222; line-height: 1.7; }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge { display: inline-block; background: #f57c00; color: #fff; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+  h1 { font-size: 26px; font-weight: 900; line-height: 1.35; color: #1a1a1a; margin-bottom: 18px; word-break: keep-all; }
+  .hook { border-left: 5px solid #f57c00; padding: 14px 18px; background: #fff3e0; border-radius: 0 8px 8px 0; margin-bottom: 22px; font-size: 15px; }
+  .hook .highlight { color: #e65100; font-weight: 900; }
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 18px 20px; margin-bottom: 26px; }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+  h2 { font-size: 19px; font-weight: 900; color: #e65100; margin: 28px 0 12px; border-bottom: 2px solid #ffcc80; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #f57c00; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #fff3e0; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #e65100; }
+  .formula { background: #fffaf3; border: 1px solid #ffcc80; border-radius: 10px; padding: 16px 18px; margin-bottom: 20px; font-size: 14.5px; line-height: 1.9; word-break: keep-all; }
+  .formula b { color: #e65100; }
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #fff3e0; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #f57c00; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+  .deadline-box { border: 2px dashed #f57c00; background: #fff8ef; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+  .checklist { background: #fff3e0; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #ffcc80; color: #e65100; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #e65100; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+  .caution { background: #fff3e0; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+  .contact-box { background: #fff3e0; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #e65100; border-color: #ffcc80; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  .hashtags { font-size: 13px; color: #e65100; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-09-30-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="가정양육수당 금액과 대상 조건 — 아동 유형별 차이와 어린이집 이용 시 중복 여부">
+<meta property="og:description" content="가정양육수당은 어린이집·유치원·종일제 아이돌봄서비스를 이용하지 않고 가정에서 키우는 만 24개월 이상 86개월 미만 아동에게 소득과 무관하게 지급하는 현금 지원입니다. 일반 월 10만 원, 장애아동 최대 월 20만 원, 농어촌 최대 월 15만 6천 원이며 2026년 9월 기준 지급 대상, 중복 여부, 지급 정지 사유를 정리했습니다.">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-09-30-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-09-30T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-09-30T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-09-30-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-09-30-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "가정양육수당 금액과 대상 조건 — 아동 유형별 차이와 어린이집 이용 시 중복 여부", "description": "가정양육수당은 어린이집·유치원·종일제 아이돌봄서비스를 이용하지 않고 가정에서 키우는 만 24개월 이상 86개월 미만 아동에게 소득과 무관하게 지급하는 현금 지원입니다. 일반 월 10만 원, 장애아동 최대 월 20만 원, 농어촌 최대 월 15만 6천 원이며 2026년 9월 기준 지급 대상, 중복 여부, 지급 정지 사유를 정리했습니다.", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-09-30", "dateModified": "2026-09-30", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-GyFXAvGw6TskYQ5x"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-ZL2KaRsLAk3Ly1Ik"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-WjaoW3Jzgq4B6IUW"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<div class="container">
+
+
+  <div class="top-meta">복지 정보 · 영유아 양육 · 보건복지부 가정양육수당</div>
+  <div class="section-badge">영유아 양육 지원</div>
+
+  <h1>가정양육수당 금액과 대상 조건 — 아동 유형별 차이와 어린이집 이용 시 중복 여부</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대체로 이런 상황입니다.
+    <span class="highlight">부모급여가 끝나는 두 돌 이후에 어떤 지원이 이어지는지 알아보는 경우</span>,
+    <span class="highlight">어린이집을 보내지 않고 집에서 키우는데 받을 수 있는 돈이 있는지 궁금한 경우</span>,
+    그리고 <span class="highlight">중간에 어린이집이나 유치원에 다니게 되면 수당이 어떻게 되는지 확인하려는 경우</span>입니다.
+    이 제도에서 먼저 잡아야 할 것은 세 가지입니다.
+    하나는 <span class="highlight">소득·재산과 관계없이 나이와 양육 형태만 본다는 점</span>,
+    둘째는 <span class="highlight">어린이집·유치원·종일제 아이돌봄을 쓰면 지급 대상에서 빠진다는 점</span>,
+    셋째는 <span class="highlight">아동수당과는 별개로 함께 받을 수 있다는 점</span>입니다.
+    아래에서 지급 대상, 금액, 중복 여부, 지급 정지 사유를 차례로 짚었습니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li><b>가정양육수당</b>은 어린이집·유치원·종일제 아이돌봄서비스를 이용하지 않고 가정에서 양육하는 <b>만 24개월 이상 86개월 미만</b> 아동에게 지급하는 현금 지원입니다.</li>
+      <li>금액은 <b>일반 월 10만 원</b>, <b>장애아동 최대 월 20만 원</b>, <b>농어촌 지역 아동은 연령에 따라 최대 월 15만 6천 원</b>입니다(2026년 기준).</li>
+      <li><b>소득·재산 기준이 없습니다.</b> 맞벌이든 외벌이든 대상 요건만 맞으면 됩니다.</li>
+      <li><b>아동수당과는 중복해서 받을 수 있지만</b>, 같은 시기의 <b>부모급여·어린이집 보육료와는 함께 받지 못합니다.</b></li>
+      <li>매월 <b>25일</b>(주말·공휴일이면 그 전 평일)에 지급되고, <b>90일 이상 해외 체류</b> 시 지급이 정지됩니다.</li>
+      <li>출생 후 60일 이내에 접수하면 출생월부터 소급되지만, 그 이후에는 <b>소급이 되지 않습니다.</b></li>
+    </ul>
+  </div>
+
+  <p style="font-size:13px;color:#888;margin-bottom:22px;">
+    ※ 본문의 금액과 기준은 <b>보건복지부·복지로·육아종합지원센터가 공개한 안내</b>를 바탕으로 <b>2026년 9월 기준</b>으로 정리했습니다.
+    농어촌 금액의 연령별 세부 구간과 지자체별 추가 지원은 <b>지자체 조례에 따라 다를 수 있으므로</b>, 실제 지급액은 주민센터에서 확인하시기 바랍니다.
+  </p>
+
+  <h2>어떤 제도인가 — 시설을 쓰지 않는 가정양육에 주는 수당</h2>
+  <p>
+    가정양육수당은 <b>영유아를 어린이집 등에 보내지 않고 집에서 돌보는 가정의 양육 부담을 덜어 주기 위한 제도</b>입니다.
+    보육 시설을 이용하면 국가가 보육료를 지원하므로, 시설을 쓰지 않는 가정에는 그에 상응하는 수당을 지급한다는 취지입니다.
+    법적 근거는 영유아보육법의 양육수당 조항이고, 운영은 보건복지부가 총괄하며 실제 접수와 지급은 읍면동 주민센터와 시·군·구가 맡습니다.
+  </p>
+
+  <h2>누가 받을 수 있나 — 지급 대상 기준</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>구분</th><th>기준</th></tr>
+    <tr><td><b>연령</b></td><td>만 24개월 이상 ~ 86개월 미만(초등학교 입학 전까지). 만 2세 미만은 부모급여 대상입니다.</td></tr>
+    <tr><td><b>양육 형태</b></td><td>어린이집, 유치원(특수학교 포함), 종일제 아이돌봄서비스를 이용하지 않고 가정에서 양육</td></tr>
+    <tr><td><b>소득·재산</b></td><td>기준 없음(소득과 관계없이 지급)</td></tr>
+    <tr><td><b>거주 요건</b></td><td>아동이 국내에 주민등록이 되어 있고 실제로 국내에서 양육되어야 함</td></tr>
+  </table>
+  </div>
+
+  <h2>금액은 얼마인가 — 일반·농어촌·장애아동 차이</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>유형</th><th>월 지급액(2026년)</th></tr>
+    <tr><td><b>일반 아동</b></td><td><b>10만 원</b></td></tr>
+    <tr><td><b>농어촌 지역 아동</b></td><td>연령에 따라 차등, <b>최대 15만 6천 원</b>. 농어촌 지원 자격 요건을 갖춰야 합니다.</td></tr>
+    <tr><td><b>장애아동</b></td><td>장애인으로 등록된 아동은 <b>최대 20만 원</b></td></tr>
+  </table>
+  </div>
+  <div class="formula">
+    <b>월 수당 = 아동 유형(일반 / 농어촌 / 장애)에 따른 정액</b><br>
+    예) 일반 가정의 만 3세 아동 1명이면 월 10만 원, 연 <b>120만 원</b>입니다. 아동이 둘이고 둘 다 대상이면 아동별로 각각 지급됩니다.
+  </div>
+
+  <div class="svg-wrap">
+    <div class="svg-title">유형별 가정양육수당 월 최대 금액 (단위: 만 원)</div>
+    <svg viewBox="0 0 660 190" width="100%" role="img" aria-label="일반 10만 원, 농어촌 최대 15.6만 원, 장애아동 최대 20만 원 막대 그래프">
+      <text x="10" y="22" font-size="13" font-weight="700" fill="#555">일반 — 10만 원</text>
+      <rect x="10" y="30" width="250" height="26" rx="6" fill="#f57c00"/>
+      <text x="250" y="48" font-size="13" font-weight="900" fill="#fff" text-anchor="end">10</text>
+      <text x="10" y="86" font-size="13" font-weight="700" fill="#555">농어촌 — 최대 15.6만 원</text>
+      <rect x="10" y="94" width="390" height="26" rx="6" fill="#ef6c00"/>
+      <text x="390" y="112" font-size="13" font-weight="900" fill="#fff" text-anchor="end">15.6</text>
+      <text x="10" y="150" font-size="13" font-weight="700" fill="#555">장애아동 — 최대 20만 원</text>
+      <rect x="10" y="158" width="500" height="26" rx="6" fill="#e65100"/>
+      <text x="500" y="176" font-size="13" font-weight="900" fill="#fff" text-anchor="end">20</text>
+    </svg>
+  </div>
+
+  <h2>다른 지원과 함께 받을 수 있나 — 중복 여부</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>함께 받는 제도</th><th>중복 여부</th></tr>
+    <tr><td><b>아동수당</b></td><td>별도 제도라 <b>함께 받을 수 있음</b></td></tr>
+    <tr><td><b>부모급여</b></td><td>부모급여는 만 0~1세, 양육수당은 만 24개월부터라 <b>지급 시기가 이어지는 구조</b>. 같은 달에 함께 받지 않음</td></tr>
+    <tr><td><b>어린이집 보육료</b></td><td>어린이집 이용(기본보육·연장보육) 시 <b>양육수당 대상 제외</b></td></tr>
+    <tr><td><b>유치원 유아학비</b></td><td>유치원 이용 시 <b>양육수당 대상 제외</b></td></tr>
+    <tr><td><b>종일제 아이돌봄서비스</b></td><td>이용 시 대상 제외. 시간제 이용은 아래 유의사항 참고</td></tr>
+  </table>
+  </div>
+  <p>
+    정리하면 <b>시설이나 종일제 돌봄을 쓰는 순간 수당은 보육료나 유아학비 지원으로 바뀝니다.</b>
+    두 돌 전후로 어린이집 입소를 고민하는 가정은 수당 10만 원과 시설 이용 시 받는 보육료 지원을 견주어 보고 결정하게 됩니다.
+  </p>
+
+  <h2>지급은 어떻게 이뤄지나 — 접수·지급일·소급 기준</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text"><b>접수</b> — 아동의 주민등록 주소지 읍면동 주민센터를 방문하거나 복지로 누리집에서 온라인으로 접수합니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text"><b>지급 결정</b> — 대상 요건과 다른 서비스 이용 여부를 확인한 뒤 지급 여부가 결정됩니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text"><b>지급</b> — 지급 결정일이 속하는 달부터 매월 25일에 지정 계좌로 입금됩니다. 25일이 토·일요일이나 공휴일이면 그 전일에 지급됩니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text"><b>변동 확인</b> — 어린이집·유치원 입소, 해외 장기 체류 등 상황이 바뀌면 주민센터에 알려 지급 여부를 조정합니다.</div></div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>⏰ 소급 지급에 관한 주의</h3>
+    <p>출생 후 60일(출생일 포함) 이내에 접수한 경우에는 출생일이 속한 달부터 소급 지원됩니다. 이후에는 지급 결정일이 속하는 달부터만 지급되고 <b>소급이 되지 않습니다.</b></p>
+    <p>만 24개월이 되는 달에 맞춰 <b>부모급여에서 양육수당으로 이어지는지</b>를 미리 주민센터에서 확인해 두면 공백을 줄일 수 있습니다.</p>
+  </div>
+
+  <h2>지급이 멈추는 경우 — 정지 사유</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>사유</th><th>처리</th></tr>
+    <tr><td><b>어린이집·유치원 이용 시작</b></td><td>이용 시작 시점부터 양육수당 지급 중단</td></tr>
+    <tr><td><b>90일 이상 계속 해외 체류</b></td><td>90일이 속하는 달까지는 지급하고, <b>다음 달부터 지급 정지</b></td></tr>
+    <tr><td><b>아동의 국내 양육 불가</b></td><td>양육 사실이 확인되지 않으면 지급 대상에서 제외</td></tr>
+    <tr><td><b>만 86개월 도달</b></td><td>초등학교 입학 전까지 지급 후 종료</td></tr>
+  </table>
+  </div>
+
+  <div class="checklist">
+    <h2>✅ 내가 챙길 것 확인하기</h2>
+    <div class="check-item"><span class="chk">✓</span><span>아동이 만 24개월 이상 86개월 미만인가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>어린이집·유치원·종일제 아이돌봄을 이용하지 않고 있는가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>농어촌 지원 자격이나 장애아동 등록 여부를 확인해 추가 금액 대상인지 살폈는가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>부모급여에서 양육수당으로 넘어가는 시점에 접수가 이어졌는가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>해외 체류가 90일을 넘길 계획이 있는지 확인했는가</span></div>
+  </div>
+
+  <div class="caution">
+    <div class="caution-item">① <b>시설을 이용하면 지급이 끊깁니다.</b> 입소 시점과 지급 정지 시점은 주민센터에 확인하세요.</div>
+    <div class="caution-item">② <b>소급되지 않습니다.</b> 출생 60일이 지난 뒤에는 접수한 달부터 지급됩니다.</div>
+    <div class="caution-item">③ <b>농어촌 금액은 연령별로 달라지고</b> 지자체가 별도로 얹어 주는 경우도 있어, 거주지 안내가 우선입니다.</div>
+    <div class="caution-item">④ <b>시간제 아이돌봄 이용 시 대상 여부</b>는 이용 형태에 따라 다를 수 있으니 확인이 필요합니다.</div>
+    <div class="caution-item">⑤ <b>금액과 기준은 개정될 수 있습니다.</b> 이 글은 2026년 9월 기준 확인된 내용입니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <div class="contact-row"><span class="contact-label">제도 안내</span> — 보건복지부 (mohw.go.kr)</div>
+    <div class="contact-row"><span class="contact-label">온라인 접수</span> — 복지로 (bokjiro.go.kr)</div>
+    <div class="contact-row"><span class="contact-label">방문 접수</span> — 아동 주민등록 주소지 읍면동 주민센터</div>
+    <div class="contact-row"><span class="contact-label">양육 상담</span> — 육아종합지원센터, 보건복지상담센터 국번없이 129</div>
+  </div>
+
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"소득과 무관하게 지급되어 행정 절차가 단순하고, 시설을 쓰지 않는 가정도 국가 지원의 대상이 된다는 점에서 양육 선택권을 넓힌다."</p>
+          <p class="author">— 사회복지 정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"농어촌과 장애아동에게 금액을 더 얹어 지역·장애 격차를 보완하는 설계는 합리적이다."</p>
+          <p class="author">— 아동복지 전문가</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"월 10만 원은 부모급여 월 50만 원에서 크게 줄어든 금액이라, 두 돌 이후 소득 절벽이 체감된다."</p>
+          <p class="author">— 육아 커뮤니티 운영자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"시설을 쓰면 수당이 끊기는 구조가 어린이집 입소 결정에 영향을 주지 않도록 보육료 지원과의 균형을 다시 살펴야 한다."</p>
+          <p class="author">— 보육 현장 종사자</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #가정양육수당 #양육수당 #부모급여 #아동수당 #어린이집보육료
+    #농어촌양육수당 #장애아동양육수당 #보건복지부 #복지로 #영유아지원
+  </div>
+
+  <div class="disclaimer">
+    이 글은 보건복지부, 복지로, 육아종합지원센터가 공개한 가정양육수당 안내 자료를 바탕으로 작성되었습니다.
+    지원금액, 대상 기준, 지급 정지 사유는 법령과 지침 개정, 지자체 조례에 따라 달라질 수 있으며,
+    실제 지급 여부와 정확한 금액은 주민센터의 확인에 따라 달라집니다.
+    정확한 내용은 거주지 읍면동 주민센터 또는 보건복지상담센터(129)에 문의하시기 바랍니다.
+  </div>
+
+  <div class="written">작성일 2026-09-30 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
