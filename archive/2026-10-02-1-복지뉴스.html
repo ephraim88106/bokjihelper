@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>장애아동수당 금액 — 중증 경증 구분과 기초수급 가구 차이</title>
+<meta name="description" content="2026년 기준 장애아동수당은 만 18세 미만 등록 장애아동 중 기초생활수급자·차상위계층에게 지급됩니다. 중증은 월 22만원·17만원·9만원, 경증은 월 11만원·3만원까지 급여 종류와 시설 입소 여부별 금액, 18세 이후 전환 방법을 정리했습니다.">
+<style>
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: #f8f9fa; color: #222; line-height: 1.7; }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge { display: inline-block; background: #f57c00; color: #fff; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+  h1 { font-size: 26px; font-weight: 900; line-height: 1.35; color: #1a1a1a; margin-bottom: 18px; word-break: keep-all; }
+  .hook { border-left: 5px solid #f57c00; padding: 14px 18px; background: #fff3e0; border-radius: 0 8px 8px 0; margin-bottom: 22px; font-size: 15px; }
+  .hook .highlight { color: #e65100; font-weight: 900; }
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 18px 20px; margin-bottom: 26px; }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+  h2 { font-size: 19px; font-weight: 900; color: #e65100; margin: 28px 0 12px; border-bottom: 2px solid #ffcc80; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #f57c00; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #fff3e0; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #e65100; }
+  .formula { background: #fffaf3; border: 1px solid #ffcc80; border-radius: 10px; padding: 16px 18px; margin-bottom: 20px; font-size: 14.5px; line-height: 1.9; word-break: keep-all; }
+  .formula b { color: #e65100; }
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #fff3e0; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #f57c00; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+  .deadline-box { border: 2px dashed #f57c00; background: #fff8ef; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+  .checklist { background: #fff3e0; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #ffcc80; color: #e65100; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #e65100; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+  .caution { background: #fff3e0; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+  .contact-box { background: #fff3e0; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #e65100; border-color: #ffcc80; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  .hashtags { font-size: 13px; color: #e65100; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-10-02-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="장애아동수당 금액 — 중증 경증 구분과 기초수급 가구 차이">
+<meta property="og:description" content="2026년 기준 장애아동수당은 만 18세 미만 등록 장애아동 중 기초생활수급자·차상위계층에게 지급됩니다. 중증은 월 22만원·17만원·9만원, 경증은 월 11만원·3만원까지 급여 종류와 시설 입소 여부별 금액, 18세 이후 전환 방법을 정리했습니다.">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-10-02-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-10-02T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-02T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-10-02-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-10-02-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "장애아동수당 금액 — 중증 경증 구분과 기초수급 가구 차이", "description": "2026년 기준 장애아동수당은 만 18세 미만 등록 장애아동 중 기초생활수급자·차상위계층에게 지급됩니다. 중증은 월 22만원·17만원·9만원, 경증은 월 11만원·3만원까지 급여 종류와 시설 입소 여부별 금액, 18세 이후 전환 방법을 정리했습니다.", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-10-02", "dateModified": "2026-10-02", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-GyFXAvGw6TskYQ5x"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-ZL2KaRsLAk3Ly1Ik"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-WjaoW3Jzgq4B6IUW"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 장애인 · 보건복지부 장애수당·장애아동수당</div>
+  <div class="section-badge">장애아동수당</div>
+
+  <h1>장애아동수당 금액 — 중증 경증 구분과 기초수급 가구 차이</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대체로 이런 상황입니다.
+    <span class="highlight">장애 진단을 받은 자녀가 기초생활수급 가구여서 받을 수 있는 수당이 있는지 확인하려는 경우</span>,
+    <span class="highlight">중증과 경증에 따라 금액이 얼마나 다른지 알아보려는 경우</span>,
+    그리고 <span class="highlight">아이가 만 18세가 되면 수당이 어떻게 바뀌는지 미리 알아두려는 경우</span>입니다.
+    먼저 잡아야 할 것은 세 가지입니다.
+    하나는 <span class="highlight">대상이 장애아동 전체가 아니라 수급자·차상위계층 가구의 만 18세 미만 아동이라는 점</span>,
+    둘째는 <span class="highlight">금액이 장애 정도와 받는 급여 종류, 시설 입소 여부에 따라 갈린다는 점</span>,
+    셋째는 <span class="highlight">부모의 소득이 아니라 가구가 수급자·차상위로 인정되는지가 출발점이라는 점</span>입니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>대상: <b>만 18세 미만 등록 장애아동 중 국민기초생활보장 수급자와 차상위계층</b></li>
+      <li>중증 장애아동: 생계·의료급여 <b>월 22만원</b>, 주거·교육급여와 차상위 <b>월 17만원</b>, 시설 입소 <b>월 9만원</b></li>
+      <li>경증 장애아동: 생계·의료급여와 주거·교육급여, 차상위 <b>월 11만원</b>, 시설 입소 <b>월 3만원</b></li>
+      <li>만 18세가 되면 <b>경증은 장애수당으로 이어지고, 중증은 장애인연금을 새로 신청</b>해야 합니다.</li>
+      <li>이 수당은 <b>아동수당·부모급여와 별개</b>이며 복지로나 주민센터에서 받을 수 있는지 확인합니다.</li>
+    </ul>
+  </div>
+
+  <p style="font-size:13px;color:#888;margin-bottom:22px;">
+    ※ 금액은 보건복지부와 복지로 안내를 정리한 <b>2026년 기준</b>이며 <b>2026년 10월</b>에 작성했습니다.
+    지방자치단체가 별도로 얹어 주는 금액은 지역마다 달라 주소지 주민센터 확인이 필요합니다.
+  </p>
+
+  <h2>장애아동수당이란 — 장애로 드는 추가 비용을 보전하는 수당</h2>
+  <p>
+    장애아동수당은 장애 때문에 생기는 <b>추가 비용(치료·보조기기·돌봄 등)을 덜어 주기 위해</b> 만 18세 미만 장애아동에게 매달 지급하는 수당입니다.
+    같은 제도 안에 만 18세 이상 경증 장애인에게 주는 <b>장애수당</b>이 있고, 두 가지를 묶어 &lsquo;장애수당·장애아동수당&rsquo;으로 안내합니다.
+    소득과 무관하게 모든 장애아동에게 주는 제도가 아니라, <b>기초생활수급자와 차상위계층 가구의 아동</b>에게 지급한다는 점이 핵심입니다.
+  </p>
+
+  <h2>금액 한눈에 보기 — 장애 정도와 급여 종류별 월 지급액</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>구분</th><th>중증 장애아동</th><th>경증 장애아동</th></tr>
+    <tr><td><b>생계·의료급여 수급자</b></td><td>월 22만원</td><td>월 11만원</td></tr>
+    <tr><td><b>주거·교육급여 수급자, 차상위계층</b></td><td>월 17만원</td><td>월 11만원</td></tr>
+    <tr><td><b>보장시설 입소 아동</b></td><td>월 9만원</td><td>월 3만원</td></tr>
+  </table>
+  </div>
+  <p>
+    같은 중증이라도 가구가 어떤 급여를 받는지에 따라 월 5만원 차이가 납니다.
+    경증은 수급 유형이 달라도 월 11만원으로 같고, 시설에 입소하면 식비·생활비 일부를 시설이 부담한다고 보아 금액이 줄어듭니다.
+    중증과 경증 구분은 장애등급제가 폐지된 뒤 &lsquo;장애 정도가 심한&rsquo;과 &lsquo;심하지 않은&rsquo; 장애로 나누는 기준을 따릅니다.
+  </p>
+  <div class="svg-wrap">
+    <div class="svg-title">중증 장애아동 월 지급액 (단위: 만 원)</div>
+    <svg viewBox="0 0 660 150" width="100%" role="img" aria-label="중증 장애아동 수급 유형별 월 지급액 막대 그래프">
+      <g font-size="12" font-weight="700" fill="#555">
+        <text x="10" y="22">생계·의료</text><rect x="90" y="8" width="500" height="20" rx="5" fill="#e65100"/><text x="584" y="23" fill="#fff" text-anchor="end">22</text>
+        <text x="10" y="62">주거·교육·차상위</text><rect x="120" y="48" width="386" height="20" rx="5" fill="#f57c00"/><text x="500" y="63" fill="#fff" text-anchor="end">17</text>
+        <text x="10" y="102">시설 입소</text><rect x="90" y="88" width="205" height="20" rx="5" fill="#ffa726"/><text x="289" y="103" fill="#fff" text-anchor="end">9</text>
+      </g>
+    </svg>
+  </div>
+
+  <h2>대상 조건 — 누가 받을 수 있나</h2>
+  <div class="formula">
+    <b>받을 수 있는 아동 = 만 18세 미만 + 장애인 등록 + 수급자 또는 차상위계층 가구</b><br>
+    예) 지체장애 중증으로 등록된 만 10세 아동이 <b>생계급여</b>를 받는 가구라면 월 <b>22만원</b>입니다.<br>
+    예) 같은 아동이 <b>주거급여만</b> 받는 가구라면 월 <b>17만원</b>입니다.<br>
+    예) 심하지 않은 장애로 등록된 아동이 <b>차상위계층</b>이라면 월 <b>11만원</b>입니다.
+  </div>
+  <p>
+    차상위계층은 기준 중위소득 50% 이하이면서 수급자가 아닌 가구를 말합니다.
+    대상 확인은 장애인 등록 여부, 아동의 연령, 가구의 수급자·차상위 인정 여부 세 가지로 이루어집니다.
+    부모의 재산을 따로 계산하는 방식이 아니라 가구가 수급자·차상위로 인정되는 결과에 따라 대상이 갈립니다.
+  </p>
+
+  <h2>수당을 받는 순서 — 확인에서 지급까지</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text"><b>장애인 등록 확인</b> — 복지카드나 장애인증명서로 등록 여부와 장애 정도를 확인합니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text"><b>수급·차상위 여부 확인</b> — 가구가 받는 급여 종류를 주민센터에서 확인합니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text"><b>주민센터 방문 또는 복지로 접수</b> — 보호자가 아동의 주소지 동주민센터에 서류를 냅니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text"><b>지급 결정과 입금</b> — 결정 후 보호자 또는 아동 명의 계좌로 매월 지급됩니다.</div></div>
+  </div>
+
+  <h2>만 18세가 되면 — 장애수당과 장애인연금으로 이어지는 구조</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>아동 때 받던 수당</th><th>만 18세 이후</th></tr>
+    <tr><td><b>경증 장애아동수당</b></td><td>장애수당으로 전환(수급 자격이 유지될 때)</td></tr>
+    <tr><td><b>중증 장애아동수당</b></td><td>장애인연금을 새로 신청해야 하며 소득인정액 기준을 다시 심사</td></tr>
+  </table>
+  </div>
+  <p>
+    중증 아동은 자동으로 장애인연금이 시작되지 않으므로, 만 18세가 되기 전에 주민센터에 미리 문의하는 편이 안전합니다.
+    장애수당과 장애인연금의 차이는 별도 글에서 정리했습니다.
+  </p>
+
+  <div class="checklist">
+    <h2>✅ 내가 챙길 것 확인하기</h2>
+    <div class="check-item"><span class="chk">✓</span><span>자녀가 만 18세 미만이고 장애인으로 등록되어 있는가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>가구가 받는 급여(생계·의료·주거·교육)나 차상위 인정 여부를 확인했는가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>중증·경증 구분과 시설 입소 여부를 알고 있는가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>만 18세 도래 시점에 맞춰 전환 절차를 확인했는가</span></div>
+  </div>
+
+  <div class="caution">
+    <div class="caution-item">① <b>부정수급이나 자격 상실 시 환수</b>될 수 있습니다. 수급·차상위 자격이 바뀌면 바로 알려야 합니다.</div>
+    <div class="caution-item">② <b>시설 입소 중에는 금액이 줄어</b> 중증 9만원, 경증 3만원이 적용됩니다.</div>
+    <div class="caution-item">③ <b>아동수당·부모급여와는 별개</b>라서 서로를 대신하지 않습니다.</div>
+    <div class="caution-item">④ 금액과 구분은 <b>매년 달라질 수 있어</b> 이 글은 2026년 기준입니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <div class="contact-row"><span class="contact-label">접수·상담</span> — 주소지 읍·면·동 주민센터</div>
+    <div class="contact-row"><span class="contact-label">복지서비스 조회</span> — 복지로 (bokjiro.go.kr)</div>
+    <div class="contact-row"><span class="contact-label">제도 안내</span> — 보건복지부 보건복지상담센터 129</div>
+  </div>
+
+  <h2>💬 전문가 찬반 론평</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성</h3>
+        <div class="opinion-card">
+          <p class="quote">"저소득 가구의 장애아동에게 정기적인 현금을 주는 것은 치료와 돌봄에 드는 추가 비용을 덜어 주는 직접적 수단이다."</p>
+          <p class="author">— 장애인복지 정책 연구자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"급여 종류와 시설 입소 여부로 금액을 나눠 필요가 큰 가구를 더 두텁게 보는 구조는 합리적이다."</p>
+          <p class="author">— 사회복지 학계 관계자</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대 / 우려</h3>
+        <div class="opinion-card">
+          <p class="quote">"수급·차상위가 아닌 가구의 장애아동은 제외되어, 소득이 조금 넘는 가구가 사각지대에 놓인다."</p>
+          <p class="author">— 장애아동 부모 단체 관계자</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"월 11만원에서 22만원은 치료비와 보조기기 비용에 비해 여전히 작다."</p>
+          <p class="author">— 장애인 인권 활동가</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #장애아동수당 #장애수당 #장애인연금 #보건복지부 #복지로 #차상위계층 #기초생활수급자 #중증장애 #경증장애
+  </div>
+
+  <div class="disclaimer">
+    이 글은 보건복지부와 복지로 안내를 정리한 자료를 바탕으로 작성되었습니다.
+    금액·대상·전환 기준은 법령과 사업안내 개정에 따라 달라질 수 있으며,
+    개인별 지급 여부와 금액은 주소지 주민센터 또는 보건복지상담센터(129)에서 확인하시기 바랍니다.
+  </div>
+
+  <div class="written">작성일 2026-10-02 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
