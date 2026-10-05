@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>영구임대주택 입주자격 — 1·2순위 대상군과 총자산·자동차 한도 비교</title>
+<meta name="description" content="영구임대주택은 무주택 세대구성원 중 생계·의료급여 수급자 등 1순위와 소득 50% 이하 2순위로 나뉘어 입주합니다. 2026년 기준 총자산 2.45억원, 자동차 4,542만원 기준과 국민임대와의 차이, 서류·절차를 정리했습니다.">
+<style>
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: #f8f9fa; color: #222; line-height: 1.7; }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge { display: inline-block; background: #f57c00; color: #fff; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+  h1 { font-size: 26px; font-weight: 900; line-height: 1.35; color: #1a1a1a; margin-bottom: 18px; word-break: keep-all; }
+  .hook { border-left: 5px solid #f57c00; padding: 14px 18px; background: #fff3e0; border-radius: 0 8px 8px 0; margin-bottom: 22px; font-size: 15px; }
+  .hook .highlight { color: #e65100; font-weight: 900; }
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 18px 20px; margin-bottom: 26px; }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+  h2 { font-size: 19px; font-weight: 900; color: #e65100; margin: 28px 0 12px; border-bottom: 2px solid #ffcc80; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #f57c00; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #fff3e0; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #e65100; }
+  .formula { background: #fffaf3; border: 1px solid #ffcc80; border-radius: 10px; padding: 16px 18px; margin-bottom: 20px; font-size: 14.5px; line-height: 1.9; word-break: keep-all; }
+  .formula b { color: #e65100; }
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #fff3e0; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #f57c00; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+  .deadline-box { border: 2px dashed #f57c00; background: #fff8ef; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+  .checklist { background: #fff3e0; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #ffcc80; color: #e65100; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #e65100; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+  .caution { background: #fff3e0; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+  .contact-box { background: #fff3e0; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #e65100; border-color: #ffcc80; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  .hashtags { font-size: 13px; color: #e65100; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-10-05-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="영구임대주택 입주자격 — 1·2순위 대상군과 총자산·자동차 한도 비교">
+<meta property="og:description" content="영구임대주택은 무주택 세대구성원 중 생계·의료급여 수급자 등 1순위와 소득 50% 이하 2순위로 나뉘어 입주합니다. 2026년 기준 총자산 2.45억원, 자동차 4,542만원 기준과 국민임대와의 차이, 서류·절차를 정리했습니다.">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-10-05-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-10-05T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-05T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-10-05-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-10-05-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "영구임대주택 입주자격 — 1·2순위 대상군과 총자산·자동차 한도 비교", "description": "영구임대주택은 무주택 세대구성원 중 생계·의료급여 수급자 등 1순위와 소득 50% 이하 2순위로 나뉘어 입주합니다. 2026년 기준 총자산 2.45억원, 자동차 4,542만원 기준과 국민임대와의 차이, 서류·절차를 정리했습니다.", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-10-05", "dateModified": "2026-10-05", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-GyFXAvGw6TskYQ5x"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-ZL2KaRsLAk3Ly1Ik"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-WjaoW3Jzgq4B6IUW"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 주거 · 공공임대주택 입주자격</div>
+  <div class="section-badge">영구임대주택</div>
+
+  <h1>영구임대주택 입주자격 — 1·2순위 대상군과 총자산·자동차 한도 비교</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대체로 이런 상황입니다.
+    <span class="highlight">기초생활수급자나 장애인, 한부모 가구로 공공임대에 들어가고 싶은데 어떤 유형이 맞는지 모르는 경우</span>,
+    <span class="highlight">국민임대와 영구임대 중 어느 쪽 자격이 더 넓은지 비교하려는 경우</span>,
+    그리고 <span class="highlight">소득은 낮은데 자산 때문에 탈락할지 걱정되는 경우</span>입니다.
+    먼저 잡아야 할 것은 세 가지입니다.
+    하나는 <span class="highlight">영구임대는 순위 제도라서 1순위 대상군에 해당하는지가 출발점이라는 점</span>,
+    둘째는 <span class="highlight">총자산과 자동차 가액 기준이 국민임대보다 더 엄격하다는 점</span>,
+    셋째는 <span class="highlight">모집공고일 기준으로 무주택 세대구성원이어야 한다는 점</span>입니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>공통 요건: 모집공고일 현재 <b>무주택 세대구성원</b>이며 소득·자산 기준을 충족해야 합니다.</li>
+      <li>1순위: <b>생계·의료급여 수급자</b>, 지원대상 한부모가족, 국가유공자·북한이탈주민·등록장애인 등(일부는 소득 70% 이하와 자산 요건 병행), 만 65세 이상 수급권자·차상위계층</li>
+      <li>2순위: 전년도 도시근로자 가구당 월평균소득의 <b>50% 이하</b>이면서 영구임대 자산 기준을 충족하는 무주택 세대. 등록장애인은 100% 이하까지 인정됩니다.</li>
+      <li>자산 기준(2026년 적용): <b>총자산 2억 4,500만원 이하</b>, <b>자동차 4,542만원 이하</b>. 국민임대는 총자산 3억 4,500만원이라 영구임대가 더 낮습니다.</li>
+      <li>모집은 LH·지방공사가 공고하며, 단지·순위별 세부 요건은 <b>해당 공고문이 최종 기준</b>입니다.</li>
+    </ul>
+  </div>
+
+  <p style="font-size:13px;color:#888;margin-bottom:22px;">
+    ※ 내용은 마이홈포털·LH 등 공공 주거복지 안내를 정리한 <b>2026년 기준</b>이며 <b>2026년 10월</b>에 작성했습니다.
+    소득·자산 기준은 매년 고시가 바뀌므로 입주자 모집공고문과 반드시 대조하세요.
+  </p>
+
+  <h2>영구임대주택 — 어떤 주택인가</h2>
+  <p>
+    영구임대주택은 국가나 지방자치단체의 재정으로 지어 <b>최저소득 계층에게 시세보다 크게 낮은 임대료</b>로 장기간 공급하는 공공임대주택입니다.
+    이름처럼 50년 안팎의 장기 임대를 전제로 하며, 국민임대나 행복주택과 달리 <b>생계·의료급여 수급자와 같은 취약계층이 우선</b>하는 점이 특징입니다.
+    재계약 때 소득과 자산 요건을 다시 확인하는 구조라서, 입주 시점 기준뿐 아니라 거주 중 변화도 챙겨야 합니다.
+  </p>
+
+  <h2>순위별 입주 대상 — 1순위와 2순위</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>순위</th><th>대상</th><th>소득 요건</th></tr>
+    <tr><td><b>1순위</b></td><td>생계급여·의료급여 수급자, 지원대상 한부모가족, 일본군위안부 피해자</td><td>수급 자격 자체가 요건</td></tr>
+    <tr><td><b>1순위</b></td><td>국가유공자·유족, 북한이탈주민, 등록장애인, 아동복지시설 퇴소자 등</td><td>월평균소득 70% 이하 + 영구임대 자산 기준</td></tr>
+    <tr><td><b>1순위</b></td><td>만 65세 이상 수급권자·차상위계층 등</td><td>해당 자격 확인</td></tr>
+    <tr><td><b>2순위</b></td><td>일반 무주택 세대구성원</td><td>월평균소득 50% 이하 + 자산 기준</td></tr>
+    <tr><td><b>2순위</b></td><td>등록장애인 세대</td><td>월평균소득 100% 이하 + 자산 기준</td></tr>
+  </table>
+  </div>
+  <p>
+    1순위에 해당하는 대상군이 여러 개 겹치는 경우가 많습니다.
+    같은 순위 안에서는 공고마다 가점이나 추첨 방식이 달라지므로, 본인이 어느 대상군으로 신청하는 것이 유리한지는 공고문의 배점표를 보고 정해야 합니다.
+  </p>
+
+  <h2>소득 기준 — 도시근로자 월평균소득 비율</h2>
+  <p>
+    소득은 전년도 도시근로자 가구원수별 가구당 월평균소득에 비율을 곱해 판단합니다.
+    2026년 적용 기준으로 1인 가구는 월평균소득 100%가 약 381만 3천원이어서, 50%는 약 190만 7천원, 70%는 약 266만 9천원이 됩니다.
+    가구원수가 늘면 기준액도 올라가므로 2인 이상은 마이홈포털의 가구원수별 표를 확인해야 합니다.
+  </p>
+  <div class="svg-wrap">
+    <div class="svg-title">1인 가구 월평균소득 기준선 (단위: 만원, 참고)</div>
+    <svg viewBox="0 0 660 110" width="100%" role="img" aria-label="1인 가구 월평균소득 50퍼센트 70퍼센트 100퍼센트 막대 그래프">
+      <g font-size="12" font-weight="700" fill="#555">
+        <text x="10" y="22">100%</text><rect x="70" y="8" width="520" height="20" rx="5" fill="#e65100"/><text x="584" y="23" fill="#fff" text-anchor="end">약 381</text>
+        <text x="10" y="62">70%</text><rect x="70" y="48" width="364" height="20" rx="5" fill="#f57c00"/><text x="428" y="63" fill="#fff" text-anchor="end">약 267</text>
+        <text x="10" y="102">50%</text><rect x="70" y="88" width="260" height="20" rx="5" fill="#ffa726"/><text x="324" y="103" fill="#fff" text-anchor="end">약 191</text>
+      </g>
+    </svg>
+  </div>
+  <p>위 금액은 공개된 정리 자료를 바탕으로 한 참고 값이며, 실제 판정은 해당 연도 모집공고문의 표를 따릅니다.</p>
+
+  <h2>자산 기준 — 영구임대와 국민임대 비교</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>구분</th><th>영구임대</th><th>국민임대</th></tr>
+    <tr><td><b>총자산</b></td><td>2억 4,500만원 이하</td><td>3억 4,500만원 이하</td></tr>
+    <tr><td><b>자동차 가액</b></td><td>4,542만원 이하</td><td>4,542만원 이하</td></tr>
+  </table>
+  </div>
+  <p>
+    총자산에는 부동산, 자동차, 금융자산 등 세대구성원 전원의 자산이 합산되고, 부채는 일정 부분 차감해 산정합니다.
+    자동차는 세대원이 가진 차량 중 <b>가장 비싼 한 대</b>의 가액으로 비교합니다.
+    소득이 낮아도 보유 부동산이나 예금이 기준을 넘으면 탈락하므로, 자산 조회 결과를 미리 확인해 두는 것이 안전합니다.
+    조회 결과는 모집 단계에서 사회보장정보원 등을 통해 확인되며 결과에 이의가 있으면 소명 절차가 있습니다.
+  </p>
+
+  <h2>입주 절차 — 공고 확인에서 계약까지</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text"><b>공고 확인</b> — 마이홈포털과 LH청약플러스, 해당 지방공사의 모집공고에서 지역·면적·순위를 확인합니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text"><b>자격 서류 접수</b> — 주민센터나 온라인으로 접수하고, 소득·자산 조회에 필요한 동의서를 제출합니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text"><b>자격 심사</b> — 공공기관이 소득·자산·무주택 여부를 조회해 서류심사 결과를 통지합니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text"><b>동·호수 추첨과 계약</b> — 순위와 가점에 따라 대상자가 정해지면 추첨 후 보증금을 내고 계약합니다.</div></div>
+  </div>
+
+  <h2>임대료 — 단지와 대상군에 따라 차이</h2>
+  <p>
+    영구임대는 보증금과 월 임대료를 내는 구조이며, 금액은 단지의 위치와 전용면적, 입주자의 소득 구간에 따라 달라집니다.
+    수급자 등 최저소득 계층은 가장 낮은 임대료 구간이 적용됩니다.
+    구체적인 보증금과 월세는 공고문에 단지별로 적혀 있으므로, 본 글에서는 금액을 단정하지 않습니다.
+  </p>
+
+  <div class="checklist">
+    <h2>✅ 내가 챙길 것 확인하기</h2>
+    <div class="check-item"><span class="chk">✓</span><span>세대구성원 전원이 모집공고일 현재 무주택인가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>수급자·한부모·장애인 등 1순위 대상군 증명 서류가 있는가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>총자산이 2억 4,500만원 이하이고 자동차가 4,542만원 이하인가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>모집 공고문의 지역 거주 요건과 접수 기간을 확인했는가</span></div>
+  </div>
+
+  <div class="caution">
+    <div class="caution-item">① <b>영구임대 자산 기준은 국민임대보다 낮아</b> 국민임대 기준을 그대로 적용하면 안 됩니다.</div>
+    <div class="caution-item">② 소득·자산 기준은 <b>해마다 고시가 바뀌며</b> 이 글은 2026년 기준입니다.</div>
+    <div class="caution-item">③ 순위와 가점, 임대료는 <b>공고문이 최종 기준</b>입니다.</div>
+    <div class="caution-item">④ 입주 후에도 <b>재계약 때 소득·자산을 다시 확인</b>합니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <div class="contact-row"><span class="contact-label">모집공고·자격 확인</span> — 마이홈포털(myhome.go.kr), 마이홈콜센터 1600-1004</div>
+    <div class="contact-row"><span class="contact-label">공급 기관</span> — LH 청약플러스, 각 지방도시공사(SH·GH 등)</div>
+    <div class="contact-row"><span class="contact-label">수급자 확인</span> — 주소지 주민센터</div>
+  </div>
+
+  <h2>💬 찬반 논점</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성 측 논거</h3>
+        <div class="opinion-card">
+          <p class="quote">"수급자와 장애인 등 시장에서 주거를 구하기 어려운 계층에 장기 거주를 보장하는 사실상 유일한 공공주택이다."</p>
+          <p class="author">— 주거복지 분야에서 자주 나오는 의견</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"자산 기준을 국민임대보다 낮게 둔 것은 한정된 물량을 가장 취약한 계층에게 돌리려는 설계다."</p>
+          <p class="author">— 정책 논의에서 자주 나오는 의견</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대·우려 측 논거</h3>
+        <div class="opinion-card">
+          <p class="quote">"공급 물량이 많지 않아 자격이 되어도 대기 기간이 길고, 일부 단지는 노후화가 심하다."</p>
+          <p class="author">— 주거복지 분야에서 자주 나오는 의견</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"소득이 조금 오르면 재계약에서 탈락할 수 있어 근로 의욕을 꺾는다는 지적이 있다."</p>
+          <p class="author">— 정책 논의에서 자주 나오는 의견</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #영구임대주택 #공공임대주택 #LH #마이홈포털 #국민임대 #무주택세대구성원 #수급자주거
+  </div>
+
+  <div class="disclaimer">
+    이 글은 마이홈포털·LH 등 공공기관이 공개한 안내와 관련 정리 자료를 바탕으로 작성되었습니다.
+    소득·자산 기준과 순위, 임대료는 연도와 모집공고에 따라 달라질 수 있으며,
+    개인별 자격 여부는 입주자 모집공고문과 담당 기관에서 확인하시기 바랍니다.
+  </div>
+
+  <div class="written">작성일 2026-10-05 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
