@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>국민연금 출산크레딧 인정기간 — 첫째 12개월부터 개월 수 계산과 조건</title>
+<meta name="description" content="2026년 1월부터 국민연금 출산크레딧이 첫째 자녀부터 12개월 인정되고 50개월 상한이 폐지됐습니다. 자녀 수별 인정 개월 수 계산과 대상 조건, 확인 방법을 정리했습니다.">
+<style>
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: #f8f9fa; color: #222; line-height: 1.7; }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge { display: inline-block; background: #f57c00; color: #fff; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+  h1 { font-size: 26px; font-weight: 900; line-height: 1.35; color: #1a1a1a; margin-bottom: 18px; word-break: keep-all; }
+  .hook { border-left: 5px solid #f57c00; padding: 14px 18px; background: #fff3e0; border-radius: 0 8px 8px 0; margin-bottom: 22px; font-size: 15px; }
+  .hook .highlight { color: #e65100; font-weight: 900; }
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 18px 20px; margin-bottom: 26px; }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+  h2 { font-size: 19px; font-weight: 900; color: #e65100; margin: 28px 0 12px; border-bottom: 2px solid #ffcc80; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #f57c00; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #fff3e0; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #e65100; }
+  .formula { background: #fffaf3; border: 1px solid #ffcc80; border-radius: 10px; padding: 16px 18px; margin-bottom: 20px; font-size: 14.5px; line-height: 1.9; word-break: keep-all; }
+  .formula b { color: #e65100; }
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #fff3e0; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #f57c00; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+  .deadline-box { border: 2px dashed #f57c00; background: #fff8ef; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+  .checklist { background: #fff3e0; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #ffcc80; color: #e65100; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #e65100; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+  .caution { background: #fff3e0; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+  .contact-box { background: #fff3e0; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #e65100; border-color: #ffcc80; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  .hashtags { font-size: 13px; color: #e65100; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-10-08-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="국민연금 출산크레딧 인정기간 — 첫째 12개월부터 개월 수 계산과 조건">
+<meta property="og:description" content="2026년 1월부터 국민연금 출산크레딧이 첫째 자녀부터 12개월 인정되고 50개월 상한이 폐지됐습니다. 자녀 수별 인정 개월 수 계산과 대상 조건, 확인 방법을 정리했습니다.">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-10-08-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-10-08T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-08T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-10-08-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-10-08-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "국민연금 출산크레딧 인정기간 — 첫째 12개월부터 개월 수 계산과 조건", "description": "2026년 1월부터 국민연금 출산크레딧이 첫째 자녀부터 12개월 인정되고 50개월 상한이 폐지됐습니다. 자녀 수별 인정 개월 수 계산과 대상 조건, 확인 방법을 정리했습니다.", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-10-08", "dateModified": "2026-10-08", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-GyFXAvGw6TskYQ5x"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-ZL2KaRsLAk3Ly1Ik"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-WjaoW3Jzgq4B6IUW"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 국민연금 · 출산크레딧</div>
+  <div class="section-badge">출산크레딧</div>
+
+  <h1>국민연금 출산크레딧 인정기간 — 첫째 12개월부터 개월 수 계산과 조건</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대체로 이런 상황입니다.
+    <span class="highlight">첫째 아이를 낳았는데 국민연금에 혜택이 있는지 궁금한 경우</span>,
+    <span class="highlight">자녀가 둘 이상이라 가입기간이 몇 개월 늘어나는지 계산해 보려는 경우</span>,
+    그리고 <span class="highlight">부부 중 누구에게 크레딧을 붙이는 것이 유리한지 알고 싶은 경우</span>입니다.
+    핵심은 세 가지입니다.
+    하나는 <span class="highlight">2026년 1월 1일부터 첫째 자녀부터 12개월이 인정된다는 점</span>,
+    둘째는 <span class="highlight">기존의 최대 50개월 상한이 폐지됐다는 점</span>,
+    셋째는 <span class="highlight">인정된 개월 수가 연금 보험료를 낸 것으로 쳐서 노령연금액과 수급 요건에 반영된다는 점</span>입니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>📌 이것만 알면 됩니다</h2>
+    <ul>
+      <li>출산크레딧은 자녀를 낳거나 입양한 국민연금 가입자에게 <b>가입기간을 추가로 인정</b>해 주는 제도입니다.</li>
+      <li>개정 국민연금법(2025년 4월 공포)이 <b>2026년 1월 1일</b>부터 시행되어 첫째 자녀부터 <b>12개월</b>이 인정됩니다.</li>
+      <li>자녀 수별 인정: 첫째 12개월, 둘째 12개월, 셋째 이상은 자녀 1명당 18개월입니다.</li>
+      <li>종전의 <b>최대 50개월 상한은 폐지</b>되어 자녀가 많을수록 인정 기간이 계속 늘어납니다.</li>
+      <li>둘째 자녀를 15개월로 늘리는 방안은 정부가 추진 중으로 보도됐으나, 시행 여부는 공단에서 확인해야 합니다.</li>
+    </ul>
+  </div>
+
+  <p style="font-size:13px;color:#888;margin-bottom:22px;">
+    ※ 내용은 개정 국민연금법과 언론 보도, 국민연금공단 안내를 바탕으로 한 <b>2026년 기준</b>이며 <b>2026년 10월</b>에 작성했습니다.
+    자녀의 출생·입양 시점에 따라 적용되는 기준이 다를 수 있어 개인별 적용은 국민연금공단에서 확인하시기 바랍니다.
+  </p>
+
+  <h2>출산크레딧이란</h2>
+  <p>
+    국민연금은 보험료를 낸 가입기간이 길수록 노령연금이 늘어나고, 최소 10년(120개월)을 채워야 노령연금을 받을 수 있습니다.
+    출산이나 육아로 경력이 끊겨 보험료를 내지 못한 분을 위해, 국가가 자녀를 낳은 데 대한 보상으로 가입기간을 추가로 인정해 주는 것이 출산크레딧입니다.
+    추가로 인정된 기간은 연금 수급 요건인 최소 가입기간과 연금액 산정에 모두 반영됩니다.
+    보험료를 직접 내는 것이 아니므로 인정 개월 수만큼의 보험료 부담이 따로 생기지는 않습니다.
+  </p>
+
+  <h2>자녀 수별 인정 개월 수</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>자녀 순서</th><th>종전 기준</th><th>2026년 1월부터</th></tr>
+    <tr><td><b>첫째</b></td><td>인정 없음</td><td>12개월</td></tr>
+    <tr><td><b>둘째</b></td><td>12개월</td><td>12개월(15개월 확대 추진 중)</td></tr>
+    <tr><td><b>셋째 이상</b></td><td>자녀 1명당 18개월</td><td>자녀 1명당 18개월</td></tr>
+    <tr><td><b>합산 상한</b></td><td>최대 50개월</td><td>상한 없음(폐지)</td></tr>
+  </table>
+  </div>
+  <div class="svg-wrap">
+    <div class="svg-title">자녀 수별 누적 인정 개월 수 (2026년 1월 이후 기준, 단위: 개월)</div>
+    <svg viewBox="0 0 660 160" width="100%" role="img" aria-label="자녀 1명 12개월 2명 24개월 3명 42개월 4명 60개월 막대 그래프">
+      <g font-size="12" font-weight="700" fill="#555">
+        <text x="10" y="22">1명</text><rect x="60" y="8" width="96" height="20" rx="5" fill="#ffa726"/><text x="150" y="23" fill="#fff" text-anchor="end">12</text>
+        <text x="10" y="62">2명</text><rect x="60" y="48" width="192" height="20" rx="5" fill="#f57c00"/><text x="246" y="63" fill="#fff" text-anchor="end">24</text>
+        <text x="10" y="102">3명</text><rect x="60" y="88" width="336" height="20" rx="5" fill="#ef6c00"/><text x="390" y="103" fill="#fff" text-anchor="end">42</text>
+        <text x="10" y="142">4명</text><rect x="60" y="128" width="480" height="20" rx="5" fill="#e65100"/><text x="534" y="143" fill="#fff" text-anchor="end">60</text>
+      </g>
+    </svg>
+  </div>
+
+  <h2>인정 개월 수 계산</h2>
+  <div class="formula">
+    <b>인정 개월 수</b> = 첫째 12개월 + 둘째 12개월 + (셋째 이상 자녀 수 × 18개월)<br>
+    예) 자녀 1명: <b>12개월</b><br>
+    예) 자녀 2명: 12 + 12 = <b>24개월</b><br>
+    예) 자녀 3명: 12 + 12 + 18 = <b>42개월</b><br>
+    예) 자녀 4명: 12 + 12 + 18 + 18 = <b>60개월</b> (종전 상한 50개월을 넘는 구간까지 인정)
+  </div>
+  <p>
+    예를 들어 자녀 3명을 둔 분이 직장 경력으로 보험료를 15년(180개월) 냈다면, 출산크레딧 42개월이 더해져 222개월의 가입기간으로 노령연금이 계산됩니다.
+    이 계산은 크레딧이 가입기간에 붙는 원리를 보여 주는 단순 예시이며, 실제 연금액은 가입 기간 중 소득과 전체 가입자 평균소득에 따라 달라집니다.
+  </p>
+
+  <h2>대상 조건과 부부 간 배분</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>항목</th><th>내용</th></tr>
+    <tr><td><b>대상</b></td><td>자녀를 낳거나 입양한 국민연금 가입자(노령연금 수급권을 갖게 된 분)</td></tr>
+    <tr><td><b>적용 시점</b></td><td>개정법 시행일인 2026년 1월 1일 이후 출생·입양한 자녀부터 첫째 자녀 12개월이 적용된다는 설명이 일반적입니다. 이전 출산 자녀의 적용 범위는 공단 확인이 필요합니다.</td></tr>
+    <tr><td><b>부부 모두 가입자</b></td><td>부부가 협의해 한쪽에 몰아주거나 균등하게 나눌 수 있고, 협의가 안 되면 균등 배분합니다.</td></tr>
+    <tr><td><b>인정 방식</b></td><td>출산 시점에 바로 반영되기보다 노령연금 수급권을 취득해 연금을 청구할 때 반영되는 방식으로 안내됩니다.</td></tr>
+  </table>
+  </div>
+  <p>
+    부부가 각자 가입 이력이 다르다면 어느 쪽에 붙이느냐에 따라 최소 가입기간 충족 여부나 연금액이 달라질 수 있습니다.
+    예를 들어 한쪽이 가입기간이 짧아 노령연금 최소 가입기간 10년을 채우기 어렵다면 그쪽에 몰아주는 선택이 유리할 수 있습니다.
+    다만 선택의 결과는 각자의 가입기간과 소득에 따라 달라지므로 공단 상담에서 모의 산정을 받아 보시는 것이 좋습니다.
+  </p>
+
+  <h2>확인 순서</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text"><b>자녀의 출생·입양일 확인</b> — 2026년 1월 1일 전후인지에 따라 첫째 자녀 적용 여부를 확인합니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text"><b>내 가입기간 조회</b> — 국민연금공단 누리집이나 앱에서 현재 가입기간과 예상 연금액을 확인합니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text"><b>인정 개월 수 계산</b> — 위 계산식으로 자녀 수에 따른 추가 가입기간을 가늠합니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text"><b>부부 배분 협의</b> — 부부가 모두 가입자라면 한쪽에 몰지, 나눌지 정합니다.</div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-text"><b>공단 상담</b> — 국민연금공단 1355 또는 지사에서 반영 시점과 서류를 확인합니다.</div></div>
+  </div>
+
+  <div class="checklist">
+    <h2>✅ 내가 챙길 것 확인하기</h2>
+    <div class="check-item"><span class="chk">✓</span><span>자녀의 출생·입양일이 2026년 1월 1일 이후인지 확인했는가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>자녀 수에 맞춰 12개월, 12개월, 18개월씩 계산했는가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>부부 중 누구에게 크레딧을 붙일지 협의했는가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>둘째 15개월 확대 같은 추가 개정 여부를 공단에서 확인했는가</span></div>
+  </div>
+
+  <div class="caution">
+    <div class="caution-item">① 이 글은 <b>2026년 기준</b>이며 법 개정에 따라 인정 개월 수가 바뀔 수 있습니다.</div>
+    <div class="caution-item">② 둘째 자녀 15개월 확대는 <b>추진 단계로 보도된 내용</b>이므로 시행 여부를 확인해야 합니다.</div>
+    <div class="caution-item">③ 계산 예시는 이해를 돕는 단순 가정이며 <b>실제 연금액과 다를 수 있습니다.</b></div>
+    <div class="caution-item">④ 이전에 출산한 자녀의 적용과 반영 시점은 <b>국민연금공단에 확인</b>이 필요합니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>📞 담당 기관 및 문의처</h2>
+    <div class="contact-row"><span class="contact-label">상담</span> — 국민연금공단 고객센터 1355 또는 가까운 지사</div>
+    <div class="contact-row"><span class="contact-label">가입기간·예상연금 조회</span> — 국민연금공단 누리집(nps.or.kr)</div>
+    <div class="contact-row"><span class="contact-label">제도 안내</span> — 보건복지부 보건복지상담센터 129</div>
+  </div>
+
+  <h2>💬 찬반 논점</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>🟢 찬성 측 논거</h3>
+        <div class="opinion-card">
+          <p class="quote">"첫째부터 인정하고 상한을 없애면서 출산과 양육으로 경력이 끊긴 분의 노후 소득 보전이 넓어진다."</p>
+          <p class="author">— 복지 분야에서 자주 나오는 의견</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"보험료를 따로 내지 않고도 가입기간이 늘어 최소 가입기간을 채우기 쉬워진다."</p>
+          <p class="author">— 정책 논의에서 자주 나오는 의견</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>🔴 반대·우려 측 논거</h3>
+        <div class="opinion-card">
+          <p class="quote">"크레딧은 연금을 받을 때 비로소 반영돼 당장의 육아 부담을 줄이는 효과는 작다는 지적이 있다."</p>
+          <p class="author">— 복지 분야에서 자주 나오는 의견</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"국민연금 재정 부담이 커질 수 있어 장기 재정 전망과 함께 봐야 한다는 우려가 있다."</p>
+          <p class="author">— 정책 논의에서 자주 나오는 의견</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #국민연금 #출산크레딧 #가입기간 #노령연금 #국민연금공단 #보건복지부 #저출생
+  </div>
+
+  <div class="disclaimer">
+    이 글은 개정 국민연금법과 국민연금공단 안내, 언론 보도를 바탕으로 작성되었습니다.
+    인정 개월 수와 적용 시점은 법령에 따라 바뀔 수 있으며, 개인별 적용은 국민연금공단에서 확인하시기 바랍니다.
+  </div>
+
+  <div class="written">작성일 2026-10-08 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
