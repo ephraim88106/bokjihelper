@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>아이돌봄서비스 소득유형별 정부지원 비율 — 시간당 요금과 연 이용시간 한도</title>
+<meta name="description" content="2026년 아이돌봄서비스 시간제 기본형은 시간당 12,790원입니다. 소득유형별 정부지원 비율에 따라 본인부담금이 어떻게 달라지는지, 연 이용시간 한도와 야간 할증까지 계산 예시로 정리했습니다.">
+<style>
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: #f8f9fa; color: #222; line-height: 1.7; }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge { display: inline-block; background: #f57c00; color: #fff; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+  h1 { font-size: 26px; font-weight: 900; line-height: 1.35; color: #1a1a1a; margin-bottom: 18px; word-break: keep-all; }
+  .hook { border-left: 5px solid #f57c00; padding: 14px 18px; background: #fff3e0; border-radius: 0 8px 8px 0; margin-bottom: 22px; font-size: 15px; }
+  .hook .highlight { color: #e65100; font-weight: 900; }
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 18px 20px; margin-bottom: 26px; }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+  h2 { font-size: 19px; font-weight: 900; color: #e65100; margin: 28px 0 12px; border-bottom: 2px solid #ffcc80; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #f57c00; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #fff3e0; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #e65100; }
+  .formula { background: #fffaf3; border: 1px solid #ffcc80; border-radius: 10px; padding: 16px 18px; margin-bottom: 20px; font-size: 14.5px; line-height: 1.9; word-break: keep-all; }
+  .formula b { color: #e65100; }
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #fff3e0; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #f57c00; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+  .deadline-box { border: 2px dashed #f57c00; background: #fff8ef; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+  .checklist { background: #fff3e0; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #ffcc80; color: #e65100; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #e65100; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+  .caution { background: #fff3e0; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+  .contact-box { background: #fff3e0; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #e65100; border-color: #ffcc80; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  .hashtags { font-size: 13px; color: #e65100; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-10-11-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="아이돌봄서비스 소득유형별 정부지원 비율 — 시간당 요금과 연 이용시간 한도">
+<meta property="og:description" content="2026년 아이돌봄서비스 시간제 기본형은 시간당 12,790원입니다. 소득유형별 정부지원 비율에 따라 본인부담금이 어떻게 달라지는지, 연 이용시간 한도와 야간 할증까지 계산 예시로 정리했습니다.">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-10-11-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-10-11T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-11T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-10-11-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-10-11-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "아이돌봄서비스 소득유형별 정부지원 비율 — 시간당 요금과 연 이용시간 한도", "description": "2026년 아이돌봄서비스 시간제 기본형은 시간당 12,790원입니다. 소득유형별 정부지원 비율에 따라 본인부담금이 어떻게 달라지는지, 연 이용시간 한도와 야간 할증까지 계산 예시로 정리했습니다.", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-10-11", "dateModified": "2026-10-11", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-GyFXAvGw6TskYQ5x"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-ZL2KaRsLAk3Ly1Ik"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-WjaoW3Jzgq4B6IUW"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 아동·보육 · 아이돌봄서비스 · 본인부담금</div>
+  <div class="section-badge">아이돌봄서비스</div>
+
+  <h1>아이돌봄서비스 소득유형별 정부지원 비율 — 시간당 요금과 연 이용시간 한도</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대체로 이런 상황입니다.
+    <span class="highlight">맞벌이로 퇴근이 늦어 아이를 맡길 곳을 찾는데 한 시간에 얼마가 드는지 궁금한 경우</span>,
+    <span class="highlight">2026년부터 소득기준이 넓어졌다고 들었는데 우리 집이 대상인지 알고 싶은 경우</span>,
+    그리고 <span class="highlight">민간 도우미와 비용을 비교해 보려는 경우</span>입니다.
+    핵심은 세 가지입니다.
+    하나는 <span class="highlight">이용요금 전체가 아니라 소득유형에 따라 정해진 비율만큼을 정부가 부담한다는 점</span>,
+    둘째는 <span class="highlight">2026년부터 정부지원 소득기준이 기준 중위소득 250% 이하로 확대됐다는 점</span>,
+    셋째는 <span class="highlight">연간 지원 시간에 한도가 있어 초과분은 전액 본인 부담이라는 점</span>입니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>이것만 알면 됩니다</h2>
+    <ul>
+      <li>2026년 시간제 <b>기본형 시간당 12,790원</b>, 종합형 16,620원, 영아종일제 12,790원으로 소개됩니다(2025년 기본형 12,180원).</li>
+      <li>정부지원 소득기준은 2026년부터 <b>기준 중위소득 250% 이하</b>로 확대됐습니다(기존 200%).</li>
+      <li>소득유형은 가~라형으로 나뉘며, 지원 비율은 <b>가형 85%·나형 60%·다형 30%·라형 15%</b>로 정리한 자료가 많습니다.</li>
+      <li>일반 가구는 연 <b>960시간</b>, 한부모·조손·장애부모·청소년부모 가구는 연 <b>1,080시간</b>까지 지원합니다.</li>
+      <li>밤 10시 이후 야간 이용에는 <b>50% 할증</b>이 붙는 것으로 안내됩니다.</li>
+    </ul>
+  </div>
+
+  <p style="font-size:13px;color:#888;margin-bottom:22px;">
+    ※ 내용은 <b>2026년 기준</b>이며 <b>2026년 10월</b>에 작성했습니다. 정부 정책뉴스와 다수 안내 자료를 교차 확인했지만,
+    소득유형별 중위소득 구간 경계와 지원 비율은 자료마다 표기가 달라 <b>아이돌봄서비스 누리집(idolbom.go.kr)의 최신 요금표 확인이 필요</b>합니다.
+  </p>
+
+  <h2>아이돌봄서비스란</h2>
+  <p>
+    아이돌봄서비스는 부모가 일이나 질병 등으로 아이를 돌보기 어려울 때, 교육을 받은 아이돌보미가 집으로 와서 12세 이하 아동을 돌봐 주는 사업입니다.
+    이용요금은 서비스 유형별로 정해져 있고, 이 가운데 일정 비율을 정부가 지원하며 나머지가 본인부담금입니다.
+    따라서 &quot;시간당 얼마냐&quot;는 질문의 답은 <b>이용요금 × (1 − 정부지원 비율)</b>로 계산됩니다.
+  </p>
+
+  <h2>서비스 유형별 시간당 이용요금</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>유형</th><th>시간당 요금(2026년)</th></tr>
+    <tr><td><b>시간제 기본형</b></td><td><span class="big-number">12,790원</span></td></tr>
+    <tr><td><b>시간제 종합형</b></td><td>16,620원</td></tr>
+    <tr><td><b>영아종일제</b></td><td>12,790원</td></tr>
+    <tr><td><b>질병감염아동 지원</b></td><td>15,340원(일부 자료 기준, 확인 필요)</td></tr>
+  </table>
+  </div>
+  <p>
+    종합형은 놀이와 돌봄에 더해 학습·준비물 지원 등을 포함하는 유형으로, 기본형보다 요금이 높습니다.
+    어떤 유형이 가능한지는 아동 연령과 가구 사정에 따라 달라지므로 서비스 연계 기관에서 안내를 받습니다.
+  </p>
+
+  <h2>소득유형별 정부지원 비율</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>소득유형</th><th>정부지원 비율</th><th>기본형 본인부담(시간당)</th></tr>
+    <tr><td><b>가형</b></td><td>85%</td><td>약 1,918원</td></tr>
+    <tr><td><b>나형</b></td><td>60%</td><td>약 5,116원</td></tr>
+    <tr><td><b>다형</b></td><td>30%</td><td>약 8,953원</td></tr>
+    <tr><td><b>라형</b></td><td>15%</td><td>약 10,872원</td></tr>
+    <tr><td><b>기준 초과(250% 초과)</b></td><td>지원 없음</td><td>전액 12,790원</td></tr>
+  </table>
+  </div>
+  <div class="formula">
+    <b>계산 방법</b><br>
+    본인부담금 = 시간당 요금 × (1 − 지원 비율)<br>
+    가형 예: 12,790원 × 0.15 = 약 <b>1,918원</b><br>
+    라형 예: 12,790원 × 0.85 = 약 <b>10,872원</b><br>
+    ※ 위 금액은 2026년 기본형 요금과 안내 자료의 비율을 곱한 계산값이며, 실제 청구액은 요금표와 다를 수 있습니다.
+  </div>
+  <p>
+    소득유형을 가르는 기준 중위소득 구간은 자료마다 표기가 달라, 이 글에서는 경계 수치를 단정하지 않았습니다.
+    가구원 수가 같아도 건강보험료 기반 소득 확인 결과에 따라 유형이 정해지므로, 우리 집 유형은 서비스 연계 기관이나 아이돌봄 누리집 판정 결과로 확인하는 것이 정확합니다.
+    일부 자료에는 6~12세 아동의 지원 비율이 최대 80%로 안내되어 있어, 취학 여부에 따른 차이도 함께 확인해야 합니다.
+  </p>
+
+  <div class="svg-wrap">
+    <div class="svg-title">기본형 1시간 12,790원 중 본인부담 비중</div>
+    <svg viewBox="0 0 660 190" width="100%" role="img" aria-label="소득유형별 시간당 본인부담금 비교 막대그래프">
+      <g font-size="12" font-weight="700" fill="#555">
+        <text x="10" y="26">가형</text><rect x="60" y="12" width="52" height="20" rx="5" fill="#ef6c00"/><text x="120" y="27">1,918원</text>
+        <text x="10" y="66">나형</text><rect x="60" y="52" width="139" height="20" rx="5" fill="#ef6c00"/><text x="207" y="67">5,116원</text>
+        <text x="10" y="106">다형</text><rect x="60" y="92" width="243" height="20" rx="5" fill="#ef6c00"/><text x="311" y="107">8,953원</text>
+        <text x="10" y="146">라형</text><rect x="60" y="132" width="295" height="20" rx="5" fill="#ef6c00"/><text x="363" y="147">10,872원</text>
+        <text x="10" y="180">전액</text><rect x="60" y="166" width="347" height="20" rx="5" fill="#ffcc80"/><text x="415" y="181">12,790원</text>
+      </g>
+    </svg>
+  </div>
+
+  <h2>한 달 비용 계산 예시</h2>
+  <p>
+    평일 하루 3시간, 한 달 20일을 기본형으로 이용한다고 가정하면 월 60시간입니다. 전체 이용요금은 12,790원 × 60시간 = 767,400원입니다.
+  </p>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>소득유형</th><th>월 본인부담(60시간)</th></tr>
+    <tr><td>가형(85% 지원)</td><td>약 115,100원</td></tr>
+    <tr><td>나형(60% 지원)</td><td>약 306,960원</td></tr>
+    <tr><td>다형(30% 지원)</td><td>약 537,180원</td></tr>
+    <tr><td>라형(15% 지원)</td><td>약 652,290원</td></tr>
+  </table>
+  </div>
+  <p>
+    같은 시간을 써도 소득유형에 따라 월 부담이 5배 이상 차이가 납니다. 유형 판정이 비용을 사실상 결정하는 셈입니다.
+    야간 할증, 형제 이용 시 추가 차감, 지자체 자체 지원은 위 계산에 넣지 않았습니다.
+  </p>
+
+  <h2>연간 지원 시간 한도</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>가구 유형</th><th>연간 지원 시간</th></tr>
+    <tr><td>일반 가구</td><td>960시간</td></tr>
+    <tr><td>한부모·조손·장애부모·청소년부모 가구</td><td>1,080시간(2026년 120시간 확대)</td></tr>
+  </table>
+  </div>
+  <p>
+    한도를 넘는 시간은 정부지원 없이 이용요금 전액을 부담하는 것이 원칙입니다.
+    한도 960시간은 월 평균 80시간이므로, 방학처럼 이용이 몰리는 시기에는 월별 사용량을 미리 가늠해 두는 것이 좋습니다.
+  </p>
+
+  <h2>이용 순서</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text"><b>대상 확인</b> — 생후 3개월~만 12세 이하 아동의 부모가 맞벌이 등 양육 공백 사유에 해당하는지 확인합니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text"><b>소득유형 판정</b> — 건강보험료 기준 소득 확인으로 가~라형이 정해집니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text"><b>서비스 유형 선택</b> — 기본형, 종합형, 영아종일제 중 맞는 유형을 고릅니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text"><b>아이돌보미 연계</b> — 서비스 제공기관이 돌보미를 연결하고 일정을 조율합니다.</div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-text"><b>이용 후 정산</b> — 이용 시간만큼 본인부담금을 납부합니다.</div></div>
+  </div>
+
+  <div class="checklist">
+    <h2>내가 챙길 것 확인하기</h2>
+    <div class="check-item"><span class="chk">✓</span><span>우리 집 소득유형(가~라형)을 판정 결과로 확인했는가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>이용 유형(기본형·종합형·영아종일제)에 맞는 시간당 요금을 확인했는가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>연간 지원 시간(960 또는 1,080시간) 안에서 쓸 계획인가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>밤 10시 이후 이용이 있는지, 할증이 붙는지 확인했는가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>거주 지자체의 본인부담금 추가 지원이 있는지 확인했는가</span></div>
+  </div>
+
+  <div class="caution">
+    <div class="caution-item">① 예전 글에 나오는 <b>중위소득 150%·200% 이하</b> 기준은 옛 기준일 수 있습니다. 2026년은 250% 이하로 안내됩니다.</div>
+    <div class="caution-item">② 소득유형별 <b>구간 경계와 지원 비율</b>은 자료마다 표기가 달라 누리집 최신 요금표로 확인해야 합니다.</div>
+    <div class="caution-item">③ 지원 비율을 곱한 본인부담금은 <b>계산 예시</b>이며 실제 청구액과 다를 수 있습니다.</div>
+    <div class="caution-item">④ 연간 지원 시간을 넘으면 <b>초과분은 전액 본인 부담</b>입니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>담당 기관 및 문의처</h2>
+    <div class="contact-row"><span class="contact-label">온라인</span> — 아이돌봄서비스 누리집 idolbom.go.kr</div>
+    <div class="contact-row"><span class="contact-label">전화</span> — 아이돌봄서비스 콜센터 1577-2514</div>
+    <div class="contact-row"><span class="contact-label">오프라인</span> — 거주지 시·군·구 아이돌봄 서비스 제공기관, 주민센터</div>
+  </div>
+
+  <h2>찬반 논점</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>찬성 측 논거</h3>
+        <div class="opinion-card">
+          <p class="quote">"소득기준을 중위소득 250%까지 넓혀 맞벌이 중산층의 돌봄 공백 부담을 덜 수 있다."</p>
+          <p class="author">— 복지 분야에서 자주 나오는 의견</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"취약가구 지원 시간을 늘려 한부모 등 돌봄 수요가 큰 가구를 우선 배려했다."</p>
+          <p class="author">— 정책 논의에서 자주 나오는 의견</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>반대·우려 측 논거</h3>
+        <div class="opinion-card">
+          <p class="quote">"지원 대상이 늘어도 아이돌보미 공급이 따라가지 못하면 대기가 길어질 수 있다."</p>
+          <p class="author">— 복지 분야에서 자주 나오는 의견</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"상위 소득 구간은 지원 비율이 낮아 체감 혜택이 크지 않다는 지적이 있다."</p>
+          <p class="author">— 정책 논의에서 자주 나오는 의견</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #아이돌봄서비스 #아이돌보미 #본인부담금 #기준중위소득250 #영아종일제 #시간제돌봄 #성평등가족부 #복지로
+  </div>
+
+  <div class="disclaimer">
+    이 글은 정부 정책뉴스와 공개된 안내 자료를 바탕으로 작성되었습니다.
+    요금과 지원 비율, 소득 구간은 연도별 사업안내에 따라 바뀔 수 있으며, 개인별 적용은 아이돌봄서비스 누리집 또는 콜센터에서 확인하시기 바랍니다.
+  </div>
+
+  <div class="written">작성일 2026-10-11 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
