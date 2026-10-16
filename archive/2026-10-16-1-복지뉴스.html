@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>건강보험료 경감률 종류 — 지역가입자 재산과표 구간과 적용 시기</title>
+<meta name="description" content="지역가입자 건강보험료 경감 제도를 2026년 기준으로 정리했습니다. 65세 이상·장애인 세대의 소득·재산 요건과 경감률, 섬·벽지·휴직자 경감, 중복 시 50% 한도, 적용 시기와 확인 방법을 담았습니다.">
+<style>
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: #f8f9fa; color: #222; line-height: 1.7; }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge { display: inline-block; background: #f57c00; color: #fff; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+  h1 { font-size: 26px; font-weight: 900; line-height: 1.35; color: #1a1a1a; margin-bottom: 18px; word-break: keep-all; }
+  .hook { border-left: 5px solid #f57c00; padding: 14px 18px; background: #fff3e0; border-radius: 0 8px 8px 0; margin-bottom: 22px; font-size: 15px; }
+  .hook .highlight { color: #e65100; font-weight: 900; }
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 18px 20px; margin-bottom: 26px; }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+  h2 { font-size: 19px; font-weight: 900; color: #e65100; margin: 28px 0 12px; border-bottom: 2px solid #ffcc80; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #f57c00; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #fff3e0; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #e65100; }
+  .formula { background: #fffaf3; border: 1px solid #ffcc80; border-radius: 10px; padding: 16px 18px; margin-bottom: 20px; font-size: 14.5px; line-height: 1.9; word-break: keep-all; }
+  .formula b { color: #e65100; }
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #fff3e0; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #f57c00; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+  .deadline-box { border: 2px dashed #f57c00; background: #fff8ef; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+  .checklist { background: #fff3e0; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #ffcc80; color: #e65100; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #e65100; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+  .caution { background: #fff3e0; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+  .contact-box { background: #fff3e0; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #e65100; border-color: #ffcc80; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  .hashtags { font-size: 13px; color: #e65100; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-10-16-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="건강보험료 경감률 종류 — 지역가입자 재산과표 구간과 적용 시기">
+<meta property="og:description" content="지역가입자 건강보험료 경감 제도를 2026년 기준으로 정리했습니다. 65세 이상·장애인 세대의 소득·재산 요건과 경감률, 섬·벽지·휴직자 경감, 중복 시 50% 한도, 적용 시기와 확인 방법을 담았습니다.">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-10-16-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-10-16T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-16T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-10-16-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-10-16-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "건강보험료 경감률 종류 — 지역가입자 재산과표 구간과 적용 시기", "description": "지역가입자 건강보험료 경감 제도를 2026년 기준으로 정리했습니다. 65세 이상·장애인 세대의 소득·재산 요건과 경감률, 섬·벽지·휴직자 경감, 중복 시 50% 한도, 적용 시기와 확인 방법을 담았습니다.", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-10-16", "dateModified": "2026-10-16", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-GyFXAvGw6TskYQ5x"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-ZL2KaRsLAk3Ly1Ik"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-WjaoW3Jzgq4B6IUW"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 건강보험 · 지역가입자 · 보험료 경감</div>
+  <div class="section-badge">건강보험료</div>
+
+  <h1>건강보험료 경감률 종류 — 지역가입자 재산과표 구간과 적용 시기</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대체로 이런 상황입니다.
+    <span class="highlight">퇴직 후 지역가입자가 되어 보험료 고지서를 받고 줄일 방법을 찾는 경우</span>,
+    <span class="highlight">부모님이나 장애가 있는 가족의 보험료 감면 대상인지 알고 싶은 경우</span>,
+    <span class="highlight">섬·벽지 거주나 휴직으로 경감을 받을 수 있는지 확인하려는 경우</span>입니다.
+    핵심은 세 가지입니다.
+    하나는 <span class="highlight">경감은 소득과 재산 요건을 함께 보는 제도라는 점</span>,
+    둘째는 <span class="highlight">대상이 겹쳐도 경감액은 보험료의 50%를 넘지 못한다는 점</span>,
+    셋째는 <span class="highlight">65세 이상은 자동 적용이지만 장애인 세대는 가입자가 직접 알려야 한다는 점</span>입니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>이것만 알면 됩니다</h2>
+    <ul>
+      <li>2026년 건강보험료율은 7.19%, 지역가입자 재산보험료 부과점수당 금액은 211.5원입니다.</li>
+      <li>65세 이상 세대는 소득월액 30만원 이하, 재산과표 13,500만원 이하일 때 재산 구간에 따라 10~30% 경감됩니다.</li>
+      <li>장애인 세대는 등록장애인이 있고 소득·재산 요건을 충족하면 장애 정도에 따라 경감됩니다.</li>
+      <li>섬·벽지 거주와 휴직자는 각각 보험료의 50%까지 경감되고, 여러 경감이 겹쳐도 최대 50%입니다(육아휴직 예외).</li>
+    </ul>
+  </div>
+
+  <h2>1. 지역가입자 보험료는 어떻게 계산되나</h2>
+  <p>직장가입자는 월급에서 보험료가 정해지지만 지역가입자는 세대 단위로 소득과 재산을 합산해 부과합니다. 2026년 기준 계산식은 아래와 같습니다.</p>
+  <div class="formula">
+    지역가입자 건강보험료 = <b>소득월액 × 7.19%</b> + <b>재산보험료 부과점수 × 211.5원</b><br>
+    재산은 기본공제 1억원을 뺀 나머지에 점수를 매기며, 자동차는 2024년 2월부터 보험료 부과 대상에서 빠졌습니다.
+  </div>
+  <p>이 금액에서 경감이 적용됩니다. 경감 후 보험료가 2,000원 미만이면 2,000원으로 부과된다는 점도 고시에 규정되어 있습니다. 장기요양보험료는 건강보험료에 별도 비율로 더해지므로 고지서 총액은 이보다 큽니다.</p>
+
+  <h2>2. 경감 대상별 조건과 경감률</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>구분</th><th>핵심 요건</th><th>경감률</th></tr>
+    <tr><td>65세 이상 세대</td><td>가입자 중 65세 이상이 있고 소득월액 30만원 이하, 재산과표 13,500만원 이하</td><td>재산과표 6,000만원 이하 30%, 9,000만원 이하 20%, 13,500만원 이하 10%</td></tr>
+    <tr><td>장애인 세대</td><td>장애인복지법상 등록장애인이 있고 연 소득 360만원 이하(소득월액 30만원 이하), 재산과표 13,500만원 이하</td><td>장애 정도에 따라 차등(공단 안내는 심한 경우 30%, 심하지 않은 경우 20%)</td></tr>
+    <tr><td>섬·벽지 거주</td><td>고시 별표의 섬·벽지 지역 거주 가입자</td><td>50%</td></tr>
+    <tr><td>휴직자</td><td>휴직 기간 중인 가입자</td><td>50%, 육아휴직은 60%</td></tr>
+  </table>
+  </div>
+  <p>장애인 세대 경감률은 안내 자료마다 구분 방식이 다릅니다. 일부 자료는 장애 1~2급 30%, 3~4급 20%, 5~6급 10%로 소개하는데, 이는 과거 등급제 기준 설명일 수 있습니다. 본인 세대의 정확한 경감률은 국민건강보험공단에서 확인하는 것이 안전합니다.</p>
+
+  <h2>3. 겹치면 어떻게 되나</h2>
+  <div class="caution">
+    <div class="caution-item">• 경감 대상이 둘 이상이어도 경감액은 가입자 또는 세대별 보험료의 50%를 넘을 수 없습니다. 육아휴직자는 이 한도를 넘는 경감이 가능합니다.</div>
+    <div class="caution-item">• 65세 이상이면서 섬·벽지에 사는 경우 두 경감률을 더하더라도 상한은 50%입니다.</div>
+    <div class="caution-item">• 소득이나 재산이 기준을 넘는 해에는 경감이 중단될 수 있으므로 매년 재산과표 변경 시기에 확인이 필요합니다.</div>
+  </div>
+
+  <h2>4. 적용 시기와 확인 순서</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text">고지서나 국민건강보험 앱(The건강보험)에서 보험료 산정 내역과 재산과표를 확인합니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text">65세 이상은 만 65세가 되는 달의 다음 달부터 요건 충족 시 일괄 적용됩니다. 별도 서류는 필요 없습니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text">장애인 세대는 가입자가 공단 지사 방문이나 전화 1577-1000으로 알리고 장애인등록증을 제출하면 신청한 달의 다음 달부터 적용됩니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text">경감 대상인데 적용되지 않았다면 국민건강보험공단 지사에서 세대 구성과 소득·재산 요건을 다시 확인합니다.</div></div>
+  </div>
+
+  <h2>5. 체크리스트</h2>
+  <div class="checklist">
+    <div class="check-item"><span class="chk">✓</span><span>세대원 중 65세 이상 또는 등록장애인이 있는지 확인</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>재산과표가 13,500만원 이하인지 고지서에서 확인</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>연 소득금액이 360만원(월 30만원) 이하인지 확인</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>거주지가 섬·벽지 고시 지역인지 확인</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>휴직 중이라면 휴직 사실 확인서류 준비</span></div>
+  </div>
+
+  <div class="contact-box">
+    <h2>문의처</h2>
+    <div class="contact-row"><span class="contact-label">국민건강보험공단</span> 1577-1000 / 가까운 공단 지사</div>
+    <div class="contact-row"><span class="contact-label">온라인</span> 국민건강보험 누리집, The건강보험 앱</div>
+  </div>
+
+  <div class="opinion-section">
+    <h2>전문가 시각</h2>
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>긍정적 평가</h3>
+        <div class="opinion-card"><p class="quote">"소득이 거의 없는 고령 세대와 장애인 세대의 보험료 부담을 직접 줄이는 장치입니다."</p><p class="author">— 사회보장 연구자 시각</p></div>
+        <div class="opinion-card"><p class="quote">"재산 기본공제 확대와 자동차 보험료 폐지로 지역가입자 부담 구조가 개선되고 있습니다."</p><p class="author">— 건강보험 제도 분석 시각</p></div>
+      </div>
+      <div class="opinion-con">
+        <h3>우려되는 점</h3>
+        <div class="opinion-card"><p class="quote">"소득·재산 요건이 이중이라 기준을 조금 넘는 세대는 혜택에서 빠집니다."</p><p class="author">— 복지 현장 시각</p></div>
+        <div class="opinion-card"><p class="quote">"장애인 세대는 직접 알려야 적용돼 제도를 모르면 놓치기 쉽습니다."</p><p class="author">— 장애인 단체 시각</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #건강보험료경감 #지역가입자 #국민건강보험공단 #65세이상 #장애인세대 #섬벽지 #휴직자 #복지로
+  </div>
+
+  <div class="disclaimer">
+    이 글은 국민건강보험공단 정책센터, 생활법령정보, 보건복지부 고시 개정 내용 등을 바탕으로 작성되었습니다.
+    경감률과 소득·재산 기준은 고시 개정으로 바뀔 수 있고 세부 구간은 안내 자료마다 다르게 소개되어 있으므로, 개인별 적용 여부는 국민건강보험공단(1577-1000)에서 확인하시기 바랍니다.
+  </div>
+
+  <div class="written">작성일 2026-10-16 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
