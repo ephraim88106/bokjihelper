@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>어린이집 보육료 얼마 — 0~5세 연령별 월 단가와 부모급여 차감</title>
+<meta name="description" content="어린이집 보육료 지원 단가를 2026년 기준으로 정리했습니다. 0세반 58만 4천원부터 3~5세반 28만원까지 연령별 월 금액, 0~1세 부모급여 차액 계산, 가정양육수당 월 10만원 대상을 담았습니다.">
+<style>
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: #f8f9fa; color: #222; line-height: 1.7; }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge { display: inline-block; background: #f57c00; color: #fff; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+  h1 { font-size: 26px; font-weight: 900; line-height: 1.35; color: #1a1a1a; margin-bottom: 18px; word-break: keep-all; }
+  .hook { border-left: 5px solid #f57c00; padding: 14px 18px; background: #fff3e0; border-radius: 0 8px 8px 0; margin-bottom: 22px; font-size: 15px; }
+  .hook .highlight { color: #e65100; font-weight: 900; }
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 18px 20px; margin-bottom: 26px; }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+  h2 { font-size: 19px; font-weight: 900; color: #e65100; margin: 28px 0 12px; border-bottom: 2px solid #ffcc80; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #f57c00; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #fff3e0; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #e65100; }
+  .formula { background: #fffaf3; border: 1px solid #ffcc80; border-radius: 10px; padding: 16px 18px; margin-bottom: 20px; font-size: 14.5px; line-height: 1.9; word-break: keep-all; }
+  .formula b { color: #e65100; }
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #fff3e0; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #f57c00; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+  .deadline-box { border: 2px dashed #f57c00; background: #fff8ef; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+  .checklist { background: #fff3e0; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #ffcc80; color: #e65100; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #e65100; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+  .caution { background: #fff3e0; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+  .contact-box { background: #fff3e0; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #e65100; border-color: #ffcc80; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  .hashtags { font-size: 13px; color: #e65100; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-10-18-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="어린이집 보육료 얼마 — 0~5세 연령별 월 단가와 부모급여 차감">
+<meta property="og:description" content="어린이집 보육료 지원 단가를 2026년 기준으로 정리했습니다. 0세반 58만 4천원부터 3~5세반 28만원까지 연령별 월 금액, 0~1세 부모급여 차액 계산, 가정양육수당 월 10만원 대상을 담았습니다.">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-10-18-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-10-18T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-18T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-10-18-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-10-18-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "어린이집 보육료 얼마 — 0~5세 연령별 월 단가와 부모급여 차감", "description": "어린이집 보육료 지원 단가를 2026년 기준으로 정리했습니다. 0세반 58만 4천원부터 3~5세반 28만원까지 연령별 월 금액, 0~1세 부모급여 차액 계산, 가정양육수당 월 10만원 대상을 담았습니다.", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-10-18", "dateModified": "2026-10-18", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-GyFXAvGw6TskYQ5x"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-ZL2KaRsLAk3Ly1Ik"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-WjaoW3Jzgq4B6IUW"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 보육 · 어린이집 · 보건복지부</div>
+  <div class="section-badge">보육</div>
+
+  <h1>어린이집 보육료 얼마 — 0~5세 연령별 월 단가와 부모급여 차감</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대체로 이런 상황입니다.
+    <span class="highlight">아이를 어린이집에 보내기 전에 매달 얼마가 지원되는지 알고 싶은 경우</span>,
+    <span class="highlight">0~1세 자녀를 두고 부모급여와 보육료가 어떻게 겹치는지 헷갈리는 경우</span>,
+    <span class="highlight">어린이집에 보내지 않고 집에서 키울 때 받을 수 있는 돈이 궁금한 경우</span>입니다.
+    핵심은 세 가지입니다.
+    하나는 <span class="highlight">보육료 지원은 소득과 관계없이 연령별 단가가 정해져 있다는 점</span>,
+    둘째는 <span class="highlight">0~1세는 부모급여에서 보육료가 먼저 빠지고 차액만 현금으로 나온다는 점</span>,
+    셋째는 <span class="highlight">어린이집을 쓰지 않는 24개월 이상 아동은 가정양육수당 월 10만원 대상이라는 점</span>입니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>이것만 알면 됩니다</h2>
+    <ul>
+      <li>2026년 기본보육 단가는 0세반 584,000원, 1세반 515,000원, 2세반 426,000원, 3~5세반 280,000원입니다(월, 1인당).</li>
+      <li>지원은 소득과 무관하며 아이사랑카드 등 보육료 바우처로 어린이집에 결제됩니다.</li>
+      <li>부모급여(0세 월 100만원, 1세 월 50만원)는 어린이집을 이용하면 보육료 바우처를 뺀 차액만 현금으로 받습니다.</li>
+      <li>어린이집·유치원을 이용하지 않는 만 24개월 이상 86개월 미만 아동은 가정양육수당 월 10만원 대상입니다.</li>
+    </ul>
+  </div>
+
+  <h2>1. 연령별 기본보육 단가</h2>
+  <p>보육료 지원은 어린이집이 아니라 부모에게 주는 바우처 형태입니다. 기본보육은 평일 오전 7시 30분부터 오후 7시 30분까지 12시간 운영을 기준으로 하며, 이 시간을 넘는 야간·24시간 보육은 별도 단가가 적용됩니다. 아래 금액은 한 달 기준입니다.</p>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>반 구분</th><th>2026년 출생 기준</th><th>기본보육 월 단가</th></tr>
+    <tr><td>0세반</td><td>2025년 출생</td><td>584,000원</td></tr>
+    <tr><td>1세반</td><td>2024년 출생</td><td>515,000원</td></tr>
+    <tr><td>2세반</td><td>2023년 출생</td><td>426,000원</td></tr>
+    <tr><td>3~5세반</td><td>2020~2022년 출생</td><td>280,000원</td></tr>
+  </table>
+  </div>
+  <p>서울시가 공개한 2026년 단가표와 여러 정리 자료의 수치가 같습니다. 24시간 보육은 기본보육의 1.5배 수준으로 안내되며, 서울시 기준 0세반 876,000원, 3~5세반 420,000원입니다. 장애아 보육은 별도 단가가 있어 월 634,000원으로 소개되지만, 반 편성과 교사 배치 조건이 달라 어린이집에 확인해야 합니다.</p>
+
+  <h2>2. 0~1세 부모급여와 보육료 차액 계산</h2>
+  <p>부모급여는 0세 월 100만원, 1세 월 50만원으로 안내됩니다. 일부 자료는 다른 금액을 적고 있어, 정확한 지급액은 복지로에서 다시 확인해야 합니다. 어린이집을 이용하면 부모급여와 보육료를 이중으로 받을 수 없고, 보육료 바우처 금액을 먼저 쓰고 남는 금액이 현금으로 지급됩니다.</p>
+  <div class="formula">
+    <b>0세반 계산 예시</b><br>
+    부모급여 1,000,000원 − 보육료 바우처 584,000원 = <b>현금 차액 416,000원</b><br>
+    <b>1세반 계산 예시</b><br>
+    부모급여 500,000원 − 보육료 바우처 515,000원 = 차액 없음 (바우처가 부모급여보다 큼)
+  </div>
+  <p>위 계산은 이 글의 단가를 그대로 뺀 예시입니다. 지급 시점과 반올림, 이용 일수에 따른 조정은 지자체 처리에 따라 다를 수 있습니다. 어린이집을 이용하지 않는 달에는 부모급여 전액이 현금으로 나옵니다.</p>
+
+  <h2>3. 어린이집을 안 쓸 때 가정양육수당</h2>
+  <p>어린이집이나 유치원을 이용하지 않는 만 24개월 이상 86개월 미만(초등학교 취학 전) 아동에게는 가정양육수당이 월 10만원 지급됩니다. 소득·재산 기준은 없다고 안내됩니다. 신청은 주민센터 방문 또는 복지로 온라인으로 하며 상시 가능합니다.</p>
+  <div class="caution">
+    <div class="caution-item">• 어린이집에 다니는 달에는 가정양육수당 대신 보육료가 적용되므로 둘을 함께 받지 못합니다.</div>
+    <div class="caution-item">• 농어촌 양육수당과 장애아 양육수당은 연령별 금액이 달라 이 글에서는 금액을 적지 않았습니다. 해당 가구는 주민센터에서 확인하시기 바랍니다.</div>
+    <div class="caution-item">• 지자체가 추가로 주는 아동돌봄수당이나 보육료 차액 지원은 지역마다 다르므로 거주지 기준을 따로 확인해야 합니다.</div>
+  </div>
+
+  <h2>4. 이용 순서</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text">복지로나 주민센터에서 보육료 지원을 접수합니다. 출산 후 행복출산 원스톱 접수를 했다면 별도 접수가 필요 없는 경우가 있습니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text">아이사랑카드 등 보육료 바우처 결제 수단을 발급받거나 등록합니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text">어린이집에 입소하면 바우처가 연령별 단가만큼 결제에 쓰이고, 특별활동비 등 필요경비는 부모가 따로 부담합니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text">0~1세는 부모급여 차액이 신청 계좌로 입금되는지 확인하고, 이용을 그만두면 주민센터에 변경을 알립니다.</div></div>
+  </div>
+
+  <h2>5. 체크리스트</h2>
+  <div class="checklist">
+    <div class="check-item"><span class="chk">✓</span><span>아이 출생연도로 반(0·1·2·3~5세반)과 단가 확인</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>0~1세는 부모급여에서 보육료를 뺀 차액 확인</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>어린이집 이용 중단 시 가정양육수당 또는 부모급여 전환 신청</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>필요경비(특별활동비 등)는 지원 대상이 아닌지 어린이집에 문의</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>거주지 지자체의 추가 지원 여부 확인</span></div>
+  </div>
+
+  <div class="contact-box">
+    <h2>문의처</h2>
+    <div class="contact-row"><span class="contact-label">거주지 주민센터</span> 보육료·양육수당 접수</div>
+    <div class="contact-row"><span class="contact-label">복지로</span> bokjiro.go.kr</div>
+    <div class="contact-row"><span class="contact-label">보건복지상담센터</span> 129</div>
+  </div>
+
+  <div class="opinion-section">
+    <h2>전문가 시각</h2>
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>긍정적 평가</h3>
+        <div class="opinion-card"><p class="quote">"소득과 무관하게 연령별 단가를 지원해 맞벌이 가구의 보육비 부담이 일정하게 줄어듭니다."</p><p class="author">— 보육 현장 시각</p></div>
+        <div class="opinion-card"><p class="quote">"집에서 키우는 가구도 양육수당을 받아 이용 방식에 따른 격차가 완화됩니다."</p><p class="author">— 가족정책 연구자 시각</p></div>
+      </div>
+      <div class="opinion-con">
+        <h3>우려되는 점</h3>
+        <div class="opinion-card"><p class="quote">"특별활동비 등 필요경비가 지원 밖에 있어 실제 부담은 단가 이상으로 남습니다."</p><p class="author">— 학부모 단체 시각</p></div>
+        <div class="opinion-card"><p class="quote">"월 10만원 가정양육수당은 부모급여와 격차가 커 24개월 전후로 지원이 급감합니다."</p><p class="author">— 사회정책 시각</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #보육료 #어린이집 #부모급여 #가정양육수당 #아이사랑카드 #보건복지부 #복지로
+  </div>
+
+  <div class="disclaimer">
+    이 글은 <a href="https://news.seoul.go.kr/welfare/archives/114913">서울시 복지분야 누리집의 2026년 보육료 단가 안내</a>와 민간 정리 자료를 바탕으로 작성되었습니다.
+    부모급여 금액, 24시간 보육·장애아 단가, 농어촌·장애아 양육수당 금액은 출처마다 달라 보건복지부 보육사업안내 원문을 직접 확인하지 못했습니다. 개인별 적용 여부는 주민센터와 복지로에서 확인하시기 바랍니다.
+  </div>
+
+  <div class="written">작성일 2026-10-18 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
