@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>국가장학금 소득구간별 지원금액 얼마 — 1~9구간 월 소득인정액 상한</title>
+<meta name="description" content="국가장학금 I유형의 1~9구간 연간 지원금액과 월 소득인정액 상한, 소득인정액 계산 구조를 2026학년도 기준으로 정리했습니다.">
+<style>
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: #f8f9fa; color: #222; line-height: 1.7; }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge { display: inline-block; background: #f57c00; color: #fff; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+  h1 { font-size: 26px; font-weight: 900; line-height: 1.35; color: #1a1a1a; margin-bottom: 18px; word-break: keep-all; }
+  .hook { border-left: 5px solid #f57c00; padding: 14px 18px; background: #fff3e0; border-radius: 0 8px 8px 0; margin-bottom: 22px; font-size: 15px; }
+  .hook .highlight { color: #e65100; font-weight: 900; }
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 18px 20px; margin-bottom: 26px; }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+  h2 { font-size: 19px; font-weight: 900; color: #e65100; margin: 28px 0 12px; border-bottom: 2px solid #ffcc80; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #f57c00; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #fff3e0; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #e65100; }
+  .formula { background: #fffaf3; border: 1px solid #ffcc80; border-radius: 10px; padding: 16px 18px; margin-bottom: 20px; font-size: 14.5px; line-height: 1.9; word-break: keep-all; }
+  .formula b { color: #e65100; }
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #fff3e0; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #f57c00; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+  .deadline-box { border: 2px dashed #f57c00; background: #fff8ef; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+  .checklist { background: #fff3e0; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #ffcc80; color: #e65100; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #e65100; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+  .caution { background: #fff3e0; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+  .contact-box { background: #fff3e0; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #e65100; border-color: #ffcc80; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  .hashtags { font-size: 13px; color: #e65100; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-10-21-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="국가장학금 소득구간별 지원금액 얼마 — 1~9구간 월 소득인정액 상한">
+<meta property="og:description" content="국가장학금 I유형의 1~9구간 연간 지원금액과 월 소득인정액 상한, 소득인정액 계산 구조를 2026학년도 기준으로 정리했습니다.">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-10-21-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-10-21T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-21T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-10-21-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-10-21-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "국가장학금 소득구간별 지원금액 얼마 — 1~9구간 월 소득인정액 상한", "description": "국가장학금 I유형의 1~9구간 연간 지원금액과 월 소득인정액 상한, 소득인정액 계산 구조를 2026학년도 기준으로 정리했습니다.", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-10-21", "dateModified": "2026-10-21", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-GyFXAvGw6TskYQ5x"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-ZL2KaRsLAk3Ly1Ik"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-WjaoW3Jzgq4B6IUW"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 교육 · 학자금 · 한국장학재단</div>
+  <div class="section-badge">교육</div>
+
+  <h1>국가장학금 소득구간별 지원금액 얼마 — 1~9구간 월 소득인정액 상한</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대체로 이런 상황입니다.
+    <span class="highlight">대학 등록금 고지서를 앞두고 내 소득구간이 몇 구간인지 궁금한 경우</span>,
+    <span class="highlight">구간별로 연간 얼마까지 지원되는지 알고 싶은 경우</span>,
+    <span class="highlight">가구 소득과 재산이 어떻게 합쳐져 구간이 정해지는지 이해하고 싶은 경우</span>입니다.
+    핵심은 세 가지입니다.
+    하나는 <span class="highlight">구간이 월 소득인정액을 기준 중위소득과 견줘 1~9구간으로 나눈 것이라는 점</span>,
+    둘째는 <span class="highlight">구간이 낮을수록 연간 지원금액이 크다는 점</span>,
+    셋째는 <span class="highlight">소득인정액에는 재산이 소득으로 환산되어 더해진다는 점</span>입니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>이것만 알면 됩니다</h2>
+    <ul>
+      <li>국가장학금 I유형은 <b>기초·차상위는 등록금 전액</b>, 1~3구간 연 600만원, 4~6구간 연 440만원, 7~8구간 연 360만원, 9구간 연 100만원으로 안내됩니다(2026학년도).</li>
+      <li>구간은 <b>월 소득인정액 ÷ 기준 중위소득</b>(4인 가구 6,494,738원)으로 가릅니다.</li>
+      <li>소득인정액 = <b>소득평가액 + 재산의 소득환산액</b>이며, 1구간 상한은 월 1,948,421원(중위소득 30%)입니다.</li>
+      <li>실제 지급액은 <b>등록금 범위 안</b>에서만 나가므로 연간 금액이 곧 받는 돈은 아닙니다.</li>
+    </ul>
+  </div>
+
+  <h2>국가장학금 I유형 구간별 지원금액</h2>
+  <p>국가장학금 I유형은 한국장학재단이 대학생 본인에게 등록금 부담을 덜어주는 학생직접지원형입니다. 가구의 소득과 재산을 합산해 구간을 정하고, 구간에 따라 연간 지원 상한이 달라집니다. 아래는 2026학년도 보도와 대학 공지를 교차해 정리한 금액입니다.</p>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>구간</th><th>연간 지원 상한</th><th>학기당 상한(2분할)</th></tr>
+    <tr><td>기초생활수급자·차상위</td><td>등록금 전액(자료에 따라 연 700만원 한도 표기)</td><td>등록금 범위 내</td></tr>
+    <tr><td>1~3구간</td><td>600만원</td><td>300만원</td></tr>
+    <tr><td>4~6구간</td><td>440만원</td><td>220만원</td></tr>
+    <tr><td>7~8구간</td><td>360만원</td><td>180만원</td></tr>
+    <tr><td>9구간</td><td>100만원</td><td>50만원</td></tr>
+    <tr><td>10구간(초과)</td><td>지원 없음</td><td>-</td></tr>
+  </table>
+  </div>
+  <p>다자녀 가구의 셋째 이상 대학생은 8구간 이하까지 등록금 전액이 지원되고, 1~3구간의 다자녀 첫째·둘째는 연 610만원으로 보도된 바 있습니다. 다만 기초·차상위의 한도 표기가 자료마다 달라, 해당하는 분은 한국장학재단에서 본인 금액을 직접 확인해야 합니다.</p>
+
+  <h2>구간을 가르는 월 소득인정액 상한</h2>
+  <p>구간은 가구의 월 소득인정액이 기준 중위소득의 몇 %인지로 정해집니다. 2026년 4인 가구 기준 중위소득 6,494,738원에 각 비율을 곱한 값이 아래 상한입니다. 1구간과 9구간 값은 공개 자료와 일치하고, 나머지 구간의 비율은 안내된 비율 체계(50·70·90·100·130·150·200%)에 따라 계산한 값입니다.</p>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>구간</th><th>기준 중위소득 대비</th><th>월 소득인정액 상한(계산)</th></tr>
+    <tr><td>1구간</td><td>30% 이하</td><td>1,948,421원</td></tr>
+    <tr><td>2구간</td><td>50% 이하</td><td>3,247,369원</td></tr>
+    <tr><td>3구간</td><td>70% 이하</td><td>4,546,316원</td></tr>
+    <tr><td>4구간</td><td>90% 이하</td><td>5,845,264원</td></tr>
+    <tr><td>5구간</td><td>100% 이하</td><td>6,494,738원</td></tr>
+    <tr><td>6구간</td><td>130% 이하</td><td>8,443,159원</td></tr>
+    <tr><td>7구간</td><td>150% 이하</td><td>9,742,107원</td></tr>
+    <tr><td>8구간</td><td>200% 이하</td><td>12,989,476원</td></tr>
+    <tr><td>9구간</td><td>300% 이하</td><td>19,484,214원</td></tr>
+  </table>
+  </div>
+  <p>이 금액은 가구원 수와 무관하게 4인 가구 기준값에 비율을 곱한 것이 아니라, 실제 심사에서는 가구원 수에 맞춘 방식으로 환산됩니다. 따라서 위 표는 구간 구조를 이해하는 용도이고, 본인 구간은 한국장학재단 누리집에서 소득구간 산정 결과로 확인해야 합니다.</p>
+
+  <h2>소득인정액 계산 구조</h2>
+  <div class="formula">
+    <b>소득인정액</b> = 소득평가액 + 재산의 소득환산액<br>
+    <b>소득평가액</b> = 가구의 건강보험료·국세 자료 등으로 파악한 월 소득 − 일정 공제<br>
+    <b>재산의 소득환산액</b> = (재산 − 기본재산 공제 − 부채) × 월 소득환산율
+  </div>
+  <p>같은 소득이라도 부동산·금융·자동차 등 재산이 많으면 소득인정액이 커져 구간이 올라갑니다. 반대로 부채는 일정 범위에서 재산에서 차감됩니다. 대학생 본인과 부모, 배우자 등 가구원의 소득·재산 정보를 한국장학재단이 관계 기관 자료로 조회하므로, 가구원 정보 제공에 동의해야 구간이 산정됩니다.</p>
+
+  <h2>구간 확인 순서</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text">한국장학재단 누리집에 로그인해 가구원 정보 제공 동의를 마칩니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text">가구원이 모두 동의하고 서류 제출 대상이면 서류를 제출합니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text">소득구간 산정 결과(1~10구간)를 누리집 또는 앱에서 확인합니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text">내 구간의 연간 상한과 이번 학기 등록금을 비교해 실제 지원 예상액을 계산합니다.</div></div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>확인 시점</h3>
+    <p>이 글의 금액과 기준 중위소득은 2026학년도 기준이며 매년 바뀝니다. 한국장학재단 공식 페이지를 직접 확인하지 못했고, 보도·대학 공지·정리 자료를 교차한 값이므로 최종 금액은 재단에서 확인하시기 바랍니다.</p>
+  </div>
+
+  <div class="checklist">
+    <h2>구간 확인 체크리스트</h2>
+    <div class="check-item"><span class="chk">□</span>가구원 정보 제공 동의가 모두 끝났는가</div>
+    <div class="check-item"><span class="chk">□</span>본인의 소득구간 산정 결과를 확인했는가</div>
+    <div class="check-item"><span class="chk">□</span>내 구간의 연간 상한과 등록금을 비교했는가</div>
+    <div class="check-item"><span class="chk">□</span>기초·차상위, 다자녀 해당 여부를 확인했는가</div>
+    <div class="check-item"><span class="chk">□</span>재학 대학의 교내 장학금과 중복 지원 조건을 확인했는가</div>
+  </div>
+
+  <div class="caution">
+    <div class="caution-item">⚠ 연간 지원 상한은 등록금을 넘겨 받는 금액이 아닙니다. 등록금이 상한보다 적으면 등록금까지만 지원됩니다.</div>
+    <div class="caution-item">⚠ 블로그마다 금액이 달라 옛 수치(예: 연 570만원)가 섞여 있을 수 있습니다.</div>
+    <div class="caution-item">⚠ 성적·이수학점 등 별도 요건을 충족하지 못하면 구간과 무관하게 지원이 제한될 수 있습니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>문의처</h2>
+    <div class="contact-row"><span class="contact-label">한국장학재단 콜센터:</span> 1599-2000</div>
+    <div class="contact-row"><span class="contact-label">온라인:</span> 한국장학재단 누리집(kosaf.go.kr), 재학 대학 학생처</div>
+  </div>
+
+  <div class="opinion-section">
+    <h2>전문가 찬반 론평</h2>
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>긍정 평가</h3>
+        <div class="opinion-card"><p class="quote">"9구간까지 지원 범위를 넓혀 중상위 소득 가구도 일부 등록금 부담을 덜게 됐다."</p><p class="author">— 학부모 시각</p></div>
+        <div class="opinion-card"><p class="quote">"소득과 재산을 함께 보기 때문에 소득이 낮지만 자산이 큰 가구와의 형평성을 확보한다."</p><p class="author">— 교육재정 시각</p></div>
+      </div>
+      <div class="opinion-con">
+        <h3>우려 지점</h3>
+        <div class="opinion-card"><p class="quote">"구간 경계에서 소득인정액이 조금만 넘어도 지원금이 크게 줄어 체감 격차가 크다."</p><p class="author">— 학생 시각</p></div>
+        <div class="opinion-card"><p class="quote">"산정 구조가 복잡해 본인 구간이 왜 그렇게 나왔는지 이해하기 어렵다."</p><p class="author">— 이용자 시각</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #국가장학금 #소득구간 #한국장학재단 #소득인정액 #대학등록금
+  </div>
+
+  <div class="disclaimer">
+    이 글은 2026학년도 보도와 대학 공지, 정리 자료를 바탕으로 작성되었으며 한국장학재단 원문은 직접 확인하지 못했습니다. 구간별 상한은 기준 중위소득에 비율을 곱한 계산값입니다. 실제 구간과 지원금액은 한국장학재단에서 확인하시기 바랍니다.
+  </div>
+
+  <div class="written">작성일 2026-10-21 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
