@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>연금 선정기준액 얼마 — 단독 247만원·부부 395만원 이하 소득인정액</title>
+<meta name="description" content="2026년 기초연금 선정기준액 단독가구 월 247만원·부부가구 월 395만 2천원과 소득인정액 계산 구조, 부부 감액 20%를 정리했습니다.">
+<style>
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: #f8f9fa; color: #222; line-height: 1.7; }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge { display: inline-block; background: #f57c00; color: #fff; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+  h1 { font-size: 26px; font-weight: 900; line-height: 1.35; color: #1a1a1a; margin-bottom: 18px; word-break: keep-all; }
+  .hook { border-left: 5px solid #f57c00; padding: 14px 18px; background: #fff3e0; border-radius: 0 8px 8px 0; margin-bottom: 22px; font-size: 15px; }
+  .hook .highlight { color: #e65100; font-weight: 900; }
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 18px 20px; margin-bottom: 26px; }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+  h2 { font-size: 19px; font-weight: 900; color: #e65100; margin: 28px 0 12px; border-bottom: 2px solid #ffcc80; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #f57c00; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #fff3e0; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #e65100; }
+  .formula { background: #fffaf3; border: 1px solid #ffcc80; border-radius: 10px; padding: 16px 18px; margin-bottom: 20px; font-size: 14.5px; line-height: 1.9; word-break: keep-all; }
+  .formula b { color: #e65100; }
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #fff3e0; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #f57c00; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+  .deadline-box { border: 2px dashed #f57c00; background: #fff8ef; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+  .checklist { background: #fff3e0; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #ffcc80; color: #e65100; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #e65100; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+  .caution { background: #fff3e0; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+  .contact-box { background: #fff3e0; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #e65100; border-color: #ffcc80; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  .hashtags { font-size: 13px; color: #e65100; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-10-22-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="연금 선정기준액 얼마 — 단독 247만원·부부 395만원 이하 소득인정액">
+<meta property="og:description" content="2026년 기초연금 선정기준액 단독가구 월 247만원·부부가구 월 395만 2천원과 소득인정액 계산 구조, 부부 감액 20%를 정리했습니다.">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-10-22-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-10-22T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-22T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-10-22-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-10-22-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "연금 선정기준액 얼마 — 단독 247만원·부부 395만원 이하 소득인정액", "description": "2026년 기초연금 선정기준액 단독가구 월 247만원·부부가구 월 395만 2천원과 소득인정액 계산 구조, 부부 감액 20%를 정리했습니다.", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-10-22", "dateModified": "2026-10-22", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-GyFXAvGw6TskYQ5x"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-ZL2KaRsLAk3Ly1Ik"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-WjaoW3Jzgq4B6IUW"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 노인 · 소득 · 보건복지부 · 국민연금공단</div>
+  <div class="section-badge">노인</div>
+
+  <h1>연금 선정기준액 얼마 — 단독 247만원·부부 395만원 이하 소득인정액</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대체로 이런 상황입니다.
+    <span class="highlight">만 65세를 앞두고 내 가구가 소득 하위 70% 안에 드는지 궁금한 경우</span>,
+    <span class="highlight">부모님의 소득과 집값이 기준을 넘는지 가늠해 보려는 경우</span>,
+    <span class="highlight">소득인정액이 어떻게 계산되는지 직접 따져 보려는 경우</span>입니다.
+    핵심은 세 가지입니다.
+    하나는 <span class="highlight">기준이 되는 숫자가 소득이 아니라 소득인정액이라는 점</span>,
+    둘째는 <span class="highlight">집과 예금 같은 재산이 월 소득으로 환산되어 더해진다는 점</span>,
+    셋째는 <span class="highlight">선정기준액은 매년 고시로 바뀐다는 점</span>입니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>이것만 알면 됩니다</h2>
+    <ul>
+      <li>2026년 선정기준액은 <b>단독가구 월 247만원, 부부가구 월 395만 2천원</b>이며, 전년보다 단독 기준 19만원 올랐습니다.</li>
+      <li>월 소득인정액이 이 금액 <b>이하</b>이면 소득 요건을 충족합니다. 만 65세 이상 등 다른 요건도 함께 봅니다.</li>
+      <li>소득인정액 = <b>소득평가액 + 재산의 소득환산액</b>입니다.</li>
+      <li>부부가 모두 받으면 각자 기준연금액의 <b>20%가 감액</b>됩니다. 2026년 기준연금액은 월 349,700원 수준으로 보도됩니다.</li>
+    </ul>
+  </div>
+
+  <h2>2026년 선정기준액</h2>
+  <p>선정기준액은 만 65세 이상 노인 가운데 기초연금 수급자가 대략 70% 수준이 되도록 노인 가구의 소득·재산 수준, 생활실태, 물가상승률 등을 고려해 보건복지부가 매년 정합니다. 2026년 기준은 아래와 같습니다.</p>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>구분</th><th>월 소득인정액 기준(2026년)</th><th>전년 대비</th></tr>
+    <tr><td>단독가구</td><td>247만원 이하</td><td>19만원 상승</td></tr>
+    <tr><td>부부가구</td><td>395만 2천원 이하</td><td>30만 4천원 상승</td></tr>
+  </table>
+  </div>
+  <p>부부가구 기준은 단독가구 기준의 160%에 해당하는 구조입니다. 일부 블로그에는 단독 약 228만원, 부부 약 364만원이라는 숫자가 남아 있는데, 이는 이전 연도 기준으로 보이므로 최신 고시와 대조해야 합니다.</p>
+
+  <h2>소득인정액 계산 구조</h2>
+  <div class="formula">
+    <b>소득인정액</b> = 소득평가액 + 재산의 소득환산액<br>
+    <b>소득평가액</b> = 근로·사업·재산·공적이전소득 등을 합산한 월 소득 − 일정 공제<br>
+    <b>재산의 소득환산액</b> = (일반재산 − 기본재산액 − 부채 + 금융재산 − 금융재산 공제) × 연 4% ÷ 12
+  </div>
+  <p>예를 들어 대도시에 사는 노인 단독가구가 공시가격 2억원 상당의 집(일반재산)만 있고 소득이 없다고 가정하면, 기본재산액 1억 3,500만원을 뺀 6,500만원에 연 4%를 곱하고 12로 나눈 약 21만 6천원이 월 소득환산액입니다. 소득평가액이 0이면 소득인정액도 약 21만 6천원으로 선정기준액 247만원에 한참 못 미칩니다. 이처럼 재산만으로 기준을 넘는 경우는 흔치 않고, 소득이 있는 경우에 경계가 문제 됩니다.</p>
+
+  <h3>재산 공제와 환산 기준</h3>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>항목</th><th>내용</th></tr>
+    <tr><td>기본재산액(일반재산 공제)</td><td>대도시·특례시 1억 3,500만원 / 중소도시 8,500만원 / 농어촌 7,250만원</td></tr>
+    <tr><td>금융재산 공제</td><td>가구당 2,000만원(부부가 각각 받는 것이 아님)</td></tr>
+    <tr><td>재산 소득환산율</td><td>연 4%(월 환산 시 12로 나눔)</td></tr>
+    <tr><td>자녀의 소득·재산</td><td>산정에 포함되지 않음(부양의무자 기준 없음)</td></tr>
+  </table>
+  </div>
+  <p>일부 자료는 금융재산 환산율을 다르게 적고, 근로소득 공제액도 자료마다 116만원, 108만원 등으로 갈립니다. 이 부분은 수치를 확정하지 않고 복지로의 모의계산이나 국민연금공단 상담으로 본인 값을 확인하는 것이 안전합니다.</p>
+
+  <h2>부부 감액과 국민연금 연계감액</h2>
+  <p>소득 요건을 충족해도 받는 금액은 일률적이지 않습니다. 두 가지 감액 장치가 있습니다.</p>
+  <ul style="padding-left:20px;margin-bottom:14px;font-size:14.5px;line-height:1.9;">
+    <li><b>부부 감액</b>: 부부가 모두 수급자이면 각자 기준연금액에서 20%를 줄여 받습니다. 기준연금액 349,700원을 적용하면 각자 약 279,760원 수준입니다.</li>
+    <li><b>국민연금 연계감액</b>: 국민연금을 일정 금액 이상 받으면 기초연금이 줄어듭니다. 산식이 복잡하며 최소 지급액이 보장되는 구조라, 해당하는 분은 공단에서 개별 계산을 받아야 합니다.</li>
+  </ul>
+  <p>2026년 일반 수급자의 월 최대 지급액은 기준연금액 349,700원으로 보도됩니다. 생계급여 수급 어르신에게 월 40만원을 우선 적용한다는 설명이 일부 블로그에 있으나 공식 자료로는 확인하지 못했으므로 복지로에서 재확인이 필요합니다.</p>
+
+  <h2>내 가구가 기준 안에 드는지 가늠하는 순서</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text">단독가구인지 부부가구인지 정하고 해당 선정기준액(247만원 또는 395만 2천원)을 적습니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text">월 소득(근로·연금·임대 등)에서 공제를 뺀 소득평가액을 어림잡습니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text">집·땅·예금·차량 등 재산에서 지역별 기본재산액과 금융재산 공제를 빼고 연 4%로 환산합니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text">둘을 더한 소득인정액이 선정기준액 이하인지 비교하고, 경계 근처라면 복지로 모의계산으로 다시 확인합니다.</div></div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>기준 연도</h3>
+    <p>이 글의 선정기준액은 2026년 고시 기준입니다. 선정기준액과 기준연금액은 매년 1월 조정되므로 다음 해에는 달라집니다. 공제액 세부 수치는 2차 자료를 교차한 값이라 보건복지부 원문 확인이 필요합니다.</p>
+  </div>
+
+  <div class="checklist">
+    <h2>확인 체크리스트</h2>
+    <div class="check-item"><span class="chk">□</span>만 65세 이상이며 국내에 거주하는가</div>
+    <div class="check-item"><span class="chk">□</span>단독가구와 부부가구 중 어디에 해당하는지 정했는가</div>
+    <div class="check-item"><span class="chk">□</span>거주 지역(대도시·중소도시·농어촌)에 맞는 기본재산액을 적용했는가</div>
+    <div class="check-item"><span class="chk">□</span>금융재산 공제 2,000만원을 가구당 한 번만 적용했는가</div>
+    <div class="check-item"><span class="chk">□</span>국민연금 수령액이 있어 연계감액 대상인지 확인했는가</div>
+  </div>
+
+  <div class="caution">
+    <div class="caution-item">⚠ 선정기준액 이하라는 것은 소득 요건일 뿐, 공무원연금 등 직역연금 수급 여부 같은 다른 요건은 별도로 판단합니다.</div>
+    <div class="caution-item">⚠ 블로그마다 공제액과 환산율이 달라 옛 수치가 섞여 있을 수 있습니다.</div>
+    <div class="caution-item">⚠ 고가 자동차와 회원권 등은 일반재산과 다른 방식으로 환산될 수 있습니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>문의처</h2>
+    <div class="contact-row"><span class="contact-label">국민연금공단 노후준비상담:</span> 1355</div>
+    <div class="contact-row"><span class="contact-label">보건복지상담센터:</span> 129</div>
+    <div class="contact-row"><span class="contact-label">온라인:</span> 복지로(bokjiro.go.kr), 주민센터</div>
+  </div>
+
+  <div class="opinion-section">
+    <h2>전문가 찬반 론평</h2>
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>긍정 평가</h3>
+        <div class="opinion-card"><p class="quote">"선정기준액이 매년 올라 물가와 소득 상승으로 기준을 넘던 노인 가구가 다시 대상에 들어올 수 있다."</p><p class="author">— 노인복지 시각</p></div>
+        <div class="opinion-card"><p class="quote">"자녀 소득을 보지 않아 부양의무자 문제로 배제되던 사각지대가 줄었다."</p><p class="author">— 복지정책 시각</p></div>
+      </div>
+      <div class="opinion-con">
+        <h3>우려 지점</h3>
+        <div class="opinion-card"><p class="quote">"기준 경계에서 소득인정액이 조금만 넘어도 전액 탈락하는 역차별이 생긴다."</p><p class="author">— 수급 경계층 시각</p></div>
+        <div class="opinion-card"><p class="quote">"부부 감액과 연계감액이 겹치면 가구 단위 수령액이 직관과 달라 이해하기 어렵다."</p><p class="author">— 재정 건전성 시각</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #기초연금 #선정기준액 #소득인정액 #보건복지부 #국민연금공단
+  </div>
+
+  <div class="disclaimer">
+    이 글은 2026년 보도와 정리 자료를 바탕으로 작성되었으며 보건복지부 고시 원문은 직접 확인하지 못했습니다. 공제액·환산 세부 수치는 자료마다 다를 수 있습니다. 실제 수급 여부와 금액은 복지로 모의계산 또는 국민연금공단에서 확인하시기 바랍니다.
+  </div>
+
+  <div class="written">작성일 2026-10-22 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
