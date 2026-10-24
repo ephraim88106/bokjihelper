@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>한부모 아동양육비 금액 — 월 23만원과 가구원수별 소득인정액 기준선</title>
+<meta name="description" content="한부모가족 아동양육비 월 23만원(18세 미만 자녀 1명당)과 중위소득 65% 이하 소득인정액 기준선, 조손·35세 이상 미혼 한부모 추가 지원을 정리했습니다.">
+<style>
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: #f8f9fa; color: #222; line-height: 1.7; }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge { display: inline-block; background: #f57c00; color: #fff; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+  h1 { font-size: 26px; font-weight: 900; line-height: 1.35; color: #1a1a1a; margin-bottom: 18px; word-break: keep-all; }
+  .hook { border-left: 5px solid #f57c00; padding: 14px 18px; background: #fff3e0; border-radius: 0 8px 8px 0; margin-bottom: 22px; font-size: 15px; }
+  .hook .highlight { color: #e65100; font-weight: 900; }
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 18px 20px; margin-bottom: 26px; }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+  h2 { font-size: 19px; font-weight: 900; color: #e65100; margin: 28px 0 12px; border-bottom: 2px solid #ffcc80; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #f57c00; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #fff3e0; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #e65100; }
+  .formula { background: #fffaf3; border: 1px solid #ffcc80; border-radius: 10px; padding: 16px 18px; margin-bottom: 20px; font-size: 14.5px; line-height: 1.9; word-break: keep-all; }
+  .formula b { color: #e65100; }
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #fff3e0; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #f57c00; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+  .deadline-box { border: 2px dashed #f57c00; background: #fff8ef; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+  .checklist { background: #fff3e0; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #ffcc80; color: #e65100; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #e65100; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+  .caution { background: #fff3e0; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+  .contact-box { background: #fff3e0; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #e65100; border-color: #ffcc80; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  .hashtags { font-size: 13px; color: #e65100; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-10-24-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="한부모 아동양육비 금액 — 월 23만원과 가구원수별 소득인정액 기준선">
+<meta property="og:description" content="한부모가족 아동양육비 월 23만원(18세 미만 자녀 1명당)과 중위소득 65% 이하 소득인정액 기준선, 조손·35세 이상 미혼 한부모 추가 지원을 정리했습니다.">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-10-24-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-10-24T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-24T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-10-24-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-10-24-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "한부모 아동양육비 금액 — 월 23만원과 가구원수별 소득인정액 기준선", "description": "한부모가족 아동양육비 월 23만원(18세 미만 자녀 1명당)과 중위소득 65% 이하 소득인정액 기준선, 조손·35세 이상 미혼 한부모 추가 지원을 정리했습니다.", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-10-24", "dateModified": "2026-10-24", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-GyFXAvGw6TskYQ5x"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-ZL2KaRsLAk3Ly1Ik"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-WjaoW3Jzgq4B6IUW"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 가족 · 한부모가족 · 여성가족부</div>
+  <div class="section-badge">가족</div>
+
+  <h1>한부모 아동양육비 금액 — 월 23만원과 가구원수별 소득인정액 기준선</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대체로 이런 상황입니다.
+    <span class="highlight">혼자 아이를 키우게 되어 나라에서 매달 얼마를 받을 수 있는지 알아보는 경우</span>,
+    <span class="highlight">내 소득이 기준선 안에 드는지 가늠해 보려는 경우</span>,
+    <span class="highlight">조손가족이나 어린 자녀가 있을 때 더 받는 항목이 있는지 궁금한 경우</span>입니다.
+    핵심은 세 가지입니다.
+    하나는 <span class="highlight">아동양육비가 자녀 1명당 월 23만원으로 안내된다는 점</span>,
+    둘째는 <span class="highlight">월급이 아니라 재산을 환산한 소득인정액으로 판정한다는 점</span>,
+    셋째는 <span class="highlight">추가 지원은 대상이 따로 정해져 있다는 점</span>입니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>이것만 알면 됩니다</h2>
+    <ul>
+      <li>소득인정액이 기준 중위소득 <b>65% 이하</b>인 한부모가족의 <b>18세 미만 자녀</b>에게 아동양육비가 <b>자녀 1명당 월 23만원</b>으로 안내됩니다.</li>
+      <li>조손가족과 35세 이상 미혼 한부모가족의 <b>5세 이하 아동</b>에게는 추가 아동양육비가 <b>자녀 1명당 월 10만원</b>으로 안내됩니다.</li>
+      <li>65% 기준선은 2인 가구 약 <b>272만 9,540원</b>, 3인 가구 약 <b>348만 3,373원</b>, 4인 가구 약 <b>422만 1,580원</b>입니다.</li>
+      <li>청소년 한부모 금액과 학용품비·생활보조금은 출처마다 수치가 달라 공식 확인이 필요합니다.</li>
+    </ul>
+  </div>
+
+  <h2>아동양육비는 얼마인가</h2>
+  <p>한부모가족 아동양육비는 한부모가족지원법에 따라 저소득 한부모가족의 자녀 양육을 돕는 현금 급여입니다. 법제처가 운영하는 e나라법령정보는 소득인정액이 기준 중위소득 65% 이하인 가족의 18세 미만 자녀에게 1명당 월 23만원을 지급한다고 안내합니다. 이 금액이 2025년 월 20만원에서 인상된 것이라는 설명도 여러 정리 글에서 확인됩니다.</p>
+  <p>자녀가 둘이면 자녀 수만큼 곱해지는 구조입니다. 예를 들어 18세 미만 자녀가 2명이면 아동양육비는 월 46만원(23만원×2)이 됩니다. 이는 계산 구조를 보이기 위한 예시이며 실제 지급액은 지자체 확인을 거쳐 결정됩니다.</p>
+
+  <h2>추가 지원 대상과 금액</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>항목</th><th>대상</th><th>금액(안내 기준)</th></tr>
+    <tr><td>아동양육비</td><td>중위소득 65% 이하 한부모가족의 18세 미만 자녀</td><td>자녀 1명당 월 23만원</td></tr>
+    <tr><td>추가 아동양육비</td><td>조손가족, 35세 이상 미혼 한부모가족의 5세 이하 아동</td><td>자녀 1명당 월 10만원</td></tr>
+    <tr><td>청소년 한부모 지원</td><td>부 또는 모가 만 24세 이하인 가족</td><td>출처별 수치 상이, 공식 확인 필요</td></tr>
+    <tr><td>학용품비·생활보조금</td><td>해당 가족</td><td>2025년 자료만 확인, 2026년 적용액 확인 필요</td></tr>
+  </table>
+  </div>
+  <p>추가 아동양육비를 월 5만원으로 적은 자료도 있는데, 이는 2025년 기준 자료로 보입니다. 청소년 한부모의 월 지원액은 월 35만원으로 적은 글과 37만원(0~1세 자녀는 40만원)으로 적은 글이 갈립니다. 이번 조사에서 여성가족부 사업안내 원문을 직접 확인하지 못했으므로 이 항목은 수치를 단정하지 않습니다.</p>
+
+  <h2>소득 기준은 어떻게 판정하나</h2>
+  <div class="formula">
+    <b>소득인정액</b> = 소득평가액 + 재산의 소득환산액<br>
+    <b>판정</b>: 소득인정액 ≤ 기준 중위소득 65% 이면 대상
+  </div>
+  <p>통장에 찍히는 월급만 보는 것이 아니라, 근로·사업소득에서 공제를 거친 소득평가액에 집, 예금, 자동차 같은 재산을 월 소득으로 환산한 금액을 더해 판단합니다. 기준 중위소득이 기준선이 되는 금액은 아래와 같습니다.</p>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>가구원수</th><th>기준 중위소득 65%(월, 2026년)</th></tr>
+    <tr><td>2인</td><td>2,729,540원</td></tr>
+    <tr><td>3인</td><td>3,483,373원</td></tr>
+    <tr><td>4인</td><td>4,221,580원</td></tr>
+    <tr><td>5인</td><td>4,991,867원</td></tr>
+    <tr><td>6인</td><td>5,561,369원</td></tr>
+  </table>
+  </div>
+  <p>한부모가족 복지급여 기준이 중위소득 63%에서 65%로 넓어졌다는 설명이 여러 곳에 있고, 위 표는 지자체 안내 페이지가 제시한 값입니다. 재산 기준과 공제 항목 때문에 같은 월급이어도 결과가 달라질 수 있으므로 정확한 판정은 주민센터 조회로 확인해야 합니다.</p>
+
+  <h2>이용 순서</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text">가족 형태가 한부모가족에 해당하는지 확인합니다. 모 또는 부가 만 18세 미만 자녀를 양육하는 경우가 기본이고, 조손가족도 포함됩니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text">가구원수에 맞는 65% 기준선과 내 소득인정액을 비교해 대략의 가능성을 봅니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text">주민등록상 거주지 읍·면·동 행정복지센터를 방문하거나 복지로(bokjiro.go.kr)로 접수합니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text">지자체가 소득·재산을 조사한 뒤 대상 여부와 지급액을 결정해 알려 줍니다.</div></div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>기준 연도</h3>
+    <p>이 글은 2026년 기준으로 정리된 법제처 안내와 2차 자료를 바탕으로 합니다. 기준 중위소득과 급여액은 매년 바뀔 수 있고, 지자체가 별도로 얹어 주는 양육 지원금은 지역마다 다릅니다. 접수 전에 거주지 행정복지센터에서 현행 금액을 확인하세요.</p>
+  </div>
+
+  <div class="checklist">
+    <h2>확인 체크리스트</h2>
+    <div class="check-item"><span class="chk">□</span>양육 중인 자녀가 모두 만 18세 미만인가</div>
+    <div class="check-item"><span class="chk">□</span>가구원수 기준 65% 선과 내 소득인정액을 비교했는가</div>
+    <div class="check-item"><span class="chk">□</span>재산(집·예금·자동차)이 소득으로 환산된다는 점을 확인했는가</div>
+    <div class="check-item"><span class="chk">□</span>조손가족 또는 35세 이상 미혼 한부모라면 5세 이하 자녀 추가분을 확인했는가</div>
+    <div class="check-item"><span class="chk">□</span>거주 지자체의 별도 양육 지원이 있는지 문의했는가</div>
+  </div>
+
+  <div class="caution">
+    <div class="caution-item">⚠ 청소년 한부모 금액, 학용품비, 생활보조금은 출처마다 수치가 달라 이 글에서 확정하지 않았습니다.</div>
+    <div class="caution-item">⚠ 소득이 기준선 아래로 보여도 재산 환산액 때문에 대상에서 빠질 수 있습니다.</div>
+    <div class="caution-item">⚠ 다른 급여와 겹쳐 받을 수 있는지는 급여 종류에 따라 다르므로 접수 시 함께 물어보세요.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>문의처</h2>
+    <div class="contact-row"><span class="contact-label">거주지 행정복지센터:</span> 한부모가족 담당 부서</div>
+    <div class="contact-row"><span class="contact-label">보건복지상담센터:</span> 129</div>
+    <div class="contact-row"><span class="contact-label">온라인:</span> 복지로(bokjiro.go.kr), 여성가족부(mogef.go.kr)</div>
+  </div>
+
+  <div class="opinion-section">
+    <h2>전문가 찬반 론평</h2>
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>긍정 평가</h3>
+        <div class="opinion-card"><p class="quote">"소득 기준이 중위소득 65%까지 넓어져 기초수급 바로 위 가구도 양육비를 받을 길이 열렸다."</p><p class="author">— 한부모 가족 지원 시각</p></div>
+        <div class="opinion-card"><p class="quote">"자녀 수만큼 지급되어 다자녀 한부모 가구의 체감이 크다."</p><p class="author">— 아동 양육 시각</p></div>
+      </div>
+      <div class="opinion-con">
+        <h3>우려 지점</h3>
+        <div class="opinion-card"><p class="quote">"월 23만원은 실제 양육비에 비해 작고, 재산 환산 때문에 소득이 낮아도 탈락하는 경우가 있다."</p><p class="author">— 수급 가구 시각</p></div>
+        <div class="opinion-card"><p class="quote">"급여 종류와 연령별 추가 항목이 많아 당사자가 직접 파악하기 어렵다."</p><p class="author">— 정보 접근성 시각</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #한부모가족 #아동양육비 #여성가족부 #기준중위소득 #소득인정액
+  </div>
+
+  <div class="disclaimer">
+    이 글은 2026년 기준 법제처 e나라법령정보 안내와 2차 자료를 바탕으로 작성되었으며 여성가족부 사업안내 원문은 직접 확인하지 못했습니다. 금액과 기준은 변경될 수 있습니다. 실제 대상 여부와 지급액은 거주지 행정복지센터에서 확인하시기 바랍니다.
+  </div>
+
+  <div class="written">작성일 2026-10-24 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
