@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>취업후 상환 학자금대출 상환기준소득 얼마 — 초과분 20% 의무상환 구조</title>
+<meta name="description" content="취업후 상환 학자금대출의 상환기준소득(2026년 3,037만원 안내), 초과 소득 20% 의무상환 계산, 원천공제와 미리납부 차이, 상환유예 조건을 정리했습니다.">
+<style>
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: #f8f9fa; color: #222; line-height: 1.7; }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge { display: inline-block; background: #f57c00; color: #fff; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+  h1 { font-size: 26px; font-weight: 900; line-height: 1.35; color: #1a1a1a; margin-bottom: 18px; word-break: keep-all; }
+  .hook { border-left: 5px solid #f57c00; padding: 14px 18px; background: #fff3e0; border-radius: 0 8px 8px 0; margin-bottom: 22px; font-size: 15px; }
+  .hook .highlight { color: #e65100; font-weight: 900; }
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 18px 20px; margin-bottom: 26px; }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+  h2 { font-size: 19px; font-weight: 900; color: #e65100; margin: 28px 0 12px; border-bottom: 2px solid #ffcc80; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #f57c00; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #fff3e0; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #e65100; }
+  .formula { background: #fffaf3; border: 1px solid #ffcc80; border-radius: 10px; padding: 16px 18px; margin-bottom: 20px; font-size: 14.5px; line-height: 1.9; word-break: keep-all; }
+  .formula b { color: #e65100; }
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #fff3e0; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #f57c00; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+  .deadline-box { border: 2px dashed #f57c00; background: #fff8ef; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+  .checklist { background: #fff3e0; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #ffcc80; color: #e65100; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #e65100; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+  .caution { background: #fff3e0; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+  .contact-box { background: #fff3e0; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #e65100; border-color: #ffcc80; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  .hashtags { font-size: 13px; color: #e65100; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-10-26-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="취업후 상환 학자금대출 상환기준소득 얼마 — 초과분 20% 의무상환 구조">
+<meta property="og:description" content="취업후 상환 학자금대출의 상환기준소득(2026년 3,037만원 안내), 초과 소득 20% 의무상환 계산, 원천공제와 미리납부 차이, 상환유예 조건을 정리했습니다.">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-10-26-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-10-26T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-26T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-10-26-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-10-26-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "취업후 상환 학자금대출 상환기준소득 얼마 — 초과분 20% 의무상환 구조", "description": "취업후 상환 학자금대출의 상환기준소득(2026년 3,037만원 안내), 초과 소득 20% 의무상환 계산, 원천공제와 미리납부 차이, 상환유예 조건을 정리했습니다.", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-10-26", "dateModified": "2026-10-26", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-GyFXAvGw6TskYQ5x"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-ZL2KaRsLAk3Ly1Ik"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-WjaoW3Jzgq4B6IUW"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 교육 · 학자금 · 한국장학재단</div>
+  <div class="section-badge">교육</div>
+
+  <h1>취업후 상환 학자금대출 상환기준소득 얼마 — 초과분 20% 의무상환 구조</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대체로 이런 상황입니다.
+    <span class="highlight">취업 후 상환 학자금대출을 받았고 언제부터 갚아야 하는지 알아보는 경우</span>,
+    <span class="highlight">월급에서 얼마가 빠지는지 계산해 보려는 경우</span>,
+    <span class="highlight">원천공제와 미리납부 중 어느 쪽이 맞는지 고민하는 경우</span>입니다.
+    핵심은 세 가지입니다.
+    하나는 <span class="highlight">연간 소득이 상환기준소득을 넘을 때만 의무상환이 시작된다는 점</span>,
+    둘째는 <span class="highlight">갚는 금액이 대출 잔액이 아니라 초과 소득에 연동된다는 점</span>,
+    셋째는 <span class="highlight">실직·육아휴직 등에는 상환유예가 가능하다는 점</span>입니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>이것만 알면 됩니다</h2>
+    <ul>
+      <li>취업후 상환 학자금대출(ICL)은 졸업 여부가 아니라 <b>연간 소득금액이 상환기준소득을 초과</b>할 때 의무상환이 시작됩니다.</li>
+      <li>2026년 상환기준소득은 일부 안내에서 <b>연 3,037만원</b>으로 확인되며, 한국장학재단 공지로 재확인이 필요합니다.</li>
+      <li>의무상환액은 일반적으로 <b>(연간 소득금액 - 상환기준소득) × 상환율(20%)</b> 구조로 안내됩니다.</li>
+      <li>2026년 학자금대출 금리는 <b>1.7%</b>로 안내되며, 이자면제 대상은 2026년 7월부터 <b>학자금지원 6구간 이하</b>로 확대된 것으로 안내됩니다.</li>
+    </ul>
+  </div>
+
+  <h2>상환기준소득은 얼마인가</h2>
+  <p>상환기준소득은 &lsquo;이 금액까지는 소득이 있어도 갚지 않아도 되는 선&rsquo;입니다. 「취업 후 학자금 상환 특별법」에 따라 매년 정해지며, 이번 조사에서 확인한 2026년 안내값은 연 3,037만원입니다. 다만 이 수치는 금융기관 안내 페이지 등 2차 자료에서만 확인했고 재단 원문 공지는 직접 확인하지 못했습니다. 이전 연도 값과 섞이지 않도록 반드시 해당 귀속 연도의 공식 수치를 확인하세요.</p>
+  <p>여기서 말하는 소득은 월급 명세서의 세전 월급이 아니라 국세청에 신고된 연간 소득금액입니다. 근로소득자는 총급여에서 근로소득공제를 뺀 값이 기준이 되고, 사업소득자나 프리랜서는 종합소득세 신고 기준의 소득금액이 쓰입니다. 소득 종류별 세부 산정 방식은 한국장학재단 안내를 따르세요.</p>
+
+  <h2>의무상환액 계산 방법</h2>
+  <div class="formula">
+    <b>의무상환액</b> = (연간 소득금액 - 상환기준소득) × 상환율<br>
+    예시(가정): 소득금액 4,037만원, 상환기준소득 3,037만원, 상환율 20%<br>
+    → (4,037만원 - 3,037만원) × 20% = <b>200만원</b> (연간, 월 환산 약 16만 7천원)
+  </div>
+  <p>위 예시는 계산 구조를 보여주기 위한 가정이며 실제 부과액은 개인별 소득 확정 후 재단이 통지합니다. 소득이 상환기준소득 이하이면 그 해에는 의무상환액이 없습니다. 반대로 대출 잔액이 의무상환액보다 적으면 남은 잔액까지만 갚습니다. 이때 의무상환과 별개로 원할 때 언제든 중도상환할 수 있습니다.</p>
+
+  <h2>원천공제와 미리납부 차이</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>구분</th><th>납부 방식</th><th>알아둘 점</th></tr>
+    <tr><td>원천공제</td><td>회사가 매월 급여에서 12분의 1씩 공제해 납부</td><td>2025년 귀속분은 2026년 7월 1일부터 2027년 6월 30일까지 매월 공제됩니다.</td></tr>
+    <tr><td>미리납부</td><td>본인이 직접 재단에 납부</td><td>회사에 대출 사실이 알려지지 않게 하려는 경우 등에 활용합니다. 정해진 기한 안에 납부해야 합니다.</td></tr>
+  </table>
+  </div>
+  <p>직장에 다니는 경우 대부분 원천공제를 거칩니다. 회사는 공제 통지를 받으면 급여에서 떼어 납부하며, 이직하면 새 회사로 다시 통지됩니다. 직접 납부 가능 기간과 방법은 재단의 연도별 안내를 확인하세요.</p>
+
+  <h2>상환유예가 되는 경우</h2>
+  <p>실직·퇴직·육아휴직·폐업·재난피해가 생기면 상환유예를 받을 수 있습니다. 확인된 안내로는 이 사유의 경우 신청일부터 2년이 지난 날이 속하는 해의 12월 31일까지, 대학(원)에 재학 중인 경우는 4년이 지난 날이 속하는 해의 12월 31일까지 유예할 수 있다고 되어 있습니다. 유예 기간에는 의무상환이 미뤄지지만, 대출 이자 발생 여부와 면제 범위는 별도로 확인해야 합니다.</p>
+
+  <h2>상환 확인 순서</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text">한국장학재단 누리집 또는 앱에서 대출 잔액과 상환 구분(졸업 여부·소득 발생 여부)을 확인합니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text">해당 귀속 연도의 상환기준소득과 내 연간 소득금액을 비교합니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text">초과분이 있으면 원천공제로 갈지 미리납부로 갈지 정합니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text">실직·육아휴직 등 유예 사유가 있다면 사유 증빙과 함께 상환유예를 문의합니다.</div></div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>기준 연도</h3>
+    <p>이 글은 2026년 안내 자료를 바탕으로 합니다. 상환기준소득은 매년 바뀌고, 어느 해 소득을 기준으로 언제 공제되는지(귀속 연도)가 다르므로 혼동하기 쉽습니다. 2025년 귀속분은 2026년 7월부터 2027년 6월까지 공제되는 구조입니다. 연체가 생기면 연체이자가 붙을 수 있으나 이번 조사에서 연체이자율은 확인하지 못했습니다.</p>
+  </div>
+
+  <div class="checklist">
+    <h2>확인 체크리스트</h2>
+    <div class="check-item"><span class="chk">□</span>내 대출이 취업후 상환 방식(ICL)인지 일반상환인지 확인했는가</div>
+    <div class="check-item"><span class="chk">□</span>해당 귀속 연도의 상환기준소득을 재단 공지로 확인했는가</div>
+    <div class="check-item"><span class="chk">□</span>국세청 신고 기준 연간 소득금액을 알고 있는가</div>
+    <div class="check-item"><span class="chk">□</span>원천공제와 미리납부 중 어느 쪽인지 정했는가</div>
+    <div class="check-item"><span class="chk">□</span>유예 사유(실직·육아휴직 등)가 있다면 증빙을 준비했는가</div>
+  </div>
+
+  <div class="caution">
+    <div class="caution-item">⚠ 2026년 상환기준소득 3,037만원과 상환율 20%는 2차 자료와 법령 일반 구조에 근거한 안내이므로 재단 원문 확인 전에는 확정값으로 쓰지 마세요.</div>
+    <div class="caution-item">⚠ 일반상환 학자금대출은 소득과 무관하게 정해진 일정으로 갚는 별도 방식입니다.</div>
+    <div class="caution-item">⚠ 이자면제와 금리는 학기별로 달라질 수 있어 대출 시점 기준으로 확인이 필요합니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>문의처</h2>
+    <div class="contact-row"><span class="contact-label">한국장학재단 콜센터:</span> 1599-2000</div>
+    <div class="contact-row"><span class="contact-label">온라인:</span> 한국장학재단(kosaf.go.kr), 국세청 홈택스</div>
+    <div class="contact-row"><span class="contact-label">회사:</span> 급여 담당 부서(원천공제 통지 확인)</div>
+  </div>
+
+  <div class="opinion-section">
+    <h2>전문가 찬반 론평</h2>
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>긍정 평가</h3>
+        <div class="opinion-card"><p class="quote">"소득이 낮은 동안은 갚지 않아도 돼 졸업 직후 부담이 크게 줄어든다."</p><p class="author">— 청년 부채 부담 시각</p></div>
+        <div class="opinion-card"><p class="quote">"소득에 연동되는 구조라 대출 규모와 무관하게 상환액이 예측 가능하다."</p><p class="author">— 소득연계 상환 시각</p></div>
+      </div>
+      <div class="opinion-con">
+        <h3>우려 지점</h3>
+        <div class="opinion-card"><p class="quote">"기준소득을 살짝 넘기면 상환이 시작돼 실수령액 변동이 체감된다."</p><p class="author">— 사회초년생 시각</p></div>
+        <div class="opinion-card"><p class="quote">"원천공제로 회사에 대출 사실이 드러나는 점을 부담스러워하는 경우가 있다."</p><p class="author">— 개인정보 시각</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #취업후상환학자금대출 #상환기준소득 #한국장학재단 #원천공제 #상환유예
+  </div>
+
+  <div class="disclaimer">
+    이 글은 한국장학재단 관련 공개 안내와 2차 자료를 바탕으로 작성되었으며 2026년 수치는 재단 원문으로 재확인하지 못했습니다. 금액과 기준은 변경될 수 있습니다. 실제 상환액과 대상 여부는 한국장학재단에서 확인하시기 바랍니다.
+  </div>
+
+  <div class="written">작성일 2026-10-26 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
