@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>유족연금 수급 순위 — 유족 범위와 가입기간별 지급률 비교</title>
+<meta name="description" content="국민연금 유족연금의 수급 순위(배우자·자녀·부모·손자녀·조부모), 유족 범위의 나이·장애 요건, 가입기간별 지급률 40·50·60%, 사망자 요건과 중복 급여 조정을 2026년 기준으로 정리했습니다.">
+<style>
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: #f8f9fa; color: #222; line-height: 1.7; }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge { display: inline-block; background: #f57c00; color: #fff; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+  h1 { font-size: 26px; font-weight: 900; line-height: 1.35; color: #1a1a1a; margin-bottom: 18px; word-break: keep-all; }
+  .hook { border-left: 5px solid #f57c00; padding: 14px 18px; background: #fff3e0; border-radius: 0 8px 8px 0; margin-bottom: 22px; font-size: 15px; }
+  .hook .highlight { color: #e65100; font-weight: 900; }
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 18px 20px; margin-bottom: 26px; }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+  h2 { font-size: 19px; font-weight: 900; color: #e65100; margin: 28px 0 12px; border-bottom: 2px solid #ffcc80; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #f57c00; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #fff3e0; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #e65100; }
+  .formula { background: #fffaf3; border: 1px solid #ffcc80; border-radius: 10px; padding: 16px 18px; margin-bottom: 20px; font-size: 14.5px; line-height: 1.9; word-break: keep-all; }
+  .formula b { color: #e65100; }
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #fff3e0; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #f57c00; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+  .deadline-box { border: 2px dashed #f57c00; background: #fff8ef; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+  .checklist { background: #fff3e0; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #ffcc80; color: #e65100; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #e65100; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+  .caution { background: #fff3e0; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+  .contact-box { background: #fff3e0; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #e65100; border-color: #ffcc80; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  .hashtags { font-size: 13px; color: #e65100; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-10-27-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="유족연금 수급 순위 — 유족 범위와 가입기간별 지급률 비교">
+<meta property="og:description" content="국민연금 유족연금의 수급 순위(배우자·자녀·부모·손자녀·조부모), 유족 범위의 나이·장애 요건, 가입기간별 지급률 40·50·60%, 사망자 요건과 중복 급여 조정을 2026년 기준으로 정리했습니다.">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-10-27-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-10-27T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-27T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-10-27-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-10-27-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "유족연금 수급 순위 — 유족 범위와 가입기간별 지급률 비교", "description": "국민연금 유족연금의 수급 순위(배우자·자녀·부모·손자녀·조부모), 유족 범위의 나이·장애 요건, 가입기간별 지급률 40·50·60%, 사망자 요건과 중복 급여 조정을 2026년 기준으로 정리했습니다.", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-10-27", "dateModified": "2026-10-27", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-GyFXAvGw6TskYQ5x"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-ZL2KaRsLAk3Ly1Ik"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-WjaoW3Jzgq4B6IUW"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 노후 · 국민연금 · 국민연금공단</div>
+  <div class="section-badge">연금</div>
+
+  <h1>유족연금 수급 순위 — 유족 범위와 가입기간별 지급률 비교</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대체로 이런 상황입니다.
+    <span class="highlight">가족이 국민연금에 가입했거나 연금을 받다가 사망해 유족연금을 알아보는 경우</span>,
+    <span class="highlight">배우자 외에 자녀·부모도 받을 수 있는지 궁금한 경우</span>,
+    <span class="highlight">연금이 얼마나 나오는지 구조를 알고 싶은 경우</span>입니다.
+    핵심은 세 가지입니다.
+    하나는 <span class="highlight">유족연금은 순위가 가장 높은 한 사람에게 지급된다는 점</span>,
+    둘째는 <span class="highlight">금액이 사망자의 기본연금액에 가입기간별 지급률(40·50·60%)을 곱해 정해진다는 점</span>,
+    셋째는 <span class="highlight">사망자가 일정한 가입 요건을 갖추지 못하면 유족연금 대신 사망일시금만 나온다는 점</span>입니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>이것만 알면 됩니다</h2>
+    <ul>
+      <li>유족 순위는 <b>배우자 → 자녀 → 부모 → 손자녀 → 조부모</b> 순이며, 최우선 순위자 한 사람이 받습니다.</li>
+      <li>지급률은 사망자 가입기간 <b>10년 미만 40%, 10년 이상 20년 미만 50%, 20년 이상 60%</b>로 안내됩니다.</li>
+      <li>유족연금액은 <b>기본연금액 × 지급률 + 부양가족연금액</b> 구조이며, 2026년 1월부터 연금액이 2.1% 인상된 것으로 안내됩니다.</li>
+      <li>본인 노령연금과 유족연금이 겹치면 <b>하나를 선택</b>해야 하며, 조정 방식은 공단 상담으로 확인하는 편이 안전합니다.</li>
+    </ul>
+  </div>
+
+  <h2>유족연금이란</h2>
+  <p>유족연금은 국민연금 가입자 또는 가입자였던 사람, 노령연금·장애연금 수급자가 사망했을 때 그 사람이 생계를 책임지던 유족의 생활을 보장하기 위해 지급하는 연금입니다. 일시금이 아니라 매월 지급되는 연금이라는 점에서 사망일시금과 구별됩니다. 아래 수치는 국민연금공단 안내를 정리한 2차 자료를 바탕으로 했으므로, 실제 수급권 판정은 공단에서 확인해야 합니다.</p>
+
+  <h2>수급 순위와 유족 범위</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>순위</th><th>유족</th><th>인정 요건</th></tr>
+    <tr><td>1순위</td><td>배우자(사실혼 포함)</td><td>혼인 관계 또는 사실혼 관계가 확인되어야 합니다.</td></tr>
+    <tr><td>2순위</td><td>자녀</td><td>25세 미만이거나 장애등급 2급 이상이어야 합니다.</td></tr>
+    <tr><td>3순위</td><td>부모(배우자의 부모 포함)</td><td>60세 이상이거나 장애등급 2급 이상이어야 합니다.</td></tr>
+    <tr><td>4순위</td><td>손자녀</td><td>19세 미만이거나 장애등급 2급 이상이어야 합니다.</td></tr>
+    <tr><td>5순위</td><td>조부모(배우자의 조부모 포함)</td><td>60세 이상이거나 장애등급 2급 이상이어야 합니다.</td></tr>
+  </table>
+  </div>
+  <p>순위가 앞선 유족이 있으면 뒤 순위는 받지 못합니다. 예를 들어 배우자가 있으면 자녀가 있어도 연금은 배우자에게 지급되고, 자녀는 부양가족연금액의 대상이 되는 식입니다. 수급권자가 재혼하거나 사망하는 등 자격을 잃으면 다음 순위 유족에게 수급권이 넘어갈 수 있는데, 구체적 승계 조건은 공단에서 확인하세요.</p>
+
+  <h2>사망자가 갖춰야 하는 요건</h2>
+  <p>유족연금이 나오려면 사망자가 아래 중 하나에 해당해야 합니다. 요건을 채우지 못하면 유족연금 대신 사망일시금을 받게 됩니다.</p>
+  <ul style="padding-left:20px;margin-bottom:14px;font-size:14.5px;line-height:1.9;">
+    <li>노령연금 수급권자였던 경우</li>
+    <li>장애등급 2급 이상의 장애연금 수급권자였던 경우</li>
+    <li>가입기간이 10년 이상이었던 경우</li>
+    <li>가입 중 사망했고, 가입대상 기간 중 보험료 납부 기간이 일정 비율 이상인 경우(납부 비율의 세부 기준은 공단 안내 확인 필요)</li>
+  </ul>
+
+  <h2>가입기간별 지급률과 금액 구조</h2>
+  <div class="formula">
+    <b>유족연금액</b> = 사망자 기본연금액 × 지급률 + 부양가족연금액<br>
+    지급률: 가입기간 10년 미만 <b>40%</b> · 10년 이상 20년 미만 <b>50%</b> · 20년 이상 <b>60%</b><br>
+    예시(가정): 기본연금액 월 100만원, 가입기간 20년 이상 → 100만원 × 60% = <b>월 60만원</b>(부양가족연금액 별도)
+  </div>
+  <p>위 예시는 구조를 보여주기 위한 가정입니다. 실제 기본연금액은 가입 기간 동안의 소득과 가입기간, 연금액 재평가에 따라 사람마다 다릅니다. 또한 유족연금액은 사망자가 받고 있던(받을 수 있었던) 노령연금액을 넘지 않는 구조로 안내됩니다.</p>
+
+  <h2>중복 급여와 지급 정지</h2>
+  <p>유족이 본인의 노령연금이나 다른 연금 수급권도 가지고 있으면 중복해서 전액을 받을 수 없습니다. 일반적으로 두 급여 중 하나를 선택하고, 선택하지 않은 쪽 연금의 일부(안내 자료에서는 30%)를 더해 받을 수 있다고 설명하지만, 출처마다 설명이 달라 정확한 비율은 공단 상담으로 확인해야 합니다. 배우자가 재혼하면 수급권이 소멸하고, 일정 연령 미만의 배우자는 수급권 취득 후 일정 기간이 지나 소득이 생기면 지급이 정지될 수 있다는 안내도 있으니 해당되는지 따져 보세요.</p>
+
+  <h2>청구 확인 순서</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text">사망자의 가입 이력과 연금 수급 여부를 국민연금공단에서 확인합니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text">내가 유족 순위 중 어디에 해당하는지, 나이·장애 요건을 충족하는지 따져 봅니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text">사망진단서·가족관계증명서 등 서류를 갖춰 공단 지사 또는 온라인으로 청구합니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text">본인 노령연금 등이 있으면 중복 급여 선택 여부를 상담받습니다.</div></div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>기준 연도</h3>
+    <p>이 글은 2026년 안내 자료를 바탕으로 합니다. 연금액은 매년 소비자물가변동률에 따라 조정되며 2026년 1월에 2.1% 인상된 것으로 안내됩니다. 지급률과 유족 범위는 법 개정으로 바뀔 수 있으므로 청구 전에 현행 기준을 확인하세요.</p>
+  </div>
+
+  <div class="checklist">
+    <h2>확인 체크리스트</h2>
+    <div class="check-item"><span class="chk">□</span>사망자가 노령연금·장애연금 수급자였거나 가입기간 요건을 갖췄는가</div>
+    <div class="check-item"><span class="chk">□</span>내가 유족 순위에서 가장 앞선 사람인가</div>
+    <div class="check-item"><span class="chk">□</span>자녀·부모·손자녀의 나이와 장애등급 요건을 확인했는가</div>
+    <div class="check-item"><span class="chk">□</span>본인 연금과의 중복 급여 선택 여부를 상담했는가</div>
+    <div class="check-item"><span class="chk">□</span>사망진단서·가족관계증명서 등 서류를 갖췄는가</div>
+  </div>
+
+  <div class="caution">
+    <div class="caution-item">⚠ 지급률 40·50·60%와 유족 범위는 2차 자료와 일반 안내에 근거하며, 국민연금공단 공식 페이지로 재확인해야 합니다.</div>
+    <div class="caution-item">⚠ 중복 급여 조정 비율과 재혼·소득 발생 시 지급 정지 조건은 출처마다 설명이 달라 확정값으로 쓰지 마세요.</div>
+    <div class="caution-item">⚠ 유족연금 요건에 미달하면 사망일시금으로 처리될 수 있어, 청구 전 가입 이력 확인이 먼저입니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>문의처</h2>
+    <div class="contact-row"><span class="contact-label">국민연금공단 콜센터:</span> 1355</div>
+    <div class="contact-row"><span class="contact-label">온라인:</span> 국민연금공단(nps.or.kr) 내연금 조회</div>
+    <div class="contact-row"><span class="contact-label">방문:</span> 가까운 국민연금공단 지사</div>
+  </div>
+
+  <div class="opinion-section">
+    <h2>전문가 찬반 론평</h2>
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>긍정 평가</h3>
+        <div class="opinion-card"><p class="quote">"가장이 사망한 뒤에도 평생 연금 형태로 생활비를 받을 수 있어 가족의 소득 단절을 완화한다."</p><p class="author">— 노후소득 보장 시각</p></div>
+        <div class="opinion-card"><p class="quote">"순위가 법에 정해져 있어 유족 간 분쟁 소지가 줄어든다."</p><p class="author">— 제도 명확성 시각</p></div>
+      </div>
+      <div class="opinion-con">
+        <h3>우려 지점</h3>
+        <div class="opinion-card"><p class="quote">"본인 연금과 겹치면 하나를 고르는 구조라 체감 혜택이 기대보다 작을 수 있다."</p><p class="author">— 중복 조정 시각</p></div>
+        <div class="opinion-card"><p class="quote">"가입 요건을 못 채우면 일시금만 나와 사각지대가 생긴다는 지적이 있다."</p><p class="author">— 사각지대 시각</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #유족연금 #국민연금 #국민연금공단 #사망일시금 #수급순위
+  </div>
+
+  <div class="disclaimer">
+    이 글은 국민연금공단 관련 공개 안내와 2차 자료를 바탕으로 작성되었으며 세부 수치는 공단 원문으로 재확인하지 못했습니다. 금액과 기준은 변경될 수 있습니다. 실제 수급 여부와 금액은 국민연금공단에서 확인하시기 바랍니다.
+  </div>
+
+  <div class="written">작성일 2026-10-27 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
