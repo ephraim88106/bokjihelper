@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>조기노령연금 감액률 — 1년당 6% 감액과 연기연금 7.2% 가산 비교</title>
+<meta name="description" content="조기노령연금 감액률(1년 앞당길 때 6%, 최대 30%)과 연기연금 가산율(연 7.2%, 최대 36%), 수급 개시연령, 소득 있는 업무 종사 시 지급 정지와 신청 순서를 2026년 기준으로 정리했습니다.">
+<style>
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: #f8f9fa; color: #222; line-height: 1.7; }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge { display: inline-block; background: #f57c00; color: #fff; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+  h1 { font-size: 26px; font-weight: 900; line-height: 1.35; color: #1a1a1a; margin-bottom: 18px; word-break: keep-all; }
+  .hook { border-left: 5px solid #f57c00; padding: 14px 18px; background: #fff3e0; border-radius: 0 8px 8px 0; margin-bottom: 22px; font-size: 15px; }
+  .hook .highlight { color: #e65100; font-weight: 900; }
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 18px 20px; margin-bottom: 26px; }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+  h2 { font-size: 19px; font-weight: 900; color: #e65100; margin: 28px 0 12px; border-bottom: 2px solid #ffcc80; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #f57c00; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #fff3e0; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #e65100; }
+  .formula { background: #fffaf3; border: 1px solid #ffcc80; border-radius: 10px; padding: 16px 18px; margin-bottom: 20px; font-size: 14.5px; line-height: 1.9; word-break: keep-all; }
+  .formula b { color: #e65100; }
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #fff3e0; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #f57c00; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+  .deadline-box { border: 2px dashed #f57c00; background: #fff8ef; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+  .checklist { background: #fff3e0; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #ffcc80; color: #e65100; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #e65100; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+  .caution { background: #fff3e0; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+  .contact-box { background: #fff3e0; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #e65100; border-color: #ffcc80; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  .hashtags { font-size: 13px; color: #e65100; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-10-28-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="조기노령연금 감액률 — 1년당 6% 감액과 연기연금 7.2% 가산 비교">
+<meta property="og:description" content="조기노령연금 감액률(1년 앞당길 때 6%, 최대 30%)과 연기연금 가산율(연 7.2%, 최대 36%), 수급 개시연령, 소득 있는 업무 종사 시 지급 정지와 신청 순서를 2026년 기준으로 정리했습니다.">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-10-28-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-10-28T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-10-28T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-10-28-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-10-28-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "조기노령연금 감액률 — 1년당 6% 감액과 연기연금 7.2% 가산 비교", "description": "조기노령연금 감액률(1년 앞당길 때 6%, 최대 30%)과 연기연금 가산율(연 7.2%, 최대 36%), 수급 개시연령, 소득 있는 업무 종사 시 지급 정지와 신청 순서를 2026년 기준으로 정리했습니다.", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-10-28", "dateModified": "2026-10-28", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-GyFXAvGw6TskYQ5x"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-ZL2KaRsLAk3Ly1Ik"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-WjaoW3Jzgq4B6IUW"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 노후 · 국민연금 · 국민연금공단</div>
+  <div class="section-badge">연금</div>
+
+  <h1>조기노령연금 감액률 — 1년당 6% 감액과 연기연금 7.2% 가산 비교</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대체로 이런 상황입니다.
+    <span class="highlight">정년 전에 일을 그만두고 국민연금을 몇 년 앞당겨 받을지 고민하는 경우</span>,
+    <span class="highlight">받는 시기를 미루면 얼마나 늘어나는지 비교하려는 경우</span>,
+    <span class="highlight">조기 수령 후 일을 계속하면 연금이 깎이는지 궁금한 경우</span>입니다.
+    핵심은 세 가지입니다.
+    하나는 <span class="highlight">정상 개시연령보다 1년 앞당길 때마다 6%(월 0.5%)씩, 최대 5년 30%가 감액된다는 점</span>,
+    둘째는 <span class="highlight">감액률이 평생 유지된다는 점</span>,
+    셋째는 <span class="highlight">반대로 미루면 1년에 7.2%씩, 최대 36%가 가산된다는 점</span>입니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>이것만 알면 됩니다</h2>
+    <ul>
+      <li>조기노령연금은 가입기간 <b>10년 이상</b>이면서 정상 개시연령 <b>5년 전</b>부터 앞당겨 받는 제도입니다.</li>
+      <li>감액률은 1년당 <b>6%</b>, 5년 앞당기면 <b>30%</b>이며 한 번 정해지면 바뀌지 않습니다.</li>
+      <li>연기연금은 최대 5년 미룰 수 있고 1년당 <b>7.2%</b>, 최대 <b>36%</b>가 더해집니다.</li>
+      <li>조기노령연금은 <b>소득 있는 업무에 종사하지 않을 때</b> 청구할 수 있고, 수급 중 소득이 생기면 지급이 정지될 수 있습니다.</li>
+    </ul>
+  </div>
+
+  <h2>정상 개시연령부터 확인</h2>
+  <p>감액은 "정상 개시연령"을 기준으로 계산합니다. 노령연금 개시연령은 출생연도에 따라 단계적으로 올라가 1969년생 이후는 65세입니다. 아래 표는 일반 안내를 정리한 것이며, 본인 연령은 국민연금공단 내연금에서 확인하세요.</p>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>출생연도</th><th>정상 개시연령</th><th>조기 수령 가능 시작</th></tr>
+    <tr><td>1953~1956년생</td><td>61세</td><td>56세</td></tr>
+    <tr><td>1957~1960년생</td><td>62세</td><td>57세</td></tr>
+    <tr><td>1961~1964년생</td><td>63세</td><td>58세</td></tr>
+    <tr><td>1965~1968년생</td><td>64세</td><td>59세</td></tr>
+    <tr><td>1969년생 이후</td><td>65세</td><td>60세</td></tr>
+  </table>
+  </div>
+
+  <h2>조기 수령 감액률 계산</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>앞당기는 기간</th><th>감액률</th><th>정상 월 100만원 기준</th></tr>
+    <tr><td>1년</td><td>6%</td><td>월 94만원</td></tr>
+    <tr><td>2년</td><td>12%</td><td>월 88만원</td></tr>
+    <tr><td>3년</td><td>18%</td><td>월 82만원</td></tr>
+    <tr><td>4년</td><td>24%</td><td>월 76만원</td></tr>
+    <tr><td>5년</td><td>30%</td><td>월 70만원</td></tr>
+  </table>
+  </div>
+  <div class="formula">
+    <b>조기노령연금액</b> = 정상 노령연금액 × (1 − 0.06 × 앞당긴 연수)<br>
+    월 단위로는 앞당긴 개월 수 × <b>0.5%</b>씩 줄어듭니다.<br>
+    예시(가정): 정상 월 100만원, 3년 6개월 앞당김 → 42개월 × 0.5% = 21% 감액 → <b>월 79만원</b>
+  </div>
+  <p>위 금액은 구조를 보여주기 위한 가정입니다. 조기 수령은 더 일찍, 더 오래 받는 대신 매달 받는 금액이 적습니다. 이 감액률은 수급 기간 내내 유지되며, 정상 개시연령이 되었다고 원래 금액으로 돌아가지 않습니다.</p>
+
+  <h2>연기연금 가산율과의 차이</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>구분</th><th>조기 수령</th><th>연기 수령</th></tr>
+    <tr><td>변동 폭</td><td>1년당 −6% (월 −0.5%)</td><td>1년당 +7.2% (월 +0.6%)</td></tr>
+    <tr><td>최대</td><td>5년 −30%</td><td>5년 +36%</td></tr>
+    <tr><td>요건</td><td>가입기간 10년 이상, 소득 있는 업무 미종사</td><td>정상 개시연령 도달, 전부 또는 일부 연기 가능</td></tr>
+    <tr><td>정상 월 100만원 기준 최대</td><td>월 70만원</td><td>월 136만원</td></tr>
+  </table>
+  </div>
+  <p>총수령액이 같아지는 시점(손익분기)은 연령별로 계산이 달라지며, 일반적으로 조기 수령은 80세 안팎 이전에, 연기 수령은 80대 중반 이후에 유리해진다고 설명하는 자료가 많습니다. 건강 상태와 다른 소득, 기대수명에 따라 결과가 달라지므로 단정하기 어렵습니다.</p>
+
+  <h2>소득이 있으면 어떻게 되나</h2>
+  <p>조기노령연금은 소득 있는 업무에 종사하지 않을 때 청구할 수 있고, 수급 중 소득 있는 업무에 종사하면 지급이 정지되거나 소득 수준에 따라 조정될 수 있다고 안내됩니다. 2026년 A값은 3,193,511원으로 소개하는 자료가 있고, 정상 수령자의 소득활동 감액 기준이 2026년 중 완화됐다는 설명도 있으나 조기노령연금의 소득 기준과 정확히 같은지는 2차 자료만으로 확인되지 않았습니다. 일을 계속할 예정이라면 청구 전에 반드시 공단에 확인하세요.</p>
+
+  <h2>청구 확인 순서</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text">내연금에서 가입기간(10년 이상 여부)과 정상 개시연령을 확인합니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text">예상 연금액을 조회해 앞당기는 연수별 감액 후 금액을 비교합니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text">현재 소득 활동 여부와 앞으로의 근로 계획이 조기 수령 요건에 맞는지 상담받습니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text">원하는 시기가 정해지면 신분증과 통장 사본을 갖춰 공단 지사나 온라인으로 청구합니다.</div></div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>기준 연도</h3>
+    <p>이 글은 2026년 안내 자료를 바탕으로 합니다. 감액률·가산율은 법에 정해진 값이지만 개시연령, A값, 소득 기준은 해마다 또는 법 개정으로 바뀔 수 있으므로 청구 전에 현행 기준을 확인하세요.</p>
+  </div>
+
+  <div class="checklist">
+    <h2>확인 체크리스트</h2>
+    <div class="check-item"><span class="chk">□</span>가입기간이 10년 이상인가</div>
+    <div class="check-item"><span class="chk">□</span>내 정상 개시연령과 앞당기는 연수를 계산했는가</div>
+    <div class="check-item"><span class="chk">□</span>감액 후 월 금액으로 생활비가 충당되는가</div>
+    <div class="check-item"><span class="chk">□</span>청구 후 일을 계속할 경우 소득 기준을 확인했는가</div>
+    <div class="check-item"><span class="chk">□</span>연기 수령과 총수령액을 비교해 봤는가</div>
+  </div>
+
+  <div class="caution">
+    <div class="caution-item">⚠ 감액률 6%·가산율 7.2%는 여러 자료에서 일치하지만 국민연금공단 원문으로 직접 재확인하지 못했습니다.</div>
+    <div class="caution-item">⚠ 개시연령 표와 소득 기준(A값)은 2차 자료 기반이므로 확정값으로 쓰지 마세요.</div>
+    <div class="caution-item">⚠ 조기노령연금은 감액이 평생 유지되고, 일부 자료는 기초연금 수급에도 영향을 줄 수 있다고 설명하므로 청구 전에 상담이 필요합니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>문의처</h2>
+    <div class="contact-row"><span class="contact-label">국민연금공단 콜센터:</span> 1355</div>
+    <div class="contact-row"><span class="contact-label">온라인:</span> 국민연금공단(nps.or.kr) 내연금 조회</div>
+    <div class="contact-row"><span class="contact-label">방문:</span> 가까운 국민연금공단 지사</div>
+  </div>
+
+  <div class="opinion-section">
+    <h2>전문가 찬반 론평</h2>
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>긍정 평가</h3>
+        <div class="opinion-card"><p class="quote">"퇴직 후 소득 공백기에 연금을 앞당겨 쓸 수 있어 은퇴 설계의 선택지가 넓어진다."</p><p class="author">— 은퇴 설계 시각</p></div>
+        <div class="opinion-card"><p class="quote">"연기연금이 있어 오래 일하는 사람은 더 큰 연금으로 보상받을 수 있다."</p><p class="author">— 선택권 시각</p></div>
+      </div>
+      <div class="opinion-con">
+        <h3>우려 지점</h3>
+        <div class="opinion-card"><p class="quote">"감액이 평생 이어져 장수할수록 손해가 커지고 노후 빈곤 위험이 높아질 수 있다."</p><p class="author">— 노후 소득 시각</p></div>
+        <div class="opinion-card"><p class="quote">"소득 기준과 감액 규정이 복잡해 청구 후에야 불이익을 아는 경우가 있다."</p><p class="author">— 제도 이해도 시각</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #조기노령연금 #연기연금 #국민연금 #국민연금공단 #노령연금
+  </div>
+
+  <div class="disclaimer">
+    이 글은 국민연금공단 관련 공개 안내와 2차 자료를 바탕으로 작성되었으며 세부 수치는 공단 원문으로 재확인하지 못했습니다. 금액과 기준은 변경될 수 있습니다. 실제 수급 여부와 금액은 국민연금공단에서 확인하시기 바랍니다.
+  </div>
+
+  <div class="written">작성일 2026-10-28 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
