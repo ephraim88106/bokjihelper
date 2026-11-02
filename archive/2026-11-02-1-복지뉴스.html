@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>실업크레딧 언제까지 — 구직급여 종료 후 납부 시기와 연금 가입기간 산입</title>
+<meta name="description" content="실업크레딧은 구직급여를 받는 동안 국민연금 보험료의 75%를 지원하고 본인이 25%를 내면 해당 기간을 가입기간으로 인정하는 제도입니다. 인정소득 산정, 지원 기간, 신청 시기와 제외 기준을 정리했습니다.">
+<style>
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: #f8f9fa; color: #222; line-height: 1.7; }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge { display: inline-block; background: #f57c00; color: #fff; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+  h1 { font-size: 26px; font-weight: 900; line-height: 1.35; color: #1a1a1a; margin-bottom: 18px; word-break: keep-all; }
+  .hook { border-left: 5px solid #f57c00; padding: 14px 18px; background: #fff3e0; border-radius: 0 8px 8px 0; margin-bottom: 22px; font-size: 15px; }
+  .hook .highlight { color: #e65100; font-weight: 900; }
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 18px 20px; margin-bottom: 26px; }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+  h2 { font-size: 19px; font-weight: 900; color: #e65100; margin: 28px 0 12px; border-bottom: 2px solid #ffcc80; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #f57c00; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #fff3e0; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #e65100; }
+  .formula { background: #fffaf3; border: 1px solid #ffcc80; border-radius: 10px; padding: 16px 18px; margin-bottom: 20px; font-size: 14.5px; line-height: 1.9; word-break: keep-all; }
+  .formula b { color: #e65100; }
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #fff3e0; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #f57c00; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+  .deadline-box { border: 2px dashed #f57c00; background: #fff8ef; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+  .checklist { background: #fff3e0; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #ffcc80; color: #e65100; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #e65100; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+  .caution { background: #fff3e0; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+  .contact-box { background: #fff3e0; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #e65100; border-color: #ffcc80; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  .hashtags { font-size: 13px; color: #e65100; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-11-02-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="실업크레딧 언제까지 — 구직급여 종료 후 납부 시기와 연금 가입기간 산입">
+<meta property="og:description" content="실업크레딧은 구직급여를 받는 동안 국민연금 보험료의 75%를 지원하고 본인이 25%를 내면 해당 기간을 가입기간으로 인정하는 제도입니다. 인정소득 산정, 지원 기간, 신청 시기와 제외 기준을 정리했습니다.">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-11-02-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-11-02T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-11-02T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-11-02-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-11-02-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "실업크레딧 언제까지 — 구직급여 종료 후 납부 시기와 연금 가입기간 산입", "description": "실업크레딧은 구직급여를 받는 동안 국민연금 보험료의 75%를 지원하고 본인이 25%를 내면 해당 기간을 가입기간으로 인정하는 제도입니다. 인정소득 산정, 지원 기간, 신청 시기와 제외 기준을 정리했습니다.", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-11-02", "dateModified": "2026-11-02", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-GyFXAvGw6TskYQ5x"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-ZL2KaRsLAk3Ly1Ik"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-WjaoW3Jzgq4B6IUW"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 국민연금 · 실업크레딧 · 국민연금공단</div>
+  <div class="section-badge">국민연금</div>
+
+  <h1>실업크레딧 언제까지 — 구직급여 종료 후 납부 시기와 연금 가입기간 산입</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대체로 이런 상황입니다.
+    <span class="highlight">퇴사 후 구직급여를 받으면서 국민연금 보험료 납부가 부담스러운 경우</span>,
+    <span class="highlight">납부예외로 두면 가입기간이 끊기는 것이 걱정인 경우</span>,
+    <span class="highlight">실업크레딧을 언제까지 어디서 챙겨야 하는지 확인하려는 경우</span>입니다.
+    핵심은 세 가지입니다.
+    하나는 <span class="highlight">구직급여 수급자에게만 해당한다는 점</span>,
+    둘째는 <span class="highlight">보험료의 75%를 지원하되 인정소득 상한이 있다는 점</span>,
+    셋째는 <span class="highlight">자동 적용이 아니라 본인이 별도로 챙겨야 한다는 점</span>입니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>이것만 알면 됩니다</h2>
+    <ul>
+      <li>실업크레딧은 <b>구직급여 수급자</b>가 국민연금 보험료의 <b>75%를 지원</b>받고 본인은 <b>25%</b>만 내는 제도입니다.</li>
+      <li>보험료 산정 기준이 되는 인정소득은 <b>실직 전 평균소득의 50%</b>이며 상한은 <b>월 70만원</b>으로 안내됩니다.</li>
+      <li>지원 기간은 <b>생애 최대 12개월</b>이며 구직급여를 받는 기간 안에서만 인정됩니다.</li>
+      <li>대상 연령은 <b>만 18세 이상 60세 미만</b>이고 재산·소득이 일정 기준을 넘으면 제외됩니다.</li>
+      <li>자동 적용되지 않으므로 <b>국민연금공단 또는 고용센터 안내에 따라 별도 신청</b>이 필요합니다.</li>
+    </ul>
+  </div>
+
+  <h2>실업크레딧이란</h2>
+  <p>실직하면 소득이 끊기지만 국민연금 보험료는 그대로 부담해야 합니다. 보험료를 내지 못해 납부예외로 두면 그 기간은 가입기간에 들어가지 않아 나중에 노령연금 수급에 필요한 가입기간이 모자라거나 연금액이 줄어들 수 있습니다. 실업크레딧은 구직급여를 받는 동안 보험료의 상당 부분을 국가가 지원해 이런 공백을 줄이기 위한 제도입니다. 지원받아 납부한 기간은 가입기간으로 인정되는 것으로 안내됩니다.</p>
+
+  <h2>보험료는 어떻게 계산되나</h2>
+  <div class="formula">
+    <b>인정소득</b> = 실직 전 평균소득(안내 자료상 직전 3개월)의 <b>50%</b>, 상한 <b>월 70만원</b><br>
+    <b>월 보험료</b> = 인정소득 × 보험료율 <b>9%</b><br>
+    <b>지원액</b> = 월 보험료의 <b>75%</b> &nbsp;/&nbsp; <b>본인부담</b> = 월 보험료의 <b>25%</b><br>
+    상한 예시: 700,000원 × 9% = 63,000원 → 본인부담 약 <b>15,750원</b>, 지원 약 <b>47,250원</b>
+  </div>
+  <p>위 예시는 구조를 보여 주는 가정 계산입니다. 일부 자료는 보험료율을 9.5%로 적용한다고 서술하고 있어 실제 금액은 달라질 수 있으며, 본인의 인정소득과 부담액은 공단에서 확인하는 것이 안전합니다.</p>
+
+  <h2>지원 기간과 신청 시기 정리</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>구분</th><th>안내되는 내용</th></tr>
+    <tr><td>지원 비율</td><td>보험료의 75%, 본인부담 25%</td></tr>
+    <tr><td>지원 기간</td><td>생애 최대 12개월, 구직급여 수급기간 안에서만 인정</td></tr>
+    <tr><td>신청 시기</td><td>구직급여 수급 중 신청이 원칙이며, 종료일 다음 달 15일 이내로 안내하는 자료도 있음</td></tr>
+    <tr><td>신청 방법</td><td>자동 적용 아님, 별도 신청 필요(공단 지사·고용센터 안내 확인)</td></tr>
+  </table>
+  </div>
+  <p>신청 기한은 출처마다 표현이 달라 구직급여가 끝난 뒤 늦게 알아보면 놓칠 수 있습니다. 구직급여 수급자격이 인정된 직후 국민연금공단(1355)에 먼저 문의하는 편이 안전합니다.</p>
+
+  <h2>지원 요건과 제외되는 경우</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text">구직급여를 받고 있는 만 18세 이상 60세 미만이어야 합니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text">국민연금 가입 이력이 있어야 하며 안내 자료상 보험료 납부 이력 1개월 이상 등이 거론됩니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text">재산세 과세표준 합계가 6억원을 넘거나 사업·근로소득을 제외한 연간 종합소득이 1,680만원을 넘으면 제외된다고 안내됩니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text">본인부담 25%를 납부해야 해당 기간이 가입기간으로 이어집니다. 납부 방식과 미납 시 처리는 공단 안내를 확인하세요.</div></div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>기준 연도와 확인 시점</h3>
+    <p>이 글의 수치는 2026년 시점의 공개 안내를 바탕으로 한 값입니다. 재산·소득 제외 기준은 2024년 기준으로 표기된 자료가 많아 이후 변경 여부를 확인하지 못했습니다. 신청 전 국민연금공단에서 최신 기준을 확인하세요.</p>
+  </div>
+
+  <div class="checklist">
+    <h2>확인 체크리스트</h2>
+    <div class="check-item"><span class="chk">□</span>구직급여 수급자격이 인정되었는가</div>
+    <div class="check-item"><span class="chk">□</span>만 60세 미만이며 국민연금 가입 이력이 있는가</div>
+    <div class="check-item"><span class="chk">□</span>재산세 과세표준과 종합소득이 제외 기준 이하인가</div>
+    <div class="check-item"><span class="chk">□</span>구직급여 종료 전에 공단 또는 고용센터에 신청 가능 시기를 문의했는가</div>
+    <div class="check-item"><span class="chk">□</span>본인부담 25%의 납부 방법을 확인했는가</div>
+  </div>
+
+  <div class="caution">
+    <div class="caution-item">⚠ 인정소득 비율, 상한, 보험료율, 제외 재산·소득 기준과 신청 기한은 공단 홈페이지와 2차 자료를 교차한 내용이며 법령 원문으로 재확인하지 못했습니다.</div>
+    <div class="caution-item">⚠ 지원 기간은 생애 합계 최대 12개월로 안내되므로 한 번 사용하면 다음 실직 때 남은 기간만 쓸 수 있습니다.</div>
+    <div class="caution-item">⚠ 가입기간으로 인정되는 구체 방식(연금액 산정 반영 등)은 개인별로 달라 공단 상담이 필요합니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>문의처</h2>
+    <div class="contact-row"><span class="contact-label">국민연금공단 고객센터:</span> 1355</div>
+    <div class="contact-row"><span class="contact-label">고용노동부 고객상담센터:</span> 1350</div>
+    <div class="contact-row"><span class="contact-label">방문:</span> 국민연금공단 지사, 관할 고용복지플러스센터</div>
+  </div>
+
+  <div class="opinion-section">
+    <h2>전문가 찬반 론평</h2>
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>긍정 평가</h3>
+        <div class="opinion-card"><p class="quote">"실직 기간에 가입기간이 끊기는 문제를 줄여 노후소득 공백을 완화한다."</p><p class="author">— 노후소득 보장 시각</p></div>
+        <div class="opinion-card"><p class="quote">"본인부담을 25%로 낮춰 구직급여 수급 중에도 보험료 납부 부담을 덜어 준다."</p><p class="author">— 사회안전망 시각</p></div>
+      </div>
+      <div class="opinion-con">
+        <h3>우려 지점</h3>
+        <div class="opinion-card"><p class="quote">"자동 적용이 아니라 본인이 알아서 신청해야 해서 제도를 모르면 혜택을 받지 못한다."</p><p class="author">— 제도 접근성 시각</p></div>
+        <div class="opinion-card"><p class="quote">"지원 기간이 생애 12개월로 제한되고 구직급여를 받지 못하는 실직자는 제외된다."</p><p class="author">— 사각지대 시각</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #실업크레딧 #국민연금 #구직급여 #국민연금공단 #가입기간 #고용보험
+  </div>
+
+  <div class="disclaimer">
+    이 글은 국민연금공단 공개 안내와 언론·민간 정리 자료를 바탕으로 작성되었으며 수치와 기한은 원문으로 재확인하지 못했습니다. 금액과 기준은 변경될 수 있으니 반드시 국민연금공단(1355) 또는 고용노동부(1350)에서 확인하세요.
+  </div>
+
+  <div class="written">작성일 2026-11-02 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
