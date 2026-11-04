@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>유산·사산휴가 기간 언제까지 — 주수별 일수와 급여 청구 시기</title>
+<meta name="description" content="유산·사산휴가는 임신 중 유산이나 사산을 한 근로자가 임신 기간에 따라 5일에서 90일까지 쓰는 휴가입니다. 주수별 휴가 일수, 급여 지급 요건, 청구 서류와 기한을 정리했습니다.">
+<style>
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: #f8f9fa; color: #222; line-height: 1.7; }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge { display: inline-block; background: #f57c00; color: #fff; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+  h1 { font-size: 26px; font-weight: 900; line-height: 1.35; color: #1a1a1a; margin-bottom: 18px; word-break: keep-all; }
+  .hook { border-left: 5px solid #f57c00; padding: 14px 18px; background: #fff3e0; border-radius: 0 8px 8px 0; margin-bottom: 22px; font-size: 15px; }
+  .hook .highlight { color: #e65100; font-weight: 900; }
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 18px 20px; margin-bottom: 26px; }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+  h2 { font-size: 19px; font-weight: 900; color: #e65100; margin: 28px 0 12px; border-bottom: 2px solid #ffcc80; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #f57c00; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #fff3e0; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #e65100; }
+  .formula { background: #fffaf3; border: 1px solid #ffcc80; border-radius: 10px; padding: 16px 18px; margin-bottom: 20px; font-size: 14.5px; line-height: 1.9; word-break: keep-all; }
+  .formula b { color: #e65100; }
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #fff3e0; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #f57c00; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+  .deadline-box { border: 2px dashed #f57c00; background: #fff8ef; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+  .checklist { background: #fff3e0; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #ffcc80; color: #e65100; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #e65100; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+  .caution { background: #fff3e0; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+  .contact-box { background: #fff3e0; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #e65100; border-color: #ffcc80; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  .hashtags { font-size: 13px; color: #e65100; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-11-04-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="유산·사산휴가 기간 언제까지 — 주수별 일수와 급여 청구 시기">
+<meta property="og:description" content="유산·사산휴가는 임신 중 유산이나 사산을 한 근로자가 임신 기간에 따라 5일에서 90일까지 쓰는 휴가입니다. 주수별 휴가 일수, 급여 지급 요건, 청구 서류와 기한을 정리했습니다.">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-11-04-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-11-04T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-11-04T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-11-04-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-11-04-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "유산·사산휴가 기간 언제까지 — 주수별 일수와 급여 청구 시기", "description": "유산·사산휴가는 임신 중 유산이나 사산을 한 근로자가 임신 기간에 따라 5일에서 90일까지 쓰는 휴가입니다. 주수별 휴가 일수, 급여 지급 요건, 청구 서류와 기한을 정리했습니다.", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-11-04", "dateModified": "2026-11-04", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-GyFXAvGw6TskYQ5x"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-ZL2KaRsLAk3Ly1Ik"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-WjaoW3Jzgq4B6IUW"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 고용보험 · 유산·사산휴가 · 고용노동부</div>
+  <div class="section-badge">고용보험</div>
+
+  <h1>유산·사산휴가 기간 언제까지 — 주수별 일수와 급여 청구 시기</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대체로 이런 상황입니다.
+    <span class="highlight">임신 중 유산이나 사산을 겪고 회사에 얼마나 쉴 수 있는지 확인하려는 경우</span>,
+    <span class="highlight">쉬는 동안 임금이나 급여가 나오는지 알아보려는 경우</span>,
+    <span class="highlight">배우자의 유산·사산 휴가를 대신 알아보는 경우</span>입니다.
+    핵심은 세 가지입니다.
+    하나는 <span class="highlight">휴가 일수가 임신 주수에 따라 정해진다는 점</span>,
+    둘째는 <span class="highlight">근로자가 청구하면 사업주가 줄 의무가 있다는 점</span>,
+    셋째는 <span class="highlight">급여는 고용보험 요건을 채워야 별도로 받을 수 있다는 점</span>입니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>이것만 알면 됩니다</h2>
+    <ul>
+      <li>유산·사산휴가는 근로기준법 제74조에 근거하며, 근로자가 청구하면 사업주는 휴가를 주어야 합니다.</li>
+      <li>휴가 일수는 임신 <b>11주 이내 5일, 12~15주 10일, 16~21주 30일, 22~27주 60일, 28주 이상 90일</b>로 안내됩니다.</li>
+      <li>청구할 때는 <b>의료기관 진단서</b>(임신 기간 기재)를 첨부하는 것이 원칙입니다.</li>
+      <li>휴가급여는 고용보험 피보험 단위기간이 휴가 종료일 기준 <b>180일 이상</b>이어야 받을 수 있습니다.</li>
+      <li>급여 신청은 휴가 시작 후 1개월부터 가능하며 종료일부터 <b>12개월 이내</b>에 해야 합니다.</li>
+    </ul>
+  </div>
+
+  <h2>유산·사산휴가란</h2>
+  <p>유산·사산휴가는 임신 중이던 여성 근로자가 유산이나 사산을 했을 때 몸을 회복할 수 있도록 법으로 보장하는 휴가입니다. 출산전후휴가와 이름이 비슷하지만 별도 제도이며, 휴가 일수를 정하는 기준이 출산 시점이 아니라 유산·사산이 일어난 임신 주수입니다. 정규직·계약직·단시간 근로자를 가리지 않고 근로기준법이 적용되는 사업장이라면 청구할 수 있습니다.</p>
+  <p>청구 주체는 유산·사산을 한 본인이며, 청구를 하면 사업주는 거부할 수 없습니다. 인공임신중절로 인한 유산은 원칙적으로 대상에서 제외되지만, 모자보건법 제14조 제1항에 해당하는 사유가 있는 경우는 예외로 포함된다고 안내됩니다. 해당 여부는 진단서 내용과 담당 고용센터의 판단이 필요합니다.</p>
+
+  <h2>임신 주수별 휴가 일수</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>유산·사산 시점</th><th>휴가 일수</th></tr>
+    <tr><td>임신 11주 이내</td><td>유산·사산한 날부터 5일</td></tr>
+    <tr><td>임신 12주~15주</td><td>유산·사산한 날부터 10일</td></tr>
+    <tr><td>임신 16주~21주</td><td>유산·사산한 날부터 30일</td></tr>
+    <tr><td>임신 22주~27주</td><td>유산·사산한 날부터 60일</td></tr>
+    <tr><td>임신 28주 이상</td><td>유산·사산한 날부터 90일</td></tr>
+  </table>
+  </div>
+  <p>일수는 근로기준법 시행령 제43조에 따른 값으로 정리된 안내를 기준으로 했습니다. 휴가는 주말과 공휴일을 포함한 달력일 기준이며, 시작일을 태아가 사망한 날로 볼지 수술 등 치료를 받은 날로 볼지는 해석이 갈리므로 진단서에 적힌 날짜와 회사 인사팀 안내를 함께 확인하는 편이 안전합니다.</p>
+
+  <h2>쉬는 동안 임금과 급여는 어떻게 되나</h2>
+  <p>근로기준법 제74조는 일정 기간 동안 통상임금 수준의 지급을 보장하는 구조로 안내되며, 이와 별개로 고용보험법에 따른 출산전후(유산·사산)휴가급여가 있습니다. 두 가지가 겹치는 부분은 기업 규모와 우선지원대상기업 여부에 따라 지급 주체와 일수가 달라집니다. 우선지원대상기업이 아닌 경우에는 고용보험법 제76조에 따라 급여 지급 일수에 상한이 적용됩니다.</p>
+  <div class="formula">
+    <b>급여 월 상한</b>: 출처에 따라 <b>월 210만원</b>과 <b>월 220만원(2026년 1월 1일 시행)</b>이 함께 나옴<br>
+    <b>통상임금이 상한보다 높으면</b> 초과분은 회사가 근로자에게 지급하도록 안내됨<br>
+    <b>지급 주체와 일수</b>는 사업장 규모(우선지원대상기업 여부)에 따라 달라짐
+  </div>
+  <p>상한액은 출처 간 수치가 달라 이 글에서는 하나로 확정하지 않았습니다. 본인 사업장이 우선지원대상기업인지와 적용 상한은 고용24 안내와 관할 고용센터에서 확인하세요.</p>
+
+  <h2>휴가 청구와 급여 신청 순서</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text">의료기관에서 유산 또는 사산 진단서를 받습니다. 임신 기간(주수)이 기재되어 있어야 합니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text">회사에 유산·사산휴가 신청서와 진단서를 제출해 휴가를 청구합니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text">회사가 고용24에 휴가 확인서(출산전후휴가 또는 유산·사산휴가 확인서)를 먼저 제출해야 하므로 인사 담당자에게 요청해 둡니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text">휴가 시작 1개월 후부터 고용24 또는 관할 고용센터에 급여를 신청합니다. 30일 단위로 나누거나 종료 후 한꺼번에 할 수 있습니다.</div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-text">휴가 종료일로부터 12개월이 지나면 신청 기한이 끝나므로 서류를 미루지 않습니다.</div></div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>기준 연도와 확인 시점</h3>
+    <p>이 글의 일수와 신청 기한은 2026년 시점의 공개 안내와 2차 정리 자료를 바탕으로 한 값입니다. 급여 상한액은 출처마다 달라 확정하지 못했습니다. 시행령 원문 표와 고용24 안내는 직접 확인하지 못했으므로 청구 전 국가법령정보센터와 고용24에서 재확인하세요.</p>
+  </div>
+
+  <div class="checklist">
+    <h2>확인 체크리스트</h2>
+    <div class="check-item"><span class="chk">□</span>진단서에 임신 주수와 유산·사산 일자가 적혀 있는가</div>
+    <div class="check-item"><span class="chk">□</span>주수에 맞는 휴가 일수를 회사와 같은 기준으로 계산했는가</div>
+    <div class="check-item"><span class="chk">□</span>고용보험 피보험 단위기간이 180일 이상인가</div>
+    <div class="check-item"><span class="chk">□</span>회사가 휴가 확인서를 고용24에 제출했는가</div>
+    <div class="check-item"><span class="chk">□</span>휴가 종료일부터 12개월 안에 급여를 신청할 일정을 잡았는가</div>
+  </div>
+
+  <div class="caution">
+    <div class="caution-item">⚠ 주수별 휴가 일수는 시행령 원문 표가 아닌 정리 자료를 기준으로 했으므로 법령 원문으로 재확인이 필요합니다.</div>
+    <div class="caution-item">⚠ 급여 상한액(210만원·220만원)과 우선지원대상기업의 지급 구조는 출처 간 설명이 달라 확정하지 않았습니다.</div>
+    <div class="caution-item">⚠ 휴가 시작일 해석과 인공임신중절 예외 여부는 개별 사안에 따라 달라질 수 있어 고용센터 상담이 필요합니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>문의처</h2>
+    <div class="contact-row"><span class="contact-label">고용24 안내:</span> work24.go.kr</div>
+    <div class="contact-row"><span class="contact-label">고용노동부 고객상담센터:</span> 1350</div>
+    <div class="contact-row"><span class="contact-label">방문:</span> 관할 고용센터</div>
+  </div>
+
+  <div class="opinion-section">
+    <h2>전문가 찬반 론평</h2>
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>긍정 평가</h3>
+        <div class="opinion-card"><p class="quote">"유산·사산도 출산과 같은 신체 회복 기간이 필요하다는 점을 법으로 인정한 제도다."</p><p class="author">— 모성보호 시각</p></div>
+        <div class="opinion-card"><p class="quote">"주수별로 일수를 정해 두어 회사 재량에 따른 편차를 줄인다."</p><p class="author">— 노동권 시각</p></div>
+      </div>
+      <div class="opinion-con">
+        <h3>우려 지점</h3>
+        <div class="opinion-card"><p class="quote">"휴가를 청구하려면 진단서와 신청 절차가 필요해 정서적으로 힘든 시기에 부담이 된다."</p><p class="author">— 당사자 접근성 시각</p></div>
+        <div class="opinion-card"><p class="quote">"고용보험 가입기간이 짧거나 사업장 규모에 따라 급여 구조가 달라 체감 지원이 고르지 않다."</p><p class="author">— 사각지대 시각</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #유산사산휴가 #근로기준법 #출산전후휴가급여 #고용보험 #고용24 #모성보호
+  </div>
+
+  <div class="disclaimer">
+    이 글은 고용노동부·고용24 공개 안내와 민간 정리 자료를 바탕으로 작성되었으며 일수와 금액은 법령 원문으로 재확인하지 못했습니다. 기준은 변경될 수 있으니 반드시 고용노동부(1350) 또는 관할 고용센터에서 확인하세요.
+  </div>
+
+  <div class="written">작성일 2026-11-04 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
