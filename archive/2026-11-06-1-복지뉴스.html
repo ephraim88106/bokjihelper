@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>배우자 출산휴가 청구 기한 언제까지 — 출산일 120일 이내와 분할 사용</title>
+<meta name="description" content="배우자 출산휴가는 2025년 2월 23일부터 유급 20일로 늘고 청구 기한이 출산일부터 120일 이내로 바뀌었습니다. 분할 사용 횟수, 급여 지원 대상과 상한액, 확인 순서를 정리했습니다.">
+<style>
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: #f8f9fa; color: #222; line-height: 1.7; }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge { display: inline-block; background: #f57c00; color: #fff; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+  h1 { font-size: 26px; font-weight: 900; line-height: 1.35; color: #1a1a1a; margin-bottom: 18px; word-break: keep-all; }
+  .hook { border-left: 5px solid #f57c00; padding: 14px 18px; background: #fff3e0; border-radius: 0 8px 8px 0; margin-bottom: 22px; font-size: 15px; }
+  .hook .highlight { color: #e65100; font-weight: 900; }
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 18px 20px; margin-bottom: 26px; }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+  h2 { font-size: 19px; font-weight: 900; color: #e65100; margin: 28px 0 12px; border-bottom: 2px solid #ffcc80; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #f57c00; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #fff3e0; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #e65100; }
+  .formula { background: #fffaf3; border: 1px solid #ffcc80; border-radius: 10px; padding: 16px 18px; margin-bottom: 20px; font-size: 14.5px; line-height: 1.9; word-break: keep-all; }
+  .formula b { color: #e65100; }
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #fff3e0; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #f57c00; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+  .deadline-box { border: 2px dashed #f57c00; background: #fff8ef; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+  .checklist { background: #fff3e0; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #ffcc80; color: #e65100; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #e65100; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+  .caution { background: #fff3e0; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+  .contact-box { background: #fff3e0; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #e65100; border-color: #ffcc80; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  .hashtags { font-size: 13px; color: #e65100; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-11-06-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="배우자 출산휴가 청구 기한 언제까지 — 출산일 120일 이내와 분할 사용">
+<meta property="og:description" content="배우자 출산휴가는 2025년 2월 23일부터 유급 20일로 늘고 청구 기한이 출산일부터 120일 이내로 바뀌었습니다. 분할 사용 횟수, 급여 지원 대상과 상한액, 확인 순서를 정리했습니다.">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-11-06-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-11-06T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-11-06T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-11-06-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-11-06-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "배우자 출산휴가 청구 기한 언제까지 — 출산일 120일 이내와 분할 사용", "description": "배우자 출산휴가는 2025년 2월 23일부터 유급 20일로 늘고 청구 기한이 출산일부터 120일 이내로 바뀌었습니다. 분할 사용 횟수, 급여 지원 대상과 상한액, 확인 순서를 정리했습니다.", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-11-06", "dateModified": "2026-11-06", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-GyFXAvGw6TskYQ5x"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-ZL2KaRsLAk3Ly1Ik"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-WjaoW3Jzgq4B6IUW"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 고용보험 · 배우자 출산휴가 · 고용노동부</div>
+  <div class="section-badge">고용보험</div>
+
+  <h1>배우자 출산휴가 청구 기한 언제까지 — 출산일 120일 이내와 분할 사용</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대체로 이런 상황입니다.
+    <span class="highlight">아내가 출산했거나 출산을 앞두고 휴가를 언제까지 써야 하는지 확인하려는 경우</span>,
+    <span class="highlight">20일을 한 번에 쓰지 않고 나눠 쓸 수 있는지 알아보려는 경우</span>,
+    <span class="highlight">회사 규모에 따라 정부 급여 지원이 달라지는지 궁금한 경우</span>입니다.
+    핵심은 세 가지입니다.
+    하나는 <span class="highlight">휴가가 유급 20일로 늘었다는 점</span>,
+    둘째는 <span class="highlight">청구 기한이 출산일부터 120일 이내라는 점</span>,
+    셋째는 <span class="highlight">정부 급여 지원은 우선지원대상기업 소속에게 해당한다는 점</span>입니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>이것만 알면 됩니다</h2>
+    <ul>
+      <li>배우자 출산휴가는 2025년 2월 23일 시행 개정으로 기존 10일에서 <b>유급 20일</b>로 늘었다고 안내됩니다.</li>
+      <li>청구 기한은 출산일부터 기존 90일에서 <b>120일 이내</b>로 늘었고, 분할 사용은 기존 1회에서 <b>최대 3회</b>로 늘었다고 정리됩니다.</li>
+      <li>근로자가 청구하면 사업주는 휴가를 주어야 하고, 휴가 기간은 유급으로 처리해야 합니다.</li>
+      <li>정부 급여 지원은 우선지원대상기업 근로자에게 적용되며 20일 기준 상한액은 <b>1,684,210원</b>으로 설명됩니다.</li>
+      <li>급여 신청 기한과 확대 시행 시점은 출처마다 표기가 달라 고용24와 고용센터 재확인이 필요합니다.</li>
+    </ul>
+  </div>
+
+  <h2>배우자 출산휴가란</h2>
+  <p>배우자 출산휴가는 근로자의 배우자가 출산했을 때 아빠가 출산 직후 아이와 산모를 돌볼 수 있도록 사업주가 부여하는 유급 휴가입니다. 남녀고용평등법에 근거한 제도로, 근로자가 휴가를 청구하면 사업주는 이를 허용해야 합니다. 출산전후휴가와 달리 휴가를 쓰는 사람은 출산한 본인이 아니라 배우자입니다.</p>
+  <p>2025년 2월 23일 시행된 개정으로 휴가 일수가 10일에서 20일로 늘고, 청구할 수 있는 기간과 분할 횟수도 함께 넓어진 것으로 설명하는 자료가 많습니다. 다만 일부 자료는 확대 시행일을 다르게 적고 있어, 실제로 휴가를 쓰는 시점의 기준을 고용노동부 안내로 다시 확인하는 것이 안전합니다.</p>
+
+  <h2>바뀐 기준 한눈에 보기</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>구분</th><th>개정 전</th><th>개정 후(2025.2.23 시행 안내)</th></tr>
+    <tr><td>휴가 일수</td><td>10일(유급)</td><td>20일(유급)</td></tr>
+    <tr><td>청구 기한</td><td>출산일부터 90일 이내</td><td>출산일부터 120일 이내</td></tr>
+    <tr><td>분할 사용</td><td>1회</td><td>최대 3회</td></tr>
+    <tr><td>정부 급여 지원 일수</td><td>5일 한도</td><td>20일 한도(우선지원대상기업)</td></tr>
+  </table>
+  </div>
+  <p>표는 고용노동부 안내를 정리한 2차 자료를 기준으로 했습니다. 출산일 120일 이내라는 기한은 휴가를 청구하고 시작할 수 있는 기간을 뜻하는 것으로 설명되며, 휴가를 반드시 그 안에 끝내야 하는지 여부는 자료마다 표현이 달라 회사 담당자와 고용센터에 확인이 필요합니다. 출산 전에 미리 쓰는 방식이 허용되는지도 회사 규정과 해석에 따라 달라질 수 있습니다.</p>
+
+  <h2>급여는 누가 지급하나</h2>
+  <p>휴가 기간 동안 임금은 사업주가 유급으로 지급해야 합니다. 이 가운데 정부가 일부를 지원하는 제도가 배우자 출산휴가급여입니다. 지원 대상은 고용보험법상 우선지원대상기업에 다니는 근로자이며, 대기업 소속 근로자는 정부 지원 없이 회사가 20일분 임금을 부담하는 구조로 설명됩니다.</p>
+  <div class="formula">
+    <b>정부 지원 상한(우선지원대상기업, 20일 기준)</b>: <b>1,684,210원</b><br>
+    <b>하루 환산 상한</b>: 1,684,210 ÷ 20 ≈ <b>84,210원</b><br>
+    <b>실제 지원액</b>은 통상임금 일급과 상한 중 낮은 쪽을 기준으로 정해집니다.
+  </div>
+  <p>통상임금이 높은 근로자는 상한을 넘는 부분을 회사가 부담하고, 통상임금이 낮은 근로자는 통상임금 기준으로 지원됩니다. 우선지원대상기업에 해당하는지는 업종별 상시근로자 수 기준으로 정해지므로, 본인 회사가 해당하는지는 인사 담당자나 고용센터를 통해 확인해야 합니다.</p>
+
+  <h2>휴가와 급여 확인 순서</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text">출산일(또는 출산 예정일)을 기준으로 120일 이내 청구 기한을 계산합니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text">회사에 휴가를 서면으로 청구하고, 20일을 한 번에 쓸지 최대 3회로 나눌지 정합니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text">회사가 우선지원대상기업인지 확인해 정부 급여 지원 대상 여부를 따져 봅니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text">휴가 사용 후 고용24에서 배우자 출산휴가급여 신청 절차를 확인합니다.</div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-text">신청에 필요한 서류와 기한은 고용센터에 문의해 최신 기준으로 맞춥니다.</div></div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>기준 연도와 확인 시점</h3>
+    <p>이 글은 2026년 시점의 공개 안내와 민간 정리 자료를 바탕으로 했으며, 법령 원문과 고용노동부 고시는 직접 확인하지 못했습니다. 한 자료는 확대 시행일을 2026년 8월로 적고 있어 2025년 2월 23일 시행이라는 다수 설명과 달랐습니다. 급여 신청 기한도 휴가 시작일 이후 1개월부터 종료일 이후 12개월 이내로 설명하는 자료가 있으나 공식 원문으로 재확인하지 못했습니다.</p>
+  </div>
+
+  <div class="checklist">
+    <h2>확인 체크리스트</h2>
+    <div class="check-item"><span class="chk">□</span>출산일 기준 120일 이내에 청구할 수 있는가</div>
+    <div class="check-item"><span class="chk">□</span>20일을 나눠 쓸 경우 분할 횟수가 3회 이내인가</div>
+    <div class="check-item"><span class="chk">□</span>회사가 우선지원대상기업에 해당하는가</div>
+    <div class="check-item"><span class="chk">□</span>본인 통상임금 일급이 상한 약 84,210원을 넘는가</div>
+    <div class="check-item"><span class="chk">□</span>회사 취업규칙에 별도 휴가 규정이 있는가</div>
+  </div>
+
+  <div class="caution">
+    <div class="caution-item">⚠ 청구 기한과 급여 신청 기한은 서로 다른 기한이므로 혼동하지 않아야 합니다.</div>
+    <div class="caution-item">⚠ 정부 급여 지원은 우선지원대상기업 소속에게 해당하며 대기업은 회사가 임금을 부담합니다.</div>
+    <div class="caution-item">⚠ 상한액과 확대 시행 시점은 출처마다 달라 고용24에서 재확인이 필요합니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>문의처</h2>
+    <div class="contact-row"><span class="contact-label">고용24 안내:</span> work24.go.kr</div>
+    <div class="contact-row"><span class="contact-label">고용노동부 고객상담센터:</span> 1350</div>
+    <div class="contact-row"><span class="contact-label">방문:</span> 관할 고용센터</div>
+  </div>
+
+  <div class="opinion-section">
+    <h2>전문가 찬반 론평</h2>
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>긍정 평가</h3>
+        <div class="opinion-card"><p class="quote">"출산 직후 아빠가 돌봄에 참여할 수 있는 기간이 두 배로 늘어 산모 회복에 도움이 된다."</p><p class="author">— 돌봄 분담 시각</p></div>
+        <div class="opinion-card"><p class="quote">"청구 기한과 분할 횟수가 늘어 직장 사정에 맞춰 쓰기 쉬워졌다."</p><p class="author">— 사용 편의 시각</p></div>
+      </div>
+      <div class="opinion-con">
+        <h3>우려 지점</h3>
+        <div class="opinion-card"><p class="quote">"대기업은 정부 지원이 없어 회사 눈치 때문에 실제 사용이 제한될 수 있다."</p><p class="author">— 사용 현실 시각</p></div>
+        <div class="opinion-card"><p class="quote">"소규모 사업장에서는 휴가 자체를 쓰기 어렵고 대체 인력 부담이 크다."</p><p class="author">— 소규모 사업장 시각</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #배우자출산휴가 #출산휴가20일 #고용보험 #고용24 #고용노동부 #남녀고용평등법
+  </div>
+
+  <div class="disclaimer">
+    이 글은 고용노동부·고용24 공개 안내와 민간 정리 자료를 바탕으로 작성되었으며 금액과 기한은 법령 원문으로 재확인하지 못했습니다. 기준은 변경될 수 있으니 반드시 고용노동부(1350) 또는 관할 고용센터에서 확인하세요.
+  </div>
+
+  <div class="written">작성일 2026-11-06 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
