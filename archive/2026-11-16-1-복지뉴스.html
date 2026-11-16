@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>구직촉진수당 언제 받나 — 국민취업지원제도 1유형 요건과 월 지급일 구조</title>
+<meta name="description" content="구직촉진수당은 국민취업지원제도 1유형 수급자에게 월 60만원(부양가족 1인당 10만원, 최대 40만원 추가)을 최대 6개월 주는 수당입니다. 2026년 기준 1회차가 취업활동계획 수립 뒤 지급되는 시점, 2회차부터 이행보고 지정일과 14일 처리기간으로 정해지는 월 지급일 구조, 소득 발생 시 1인가구 중위소득 60%(1,538,543원)에서 차감하는 감액 방식, 지급정지 3회 시 수급자격 철회, 종료 사유별 재참여 대기기간을 정리했습니다.">
+<style>
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: #f8f9fa; color: #222; line-height: 1.7; }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge { display: inline-block; background: #f57c00; color: #fff; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+  h1 { font-size: 26px; font-weight: 900; line-height: 1.35; color: #1a1a1a; margin-bottom: 18px; word-break: keep-all; }
+  .hook { border-left: 5px solid #f57c00; padding: 14px 18px; background: #fff3e0; border-radius: 0 8px 8px 0; margin-bottom: 22px; font-size: 15px; }
+  .hook .highlight { color: #e65100; font-weight: 900; }
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 18px 20px; margin-bottom: 26px; }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+  h2 { font-size: 19px; font-weight: 900; color: #e65100; margin: 28px 0 12px; border-bottom: 2px solid #ffcc80; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #f57c00; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #fff3e0; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #e65100; }
+  .formula { background: #fffaf3; border: 1px solid #ffcc80; border-radius: 10px; padding: 16px 18px; margin-bottom: 20px; font-size: 14.5px; line-height: 1.9; word-break: keep-all; }
+  .formula b { color: #e65100; }
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #fff3e0; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #f57c00; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+  .deadline-box { border: 2px dashed #f57c00; background: #fff8ef; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+  .checklist { background: #fff3e0; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #ffcc80; color: #e65100; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #e65100; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+  .caution { background: #fff3e0; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+  .contact-box { background: #fff3e0; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #e65100; border-color: #ffcc80; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  .hashtags { font-size: 13px; color: #e65100; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-11-16-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="구직촉진수당 언제 받나 — 국민취업지원제도 1유형 요건과 월 지급일 구조">
+<meta property="og:description" content="구직촉진수당은 국민취업지원제도 1유형 수급자에게 월 60만원(부양가족 1인당 10만원, 최대 40만원 추가)을 최대 6개월 주는 수당입니다. 2026년 기준 1회차가 취업활동계획 수립 뒤 지급되는 시점, 2회차부터 이행보고 지정일과 14일 처리기간으로 정해지는 월 지급일 구조, 소득 발생 시 1인가구 중위소득 60%(1,538,543원)에서 차감하는 감액 방식, 지급정지 3회 시 수급자격 철회, 종료 사유별 재참여 대기기간을 정리했습니다.">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-11-16-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-11-16T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-11-16T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-11-16-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-11-16-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "구직촉진수당 언제 받나 — 국민취업지원제도 1유형 요건과 월 지급일 구조", "description": "구직촉진수당은 국민취업지원제도 1유형 수급자에게 월 60만원(부양가족 1인당 10만원, 최대 40만원 추가)을 최대 6개월 주는 수당입니다. 2026년 기준 1회차가 취업활동계획 수립 뒤 지급되는 시점, 2회차부터 이행보고 지정일과 14일 처리기간으로 정해지는 월 지급일 구조, 소득 발생 시 1인가구 중위소득 60%(1,538,543원)에서 차감하는 감액 방식, 지급정지 3회 시 수급자격 철회, 종료 사유별 재참여 대기기간을 정리했습니다.", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-11-16", "dateModified": "2026-11-16", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-GyFXAvGw6TskYQ5x"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-ZL2KaRsLAk3Ly1Ik"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-WjaoW3Jzgq4B6IUW"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 국민취업지원제도 1유형 구직촉진수당 · 고용노동부 · 고용24 · 고용복지플러스센터</div>
+  <div class="section-badge">국민취업지원제도</div>
+
+  <h1>구직촉진수당 언제 받나 — 국민취업지원제도 1유형 요건과 월 지급일 구조</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대체로 이런 상황입니다.
+    <span class="highlight">고용24에서 국민취업지원제도 1유형을 접수했는데 첫 수당이 언제 통장에 들어오는지 알고 싶은 경우</span>,
+    <span class="highlight">이미 받고 있는데 매달 같은 날짜가 아니라 어떤 달은 늦게 들어와 입금 기준을 확인하려는 경우</span>,
+    그리고 <span class="highlight">아르바이트 소득이 생겼거나 활동 보고를 빠뜨려 이번 달 수당이 깎이는지 궁금한 경우</span>입니다.
+    핵심은 세 가지입니다.
+    하나는 <span class="highlight">구직촉진수당은 "매월 며칠"에 자동으로 나오는 돈이 아니라, 취업활동계획을 세우고 그 달 활동을 보고한 뒤 신청해야 처리되는 돈이라는 점</span>,
+    둘째는 <span class="highlight">1회차는 접수부터 수급자격 심사(최대 1개월)와 취업활동계획 수립(최대 1개월)을 거쳐야 하므로 보통 접수 후 2개월 가까이 걸린다는 점</span>,
+    셋째는 <span class="highlight">2026년 기준 소득이 생겨도 1인가구 중위소득 60%(월 1,538,543원)에서 소득을 뺀 금액이 60만원 이상이면 수당이 그대로 나오고, 소득 신고를 빠뜨리면 감액 여부와 관계없이 부정수급이 된다는 점</span>입니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>이것만 알면 됩니다</h2>
+    <ul>
+      <li>구직촉진수당은 「구직자 취업촉진 및 생활안정지원에 관한 법률」에 따라 <b>국민취업지원제도 1유형 수급자</b>에게 주는 현금 수당입니다. 2026년 기준 <b>월 60만원</b>이며, 미성년 자녀·고령 부모·중증장애인 등 부양가족이 있으면 <b>1인당 월 10만원, 최대 40만원</b>이 더해져 월 최대 100만원이 됩니다. 지급 횟수는 <b>최대 6회(6개월)</b>입니다. 2025년까지는 월 50만원이었습니다.</li>
+      <li><b>1회차</b>는 ① 고용24 또는 고용센터 접수 → ② 수급자격 심사·인정(최대 1개월) → ③ 상담사와 취업활동계획(IAP) 수립(최대 1개월) → ④ 1회차 지급 신청 → ⑤ 신청일부터 <b>14일 이내 처리</b> 순서로 나갑니다. 고용노동부 상담센터 안내 기준으로 접수 후 약 2개월 뒤 첫 입금을 보는 것이 일반적입니다.</li>
+      <li><b>2회차부터</b>는 지급주기가 <b>1개월</b>입니다. 그 달 취업활동계획에 적힌 구직활동(월 2회 이상)을 마치고 <b>이행보고서를 등록한 뒤, 고용센터와 정한 지정일에 지급을 신청</b>하면 14일 이내에 처리됩니다. 그래서 입금일은 사람마다 다르고, 같은 사람도 보고·신청 시점에 따라 달마다 며칠씩 움직입니다.</li>
+      <li>지급주기 중 근로·사업·재산·이전소득이 생기면 <b>지급 신청 때 반드시 신고</b>해야 합니다. 2024년 2월 시행령 개정 뒤에는 소득이 있어도 바로 끊기지 않고 <b>1인가구 중위소득 60%에서 소득을 뺀 금액</b>(60만원 상한)을 지급합니다. 2026년 기준선은 월 1,538,543원이므로 <b>소득 938,543원까지는 60만원 전액</b>, 그 이상이면 차감, 1,538,543원 이상이면 그 회차는 지급정지입니다.</li>
+      <li>정당한 사유 없이 취업활동계획을 이행하지 않으면 그 회차 수당이 <b>중단되거나 일부 감액</b>되고, 지급정지가 <b>3회</b>에 이르면 수급자격 인정이 철회됩니다. 부정수급은 받은 수당 반환에 최대 5배 제재부가금이 붙고 5년간 재참여가 막힙니다.</li>
+      <li>6회를 다 받고 미취업으로 끝나면 <b>3년 뒤</b>, 취업으로 끝났으면 근속 기간에 따라 <b>2년(6개월 미만)·1년 6개월(6개월~1년 미만)</b> 뒤에 다시 참여할 수 있습니다. 1년 이상 근속 시 대기기간은 자료마다 달라 고용센터 확인이 필요합니다.</li>
+    </ul>
+  </div>
+
+  <h2>1회차 — 접수에서 첫 입금까지 걸리는 시간</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text"><b>구직등록과 접수</b> — 고용24(work24.go.kr)에서 구직등록을 마친 뒤 취업지원 신청서를 제출하거나, 주소지 고용복지플러스센터를 방문합니다. 상시 접수라 마감일은 없습니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text"><b>수급자격 심사·인정 (최대 1개월)</b> — 가구원 소득·재산·취업경험을 행정자료로 조회해 1유형 요건심사형·선발형 또는 2유형으로 결정하고 결과를 통지합니다. 가구원 동의서나 소득 증빙이 늦으면 이 단계가 길어집니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text"><b>취업활동계획(IAP) 수립 (최대 1개월)</b> — 담당 상담사와 1:1 상담(통상 2~3회)을 거쳐 직업훈련·일경험·구직활동 등 월 단위 계획을 세웁니다. 이 계획이 확정돼야 수당 지급 대상이 됩니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text"><b>1회차 지급 신청</b> — 계획 수립과 동시에 1회차 구직촉진수당 지급신청서를 제출합니다. 1회차는 아직 이행할 활동이 없으므로 이행보고 없이 신청만 하면 됩니다.</div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-text"><b>처리·입금 (14일 이내)</b> — 지급신청서의 처리기간은 14일입니다. 고용노동부 1350 상담 FAQ는 "심사 최대 1개월 + 계획 수립 최대 1개월 + 신청 후 14일 이내 지급"으로 안내하고, 고용24 문답은 "신청 후 약 2개월"로 설명합니다.</div></div>
+  </div>
+  <p>그래서 "접수했는데 한 달이 지나도 돈이 안 들어온다"는 경우 대부분은 지연이 아니라 아직 1·2단계 안에 있는 상태입니다. 실제 1회차 입금은 접수 뒤 6~8주 사이에 몰리고, 고용센터 상담 일정이 밀리는 연초나 추경 모집 직후에는 더 늦어질 수 있습니다. 진행 단계는 고용24 마이페이지의 취업지원 신청 현황에서 확인할 수 있습니다.</p>
+
+  <h2>2회차 이후 — 매달 입금일이 달라지는 이유</h2>
+  <div class="formula">
+    <b>지급주기</b> = 취업활동계획 수립일(또는 직전 지급주기 종료일)부터 1개월<br>
+    <b>그 달 활동 이행</b>(계획에 적힌 구직활동 월 2회 이상, 훈련·일경험 참여 등) → <b>이행보고서 등록</b> → <b>지정일에 지급 신청</b> → <b>14일 이내 처리·입금</b><br>
+    <b>예시</b> — 3월 10일 계획 수립·1회차 신청 → 3월 24일 전후 1회차 입금 → 4월 10일 전후 2회차 지정일에 이행보고·신청 → 4월 24일 전후 2회차 입금 → 이후 매월 반복(총 6회)
+  </div>
+  <p>법 제20조는 수급자가 "고용노동부장관과 협의하여 정한 날(지정일)"에 수당을 신청하도록 정하고 있습니다. 즉 지급일은 법으로 고정된 날짜가 아니라, 본인의 계획 수립일을 기준으로 상담사와 잡은 지정일에 신청한 뒤 처리되는 날입니다. 지정일 전에 이행보고서를 올리지 않으면 신청 자체가 안 되고, 지정일을 넘겨 보고하면 그만큼 입금이 뒤로 밀립니다. 매달 같은 날짜에 입금되는 것처럼 보이는 사람은 매달 같은 날 보고·신청을 하고 있기 때문입니다.</p>
+  <p>이행보고서에는 계획에 적힌 활동의 증빙(입사지원 내역·면접 확인서·훈련 출석 등)이 붙어야 하며, 계획에 없던 활동으로 임의로 바꾸거나 증빙이 모자라면 이행으로 인정되지 않을 수 있습니다. 공휴일·주말이 끼면 처리기간이 뒤로 밀리고, 입금 계좌 오류나 가구원 변동 미신고가 있으면 센터가 보완을 요구하면서 추가로 늦어집니다.</p>
+
+  <h2>1유형 요건 — 누가 이 수당을 받나 (2026년 기준)</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>구분</th><th>요건</th><th>비고</th></tr>
+    <tr><td><b>요건심사형</b></td><td>15~69세 · 가구 소득 기준 중위소득 60% 이하 · 가구 재산 4억원 이하 · 최근 2년 내 취업경험 100일(또는 800시간) 이상</td><td>요건을 갖추면 인정</td></tr>
+    <tr><td><b>선발형(청년)</b></td><td>15~34세(병역 이행 시 최대 37세) · 가구 소득 중위소득 120% 이하 · 가구 재산 5억원 이하 · 취업경험 요건 없음</td><td>예산 범위 안에서 선발</td></tr>
+    <tr><td><b>선발형(비경제활동)</b></td><td>중위소득 60% 이하 · 재산 4억원 이하이나 취업경험이 100일에 못 미치는 경우</td><td>예산 범위 안에서 선발</td></tr>
+    <tr><td><b>제외</b></td><td>구직급여(실업급여) 수급 중 · 생계급여 수급자(2유형으로) · 재학생(졸업예정자 예외) · 직전 참여 종료 후 대기기간 미경과</td><td>고용센터 판정</td></tr>
+  </table>
+  </div>
+  <p>구직촉진수당은 1유형에만 있습니다. 2유형은 훈련참여수당과 취업성공수당만 있고 월 수당이 없으므로, 유형 결정 통지에서 2유형이 나왔다면 이 글의 지급 일정은 해당되지 않습니다. 2026년 4월부터는 추경으로 취업경험이 전혀 없는 저소득 청년 3만 명을 1유형 선발형으로 추가 모집한다는 보도가 있었으나 단일 출처이므로 고용센터에서 확인이 필요합니다. 1유형과 2유형의 요건 차이와 지급액 전체는 이 사이트의 다른 글(국민취업지원제도 1유형 2유형 차이)에 정리돼 있습니다.</p>
+
+  <h2>소득이 생기면 — 2026년 감액 계산</h2>
+  <div class="formula">
+    <b>그 회차 지급액</b> = min( 60만원(+부양가족 가산), 1,538,543원 − 지급주기 중 발생 소득 )<br>
+    <b>예시 1</b> — 알바 소득 80만원 → 1,538,543 − 800,000 = 738,543원 ≥ 60만원 → <b>60만원 전액</b><br>
+    <b>예시 2</b> — 알바 소득 120만원 → 1,538,543 − 1,200,000 = 338,543원 → <b>338,543원 지급</b><br>
+    <b>예시 3</b> — 소득 160만원 → 기준선 초과 → <b>그 회차 지급정지</b>(정지 횟수 1회 누적)
+  </div>
+  <p>2024년 2월 9일 시행령 개정 전에는 지급주기 중 소득이 수당 월 지급액(당시 50만원)을 넘으면 그 회차 수당이 전액 정지됐습니다. 개정 뒤에는 "1인가구 기준 중위소득 60%(또는 월 지급액의 2배 중 큰 금액)"를 기준선으로 삼아, 기준선에서 발생 소득을 뺀 금액을 월 지급액 한도 안에서 줍니다. 2026년 1인가구 중위소득은 2,564,238원이므로 60%는 1,538,543원이고, 월 60만원의 2배인 120만원보다 크기 때문에 2026년에는 1,538,543원이 기준선이 됩니다. 소득이 938,543원 이하면 수당이 깎이지 않는다는 계산은 여기서 나옵니다.</p>
+  <p>여기서 소득은 지급주기 안에 실제로 발생한 근로소득·사업소득·재산소득·이전소득의 합계입니다. 다른 법령에 따른 지원금·장려금도 포함되므로, 지자체 청년수당이나 훈련장려금을 함께 받는다면 신고 대상인지 상담사에게 먼저 확인해야 합니다. 감액 구간 아래라서 수당이 그대로 나오더라도 <b>신고 의무는 그대로</b>이며, 미신고가 드러나면 부정수급으로 처분됩니다. 주 30시간 이상 상용직 취업처럼 "취업"에 해당하는 경우는 감액이 아니라 지급 종료 사유가 되고, 대신 취업성공수당(6개월 근속 50만원·12개월 근속 추가 100만원) 쪽으로 넘어갑니다.</p>
+
+  <h2>중단·감액·철회 — 수당이 안 나오는 경우</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>상황</th><th>그 회차 처리</th><th>누적 효과</th></tr>
+    <tr><td>계획에 적힌 활동을 정당한 사유 없이 전부 하지 않음</td><td>지급 중단(정지)</td><td>정지 1회 누적</td></tr>
+    <tr><td>계획 중 일부 프로그램만 이행하지 않음</td><td>일부 감액 지급</td><td>—</td></tr>
+    <tr><td>지급주기 중 소득이 기준선(1,538,543원) 이상</td><td>지급정지</td><td>정지 1회 누적</td></tr>
+    <tr><td>지급정지가 3회에 이름</td><td>—</td><td><b>수급자격 인정 철회, 취업지원 중단</b></td></tr>
+    <tr><td>거짓·부정한 방법으로 수급</td><td>이후 수당 지급 중단, 지급결정 취소</td><td>반환 + 최대 5배 제재부가금, 5년간 재참여 제한</td></tr>
+    <tr><td>취업·창업 (주 30시간 이상 등)</td><td>지급 종료</td><td>취업성공수당 대상으로 전환</td></tr>
+  </table>
+  </div>
+  <p>질병·사고·가족 돌봄처럼 시행령이 정한 정당한 사유가 있으면 상담사에게 미리 알리고 계획을 변경하는 것이 중단을 피하는 방법입니다. 사후에 사유를 소명하는 것보다 지정일 전에 계획 변경을 요청하는 쪽이 처리도 빠릅니다. 정지된 회차는 뒤로 밀려 보전되지 않고 그 달 몫이 사라지는 구조이므로, 6회를 다 받으려면 6개 지급주기를 모두 이행해야 합니다.</p>
+
+  <h2>다 받은 뒤 — 재참여 대기기간</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>직전 참여 종료 사유</th><th>다시 신청할 수 있는 시점</th></tr>
+    <tr><td>기간 만료 (미취업으로 종료)</td><td>종료 후 <b>3년</b></td></tr>
+    <tr><td>취업·창업 후 근속 6개월 미만</td><td>종료 후 <b>2년</b></td></tr>
+    <tr><td>취업·창업 후 근속 6개월 이상 1년 미만</td><td>종료 후 <b>1년 6개월</b></td></tr>
+    <tr><td>취업·창업 후 근속 1년 이상</td><td>자료에 따라 "1년" 또는 "제한 없음" — 고용센터 확인</td></tr>
+    <tr><td>부정수급으로 취소</td><td>취소 후 5년</td></tr>
+  </table>
+  </div>
+  <p>재참여 때도 수급자격 심사와 취업활동계획 수립을 다시 거치므로 1회차까지의 시간은 처음과 같습니다. 구직급여(실업급여)를 받고 있는 동안은 참여할 수 없고, 구직급여가 끝난 뒤 접수하는 것이 순서입니다. 구직급여 종료 후 국민연금 보험료를 지원받는 실업크레딧과는 별개 제도이므로 함께 챙길 수 있습니다.</p>
+
+  <div class="deadline-box">
+    <h3>확인할 일정</h3>
+    <p>1회차 입금은 접수 뒤 약 2개월(심사 최대 1개월 + 계획 수립 최대 1개월 + 처리 14일)이 기준입니다. 생활비 공백이 걱정되면 접수 시점을 앞당기는 것 외에 단축 방법은 없습니다.</p>
+    <p>2회차부터는 상담사와 정한 지정일 전에 이행보고서를 올려야 합니다. 지정일은 고용24 마이페이지와 담당 상담사 안내 문자로 확인할 수 있습니다. 이 글의 기준일은 2026년 11월 16일이며 중위소득 60% 기준선(1,538,543원)은 2026년 값입니다.</p>
+  </div>
+
+  <div class="checklist">
+    <h2>입금 전에 챙길 것</h2>
+    <div class="check-item"><span class="chk">✓</span><span>수급자격 결정 통지가 1유형(요건심사형·선발형)으로 나왔는가 — 2유형이면 월 수당이 없다</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>취업활동계획(IAP) 수립이 끝났고 1회차 지급신청서를 제출했는가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>이번 지급주기의 지정일이 며칠인지, 그 전에 올릴 이행보고 증빙(지원 내역·출석 확인 등)이 준비됐는가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>지급주기 안에 생긴 알바·프리랜서·지원금 소득을 신청서에 적었는가 — 감액이 없어도 신고는 필수</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>부양가족 가산(1인당 10만원)을 받는다면 가구원 변동이 없는가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>입금 계좌가 본인 명의이고 고용24에 등록된 계좌와 같은가</span></div>
+  </div>
+
+  <div class="caution">
+    <div class="caution-item">• 월 60만원·6회·부양가족 1인당 10만원(최대 40만원), 1회차 "심사 최대 1개월 + 계획 수립 최대 1개월 + 신청 후 14일 이내", 2회차 이후 1개월 지급주기와 이행보고 후 지정일 신청, 지급정지 3회 시 철회는 법률 조문 요약과 고용노동부 상담 FAQ·고용24 안내·복수 2차 자료가 일치하는 내용입니다. 고용24·법령정보센터 원문은 이 글에서 직접 확인하지 못했습니다.</div>
+    <div class="caution-item">• 소득 감액 기준선을 "중위소득 60%"로만 보는 자료와 "중위소득 60% 또는 월 지급액 2배 중 큰 금액"으로 보는 자료가 있습니다. 2026년에는 어느 쪽이든 1,538,543원이 되어 결과가 같지만, 월 지급액이 더 오르는 해에는 달라질 수 있습니다. 시행령 원문 확인이 필요합니다.</div>
+    <div class="caution-item">• 재참여 대기기간 가운데 1년 이상 근속 시 "제한 없음"인지 "1년"인지는 자료마다 달라 미확정입니다. 2026년 4월 저소득 무경력 청년 3만 명 추가 선발은 단일 출처입니다.</div>
+    <div class="caution-item">• 조기취업성공수당(계획 수립 후 3개월 이내 취업 시 잔여 수당의 50%)은 고용24 안내상 2024년 12월 31일까지 취업한 경우에만 해당합니다. 2026년에도 받을 수 있다고 쓴 블로그가 있으나 공식 안내와 맞지 않으므로 기대하지 않는 것이 안전합니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>담당 기관 및 문의처</h2>
+    <div class="contact-row"><span class="contact-label">온라인 접수·진행 현황</span> — 고용24 work24.go.kr (구직등록 → 취업지원 신청 → 마이페이지 신청 현황·이행보고)</div>
+    <div class="contact-row"><span class="contact-label">방문·상담</span> — 주소지 관할 고용복지플러스센터(고용센터) 국민취업지원 담당 상담사</div>
+    <div class="contact-row"><span class="contact-label">전화 문의</span> — 고용노동부 고객상담센터 국번 없이 1350 (지급 일정·소득 신고·유형 판정)</div>
+    <div class="contact-row"><span class="contact-label">법령</span> — 「구직자 취업촉진 및 생활안정지원에 관한 법률」 제19~22조(구직촉진수당 지급·지급주기·소득 신고·정지), 같은 법 시행령, 국가법령정보센터 law.go.kr</div>
+    <div class="contact-row"><span class="contact-label">중위소득 기준</span> — 보건복지부 2026년 기준 중위소득 고시 (1인가구 2,564,238원)</div>
+    <div class="contact-row"><span class="contact-label">복지 상담 전반</span> — 보건복지상담센터 129</div>
+  </div>
+
+  <h2>찬반 논점</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>찬성 측 논거</h3>
+        <div class="opinion-card">
+          <p class="quote">"활동을 보고해야 다음 달 돈이 나오는 구조라서 수당이 구직활동과 실제로 연결된다. 소득이 생겨도 바로 끊지 않고 차감하도록 바꾼 뒤에는 일을 숨길 이유도 줄었다."</p>
+          <p class="author">— 고용서비스 현장에서 자주 나오는 의견</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"기준선을 중위소득 60%로 둔 것은 단기 아르바이트와 수당을 병행하며 구직하는 경로를 열어 준 합리적 설계다."</p>
+          <p class="author">— 노동시장정책 논의에서 자주 나오는 의견</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>반대·우려 측 논거</h3>
+        <div class="opinion-card">
+          <p class="quote">"접수 후 첫 입금까지 두 달은 생계가 급한 사람에게 너무 길다. 심사 기간 동안의 공백을 메울 장치가 없다."</p>
+          <p class="author">— 빈곤·청년 단체에서 자주 나오는 의견</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"지정일·이행보고·증빙이 사람마다 달라 입금일을 예측하기 어렵고, 보고를 하루 놓치면 그 달 몫이 사라지는 방식은 행정 편의에 기운 설계다."</p>
+          <p class="author">— 참여자 상담 현장에서 자주 나오는 의견</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #구직촉진수당 #국민취업지원제도 #1유형 #취업활동계획 #이행보고서 #고용24 #고용노동부 #고용복지플러스센터 #소득신고 #취업성공수당
+  </div>
+
+  <div class="disclaimer">
+    이 글은 「구직자 취업촉진 및 생활안정지원에 관한 법률」과 시행령 조문 요약, 고용노동부 고객상담센터 FAQ, 고용24 안내, 2024년 시행령 개정 보도와 2026년 기준 중위소득 고시를 정리한 2차 자료를 바탕으로 작성되었습니다.
+    지급 일정은 개인별 수급자격 인정일·계획 수립일·지정일에 따라 다르며, 감액 기준과 재참여 요건은 법령 개정으로 바뀔 수 있으므로 담당 고용센터나 고용노동부 1350에서 확인하시기 바랍니다.
+  </div>
+
+  <div class="written">작성일 2026-11-16 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
