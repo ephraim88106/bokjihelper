@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>연탄쿠폰 에너지바우처 중복 여부 — 동절기 선택 기준과 하절기 사용 범위</title>
+<meta name="description" content="한국광해광업공단 연탄쿠폰을 받은 세대는 같은 해 에너지바우처 동절기 지원을 중복으로 받을 수 없고, 바우처는 괄호 안 하절기 몫(1인 세대 40,700원)만 쓸 수 있습니다. 긴급복지 동절기 연료비·연탄전환 에너지바우처도 같은 제한을 받습니다. 연탄쿠폰(2026년 지자체 공고 기준 가구당 57만 6천 원)과 연탄전환 에너지바우처(576,000원) 가운데 무엇을 고를지, 접수·발급·사용 기한을 2026년 기준으로 정리했습니다.">
+<style>
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: #f8f9fa; color: #222; line-height: 1.7; }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge { display: inline-block; background: #f57c00; color: #fff; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+  h1 { font-size: 26px; font-weight: 900; line-height: 1.35; color: #1a1a1a; margin-bottom: 18px; word-break: keep-all; }
+  .hook { border-left: 5px solid #f57c00; padding: 14px 18px; background: #fff3e0; border-radius: 0 8px 8px 0; margin-bottom: 22px; font-size: 15px; }
+  .hook .highlight { color: #e65100; font-weight: 900; }
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 18px 20px; margin-bottom: 26px; }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+  h2 { font-size: 19px; font-weight: 900; color: #e65100; margin: 28px 0 12px; border-bottom: 2px solid #ffcc80; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #f57c00; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #fff3e0; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #e65100; }
+  .formula { background: #fffaf3; border: 1px solid #ffcc80; border-radius: 10px; padding: 16px 18px; margin-bottom: 20px; font-size: 14.5px; line-height: 1.9; word-break: keep-all; }
+  .formula b { color: #e65100; }
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #fff3e0; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #f57c00; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+  .deadline-box { border: 2px dashed #f57c00; background: #fff8ef; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+  .checklist { background: #fff3e0; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #ffcc80; color: #e65100; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #e65100; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+  .caution { background: #fff3e0; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+  .contact-box { background: #fff3e0; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #e65100; border-color: #ffcc80; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  .hashtags { font-size: 13px; color: #e65100; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-11-19-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="연탄쿠폰 에너지바우처 중복 여부 — 동절기 선택 기준과 하절기 사용 범위">
+<meta property="og:description" content="한국광해광업공단 연탄쿠폰을 받은 세대는 같은 해 에너지바우처 동절기 지원을 중복으로 받을 수 없고, 바우처는 괄호 안 하절기 몫(1인 세대 40,700원)만 쓸 수 있습니다. 긴급복지 동절기 연료비·연탄전환 에너지바우처도 같은 제한을 받습니다. 연탄쿠폰(2026년 지자체 공고 기준 가구당 57만 6천 원)과 연탄전환 에너지바우처(576,000원) 가운데 무엇을 고를지, 접수·발급·사용 기한을 2026년 기준으로 정리했습니다.">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-11-19-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-11-19T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-11-19T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-11-19-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-11-19-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "연탄쿠폰 에너지바우처 중복 여부 — 동절기 선택 기준과 하절기 사용 범위", "description": "한국광해광업공단 연탄쿠폰을 받은 세대는 같은 해 에너지바우처 동절기 지원을 중복으로 받을 수 없고, 바우처는 괄호 안 하절기 몫(1인 세대 40,700원)만 쓸 수 있습니다. 긴급복지 동절기 연료비·연탄전환 에너지바우처도 같은 제한을 받습니다. 연탄쿠폰(2026년 지자체 공고 기준 가구당 57만 6천 원)과 연탄전환 에너지바우처(576,000원) 가운데 무엇을 고를지, 접수·발급·사용 기한을 2026년 기준으로 정리했습니다.", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-11-19", "dateModified": "2026-11-19", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-GyFXAvGw6TskYQ5x"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-ZL2KaRsLAk3Ly1Ik"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-WjaoW3Jzgq4B6IUW"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 연탄쿠폰 · 에너지바우처 · 한국광해광업공단 · 한국에너지공단 · 행정복지센터</div>
+  <div class="section-badge">난방비 지원</div>
+
+  <h1>연탄쿠폰 에너지바우처 중복 여부 — 동절기 선택 기준과 하절기 사용 범위</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대체로 이런 상황입니다.
+    <span class="highlight">연탄보일러를 쓰는 기초생활수급자·차상위 가구인데 올해 연탄쿠폰을 받았고, 주민센터에서 에너지바우처도 따로 있다는 말을 들어 둘 다 받을 수 있는지 궁금한 경우</span>,
+    <span class="highlight">에너지바우처 국민행복카드 잔액이 겨울에 갑자기 적게 찍혀 이유를 알고 싶은 경우</span>,
+    그리고 <span class="highlight">내년 신청을 앞두고 연탄쿠폰과 연탄전환 에너지바우처 가운데 어느 쪽이 나은지 비교하려는 경우</span>입니다.
+    결론부터 말하면 <span class="highlight">같은 해에 연탄쿠폰을 받은 세대는 에너지바우처의 동절기 몫을 받을 수 없고, 괄호 안에 적힌 하절기 몫만 쓸 수 있습니다</span>.
+    두 제도는 운영 기관도 다릅니다. 연탄쿠폰은 <span class="highlight">한국광해광업공단</span>이, 에너지바우처는 <span class="highlight">한국에너지공단</span>이 맡고, 접수는 둘 다 주소지 읍·면·동 행정복지센터에서 합니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>이것만 알면 됩니다</h2>
+    <ul>
+      <li><b>중복 제한</b> — 2026년도 에너지바우처 안내에 따르면 ① 「긴급복지지원법」에 따른 동절기 연료비(2026년 10월~2027년 3월), ② 한국광해광업공단의 <b>2026년도 연탄쿠폰</b>, ③ <b>2026년도 연탄전환 에너지바우처</b> 가운데 하나라도 받은 세대는 에너지바우처 <b>동절기 지원을 중복해서 받을 수 없습니다</b>.</li>
+      <li><b>하절기 몫은 남는다</b> — 위 지원을 받은 세대도 에너지바우처 지원 금액표의 <b>괄호 안 금액</b>은 받을 수 있습니다. 2026년 1인 세대는 전체 295,200원 가운데 괄호 금액 <b>40,700원</b>이 이에 해당합니다.</li>
+      <li><b>연탄쿠폰 금액</b> — 2026년 지자체 공고 기준 <b>가구당 57만 6천 원</b>으로, 세대원 수와 관계없이 같습니다. 2025년에는 47만 2천 원에 한시 증액분 7만 4천 원을 더한 54만 6천 원이었다는 정리 자료가 있습니다.</li>
+      <li><b>연탄전환 에너지바우처</b> — 연탄쿠폰 대신 에너지바우처 국민행복카드로 받는 방식이며, 복지로 안내 기준 지원 금액은 <b>576,000원</b>(세대원 수 무관)입니다. 이것도 받으면 일반 에너지바우처 동절기 몫과는 중복되지 않습니다.</li>
+      <li><b>연탄난로는 제외</b> — 연탄쿠폰은 연탄을 <b>가정 난방용 보일러</b>로 쓰는 가구가 대상이며, 연탄난로만 쓰는 가구는 지원 대상에서 빠집니다.</li>
+      <li><b>일정</b> — 연탄쿠폰은 여름(지역별로 7~8월)에 행정복지센터에서 접수하고 10월에 카드형 쿠폰을 받아 이듬해 봄(삼척시 공고 기준 2027년 4월 30일)까지 씁니다. 에너지바우처는 2026년 12월 31일까지 신청하고 2027년 5월 31일까지 씁니다.</li>
+    </ul>
+  </div>
+
+  <h2>두 제도는 어떻게 다른가 — 2026년 기준 비교</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>구분</th><th>연탄쿠폰</th><th>에너지바우처</th></tr>
+    <tr><td><b>운영 기관</b></td><td>한국광해광업공단(산업통상 분야 공공기관)</td><td>한국에너지공단(에너지바우처 통합상담센터 1600-3190)</td></tr>
+    <tr><td><b>목적</b></td><td>연탄 가격 인상분을 보전해 연탄 난방 가구의 연료비 부담을 줄임(2008년 시작)</td><td>저소득 취약계층의 냉·난방 에너지 구입 비용 지원</td></tr>
+    <tr><td><b>대상</b></td><td>기초생활수급자·차상위계층·한부모가족·장애인 가구·만 65세 이상·소년소녀가정(가정위탁 포함) 가운데 <b>연탄보일러로 난방하는 가구</b></td><td>생계·의료·주거·교육급여 수급 세대 가운데 노인·영유아·장애인·임산부·중증질환자·희귀난치성질환자·한부모·소년소녀가정 등 취약계층 세대원이 있는 세대</td></tr>
+    <tr><td><b>금액</b></td><td>가구당 57만 6천 원(2026년 지자체 공고), 세대원 수 무관</td><td>세대원 수별 차등: 1인 295,200원 ~ 4인 이상 701,300원(2026년)</td></tr>
+    <tr><td><b>지급 형태</b></td><td>카드형 쿠폰 — 연탄공장·연탄 직매점에서 쿠폰 금액만큼 연탄을 사고 배달 신청</td><td>국민행복카드(실물카드) 결제 또는 전기·가스요금 자동 차감(가상카드)</td></tr>
+    <tr><td><b>사용 기한</b></td><td>발급 이듬해 봄까지(삼척시 공고 기준 2027년 4월 30일). 지역별 공고 확인</td><td>2026년 7월 1일 ~ 2027년 5월 31일</td></tr>
+    <tr><td><b>접수</b></td><td>주민등록 주소지 행정복지센터. 2026년은 대부분 7~8월에 접수(삼척시는 8월 7일 마감)</td><td>주소지 행정복지센터 방문 또는 복지로 온라인, 2026년 12월 31일까지</td></tr>
+  </table>
+  </div>
+  <p>표에서 보듯 대상 기준이 서로 다릅니다. 연탄쿠폰은 차상위·한부모·65세 이상처럼 생계급여를 받지 않는 가구도 연탄보일러를 쓰면 대상이 될 수 있지만, 에너지바우처는 기초생활보장 급여 수급 세대이면서 취약계층 세대원이 있어야 합니다. 그래서 "둘 다 받을 수 있나"라는 질문은 사실상 <b>두 기준을 모두 충족하는 수급 세대</b>에만 해당하고, 그런 세대에서 동절기 몫이 겹치지 않도록 조정하는 것이 이번 중복 제한의 취지입니다.</p>
+
+  <h2>중복이 되는 것과 안 되는 것</h2>
+  <div class="formula">
+    <b>연탄쿠폰 받음</b> + 일반 에너지바우처 → 동절기 몫 <b>불가</b>, 괄호 안 하절기 몫만 <b>가능</b><br>
+    <b>연탄전환 에너지바우처 받음</b> + 일반 에너지바우처 → 동절기 몫 <b>불가</b>, 하절기 몫만 <b>가능</b><br>
+    <b>긴급복지 동절기 연료비 받음</b>(2026년 10월~2027년 3월) + 에너지바우처 → 동절기 몫 <b>불가</b><br>
+    <b>연탄쿠폰</b> + <b>연탄전환 에너지바우처</b> → 연탄 지원을 쿠폰과 카드 가운데 하나로 받는 구조이므로 둘을 함께 받는 경우는 상정되지 않음
+  </div>
+  <p>여기서 말하는 '괄호 안 금액'은 에너지바우처 세대원 수별 지원 금액표에 함께 적혀 있는 작은 금액입니다. 복지로와 에너지바우처 안내는 "연탄쿠폰·연탄전환 에너지바우처 또는 「긴급복지지원법」에 따른 연료비 지원을 받을 시 괄호 안의 금액만 지원(하절기에만 사용 가능)"이라는 단서를 달고 있습니다. 2026년 1인 세대는 295,200원(40,700원)으로 표기돼 있어, 연탄쿠폰을 받은 1인 세대라면 에너지바우처에서는 40,700원만 받는다는 뜻입니다. 2인·3인 세대의 괄호 금액은 정리 자료마다 숫자가 달라 이 글에서 확정하지 않았습니다. 본인 세대 금액은 행정복지센터나 1600-3190에서 확인하시기 바랍니다.</p>
+  <p>2026년 에너지바우처는 하절기·동절기 사용 구분을 없애고 2027년 5월 31일까지 잔액을 자유롭게 쓰도록 바뀌었다는 안내가 있습니다. 다만 중복 제한 세대에 적용되는 괄호 금액은 여전히 "하절기 몫"으로 표기돼 있으므로, 연탄쿠폰을 받은 세대의 바우처 잔액이 겨울에 거의 없다면 대부분 이 규정 때문입니다.</p>
+
+  <h2>어느 쪽을 고를까 — 동절기 선택 기준</h2>
+  <p>연탄보일러를 쓰는 수급 세대라면 겨울 연료 지원을 ① 연탄쿠폰, ② 연탄전환 에너지바우처, ③ 일반 에너지바우처 동절기 몫 가운데 하나로 받게 됩니다. 판단할 때 볼 점은 다음과 같습니다.</p>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text"><b>금액 비교</b> — 연탄쿠폰과 연탄전환 에너지바우처는 2026년 모두 57만 6천 원 수준으로 세대원 수와 무관합니다. 일반 에너지바우처는 세대원 수가 많을수록 커져 4인 이상은 701,300원이지만, 이 금액에는 하절기 몫이 포함돼 있습니다. 1~3인 세대는 연탄 지원 쪽 금액이 대체로 크고, 4인 이상 세대는 연간 총액을 계산해 비교해야 합니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text"><b>연료 종류</b> — 연탄쿠폰은 연탄 구매에만 씁니다. 연탄과 함께 전기장판·등유 보조난방을 쓰는 집이라면 국민행복카드로 여러 연료에 쓸 수 있는 바우처 쪽이 유연합니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text"><b>구매처</b> — 연탄쿠폰은 연탄공장·연탄 직매점에서 씁니다. 에너지바우처 국민행복카드는 에너지바우처 가맹점에서 결제하며, 복지로 안내 기준으로 등유·LPG·연탄을 살 때 <b>배달비를 포함해</b> 결제할 수 있습니다. 동네 연탄 판매점이 어느 쪽을 받는지 먼저 확인하는 것이 실용적입니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text"><b>접수 시기</b> — 연탄쿠폰은 여름 접수 기간을 놓치면 그해에는 받기 어렵습니다. 에너지바우처는 연말까지 신청할 수 있으므로, 연탄쿠폰 접수를 놓친 수급 세대는 에너지바우처로 겨울 지원을 받는 것을 검토할 수 있습니다.</div></div>
+  </div>
+
+  <h2>접수부터 사용까지 순서</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>시기</th><th>연탄쿠폰</th><th>에너지바우처</th></tr>
+    <tr><td>6~8월</td><td>행정복지센터 접수(지역별 공고, 2026년 삼척시는 8월 7일까지). 연탄보일러 사용 여부 확인</td><td>6월부터 신청 시작, 기존 수급 세대는 요건 유지 시 자동 갱신 안내</td></tr>
+    <tr><td>10월</td><td>선정 가구에 카드형 쿠폰 발급, 연탄공장·직매점에서 구매·배달 신청</td><td>동절기 기간 시작(중복 제한 세대는 동절기 몫 없음)</td></tr>
+    <tr><td>12월 31일</td><td>—</td><td>2026년도 신청 마감</td></tr>
+    <tr><td>이듬해 봄</td><td>사용 기한(삼척시 공고 기준 2027년 4월 30일), 미사용 잔액 소멸 여부는 지역 공고 확인</td><td>2027년 5월 31일 사용 기한</td></tr>
+  </table>
+  </div>
+  <p>연탄쿠폰은 한 번에 다 쓰지 않아도 되지만, 연탄은 보관 공간이 필요하고 겨울 한복판에는 배달이 몰립니다. 쿠폰을 받은 직후 판매점에 배달 일정과 1회 배달 수량을 문의해 두는 것이 좋습니다. 연탄 1장 가격과 배달비는 지역·층수·배달 거리에 따라 달라 쿠폰 금액으로 살 수 있는 장수도 집마다 다릅니다. 쿠폰 결제 시 배달비가 별도인지는 판매점과 지역 공고에 따라 다르므로 구매 전에 확인하시기 바랍니다.</p>
+
+  <div class="deadline-box">
+    <h3>확인할 일정</h3>
+    <p>2026년 연탄쿠폰 접수는 대부분 지역에서 끝났습니다. 아직 겨울 연료 지원을 받지 못한 수급 세대는 2026년 12월 31일까지 에너지바우처를 신청할 수 있는지 행정복지센터에 문의하시기 바랍니다.</p>
+    <p>이 글의 기준일은 2026년 11월 19일입니다. 연탄쿠폰 금액과 접수·사용 기한은 매년 공단 사업계획과 지자체 공고로 정해지므로 2027년도 금액은 내년 공고로 다시 확인해야 합니다.</p>
+  </div>
+
+  <div class="checklist">
+    <h2>문의 전에 챙길 것</h2>
+    <div class="check-item"><span class="chk">✓</span><span>올해 받은 겨울 지원이 연탄쿠폰·연탄전환 에너지바우처·긴급복지 연료비 가운데 무엇인지 알고 있는가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>난방 방식이 연탄보일러인지(연탄난로만 쓰면 연탄쿠폰 대상 아님)</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>세대원 수와 에너지바우처 세대원 수별 금액·괄호 금액을 확인했는가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>동네 연탄 판매점이 연탄쿠폰과 에너지바우처 국민행복카드 가운데 무엇을 받는지 확인했는가</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>연탄쿠폰 사용 기한(지역 공고)과 바우처 사용 기한(2027년 5월 31일)을 메모했는가</span></div>
+  </div>
+
+  <div class="caution">
+    <div class="caution-item">• 연탄쿠폰·연탄전환 에너지바우처·긴급복지 동절기 연료비 수급 세대의 에너지바우처 동절기 중복 불가와 괄호 금액(하절기) 지원 규정, 1인 세대 295,200원(40,700원), 에너지바우처 사용기간(2026년 7월 1일~2027년 5월 31일)은 복지로·에너지바우처 안내를 인용한 복수 자료가 일치합니다.</div>
+    <div class="caution-item">• 연탄쿠폰 2026년 금액 57만 6천 원은 시흥시 공고를 인용한 정리 자료와 복지로의 연탄전환 에너지바우처 금액(576,000원)이 일치하는 수준이지만, 한국광해광업공단의 전국 공고문 원문은 직접 확인하지 못했습니다. 2025년 54만 6천 원(47만 2천 원+한시 7만 4천 원)도 2차 자료입니다.</div>
+    <div class="caution-item">• 접수 마감(8월 7일)·10월 발급·사용 기한(2027년 4월 30일)은 삼척시 사례 보도이며 지역마다 다를 수 있습니다. 에너지바우처 2인·3인 세대 금액과 괄호 금액은 자료마다 달라 본문에서 확정하지 않았습니다.</div>
+    <div class="caution-item">• 연탄쿠폰 결제 시 배달비 포함 여부와 미사용 잔액 처리는 공식 자료로 확인하지 못했습니다. 판매점·행정복지센터에 확인하시기 바랍니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>담당 기관 및 문의처</h2>
+    <div class="contact-row"><span class="contact-label">연탄쿠폰</span> — 한국광해광업공단(사업 주관), 주민등록 주소지 읍·면·동 행정복지센터(접수·선정)</div>
+    <div class="contact-row"><span class="contact-label">에너지바우처</span> — 한국에너지공단 에너지바우처 통합상담센터 1600-3190, 에너지바우처 누리집, 복지로(bokjiro.go.kr) 온라인 신청</div>
+    <div class="contact-row"><span class="contact-label">긴급복지 연료비</span> — 시·군·구청 긴급지원 담당, 보건복지상담센터 129</div>
+    <div class="contact-row"><span class="contact-label">방문 상담</span> — 주소지 행정복지센터에서 세 제도 가운데 어떤 지원을 받고 있는지 한 번에 확인 가능</div>
+  </div>
+
+  <h2>찬반 논점</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>찬성 측 논거</h3>
+        <div class="opinion-card">
+          <p class="quote">"같은 겨울 난방비를 두 기관이 겹쳐 지원하면 한정된 예산이 일부 가구에 몰린다. 동절기 몫을 하나로 정리하고 하절기 몫은 남겨 두는 방식은 형평과 냉방 지원을 함께 고려한 설계다."</p>
+          <p class="author">— 에너지복지 정책 논의에서 자주 나오는 의견</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"연탄전환 에너지바우처로 카드 결제를 열어 두면서 연탄 가구도 배달비 포함 결제와 다른 연료 선택이 가능해졌다. 선택지가 늘어난 것은 긍정적이다."</p>
+          <p class="author">— 사회복지 현장에서 자주 나오는 의견</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>반대·우려 측 논거</h3>
+        <div class="opinion-card">
+          <p class="quote">"연탄 가구는 대부분 단열이 취약한 노후 주택이라 겨울 연료비가 훨씬 크다. 연탄쿠폰을 받았다는 이유로 바우처 동절기 몫을 모두 빼는 것은 실제 부담을 반영하지 못한다."</p>
+          <p class="author">— 연탄 나눔·빈곤 단체에서 자주 나오는 의견</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"운영 기관과 접수 시기가 제각각이라 고령 가구는 어떤 지원을 받았는지조차 헷갈린다. 한 창구에서 연료 지원을 통합 안내하는 체계가 필요하다."</p>
+          <p class="author">— 노인복지 현장에서 자주 나오는 의견</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #연탄쿠폰 #에너지바우처 #연탄전환에너지바우처 #한국광해광업공단 #한국에너지공단 #긴급복지연료비 #국민행복카드 #난방비지원 #행정복지센터
+  </div>
+
+  <div class="disclaimer">
+    이 글은 복지로·에너지바우처 안내를 인용한 자료, 지방자치단체 연탄쿠폰 공고 관련 보도, 에너지바우처 2026년 사업 관련 복수 보도와 정리 자료를 바탕으로 작성되었습니다.
+    지원 금액·대상·사용 기한은 해마다 사업계획과 지자체 공고에 따라 바뀔 수 있으므로, 신청·사용 전 주소지 행정복지센터 또는 에너지바우처 통합상담센터 1600-3190에서 확인하시기 바랍니다.
+  </div>
+
+  <div class="written">작성일 2026-11-19 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
