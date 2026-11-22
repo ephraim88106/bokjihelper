@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>국민연금 추후납부 언제 유리한가 — 119개월 상한과 분할 납부 60회 범위</title>
+<meta name="description" content="국민연금 추후납부(추납)는 납부예외·적용제외 기간의 보험료를 지금 내고 가입기간으로 인정받는 제도입니다. 최대 119개월 상한, 접수 월 기준소득월액과 납부기한 월 보험료율로 매기는 산정식, 최대 60회 분할과 이자, 보험료율 인상 일정에 따른 유불리를 2026년 기준으로 정리했습니다.">
+<style>
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: #f8f9fa; color: #222; line-height: 1.7; }
+  .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 24px 20px 40px; }
+  .top-meta { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .section-badge { display: inline-block; background: #f57c00; color: #fff; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+  h1 { font-size: 26px; font-weight: 900; line-height: 1.35; color: #1a1a1a; margin-bottom: 18px; word-break: keep-all; }
+  .hook { border-left: 5px solid #f57c00; padding: 14px 18px; background: #fff3e0; border-radius: 0 8px 8px 0; margin-bottom: 22px; font-size: 15px; }
+  .hook .highlight { color: #e65100; font-weight: 900; }
+  .summary-box { background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 18px 20px; margin-bottom: 26px; }
+  .summary-box h2 { color: #2e7d32; font-size: 16px; font-weight: 900; margin-bottom: 10px; border: none; padding: 0; }
+  .summary-box ul { padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .summary-box li { margin-bottom: 4px; }
+  h2 { font-size: 19px; font-weight: 900; color: #e65100; margin: 28px 0 12px; border-bottom: 2px solid #ffcc80; padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: #333; margin: 18px 0 8px; }
+  p { font-size: 14.5px; line-height: 1.8; margin-bottom: 10px; color: #333; }
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  .info-table th { background: #f57c00; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #e0e0e0; padding: 10px 12px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #fff3e0; }
+  .table-wrap { overflow-x: auto; }
+  .big-number { font-size: 20px; font-weight: 900; color: #e65100; }
+  .formula { background: #fffaf3; border: 1px solid #ffcc80; border-radius: 10px; padding: 16px 18px; margin-bottom: 20px; font-size: 14.5px; line-height: 1.9; word-break: keep-all; }
+  .formula b { color: #e65100; }
+  .svg-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 24px; overflow-x: auto; }
+  .svg-title { font-size: 14px; font-weight: 700; color: #555; text-align: center; margin-bottom: 10px; }
+  .steps { margin-bottom: 20px; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 12px 14px; background: #fff3e0; border-radius: 8px; }
+  .step-num { min-width: 30px; height: 30px; background: #f57c00; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+  .step-text { font-size: 14px; line-height: 1.6; }
+  .deadline-box { border: 2px dashed #f57c00; background: #fff8ef; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .deadline-box h3 { color: #e65100; margin-bottom: 8px; font-size: 16px; }
+  .deadline-box p { font-size: 14px; color: #555; margin: 0 0 6px; }
+  .checklist { background: #fff3e0; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+  .checklist h2 { border-color: #ffcc80; color: #e65100; margin-top: 0; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .check-item .chk { color: #e65100; font-weight: 900; font-size: 18px; flex-shrink: 0; line-height: 1.2; }
+  .caution { background: #fff3e0; border-left: 4px solid #c62828; border-radius: 0 8px 8px 0; padding: 14px 16px; margin-bottom: 22px; font-size: 14px; }
+  .caution-item { margin-bottom: 6px; }
+  .contact-box { background: #fff3e0; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .contact-box h2 { color: #e65100; border-color: #ffcc80; margin-top: 0; }
+  .contact-row { font-size: 14px; margin-bottom: 6px; }
+  .contact-label { font-weight: 700; color: #555; }
+  .opinion-section { margin: 30px 0; }
+  .opinion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .opinion-pro, .opinion-con { border-radius: 12px; padding: 20px; }
+  .opinion-pro { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .opinion-con { background: #fff3e0; border-left: 5px solid #c62828; }
+  .opinion-pro h3 { color: #1b5e20; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-con h3 { color: #b71c1c; margin-bottom: 14px; font-weight: 900; font-size: 17px; }
+  .opinion-card { background: #fff; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .opinion-card:last-child { margin-bottom: 0; }
+  .opinion-card .quote { font-size: 14px; line-height: 1.7; color: #333; font-style: italic; margin-bottom: 8px; }
+  .opinion-card .author { font-size: 12px; color: #777; text-align: right; font-weight: 700; margin: 0; }
+  .hashtags { font-size: 13px; color: #e65100; line-height: 2; margin-bottom: 20px; word-break: keep-all; }
+  .disclaimer { background: #f5f5f5; border-radius: 8px; padding: 14px 16px; font-size: 12.5px; color: #777; line-height: 1.7; margin-bottom: 14px; }
+  .written { font-size: 12px; color: #999; text-align: right; }
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .opinion-grid { grid-template-columns: 1fr; }
+    .container { padding: 18px 14px 32px; }
+  }
+</style>
+<!-- SEO:BEGIN -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://welfare.ephseed.com/archive/2026-11-22-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WelfareFinder">
+<meta property="og:title" content="국민연금 추후납부 언제 유리한가 — 119개월 상한과 분할 납부 60회 범위">
+<meta property="og:description" content="국민연금 추후납부(추납)는 납부예외·적용제외 기간의 보험료를 지금 내고 가입기간으로 인정받는 제도입니다. 최대 119개월 상한, 접수 월 기준소득월액과 납부기한 월 보험료율로 매기는 산정식, 최대 60회 분할과 이자, 보험료율 인상 일정에 따른 유불리를 2026년 기준으로 정리했습니다.">
+<meta property="og:url" content="https://welfare.ephseed.com/archive/2026-11-22-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welfare.ephseed.com/assets/og-default.png">
+<meta property="article:published_time" content="2026-11-22T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-11-22T09:00:00+09:00">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ560D6VGG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-KJ560D6VGG");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://welfare.ephseed.com/#organization", "name": "WelfareFinder", "url": "https://welfare.ephseed.com/"}, {"@type": "WebSite", "@id": "https://welfare.ephseed.com/#website", "url": "https://welfare.ephseed.com/", "name": "WelfareFinder", "description": "복지 제도와 지원금을 상황에 맞게 찾아주는 맞춤형 복지 정보 서비스", "inLanguage": "ko-KR", "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}, {"@type": "Article", "@id": "https://welfare.ephseed.com/archive/2026-11-22-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4#page", "url": "https://welfare.ephseed.com/archive/2026-11-22-1-%EB%B3%B5%EC%A7%80%EB%89%B4%EC%8A%A4", "headline": "국민연금 추후납부 언제 유리한가 — 119개월 상한과 분할 납부 60회 범위", "description": "국민연금 추후납부(추납)는 납부예외·적용제외 기간의 보험료를 지금 내고 가입기간으로 인정받는 제도입니다. 최대 119개월 상한, 접수 월 기준소득월액과 납부기한 월 보험료율로 매기는 산정식, 최대 60회 분할과 이자, 보험료율 인상 일정에 따른 유불리를 2026년 기준으로 정리했습니다.", "inLanguage": "ko-KR", "image": "https://welfare.ephseed.com/assets/og-default.png", "isPartOf": {"@id": "https://welfare.ephseed.com/#website"}, "datePublished": "2026-11-22", "dateModified": "2026-11-22", "author": {"@id": "https://welfare.ephseed.com/#organization"}, "publisher": {"@id": "https://welfare.ephseed.com/#organization"}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- ============================================= -->
+<!-- 카카오 애드핏 광고 — ads_fix.py 자동 주입      -->
+<!-- 직접 지우지 말 것. 지우면 그 페이지는 무수익.   -->
+<!-- ============================================= -->
+<div style="display:flex;justify-content:center;margin:12px 0;overflow:hidden;max-width:100%;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-GyFXAvGw6TskYQ5x"
+data-ad-width="728"
+data-ad-height="90"></ins>
+</div>
+<div class="kakao-right-fixed" style="position:fixed;top:100px;right:10px;z-index:1000;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-ZL2KaRsLAk3Ly1Ik"
+data-ad-width="160"
+data-ad-height="600"></ins>
+</div>
+<style>@media (max-width:1200px){.kakao-right-fixed{display:none !important;}}</style>
+<!-- 새 도메인 전용 유닛 -->
+<div class="kakao-ad-lead" style="display:flex;justify-content:center;align-items:center;margin:14px auto;max-width:100%;overflow:hidden;">
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit="DAN-WjaoW3Jzgq4B6IUW"
+data-ad-width="320"
+data-ad-height="50"></ins>
+</div>
+<style>
+/* 728x90 은 모바일 화면에 들어가지 않는다. 가로 넘침·미노출 방지 */
+@media (max-width:767px){
+  ins.kakao_ad_area[data-ad-width="728"]{display:none !important;}
+  .fixed-top-ad{display:none !important;}
+}
+</style>
+<script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+
+<div class="container">
+
+  <div class="top-meta">복지 정보 · 국민연금 · 추후납부 · 납부예외 · 적용제외 · 국민연금공단</div>
+  <div class="section-badge">연금·노후</div>
+
+  <h1>국민연금 추후납부 언제 유리한가 — 119개월 상한과 분할 납부 60회 범위</h1>
+
+  <div class="hook">
+    이 글을 찾는 분은 대체로 이런 상황입니다.
+    <span class="highlight">실직이나 폐업으로 보험료를 내지 못한 기간이 있어 가입기간이 짧은 경우</span>,
+    <span class="highlight">결혼 뒤 직장을 그만두고 전업주부로 지낸 기간을 채울 수 있는지 궁금한 경우</span>,
+    그리고 <span class="highlight">보험료율이 해마다 오른다는 말을 듣고 올해 낼지 내년에 낼지 저울질하는 경우</span>입니다.
+    한 문장으로 말하면 추후납부(추납)는 <span class="highlight">과거에 보험료를 내지 않았던 납부예외·적용제외 기간의 보험료를 지금 내고, 그 개월 수만큼 가입기간으로 인정받는 제도</span>입니다.
+    밀린 보험료를 갚는 것이 아니라 비어 있던 기간을 새로 사서 채우는 것에 가깝고, 보험료는 과거가 아닌 지금 기준으로 매겨집니다.
+  </div>
+
+  <div class="summary-box">
+    <h2>이것만 알면 됩니다</h2>
+    <ul>
+      <li><b>누가</b> — 지금 국민연금에 가입해 보험료를 내고 있는 사람(사업장·지역·임의·임의계속가입자)만 할 수 있습니다.</li>
+      <li><b>어떤 기간</b> — 실직·휴직·사업중단 등으로 인정받은 납부예외 기간, 그리고 보험료를 한 번 이상 낸 뒤 무소득 배우자 등으로 적용제외된 기간입니다.</li>
+      <li><b>상한</b> — 대상 기간이 아무리 길어도 119개월(10년 미만)까지만 채울 수 있습니다.</li>
+      <li><b>보험료</b> — 접수한 달의 기준소득월액 × 납부기한이 속한 달의 보험료율 × 채우려는 개월 수입니다. 2026년 보험료율은 9.5%입니다.</li>
+      <li><b>나눠 내기</b> — 한 번에 내거나 월 단위로 최대 60회까지 나눠 낼 수 있고, 나눠 내면 정기예금 이자가 붙습니다.</li>
+      <li><b>유리한 때</b> — 가입기간이 10년에 못 미쳐 연금 자체를 받을 수 없는 경우, 그리고 보험료율이 더 오르기 전입니다.</li>
+    </ul>
+  </div>
+
+  <h2>추후납부가 하는 일</h2>
+  <p>국민연금 노령연금은 가입기간이 10년(120개월) 이상이어야 매달 연금으로 받을 수 있습니다. 10년을 채우지 못하면 낸 돈에 이자를 붙인 반환일시금으로 한 번에 돌려받고 끝납니다. 또 연금액은 가입기간이 길수록 늘어나므로, 같은 소득이라도 15년 가입한 사람과 25년 가입한 사람의 월 수령액은 크게 다릅니다.</p>
+  <p>추후납부는 이 가입기간을 뒤늦게 늘리는 수단입니다. 일하다가 그만둔 뒤 소득이 없어 납부예외를 받았거나, 결혼 뒤 배우자가 국민연금·공무원연금 등에 가입해 있어 본인은 의무가입 대상에서 빠졌던 기간을 지금 보험료를 내고 채워 넣습니다. 낸 개월 수만큼 가입기간이 늘어나고, 그만큼 노령연금 수급 요건과 연금액에 반영됩니다.</p>
+  <p>혼동하기 쉬운 제도가 둘 있습니다. <b>반납</b>은 예전에 반환일시금으로 받아 간 돈을 이자와 함께 돌려주고 그때의 가입기간을 되살리는 것이고, <b>체납 보험료 납부</b>는 고지서가 나왔는데 내지 않은 달을 갚는 것입니다. 추후납부는 애초에 보험료가 부과되지 않았던 기간이 대상이라는 점에서 둘과 다릅니다.</p>
+
+  <h2>대상이 되는 기간과 안 되는 기간</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>구분</th><th>기간의 성격</th><th>추후납부</th></tr>
+    <tr><td><b>납부예외 기간</b></td><td>실직, 휴직, 사업중단, 학업, 군 복무 등으로 소득이 없어 공단에 납부예외를 인정받은 기간</td><td>대상</td></tr>
+    <tr><td><b>적용제외 기간</b></td><td>보험료를 1개월 이상 낸 뒤, 무소득 배우자·기초생활수급자·18세 미만 사업장 근로자 등으로 의무가입 대상에서 빠진 기간</td><td>대상</td></tr>
+    <tr><td><b>첫 납부 이전 기간</b></td><td>국민연금 보험료를 한 번도 내기 전의 기간</td><td>대상 아님</td></tr>
+    <tr><td><b>체납 기간</b></td><td>보험료가 고지됐는데 내지 않은 달</td><td>추후납부가 아니라 체납분 납부로 처리</td></tr>
+    <tr><td><b>반환일시금 수령 기간</b></td><td>일시금으로 이미 받아 간 가입기간</td><td>추후납부가 아니라 반납으로 처리</td></tr>
+  </table>
+  </div>
+  <p>적용제외 기간이 대상에 들어간 것은 2016년 11월 30일부터입니다. 그전에는 납부예외 기간만 채울 수 있어, 결혼하며 직장을 그만둔 전업주부는 과거 기간을 메울 방법이 없었습니다. 지금은 직장 생활을 잠깐이라도 해서 보험료를 한 번 이상 낸 기록이 있으면, 그 뒤 전업주부로 지낸 기간을 채울 수 있습니다. 다만 군 복무 기간 가운데 일부와 다른 공적연금 가입 기간 등은 제외되는 경우가 있어, 본인 이력에서 몇 개월이 대상인지는 공단 조회로 확인해야 합니다.</p>
+
+  <h3>119개월 상한</h3>
+  <p>대상 기간을 모두 합친 것이 200개월이어도 채울 수 있는 것은 119개월까지입니다. 이 상한은 2020년 말 법 개정으로 생겼습니다. 그전에는 상한이 없어, 가입기간이 짧은 사람이 수급 직전에 수십 년 치를 한꺼번에 내고 연금을 크게 늘리는 사례가 문제로 지적됐습니다. 119개월은 10년에서 한 달 모자란 숫자로, 추후납부만으로는 연금 수급에 필요한 10년을 채울 수 없고 실제로 보험료를 낸 달이 적어도 한 달은 있어야 한다는 뜻입니다.</p>
+
+  <h2>보험료 산정 방식 — 2026년 기준</h2>
+  <div class="formula">
+    추후납부 보험료 = <b>접수한 달의 기준소득월액</b> × <b>납부기한이 속한 달의 보험료율</b> × <b>채우려는 개월 수</b><br>
+    예) 기준소득월액 100만 원, 2026년 보험료율 9.5%, 60개월 → 95,000원 × 60 = <b>5,700,000원</b><br>
+    예) 같은 조건으로 119개월 전부 → 95,000원 × 119 = <b>11,305,000원</b>
+  </div>
+  <p>핵심은 과거 그 시절의 소득이나 보험료율이 아니라 <b>지금</b>의 숫자로 계산한다는 점입니다. 사업장가입자와 지역가입자는 현재 내고 있는 보험료의 기준이 되는 소득이 그대로 쓰입니다. 사업장가입자는 평소에는 회사가 절반을 부담하지만 추후납부 보험료는 본인이 전액 냅니다.</p>
+  <p>임의가입자(전업주부 등 소득이 없어 스스로 가입한 사람)는 본인이 신고한 소득을 기준으로 하되 상한이 따로 있습니다. 전체 가입자의 최근 3년 평균소득월액인 이른바 A값을 넘는 금액으로는 추후납부 보험료를 매길 수 없습니다. 2026년에 적용되는 A값은 월 3,193,511원으로 안내돼 있어, 9.5%를 곱하면 한 달 치 상한은 약 30만 3천 원입니다. 이 상한의 세부 계산 방식은 안내 자료마다 표현이 조금씩 달라, 임의가입자는 접수 전에 공단에서 본인 상한액을 확인하는 것이 안전합니다.</p>
+
+  <h3>보험료율 기준이 바뀐 점</h3>
+  <p>2025년 11월 법 개정 전에는 접수한 달의 보험료율을 썼습니다. 지금은 <b>납부기한이 속한 달</b>의 보험료율을 씁니다. 추후납부 보험료의 납부기한은 통상 접수한 달의 다음 달 말일로 안내되므로, 12월에 접수하면 납부기한이 이듬해 1월이 되어 오른 보험료율이 적용될 수 있습니다. 연말에 접수하려는 분은 고지서의 납부기한이 어느 달에 걸리는지 공단에 먼저 물어보시기 바랍니다.</p>
+
+  <h2>언제 하는 것이 유리한가</h2>
+  <div class="table-wrap">
+  <table class="info-table">
+    <tr><th>납부기한이 속한 해</th><th>보험료율</th><th>기준소득월액 100만 원 · 119개월</th></tr>
+    <tr><td>2026년</td><td>9.5%</td><td><span class="big-number">11,305,000원</span></td></tr>
+    <tr><td>2027년</td><td>10.0%</td><td>11,900,000원</td></tr>
+    <tr><td>2028년</td><td>10.5%</td><td>12,495,000원</td></tr>
+    <tr><td>2033년 이후</td><td>13.0%</td><td>15,470,000원</td></tr>
+  </table>
+  </div>
+  <p>2025년 연금개혁으로 보험료율은 2026년 9.5%에서 해마다 0.5%포인트씩 올라 2033년 13%가 됩니다. 채우는 개월 수와 기준소득이 같다면 한 해 늦출 때마다 보험료가 약 5%씩 늘어납니다. 위 표처럼 119개월을 기준소득 100만 원으로 채울 때 2026년과 2027년의 차이는 59만 5천 원입니다. 받는 연금은 채운 개월 수와 소득으로 정해지므로, 같은 기간을 채운다면 보험료율이 낮을 때 내는 편이 부담이 적습니다.</p>
+  <p>다만 서두르는 것이 늘 답은 아닙니다. 아래 세 가지를 차례로 따져 보는 것이 좋습니다.</p>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text"><b>가입기간이 10년에 못 미치는가</b> — 못 미친다면 추후납부의 효과가 가장 큽니다. 일시금으로 끝날 것이 평생 받는 연금으로 바뀌기 때문입니다. 이 경우는 10년을 넘기는 데 필요한 개월 수부터 채웁니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text"><b>기초연금·건강보험에 미치는 영향</b> — 국민연금 수령액이 늘면 기초연금이 깎이거나(국민연금 연계 감액), 연금소득이 연 2천만 원을 넘어 건강보험 피부양자 자격을 잃을 수 있습니다. 연금이 늘어난 만큼 다른 쪽에서 줄어드는지 함께 봐야 합니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text"><b>목돈을 낼 여력</b> — 추후납부한 돈은 연금을 받기 시작할 때까지 묶입니다. 받는 기간이 길수록 유리한 구조여서, 건강 상태와 생활비 여유를 함께 따져 개월 수를 정합니다. 119개월 전부가 아니라 일부만 골라 채울 수도 있습니다.</div></div>
+  </div>
+  <p>채운 기간에 적용되는 소득대체율(연금액 산식의 지급 비율)은 보험료를 내는 시점의 값을 따르는 것으로 알려져 있습니다. 2026년부터 소득대체율이 43%로 올랐으므로 지금 내는 추후납부분에는 이 비율이 반영될 것으로 보이지만, 본인 예상 연금액이 실제로 얼마나 늘어나는지는 공단의 예상연금 조회로 확인하시기 바랍니다.</p>
+
+  <h2>나눠 내기 — 최대 60회</h2>
+  <p>금액이 크면 월 단위로 나눠 낼 수 있습니다. 횟수는 최대 60회이고, 채우려는 개월 수가 60개월보다 적으면 그 개월 수까지만 나눌 수 있습니다. 예를 들어 36개월을 채운다면 최대 36회입니다.</p>
+  <p>나눠 내면 이자가 붙습니다. 공단 안내에 따르면 접수한 달부터 실제 납부하는 달의 전달까지 기간에 대해 1년 만기 정기예금 이자율로 계산합니다. 한 번에 내면 이자가 없습니다. 일부 민간 자료에는 분할 이자가 없다고 적힌 경우가 있으나 공단 안내와 다르므로, 접수할 때 회차별 금액표를 받아 확인하는 것이 좋습니다.</p>
+  <p>낸 추후납부 보험료는 연금보험료 소득공제 대상으로 안내됩니다. 근로소득이나 사업소득이 있는 해에 내면 연말정산·종합소득세 신고에서 공제받을 수 있어, 소득이 있는 배우자가 아니라 본인 소득에서 공제된다는 점을 염두에 두고 납부 연도를 정합니다.</p>
+
+  <h2>접수에서 납부까지 순서</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text"><b>가입 상태 확인</b> — 지금 보험료를 내는 가입자여야 합니다. 소득이 없는 전업주부라면 먼저 임의가입을 하고, 60세가 넘었다면 임의계속가입을 한 상태여야 합니다. 이미 노령연금을 받기 시작했다면 할 수 없습니다.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text"><b>대상 기간 조회</b> — 국민연금공단 누리집, 모바일 앱 '내 곁에 국민연금', 고객센터 1355, 지사 방문 가운데 편한 방법으로 추후납부 가능 개월 수와 예상 보험료를 조회합니다.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text"><b>개월 수와 납부 방식 선택</b> — 전부 또는 일부 개월을 고르고, 한 번에 낼지 나눠 낼지 정합니다.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text"><b>접수</b> — 누리집·앱·전화·지사 방문·우편·팩스로 접수합니다. 무소득 배우자였던 적용제외 기간을 채우는 경우에는 혼인 기간을 확인하기 위한 혼인관계증명서(상세)를 요구받을 수 있습니다.</div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-text"><b>납부</b> — 고지서의 납부기한까지 냅니다. 나눠 내는 경우 매달 정해진 회차를 냅니다.</div></div>
+  </div>
+
+  <div class="deadline-box">
+    <h3>확인할 일정</h3>
+    <p>접수 기간은 따로 없고 가입자 자격이 있는 동안 언제든 가능합니다. 다만 연금을 받기 시작하면 더는 할 수 없습니다.</p>
+    <p>보험료율은 매년 1월에 0.5%포인트씩 오릅니다. 연말 접수분은 납부기한이 다음 해로 넘어가는지 확인이 필요합니다.</p>
+    <p>이 글의 기준일은 2026년 11월 22일이며, 보험료율과 A값은 2026년 값입니다.</p>
+  </div>
+
+  <div class="checklist">
+    <h2>접수 전에 챙길 것</h2>
+    <div class="check-item"><span class="chk">✓</span><span>현재 가입 종류(사업장·지역·임의·임의계속)와 지금 내는 보험료의 기준소득월액</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>공단에서 조회한 추후납부 가능 개월 수 — 119개월 상한 안에서 몇 개월인지</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>현재 가입기간 — 10년까지 몇 개월이 모자라는지</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>예상 연금액 변화와 기초연금 감액·건강보험 피부양자 자격에 미칠 영향</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>일시 납부와 분할 납부 각각의 총액(이자 포함)</span></div>
+    <div class="check-item"><span class="chk">✓</span><span>적용제외 기간을 채운다면 혼인관계증명서(상세)</span></div>
+  </div>
+
+  <div class="caution">
+    <div class="caution-item">• 대상(현재 가입자), 대상 기간(납부예외·1개월 이상 납부 후 적용제외), 119개월 상한, 산정식(접수 월 기준소득월액 × 납부기한 월 보험료율), 60회 분할과 정기예금 이자는 국민연금공단 안내 페이지를 인용한 검색 결과와 복수 자료가 일치합니다. 작성 환경에서 공단 누리집 원문을 직접 열어 보지는 못했습니다.</div>
+    <div class="caution-item">• 2026년 보험료율 9.5%와 2033년 13%까지의 인상 일정, 2025년 11월의 보험료율 기준 시점 변경은 복수 보도와 자료가 일치합니다.</div>
+    <div class="caution-item">• 임의가입자 상한(A값 기준)의 정확한 산식, 납부기한(다음 달 말일)의 예외, 분할 납부 중 회차를 놓쳤을 때의 처리, 군 복무 등 제외 기간의 세부 범위, 추후납부분에 적용되는 소득대체율은 자료마다 표현이 달라 확정하지 못했습니다. 국민연금공단에 확인하시기 바랍니다.</div>
+    <div class="caution-item">• 표의 금액은 기준소득월액 100만 원을 가정한 단순 계산이며, 실제 고지액은 본인 기준소득월액과 분할 이자에 따라 달라집니다.</div>
+  </div>
+
+  <div class="contact-box">
+    <h2>담당 기관 및 문의처</h2>
+    <div class="contact-row"><span class="contact-label">대상 기간 조회·접수</span> — 국민연금공단 고객센터 1355, 가까운 지사, 공단 누리집(nps.or.kr), 모바일 앱 '내 곁에 국민연금'</div>
+    <div class="contact-row"><span class="contact-label">기초연금 영향</span> — 주소지 읍·면·동 행정복지센터, 보건복지상담센터 129</div>
+    <div class="contact-row"><span class="contact-label">피부양자 자격 영향</span> — 국민건강보험공단 1577-1000</div>
+  </div>
+
+  <h2>찬반 논점</h2>
+  <div class="opinion-section">
+    <div class="opinion-grid">
+      <div class="opinion-pro">
+        <h3>찬성 측 논거</h3>
+        <div class="opinion-card">
+          <p class="quote">"출산과 돌봄으로 일을 쉰 사람이 노후에 연금 없이 남는 문제를 줄이는 통로다. 가입기간 10년 문턱 앞에서 멈춘 사람에게는 사실상 유일한 수단이다."</p>
+          <p class="author">— 노후소득 보장 논의에서 자주 나오는 의견</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"보험료율 기준을 납부 시점으로 바꾸고 상한을 119개월로 둔 뒤로는, 낮은 보험료율로 많이 사 두는 방식의 이득이 크게 줄었다. 제도 취지에 맞게 다듬어졌다."</p>
+          <p class="author">— 연금 제도 논의에서 자주 나오는 의견</p>
+        </div>
+      </div>
+      <div class="opinion-con">
+        <h3>반대·우려 측 논거</h3>
+        <div class="opinion-card">
+          <p class="quote">"목돈을 한 번에 낼 수 있는 사람만 쓸 수 있는 제도다. 정작 가입기간이 짧은 저소득층은 천만 원 안팎의 보험료를 마련하기 어렵다."</p>
+          <p class="author">— 형평성 논의에서 자주 나오는 의견</p>
+        </div>
+        <div class="opinion-card">
+          <p class="quote">"매달 꼬박꼬박 낸 가입자와 수급 직전에 몰아서 낸 가입자가 같은 가입기간으로 대우받는 것이 공정한지는 여전히 따져 볼 문제다."</p>
+          <p class="author">— 연금 재정 논의에서 자주 나오는 의견</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtags">
+    #국민연금 #추후납부 #추납 #납부예외 #적용제외 #임의가입 #가입기간 #노령연금 #국민연금공단
+  </div>
+
+  <div class="disclaimer">
+    이 글은 국민연금공단의 추후납부 안내, 국민연금법 개정 관련 보도와 해설 자료를 바탕으로 작성되었습니다.
+    보험료율·기준소득월액·상한액은 해마다 바뀌고 개인의 가입 이력에 따라 대상 개월 수가 달라지므로, 접수 전 국민연금공단(1355)에서 본인 기준으로 확인하시기 바랍니다.
+  </div>
+
+  <div class="written">작성일 2026-11-22 · WelfareFinder</div>
+
+</div>
+</body>
+</html>
